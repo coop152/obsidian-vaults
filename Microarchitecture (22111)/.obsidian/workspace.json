@@ -4,22 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "a292895b2f23d03e",
+        "id": "4c3fc6a96bef8b19",
         "type": "tabs",
         "children": [
           {
-            "id": "ff5dea92a3640c7c",
+            "id": "a4155ed07d5a8a8a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction.md",
+                "file": "Part 1 (Paul)/Introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "8e8dc1b8e4fc6897",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Part 1 (Paul)/Stump ISA.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction.md",
+                "file": "Part 1 (Paul)/Stump ISA.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction.md",
+                "file": "Part 1 (Paul)/Stump ISA.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction.md"
+                "file": "Part 1 (Paul)/Stump ISA.pdf"
               }
             }
           }
@@ -148,17 +159,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ff5dea92a3640c7c",
+  "active": "8e8dc1b8e4fc6897",
   "lastOpenFiles": [
+    "Part 1 (Paul)/Introduction.md",
+    "Part 1 (Paul)/Stump Instruction Set.pdf",
     "Summary.md",
-    "Introduction.md",
-    "Introduction to CMOS.md",
-    "Timing and Clocking.md",
+    "Part 2 (Christoforos)/Verification and Test.md",
+    "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
+    "Part 1 (Paul)/Introduction to CMOS.md",
+    "Part 2 (Christoforos)/Timing and Clocking.md",
     "Microarchitecture (COMP22111)[Timing and Clocking.md",
-    "Technology.md",
-    "Computer Aided Design (CAD) Tools.md",
-    "Hardware Design Examples.md",
-    "FPGAs.md",
-    "Verification and Test.md"
+    "Part 2 (Christoforos)/Technology.md",
+    "Part 2 (Christoforos)/Hardware Design Examples.md"
   ]
 }

@@ -9,3 +9,7 @@
 
 **Bottom-up Design**: Begin the design with the lowest-level components (e.g. transistors) and bring these smaller components together.
 
+## Stump Recap
+[[Stump Instruction Set.pdf|Stump Instruction Set]]
+[[Stump ISA.pdf|Stump ISA]]
+Type 1 Instructions are ￼Other Stuff
