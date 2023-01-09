@@ -23,4 +23,4 @@ otherMod omod(x, y, a); // structural Verilog
 
 endmodule
 ```
-`output reg`: When the output is being set 
+`output reg`: When the output is being set using behavioral verilog, e.g. blocking `=` assignments or non-blocking `<=` assignments.
