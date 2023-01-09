@@ -9,13 +9,11 @@
 
 **Bottom-up Design**: Begin the design with the lowest-level components (e.g. transistors) and bring these smaller components together.
 
-## Stump Recap
-[[Stump Instruction Set.pdf|Stump Instruction Set]]
-[[Stump ISA.pdf|Stump ISA]]
-Type 1 Instructions are arithmetic, logic and memory instructions that operate on three registers. There is an optional shift applied to the second operand. e.g:
-```
-ADD r1, r2, r3
-LD r1, [r2, r3]
-SUB r1, r2, r3, ROR    ; right rotate applied to r2
-```
-Type 2 inst
+### Miscellaneous Things
+- [[Stump Instruction Set.pdf|Stump Instruction Set]]
+- [[Stump ISA.pdf|Stump ISA]]
+- The shift on a type 1 instruction applies to the first source operand. 
+	`ADD r1, r2, r3, ROR` means `r1 = ROR(r2) + r3`
+- Check for signed overflow by comparing the signs of the operands and the result. `ADD` results have overflowed if the operands were both positive and the result was negative, or vice versa. `SUB` results have overflowed if the operands had opposite signs and the sign of the result is different from the first.
+- Stump implements right shifting instead of left shifting because left shifting is trivial without specialised hardware (just add the number to itself).
+- 

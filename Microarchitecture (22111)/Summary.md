@@ -1,6 +1,6 @@
 ## Topics
 ### First half (Paul)
-1.  [ ] [[Introduction]]
+1.  [x] [[Introduction]]
 	Overview, introduction to the lab, approaches to design and the management of complexity
 2.  [ ] [[Introducing Stump]]
     Designing complex systems, RISC v CISC, Stump specification and addressing schemes, Stump ISA
