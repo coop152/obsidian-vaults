@@ -12,4 +12,10 @@
 ## Stump Recap
 [[Stump Instruction Set.pdf|Stump Instruction Set]]
 [[Stump ISA.pdf|Stump ISA]]
-Type 1 Instructions are ￼Other Stuff
+Type 1 Instructions are arithmetic, logic and memory instructions that operate on three registers. There is an optional shift applied to the second operand. e.g:
+```
+ADD r1, r2, r3
+LD r1, [r2, r3]
+SUB r1, r2, r3, ROR    ; right rotate applied to r2
+```
+Type 2 inst

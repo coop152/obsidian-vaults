@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "229a62f0da06b674",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Part 1 (Paul)/Stump Instruction Set.pdf"
+              }
+            }
+          },
+          {
             "id": "8e8dc1b8e4fc6897",
             "type": "leaf",
             "state": {
@@ -29,8 +39,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf",
+                "file": "Part 1 (Paul)/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf",
+                "file": "Part 1 (Paul)/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf"
+                "file": "Part 1 (Paul)/Introduction.md"
               }
             }
           }
@@ -159,8 +168,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8e8dc1b8e4fc6897",
+  "active": "a4155ed07d5a8a8a",
   "lastOpenFiles": [
+    "Part 1 (Paul)/Stump ISA.pdf",
     "Part 1 (Paul)/Introduction.md",
     "Part 1 (Paul)/Stump Instruction Set.pdf",
     "Summary.md",
@@ -169,7 +179,6 @@
     "Part 1 (Paul)/Introduction to CMOS.md",
     "Part 2 (Christoforos)/Timing and Clocking.md",
     "Microarchitecture (COMP22111)[Timing and Clocking.md",
-    "Part 2 (Christoforos)/Technology.md",
-    "Part 2 (Christoforos)/Hardware Design Examples.md"
+    "Part 2 (Christoforos)/Technology.md"
   ]
 }
