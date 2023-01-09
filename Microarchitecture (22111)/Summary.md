@@ -1,16 +1,14 @@
 ## Topics
 ### First half (Paul)
 1.  [x] [[Introduction]]
-	Overview, introduction to the lab, approaches to design and the management of complexity
-2.  [ ] [[Introducing Stump]]
-    Designing complex systems, RISC v CISC, Stump specification and addressing schemes, Stump ISA
-3.  [ ] [[Verilog & Testing]]
+	Overview, introduction to the lab, approaches to design and the management of complexity, Stump, etc.
+2.  [ ] [[Verilog & Testing]]
     Verilog recap and new features - tasks, functions and structural Verilog. Verification, validation and testing - the testbench.
-4.  [ ] [[Sequential systems design]]
+3.  [ ] [[Sequential systems design]]
     The processor as a sequential system, datapath and control, register transfer level (RTL) design, Mealy and Moore finite state machines.
-5.  [ ] [[Designing and Implementing Processors]]
+4.  [ ] [[Designing and Implementing Processors]]
     Implementation of processors from the ISA, architectural design, RTL design, Verilog implementation.
-6.  [ ] [[Introduction to CMOS]]
+5.  [ ] [[Introduction to CMOS]]
     Basic electronics, logic gates in CMOS and design considerations.
 
 ### Second half (Christoforos)
