@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
+                "file": "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
+                "file": "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
+                "file": "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md"
+                "file": "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md"
               }
             }
           }
@@ -150,15 +150,15 @@
   },
   "active": "66758dd841246b6f",
   "lastOpenFiles": [
+    "Summary.md",
+    "Part 2 (Christoforos)/Verification and Test.md",
+    "Part 2 (Christoforos)/Specialised Processing Architectures.md",
     "Part 1 (Paul)/Introduction.md",
     "Part 1 (Paul)/Verilog & Testing.md",
     "Part 1 (Paul)/Designing and Implementing Processors.md",
     "Part 1 (Paul)/Stump ISA.pdf",
-    "Summary.md",
     "Part 1 (Paul)/Introducing Stump.md",
     "Part 1 (Paul)/Stump Instruction Set.pdf",
-    "Part 2 (Christoforos)/Verification and Test.md",
-    "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
-    "Part 1 (Paul)/Introduction to CMOS.md"
+    "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md"
   ]
 }
