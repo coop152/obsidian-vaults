@@ -45,7 +45,21 @@ always @(negedge clk) begin
 end
 ```
 **Don't mix variables in always blocks**: If a variable is used in one always block, don't use it in another.
+> [!fail] DO NOT
+```verilog
+always @(posedge clk) begin
+	if (CE) Q <= D;
+end
 
-> [!fail]
-> Bruh
+always @(posedge reset) begin
+	Q <= 0;
+end
+```
+> [!check] DO
+```verilog
+always @(posedge clk, posedge reset) begin
+	if (reset) Q <= 0;
+	else if (CE) Q <= D;
+end
+```
 
