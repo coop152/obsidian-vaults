@@ -26,4 +26,7 @@ endmodule
 `output reg`: When the output is being set using behavioral verilog, e.g. blocking `=` assignments or non-blocking `<=` assignments.
 
 ## Assignments
-`=`: 
+**Blocking assignment** `=`: Use *only* for combinatorial blocks. e.g.
+```verilog
+always
+```
