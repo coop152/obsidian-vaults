@@ -9,6 +9,10 @@
 
 **Bottom-up Design**: Begin the design with the lowest-level components (e.g. transistors) and bring these smaller components together.
 
+**Latency**: The time taken from when inputs are given to when output is recieved.
+**Throughput**: The rate at which data can be processed.
+Latency is not concerned with the size or count of inputs, while throughput is; for example, if circuit A can process 4 inputs simultaneously with a latency of 2 time units and circuit B can only process 1 with a latency of 1 time unit, then circuit A has the greater throughput (2 pieces of data per unit time vs 1 piece of data per unit time) but circuit B has the superior latency (1 unit vs 2 unit).
+
 ### Miscellaneous Things
 - [[Stump Instruction Set.pdf|Stump Instruction Set]]
 - [[Stump ISA.pdf|Stump ISA]]
