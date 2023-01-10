@@ -3,6 +3,12 @@
 $$I = \frac{V}{R}$$
 $$V = IR$$
 $$R = \frac{V}{I}$$
-#### Resistors
+#### Resistors in Series
 $$R_T=\sum{R_i}$$
-i.e. "The resistance along a circuit is the sum of all the resistors in the series"
+i.e. "The total resistance of a circuit is the sum of all the resistances in series"
+e.g.
+$$V_s = \sum{V_{R_i}}$$
+i.e. "The sum of the voltages across every resistor is equal to the voltage of the power source"
+![[Pasted image 20230110152844.png]]
+#### Resistors in Parallel
+$$\frac{1}{R_T} = \sum{\frac{1}{R_i}}$$
