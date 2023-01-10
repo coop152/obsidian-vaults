@@ -16,3 +16,11 @@ Voltage stays the same across the whole circuit when resistors are parallel; the
 $$\frac{1}{R_T} = \sum{\frac{1}{R_i}}$$
 i.e. "The "
 ![[Pasted image 20230110153305.png]]
+
+| Measurement | Parallel                                        | Series                                          |
+| ----------- | ----------------------------------------------- | ----------------------------------------------- |
+| Voltage     | $V_T = V_1 = V_2$                               | $V_T = V_1 + V_2$                               |
+| Current     | $I_T = I_1 + I_2$                               | $I_T = I_1 = I_2$                               |
+| Resistance  | $\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2}$ | $R_T = R_1 + R_2$                               |
+| Capacitance | $C_T = C_1 + C_2$                               | $\frac{1}{C_T} = \frac{1}{C_1} + \frac{1}{C_2}$ |
+
