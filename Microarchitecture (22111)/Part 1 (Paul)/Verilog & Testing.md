@@ -28,5 +28,24 @@ endmodule
 ## Assignments
 **Blocking assignment** `=`: Use *only* for combinatorial blocks. e.g.
 ```verilog
-always
+always @(a, b, c) begin
+	internal_x = a;
+	if (b)
+		internal_x += c;
+	q = internal_x;
+end
 ```
+**Non-blocking assignment** `<=`: Use in any other case, such as in synchronous logic. e.g.
+```verilog
+always @(negedge clk) begin
+	if (clk_enable) begin
+		q <= d;
+		qbar <= ~d;    // DO NOT: qbar <= ~q;
+	end
+end
+```
+**Don't mix variables in always blocks**: If a variable is used in one always block, don't use it in another.
+
+> [!fail]
+> Bruh
+
