@@ -11,9 +11,11 @@
             "id": "66758dd841246b6f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf"
+                "file": "Part 1 (Paul)/Verilog & Testing.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf",
+                "file": "Part 1 (Paul)/Verilog & Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf",
+                "file": "Part 1 (Paul)/Verilog & Testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Part 1 (Paul)/Stump ISA.pdf"
+                "file": "Part 1 (Paul)/Verilog & Testing.md"
               }
             }
           }
@@ -148,11 +150,11 @@
   },
   "active": "66758dd841246b6f",
   "lastOpenFiles": [
+    "Part 1 (Paul)/Stump ISA.pdf",
     "Part 1 (Paul)/Verilog & Testing.md",
     "Summary.md",
     "Part 1 (Paul)/Introduction.md",
     "Part 1 (Paul)/Introducing Stump.md",
-    "Part 1 (Paul)/Stump ISA.pdf",
     "Part 1 (Paul)/Stump Instruction Set.pdf",
     "Part 2 (Christoforos)/Verification and Test.md",
     "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
