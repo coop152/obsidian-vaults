@@ -63,3 +63,33 @@ always @(posedge clk, posedge reset) begin
 end
 ```
 
+## Examples
+A register module with the following specification:
+Inputs:
+-   clock – global clock signal
+-   reset – active low signal that acts asynchronously and sets the ouput Q to 0
+-   preset – active high signal that acts asynchronously and sets the outout Q to 1
+-   CE – clock enable - only allows the output Q to be updated with input D when CE = 1 on the rising edge of the clock. When CE = 0 the output is not updated.
+-   D – 1-bit data input to the register
+Outputs
+-   Q - 1-bit stored value
+-   Qbar – the inverse of the stored value
+```verilog
+module register(input wire clock,  
+                input wire reset,  
+                input wire preset,  
+                input wire CE,  
+                input wire D,  
+                output reg Q,  
+                output wire Qbar);  
+
+assign Qbar = ~Q;  
+
+always @(posedge clock, negedge reset, posedge preset) begin  
+	if (reset) Q <= 0;  
+    else if (preset) Q <= 1;  
+    else if (CE) Q <= D;  
+end  
+
+endmodule
+```
