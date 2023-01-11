@@ -5,3 +5,4 @@
 ### FPUs
 #### Floating point representation (IEEE 754)
 ![[Pasted image 20230111150459.png]]
+[[https://www.youtube.com/watch?v=8afbTaA-gOQ]]
