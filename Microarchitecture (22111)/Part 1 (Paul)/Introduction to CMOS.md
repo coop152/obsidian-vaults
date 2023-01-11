@@ -13,6 +13,13 @@ V is the voltage, measured in Volts (V).
 $$C = \frac{Q}{V}$$
 $$Q = CV$$
 $$V = \frac{Q}{C}$$
+#### Time Constant, Resistance, Capacitance
+T ($\tau$) is the time constant, measured in seconds.
+R is the resistance, measured in Ohms ($\ohm$).
+C is the capacitance, measured in Farads (F).
+$$T=RC$$
+$$R = \frac{T}{C}$$
+$$C = \frac{T}{R}$$
 #### Parallel vs Series
 | Measurement | Parallel                                        | Series                                          |
 | ----------- | ----------------------------------------------- | ----------------------------------------------- |
