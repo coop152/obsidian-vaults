@@ -14,8 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
-                "mode": "source",
-                "source": false
+                "mode": "source"
               }
             }
           }
@@ -134,10 +133,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5,
+    "width": 200,
     "collapsed": true
   },
-  "active": "66758dd841246b6f",
+  "active": "bcb65a4a68ca66d0",
   "lastOpenFiles": [
     "Float_example.svg.md",
     "Part 2 (Christoforos)/Specialised Processing Architectures.md",
