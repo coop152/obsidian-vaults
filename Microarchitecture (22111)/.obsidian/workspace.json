@@ -13,8 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
-                "mode": "source"
+                "file": "Part 1 (Paul)/Introduction.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -84,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
+                "file": "Part 1 (Paul)/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md",
+                "file": "Part 1 (Paul)/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Part 2 (Christoforos)/Specialised Processing Architectures.md"
+                "file": "Part 1 (Paul)/Introduction.md"
               }
             }
           }
@@ -136,17 +137,28 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "bcb65a4a68ca66d0",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "66758dd841246b6f",
   "lastOpenFiles": [
-    "Float_example.svg.md",
-    "Part 2 (Christoforos)/Specialised Processing Architectures.md",
-    "Pasted image 20230111150359.png",
-    "Float_example.svg",
-    "Summary.md",
-    "Part 2 (Christoforos)/Technology.md",
     "Part 1 (Paul)/Introduction to CMOS.md",
+    "Part 1 (Paul)/Sequential systems design.md",
+    "Part 1 (Paul)/Pasted image 20230110153305.png",
+    "Part 1 (Paul)/Verilog & Testing.md",
     "Part 1 (Paul)/Stump ISA.pdf",
     "Part 1 (Paul)/Stump Instruction Set.pdf",
-    "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md"
+    "Part 1 (Paul)/Introduction.md",
+    "Part 1 (Paul)/Designing and Implementing Processors.md",
+    "Part 2 (Christoforos)/Computer Aided Design (CAD) Tools.md",
+    "Part 2 (Christoforos)/Specialised Processing Architectures.md"
   ]
 }
