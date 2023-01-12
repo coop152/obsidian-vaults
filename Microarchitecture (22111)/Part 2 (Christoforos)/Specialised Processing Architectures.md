@@ -12,3 +12,4 @@
 3. Take the normalised number's exponent (e.g. $2^6$). if the number in the power is positive, the FP exponent is (for example) $127 + 6$. If the number in the power is positive (e.g. $2^{-6}$), the FP exponent is (for example) $127 - 6$.
 4. Pad the numbers to fit the format.
 
+### DSPs
