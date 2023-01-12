@@ -14,3 +14,5 @@
 4. Pad the numbers to fit the format.
 
 ### DSPs
+Specialised for high performance in a particular subset of computing tasks such as filtering, fast Fourier transform, etc.
+![[Pasted image 20230112123621.png]]
