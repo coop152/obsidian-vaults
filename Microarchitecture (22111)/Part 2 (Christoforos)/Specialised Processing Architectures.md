@@ -18,3 +18,5 @@
 Specialised for high performance in a particular subset of computing tasks such as filtering, fast Fourier transform, etc.
 ![[Pasted image 20230112123621.png]]
 ![[Pasted image 20230112124249.png]]
+### Superscalar
+![[Pasted image 20230112125452.png]]
