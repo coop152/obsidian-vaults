@@ -5,6 +5,7 @@
 ### FPUs
 #### Floating point representation (IEEE 754)
 ![[Pasted image 20230111150459.png]]
+
 #### Conversion procedure
 [[https://www.youtube.com/watch?v=8afbTaA-gOQ]]
 1. Convert the number to fixed point binary, ignoring the sign. The sign bit is 1 if the number was negative, and 0 if the number was positive.
