@@ -7,4 +7,18 @@ Three things:
 - Verification - Does your design do what you want? Did you actually make what you intended?
 - Validation - Does the design fulfil the requirements? e.g. size, power usage
 - Testing - Does this singular specimen work?
-Verification and Validation 
+Verification and Validation can (and should) be done in software, but Testing is purely physical.
+In essentially all cases (except for perhaps FPGAs) this checking is done by simulation and not by making physical prototypes. Making a chip is expensive, and you don't want to print any mistakes!
+
+## Verification
+Need to prove the logic/implementation works as desired with *the minimum amount of effort possible*.
+Techniques include:
+- Digital simulation
+	- Verifies the logic
+	- Reveals initialisation problems
+	- No (or approximate) timing
+	- Quick
+- Analogue Simulation
+	- Verifies the logic, as well as the timing
+	- Reveals the true speed of the edges
+	- Slow
