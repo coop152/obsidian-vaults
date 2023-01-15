@@ -26,3 +26,6 @@ Techniques include:
 ![[Pasted image 20230115135101.png]]
 ## SoC Simulation
 ![[Pasted image 20230115135346.png]]
+A balancing act between speed and accuracy, dependent on many factors including the performance of the simulating PC.
+### Hardware Emulators
+Programmable devices  are now large enough to be used for
