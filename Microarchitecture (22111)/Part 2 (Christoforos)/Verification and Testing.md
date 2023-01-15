@@ -1,6 +1,8 @@
 Absolutely vital to VLSI (Very Large Scale Integration).
 **VLSI Verification**: Done before silicon development, to fix issues with the design. These may be bugs, or other quality issues. This includes multiple kinds of verification, such as IP verification, RTL verification, timing verification, etc. **SoC Verification** is a similar but more board term.
 **VLSI Testing/Validation**: Done after the silicon is developed, to validate the quality of the resulting silicon. If a problem is found during testing, the only solution is to recycle the silicon and try again, which is very costly.
+**Controllability**: The ease with which input data can be given to the device under test. A very controllable device is easier to test. An example may be a multiplexer before the inputs to the chip, thus allowing the normal inputs to be substituted for a set of test inputs.
+**Observability**: 
 
 ## What is "testing"?
 Three things:
