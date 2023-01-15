@@ -28,4 +28,11 @@ Techniques include:
 ![[Pasted image 20230115135346.png]]
 A balancing act between speed and accuracy, dependent on many factors including the performance of the simulating PC.
 ### Hardware Emulators
-Programmable devices  are now large enough to be used for
+Programmable devices such as FPGAs are now large enough to be used for hardware simulation. Large logic systems can be synthesised and loaded onto an FPGA, and with enough FPGAs once can load a whole chip description. This is sometimes referred to as "hardware emulation". However, this method lacks the debugging features of software simulation; you cannot set breakpoints, you cannot observe any signal, you don't have the concept of X nodes, etc. The tradeoff is that the hardware emulation will be significantly faster and will have some kind of timing model (though it won't match the manufactured ASIC so its usefulness is limited).
+
+## Testing
+- VLSI chips are made on silicon wafers.
+- Defects will always occur on these wafers; thus some chips will not work.
+- The proportion of working chips in a batch is known as the "yield". Yields vary, but on a mature process you might expect something like 80%+. Yield is influenced by the area of a single chip: bigger chips are more likely to be faulty.
+![[Pasted image 20230115141631.png]]
+Testing determines which chips work and which don't.
