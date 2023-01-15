@@ -24,3 +24,5 @@ Techniques include:
 	- Reveals the true speed of the edges
 	- Slow
 ![[Pasted image 20230115135101.png]]
+## SoC Simulation
+![[Pasted image 20230115135346.png]]
