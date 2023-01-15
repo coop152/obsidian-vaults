@@ -38,3 +38,7 @@ Programmable devices such as FPGAs are now large enough to be used for hardware 
 - The proportion of working chips in a batch is known as the "yield". Yields vary, but on a mature process you might expect something like 80%+. Yield is influenced by the area of a single chip: bigger chips are more likely to be faulty.
 ![[Pasted image 20230115141631.png]]
 Testing determines which chips work and which don't.
+
+## Components for Testing
+### Linear Feedback Shift Registers
+A type of shift register that generates pseudo random sequences. Useful in circuit testing as a method of generating test patterns, but also for **signature analysis**. 
