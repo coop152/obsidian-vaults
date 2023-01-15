@@ -24,7 +24,7 @@
     Standard Cell design methodology, PLA, Multiplexer, look-up table technology.
 6.  [ ] [[Computer Aided Design (CAD) Tools]]   
     Logic synthesis, constraints, Place & Route, DRCs.
-7.  [ ] [[Verification and Test]]
+7.  [ ] [[Verification and Testing]]
     Analogue and digital simulation, regression testing, production test and yield built-in self-test (BIST).
 8.  [ ] [[Timing and Clocking]]
     System performance, setup and hold times, jitter, clock skew, clock distribution networks, propagation delay, signal integrity, static timing analysis (STA), clock domains, synchronisation and meta-stability.
