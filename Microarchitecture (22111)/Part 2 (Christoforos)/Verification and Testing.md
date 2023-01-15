@@ -18,7 +18,9 @@ Techniques include:
 	- Reveals initialisation problems
 	- No (or approximate) timing
 	- Quick
+![[Pasted image 20230115135045.png]]
 - Analogue Simulation
 	- Verifies the logic, as well as the timing
 	- Reveals the true speed of the edges
 	- Slow
+![[Pasted image 20230115135101.png]]
