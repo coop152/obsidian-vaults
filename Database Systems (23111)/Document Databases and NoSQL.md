@@ -1,11 +1,15 @@
 - Can store vast amounts of data more effectively than a traditional SQL database (good for companies like Twitter or Google)
 - Highly scalable
 ## MongoDB
-| SQL Term   | MongoDB Equivalent |
-| ---------- | ------------------ |
-| Database   | Database           |
-| Table      | Collection         |
-| Record/Row | Document           |
+| SQL Term        | MongoDB Equivalent |
+| --------------- | ------------------ |
+| Database        | Database           |
+| Table           | Collection         |
+| Record/Row      | Document           |
+| Normalisation   | Embedding          |
+| Normalised      | Embedded           |
+| Denormalisation | Referencing        |
+| Denormalised    |                    |
 
 
 ## CRUD Operations (MongoDB)
