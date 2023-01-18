@@ -68,3 +68,14 @@ END //
 
 DELIMITER ;
 ```
+Case statement:
+```sql
+CASE country
+	WHEN 'USA' THEN
+		SET pShipping = '2-day shipping';
+	WHEN 'Canada' THEN
+		SET pShipping = '3-day shipping';
+	ELSE
+		SET pShipping = '5-day shipping';
+END CASE;
+```
