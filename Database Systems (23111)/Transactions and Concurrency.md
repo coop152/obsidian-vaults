@@ -60,3 +60,17 @@ Dont care
 - Two schedules are said to be "conflict equivalent" if the relative order of any two conflicting operations is the same in both schedules.
 ![[Pasted image 20230118161439.png]]
 - The serializability of a schedule can be checked using graph theory - if you draw a node for each transaction, and draw a path between them for every conflict, you get a graph. If the graph contains any cycles, the schedule is not serializable.
+- The method goes something like this:
+```python
+algorithm serializability_check(Schedule S):
+	conflict_graph = a new directed graph
+	for operation in S:  # in order of time
+		for other_op ahead of operation:  # check against all operations ahead
+			if both operate on the same data and
+					at least one is a write and
+					they are in different transactions:  # conflict found
+				conflict_graph.add(operation.transaction, other_op.transaction)
+				if conflict_graph.has_cycle():
+					return false  # cycle means its not serializable
+	return true  # there are no cycles, so its serializable
+```
