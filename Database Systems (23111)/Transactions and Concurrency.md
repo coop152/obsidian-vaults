@@ -7,4 +7,12 @@ When one user is allowed to read a value while another user is in the process of
 ![[Pasted image 20230118151324.png]]
 If transaction 1 makes an update that must later be rolled back due to a failure of some sort, transaction 2 may have read the updated value before it was rolled back, meaning that transaction 2 has a false value. 
 #### The Incorrect Summary
+Dont care
 #### The Unrepeatable Read
+Dont care
+
+## ACID Transactions
+- Atomicity: Either *all* operations in the transaction are completed, or *none* of them are
+- Consistency Preservation: The database should never be left in an inconsistent state
+- Isolation: The transactions appear to be working completely in isolation, even though they are working concurrently
+- Durability (Permanency)
