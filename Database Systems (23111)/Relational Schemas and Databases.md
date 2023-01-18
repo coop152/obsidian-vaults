@@ -30,9 +30,10 @@ CREATE PROCEDURE GetOrdersByDate(
 	IN orderDate DATE,
 	OUT orderCount INT)
 BEGIN
-	SELECT *, COUNT(*) INTO orderCount
-	FROM Orders
-	WHERE Orders.date = orderDate
+	SELECT * FROM Orders
+	WHERE Orders.date = orderDate;
+
+	SELECT COUNT(*)
 END
 
 DELIMITER ;
