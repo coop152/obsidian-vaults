@@ -51,4 +51,10 @@ Dont care
 ![[Pasted image 20230118155527.png]]
 - The transactions are allowed to take turns running. This stops large transactions from hogging the database, and allows the database to continue working while waiting on I/O.
 - However, it isn't trivial to make a correct interleaved schedule. Schedule C is not valid! 
-- 
+- You want your database to have concurrency, so you can't use serial schedules. But, you want your database to actually work consistently, so you can't use randomly interleaved transactions. What is there to do?
+#### Serializable Schedules
+- Not serial schedules. Serial<u>izable</u>.
+- A schedule is serializable if it is equivalent to a serial schedule of the same transactions.
+- Equivalent meaning "gives the same results".
+- Two schedules are equivalent if the operations applied to each data item are in the same order in each.
+- Two schedules are said to be "conflict equivalent" if the relative order of any two conflicting operations is the same in both schedules.
