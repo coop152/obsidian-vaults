@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
+                "file": "Database Systems (23111)/Summary.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "710b95e742f2b973",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Database Systems (23111)/Transactions and Concurrency.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
+                "file": "Database Systems (23111)/Transactions and Concurrency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
+                "file": "Database Systems (23111)/Transactions and Concurrency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database Systems (23111)/Relational Schemas and Databases.md"
+                "file": "Database Systems (23111)/Transactions and Concurrency.md"
               }
             }
           }
@@ -148,12 +161,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8f014b80ee060980",
+  "active": "15cb789415892a8c",
   "lastOpenFiles": [
     "Database Systems (23111)/Summary.md",
+    "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Document Databases and NoSQL.md",
     "Database Systems (23111)/Database Web Programming.md",
-    "Database Systems (23111)/Relational Schemas and Databases.md",
     "Untitled.md",
     "Microarchitecture (22111)/Part 2 (Christoforos)/Verification and Testing.md",
     "Microarchitecture (22111)/Part 2 (Christoforos)/Technology.md",
