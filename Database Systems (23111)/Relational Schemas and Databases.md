@@ -7,7 +7,7 @@ WHERE category != "Technology" -- Filter by non-aggregates here
 GROUP BY name
 HAVING SUM(price) > 100; -- Filter by aggregates here
 ```
-#### Stored Routines
+#### Stored Procedures
 ```sql
-CREATE ROUTINE 
+CREATE PROCEDURE
 ```
