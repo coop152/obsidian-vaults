@@ -8,7 +8,6 @@
 | Record/Row      | Document           |
 | Normalisation   | Referencing        |
 | Denormalisation | Embedding          |
-## CRUD Operations (MongoDB)
 ### Create
 **SQL**:
 ```sql
@@ -49,3 +48,13 @@ db.Table.updateMany(
 ```
 
 ### Delete
+**SQL**:
+```sql
+DELETE FROM Table WHERE x = 10, y != 5;
+```
+**MongoDB**:
+```js
+db.Table.deleteMany(
+	{x: 10, y: {$ne: 5}}
+)
+```
