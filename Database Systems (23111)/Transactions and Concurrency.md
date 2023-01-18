@@ -58,3 +58,5 @@ Dont care
 - Equivalent meaning "gives the same results".
 - Two schedules are equivalent if the operations applied to each data item are in the same order in each.
 - Two schedules are said to be "conflict equivalent" if the relative order of any two conflicting operations is the same in both schedules.
+![[Pasted image 20230118161439.png]]
+- The serializability of a schedule can be checked using graph theory - if you draw a node for each transaction, and draw a path between them for every conflict, you get a graph. If the graph contains any cycles, the schedule is not serializable.
