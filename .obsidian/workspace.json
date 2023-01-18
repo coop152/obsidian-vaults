@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database Systems (23111)/Document Databases and NoSQL.md",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database Systems (23111)/Document Databases and NoSQL.md",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database Systems (23111)/Document Databases and NoSQL.md",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database Systems (23111)/Document Databases and NoSQL.md"
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md"
               }
             }
           }
