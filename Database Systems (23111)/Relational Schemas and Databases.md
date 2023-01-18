@@ -33,7 +33,8 @@ BEGIN
 	SELECT * FROM Orders
 	WHERE Orders.date = orderDate;
 
-	SELECT COUNT(*)
+	SELECT COUNT(*) INTO orderCount FROM Orders
+	WHERE Orders.date = orderDate;
 END
 
 DELIMITER ;
