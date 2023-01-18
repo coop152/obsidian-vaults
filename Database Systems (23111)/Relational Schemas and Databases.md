@@ -44,3 +44,27 @@ List all stored procedures:
 SELECT routine_name FROM information_schema.routines
 WHERE routine_type = "PROCEDURE" AND routine_schema = "classicmodels";
 ```
+Control Flow, local variables:
+```sql
+DELIMITER //
+
+CREATE PROCEDURE GetCustomerLevel(
+IN pCustomerNumber INT,
+OUT pCustomerLevel VARCHAR(20))
+BEGIN
+	DECLARE credit DECIMAL(10,2) DEFAULT 0;
+
+	SELECT creditLimit INTO credit FROM customers
+		WHERE customerNumber = pCustomerNumber;
+
+	IF credit <= 10000 THEN
+		SET pCustomerLevel = 'SILVER';
+	ELSEIF credit <= 50000 THEN
+		SET pCustomerLevel = 'GOLD';
+	ELSEIF credit > 50000 THEN
+		SET pCustomerLevel = 'PLATINUM';
+	END IF;
+END //
+
+DELIMITER ;
+```
