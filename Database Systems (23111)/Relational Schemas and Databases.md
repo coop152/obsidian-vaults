@@ -8,6 +8,20 @@ GROUP BY name
 HAVING SUM(price) > 100; -- Filter by aggregates here
 ```
 #### Stored Procedures
+Simple example:
 ```sql
-CREATE PROCEDURE
+DELIMITER //    -- Change delimiter so that ; can be used in the procedure
+
+CREATE PROCEDURE GetAllProducts()    -- Create the procedure
+BEGIN
+	SELECT * FROM Products;
+END //    -- Using changed delimiter
+
+DELIMITER ;    -- Change delimiter back to normal
+
+-- later on...
+CALL GetAllProducts();
+```
+Local and output variables:
+```
 ```
