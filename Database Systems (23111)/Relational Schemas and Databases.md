@@ -22,6 +22,18 @@ DELIMITER ;    -- Change delimiter back to normal
 -- later on...
 CALL GetAllProducts();
 ```
-Local and output variables:
-```
+Parameters:
+```sql
+DELIMITER //
+
+CREATE PROCEDURE GetOrdersByDate(
+	IN orderDate DATE,
+	OUT orderCount INT)
+BEGIN
+	SELECT *, COUNT(*) INTO orderCount
+	FROM Orders
+	WHERE Orders.date = orderDate
+END
+
+DELIMITER ;
 ```
