@@ -38,3 +38,17 @@ Dont care
 	- At least one of the operations is a write
 - Conflicting operations may result in inconsistent data!
 ![[Pasted image 20230118154334.png]]
+## Complete Schedules
+- The goal is to establish a **complete** schedule. A complete schedule satisfies these requirements:
+	- Contains all of the operations from all transactions
+	- Maintains the relative order of the operations within each transaction
+	- For any two conflicting operations, one of the two must occur before the other.
+#### The easy way - Serial schedules
+![[Pasted image 20230118155223.png]]
+- If each transaction is allowed to fully complete before another starts, there won't be any issues.
+- This is unacceptable in practice: A large transaction can completely block all other transactions, and any I/O waits will leave the database idle.
+#### The hard way - Interleaving
+![[Pasted image 20230118155527.png]]
+- The transactions are allowed to take turns running. This stops large transactions from hogging the database, and allows the database to continue working while waiting on I/O.
+- However, it isn't trivial to make a correct interleaved schedule. Schedule C is not valid! 
+- 
