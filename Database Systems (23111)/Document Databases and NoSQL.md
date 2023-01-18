@@ -6,12 +6,8 @@
 | Database        | Database           |
 | Table           | Collection         |
 | Record/Row      | Document           |
-| Normalisation   | Embedding          |
-| Normalised      | Embedded           |
-| Denormalisation | Referencing        |
-| Denormalised    |                    |
-
-
+| Normalisation   | Referencing        |
+| Denormalisation | Embedding          |
 ## CRUD Operations (MongoDB)
 ### Create
 **SQL**:
@@ -19,23 +15,37 @@
 INSERT INTO Table(aNumber, aString, aFloat) VALUES (10, "abc", 5.9);
 ```
 **MongoDB**:
-```python
+```js
 db.Table.insert({
-				 aNumber: 10,
-				 aString: "abc",
-				 aFloat: 5.9
-				 })
+	aNumber: 10,
+	aString: "abc",
+	aFloat: 5.9
+})
 ```
 ### Read
 **SQL**:
 ```sql
-SELECT * FROM Table;
+SELECT x FROM Table WHERE y > 5 AND z = 2;
 ```
 **MongoDB**:
-```python
-db.Table.find()
+```js
+db.Table.find(
+	{y: {$gt: 5}, z: 2}, 
+	{x: 1}
+)
 ```
 
 ### Update
+**SQL**:
+```sql
+UPDATE Table SET x = 2, y = 3 WHERE z > 5;
+```
+**MongoDB**:
+```js
+db.Table.updateMany(
+	{z: {$gt: 5}},
+	{x: 2, y: 3}
+)
+```
 
 ### Delete
