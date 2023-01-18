@@ -15,4 +15,26 @@ Dont care
 - Atomicity: Either *all* operations in the transaction are completed, or *none* of them are
 - Consistency Preservation: The database should never be left in an inconsistent state
 - Isolation: The transactions appear to be working completely in isolation, even though they are working concurrently
-- Durability (Permanency)
+- Durability (Permanency): In the event of a failure, the effects of a completed transaction must never be lost.
+
+## Schedules
+![[Pasted image 20230118153133.png]]
+- When executing transactions concurrently, we are actually interleaving operations in a serial fashion; we need a schedule
+- A schedule is defined as $S$ of $n$ transactions $T_1, T_2, \dots, T_n$ 
+- There is a shorthand notation for describing a schedule, using the symbols $b$, $r$, $w$, $e$, $c$ and $a$. That is: Begin, Read, Write, End, Commit and Abort
+- For example: $S_a:r_1(X);r_2(X);w_1(X);r_1(Y);w_2(X);w_1(Y);$ 
+	- Transaction 1 reads X
+	- Transaction 2 reads X
+	- Transaction 1 writes X
+	- Transaction 1 reads Y
+	- Transaction 2 writes X
+	- Transaction 1 writes Y
+- This particular schedule is invalid; transaction 1's update of X is lost, as it is written after transaction 2 reads X.
+
+## Conflicting Operations in a Schedule
+- Two operations in a schedule are said to conflict if all three of these things are true:
+	- They belong to two different transactions
+	- They access the same item
+	- At least one of the operations is a write
+- Conflicting operations may result in inconsistent data!
+![[Pasted image 20230118154334.png]]
