@@ -1,5 +1,5 @@
 ## Topics
-- Propositional Logic
+- [[Propositional Logic]]
 - Satisfiability
 - CNF/Formalizations
 - DPLL/Random
