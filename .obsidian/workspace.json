@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
-                "mode": "preview",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md"
+                "file": "Database Systems (23111)/Relational Schemas and Databases.md"
               }
             }
           }
@@ -149,15 +149,15 @@
   },
   "active": "8f014b80ee060980",
   "lastOpenFiles": [
+    "Database Systems (23111)/Transactions and Concurrency.md",
+    "Database Systems (23111)/Document Databases and NoSQL.md",
+    "Database Systems (23111)/Summary.md",
+    "Database Systems (23111)/Database Web Programming.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Pasted image 20230118154334.png",
     "Database Systems (23111)/Pasted image 20230118153133.png",
     "Database Systems (23111)/Pasted image 20230118151324.png",
     "Database Systems (23111)/Pasted image 20230118150826.png",
-    "Database Systems (23111)/Summary.md",
-    "Microarchitecture (22111)/Part 2 (Christoforos)/Pasted image 20230115141631.png",
-    "Microarchitecture (22111)/Part 2 (Christoforos)/Pasted image 20230115135346.png",
-    "Pasted image 20230118154311.png",
-    "Database Systems (23111)/Transactions and Concurrency.md"
+    "Microarchitecture (22111)/Part 2 (Christoforos)/Pasted image 20230115141631.png"
   ]
 }
