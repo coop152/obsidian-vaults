@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
+                "file": "Logic and Modelling (21111)/Propositional Logic.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
+                "file": "Logic and Modelling (21111)/Propositional Logic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
+                "file": "Logic and Modelling (21111)/Propositional Logic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md"
+                "file": "Logic and Modelling (21111)/Propositional Logic.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   },
   "active": "1cf6ea44badd2a88",
   "lastOpenFiles": [
-    "Logic and Modelling (21111)/Propositional Logic.md",
     "Logic and Modelling (21111)/Summary.md",
+    "Logic and Modelling (21111)/Propositional Logic.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Untitled.canvas",
     "Database Systems (23111)/Pasted image 20230118155527.png",
