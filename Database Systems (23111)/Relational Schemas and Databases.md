@@ -95,7 +95,15 @@ CREATE TRIGGER AFTER INSERT
 ON Orders
 FOR EACH ROW
 BEGIN
-	DECLARE 
+	DECLARE logSize INT;
+
+	INSERT INTO ActiveOrders VALUES (NEW.XXX, NEW.YYY);
+	
+	SELECT COUNT(*) INTO logSize
+		FROM ActiveOrders;
+	IF logSize > 50 THEN
+		CALL AlertTooManyUnfulfilledOrders(logSize);
+	END IF;
 END //
 
 DELIMITER ;
