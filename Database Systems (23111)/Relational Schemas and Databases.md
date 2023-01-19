@@ -81,8 +81,8 @@ END CASE;
 ```
 Single-line trigger:
 ```sql
-CREATE TRIGGER BEFORE DELETE
-ON Customers
+CREATE TRIGGER RecordDeletedCustomers
+BEFORE DELETE ON Customers
 FOR EACH ROW
 	INSERT INTO CustomerAudit(deletedCustomerID, deletionTime)
 	VALUES (OLD.customerID, NOW());
@@ -91,8 +91,8 @@ Multi-line trigger:
 ```sql
 DELIMITER //
 
-CREATE TRIGGER AFTER INSERT
-ON Orders
+CREATE TRIGGER AddNewOrderToActiveOrders
+AFTER INSERT ON Orders
 FOR EACH ROW
 BEGIN
 	DECLARE logSize INT;

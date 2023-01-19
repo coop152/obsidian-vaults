@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "34e091431b7058af",
+        "id": "38300356ac9169bc",
         "type": "tabs",
         "children": [
           {
-            "id": "8f014b80ee060980",
+            "id": "4b94659dd8f12e4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,17 +147,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8f014b80ee060980",
+  "active": "4b94659dd8f12e4c",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Database Systems (23111)/Pasted image 20230118155527.png",
+    "Database Systems (23111)/Pasted image 20230118161439.png",
+    "Database Systems (23111)/Pasted image 20230118155223.png",
+    "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Transactions and Concurrency.md",
     "Database Systems (23111)/Document Databases and NoSQL.md",
     "Database Systems (23111)/Summary.md",
     "Database Systems (23111)/Database Web Programming.md",
-    "Database Systems (23111)/Relational Schemas and Databases.md",
-    "Database Systems (23111)/Pasted image 20230118154334.png",
-    "Database Systems (23111)/Pasted image 20230118153133.png",
-    "Database Systems (23111)/Pasted image 20230118151324.png",
-    "Database Systems (23111)/Pasted image 20230118150826.png",
-    "Microarchitecture (22111)/Part 2 (Christoforos)/Pasted image 20230115141631.png"
+    "Database Systems (23111)/Pasted image 20230118154334.png"
   ]
 }
