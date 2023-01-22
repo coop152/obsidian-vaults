@@ -78,7 +78,39 @@ Implementing a Composite pattern means creating a common base class that represe
 Consider refactoring to a composite pattern when data or code forms an implicit tree structure.
 ### Example
 ![](Pasted%20image%2020230122143809.png)
+```java
+interface FileSystemElement {
+	public bool delete();
+	public String getName();
+	public void setName(String name);
+	// etc..
+}
 
+class File implements FileSystemElement {
+	public bool delete() { /* implementation goes here */ }
+	public String getName() { /* implementation goes here */ }
+	public void setName(String name) { /* implementation goes here */ }
+}
+
+class Folder implements FileSystemElement {
+	private List<FileSystemElement> contents = new ArrayList<>();
+	// shared methods
+	public bool delete() { /* implementation goes here */ }
+	public String getName() { /* implementation goes here */ }
+	public void setName(String name) { /* implementation goes here */ }
+
+	// composite only methods
+	public void add(FileSystemElement child) {
+		contents.add(child);
+	}
+	public void remove(FileSystemElement child) {
+		contents.remove(child);
+	}
+	public FileSystemElement getChild(int idx) {
+		return contents.get(idx);
+	}
+}
+```
 ### Consequences
 ## Adapter Pattern
 ### Intent
