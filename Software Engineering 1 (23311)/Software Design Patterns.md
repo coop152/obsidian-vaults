@@ -126,8 +126,16 @@ An Adapter can often be a useful tool when working with legacy code that cannot 
 ### Consequences
 ## Factory Method
 ### Intent
+> “Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses”
+
+Implementing a Factory Method means creating a class whose sole job is to create objects - the object type is determined based on, for example, parameters passed at runtime. This is **separating the object creation interface from the object creation process**.
 ### Refactoring
+Factory Method can often be a useful tool when working with lots of subclasses with a common base class.
 ### Example
+![](Pasted%20image%2020230122152835.png)
+```java
+
+```
 ### Consequences
 ## Singleton Pattern
 ### Intent
