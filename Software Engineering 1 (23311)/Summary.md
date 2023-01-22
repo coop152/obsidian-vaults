@@ -13,7 +13,13 @@
 	- Drivers and Stubs
 - Git Workflows
 	- Repo Setups
+	- Commit Message Etiquette 
 - Refactoring
+	- Kinds of Code Change
+	- Functional vs Non-functional Changes
+	- Code Smells
+	- Technical Debt
+	- 
 - Design for Testability
 - Software Design Patterns
 - Software Architecture Patterns

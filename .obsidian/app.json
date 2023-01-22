@@ -5,7 +5,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "spellcheck": false,
+  "spellcheck": true,
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true,
   "attachmentFolderPath": "./attachments"
