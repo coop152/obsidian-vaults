@@ -71,8 +71,14 @@ Code looks somewhat like Strategy Pattern, but the "strategy" changes continuall
 cant be bothered i already know how it works
 ## Composite Pattern
 ### Intent
+> “Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.”
+
+Implementing a Composite pattern means creating a common base class that represents both a part of an object, and the containing object as a whole.
 ### Refactoring
+Consider refactoring to a composite pattern when data or code forms an implicit tree structure.
 ### Example
+![](Pasted%20image%2020230122143809.png)
+
 ### Consequences
 ## Adapter Pattern
 ### Intent
