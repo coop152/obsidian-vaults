@@ -93,13 +93,23 @@
         "type": "tabs",
         "children": [
           {
+            "id": "12ba371b0a6f0d0f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Software Engineering 1 (23311)/Software Design Patterns.md"
+              }
+            }
+          },
+          {
             "id": "566299dde07e4c3d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
                 "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -131,23 +141,12 @@
                 "useHierarchy": true
               }
             }
-          },
-          {
-            "id": "bcb65a4a68ca66d0",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Software Engineering 1 (23311)/Software Design Patterns.md"
-              }
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {

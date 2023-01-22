@@ -7,16 +7,18 @@ Each pattern is described using this standard form:
 - Structure
 - Implementation
 - Applicability
-## Types of Design Patterns#
+## Types of Design Patterns
 Each pattern falls into one of three categories: Creational, Structural, or Behavioural.
 -   Behavioural Patterns are concerned with the way objects interact and the responsibilities they adopt, e.g. how they communicate, how behaviour is distributed, how tightly objects are coupled.
 -   Structural Patterns are concerned with the composition of objects, e.g. how classes and objects can be composed to form larger structures.
 -   Creational Patterns are concerned with the way objects are created, providing solutions to instantiate objects in the best possible way for a given situation.
 ## Strategy Pattern
-### Intent:
+### Intent
 > “Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.”
 
 Create a series of objects that hold many interchangeable algorithms.
+### Refactoring
+Often involves pulling the algorithm itself out of the client object and into a strategy object.
 ### Example
 ![](Pasted%20image%2020230122135430.png)
 ```java
@@ -51,8 +53,39 @@ class InsertionSortStrategy implements SortingStrategy {
 	}
 }
 ```
+### Consequences
+-   Can switch between different strategies at runtime
+-   Can add a new strategy easily by adding a new concrete strategy class
 ## State Pattern
+### Intent
+> “Allow an object to alter its behaviour when its internal state changes. The object will appear to change its class.”
+
+Create a series of objects that represent different states the client object may be in, each with a different functionality. Which one is used depends on the internal state of the client.
+### Refactoring
+Often involves removing conditional statements (e.g. if/else chains, case statements) and pulling out each branch into a state object.
+### Example
+![](Pasted%20image%2020230122143159.png)
+![](Pasted%20image%2020230122143210.png)
+Code looks somewhat like Strategy Pattern, but the "strategy" changes continually as the object's state changes and the State object is switched out.
+### Consequences
+cant be bothered i already know how it works
 ## Composite Pattern
+### Intent
+### Refactoring
+### Example
+### Consequences
 ## Adapter Pattern
+### Intent
+### Refactoring
+### Example
+### Consequences
 ## Factory Method
+### Intent
+### Refactoring
+### Example
+### Consequences
 ## Singleton Pattern
+### Intent
+### Refactoring
+### Example
+### Consequences
