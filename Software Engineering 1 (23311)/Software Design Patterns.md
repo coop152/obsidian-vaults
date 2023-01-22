@@ -36,17 +36,17 @@ class User {
 	}
 }
 interface SortingStrategy {
-	public <T extends Comparable<? super T>> void sort(T[] arr);
+	public void sort(int[] arr);
 }
 
 class MergeSortStrategy implements SortingStrategy {
-	public <T extends Comparable<? super T>> void sort(T[] arr) {
+	public void sort(int[] arr) {
 		// implementation
 	}
 }
 
 class InsertionSortStrategy implements SortingStrategy {
-	public <T extends Comparable<? super T>> void sort(T[] arr) {
+	public void sort(int[] arr) {
 		// different implementation
 	}
 }
