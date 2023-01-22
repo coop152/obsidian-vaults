@@ -1,25 +1,35 @@
 ## Topics
-- Testing
+- [ ] Testing
 	- Build Systems (e.g. Maven, Ant, make)
 	- Unit Tests (AAA Pattern)
 	- JUnit
-- Effort Estimation
+- [ ] Effort Estimation
 	- Work Breakdown Structure
-- Test Driven Development
+- [ ] Test Driven Development
 	- Feature Scoping
 	- Agile
 	- Outside-in TDD
 	- Middle-out TDD
 	- Drivers and Stubs
-- Git Workflows
+- [ ] Git Workflows
 	- Repo Setups
 	- Commit Message Etiquette 
-- Refactoring
+- [ ] Refactoring
 	- Kinds of Code Change
 	- Functional vs Non-functional Changes
 	- Code Smells
 	- Technical Debt
+- [ ] Design for Testability
+	- Things that make code less testable
+	- Test Doubles
+- [ ] Software Design Patterns
+	- Gang of Four
+	- Types of Design Patterns
+	- Strategy Pattern
+	- State Pattern
+	- Composite Pattern
+	- Adapter Pattern
+	- Factory Method
+	- Singleton Pattern
+- [ ] Software Architecture Patterns
 	- 
-- Design for Testability
-- Software Design Patterns
-- Software Architecture Patterns
