@@ -134,7 +134,45 @@ Factory Method can often be a useful tool when working with lots of subclasses w
 ### Example
 ![](Pasted%20image%2020230122152835.png)
 ```java
+interface Shape {
+	public void draw();
+}
 
+class Rectangle implements Shape {
+	public void draw() { /* implementation goes here*/ }
+}
+class Circle implements Shape {
+	public void draw() { /* implementation goes here*/ }
+}
+class Triangle implements Shape {
+	public void draw() { /* implementation goes here*/ }
+}
+
+class ShapeFactory {
+	public Shape makeShape(String shapeType) {
+		if (shapeType.equals("Rectangle")) {
+			return new Rectangle();
+		} else if (shapeType.equals("Circle")) {
+			return new Circle();
+		} else if (shapeType.equals("Triangle")) {
+			return new Triangle();
+		} else {
+			return null;
+		}
+	}
+}
+
+class Demo {
+	public static void main(String[] args) {
+		ShapeFactory sf = new ShapeFactory();
+		// will be a Rectangle
+		Shape first = sf.makeShape("Rectangle");
+		// will be a Circle
+		Shape second = sf.makeShape("Circle");
+		// will be a Triangle
+		Shape third = sf.makeShape("Triangle");
+	}
+}
 ```
 ### Consequences
 ## Singleton Pattern
