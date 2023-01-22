@@ -14,8 +14,12 @@ Each pattern falls into one of three categories: Creational, Structural, or Beha
 -   Creational Patterns are concerned with the way objects are created, providing solutions to instantiate objects in the best possible way for a given situation.
 ## Strategy Pattern
 ### Intent:
-“Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.”
-Create a series of objects that hold many interchangeable algorithms. This way, clients can easily switch their strategy 
+> “Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.”
+
+Create a series of objects that hold many interchangeable algorithms.
+### Example
+![](Pasted%20image%2020230122135430.png)
+
 ## State Pattern
 ## Composite Pattern
 ## Adapter Pattern
