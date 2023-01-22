@@ -8,5 +8,6 @@
   "spellcheck": true,
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./attachments"
+  "attachmentFolderPath": "./attachments",
+  "showLineNumber": false
 }

@@ -19,7 +19,38 @@ Each pattern falls into one of three categories: Creational, Structural, or Beha
 Create a series of objects that hold many interchangeable algorithms.
 ### Example
 ![](Pasted%20image%2020230122135430.png)
+```java
+// Client class
+class User {
+	private SortingStrategy sortingStrategy;
 
+	public User(SortingStrategy strategy) {
+		this.sortingStrategy = strategy;
+	}
+
+	public doSomething() {
+		// .. do stuff
+		// need to sort a list!
+		sortingStrategy.sort(stuff);
+		// .. do more stuff
+	}
+}
+interface SortingStrategy {
+	public <T extends Comparable<? super T>> void sort(T[] arr);
+}
+
+class MergeSortStrategy implements SortingStrategy {
+	public <T extends Comparable<? super T>> void sort(T[] arr) {
+		// implementation
+	}
+}
+
+class InsertionSortStrategy implements SortingStrategy {
+	public <T extends Comparable<? super T>> void sort(T[] arr) {
+		// different implementation
+	}
+}
+```
 ## State Pattern
 ## Composite Pattern
 ## Adapter Pattern
