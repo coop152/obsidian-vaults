@@ -177,6 +177,13 @@ class Demo {
 ### Consequences
 ## Singleton Pattern
 ### Intent
+> “Ensure a class only has one instance, and provide a global point of access to it.”
+
+Implementing a Singleton pattern means creating a class whose constructor cannot be called in the usual way, and where all calls to create a new object return the same instance
+
 ### Refactoring
+It can be just as valid to refactor away from a Singleton pattern as it is to it - i.e., as an *antipattern*.
 ### Example
+![](Pasted%20image%2020230122154821.png)
+
 ### Consequences
