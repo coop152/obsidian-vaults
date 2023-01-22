@@ -146,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -162,15 +162,15 @@
   },
   "active": "be5fe3c0078089ba",
   "lastOpenFiles": [
+    "Microarchitecture (22111)/Part 2 (Christoforos)/attachments/Pasted image 20230112124249.png",
+    "Microarchitecture (22111)/Part 2 (Christoforos)/attachments/Pasted image 20230112123621.png",
+    "Database Systems (23111)/Transactions and Concurrency.md",
+    "Database Systems (23111)/attachments/Pasted image 20230118155223.png",
+    "Software Engineering 1 (23311)/Summary.md",
     "Untitled.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
     "Logic and Modelling (21111)/Summary.md",
-    "Untitled.canvas",
-    "Database Systems (23111)/Pasted image 20230118155527.png",
-    "Database Systems (23111)/Pasted image 20230118161439.png",
-    "Database Systems (23111)/Pasted image 20230118155223.png",
-    "Database Systems (23111)/Transactions and Concurrency.md",
-    "Database Systems (23111)/Document Databases and NoSQL.md"
+    "Untitled.canvas"
   ]
 }

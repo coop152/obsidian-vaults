@@ -1,1 +1,18 @@
 ## Topics
+- Testing
+	- Build Systems (e.g. Maven, Ant, make)
+	- Unit Tests (AAA Pattern)
+	- JUnit
+- Effort Estimation
+	- Work Breakdown Structure
+- Test Driven Development
+	- Feature Scoping
+	- Agile
+	- Outside-in TDD
+	- Middle-out TDD
+	- Drivers and Stubs
+- Git Workflows
+- Refactoring
+- Design for Testability
+- Software Design Patterns
+- Software Architecture Patterns
