@@ -22,7 +22,7 @@
 - [ ] Design for Testability
 	- Things that make code less testable
 	- Test Doubles
-- [ ] Software Design Patterns
+- [ ] [Software Design Patterns](Software%20Design%20Patterns.md)
 	- Gang of Four
 	- Types of Design Patterns
 	- Strategy Pattern

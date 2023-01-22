@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "acc10b6cc6c13a1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md",
+                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md",
+                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md"
+                "file": "Software Engineering 1 (23311)/Software Design Patterns.md"
               }
             }
           }
@@ -147,8 +160,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "be5fe3c0078089ba",
+  "active": "acc10b6cc6c13a1e",
   "lastOpenFiles": [
+    "Software Engineering 1 (23311)/Summary.md",
+    "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Document Databases and NoSQL.md",
     "Database Systems (23111)/Database Web Programming.md",
@@ -156,8 +171,6 @@
     "Logic and Modelling (21111)/Propositional Logic.md",
     "Microarchitecture (22111)/Part 1 (Paul)/Verilog & Testing.md",
     "Microarchitecture (22111)/Part 1 (Paul)/Sequential systems design.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Introduction to CMOS.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Introduction.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Designing and Implementing Processors.md"
+    "Microarchitecture (22111)/Part 1 (Paul)/Introduction to CMOS.md"
   ]
 }
