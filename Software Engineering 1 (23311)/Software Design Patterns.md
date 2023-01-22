@@ -185,5 +185,10 @@ Implementing a Singleton pattern means creating a class whose constructor cannot
 It can be just as valid to refactor away from a Singleton pattern as it is to it - i.e., as an *antipattern*.
 ### Example
 ![](Pasted%20image%2020230122154821.png)
-
+```java
+class Singleton {
+	private Singleton instance;
+	private Singleton() {}
+}
+```
 ### Consequences
