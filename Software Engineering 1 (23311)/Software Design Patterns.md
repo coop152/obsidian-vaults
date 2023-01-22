@@ -7,9 +7,15 @@ Each pattern is described using this standard form:
 - Structure
 - Implementation
 - Applicability
+## Types of Design Patterns#
 Each pattern falls into one of three categories: Creational, Structural, or Behavioural.
-## Types of Design Patterns
+-   Behavioural Patterns are concerned with the way objects interact and the responsibilities they adopt, e.g. how they communicate, how behaviour is distributed, how tightly objects are coupled.
+-   Structural Patterns are concerned with the composition of objects, e.g. how classes and objects can be composed to form larger structures.
+-   Creational Patterns are concerned with the way objects are created, providing solutions to instantiate objects in the best possible way for a given situation.
 ## Strategy Pattern
+### Intent:
+“Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.”
+Create a series of objects that hold many interchangeable algorithms. This way, clients can easily switch their strategy 
 ## State Pattern
 ## Composite Pattern
 ## Adapter Pattern
