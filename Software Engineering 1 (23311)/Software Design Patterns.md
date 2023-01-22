@@ -187,8 +187,12 @@ It can be just as valid to refactor away from a Singleton pattern as it is to it
 ![](Pasted%20image%2020230122154821.png)
 ```java
 class Singleton {
-	private Singleton instance;
-	private Singleton() {}
+	private Singleton instance = new Singleton();
+	private Singleton() {} // cannot use constructor outside of class
+
+	public static Singleton getInstance() {
+		return instance;
+	}
 }
 ```
 ### Consequences
