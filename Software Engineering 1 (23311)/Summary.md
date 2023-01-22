@@ -12,6 +12,7 @@
 	- Middle-out TDD
 	- Drivers and Stubs
 - Git Workflows
+	- Repo Setups
 - Refactoring
 - Design for Testability
 - Software Design Patterns
