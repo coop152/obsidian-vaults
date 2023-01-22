@@ -94,14 +94,11 @@ class File implements FileSystemElement {
 
 class Folder implements FileSystemElement {
 	private List<FileSystemElement> contents = new ArrayList<>();
-	// shared methods
+	// shared methods, which may propagate actions to children
+	// for example, delete() will also delete children
 	public bool delete() { /* implementation goes here */ }
 	public String getName() { /* implementation goes here */ }
-	public void setName(String name) {
-		for (FileSystemElement elem: contents) {
-			elem.
-		}
-	}
+	public void setName(String name) { /* implementation goes here */ }
 
 	// composite only methods
 	public void add(FileSystemElement child) {
