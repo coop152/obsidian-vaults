@@ -116,12 +116,13 @@ class Folder implements FileSystemElement {
 - Allows the client to perform operations on tree-like structures without needing to discern composites from leaves.
 ## Adapter Pattern
 ### Intent
-> “Convert the interface of a class into another interface Clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces."
+> “Convert the interface of a class into another interface the client expects. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces."
 
--   In other words, implementing an Adapter pattern means creating a wrapper class that transforms an incoming request for a piece of functionality into the format accepted by the code that can provide that functionality
--   An Adapter can often be a useful tool when working with legacy code that cannot be changed at the current time
+Implementing an Adapter pattern means creating a wrapper class that transforms an incoming request for a piece of functionality into the format accepted by the code that can provide that functionality.
 ### Refactoring
+An Adapter can often be a useful tool when working with legacy code that cannot be changed at the current time.
 ### Example
+![](Pasted%20image%2020230122151856.png)
 ### Consequences
 ## Factory Method
 ### Intent
