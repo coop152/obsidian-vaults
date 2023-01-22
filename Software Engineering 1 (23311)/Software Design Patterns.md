@@ -97,7 +97,11 @@ class Folder implements FileSystemElement {
 	// shared methods
 	public bool delete() { /* implementation goes here */ }
 	public String getName() { /* implementation goes here */ }
-	public void setName(String name) { /* implementation goes here */ }
+	public void setName(String name) {
+		for (FileSystemElement elem: contents) {
+			elem.
+		}
+	}
 
 	// composite only methods
 	public void add(FileSystemElement child) {
