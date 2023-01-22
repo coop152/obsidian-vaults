@@ -123,7 +123,6 @@ Implementing an Adapter pattern means creating a wrapper class that transforms a
 An Adapter can often be a useful tool when working with legacy code that cannot be changed at the current time.
 ### Example
 ![](Pasted%20image%2020230122151856.png)
-### Consequences
 ## Factory Method
 ### Intent
 > “Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses”
@@ -174,7 +173,6 @@ class Demo {
 	}
 }
 ```
-### Consequences
 ## Singleton Pattern
 ### Intent
 > “Ensure a class only has one instance, and provide a global point of access to it.”
@@ -195,4 +193,3 @@ class Singleton {
 	}
 }
 ```
-### Consequences
