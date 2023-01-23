@@ -1,13 +1,20 @@
 ## Topics
 - [[Propositional Logic]]
 - Satisfiability
-- CNF/Formalizations
+- CNF/Formalisations
 - DPLL/Random
-- Randomized Algorithms/Tableaux
+- Randomised Algorithms/Tableaux
 - BDT/BDD/OBDD
 - QBF
 - PLFD State-changing Systems
 - LTL
 - Model Checking
 
-## Data Structures & Algorithms
+## Algorithms & Data Structures
+- [Splitting](Splitting.md)
+- [Polarity and The Pure Atom Rule](Polarity%20and%20The%20Pure%20Atom%20Rule.md)
+- 
+
+## Problems to be Solved
+- [Satisfiability Checking](Satisfiability%20Checking.md)
+- 

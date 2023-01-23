@@ -14,8 +14,20 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "48a1877dd7402b95",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/workspace.json",
+                "staged": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,9 +92,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md"
-              }
+              "state": {}
             }
           },
           {
@@ -91,7 +101,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +117,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,12 +132,21 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "1a50667623bc4d14",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 237.5
+    "width": 287.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -142,8 +159,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "12ba371b0a6f0d0f",
+  "active": "48a1877dd7402b95",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Software Engineering 1 (23311)/Summary.md",
     "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
@@ -152,7 +170,6 @@
     "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
     "Microarchitecture (22111)/Part 1 (Paul)/Verilog & Testing.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Sequential systems design.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Introduction to CMOS.md"
+    "Microarchitecture (22111)/Part 1 (Paul)/Sequential systems design.md"
   ]
 }
