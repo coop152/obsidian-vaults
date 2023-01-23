@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "38300356ac9169bc",
+        "id": "a3c105ee1d315fa0",
         "type": "tabs",
         "children": [
           {
-            "id": "be5fe3c0078089ba",
+            "id": "07c61cde8f094c8b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering 1 (23311)/Summary.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "acc10b6cc6c13a1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software Engineering 1 (23311)/Software Design Patterns.md"
+                "file": "Software Engineering 1 (23311)/Summary.md"
               }
             }
           },
@@ -108,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
+                "file": "Software Engineering 1 (23311)/Summary.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Engineering 1 (23311)/Software Design Patterns.md",
+                "file": "Software Engineering 1 (23311)/Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
