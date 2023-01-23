@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1931e96931be88a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,10 +156,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1931e96931be88a2",
+  "active": "84fa025022b1059d",
   "lastOpenFiles": [
-    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Summary.md",
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Splitting.md",
     "Logic and Modelling (21111)/Satisfiability Checking.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
