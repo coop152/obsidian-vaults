@@ -20,6 +20,6 @@ Begin at the outermost element of the formula, with a polarity of $1$. Now, prog
 ### Example
 ![](Pasted%20image%2020230123123612.png)
 ![](Pasted%20image%2020230123123004.png)
-
+The important part is the polarity of the variables at the ends of the tree.
 
 This algorithm solves the [Satisfiability Checking](Satisfiability%20Checking.md) problem.
