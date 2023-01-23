@@ -11,7 +11,9 @@
 - Model Checking
 
 ## Algorithms & Data Structures
-- Splitting
+- [Splitting](Splitting.md)
+- [Polarity and the Pure Atom Rule](Polarity%20and%20the%20Pure%20Atom%20Rule.md)
+- 
 
 ## Problems to be Solved
 - Satisfiability Checking
