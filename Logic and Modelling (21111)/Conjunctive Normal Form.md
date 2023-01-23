@@ -25,7 +25,7 @@ And repeat this until the equation has been completely collapsed.
 $$p_1 \equi (p_2 \equi (p_3 \equi (p_4 \equi (p_5 \equi p_6)))) $$$$ p_1 \equi (p_2 \equi n_3) $$$$ n_3 \equi (p_3 \equi n_4) $$$$ n_4 \equi (p_4 \equi n_5) $$$$ n_5 \equi (p_5 \equi p_6)$$
 Converting this new set of formulae only creates 4 copies of $p_6$, compared to 32 with the original formula. Note that these new formulae are not equivalent to the original formula, they are only equisatisfiable, which is all that is required for the problem we are trying to solve.
 
-## Finding Satisfiability using DCNF
+## Example of DCNF Transformation
 1. Draw a table header like this, and add your initial formula:
 
 | Name  | Subformula                                                                            | Definition | Clauses |
@@ -55,12 +55,21 @@ Observe that a new definition has been added to the previous row, then the next 
 
 4. Now transform each of the definitions into CNF, and put the result in the Clauses column:
 
-| Name  | Subformula                                                    | Definition                  | Clauses      |
-| ----- | ------------------------------------------------------------- | --------------------------- | ------------ |
-| $n_1$ | $¬((p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r))$ | $n_1 \equi ¬n_2$            | $x$ <br> $y$ |
-| $n_2$ | $(p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r)$    | $n_2 \equi (n_3 \impl n_4)$ |              |
-| $n_3$ | $(p \impl q) \land (p \land q \impl r)$                       | $n_3 \equi (n_5 \land n_6)$ |              |
-| $n_4$ | $p \impl ¬r$                                                  | $n_4 \equi (p \impl ¬r)$    |              |
-| $n_5$ | $p \impl q$                                                   | $n_5 \equi (p \impl q)$     |              |
-| $n_6$ | $p \land q \impl r$                                           | $n_6 \equi (n_7 \impl r)$   |              |
-| $n_7$ | $p \land q$                                                   | $n_7 \equi (p \land q)$     |              |
+| Name  | Subformula                                                    | Definition                  | Clauses                                                            |
+| ----- | ------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------ |
+| $n_1$ | $¬((p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r))$ | $n_1 \equi ¬n_2$            | $¬n_1 \lor ¬n_2$ <br> $n_2 \lor n_1$                               |
+| $n_2$ | $(p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r)$    | $n_2 \equi (n_3 \impl n_4)$ | $¬n_2 \lor ¬n_3 \lor n_4$ <br> $n_3 \lor n_2$ <br> $¬n_4 \lor n_2$ |
+| $n_3$ | $(p \impl q) \land (p \land q \impl r)$                       | $n_3 \equi (n_5 \land n_6)$ | etc..                                                              |
+| $n_4$ | $p \impl ¬r$                                                  | $n_4 \equi (p \impl ¬r)$    | etc..                                                              |
+| $n_5$ | $p \impl q$                                                   | $n_5 \equi (p \impl q)$     | etc..                                                              |
+| $n_6$ | $p \land q \impl r$                                           | $n_6 \equi (n_7 \impl r)$   | etc..                                                              |
+| $n_7$ | $p \land q$                                                   | $n_7 \equi (p \land q)$     | etc..                                                              |
+
+5. Done. You now have the starting formula in DCNF. 
+
+## Optimised Definitional Clausal Normal Form (ODCNF)
+This transformation can be optimised further using polarity.
+The method is the same as before, but with 3 added rules:
+- If the subformula occurs positively in the formula in which it was defined, its definition shall be of the form $n_i \impl A$.
+- If the subformula occurs negatively in the formula in which it was defined, its definition shall be of the form $A \impl n_i$.
+- If the subformula occurs neutrally in the formula in which it was defined, its definition shall be of the form $n_i \equi A$ (that is, the same as before).
