@@ -12,7 +12,7 @@
 
 ## Algorithms & Data Structures
 - [Splitting](Splitting.md)
-- [Polarity and the Pure Atom Rule](Polarity%20and%20the%20Pure%20Atom%20Rule.md)
+- [The Pure Atom Rule & the Colouring Algorithm](The%20Pure%20Atom%20Rule%20&%20the%20Colouring%20Algorithm.md)
 - 
 
 ## Problems to be Solved
