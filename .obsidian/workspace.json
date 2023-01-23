@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Summary.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "27b413488608521e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md"
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md"
               }
             }
           },
@@ -156,12 +169,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "84fa025022b1059d",
+  "active": "27b413488608521e",
   "lastOpenFiles": [
     "Logic and Modelling (21111)/Summary.md",
-    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
-    "Logic and Modelling (21111)/Splitting.md",
     "Logic and Modelling (21111)/Satisfiability Checking.md",
+    "Logic and Modelling (21111)/Splitting.md",
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
     "conflict-files-obsidian-git.md",
     "Database Systems (23111)/Transactions and Concurrency.md",
