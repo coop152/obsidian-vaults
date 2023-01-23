@@ -1,13 +1,17 @@
 ## Topics
 - [[Propositional Logic]]
 - Satisfiability
-- CNF/Formalizations
+- CNF/Formalisations
 - DPLL/Random
-- Randomized Algorithms/Tableaux
+- Randomised Algorithms/Tableaux
 - BDT/BDD/OBDD
 - QBF
 - PLFD State-changing Systems
 - LTL
 - Model Checking
 
-## Data Structures & Algorithms
+## Algorithms & Data Structures
+- Splitting
+
+## Problems to be Solved
+- Satisfiability Checking
