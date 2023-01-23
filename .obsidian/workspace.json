@@ -21,7 +21,7 @@
             "state": {
               "type": "diff-view",
               "state": {
-                "file": ".obsidian/workspace.json",
+                "file": "conflict-files-obsidian-git.md",
                 "staged": false
               }
             }
@@ -146,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,7 +159,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "48a1877dd7402b95",
+  "active": "1a50667623bc4d14",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Software Engineering 1 (23311)/Summary.md",
