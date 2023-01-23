@@ -38,7 +38,7 @@ Converting this new set of formulae only creates 4 copies of $p_6$, compared to 
 | $n_1$ | $¬((p \rightarrow q) \land (p \land q \rightarrow r) \rightarrow (p \rightarrow ¬r))$ | $n_1 \leftrightarrow ¬n_2$ |         |
 | $n_2$ | $(p \rightarrow q) \land (p \land q \rightarrow r) \rightarrow (p \rightarrow ¬r)$    |                            |         |
 
-Observe that a new definition has been added to the previous row upon filling in this row's formula. Think of the equivalence ($\leftrightarrow$) here as an equals, saying that $n_1 = ¬n_2$.
+Observe that a new definition has been added to the previous row, then the next rows filled in with the values of the new variables. Think of the equivalence ($\leftrightarrow$) here as an equals, saying that $n_1 = ¬n_2$.
 
 3. Repeat this until the formula is completely decomposed, stopping the decomposition of each subformulae one step before you get unit clauses:
 
