@@ -73,3 +73,16 @@ The method is the same as before, but with 3 added rules:
 - If the subformula occurs positively in the formula in which it was defined, its definition shall be of the form $n_i \impl A$.
 - If the subformula occurs negatively in the formula in which it was defined, its definition shall be of the form $A \impl n_i$.
 - If the subformula occurs neutrally in the formula in which it was defined, its definition shall be of the form $n_i \equi A$ (that is, the same as before).
+If this is done with the previous formula, the result looks like this:
+
+| Name        | Subformula                                                    | Definition                  | Clauses |
+| ----------- | ------------------------------------------------------------- | --------------------------- | ------- |
+| $n_1$ $(+)$ | $¬((p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r))$ | $n_1 \impl ¬n_2$            |         |
+| $n_2$ $(-)$ | $(p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r)$    | $(n_3 \impl n_4) \impl n_2$ |         |
+| $n_3$ $(+)$ | $(p \impl q) \land (p \land q \impl r)$                       | $n_3 \impl (n_5 \land n_6)$ | etc..   |
+| $n_4$ $(-)$ | $p \impl ¬r$                                                  | $(p \impl ¬r) \impl n_4$    | etc..   |
+| $n_5$ $(+)$ | $p \impl q$                                                   | $n_5 \impl (p \impl q)$     | etc..   |
+| $n_6$ $(+)$ | $p \land q \impl r$                                           | $n_6 \impl (n_7 \impl r)$   | etc..   |
+| $n_7$ $(-)$ | $p \land q$                                                   | $(p \land q) \impl n_7$     | etc..   |
+
+(Don't write the positive/negative notes in the name column, write them somewhere else)
