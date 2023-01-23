@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "021b36215d1525db",
@@ -173,9 +173,9 @@
   "lastOpenFiles": [
     "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/Conjunctive Normal Form.md",
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Satisfiability Checking.md",
     "Logic and Modelling (21111)/Splitting.md",
-    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
     "conflict-files-obsidian-git.md",
     "Database Systems (23111)/Transactions and Concurrency.md",
