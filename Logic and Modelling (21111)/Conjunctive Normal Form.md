@@ -55,12 +55,12 @@ Observe that a new definition has been added to the previous row, then the next 
 
 4. Now transform each of the definitions into CNF, and put the result in the Clauses column:
 
-| Name  | Subformula                                                    | Definition                  | Clauses |
-| ----- | ------------------------------------------------------------- | --------------------------- | ------- |
-| $n_1$ | $¬((p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r))$ | $n_1 \equi ¬n_2$            |  $x$ <br> $y$       |
-| $n_2$ | $(p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r)$    | $n_2 \equi (n_3 \impl n_4)$ |         |
-| $n_3$ | $(p \impl q) \land (p \land q \impl r)$                       | $n_3 \equi (n_5 \land n_6)$ |         |
-| $n_4$ | $p \impl ¬r$                                                  | $n_4 \equi (p \impl ¬r)$    |         |
-| $n_5$ | $p \impl q$                                                   | $n_5 \equi (p \impl q)$     |         |
-| $n_6$ | $p \land q \impl r$                                           | $n_6 \equi (n_7 \impl r)$   |         |
-| $n_7$ | $p \land q$                                                   | $n_7 \equi (p \land q)$     |         |
+| Name  | Subformula                                                    | Definition                  | Clauses      |
+| ----- | ------------------------------------------------------------- | --------------------------- | ------------ |
+| $n_1$ | $¬((p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r))$ | $n_1 \equi ¬n_2$            | $x$ <br> $y$ |
+| $n_2$ | $(p \impl q) \land (p \land q \impl r) \impl (p \impl ¬r)$    | $n_2 \equi (n_3 \impl n_4)$ |              |
+| $n_3$ | $(p \impl q) \land (p \land q \impl r)$                       | $n_3 \equi (n_5 \land n_6)$ |              |
+| $n_4$ | $p \impl ¬r$                                                  | $n_4 \equi (p \impl ¬r)$    |              |
+| $n_5$ | $p \impl q$                                                   | $n_5 \equi (p \impl q)$     |              |
+| $n_6$ | $p \land q \impl r$                                           | $n_6 \equi (n_7 \impl r)$   |              |
+| $n_7$ | $p \land q$                                                   | $n_7 \equi (p \land q)$     |              |
