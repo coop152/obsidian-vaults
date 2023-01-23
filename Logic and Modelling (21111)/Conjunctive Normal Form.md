@@ -23,3 +23,4 @@ $$p_1 \leftrightarrow (p_2 \leftrightarrow (p_3 \leftrightarrow (p_4 \leftrighta
 And repeat this until the equation has been completely collapsed.
 $$p_1 \leftrightarrow (p_2 \leftrightarrow (p_3 \leftrightarrow (p_4 \leftrightarrow (p_5 \leftrightarrow p_6)))) $$$$ p_1 \leftrightarrow (p_2 \leftrightarrow n_3) $$$$ n_3 \leftrightarrow (p_3 \leftrightarrow n_4) $$$$ n_4 \leftrightarrow (p_4 \leftrightarrow n_5) $$$$ n_5 \leftrightarrow (p_5 \leftrightarrow p_6)$$
 Converting this new set of formulae only creates 4 copies of $p_6$, compared to 32 with the original formula. Note that these new formulae are not equivalent to the original formula, they are only equisatisfiable, which is all that is required for the problem we are trying to solve.
+
