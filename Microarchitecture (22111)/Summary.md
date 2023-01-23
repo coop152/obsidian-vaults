@@ -31,4 +31,4 @@
 9.  [ ] [[Hardware Security]]
     Understanding hardware related vulnerabilities (Spectre, Meltdown, RowHammer) and countermeasures. DPA and other forms of side-channel attacks 
 10.  [ ] [[Future]]   
-    Limits of Moores' law, understanding the importance of energy efficiency, new manufacturing techniques, memristor-based computing, exotic technologies (Quantum dots, Graphene, Spintronics, etc.).
+    Limits of Moore's law, understanding the importance of energy efficiency, new manufacturing techniques, memristor-based computing, exotic technologies (Quantum dots, Graphene, Spintronics, etc.).

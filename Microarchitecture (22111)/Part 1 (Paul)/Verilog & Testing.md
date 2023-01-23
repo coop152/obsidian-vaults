@@ -23,7 +23,7 @@ otherMod omod(x, y, a); // structural Verilog
 
 endmodule
 ```
-`output reg`: When the output is being set using behavioral verilog, e.g. blocking `=` assignments or non-blocking `<=` assignments.
+`output reg`: When the output is being set using behavioural Verilog, e.g. blocking `=` assignments or non-blocking `<=` assignments.
 
 ## Assignments
 **Blocking assignment** `=`: Use *only* for combinatorial blocks. e.g.
@@ -67,8 +67,8 @@ end
 A register module with the following specification:
 Inputs:
 -   clock – global clock signal
--   reset – active low signal that acts asynchronously and sets the ouput Q to 0
--   preset – active high signal that acts asynchronously and sets the outout Q to 1
+-   reset – active low signal that acts asynchronously and sets the output Q to 0
+-   preset – active high signal that acts asynchronously and sets the output Q to 1
 -   CE – clock enable - only allows the output Q to be updated with input D when CE = 1 on the rising edge of the clock. When CE = 0 the output is not updated.
 -   D – 1-bit data input to the register
 Outputs

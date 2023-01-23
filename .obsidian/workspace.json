@@ -11,11 +11,10 @@
             "id": "1cf6ea44badd2a88",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/workspace.json",
+                "staged": false
               }
             }
           }
@@ -85,7 +84,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,17 +121,23 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Database Systems (23111)/Transactions and Concurrency.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "ca41a6dec1a02993",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 368.5,
-    "collapsed": true
+    "width": 368.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,6 +152,8 @@
   },
   "active": "1cf6ea44badd2a88",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Database Systems (23111)/Transactions and Concurrency.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Document Databases and NoSQL.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
@@ -156,8 +161,6 @@
     "Untitled.canvas",
     "Database Systems (23111)/Pasted image 20230118155527.png",
     "Database Systems (23111)/Pasted image 20230118161439.png",
-    "Database Systems (23111)/Pasted image 20230118155223.png",
-    "Database Systems (23111)/Transactions and Concurrency.md",
-    "Database Systems (23111)/Summary.md"
+    "Database Systems (23111)/Pasted image 20230118155223.png"
   ]
 }
