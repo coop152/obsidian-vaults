@@ -4,18 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "38300356ac9169bc",
+        "id": "8e5b1f8b64878188",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf6ea44badd2a88",
+            "id": "84fa025022b1059d",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -137,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 368.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,7 +148,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1cf6ea44badd2a88",
+  "active": "ca41a6dec1a02993",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Database Systems (23111)/Transactions and Concurrency.md",
