@@ -20,6 +20,16 @@ Begin at the outermost element of the formula, with a polarity of $1$. Now, prog
 ### Example
 ![](Pasted%20image%2020230123123612.png)
 ![](Pasted%20image%2020230123123004.png)
-The important part is the polarity of the variables at the ends of the tree.
+The important part is the polarity of the variables at the ends of the tree. These values are used in:
+## The Pure Atom Rule
+(Reminder: an atom is a single propositional variable)
+For the purposes of satisfiability checking, these rules are true:
+- If an atom occurs only positively, then it can be replaced with $\top$.
+- If an atom occurs only negatively, then it can be replaced with $\bot$.
+Note that occurrences of 0 do not affect these rules; if an atom occurs only positively and neutrally, then it can still be replaced with $T$, and same for negatives.
 
-This algorithm solves the [Satisfiability Checking](Satisfiability%20Checking.md) problem.
+This algorithm will not always be able to fully reduce a formula to a truth value; it is more like an optimisation that can reduce the time needed to run other satisfiability checking algorithms. That said, it will sometimes be able to completely reduce a formula, such as in this example:
+![](Pasted%20image%2020230123125959.png)
+
+
+This algorithm is related to the [Satisfiability Checking](Satisfiability%20Checking.md) problem.

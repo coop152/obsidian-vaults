@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logic and Modelling (21111)/The Pure Atom Rule & the Colouring Algorithm.md",
+                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/The Pure Atom Rule & the Colouring Algorithm.md",
+                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/The Pure Atom Rule & the Colouring Algorithm.md",
+                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/The Pure Atom Rule & the Colouring Algorithm.md"
+                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md"
               }
             }
           },
@@ -171,8 +171,8 @@
   },
   "active": "1931e96931be88a2",
   "lastOpenFiles": [
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Summary.md",
-    "Logic and Modelling (21111)/The Pure Atom Rule & the Colouring Algorithm.md",
     "Logic and Modelling (21111)/Splitting.md",
     "Logic and Modelling (21111)/Satisfiability Checking.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
