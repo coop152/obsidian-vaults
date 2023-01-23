@@ -85,4 +85,4 @@ If this is done with the previous formula, the result looks like this:
 | $n_6$ $(+)$ | $p \land q \impl r$                                           | $n_6 \impl (n_7 \impl r)$   | etc..   |
 | $n_7$ $(-)$ | $p \land q$                                                   | $(p \land q) \impl n_7$     | etc..   |
 
-(Don't write the positive/negative notes in the name column, write them somewhere else)
+(Don't write the positive/negative notes in the name column, write them somewhere unobtrusive like the margin)
