@@ -50,8 +50,3 @@ Consider this set of clauses:
 - $¬p_1 \lor ¬p_3$
 - $¬p_1 \lor p_2$
 - $p_1 \lor p_2$
-
-| Flip # | Interpretation      | Satisfied Count   | Flip Candidates | Flipped |
-| ------ | ------------------- | ----------------- | --------------- | ------- |
-|        | $p_1$, $p_2$, $p_3$ | $p_1$ $p_2$ $p_3$ |                 |         |
-| 1      | $0$, $0$, $1$       |                   |                 |         |
