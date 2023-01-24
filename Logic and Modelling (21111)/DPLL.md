@@ -123,3 +123,6 @@ Initial formula:
 3-SAT:
 - $L_1 \lor L_2 \lor ¬n$
 - $n \lor L_3 \lor L_4$
+
+## Random Probabilistic Stuff
+Don't Care
