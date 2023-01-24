@@ -1,5 +1,5 @@
 $\newcommand{\impl}{\rightarrow} \newcommand{\equi}{\leftrightarrow}$
-DPLL is a specialised [Satisfiability Checking](Satisfiability%20Checking.md) formula for CNF formulae.
+DPLL is a SAT algorithm - a satisfiability checking algorithm for sets of clauses instead of whole formulae.
 Consider this regular formula: $¬((p \impl q) \land (p \land q \impl r ) \impl (p \impl r))$
 It breaks down into these clauses:
 -   $¬p \lor q$
@@ -109,3 +109,17 @@ Recall the pure atom rule; if an atom occurs only positively in the formula, the
 However, in a CNF clause it can be observed that clauses containing $T$ will always be removed. Therefore, if a literal occurs only positively in the set you can remove every clause containing that literal. 
 #### Horn clause propagation
 Reminder: A clause is a Horn clause if it contains at most one positive literal, e.g. $¬p_1 \lor ¬p_2 \lor p_3$.
+????????
+
+## k-SAT
+The previous material has been solving the SAT problem; that is, clauses of any length. There is another set of problems known as k-SAT, where the length of each clause is limited. Their properties are as such:
+- SAT (as shown previously) is NP-complete.
+- 3-SAT (SAT where every clause is 3 literals long) is also NP-complete.
+- 2-SAT (where every clause is 3 literals long) is decidable in **linear time**.
+A set of clauses can be easily reduced to use smaller clauses using a method similar to that of *naming* from DCNF:
+Initial formula:
+- $L_1 \lor L_2 \lor L_3 \lor L_4$
+
+3-SAT:
+- $L_1 \lor L_2 \lor ¬n$
+- $n \lor L_3 \lor L_4$
