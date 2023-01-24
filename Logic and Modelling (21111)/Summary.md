@@ -1,14 +1,6 @@
 ## Topics
-- [[Propositional Logic]]
-- Satisfiability
-- CNF/Formalisations
-- DPLL/Random
-- Randomised Algorithms/Tableaux
-- BDT/BDD/OBDD
-- QBF
-- PLFD State-changing Systems
-- LTL
-- Model Checking
+- [Propositional Logic](Propositional%20Logic.md)
+- [Conjunctive Normal Form](Conjunctive%20Normal%20Form.md)
 
 ## Algorithms & Data Structures
 - [Splitting](Splitting.md)
@@ -16,7 +8,5 @@
 - [DPLL](DPLL.md)
 - [Randomised Satisfiability Algorithms](Randomised%20Satisfiability%20Algorithms.md)
 - [Semantic Tableaux](Semantic%20Tableaux.md)
-
-## Problems to be Solved
-- [Satisfiability Checking](Satisfiability%20Checking.md)
+- [Binary Decision Data Structures (BDT, BDD, OBDD)](Binary%20Decision%20Data%20Structures.md)
 - 

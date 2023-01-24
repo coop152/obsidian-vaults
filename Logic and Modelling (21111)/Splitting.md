@@ -1,6 +1,5 @@
 Apply repeated transformations to a propositional formula in order to discover its **satisfiability**. If at least one branch can be found which resolves to true, it is satisfiable. If all branches resolve to true, it is valid. If all branches resolve to false, it is unsatisfiable.
 
-This algorithm solves the [Satisfiability Checking](Satisfiability%20Checking.md) problem.
 ## Example
 ![](Pasted%20image%2020230123115809.png)
 This formula is **satisfiable**, as at least one of the branches resolves to true.
