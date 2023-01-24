@@ -85,7 +85,7 @@ Unit propagation of $p$:
 Unit propagation of $q$:
 - $\square$
 
-Branch is unsatisfiable. Go back and try the inverse of the chosen literal, which is $¬p$:
+Empty clause - branch is unsatisfiable. Go back and try the inverse of the chosen literal, which is $¬p$:
 
 - $¬p \lor ¬q$
 - $¬p \lor q$
@@ -97,4 +97,15 @@ Unit propagation of $¬p$:
 - $¬q$
 
 Unit propagation of $¬q$:
+(empty set)
 
+Empty set - branch is satisfiable. Therefore, formula is satisfiable. The model of this formula is $\{ p \mapsto 0, q \mapsto 0 \}$.
+
+## Optimisations
+#### Tautological clauses
+If a clause is of the form $p \lor ¬p \lor C$ (i.e. it contains a literal and its negation) then it can be removed, as this clause will always be satisfied.
+#### Pure literal elimination
+Recall the pure atom rule; if an atom occurs only positively in the formula, then it can be replaced by $\top$, or by $\bot$ if it only occurs negatively.
+However, in a CNF clause it can be observed that clauses containing $T$ will always be removed. Therefore, if a literal occurs only positively in the set you can remove every clause containing that literal. 
+#### Horn clause propagation
+Reminder: A clause is a Horn clause if it contains at most one positive literal, e.g. $¬p_1 \lor ¬p_2 \lor p_3$.
