@@ -3,3 +3,15 @@ The BDT is a data structure for verifying interpretations against a formula. It 
 ![](Pasted%20image%2020230124152622.png)
 Circle nodes represent a decision; the solid line means the variable is true, and the dotted line means it is false.
 Square nodes are "terminal nodes"; they represent the final result of evaluating the formula at the given interpretation.
+#### Properties
+-   Checking truth in an interpretation can be done **in linear time** in the number of variables.
+-   Satisfiability checking can be done **in linear time** in the size of the tree.
+-   Validity checking can be done **in linear time** in the size of the tree.
+-   Equivalence checking is **hard**.
+-   Some boolean operations, e.g. conjunction, are **hard to implement**.
+-   The size of the tree is in the **worst case exponential** in the number of variables.
+
+## If-Then-Else Normal Form
+- The only connectives are if-then-else, and the terminals $\top$ and $\bot$.
+- In the formula $\text{if } A \text{ then } B \text{ else } C$, $A$ is always atomic.
+- Every propositional formula can be transformed into an equivalent If-Then-Else normal form.
