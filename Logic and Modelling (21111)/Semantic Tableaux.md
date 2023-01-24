@@ -16,3 +16,8 @@ $$\begin{align*} (A_1 \wedge \dots \wedge A_n) = 0 &\rightsquigarrow A_1 = 0 | \
 
 In tree form, "OR" is represented as branching while "AND" is represented as multiple formulae in a list at a node. e.g:
 ![](Pasted%20image%2020230124144844.png)
+#### Properties
+- To prove satisfiability, construct the tableau $A = 1$ and show that it has a complete open branch.
+- To prove validity, construct the tableau $A = 0$ and show that it is closed.
+- To prove equivalence, construct the tableau $(A \leftrightarrow B) = 0$ and show that it is closed.
+- To find every model of $A$, construct a fully expanded tableau for $A = 1$.
