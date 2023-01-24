@@ -16,7 +16,10 @@ Square nodes are "terminal nodes"; they represent the final result of evaluating
 - In the formula $\text{if } A \text{ then } B \text{ else } C$, $A$ is always atomic.
 - Every propositional formula can be transformed into an equivalent If-Then-Else normal form.
 
-## Binary Decision Graph (BDG)
-A BDG is a directed graph with no cycles that serves the same purpose as a BDT, but:
+## Binary Decision Diagram (BDD)
+A BDD is a directed graph with no cycles that serves the same purpose as a BDT, but:
 - It contains no redundant tests
 - It has no isomorphic subtrees
+![](Pasted%20image%2020230124160526.png)
+#### Converting from BDT to BDD
+![](70q0u9.gif)
