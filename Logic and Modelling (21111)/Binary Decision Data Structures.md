@@ -21,5 +21,10 @@ A BDD is a directed graph with no cycles that serves the same purpose as a BDT, 
 - It contains no redundant tests
 - It has no isomorphic subtrees
 ![](Pasted%20image%2020230124160526.png)
+#### Properties
+- Satisfiability checking can be done **in constant time**.
+- Validity checking can be done **in constant time** - must have only one node with the value 1.
+- Equivalence checking is **hard**.
+- Some boolean operations, e.g. conjunction, are **hard to implement**.
 #### Converting from BDT to BDD
 ![](70q0u9.gif)
