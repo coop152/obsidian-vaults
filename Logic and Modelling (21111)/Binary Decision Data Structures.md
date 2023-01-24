@@ -28,3 +28,4 @@ A BDD is a directed graph with no cycles that serves the same purpose as a BDT, 
 - Some boolean operations, e.g. conjunction, are **hard to implement**.
 #### Converting from BDT to BDD
 ![](70q0u9.gif)
+If 
