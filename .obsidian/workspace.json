@@ -20,19 +20,14 @@
             }
           },
           {
-            "id": "27b413488608521e",
+            "id": "7f30fecc2be3c2bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
+                "file": "Logic and Modelling (21111)/Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
+                "file": "Logic and Modelling (21111)/Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md"
+                "file": "Logic and Modelling (21111)/Summary.md"
               }
             }
           },
@@ -169,7 +164,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "27b413488608521e",
+  "active": "84fa025022b1059d",
   "lastOpenFiles": [
     "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/Conjunctive Normal Form.md",
