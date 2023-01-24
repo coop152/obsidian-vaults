@@ -13,7 +13,7 @@
 ## Algorithms & Data Structures
 - [Splitting](Splitting.md)
 - [Polarity and The Pure Atom Rule](Polarity%20and%20The%20Pure%20Atom%20Rule.md)
-- DPLL
+- [DPLL](DPLL.md)
 
 ## Problems to be Solved
 - [Satisfiability Checking](Satisfiability%20Checking.md)
