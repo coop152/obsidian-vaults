@@ -28,4 +28,11 @@ A BDD is a directed graph with no cycles that serves the same purpose as a BDT, 
 - Some boolean operations, e.g. conjunction, are **hard to implement**.
 #### Converting from BDT to BDD
 ![](70q0u9.gif)
-If 
+
+## Ordered Boolean Decision Diagram (OBDD)
+Now introduce an order ($<$) on the variables in the formulae, and execute all tests in this order. The result of this is that:
+- Every boolean function has a unique representation as an OBDD - OBDDs are **canonical** for boolean functions.
+- Satisfiability can be checked **in constant time** - Does the node representing the formula connect to the 1 terminal?
+- Validity can be checked **in constant time** - Is the node representing the formula the 1 terminal?
+- Equivalence can be checked **in constant time** - Do both formulae start at the same node?
+- Boolean operations are easy to implement - See next section
