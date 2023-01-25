@@ -35,7 +35,7 @@ Now introduce an order ($<$) on the variables in the formulae, and execute all t
 - Satisfiability can be checked **in constant time** - Does the node representing the formula connect to the 1 terminal?
 - Validity can be checked **in constant time** - Is the node representing the formula the 1 terminal?
 - Equivalence can be checked **in constant time** - Do both formulae start at the same node?
-- Boolean operations are easy to implement - See boolean operation section.
+- Boolean operations are easy to implement - See boolean functions section.
 
 #### Integrating a node into a DAG
 ![](Pasted%20image%2020230125120332.png)
@@ -53,3 +53,14 @@ In English:
 2. Otherwise, select the highest variable in the formula. This variable is the one that will be in the topmost node of this section.
 3. Create the child OBDDs for the true and false branches, by replacing the variable by $\top$ or $\bot$ and running the function on that new formula.
 4. Use `integrate()` to insert this new node into the global DAG.
+
+#### Applying boolean functions to OBDDs
+Suppose you have the boolean function for disjunction:
+$$f(x_1, \dots, x_n) \stackrel{\text{def}}{=} x_1 \vee \dots \vee x_n$$
+And you also have a series of OBDDs $D_1,\dots, D_n$ representing formulae $F_1,\dots,F_n$.
+How do you calculate $f(F_1, \dots, F_n)$?
+Assuming all of these OBDDs are in a global DAG, such that all isomorphic subgraphs are shared...
+We can use the fact that If-Then-Else commutes on functions:
+$$\begin{align*} f(\text{if } p \text{ then } I_1 \text{ else } r_1, \dots, \text{if } p \text{ then } I_n \text{ else } r_n) =&\\ \text{if } p \text{ then } f(I_1, \dots, I_n) \text{ else } f(r_1, \dots, r_n) \end{align*}$$
+For example, say you have the OBDDs $D_1, D_2$ representing functions $F_1, F_2$. To get $F_1 \lor F_2$, consider this:
+$f(F_1, F_2)$
