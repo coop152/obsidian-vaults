@@ -140,3 +140,4 @@ If your set of clauses $S$ contains a unit clause with literal $L$ like $p$ or $
 If neither of these new conditions are satisfied, then unit propagation works like regular DPLL.
 
 #### Optimisations
+Let $Q$ be the set of quantifiers and $S$ be the set of 
