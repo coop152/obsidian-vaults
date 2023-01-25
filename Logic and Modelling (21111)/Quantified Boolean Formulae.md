@@ -22,3 +22,12 @@ b. Find all models.
 $I_{**} \models \forall p \exists q (p \leftrightarrow q)$
 $\Rightarrow I_{1*} \models \exists q (p \leftrightarrow q) \text{ AND } I_{0*} \models \exists q (p \leftrightarrow q)$
 $\Rightarrow (I_{10} \models p \leftrightarrow q \text{ OR } I_{11} \models p \leftrightarrow q) \text{ AND } (I_{00} \models p \leftrightarrow q \text{ OR } I_{01} \models p \leftrightarrow q)$
+
+## Position and Polarity
+In the formulas $\exists{p}F$ and $\forall{p}F$, F is at the first position.
+$\forall$ and $\exists$ do not change the polarity of their subformulae.
+![](Pasted%20image%2020230125151351.png)
+
+## Bound and Free Variables
+If a variable given in a quantifier is in the "scope" of that quantifier, then it is bound. If not, then it is "free". e.g. in $p \rightarrow \exists{q}(¬q \lor p)$, $q$ is bound and $p$ is free.
+If a formula contains no free variables, it is a "closed formula".
