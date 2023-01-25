@@ -11,4 +11,5 @@
 - [Binary Decision Data Structures (BDT, BDD, OBDD)](Binary%20Decision%20Data%20Structures.md)
 - [Quantified Boolean Formulae](Quantified%20Boolean%20Formulae.md)
 - [QBF Splitting](Splitting.md#QBF%20Splitting)
+- [QBF DPLL](DPLL.md#QBF%20DPLL)
 - 
