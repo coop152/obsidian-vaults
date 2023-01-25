@@ -137,3 +137,5 @@ If your set of clauses contains a unit clause $S$ with literal $p$ or $¬p$, the
 	- Remove all clauses that contain the literal
 	- If any clauses contain the inverse of the literal, remove it from that clause
 - If the set of quantifiers contains $\forall{p}$ ,then replace the set of clauses by $\{\square\}$.
+If neither of these new conditions are satisfied, then unit propagation works like regular DPLL.
+
