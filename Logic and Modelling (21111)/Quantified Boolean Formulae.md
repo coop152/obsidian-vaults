@@ -53,3 +53,6 @@ To put a QBF into prenex form, apply these rules:
 2. Took the $\forall{r}$ out from the $¬$, switching the quantifier in the process
 3. Took the $\lor p$ inside the $\exists{r}$
 4. Took the $\exists{r}$ out of the top $\rightarrow$.
+
+## Algorithms
+See [QBF Splitting](Splitting.md#QBF%20Splitting) and [QBF DPLL](DPLL.md#QBF%20DPLL).
