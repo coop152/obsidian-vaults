@@ -78,9 +78,11 @@ The newly constructed disjunctions are then integrated into the global DAG.
 
 ## QBF OBDDs
 Using these properties of QBFs, we can integrate quantified formulas into OBDDs:
-- $\exists{p}(\text{if } P \text{ then } F \text{ else } G) \equiv F \lor G$
-- $\forall{p}(\text{if } P \text{ then } F \text{ else } G) \equiv F \land G$
+- $\exists{p}(\text{if } p \text{ then } F \text{ else } G) \equiv F \lor G$
+- $\forall{p}(\text{if } p \text{ then } F \text{ else } G) \equiv F \land G$
+- if $p \neq q$
+	- $\exists{p}(\text{if } q \text{ then } F \text{ else } G) \equiv \text{if } q \text{ then } \exists{p}F \text{ else } \exists{p}G$ 
+	- $\forall{p}(\text{if } q \text{ then } F \text{ else } G) \equiv \text{if } q \text{ then } \forall{p}F \text{ else } \forall{p}G$ 
 
 #### $\exists$-quantisation
 ![](Pasted%20image%2020230125190510.png)
-This function takes a series of nodes in the global DAG, along with a list of propositional variables. The procedure call
