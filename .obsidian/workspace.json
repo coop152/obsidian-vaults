@@ -14,20 +14,8 @@
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "48a1877dd7402b95",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "staged": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
