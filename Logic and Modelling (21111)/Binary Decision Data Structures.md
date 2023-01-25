@@ -61,6 +61,8 @@ And you also have a series of OBDDs $D_1,\dots, D_n$ representing formulae $F_1,
 How do you calculate $f(F_1, \dots, F_n)$?
 Assuming all of these OBDDs are in a global DAG, such that all isomorphic subgraphs are shared...
 We can use the fact that If-Then-Else commutes on functions:
-$$\begin{align*} f(\text{if } p \text{ then } I_1 \text{ else } r_1, \dots, \text{if } p \text{ then } I_n \text{ else } r_n) =&\\ \text{if } p \text{ then } f(I_1, \dots, I_n) \text{ else } f(r_1, \dots, r_n) \end{align*}$$
-For example, say you have the OBDDs $D_1, D_2$ representing functions $F_1, F_2$. To get $F_1 \lor F_2$, consider this:
+$$\begin{align*} f(\text{if } p \text{ then } l_1 \text{ else } r_1, \dots, \text{if } p \text{ then } l_n \text{ else } r_n) =&\\ \text{if } p \text{ then } f(l_1, \dots, l_n) \text{ else } f(r_1, \dots, r_n) \end{align*}$$
+For example, say you have the OBDDs $D_1, D_2$ representing functions $F_1, F_2$. To get $F_1 \lor F_2$, consider that each of these OBDDs begins with an "If-Then-Else", in the form of the first node that tests a variable:
 $f(F_1, F_2)$
+$= f(\text{if } p \text{ then } l_1 \text{ else } r_1, \text{if } p \text{ then } l_2 \text{ else } r_2)$
+$= \text{if } p \text{ then } f(l_1, l_2) \text{ else } f(r_1, r_2)$
