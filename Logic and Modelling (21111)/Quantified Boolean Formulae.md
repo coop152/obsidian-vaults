@@ -55,4 +55,4 @@ To put a QBF into prenex form, apply these rules:
 4. Took the $\exists{r}$ out of the top $\rightarrow$.
 
 ## Algorithms
-See [QBF Splitting](Splitting.md#QBF%20Splitting) and [QBF DPLL](DPLL.md#QBF%20DPLL).
+See [QBF Splitting](Splitting.md#QBF%20Splitting), [QBF DPLL](DPLL.md#QBF%20DPLL), and [QBF OBDDs](Binary%20Decision%20Data%20Structures.md#QBF%20OBDDs).

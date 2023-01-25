@@ -74,3 +74,9 @@ The third line checks for a disjunction of a single formula, which is just the f
 The fourth/fifth lines remove any formulae that are $0$.
 The function then picks the max variable that occurs in any of the formulae. A new node is made from this variable, with the true branch leading to the disjunction of all of the true branches in the formulae, and vice versa for the false branch.
 The newly constructed disjunctions are then integrated into the global DAG.
+
+
+## QBF OBDDs
+Using these properties of QBFs, we can integrate quantified formulas into OBDDs:
+- $\exists{p}(\text{if } P \text{ then } F \text{ else } G) \equiv F \lor G$
+- $\forall{p}(\text{if } P \text{ then } F \text{ else } G) \equiv F \land G$
