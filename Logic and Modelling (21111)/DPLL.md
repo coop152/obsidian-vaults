@@ -129,3 +129,4 @@ Don't Care
 
 ## QBF DPLL
 This algorithm requires a rectified, prenexed, CNF QBF.
+As before, it functions as a combination of splitting and unit propagation, though this one is similar to QBF Splitting.
