@@ -148,3 +148,5 @@ Let $Q$ be the set of quantifiers and $S$ be the set of clauses.
 - $C$ is non-tautological
 - One of the variables in $C$ is present universally ($\forall$) in $Q$
 - All of the other variables in $C$ are present existentially ($\exists$) in $Q$, and before the universal variable.
+Example:
+![](Pasted%20image%2020230125184301.png)
