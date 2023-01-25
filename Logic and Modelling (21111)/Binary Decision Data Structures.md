@@ -45,4 +45,11 @@ In English:
 2. Does the global DAG already contain a node that fits the description of the one we're going to make? If so, return that node instead of making a new one.
 3. Otherwise, make the new node and add it to the DAG, then return this new node.
 
-#### Building an OBDD from a 
+#### Building an OBDD from a formula
+![](Pasted%20image%2020230125121254.png)
+In English:
+`obdd(F)` is a function that takes a propositional formula `F` and adds it to the global DAG.
+1. Simplify the formula. If it simplifies down to $\bot$, return the 0 node. If it simplifies down to $\top$, return the 1 node.
+2. Otherwise, select the highest variable in the formula. This variable is the one that will be in the topmost node of this section.
+3. Create the child OBDDs for the true and false branches, by replacing the variable by $\top$ or $\bot$ and running the function on that new formula.
+4. Use `integrate()` to insert this new node into the global DAG.
