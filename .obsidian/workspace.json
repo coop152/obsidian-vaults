@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md"
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
+                "file": "Logic and Modelling (21111)/Conjunctive Normal Form.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,15 +157,15 @@
   },
   "active": "07c61cde8f094c8b",
   "lastOpenFiles": [
+    "Logic and Modelling (21111)/Summary.md",
+    "Logic and Modelling (21111)/DPLL.md",
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Binary Decision Data Structures.md",
     "conflict-files-obsidian-git.md",
     "Software Engineering 1 (23311)/Summary.md",
     "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
     "Database Systems (23111)/Document Databases and NoSQL.md",
-    "Database Systems (23111)/Database Web Programming.md",
-    "Logic and Modelling (21111)/Summary.md",
-    "Logic and Modelling (21111)/Propositional Logic.md",
-    "Microarchitecture (22111)/Part 1 (Paul)/Verilog & Testing.md"
+    "Database Systems (23111)/Database Web Programming.md"
   ]
 }
