@@ -139,3 +139,4 @@ If your set of clauses $S$ contains a unit clause with literal $L$ like $p$ or $
 - If the set of quantifiers contains $\forall{p}$ ,then replace $S$ by $\{\square\}$.
 If neither of these new conditions are satisfied, then unit propagation works like regular DPLL.
 
+#### Optimisations
