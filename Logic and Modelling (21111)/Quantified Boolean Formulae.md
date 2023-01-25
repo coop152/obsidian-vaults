@@ -32,3 +32,6 @@ $\forall$ and $\exists$ do not change the polarity of their subformulae.
 If a variable given in a quantifier is in the "scope" of that quantifier, then it is bound. If not, then it is "free". e.g. in $p \rightarrow \exists{q}(¬q \lor p)$, $q$ is bound and $p$ is free.
 If a formula contains no free variables, it is a "closed formula".
 If a formula is closed, then it can only be valid or unsatisfiable. This is because the output of the formula doesn't depend on the interpretation; it can only be true for all inputs or false for all inputs.
+
+## Renaming bound variables
+It is more clear for bound variables that share a name with unbound variables to be differently named; the value of the free variable $p$ will not influence the value of the bound value $p$.
