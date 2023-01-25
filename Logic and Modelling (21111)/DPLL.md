@@ -135,4 +135,5 @@ As before, it functions as a combination of splitting and unit propagation, thou
 If your set of clauses contains a unit clause $S$ with literal $p$ or $¬p$, then
 - If the set of quantifiers contains $\exists{p}$, or $p$ isn't in your quantifiers
 	- Remove all clauses that contain the literal
-	- Replace 
+	- If any clauses contain the inverse of the literal, remove it from that clause
+- If the set of quantifiers contains $\forall{p}$ ,then replace the set of clauses by $\{\square\}$.
