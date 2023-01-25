@@ -46,3 +46,10 @@ If the quantifier-free formula on the inside of a prenex form QBF is in CNF, the
 To put a QBF into prenex form, apply these rules:
 ![](Pasted%20image%2020230125161008.png)
 (Remember, these only apply to formulas that have been rectified!)
+
+#### Example
+![](Pasted%20image%2020230125162439.png)
+1. Took the $\exists{q}$ out from the left of the implication, switching the quantifier in the process
+2. Took the $\forall{r}$ out from the $¬$, switching the quantifier in the process
+3. Took the $\lor p$ inside the $\exists{r}$
+4. Took the $\exists{r}$ out of the top $\rightarrow$.
