@@ -42,3 +42,7 @@ It is more clear for bound variables that share a name with unbound variables to
 Prenex form is a form of QBF where all of the quantifiers are on the outside. e.g: $\forall{p}\exists{q}(p \land q \land r)$.
 The **quantifier-free** formula on the inside can be any propositional formula.
 If the quantifier-free formula on the inside of a prenex form QBF is in CNF, then the whole QBF is said to be in CNF. Therefore, to use algorithms that require a formula in CNF, a QBF must be rectified, put into prenex form and then it's internal quantifier-free formula put into CNF.
+
+To put a QBF into prenex form, apply these rules:
+![](Pasted%20image%2020230125161008.png)
+(Remember, these only apply to formulas that have been rectified!)
