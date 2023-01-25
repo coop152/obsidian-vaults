@@ -35,4 +35,14 @@ Now introduce an order ($<$) on the variables in the formulae, and execute all t
 - Satisfiability can be checked **in constant time** - Does the node representing the formula connect to the 1 terminal?
 - Validity can be checked **in constant time** - Is the node representing the formula the 1 terminal?
 - Equivalence can be checked **in constant time** - Do both formulae start at the same node?
-- Boolean operations are easy to implement - See next section
+- Boolean operations are easy to implement - See boolean operation section.
+
+#### Integrating a node into a DAG
+![](Pasted%20image%2020230125120332.png)
+In English:
+`integrate(n1, p, n2, D)` is a function that takes two nodes, along with a propositional variable, and either inserts a new node into the global DAG or returns an equivalent existing one. The new/existing node will go to `n1` when `p` is true, and to `n2` when `p` is false. It goes as follows:
+1. Are both of the destination nodes the same? In that case, just return one of those two nodes - You would always end up there no matter the value of `p`.
+2. Does the global DAG already contain a node that fits the description of the one we're going to make? If so, return that node instead of making a new one.
+3. Otherwise, make the new node and add it to the DAG, then return this new node.
+
+#### Building an OBDD from a 
