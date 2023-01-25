@@ -142,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 437.5
+    "width": 437.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,15 +158,15 @@
   },
   "active": "07c61cde8f094c8b",
   "lastOpenFiles": [
-    "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/DPLL.md",
+    "Logic and Modelling (21111)/Conjunctive Normal Form.md",
+    "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Binary Decision Data Structures.md",
     "conflict-files-obsidian-git.md",
     "Software Engineering 1 (23311)/Summary.md",
     "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Database Systems (23111)/Relational Schemas and Databases.md",
-    "Database Systems (23111)/Document Databases and NoSQL.md",
-    "Database Systems (23111)/Database Web Programming.md"
+    "Database Systems (23111)/Document Databases and NoSQL.md"
   ]
 }
