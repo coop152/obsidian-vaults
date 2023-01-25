@@ -145,4 +145,5 @@ Let $Q$ be the set of quantifiers and $S$ be the set of clauses.
 - If $\exists{p}$ is in Q then remove every clause containing $L$.
 - If $\forall{p}$ is in Q then remove $L$ from every clause containing it. (not the inversion, like it is in unit propagation!)
 **Universal Literal Deletion**: You can entirely remove a clause from $S$ if these conditions are all satisfied:
+- The clause is non-tautological
 - 
