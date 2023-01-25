@@ -130,3 +130,9 @@ Don't Care
 ## QBF DPLL
 This algorithm requires a rectified, prenexed, CNF QBF.
 As before, it functions as a combination of splitting and unit propagation, though this one is similar to QBF Splitting.
+![](Pasted%20image%2020230125170629.png)
+#### Unit propagation for QBFs
+If your set of clauses contains a unit clause $S$ with literal $p$ or $¬p$, then
+- If the set of quantifiers contains $\exists{p}$, or $p$ isn't in your quantifiers
+	- Remove all clauses that contain the literal
+	- Replace 
