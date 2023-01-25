@@ -144,6 +144,7 @@ Let $Q$ be the set of quantifiers and $S$ be the set of clauses.
 **Pure Literal Rule**: If a literal $L$ (variable $p$) is pure in $S$ (that is, it's inversion doesn't appear), these rules apply:
 - If $\exists{p}$ is in Q then remove every clause containing $L$.
 - If $\forall{p}$ is in Q then remove $L$ from every clause containing it. (not the inversion, like it is in unit propagation!)
-**Universal Literal Deletion**: You can entirely remove a clause from $S$ if these conditions are all satisfied:
-- The clause is non-tautological
-- 
+**Universal Literal Deletion**: You can entirely remove a clause $C$ from $S$ if these conditions are all satisfied:
+- $C$ is non-tautological
+- One of the variables in $C$ is present universally ($\forall$) in $Q$
+- All of the other variables in $C$ are present existentially ($\exists$) in $Q$, and before the universal variable.
