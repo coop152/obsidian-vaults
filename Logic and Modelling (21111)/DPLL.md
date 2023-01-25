@@ -141,4 +141,6 @@ If neither of these new conditions are satisfied, then unit propagation works li
 
 #### Optimisations
 Let $Q$ be the set of quantifiers and $S$ be the set of clauses.
-**Pure Literal Rule**: 
+**Pure Literal Rule**: If a literal $L$ (variable $p$) is pure in $S$ (that is, it's inversion doesn't appear), these rules apply:
+- If $\exists{p}$ is in Q then remove every clause containing $L$.
+- If $\forall{p}$
