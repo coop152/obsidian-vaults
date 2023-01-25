@@ -30,6 +30,3 @@ For the purposes of satisfiability checking, these rules are true:
 
 This algorithm will not always be able to fully reduce a formula to a truth value; it is more like an optimisation that can reduce the time needed to run other satisfiability checking algorithms. That said, it will sometimes be able to completely reduce a formula, such as in this example:
 ![](Pasted%20image%2020230123125959.png)
-
-
-This algorithm is related to the [Satisfiability Checking](Satisfiability%20Checking.md) problem.

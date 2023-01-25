@@ -134,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 437.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,7 +147,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1a50667623bc4d14",
+  "active": "15cb789415892a8c",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Software Engineering 1 (23311)/Summary.md",
