@@ -1,9 +1,10 @@
-## Two Player Games
-Consider a propositional formula $G$ containing variables $p_1, q_1, \dots, p_n, q_n$.
-There is a game with the following rules:
-- There are two players $P$ and $Q$.
-- The game lasts for $n$ turns.
-- The game is turn-based. On some turn $k$, both players can make a move:
-	1. Player P can pick a value for the variable $p_k$.
-	2. Player Q can pick a value for the variable $q_k$.
-- Player $P$ wins if, after $n$ turns, the chosen values make $G$ true.
+## Notation
+Like propositional logic, but with 2 new operators:
+- $\forall{p}F$ - universal quantifier (for all $p$, $F$)
+- $\exists{p}F$ - existential quantifier (there exists $p$ such that $F$)
+These operators have the same precedence as negation ($¬$).
+
+Let $I = \{p \mapsto 1, q \mapsto 0, r \mapsto 1\}$.
+$I^p_0$ is I with $p$ set to $0$. That is, $I^p_0 = \{p \mapsto 0, q \mapsto 0, r \mapsto 1\}$.
+$I(\forall pF) = 1$ if and only if $I_p^0(F) = 1$ and $I_p^1(F)= 1$.
+$I(\exists pF) = 1$ if and only if $I_p^0(F) = 1$ or $I_p^1(F)= 1$.
