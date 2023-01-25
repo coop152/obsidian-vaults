@@ -36,7 +36,9 @@ If a formula is closed, then it can only be valid or unsatisfiable. This is beca
 ## Renaming bound variables
 It is more clear for bound variables that share a name with unbound variables to be differently named; the value of the free variable $p$ will not influence the value of the bound value $p$.
 
-**Rectifying**
+**Rectification** is the process of renaming every bound variable, so that a formula cannot contain any naming conflicts between bound and free variables. A **rectified** formula is required for **prenexing**:
 
 ## Prenexing
-Prenex form is a form of QBF where all of the quantifiers are on the outside. e.g: $\forall{p}\exists{q}()$
+Prenex form is a form of QBF where all of the quantifiers are on the outside. e.g: $\forall{p}\exists{q}(p \land q \land r)$.
+The **quantifier-free** formula on the inside can be any propositional formula.
+If the quantifier-free formula on the inside of a prenex form QBF is in CNF, then the whole QBF is said to be in CNF. Therefore, to use algorithms that require a formula in CNF, a QBF must be rectified, put into prenex form and
