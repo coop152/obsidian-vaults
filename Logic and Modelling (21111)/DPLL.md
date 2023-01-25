@@ -128,3 +128,4 @@ Initial formula:
 Don't Care
 
 ## QBF DPLL
+This algorithm requires a rectified, prenexed, CNF QBF.
