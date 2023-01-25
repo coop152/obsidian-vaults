@@ -37,3 +37,4 @@ If a formula is closed, then it can only be valid or unsatisfiable. This is beca
 It is more clear for bound variables that share a name with unbound variables to be differently named; the value of the free variable $p$ will not influence the value of the bound value $p$.
 
 ## Prenexing
+Prenex form is a form of QBF where all of the quantifiers are on the outside. e.g: $\forall{p}\exists{q}()$
