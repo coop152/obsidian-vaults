@@ -66,3 +66,11 @@ For example, say you have the OBDDs $D_1, D_2$ representing functions $F_1, F_2$
 $f(F_1, F_2)$
 $= f(\text{if } p \text{ then } l_1 \text{ else } r_1, \text{if } p \text{ then } l_2 \text{ else } r_2)$
 $= \text{if } p \text{ then } f(l_1, l_2) \text{ else } f(r_1, r_2)$
+While this still isn't solved, it's enough to start making the OBDD. add a node that tests $p$. If $p$ is true, go to $f(l_1, l_2)$ (which is still unknown as of yet) and vice versa for false. Repeat this process on the two functions until you reach the terminals, where the behaviour is decided by the function; for example with disjunction, a formula $\lor$ $1$ is always $1$, and a formula $\lor$ $0$ is always $0$. Here is the full method for disjunction:
+![](Pasted%20image%2020230125125719.png)
+The first line checks if any of the formulae are $1$; if so, the whole disjunction is $1$ and that is returned.
+The second line checks for an empty disjunction, which is always false.
+The third line checks for a disjunction of a single formula, which is just the formula.
+The fourth/fifth lines remove any formulae that are $0$.
+The function then picks the max variable that occurs in any of the formulae. A new node is made from this variable, with the true branch leading to the disjunction of all of the true branches in the formulae, and vice versa for the false branch.
+The newly constructed disjunctions are then integrated into the global DAG.
