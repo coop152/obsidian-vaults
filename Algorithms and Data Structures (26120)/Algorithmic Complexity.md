@@ -35,3 +35,6 @@ Strictly speaking, the big-Os are sets of functions and a function is "in" them,
 - $\Theta(g(n))$ - Average case. If an algorithm is $\Theta(g(n))$, then its complexity is exactly proportional to $g(n)$ in the average case.
 - $\Omega(g(n))$ - Best case/Lower bound. If an algorithm is $\Omega(g(n))$, then its complexity is at best proportional to $g(n)$.
 
+## Example
+Q: Use the formal definition of $\Theta$ to show that $\frac{1}{2}n^2 -3n = \Theta(n^2)$.
+A: 
