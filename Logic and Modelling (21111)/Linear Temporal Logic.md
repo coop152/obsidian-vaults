@@ -13,3 +13,9 @@ $\Box F$: $F$ will be true indefinitely.
 $\Diamond F$: $F$ will be true eventually.
 $F \mathcal{U} G$: $F$ will be true until G is true, wherein $F$ will no longer be true.
 $F \mathcal{R} G$: $F$ will eventually become true, wherein it will release $G$ from being true.
+
+## Equivalences
+$$¬\bigcirc F \equiv \bigcirc ¬F$$
+$$¬\Box F \equiv \Diamond ¬F$$
+$$¬\Diamond F \equiv \Box ¬F$$
+$$¬(F \mathcal{U} G) \equiv ¬F \mathcal{R} ¬G$$
