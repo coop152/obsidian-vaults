@@ -12,4 +12,5 @@
 - [Quantified Boolean Formulae](Quantified%20Boolean%20Formulae.md)
 - [QBF Splitting](Splitting.md#QBF%20Splitting)
 - [QBF DPLL](DPLL.md#QBF%20DPLL)
-- 
+- PLFD
+- [Linear Temporal Logic](Linear%20Temporal%20Logic.md)
