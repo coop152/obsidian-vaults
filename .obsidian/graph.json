@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"Logic and Modelling (21111)\"",
@@ -25,7 +25,7 @@
       "query": "path:\"Algorithms and Data Structures (26120)\"",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 12669664
       }
     },
     {
@@ -53,6 +53,6 @@
   "repelStrength": 10.5,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7871497603903238,
+  "scale": 0.5072381169274526,
   "close": true
 }

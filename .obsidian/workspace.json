@@ -11,12 +11,8 @@
             "id": "45cc804ec5b609bc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithms and Data Structures (26120)/Summary.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms and Data Structures (26120)/Summary.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,15 +158,15 @@
   },
   "active": "45cc804ec5b609bc",
   "lastOpenFiles": [
-    "Algorithms and Data Structures (26120)/Divide and Conquer.md",
-    "Algorithms and Data Structures (26120)/Summary.md",
-    "Algorithms and Data Structures (26120)/Algorithmic Complexity.md",
-    "Logic and Modelling (21111)/Binary Decision Data Structures.md",
-    "Logic and Modelling (21111)/Summary.md",
-    "Logic and Modelling (21111)/Conjunctive Normal Form.md",
-    "Logic and Modelling (21111)/DPLL.md",
-    "Logic and Modelling (21111)/Quantified Boolean Formulae.md",
-    "Logic and Modelling (21111)/attachments/Pasted image 20230125170629.png",
-    "Logic and Modelling (21111)/Splitting.md"
+    "Algorithms and Data Structures (26120)/Index.md",
+    "Algorithms and Data Structures (26120)/Algorithmic Techniques.md",
+    "Algorithms and Data Structures (26120)/Disjoint Sets.md",
+    "Algorithms and Data Structures (26120)/Skip Lists.md",
+    "Algorithms and Data Structures (26120)/Priority Queues.md",
+    "Algorithms and Data Structures (26120)/Search Tree.md",
+    "Algorithms and Data Structures (26120)/Binary Heaps.md",
+    "Algorithms and Data Structures (26120)/Amortised Analysis.md",
+    "Algorithms and Data Structures (26120)/Hash Tables.md",
+    "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md"
   ]
 }
