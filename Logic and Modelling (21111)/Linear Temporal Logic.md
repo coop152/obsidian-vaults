@@ -19,3 +19,5 @@ $$¬\bigcirc F \equiv \bigcirc ¬F$$
 $$¬\Box F \equiv \Diamond ¬F$$
 $$¬\Diamond F \equiv \Box ¬F$$
 $$¬(F \mathcal{U} G) \equiv ¬F \mathcal{R} ¬G$$
+$$¬(\Box F \lor \Box F) \equiv (¬\Box F \lor ¬\Box F)$$
+$$¬(\Diamond F \lor \Diamond F) \equiv (¬\Diamond F \lor ¬\Diamond F)$$
