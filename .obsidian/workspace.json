@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"-  \"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -156,7 +155,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5933f962dbdde15c",
+  "active": "15cb789415892a8c",
   "lastOpenFiles": [
     "2023-01-26.md",
     "Algorithms and Data Structures (26120)/Algorithmic Complexity.md",
