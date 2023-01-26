@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md"
+                "file": "Logic and Modelling (21111)/Linear Temporal Logic.md"
               }
             }
           },
@@ -107,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
+                "file": "Logic and Modelling (21111)/Linear Temporal Logic.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logic and Modelling (21111)/Summary.md",
+                "file": "Logic and Modelling (21111)/Linear Temporal Logic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,10 +169,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "07c61cde8f094c8b",
+  "active": "5e7ef35bac2b23e6",
   "lastOpenFiles": [
-    "Logic and Modelling (21111)/Linear Temporal Logic.md",
     "Logic and Modelling (21111)/Summary.md",
+    "Logic and Modelling (21111)/Linear Temporal Logic.md",
     "Logic and Modelling (21111)/DPLL.md",
     "Logic and Modelling (21111)/Quantified Boolean Formulae.md",
     "Logic and Modelling (21111)/Conjunctive Normal Form.md",

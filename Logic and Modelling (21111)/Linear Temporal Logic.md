@@ -11,4 +11,5 @@ $$\begin{align*} \bigcirc &\text{ next} \\ \Box &\text{ always (in future)}\\ \D
 $\bigcirc F$: $F$ will be true in the next state.
 $\Box F$: $F$ will be true indefinitely.
 $\Diamond F$: $F$ will be true eventually.
-$F \mathcal{U} G$: F will be true until G is true, wherein it will no longer be true.
+$F \mathcal{U} G$: $F$ will be true until G is true, wherein $F$ will no longer be true.
+$F \mathcal{R} G$: $F$ will eventually become true, wherein it will release $G$ from being true.
