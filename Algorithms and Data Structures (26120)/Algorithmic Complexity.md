@@ -38,4 +38,7 @@ Strictly speaking, the big-Os are sets of functions and a function is "in" them,
 ## Example
 Q: Use the formal definition of $\Theta$ to show that $\frac{1}{2}n^2 -3n = \Theta(n^2)$.
 A: 
-$0 \leq c_1g(n) \leq \frac{1}{2}n^2 -3n \leq c_2g(n)$ 
+$0 \leq c_1n^2 \leq \frac{1}{2}n^2 -3n \leq c_2n^2$ 
+$0 \leq c_1 \leq \frac{1}{2} -\frac{3}{n} \leq c_2$ 
+$\frac{3}{n}$ approaches 0 as n increases.
+$c_1 \leq \frac{1}{2} \& \frac{1}{2}$ 
