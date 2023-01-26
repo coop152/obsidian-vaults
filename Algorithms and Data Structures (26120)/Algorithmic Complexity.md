@@ -40,5 +40,5 @@ Q: Use the formal definition of $\Theta$ to show that $\frac{1}{2}n^2 -3n = \The
 A: 
 $0 \leq c_1n^2 \leq \frac{1}{2}n^2 -3n \leq c_2n^2$ 
 $0 \leq c_1 \leq \frac{1}{2} -\frac{3}{n} \leq c_2$ 
-$\frac{3}{n}$ approaches 0 as n increases.
-$c_1 \leq \frac{1}{2} \& \frac{1}{2}$ 
+$\frac{3}{n}$ approaches 0 as n increases, so
+$c_1 \leq \frac{1}{2}$
