@@ -29,7 +29,7 @@ $$\begin{align*}
 f(n) \in \Theta(g(n)) \text{ if there exist positive constants } c_1, c_2 \text{ and } n_0 \text{ such that } \\ 
 0 \leq c_1g(n) \leq f(x) \leq c_2g(n) \text{ for all } n \geq n_0.
 \end{align*}$$
-Strictly speaking, the big-Os are sets of functions and a function is "in" them, not equal to them. However, $f(n) \in O(g(n))$ is commonly written as $f(n) = O(g(n))$ for simplicity.
+Strictly speaking, the big-Os are sets of functions and a function is "in" them, not equal to them. However, $f(n) = O(g(n))$ is commonly written to mean $f(n) \in O(g(n))$.
 
 - $O(g(n))$ - Worst case/Upper bound. If an algorithm is $O(g(n))$, then its complexity is at worst proportional to $g(n)$.
 - $\Theta(g(n))$ - Average case. If an algorithm is $\Theta(g(n))$, then its complexity is exactly proportional to $g(n)$ in the average case.
@@ -38,3 +38,4 @@ Strictly speaking, the big-Os are sets of functions and a function is "in" them,
 ## Example
 Q: Use the formal definition of $\Theta$ to show that $\frac{1}{2}n^2 -3n = \Theta(n^2)$.
 A: 
+$0 \leq c_1g(n) \leq \frac{1}{2}n^2 -3n \leq c_2g(n)$ 
