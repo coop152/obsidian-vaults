@@ -33,3 +33,16 @@ isExternal(n): TRUE if n is external
 
 ## Representing a (Binary) Tree
 ![](Pasted%20image%2020230127121136.png)
+For a parent node at $i$, its left child is at $2i + 1$ and its right child is at $2i + 2$.
+Can only represent trees with a fixed number of children! Also has lots of wasted space.
+![](Pasted%20image%2020230127121503.png)
+Each node links to its parent and its children (i.e. a doubly linked list). Can represent general trees, and doesn't waste as much space for non-complete trees.
+
+## Traversal
+#### Pre-order
+```python
+def preorder(node):
+	preorder(node.left)
+	output(node.value)
+	preorder(node.right)
+```
