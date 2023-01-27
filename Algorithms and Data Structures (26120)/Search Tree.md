@@ -65,5 +65,9 @@ def postorder(node):
 #### Depth First
 ```python
 def DFS(node):
-	
+	s = stack()
+	s.push(node)
+	while s is not empty:
+		n = s.pop()
+		
 ```
