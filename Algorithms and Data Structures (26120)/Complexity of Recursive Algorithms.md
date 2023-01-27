@@ -9,5 +9,15 @@ In other words, using the example $T(n) = 9T(\frac{n}{3}) + n$:
 Simple process but difficult working:
 1. Expand the recursive calls until you find a pattern
 2. Re-arrange the repeating pattern as a summation
-3. Evaluate the summation, by setting $k = n$.
-For example, with $T(n)$
+3. Evaluate the summation, by setting $k$ to a value that gives you a base case (e.g. the base base of the recurrence, or an easy to evaluate case for a sum).
+For example:
+![](Pasted%20image%2020230127114912.png)
+$s(n) = s(n-1)+c$
+$s(n) = s(n-2) + 2c$
+$s(n) = s(n-3) + 3c$
+$s(n) = s(n-k) +kc$
+when k = n:
+$s(n) = s(0) +nc$
+$s(n) = nc$
+$s(n) = O(n)$
+
