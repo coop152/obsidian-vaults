@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md",
+                "file": "Algorithms and Data Structures (26120)/Search Tree.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md",
+                "file": "Algorithms and Data Structures (26120)/Search Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md",
+                "file": "Algorithms and Data Structures (26120)/Search Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md"
+                "file": "Algorithms and Data Structures (26120)/Search Tree.md"
               }
             }
           },
@@ -157,6 +157,7 @@
   },
   "active": "6129b2b28eab5404",
   "lastOpenFiles": [
+    "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md",
     "Algorithms and Data Structures (26120)/Divide and Conquer.md",
     "Algorithms and Data Structures (26120)/Algorithmic Complexity.md",
     "2023-01-26.md",
@@ -165,7 +166,6 @@
     "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
     "Logic and Modelling (21111)/Propositional Logic.md",
     "Logic and Modelling (21111)/Conjunctive Normal Form.md",
-    "Algorithms and Data Structures (26120)/Complexity of Recursive Algorithms.md",
     "Database Systems (23111)/Summary.md"
   ]
 }

@@ -1,0 +1,32 @@
+- Binary Tree
+    - All nodes have at-most 2 children
+- General Tree
+    - At least 1 node has more than 2 children
+- Proper Binary Tree
+    - Nodes have either 0 or 2 children
+- Complete Binary Tree
+    - All levels are full, except the last where all nodes are to the left
+- Perfect Binary Tree
+    - Tree is proper and all external nodes have same depth
+## Tree Abstract Data Type
+```python
+root(): returns root of tree
+
+isRoot(n): TRUE if n is root node
+
+insert(e): Inserts element e into T
+
+find(e): returns node storing e (or NULL)
+
+remove(n): removes node n from T
+
+parent(n): returns the parent node (or NULL)
+
+children(n): returns the children nodes of n
+
+elements(): returns all elements of T
+
+isInternal(n): TRUE if n is internal
+
+isExternal(n): TRUE if n is external
+```
