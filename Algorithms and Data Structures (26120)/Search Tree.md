@@ -61,13 +61,5 @@ def postorder(node):
 	output(node.value)
 ```
 
-## Search Methods
-#### Depth First
-```python
-def DFS(node):
-	s = stack()
-	s.push(node)
-	while s is not empty:
-		n = s.pop()
-		
-```
+## Complexity
+Assuming evenly distributed elements, find insert and delete are all $\Theta(log{n})$. The worst case is $O(n)$, when the height of the tree is roughly equal to the number of elements.
