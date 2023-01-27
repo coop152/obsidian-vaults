@@ -1,5 +1,5 @@
 - Binary Tree
-    - All nodes have at-most 2 children
+    - All nodes have at most 2 children
 - General Tree
     - At least 1 node has more than 2 children
 - Proper Binary Tree
@@ -30,3 +30,6 @@ isInternal(n): TRUE if n is internal
 
 isExternal(n): TRUE if n is external
 ```
+
+## Representing a (Binary) Tree
+![](Pasted%20image%2020230127121136.png)
