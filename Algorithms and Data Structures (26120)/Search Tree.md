@@ -42,7 +42,8 @@ Each node links to its parent and its children (i.e. a doubly linked list). Can 
 #### Pre-order
 ```python
 def preorder(node):
-	preorder(node.left)
 	output(node.value)
-	preorder(node.right)
+	if node.isInternal():
+		preorder(node.left)
+		preorder(node.right)
 ```
