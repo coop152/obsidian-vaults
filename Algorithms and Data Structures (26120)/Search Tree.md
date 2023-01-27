@@ -43,7 +43,27 @@ Each node links to its parent and its children (i.e. a doubly linked list). Can 
 ```python
 def preorder(node):
 	output(node.value)
-	if node.isInternal():
-		preorder(node.left)
-		preorder(node.right)
+	if node.left is not None: preorder(node.left)
+	if node.right is not None: preorder(node.right)
+```
+#### In-order
+```python
+def inorder(node):
+	if node.left is not None: inorder(node.left)
+	output(node.value)
+	if node.right is not None: inorder(node.right)
+```
+#### Post-order
+```python
+def postorder(node):
+	if node.left is not None: postorder(node.left)
+	if node.right is not None: postorder(node.right)
+	output(node.value)
+```
+
+## Search Methods
+#### Depth First
+```python
+def DFS(node):
+	
 ```
