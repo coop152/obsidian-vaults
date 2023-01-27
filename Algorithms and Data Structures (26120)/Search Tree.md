@@ -63,3 +63,6 @@ def postorder(node):
 
 ## Complexity
 Assuming evenly distributed elements, find insert and delete are all $\Theta(log{n})$. The worst case is $O(n)$, when the height of the tree is roughly equal to the number of elements.
+
+## AVL Trees
+An AVL tree is a BST but it can only be unbalanced by a max of one level. If it's too unbalanced it will be automatically balanced using rotations.
