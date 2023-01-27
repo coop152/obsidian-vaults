@@ -7,4 +7,7 @@ In other words, using the example $T(n) = 9T(\frac{n}{3}) + n$:
 
 ## Iteration Method
 Simple process but difficult working:
-- 
+1. Expand the recursive calls until you find a pattern
+2. Re-arrange the repeating pattern as a summation
+3. Evaluate the summation, by setting $k = n$.
+For example, with $T(n)$
