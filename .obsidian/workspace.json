@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
+                "file": "Algorithms and Data Structures (26120)/Index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
+                "file": "Algorithms and Data Structures (26120)/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
+                "file": "Algorithms and Data Structures (26120)/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md"
+                "file": "Algorithms and Data Structures (26120)/Index.md"
               }
             }
           },
@@ -155,10 +155,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "15cb789415892a8c",
+  "active": "721a19a3d6a7b415",
   "lastOpenFiles": [
-    "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
+    "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 1/Complexity of Recursive Algorithms.md",
     "Algorithms and Data Structures (26120)/Semester 1/attachments/Pasted image 20230127114912.png",
     "Algorithms and Data Structures (26120)/Semester 1/Hash Tables.md",
