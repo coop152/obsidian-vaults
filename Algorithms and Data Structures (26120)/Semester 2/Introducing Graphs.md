@@ -113,4 +113,12 @@ procedure BFS(s):
 There is no such recursive definition for BFS.
 
 ## Topological Sorting
-A set of tasks, e.g. a build sequence for software or a project's schedule, can be modelled using a directed graph. A topological sorting algorithm  
+A set of tasks, e.g. a build sequence for software or a project's schedule, can be modelled using a directed graph. A topological sorting algorithm can find a valid sequence of tasks that respects the required order. For example:
+![](Pasted%20image%2020230130132811.png)
+Strictly speaking, the objective of a topological sorting algorithm is to find a sequence of nodes such that all edges point forwards. This is only possible if the graph has **no cycles**.
+
+## Cycle detection with DFS
+- Perform DFS, keeping a list of all finished nodes as usual.
+- When searching for nodes to add to the `toExplore` stack, check against the finished nodes.
+- If an upcoming node is found that has already been explored (i.e. is in the list of finished nodes) then a cycle has been found.
+![](Pasted%20image%2020230130133147.png)
