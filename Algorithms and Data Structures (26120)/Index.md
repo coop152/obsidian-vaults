@@ -1,3 +1,4 @@
+#### Semester 1
 - [Algorithmic Complexity](Algorithmic%20Complexity.md)
 - [Divide and Conquer](Divide%20and%20Conquer.md)
 - [Complexity of Recursive Algorithms](Complexity%20of%20Recursive%20Algorithms.md)
@@ -9,3 +10,6 @@
 - [Skip Lists](Skip%20Lists.md)
 - [Disjoint Sets](Disjoint%20Sets.md)
 - [Algorithmic Techniques](Algorithmic%20Techniques.md)
+
+#### Semester 2
+- [Introducing Graphs](Introducing%20Graphs.md)
