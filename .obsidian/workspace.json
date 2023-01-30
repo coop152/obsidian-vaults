@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Index.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#algorithm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Index.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Index.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Index.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md"
               }
             }
           },
@@ -157,15 +157,15 @@
   },
   "active": "721a19a3d6a7b415",
   "lastOpenFiles": [
-    "Algorithms and Data Structures (26120)/Semester 2/Tractability.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
+    "README.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Tractability.md",
     "Algorithms and Data Structures (26120)/Semester 2/El Gamal Encryption.md",
     "Algorithms and Data Structures (26120)/Semester 2/Primality Test.md",
     "Algorithms and Data Structures (26120)/Semester 2/NP-Completeness.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
     "Algorithms and Data Structures (26120)/Semester 2/Intro to Linear Programming.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md"
+    "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md"
   ]
 }
