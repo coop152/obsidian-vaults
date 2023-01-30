@@ -10,7 +10,7 @@ $V$ is the set of nodes in the graph, and $E$ is the set of relationships betwee
 
 A **path** is a sequence of nodes $u_1, u_2, \dots, u_n$ such that $u_i \in V$ (all nodes in the sequence are in the graph) and $(u_i, u_{i+1}) \in E$ (all subsequent pairs are in the set of edges).
 A **cycle** is a path that begins and ends at the same node, e.g. $2, 4, 9, 2$.
-A **simple graph** is a graph with **no parallel edges** (no edges with the same start and end nodes) and **no cycles**.
+A **simple graph** is a graph with **no parallel edges** (no edges with the same start and end nodes) and **no loops** (nodes that point to themselves).
 A **spanning subgraph** is a subgraph that contains all nodes in the graph.
 
 ## Operations on Graphs
