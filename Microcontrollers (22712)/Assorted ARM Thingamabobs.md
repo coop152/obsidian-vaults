@@ -1,5 +1,5 @@
 ## Labels vs Constants
-The `EQU` directive creates a constant; this can be used to replace immediate numbers. For example, you can convert this:
+The `EQU` directive creates a label with an arbitrary value; this can be used to replace immediate numbers. For example, you can convert this:
 ```
 main            MOV     r1, #0x80000        ; load delay into r1
                 MOV     r0, #0b0100_0100    ; load light pattern, red/red
