@@ -1,4 +1,4 @@
-## Labels vs Constants
+## Constants (?)
 The `EQU` directive creates a label with an arbitrary value; this can be used to replace immediate numbers. For example, you can convert this:
 ```
 main            MOV     r1, #0x80000        ; load delay into r1
@@ -14,7 +14,25 @@ main            MOV     r1, #regular_delay   ; load delay into r1
                 MOV     r0, #red_red_patt    ; load light pattern, red/red
                 BL      light_and_delay
 ```
-The `DEF` directives (e.g. `DEFW`, `DEFB`, `DEFS`) allocate space in memory and create a label that refers to that space.
+The `DEF` directives (e.g. `DEFW`, `DEFB`, `DEFS`) allocate space in memory and create a label that refers to that space. If you want to change the value, or to hold anything that wouldn't fit in an immediate number, you have to use this.
+Or, you can use the `LDR rd, =XXXX` pseudo-instruction to get full-size "immediate" numbers.
+
+## About Labels
+The labels created by an `EQU` directive, the labels on instructions and the labels for `DEF` directives are all the same thing. For example:
+```arm
+		LDR    r0, stuff    ; loading data from memory using DEFW label
+
+stuff   DEFW   5
+
+		LDR    r0, thing    ; loads the instruction instead
+
+thing   NOP
+
+		LDR    r0, foo
+
+foo     EQU    10
+```
+
 ## Initialise stack pointer
 ```
 		ADRL r0, _stack
