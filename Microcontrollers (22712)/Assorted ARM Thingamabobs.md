@@ -10,8 +10,8 @@ to this:
 regular_delay   EQU     0x80000             ; approx. one second of delay
 red_red_patt    EQU     0b0100_0100         ; red/red light pattern
 
-main            MOV     r1, regular_delay   ; load delay into r1
-                MOV     r0, red_red_patt    ; load light pattern, red/red
+main            MOV     r1, #regular_delay   ; load delay into r1
+                MOV     r0, #red_red_patt    ; load light pattern, red/red
                 BL      light_and_delay
 ```
 The `DEF` directives (e.g. `DEFW`, `DEFB`, `DEFS`) allocate space in memory and create a label that refers to that space.
