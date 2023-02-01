@@ -40,4 +40,6 @@ The type constructor of a function is an arrow, as has already been shown in pre
 ```haskell
 applyToTen :: (Int -> Bool) -> Bool
 applyToTen f = f(10)
+
+main = print (\x -> True) -- also featured here; anonymous function syntax
 ```
