@@ -74,3 +74,22 @@ sumIntPair (IntPair a b) = a + b
 
 main = print (sumIntPair (IntPair 10 20))  -- using constructor to make a new MyIntPair
 ```
+Big example showing it all off:
+```haskell
+data MyTree a = Node a (MyTree a) (MyTree a) | Leaf a | NoLeaf deriving(Show)
+
+addToTree :: MyTree Int -> Int -> MyTree Int
+addToTree NoLeaf b = Leaf b
+addToTree (Leaf a) b = if b < a
+	then Node a (Leaf b) NoLeaf
+	else Node a NoLeaf (Leaf b)
+addToTree (Node a b c) x = if x < a
+	then Node a (addToTree b x) c
+	else Node a b (addToTree c x)
+
+listToTree :: [Int] -> MyTree Int
+listToTree [] = NoLeaf
+listToTree (x : s) = addToTree (listToTree s) x
+
+main = print (listToTree[3, 7, 5, 1, 90])
+```
