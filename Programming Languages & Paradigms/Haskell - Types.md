@@ -43,3 +43,34 @@ applyToTen f = f(10)
 
 main = print (\x -> True) -- also featured here; anonymous function syntax
 ```
+using multiple arguments and type variables:
+```haskell
+applyFunc :: (a -> b) -> a -> b
+applyFunc f x = f x
+
+main = print (applyFunc (\x -> 2 * x) 5)
+```
+
+## Algebraic Data Types
+Make custom types using the `Data` keyword. The simplest example is an enum:
+```haskell
+data SwitchState = On | Off  -- an enum for a switch
+
+isOn :: SwitchState -> Bool
+isOn On = True
+isOn Off = False
+
+toggle :: SwitchState -> SwitchState
+toggle On = Off
+toggle Off = On
+```
+Type constructors using other types can be made:
+```haskell
+-- creates a type constructor IntPair with two Int arguments
+data MyIntPair = IntPair Int Int  
+
+sumIntPair :: MyIntPair -> Int
+sumIntPair (IntPair a b) = a + b
+
+main = print (sumIntPair (IntPair 10 20))  -- using constructor to make a new MyIntPair
+```
