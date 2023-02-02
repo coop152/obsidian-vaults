@@ -93,3 +93,6 @@ listToTree (x : s) = addToTree (listToTree s) x
 
 main = print (listToTree[3, 7, 5, 1, 90])
 ```
+
+## Ad-hoc Polymorphism
+Parametric polymorphism was achievable using generic types, but this is often too restrictive as it requires the implementation to be the same for all types.
