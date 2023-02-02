@@ -107,5 +107,11 @@ instance Descriptive Bool where
 	describe True = "Indeed"
 	describe False = "The opposite of indeed"
 
-instance Descriptive Maybe a where
+instance Descriptive Int where
+	describe 1 = "The number one"
+	describe _ = "not the number one, who gives a shit"
+
+-- both work
+desc1 = describe True
+desc2 = describe 12
 ```
