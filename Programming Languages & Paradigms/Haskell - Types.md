@@ -96,3 +96,16 @@ main = print (listToTree[3, 7, 5, 1, 90])
 
 ## Ad-hoc Polymorphism
 Parametric polymorphism was achievable using generic types, but this is often too restrictive as it requires the implementation to be the same for all types.
+To have a different function for different types, use **typeclasses**.
+#### Typeclasses
+```haskell
+-- types that derive the Descriptive class must implement a describe function
+class Descriptive a where
+	describe :: a -> String
+
+instance Descriptive Bool where
+	describe True = "Indeed"
+	describe False = "The opposite of indeed"
+
+instance Descriptive Maybe a where
+```
