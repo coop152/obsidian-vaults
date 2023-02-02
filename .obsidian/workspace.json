@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Week 1.md",
+                "file": "Programming Languages & Paradigms/Haskell - Strictness.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Week 1.md",
+                "file": "Programming Languages & Paradigms/Haskell - Strictness.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Week 1.md",
+                "file": "Programming Languages & Paradigms/Haskell - Strictness.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Week 1.md"
+                "file": "Programming Languages & Paradigms/Haskell - Strictness.md"
               }
             }
           },
@@ -157,14 +157,14 @@
   },
   "active": "ef169aef1345df96",
   "lastOpenFiles": [
-    "README.md",
     "Programming Languages & Paradigms/Haskell - Types.md",
     "Programming Languages & Paradigms/Haskell.md",
+    "Introduction to Visual Computing (27112)/Week 1.md",
+    "README.md",
     "Programming Languages & Paradigms/Index.md",
     "Programming Languages & Paradigms/Haskell - Input & Output.md",
     "Programming Languages & Paradigms/Haskell - Strictness.md",
     "Programming Languages & Paradigms/Haskell - Defining Functions.md",
-    "Introduction to Visual Computing (27112)/Week 1.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
     "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md"
   ]
