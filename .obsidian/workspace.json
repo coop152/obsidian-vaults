@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5c8fe4bf91308c11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Systems Architecture/Week 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
+                "file": "Systems Architecture/Week 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
+                "file": "Systems Architecture/Week 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md"
+                "file": "Systems Architecture/Week 1.md"
               }
             }
           },
@@ -155,16 +168,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ef169aef1345df96",
+  "active": "5c8fe4bf91308c11",
   "lastOpenFiles": [
-    "Microcontrollers (22712)/Lab Manual.pdf",
+    "README.md",
+    "Introduction to Visual Computing (27112)/Week 1.md",
+    "Programming Languages & Paradigms/Haskell.md",
+    "Programming Languages & Paradigms/Index.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
+    "Microcontrollers (22712)/Lab Manual.pdf",
     "Programming Languages & Paradigms/Haskell - Types.md",
     "Programming Languages & Paradigms/Haskell - Strictness.md",
-    "Programming Languages & Paradigms/Haskell.md",
-    "Introduction to Visual Computing (27112)/Week 1.md",
-    "README.md",
-    "Programming Languages & Paradigms/Index.md",
     "Programming Languages & Paradigms/Haskell - Input & Output.md",
     "Programming Languages & Paradigms/Haskell - Defining Functions.md"
   ]
