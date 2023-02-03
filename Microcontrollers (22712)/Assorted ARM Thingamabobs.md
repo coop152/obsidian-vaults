@@ -25,3 +25,13 @@ Or, you can use the `LDR rd, =XXXX` pseudo-instruction to get full-size "immedia
 _stack
 ```
 
+## Testing a bit
+```arm
+LDR r1, some_location
+TST r1, #0b0100_0000    ; test the 7th bit
+BNE bit_was_set
+BEQ bit_was_not_set
+; or if you want
+BZ bit_was_set
+BNZ bit_was_not_set
+```
