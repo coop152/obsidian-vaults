@@ -38,17 +38,17 @@ BNZ bit_was_not_set
 ```
 
 ## Bit Fiddling
-	```arm
-	LDR r1, some_location    ; wanna change bits in memory
-	
-	; set 6th bit to 1
-	ORR r1, r1, #0b0010_0000
-	
-	; set 4th bit to 0
-	BIC r1, r1, #0b0000_1000    ; equivalent to r1 = r1 && ¬(0b0000_1000)
-	; or using AND
-	AND r1, r1, #0b1111_0111    ; with the mask inverted
-	
-	; flip the 2nd bit
-	EOR r1, r1, #0b0000_0010
-	```
+```arm
+LDR r1, some_location    ; wanna change bits in memory
+
+; set 6th bit to 1
+ORR r1, r1, #0b0010_0000
+
+; set 4th bit to 0
+BIC r1, r1, #0b0000_1000    ; equivalent to r1 = r1 && ¬(0b0000_1000)
+; or using AND
+AND r1, r1, #0b1111_0111    ; with the mask inverted
+
+; flip the 2nd bit
+EOR r1, r1, #0b0000_0010
+```
