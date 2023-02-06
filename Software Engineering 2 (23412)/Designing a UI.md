@@ -38,6 +38,8 @@ There are many sets of guidelines an application may follow.
 1. Strive for consistency
 2. Seek universal usability
 	- All computer abilities and ages
+		- Keep a simple interface present for novice users
+		- Introduce shortcuts and allow faster usage for expert users
 	- People who need assistive technology 
 	- On different sizes of screen, e.g. mobile, desktop, TV
 	- In many situations, e.g. sitting down, walking, while distracted
