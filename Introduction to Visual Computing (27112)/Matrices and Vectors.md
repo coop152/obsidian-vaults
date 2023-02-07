@@ -78,4 +78,4 @@ x \\ y \\ z
 \end{bmatrix}
 $$
 ## Translation?
-Not possible with this 3x3 matrix format. The solution is [Homogeneous Coordinates](Homogeneous%20Coordinates.md).
+Not possible with this 3x3 matrix format. The solution is [Transformations & Homogeneous Coordinates](Transformations%20&%20Homogeneous%20Coordinates.md).

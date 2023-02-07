@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "61870ee624f0ab71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md",
+                "file": "Introduction to Visual Computing (27112)/Shaders.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md",
+                "file": "Introduction to Visual Computing (27112)/Shaders.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md",
+                "file": "Introduction to Visual Computing (27112)/Shaders.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md"
+                "file": "Introduction to Visual Computing (27112)/Shaders.md"
               }
             }
           },
@@ -151,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -169,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "61870ee624f0ab71",
+  "active": "5c8fe4bf91308c11",
   "lastOpenFiles": [
-    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
-    "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Index.md",
+    "Introduction to Visual Computing (27112)/Shaders.md",
+    "Software Engineering 1 (23311)/Summary.md",
+    "Software Engineering 1 (23311)/Software Design Patterns.md",
+    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
+    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Week 1.md",
     "README.md",
     "Software Engineering 2 (23412)/Index.md",
-    "Software Engineering 2 (23412)/Designing a UI.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Introducing Graphs.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
-    "Algorithms and Data Structures (26120)/Index.md"
+    "Software Engineering 2 (23412)/Designing a UI.md"
   ]
 }
