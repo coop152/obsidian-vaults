@@ -61,4 +61,5 @@ $P'' = T_2 \cdot T_1 \cdot P$
 If you wanted to represent the combination of these two transformations as one matrix, you can simply multiply the matrices together:
 $T_C = T_2 \cdot T_1$
 $P'' = T_C \cdot P$
-Remember that matrix multiplication is not commutative.
+Remember that matrix multiplication is not commutative!
+This is vital to graphics rendering, where multiple matrices will be applied repeatedly to points in sequence without changing. For example, a model may have a modelling matrix applied, followed by a camera matrix, followed by a projection matrix. 

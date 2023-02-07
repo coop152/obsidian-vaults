@@ -155,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 315.5
+    "width": 315.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,7 +169,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ca41a6dec1a02993",
+  "active": "61870ee624f0ab71",
   "lastOpenFiles": [
     "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Homogeneous Coordinates.md",
