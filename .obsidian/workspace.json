@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Index.md",
+                "file": "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Index.md",
+                "file": "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Index.md",
+                "file": "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Index.md"
+                "file": "Introduction to Visual Computing (27112)/Matrices and Vectors.md"
               }
             }
           },
@@ -157,8 +157,8 @@
   },
   "active": "5c8fe4bf91308c11",
   "lastOpenFiles": [
-    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Index.md",
+    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Week 1.md",
     "README.md",
     "Software Engineering 2 (23412)/Index.md",
