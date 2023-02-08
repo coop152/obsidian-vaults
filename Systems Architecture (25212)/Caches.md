@@ -32,3 +32,6 @@ SDRAM is good for big memories with burst access but it's harder to use.
 
 ## Associativity
 The simple view of a cache with N entries is that it can cache N completely different and unrelated items. This is called **fully associative**. However, this is expensive; each lookup requires a search of the entire tag table which is $O(n)$.
+
+#### Direct-mapped cache
+An alternative view of caching, that simplifies the implementation. Any particular item has a predetermined place that it might be cached in, which is determined by the lower bits of its address. Therefore, incoming addresses only need **one** tag comparison. Therefore, it is **lower power** and **considerably faster**.
