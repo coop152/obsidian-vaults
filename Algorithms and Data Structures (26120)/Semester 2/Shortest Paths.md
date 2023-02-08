@@ -74,3 +74,8 @@ https://www.youtube.com/watch?v=obWXjtg0L64
 - Each round inspects $|E|$ edges.
 - Relaxing an edge is $O(1)$.
 - Therefore, the complexity is $O(|V||E|)$.
+
+#### Negative Weight Cycles
+A negative weight cycle is a cycle in a graph where the total weight is negative. For example,  consider c -> b -> d -> c on this graph. 
+![](Pasted%20image%2020230208141028.png)
+The Bellman Ford algorithm, unlike some other similar algorithms, is not thwarted by negative weight cycles. Due to its finite amount of iterations, the algorithm will always halt, and if an estimated weight changes on the final interation then it can only be because of a negative weight cycle.
