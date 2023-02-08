@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7673316aa8039e7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Systems Architecture (25212)/Caches.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md",
+                "file": "Systems Architecture (25212)/Caches.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md",
+                "file": "Systems Architecture (25212)/Caches.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md"
+                "file": "Systems Architecture (25212)/Caches.md"
               }
             }
           },
@@ -156,10 +169,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5c8fe4bf91308c11",
+  "active": "7673316aa8039e7b",
   "lastOpenFiles": [
-    "Introduction to Visual Computing (27112)/Index.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
+    "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 1 (23311)/Summary.md",
     "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
