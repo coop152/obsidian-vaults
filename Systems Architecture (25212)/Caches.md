@@ -41,3 +41,8 @@ Common classifications:
 - Compulsory misses: The data wasn't used previously.
 - Capacity misses: The cache is full, and more space is needed.
 - Conflict misses: The architecture of the cache limits the tags that may be stored.
+	- These don't occur in fully associative caches
+	- They occur frequently in direct mapped caches
+Every miss imposes a performance penalty.
+- A fully associative cache is slower but misses less often
+- A direct mapped cache is faster but it misses more often

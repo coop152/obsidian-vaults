@@ -171,6 +171,8 @@
   },
   "active": "7673316aa8039e7b",
   "lastOpenFiles": [
+    "Systems Architecture (25212)/Interconnection and Buses.md",
+    "Systems Architecture (25212)/Caches.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 1 (23311)/Summary.md",
@@ -178,8 +180,6 @@
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Week 1.md",
-    "README.md",
-    "Software Engineering 2 (23412)/Index.md",
-    "Software Engineering 2 (23412)/Designing a UI.md"
+    "README.md"
   ]
 }
