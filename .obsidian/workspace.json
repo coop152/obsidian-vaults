@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
               }
             }
           },
@@ -171,15 +171,15 @@
   },
   "active": "7673316aa8039e7b",
   "lastOpenFiles": [
-    "Systems Architecture (25212)/Interconnection and Buses.md",
+    "Algorithms and Data Structures (26120)/Index.md",
     "Systems Architecture (25212)/Caches.md",
+    "Systems Architecture (25212)/Interconnection and Buses.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 1 (23311)/Summary.md",
     "Software Engineering 1 (23311)/Software Design Patterns.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
-    "Introduction to Visual Computing (27112)/Week 1.md",
-    "README.md"
+    "Introduction to Visual Computing (27112)/Week 1.md"
   ]
 }
