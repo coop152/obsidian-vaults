@@ -36,7 +36,7 @@ def GetPath(pred, u):
 ## Shortest Paths in Weighted Graphs
 Similar problem, but concerned with the total weight along the path as opposed to the number of nodes.
 
-## Representing a Weighted Graph
+#### Representing a Weighted Graph
 ![](Pasted%20image%2020230208125159.png)
 Similar to an adjacency matrix, with weights instead of boolean true/false values. If two nodes are not connected, the weight is said to be $\infty$.
 ![](Pasted%20image%2020230208125344.png)
@@ -53,3 +53,14 @@ In the context of this algorithm, shorten $\delta(s, v)$ to $\delta(v)$. Its alw
 1. Create estimate map, with the distance being $\infty$ for all edges but the one connecting the start node to itself, which is 0.
 2. Check every edge in the graph; if this edge can be used to get to its end node faster than the current estimate in D, then replace that estimate.
 3. Repeat step 2 $|V| - 1$ times. That is, the number of vertices in the graph minus one. (Not pictured in the pseudocode is that you can stop early when no distances are changed for a whole iteration.)
+#### Example
+https://www.youtube.com/watch?v=obWXjtg0L64
+
+#### Correctness and Complexity
+**Claim**: For each round of iteration $I$, the estimated shortest paths in $D$ with maximum length $I$ are correct.
+
+**Base case**: At the end of round 0, $D$ is precise up to length 0.
+**Assume that**: at the end of round $i$, $D$ is precise up to length $i$.
+**Show that**: At the end of round $i + 1$, $D$ is precise up to length $i + 1$.
+
+
