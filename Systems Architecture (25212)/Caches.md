@@ -34,4 +34,10 @@ SDRAM is good for big memories with burst access but it's harder to use.
 The simple view of a cache with N entries is that it can cache N completely different and unrelated items. This is called **fully associative**. However, this is expensive; each lookup requires a search of the entire tag table which is $O(n)$.
 
 #### Direct-mapped cache
-An alternative view of caching, that simplifies the implementation. Any particular item has a predetermined place that it might be cached in, which is determined by the lower bits of its address. Therefore, incoming addresses only need **one** tag comparison. Therefore, it is **lower power** and **considerably faster**.
+An alternative view of caching, that simplifies the implementation. Any particular item has a predetermined place that it might be cached in, which is determined by the lower bits of its address. Therefore, incoming addresses only need **one** tag comparison. Therefore, it is **lower power** and **considerably faster**. As a consequence, it is less flexible and more complex.
+
+## Cache misses
+Common classifications:
+- Compulsory misses: The data wasn't used previously.
+- Capacity misses: The cache is full, and more space is needed.
+- Conflict misses: The architecture of the cache limits the tags that may be stored.
