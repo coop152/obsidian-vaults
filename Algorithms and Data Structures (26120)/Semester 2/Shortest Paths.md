@@ -56,11 +56,21 @@ In the context of this algorithm, shorten $\delta(s, v)$ to $\delta(v)$. Its alw
 #### Example
 https://www.youtube.com/watch?v=obWXjtg0L64
 
-#### Correctness and Complexity
+#### Correctness
 **Claim**: For each round of iteration $I$, the estimated shortest paths in $D$ with maximum length $I$ are correct.
 
 **Base case**: At the end of round 0, $D$ is precise up to length 0.
 **Assume that**: at the end of round $i$, $D$ is precise up to length $i$.
 **Show that**: At the end of round $i + 1$, $D$ is precise up to length $i + 1$.
 
+1. It is true that the prefix of a shortest path is also a shortest path.
+2. Consider the path "$s \rightarrow P \rightarrow u \rightarrow v$", which is a shortest path from $s$ to $v$ of length $i + 1$.
+3. Therefore, "$s \rightarrow P \rightarrow u$" must be the shortest path from $s$ to $u$, of length $i$. We know that $D(u)$ is precise.
+4. Round $i + 1$ relaxes the edge $(u, v)$.
+5. Now, $D(v)$ is precise after round $i + 1$.
 
+#### Complexity
+- In the worst case, we do all $|V|$ iterations.
+- Each round inspects $|E|$ edges.
+- Relaxing an edge is $O(1)$.
+- Therefore, the complexity is $O(|V||E|)$.
