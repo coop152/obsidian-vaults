@@ -51,4 +51,5 @@ In the context of this algorithm, shorten $\delta(s, v)$ to $\delta(v)$. Its alw
 ![](Pasted%20image%2020230208130140.png)
 ![](Pasted%20image%2020230208130048.png)
 1. Create estimate map, with the distance being $\infty$ for all edges but the one connecting the start node to itself, which is 0.
-2. 
+2. Check every edge in the graph; if this edge can be used to get to its end node faster than the current estimate in D, then replace that estimate.
+3. Repeat step 2 $|V| - 1$ times. That is, the number of vertices in the graph minus one. (Not pictured in the pseudocode is that you can stop early when no distances are changed for a whole iteration.)
