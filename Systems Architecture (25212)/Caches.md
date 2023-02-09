@@ -60,4 +60,8 @@ This method of caching exploits **spatial locality**: several consecutive words 
 
 ## How to Choose?
 Any cache architecture will be a compromise. You have to choose between 
-- 
+- Size - depends on the space available
+- Expected use - more locality would benefit from a bigger cache line size
+- Associativity - higher for smaller caches
+- Power - Higher associativity leads to more activity, thus more power usage
+- A PC might also use multiple levels of cache - another thing to decide on
