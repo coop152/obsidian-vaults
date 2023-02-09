@@ -65,3 +65,5 @@ Any cache architecture will be a compromise. You have to choose between
 - Associativity - higher for smaller caches
 - Power - Higher associativity leads to more activity, thus more power usage
 - A PC might also use multiple levels of cache - another thing to decide on
+
+## 
