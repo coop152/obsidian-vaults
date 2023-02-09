@@ -46,3 +46,18 @@ Common classifications:
 Every miss imposes a performance penalty.
 - A fully associative cache is slower but misses less often
 - A direct mapped cache is faster but it misses more often
+
+## Set-associative Cache
+A compromise between fully associative and direct mapped. Like multiple direct mapped caches combined; each tag can hold more than one value.
+For example, have two half-size direct mapped caches in parallel:
+- Each item can be cached in one of two places.
+- Therefore, conflicts are reduced - a bit.
+- But cost is also increased - a bit.
+- And the speed of a cache hit is decreased - a little bit.
+- Otherwise, acts like direct mapping
+This can be extended to more sets (4-way, 8-way and onwards).
+This method of caching exploits **spatial locality**: several consecutive words will be stored in a single tag, so the effectiveness remains almost as high with a considerable reduction in the tag overhead.
+
+## How to Choose?
+Any cache architecture will be a compromise. You have to choose between 
+- 
