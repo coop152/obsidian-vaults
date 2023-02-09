@@ -66,4 +66,21 @@ Any cache architecture will be a compromise. You have to choose between
 - Power - Higher associativity leads to more activity, thus more power usage
 - A PC might also use multiple levels of cache - another thing to decide on
 
-## 
+## Cache Replacement Policy
+There's no need to pick one in direct mapped as nothing ever gets replaced. Otherwise, pick one:
+- **Round Robin** - Replace the oldest entry, with no regard for usage.
+	- Easy to implement, but can produce nasty behaviour.
+- **Least Recently Used (LRU)**: Replace the entry that hasn't been used for the longest time
+	- Difficult to implement in hardware, but has good results.
+- **Random**: Just pick an entry at random to replace.
+	- Reasonably easy to implement, and reasonably effective.
+
+## Cache Writes
+That's lots of content on reading - what about writing? Cache is a copy of the data: but a write changes the data. So what to do?
+1. **Write-through cache** - Modify the cache entry *and* the memory copy. Every write has to access slow memory.
+2. **Copy-back cache** - Only modify the cache entry. Now memory will become outdated, so it needs to be written back all at once at some point.
+
+#### Copy-back
+Only write to the cache, and allow memory to become outdated. Fast and low-power, as it avoids use of memory, but also very complicated; memory needs to be brought up to date at some point, especially in a multitasking system where cache may be frequently cleared out during process switching.
+When something is written, that cache line will be labelled "dirty" so that only changed values in the cache need to be copied back.
+The process of writing back to memory is called a **cache flush**. A flush is required for caches with virtual addresses when the operating system switches context; those addresses are all invalid for the program that is being switched to.
