@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "0e11fe0a3f143107",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Microcontrollers (22712)/Operating Modes.md",
-                "mode": "source",
-                "source": true
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microcontrollers (22712)/Operating Modes.md",
+                "file": "Introduction to Visual Computing (27112)/Shaders.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microcontrollers (22712)/Operating Modes.md",
+                "file": "Introduction to Visual Computing (27112)/Shaders.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microcontrollers (22712)/Operating Modes.md"
+                "file": "Introduction to Visual Computing (27112)/Shaders.md"
               }
             }
           },
@@ -170,10 +157,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0e11fe0a3f143107",
+  "active": "5c8fe4bf91308c11",
   "lastOpenFiles": [
-    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
     "Microcontrollers (22712)/Operating Modes.md",
+    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
     "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md",
     "Systems Architecture (25212)/Caches.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",

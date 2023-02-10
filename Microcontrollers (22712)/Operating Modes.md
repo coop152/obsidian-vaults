@@ -41,4 +41,14 @@ Arm has two aborts: **prefetch abort** and **data abort**.
 - A data abort occurs if the processor tries to transfer data to or from a memory area which is disallowed.
 
 ## How to handle aborts on the lab machines?
-When (if) you perform some kind of invalid action, the `PC` will jump to either `0x0000000C` for a prefetch abort or `0x00000010` for a data abort.
+When (if) you perform some kind of invalid action, the `PC` will jump to either `0x0000000C` for a prefetch abort or `0x00000010` for a data abort. If you want to diagnose the faults, then you'll need to put a branch to some abort handler at those locations in memory. When you enter Abort mode, the `LR` is set to the address of the faulting instruction.
+
+## How would a 'real' operating system handle an abort?
+(Copied from the notes)
+This may be quite complicated; there is not space to go into all the implications here so see your operating systems course (maybe next year). The simplest option is to abandon a particular programme; in a multitasking system this would not halt the machine as it would be able to switch to another job.
+An illegal attempt by a user to ‘fiddle’ with I/O devices will always result in that process being abandoned. However memory protection can also be used to support virtual memory systems. In a **virtual memory** system there may be no memory present at the requested address but it is possible to remap the address space (using more, specialised hardware) to put some there. This is usually known as **paging**. If this is the case then it is possible to correct the ‘fault’ indicated by the abort and rerun the instruction, this time successfully. This is why the processor must save the address of the faulting operation.
+Note that, on an ARM, recovery from a data abort involves a lot of work for the OS: it must identify the failing instruction, decode it (it may be, for example, an `LDM` which has aborted half way through), undo any side-effects (such as base address modification, which may have happened already) work out where the failing address was and swap in the relevant page. Only then can it go back and try again. It is not for the fainthearted!
+
+## Other options for memory protection
+(Copied from the notes)
+A common memory protection function is to allow parts of the memory to be read-only. Instruction space can be protected from modification in this way; this can help prevent a crashed programme from modifying its own behaviour and, possibly, doing further damage. Data is sometimes made read-only so that the OS can detect if it has been modified: the first write causes an abort, the OS notes this, enables writes and reruns the aborting instruction. The advantage is that data known to be unmodified does not need saving when that memory is recycled.
