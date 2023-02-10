@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "0e11fe0a3f143107",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Microcontrollers (22712)/Operating Modes.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 266.5,
+    "collapsed": true
   },
   "right": {
     "id": "021b36215d1525db",
@@ -98,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Microcontrollers (22712)/Operating Modes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
+                "file": "Microcontrollers (22712)/Operating Modes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Architecture (25212)/Caches.md"
+                "file": "Microcontrollers (22712)/Operating Modes.md"
               }
             }
           },
@@ -169,17 +182,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7673316aa8039e7b",
+  "active": "0e11fe0a3f143107",
   "lastOpenFiles": [
+    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
+    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md",
+    "Systems Architecture (25212)/Caches.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Index.md",
-    "Systems Architecture (25212)/Caches.md",
     "Systems Architecture (25212)/Interconnection and Buses.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 1 (23311)/Summary.md",
-    "Software Engineering 1 (23311)/Software Design Patterns.md",
-    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
-    "Introduction to Visual Computing (27112)/Matrices and Vectors.md"
+    "Software Engineering 1 (23311)/Software Design Patterns.md"
   ]
 }
