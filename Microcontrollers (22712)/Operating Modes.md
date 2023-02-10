@@ -13,8 +13,17 @@ The current mode is given by the lower five bits of the `CPSR`. To change mode, 
 | SYS          | System         | `1 1111`                  | `0x1F`                     |
 
 Note: Don't frivolously change the other bits of the `CPSR`! They are also important.
-
-## Changing Mode
+Example of changing from supervisor to user mode:
 ```arm
-MRS
+MRS r0, CPSR        ; get the current CPSR
+BIC r0, r0, #&0F    ; clear the lower 4 bits
+MSR CPSR_c, r0      ; rewrite the CPSR
+NOP                 ; may be necessary on some ARM chips
 ```
+Note that the extra `NOP` may be required on some older ARM chips due to a bug where the change was delayed.
+
+## Multiple stack pointers
+Each mode$^1$ has its own copies of `SP` and `LR` (along with the rest of the registers), so they can all have their own private stacks. It is advisable to set up the stack space and pointer for each space before using it. That means setting up the stack space for Supervisor and User initially, but the number will grow later. You only need to allocate "enough" space for the anticipated usage; for Supervisor mode, this won't be much. For user mode, it depends on the program.
+
+$1$: But how do you set User's stack at the start if Supervisor can't access `R13_USR`? Well, there exists another mode called **System** that is privileged like Supervisor, but shares registers with User. Therefore you can switch to System mode, set `R13_USR`, and then **switch back to Supervisor**.
+
