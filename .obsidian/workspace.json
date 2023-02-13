@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "right": {
     "id": "021b36215d1525db",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Shaders.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
               }
             }
           },
@@ -159,15 +158,15 @@
   },
   "active": "5c8fe4bf91308c11",
   "lastOpenFiles": [
+    "Algorithms and Data Structures (26120)/Index.md",
+    "Algorithms and Data Structures (26120)/www.menti.com.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+    "Introduction to Visual Computing (27112)/Shaders.md",
+    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Microcontrollers (22712)/Operating Modes.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
     "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md",
     "Systems Architecture (25212)/Caches.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
-    "Algorithms and Data Structures (26120)/Index.md",
-    "Systems Architecture (25212)/Interconnection and Buses.md",
-    "Introduction to Visual Computing (27112)/Shaders.md",
-    "Introduction to Visual Computing (27112)/Index.md",
-    "Software Engineering 1 (23311)/Summary.md"
+    "Systems Architecture (25212)/Interconnection and Buses.md"
   ]
 }
