@@ -20,6 +20,7 @@ To tell spring to persist this data in the database
 @Entity
 @Table(name = "venues")
 public class Venue {
+	@Id
 	private long id;
 	private String name;
 	private int capacity;
