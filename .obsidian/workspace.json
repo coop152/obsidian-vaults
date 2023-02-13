@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Software Engineering 2 (23412)/Index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6514d244a1e4259d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
+                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md"
               }
             }
           },
@@ -156,17 +169,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5c8fe4bf91308c11",
+  "active": "6514d244a1e4259d",
   "lastOpenFiles": [
+    "Software Engineering 2 (23412)/Index.md",
+    "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/www.menti.com.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Microcontrollers (22712)/Operating Modes.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
-    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md",
-    "Systems Architecture (25212)/Caches.md",
-    "Systems Architecture (25212)/Interconnection and Buses.md"
+    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md"
   ]
 }
