@@ -53,5 +53,25 @@ Default implementation provides:
 - and more
 Define queries you want as methods and spring will automagically implement them for you:
 ```java
-public interface VenueRepository
+public interface VenueRepository extends CrudRepository<Venue, Long> {
+	public Iterable<Venue> findAllByName(String name);
+	public Venue findFirstByNameOrderByNameAsc(String name);
+	//etc...
+}
+```
+Service:
+```java
+public interface VenueService {
+	public Iterable<Venue> findAll();
+}
+@Service
+public class VenueServiceImpl implements VenueService {
+	@Autowired
+	private VenueRepository venueRepository;
+
+	@Override
+	public Iterable<Venue> findAll() {
+		return venueRepository.findAll();
+	}
+}
 ```
