@@ -31,8 +31,11 @@ Operations:
 - Every node is added and removed from the priority queue **at most once**.
 The cost of relaxing, addition and extraction in the min heap priority queue is $O(\log|V|)$.
 Therefore, the complexity of Dijkstra's algorithm is $O((|E| + |V|)log|V|)$.
-
 Better than Bellman Ford, but still pretty complex; Had to explore every node.
+
+#### Correctness
+Same loop invariant argument as with Bellman Ford.
+
 ## A* Search Algorithm
 ```python
 procedure dijkstra(s):
