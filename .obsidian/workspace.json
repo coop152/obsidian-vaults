@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d22f265f8a96d9c3",
+        "id": "9d1be6393fcd06a3",
         "type": "tabs",
         "children": [
           {
-            "id": "5c8fe4bf91308c11",
+            "id": "b983cc558e793d35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software Engineering 2 (23412)/Index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6514d244a1e4259d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software Engineering 2 (23412)/Data Modelling & Persistence.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md"
               }
             }
           },
@@ -169,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6514d244a1e4259d",
+  "active": "b983cc558e793d35",
   "lastOpenFiles": [
-    "Software Engineering 2 (23412)/Index.md",
-    "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
+    "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
+    "Software Engineering 2 (23412)/Index.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/www.menti.com.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Microcontrollers (22712)/Operating Modes.md",
-    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
-    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md"
+    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md"
   ]
 }
