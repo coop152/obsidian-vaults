@@ -20,3 +20,13 @@ These steps are roughly analogous to 3D viewing:
 Simply removes all Z-depth, reducing the scene to 2 dimensions. The z=0 plane is mapped to the display screen, and whatever geometry there is on it gets rasterised, with the z-buffer applied.
 
 ## The duality of modelling and viewing
+Instead of changing the camera's viewpoint, we can obtain the same location and orientation of the subjects by transforming them instead. This is important, because **there is no camera in CG**. There is only a set of objects that are to be rendered, and a series of transformations to be applied beforehand.
+However, the idea of a camera is familiar and convenient, so we pretend that we have a camera anyway. Graphics APIs achieve this by presenting a "camera", but in fact applying equivalent transformations to the objects themselves.
+It bears repeating:
+**There is no camera.**
+
+## Finding the "camera"s coordinate system
+Given the camera's location $E$ and it's center of view $C$, how do you calculate the coordinate system $\hat{U},\hat{F},\hat{S}$?
+1. Find the vector from the center of view to the camera: $F = E - C$
+2. Normalise $F$ to get $\hat{F}$.
+3. 
