@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4d54c8ed713aed08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md"
+                "file": "Introduction to Visual Computing (27112)/Viewing.md"
               }
             }
           },
@@ -169,10 +181,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f964165c68423940",
+  "active": "4d54c8ed713aed08",
   "lastOpenFiles": [
-    "Introduction to Visual Computing (27112)/Rendering & Rasterisation.md",
     "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+    "Introduction to Visual Computing (27112)/Rendering & Rasterisation.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
     "Microcontrollers (22712)/Operating Modes.md",
     "Microcontrollers (22712)/attachments/lab_manual.pdf",
