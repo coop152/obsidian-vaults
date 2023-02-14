@@ -39,5 +39,20 @@ More information is required; suppose we are also given a vector $V$ which gives
 6. Discard $\hat{V}$; $\hat{U}$ will be the up vector.
 7. Complete; we have found the camera's coordinate system where $\hat{F}$ is anti parallel to where the camera is facing, $\hat{U}$ points upwards (in parallel with the columns of the image) and $\hat{S}$ points sideways (in parallel with the rows of the image). This system makes no assumptions about the properties of $V$ and is guaranteed to be a valid orthogonal coordinate system.
 
-## Deriving the view transformation 
-To move the camera to this location, we would find the transformation $T_c$ that maps the XYZ axes to $\hat{S}\hat{U}\hat{F}$ (i.e. translates the origin to E and rotates such that XYZ = $\hat{S}\hat{U}\hat{F}$). However, there is no camera. 
+## Deriving the view transformation (and justifying the duality by way of example)
+There exists a transformation $T_c$ that maps the $XYZ$ axes to $\hat{S}\hat{U}\hat{F}$ (i.e. translates the origin to $E$ and rotates such that $XYZ$ = $\hat{S}\hat{U}\hat{F}$). This transformation, if applied to a camera at the origin facing down the Z-axis (i.e. the default view), would change the viewpoint to that of the camera at $E$, which is what we want to do; our aim is to render from the perspective of the camera.
+However, remember that there is no actual camera to move; we cannot change the view from the default. Instead, imagine we moved the camera $E$ and the entire scene along with it, such that the camera's view is now the same as the default view, but the objects have all moved in such a way that they have maintained their relative position to the camera. This will produce the exact same scene, but we have moved the objects instead of the camera, which we *are* allowed to do.
+To do this we will apply the inverse of $T_c$ (called $T_c^{-1}$) to all of the objects in the scene, which  will translate the $\hat{S}\hat{U}\hat{F}$ camera system to the default $XYZ$ camera system.
+To do this, we follow these steps:
+1. Translate by $-E$: "Move the camera to the origin"
+![](Pasted%20image%2020230214142850.png)
+2. Rotate such that the axes of the camera $\hat{S}\hat{U}\hat{F}$ are coincident with the world aces $XYZ$, where $\hat{F}$ is aligned with $-Z$: "rotate the camera to match the default view"
+![](Pasted%20image%2020230214143044.png)
+3. Find the composite translation: $T_c^{-1} = T_2 \cdot T_1$
+4. Apply this transformation to the objects in the scene.
+
+## Summary
+There is a duality of modelling and viewing; it says that we can achieve the same view as transforming the camera by $T$, if we instead transform the subject by $T^{-1}$.
+The default view (which you can think of as the default "camera location") is at the origin looking down the z-axis.
+Therefore, if we want to transform the view by some $T_c$, we instead transform the objects in the scene by $T_c^{-1}$.
+None of this matters to the programmer in three.js! `camera.lookAt(x, y, z)` computes this all for you, maintaining the convenient and easy-to-understand illusion of a camera.
