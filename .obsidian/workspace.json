@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9d1be6393fcd06a3",
+        "id": "45439622bac93a36",
         "type": "tabs",
         "children": [
           {
-            "id": "b983cc558e793d35",
+            "id": "3c706f1d416858b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
+                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
+                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
+                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md"
+                "file": "Microcontrollers (22712)/Assorted ARM Thingamabobs.md"
               }
             }
           },
@@ -156,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b983cc558e793d35",
+  "active": "3c706f1d416858b6",
   "lastOpenFiles": [
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+    "Microcontrollers (22712)/Operating Modes.md",
+    "Microcontrollers (22712)/attachments/lab_manual.pdf",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A* Search.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
     "Software Engineering 2 (23412)/Index.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/www.menti.com.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
-    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
-    "Microcontrollers (22712)/Operating Modes.md",
-    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md"
+    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md"
   ]
 }

@@ -53,6 +53,8 @@ AND r1, r1, #0b1111_0111    ; with the mask inverted
 EOR r1, r1, #0b0000_0010
 ```
 
+
+
 ## Other
 [LCD Command Reference](https://mil.ufl.edu/3744/docs/lcdmanual/commands.html#Cds)
 [Lab Manual](lab_manual.pdf)
