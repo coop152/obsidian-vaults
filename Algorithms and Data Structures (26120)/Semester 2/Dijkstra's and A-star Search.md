@@ -21,14 +21,17 @@ This uses a priority queue, which complicates the implementation:
 - After relaxation a node's value may **decrease**.
 - We need a "decrease key" operation
 - If we use a **MinHeap**, we can restore heap-property after pop, insertion or relaxation.
+
 Because we are adding nodes as they are discovered:
 - We won't explore unreachable nodes
 - There is no need for infinity in the queue
+
 When the algorithm is complete, the answers are in `F`. Take the predecessors of the desired destination to backtrack and find the shortest path.
 #### Complexity
 Operations:
 - Every edge is relaxed **at most one time**.
 - Every node is added and removed from the priority queue **at most once**.
+
 The cost of relaxing, addition and extraction in the min heap priority queue is $O(\log|V|)$.
 Therefore, the complexity of Dijkstra's algorithm is $O((|E| + |V|)log|V|)$.
 Better than Bellman Ford, but still pretty complex; Had to explore every node.
