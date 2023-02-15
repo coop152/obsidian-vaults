@@ -30,6 +30,7 @@ Given the camera's location $E$ and it's centre of view $C$, can you calculate t
 1. Find the vector from the centre of view to the camera: $F = E - C$
 2. Normalise $F$ to get $\hat{F}$.
 3. What now?
+
 More information is required; suppose we are also given a vector $V$ which gives the upward direction of the camera. We can't just normalise this and use it as $\hat{U}$, as there is no guarantee that its orthogonal to $\hat{F}$, and if it weren't then the coordinate system would be invalid. Therefore, the full method is this:
 1. Find the vector from the centre of view to the camera: $F = E - C$
 2. Normalise $F$ to get $\hat{F}$.

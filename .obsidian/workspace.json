@@ -21,8 +21,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
-                "mode": "source",
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
+                "file": "Introduction to Visual Computing (27112)/Viewing.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Introduction to Visual Computing (27112)/Viewing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,15 +167,15 @@
   },
   "active": "5e7ef35bac2b23e6",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
+    "Algorithms and Data Structures (26120)/Semester 2/El Gamal Encryption.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "README.md",
     "Logic and Modelling (21111)/Linear Temporal Logic.md",
     "Logic and Modelling (21111)/Summary.md",
     "Logic and Modelling (21111)/DPLL.md",
     "Logic and Modelling (21111)/Quantified Boolean Formulae.md",
     "Logic and Modelling (21111)/Conjunctive Normal Form.md",
-    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md",
-    "Logic and Modelling (21111)/Binary Decision Data Structures.md",
-    "conflict-files-obsidian-git.md",
-    "Software Engineering 1 (23311)/Summary.md"
+    "Logic and Modelling (21111)/Polarity and The Pure Atom Rule.md"
   ]
 }
