@@ -102,3 +102,28 @@ tmp3 = tmp2 * c
 tmp4 = b * b
 tmp5 = tmp4 - tmp3
 ```
+
+## Code Optimisation
+The goal is to improve the intermediate code before code generation, thus improving performance. These optimisations can range from trivial (e.g. constant folding) to highly sophisticated (e.g. in-lining). For example, why have this instruction:
+```
+tmp1 = 4
+tmp2 = tmp1 * a
+```
+when you could have:
+```
+tmp2 = 4 * a
+```
+Modern compilers perform such a wide range of optimisations that one could argue the actual structure of a compiler is:
+![](Pasted%20image%2020230216161203.png)
+
+## Code Generation
+Map the IR into a linear list of instructions for the target machine in a symbolic form.
+- Instruction selection: match the patterns to decide which instruction(s) shall represent each IR operation.
+- Register allocation: Deduce how to place values in registers when they are in use, even though there are a limited number. This is an NP-Complete problem.
+- Instruction scheduling: Take advantage of multiple functional units. This is also an Np-Complete problem.
+Some specific properties of the target may be used to optimise the code further.
+Finally, the object code is generated alongside other information the OS needs.
+
+
+## LLVM
+An open source toolchain of modular compiler components that can be used to implement compilers for any language.
