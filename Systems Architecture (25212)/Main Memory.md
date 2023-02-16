@@ -23,7 +23,7 @@ However, the cost is high:
 - Energy per access is also increased
 - Speed reduced (by around 30%?)
 Not usually worthwhile compared to time-division multiplexing.
-FPGAs often provide this feature already/.
+FPGAs often provide this feature already.
 ## Layout implications for RAM
 Bigger memories require longer wires, so they're slower and more power-hungry. Therefore, **bigger is slower, smaller is faster**.
 The usual logical representation of RAM is quite "long and thin"; you generally imagine it as one long contiguous string of data. In reality, the physical construction of ram is closer to a square: (logical model on the right, "real" shape on the left)
