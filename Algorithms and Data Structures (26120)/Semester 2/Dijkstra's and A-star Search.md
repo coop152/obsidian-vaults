@@ -60,7 +60,7 @@ procedure relax(u):
 			D[v] = D[u] + w(u, v)
 			P[v] = u
 ```
-
+A* also cannot handle negative edges.
 #### Heuristic Admissibility and Monotonicity
 To use a heuristic it must be:
 - Admissible: It must not overestimate the true cost of reaching the destination (i.e. $h(u) \leq \delta(u, t)$)
