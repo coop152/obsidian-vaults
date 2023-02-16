@@ -69,9 +69,23 @@
         "a": 1,
         "rgb": 14701233
       }
+    },
+    {
+      "query": "path:\"Programming Languages & Paradigms\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Microcontrollers (22712)\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -81,6 +95,6 @@
   "repelStrength": 11.6666666666667,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.28829631741757805,
+  "scale": 0.3205136193141007,
   "close": false
 }
