@@ -13,10 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Programming Languages & Paradigms/Compilers/Introduction.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "393a36a5592c1912",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Programming Languages & Paradigms/Compilers/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Programming Languages & Paradigms/Compilers/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
+                "file": "Programming Languages & Paradigms/Compilers/Introduction.md"
               }
             }
           },
@@ -158,15 +166,15 @@
   },
   "active": "418a5ea20f5304a3",
   "lastOpenFiles": [
+    "Programming Languages & Paradigms/Compilers/Compilers.md",
+    "Programming Languages & Paradigms/Compilers/Introduction.md",
+    "Programming Languages & Paradigms/Index.md",
+    "Programming Languages & Paradigms/Haskell/Haskell - Input & Output.md",
+    "Programming Languages & Paradigms/Haskell/Haskell.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "README.md",
     "Systems Architecture (25212)/Index.md",
-    "Semester 1/Microarchitecture (22111)/Summary.md",
-    "Semester 1/README.md",
-    "Introduction to Visual Computing (27112)/Index.md",
-    "Microcontrollers (22712)/Index.md",
-    "www.menti.com.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
-    "Dijkstra's and A* Search.md"
+    "Semester 1/Microarchitecture (22111)/Summary.md"
   ]
 }
