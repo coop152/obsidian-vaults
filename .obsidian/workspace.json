@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "e6a9b8a3e6c46a80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Systems Architecture (25212)/Main Memory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "b1174024cdd5e55c",
             "type": "leaf",
             "state": {
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/Address Translation.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/Address Translation.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Architecture (25212)/Address Translation.md"
+                "file": "Systems Architecture (25212)/Main Memory.md"
               }
             }
           },
@@ -180,9 +193,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "077b44f123376333",
+  "active": "e6a9b8a3e6c46a80",
   "lastOpenFiles": [
     "Systems Architecture (25212)/Index.md",
+    "Systems Architecture (25212)/Main Memory.md",
     "Systems Architecture (25212)/Address Translation.md",
     "Systems Architecture (25212)/More Caches.md",
     "Systems Architecture (25212)/Caches.md",
@@ -190,7 +204,6 @@
     "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Techniques.md",
     "Systems Architecture (25212)/Interconnection and Buses.md",
     "Introduction to Visual Computing (27112)/Viewing.md",
-    "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
-    "Introduction to Visual Computing (27112)/Rendering & Rasterisation.md"
+    "Introduction to Visual Computing (27112)/Polygons & Pixels.md"
   ]
 }
