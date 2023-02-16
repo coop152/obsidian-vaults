@@ -19,12 +19,15 @@
             "id": "418a5ea20f5304a3",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Systems Architecture (25212)/Index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,17 +160,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "418a5ea20f5304a3",
+  "active": "a68e15241c38c510",
   "lastOpenFiles": [
+    "README.md",
+    "Semester 1/Microarchitecture (22111)/Summary.md",
+    "Semester 1/README.md",
+    "Systems Architecture (25212)/Index.md",
+    "Introduction to Visual Computing (27112)/Index.md",
     "Microcontrollers (22712)/Index.md",
     "www.menti.com.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
-    "Dijkstra's and A* Search.md",
-    "Systems Architecture (25212)/Address Translation.md",
-    "Systems Architecture (25212)/Main Memory.md",
-    "Systems Architecture (25212)/Index.md",
-    "Systems Architecture (25212)/More Caches.md",
-    "Systems Architecture (25212)/Caches.md"
+    "Dijkstra's and A* Search.md"
   ]
 }

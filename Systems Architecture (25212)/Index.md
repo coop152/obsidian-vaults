@@ -16,3 +16,5 @@
 - [Interconnection and Buses](Interconnection%20and%20Buses.md)
 - [Caches](Caches.md)
 - [More Caches](More%20Caches.md)
+- [Address Translation](Address%20Translation.md)
+- [Main Memory](Main%20Memory.md)

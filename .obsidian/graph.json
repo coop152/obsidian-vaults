@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"Logic and Modelling (21111)\"",
@@ -48,6 +48,27 @@
         "a": 1,
         "rgb": 5431473
       }
+    },
+    {
+      "query": "path:\"Introduction to Visual Computing (27112)\"",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:\"Systems Architecture (25212)\"",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    },
+    {
+      "query": "path:\"Software Engineering 2 (23412)\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
     }
   ],
   "collapse-display": true,
@@ -57,7 +78,7 @@
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 10.5,
+  "repelStrength": 11.6666666666667,
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 0.28829631741757805,

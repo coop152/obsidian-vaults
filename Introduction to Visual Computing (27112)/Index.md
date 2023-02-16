@@ -1,3 +1,5 @@
 - [Matrices and Vectors](Matrices%20and%20Vectors.md)
+- [Transformations & Homogeneous Coordinates](Transformations%20&%20Homogeneous%20Coordinates.md)
 - [Shaders](Shaders.md)
-- 
+- [Polygons & Pixels](Polygons%20&%20Pixels.md)
+- [Viewing](Viewing.md)
