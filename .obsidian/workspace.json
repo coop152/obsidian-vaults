@@ -4,55 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "57a72a33e7c09dcd",
+        "id": "fc587141b0622331",
         "type": "tabs",
         "children": [
           {
-            "id": "077b44f123376333",
+            "id": "a68e15241c38c510",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Architecture (25212)/Address Translation.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
-            "id": "e6a9b8a3e6c46a80",
+            "id": "418a5ea20f5304a3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b1174024cdd5e55c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Architecture (25212)/Caches.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b50bfdf88df7ebfd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Architecture (25212)/Index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -85,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#algorithm",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +106,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,9 +127,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md"
-              }
+              "state": {}
             }
           },
           {
@@ -193,17 +157,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e6a9b8a3e6c46a80",
+  "active": "418a5ea20f5304a3",
   "lastOpenFiles": [
-    "Systems Architecture (25212)/Index.md",
-    "Systems Architecture (25212)/Main Memory.md",
+    "Microcontrollers (22712)/Index.md",
+    "www.menti.com.md",
+    "Algorithms and Data Structures (26120)/Index.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+    "Dijkstra's and A* Search.md",
     "Systems Architecture (25212)/Address Translation.md",
+    "Systems Architecture (25212)/Main Memory.md",
+    "Systems Architecture (25212)/Index.md",
     "Systems Architecture (25212)/More Caches.md",
-    "Systems Architecture (25212)/Caches.md",
-    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Complexity.md",
-    "Algorithms and Data Structures (26120)/Semester 1/Algorithmic Techniques.md",
-    "Systems Architecture (25212)/Interconnection and Buses.md",
-    "Introduction to Visual Computing (27112)/Viewing.md",
-    "Introduction to Visual Computing (27112)/Polygons & Pixels.md"
+    "Systems Architecture (25212)/Caches.md"
   ]
 }
