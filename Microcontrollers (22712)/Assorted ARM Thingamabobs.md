@@ -53,6 +53,32 @@ AND r1, r1, #0b1111_0111    ; with the mask inverted
 EOR r1, r1, #0b0000_0010
 ```
 
+## Change operating mode
+
+| Abbreviation | Mode           | CPSR Code <br> (Binary) | CPSR Code <br> (Hex) |
+| ------------ | -------------- | ----------------------- | -------------------- |
+| USR          | User           | `1 0000`                | `0x10`               |
+| FIQ          | Fast Interrupt | `1 0001`                | `0x11`               |
+| IRQ          | Interrupt      | `1 0010`                | `0x12`               |
+| SVC          | Supervisor     | `1 0011`                | `0x13`               |
+| ABT          | Abort          | `1 0111`                | `0x17`               |
+| UND          | Undefined      | `1 1011`                | `0x1B`               |
+| SYS          | System         | `1 1111`                | `0x1F`               |
+
+#### Change from Supervisor to System
+```arm
+MRS r0, CPSR        ; get the current CPSR
+ORR r0, r0, #0xF    ; set the lower 4 bits
+MSR CPSR, r0        ; overwrite the CPSR
+```
+
+#### Change from Supervisor to User (and enter user code)
+```
+MOV r0, #0xD0       ; code for user mode with no interrupts
+MSR SPSR, r0        ; store in SPSR, thus changing mode when it is restored
+ADRL LR, main       ; get the user code entrypoint
+MOVS PC, LR         ; branch to user code, and restore SPSR
+```
 
 
 ## Other
