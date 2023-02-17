@@ -80,6 +80,19 @@ ADRL LR, main       ; get the user code entrypoint
 MOVS PC, LR         ; branch to user code, and restore SPSR
 ```
 
+## Jumptables
+```arm
+			CMP r0, #table_max
+			BHS out_of_range
+			ADR r1, jump_table
+			MOV LR, PC                ; points two instructions ahead
+            LDR PC, [r1, r0, LSL #2]
+
+jump_table  DEFW routine_label_1
+			DEFW routine_label_2
+			DEFW routine_label_3
+			DEFW ...
+```
 
 ## Other
 [LCD Command Reference](https://mil.ufl.edu/3744/docs/lcdmanual/commands.html#Cds)
