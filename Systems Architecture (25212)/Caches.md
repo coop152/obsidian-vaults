@@ -32,6 +32,7 @@ SRAM is good for random access, and fairly fuss-free.
 SDRAM is good for big memories with burst access but it's harder to use.
 
 ## Associativity
+#### Fully associative cache
 The simple view of a cache with N entries is that it can cache N completely different and unrelated items. This is called **fully associative**. However, this is expensive; each lookup requires a search of the entire tag table which is $O(n)$.
 
 #### Direct-mapped cache

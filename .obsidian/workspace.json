@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Systems Architecture (25212)/More Caches.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Systems Architecture (25212)/More Caches.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
+                "file": "Systems Architecture (25212)/More Caches.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
+                "file": "Systems Architecture (25212)/More Caches.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "d357f0d60f776ba3",
   "lastOpenFiles": [
+    "Systems Architecture (25212)/Caches.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Semester 2/INFO.md",
@@ -165,8 +167,6 @@
     "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
-    "Introduction to Visual Computing (27112)/Viewing.md",
-    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
-    "Introduction to Visual Computing (27112)/Index.md"
+    "Introduction to Visual Computing (27112)/Viewing.md"
   ]
 }
