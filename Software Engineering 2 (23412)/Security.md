@@ -19,7 +19,12 @@ Some privileges may be:
 General solution: never trust user input.
 #### SQL Injection
 a five year old could give a definition of sql injection
+they didnt even explain what the injection methods are :OMEGALUL:
 
-#### Cross-site Request Forgery (CRSF)
+## In Spring
+![](Pasted%20image%2020230220092814.png)
+![](Pasted%20image%2020230220092828.png)
+![](Pasted%20image%2020230220092939.png)
+![](Pasted%20image%2020230220092955.png)
 
-#### Cross-site Scripting (XSS)
+## Privacy
