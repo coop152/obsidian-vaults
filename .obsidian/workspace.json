@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fc587141b0622331",
+        "id": "cf019035c24a8cc2",
         "type": "tabs",
         "children": [
           {
-            "id": "393a36a5592c1912",
+            "id": "d357f0d60f776ba3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a0c23680334a1b20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Software Engineering 2 (23412)/Security.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software Engineering 2 (23412)/Security.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Software Engineering 2 (23412)/Security.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software Engineering 2 (23412)/Security.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
               }
             }
           },
@@ -169,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a0c23680334a1b20",
+  "active": "d357f0d60f776ba3",
   "lastOpenFiles": [
+    "Algorithms and Data Structures (26120)/Semester 2/INFO.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+    "Software Engineering 2 (23412)/Security.md",
     "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Viewing.md",
     "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Index.md",
-    "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
-    "Programming Languages & Paradigms/Compilers/Introduction.md",
-    "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
-    "Microcontrollers (22712)/Operating Modes.md"
+    "Software Engineering 2 (23412)/Data Modelling & Persistence.md"
   ]
 }
