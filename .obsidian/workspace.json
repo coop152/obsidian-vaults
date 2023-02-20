@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "a0c23680334a1b20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering 2 (23412)/Security.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+                "file": "Software Engineering 2 (23412)/Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+                "file": "Software Engineering 2 (23412)/Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md"
+                "file": "Software Engineering 2 (23412)/Security.md"
               }
             }
           },
@@ -156,12 +169,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "393a36a5592c1912",
+  "active": "a0c23680334a1b20",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Viewing.md",
-    "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
     "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
