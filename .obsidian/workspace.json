@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Viewing.md",
+                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Viewing.md",
+                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Viewing.md",
+                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Viewing.md"
+                "file": "Introduction to Visual Computing (27112)/Polygons & Pixels.md"
               }
             }
           },
@@ -158,15 +158,15 @@
   },
   "active": "393a36a5592c1912",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/Shaders.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Viewing.md",
+    "Introduction to Visual Computing (27112)/Polygons & Pixels.md",
+    "Introduction to Visual Computing (27112)/Matrices and Vectors.md",
     "Introduction to Visual Computing (27112)/Index.md",
     "Software Engineering 2 (23412)/Data Modelling & Persistence.md",
     "Programming Languages & Paradigms/Compilers/Introduction.md",
     "Microcontrollers (22712)/Assorted ARM Thingamabobs.md",
-    "Microcontrollers (22712)/Operating Modes.md",
-    "Programming Languages & Paradigms/Compilers/Compilers.md",
-    "Programming Languages & Paradigms/Compilers/The middle-end.md",
-    "Programming Languages & Paradigms/Compilers/Code Generation.md"
+    "Microcontrollers (22712)/Operating Modes.md"
   ]
 }
