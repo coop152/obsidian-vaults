@@ -29,4 +29,3 @@ $\Rightarrow x+T*F$
 $\Rightarrow x+F*F$
 $\Rightarrow x+x*F$
 $\Rightarrow x+x*x$
-
