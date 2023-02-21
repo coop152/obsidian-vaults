@@ -21,7 +21,7 @@ In this example, the light edge is the one between Bonn and Karlsruhe.
 An algorithm to find an MST of a graph.
 ```python
 procedure kruskal(G, w):
-	A = {}
+	A = {}  # set of edges in the MST
 	D = empty disjoint set
 	for each node v in G:
 		D.make_set(v)  # add set {v} to the disjoint set structure
@@ -30,4 +30,16 @@ procedure kruskal(G, w):
 		if D.find_root(u) != D.find_root(v):  # if the nodes are disconnected
 			A = A.add((u, v))  # add edge to MST, connecting the nodes
 			D.union(u, v)  # join the two sets in the disjoint set structure
+	return A
+```
+For a worked example, watch **the end of the second video in the MST week**.
+#### Complexity
+Depends on the implementation of the disjoint-set data structure. As long as path-compression and union-by-rank heuristics are used, it will be $O(|E|log|V|)$.
+## Prim's Algorithm
+Another algorithm for finding an MST.
+```python
+procedure prim(G, w, r):  # start from some arbitrary node r
+	V = G.nodes
+	for each node u in V:
+		u.key
 ```
