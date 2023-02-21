@@ -22,6 +22,12 @@ An algorithm to find an MST of a graph.
 ```python
 procedure kruskal(G, w):
 	A = {}
+	D = empty disjoint set
 	for each node v in G:
-		
+		D.make_set(v)  # add set {v} to the disjoint set structure
+	sort edges in G by weight w ascending
+	for each edge (u, v) in G:  # starting with the smallest weighted edge
+		if D.find_root(u) != D.find_root(v):  # if the nodes are disconnected
+			A = A.add((u, v))  # add edge to MST, connecting the nodes
+			D.union(u, v)  # join the two sets in the disjoint set structure
 ```
