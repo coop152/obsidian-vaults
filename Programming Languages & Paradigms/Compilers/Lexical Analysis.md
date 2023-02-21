@@ -75,3 +75,4 @@ Simple definitions:
 - $\epsilon\text{-closure}(s_i)$: the states that you can reach from state $s_i$ without needing another input symbol (i.e. where the transition symbol is $\epsilon$).
 
 ![](Pasted%20image%2020230221151713.png)
+![](Pasted%20image%2020230221151930.png)
