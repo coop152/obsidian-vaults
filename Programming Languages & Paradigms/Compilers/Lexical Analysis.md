@@ -63,3 +63,15 @@ In summary:
 - Convert the NFA to a DFA (using subset construction).
 - Minimise the DFA (using Hopcroft's algorithm).
 There exist programs that (pretty much) do this for you, such as `lex` and `flex`; these algorithms are well-known and well understood.
+
+## RE to NFA
+By following these rules, a regular expression can be translated to an NFA:
+![](Pasted%20image%2020230221151051.png)
+![](Pasted%20image%2020230221151137.png)
+## NFA to DFA
+![](Pasted%20image%2020230221151349.png)
+Simple definitions:
+- $\text{move}(s_i, a)$: the states that you can reach from state $s_i$ when the input symbol is $a$.
+- $\epsilon\text{-closure}(s_i)$: the states that you can reach from state $s_i$ without needing another input symbol (i.e. where the transition symbol is $\epsilon$).
+
+![](Pasted%20image%2020230221151713.png)
