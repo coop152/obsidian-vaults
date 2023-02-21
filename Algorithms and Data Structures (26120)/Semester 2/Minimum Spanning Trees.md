@@ -41,5 +41,17 @@ Another algorithm for finding an MST.
 procedure prim(G, w, r):  # start from some arbitrary node r
 	V = G.nodes
 	for each node u in V:
-		u.key
+		u.key = infinity
+		u.parent = None
+	r.key = 0
+	Q = priority_queue(V)  # lower key has higher priority
+	while Q is not empty:  # for all unconnected nodes
+		u = Q.dequeue()  # take the node with the lowest incoming weight
+		for each node v where w[u, v] != infinity:  # for each edge out of u
+			# if this edge weighs less than the existing connection
+			if Q.contains(v) and w[u, v] < v.key:   
+				v.parent = u
+				v.key = w[u, v]
 ```
+#### Complexity
+Depends on the implementation of the priority queue. If a fibonacci heap is used, it will be $O(|E| + |V|log|V|)$.
