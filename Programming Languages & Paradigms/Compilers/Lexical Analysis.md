@@ -58,6 +58,8 @@ With this approach, the first step of creating a lexical analyser is to create a
 - Non-Deterministic (NFA): for every state and symbol combination, there may be more than one possible transition. for example, consider the regex `(a|b)*abb`:
 ![](Pasted%20image%2020230221145924.png)
 In summary:
-- Regular expressions are formulae that describe some (regular) language.
-- Every RE can be converted into a DFA (typically by converting to an NFA then converting that NFA to a DFA)
-- DFAs can automate the construction of lexical analysers.
+- Write down a regular expression that expresses the input language.
+- Convert the regular expression to an NFA (using Thompson's construction).
+- Convert the NFA to a DFA (using subset construction).
+- Minimise the DFA (using Hopcroft's algorithm).
+There exist programs that (pretty much) do this for you, such as `lex` and `flex`; these algorithms are well-known and well understood.
