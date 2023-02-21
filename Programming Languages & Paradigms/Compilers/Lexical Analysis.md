@@ -76,3 +76,5 @@ Simple definitions:
 
 ![](Pasted%20image%2020230221151713.png)
 ![](Pasted%20image%2020230221151930.png)
+## DFA Minimisation
+![](Pasted%20image%2020230221152236.png)
