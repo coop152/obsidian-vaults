@@ -94,3 +94,10 @@ Poor language design may complicate lexical analysis. For example:
 if if then then = else else else = then
 ```
 Limitations of lexical analysis have actually served to positively influence language design, removing many cases of confusing and awkward ambiguity like were present in older languages.
+
+## Flex & Lex
+Flex is a tool for generating lexical analysers. It takes 3 inputs:
+- Regular expressions
+- Pairs of regular expressions and C code
+- auxiliary C code.
+When the input is compiled it generates a C source file as output (called `lex.yy.c`). This file contains a routine `yylex()`. After compiling the C file, the executable will isolate tokens from the input according to the regular expressions and, for each token, execute the code associated with it. The array `char yytext[]` contains the representation of a token.
