@@ -101,3 +101,4 @@ Flex is a tool for generating lexical analysers. It takes 3 inputs:
 - Pairs of regular expressions and C code
 - auxiliary C code.
 When the input is compiled it generates a C source file as output (called `lex.yy.c`). This file contains a routine `yylex()`. After compiling the C file, the executable will isolate tokens from the input according to the regular expressions and, for each token, execute the code associated with it. The array `char yytext[]` contains the representation of a token.
+![](Pasted%20image%2020230221173217.png)
