@@ -82,3 +82,15 @@ Simple definitions:
 ![](Pasted%20image%2020230221152455.png)
 ![](Pasted%20image%2020230221152645.png)
 ## Building fast scanners
+Using a table to encode the transitions is easy to understand and code, but it involves lots of memory operations, and other operations in general. Instead, you can represent the transition logic directly in your code:
+![](Pasted%20image%2020230221165847.png)
+This code:
+- Has fewer operations
+- Avoids memory interaction (which is especially important for large tables)
+- Has a lot of added complexity, which may make the code ugly and/or difficult to understand. However this is still generated automatically, so it doesn't really matter that much
+## Practical considerations
+Poor language design may complicate lexical analysis. For example:
+```PL/I
+if if then then = else else else = then
+```
+Limitations of lexical analysis have actually served to positively influence language design, removing many cases of confusing and awkward ambiguity like were present in older languages.
