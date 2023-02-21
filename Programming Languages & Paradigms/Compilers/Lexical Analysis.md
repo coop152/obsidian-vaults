@@ -81,3 +81,4 @@ Simple definitions:
 ![](Pasted%20image%2020230221164453.png)
 ![](Pasted%20image%2020230221152455.png)
 ![](Pasted%20image%2020230221152645.png)
+## Building fast scanners
