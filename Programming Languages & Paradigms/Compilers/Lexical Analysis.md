@@ -29,3 +29,35 @@ $\Rightarrow x+T*F$
 $\Rightarrow x+F*F$
 $\Rightarrow x+x*F$
 $\Rightarrow x+x*x$
+## Motivation
+Why study lexical analysis? 
+- To avoid writing lexical analysers by hand
+- To simplify the specification and implementation.
+- To understand the techniques and technologies.
+We want to know how to specify lexical patterns. Some parts of this are easy (e.g. defining operators, comments, whitespace, etc.) but some are significantly harder such as identifiers (letter followed by alphanumeric characters), numbers (integer vs floating point, multiple base literals, etc.).
+
+## Regular Expressions
+Regex patterns form a regular language. A regular language is a formula that describes a possibly infinite set of strings. For example:
+![](Pasted%20image%2020230221144602.png)
+## Building a Lexical Analyser
+You could write a lexical analyser that checks case by case, like this:
+![](Pasted%20image%2020230221144802.png)
+This has the potential to be efficient, but it requires a lot of work and will be difficult to modify.
+Instead, consider how regular expressions are evaluated:
+![](Pasted%20image%2020230221145048.png)
+These are the actions that take place in a lexical analyser. A string is evaluated against a set of states and transitions, being identified as some sort of token if it reaches a terminal state.
+Using this concept, lexical analysis can be automated.
+
+## Automating lexical analysis
+Continuing on with the transition diagram concept, we implement a transition table: a 2D table with a column for each input symbol and a row for each state. Each row gives a set of states that can be reached from that state, and each entry gives the state that follows on from the given state when the given character is read.
+![](Pasted%20image%2020230221145500.png)
+With this, creating a lexical analyser is as simple as this:
+![](Pasted%20image%2020230221145534.png)
+With this approach, the first step of creating a lexical analyser is to create a generalised transition diagram representing the desired syntax. These transition diagrams are **finite automatons**, meaning they can be either:
+- Deterministic (DFA): For every state and symbol combination, there is only one transition to another state
+- Non-Deterministic (NFA): for every state and symbol combination, there may be more than one possible transition. for example, consider the regex `(a|b)*abb`:
+![](Pasted%20image%2020230221145924.png)
+In summary:
+- Regular expressions are formulae that describe some (regular) language.
+- Every RE can be converted into a DFA (typically by converting to an NFA then converting that NFA to a DFA)
+- DFAs can automate the construction of lexical analysers.
