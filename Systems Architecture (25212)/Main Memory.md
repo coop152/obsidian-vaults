@@ -56,3 +56,7 @@ The row and column addresses are parts of the input address. When something is r
 ## Synchronous DRAM (SDRAM)
 The modern way of interfacing with DRAM. Provides a clocked wrapper ('synchronous') around the DRAM to make timing/interfacing easier.
 This provides high bandwidth burst access, but the long latency and scheduling complications remain.
+
+#### Banks
+![](Pasted%20image%2020230222114148.png)
+An SDRAM chip may contain multiple DRAM arrays, called 'Banks'. These banks operate largely independently, allowing multiple operations to interleave. The interface is still shared so operations cannot truly be done in parallel, but there is still a speed improvement.
