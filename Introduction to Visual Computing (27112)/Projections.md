@@ -61,4 +61,70 @@ $$x_p = \frac{x}{z / d}$$
 Do this again with the YZ axis to get this result:
 ![](Pasted%20image%2020230222141423.png)
 $$y_p = \frac{y}{z/d}$$
-If we express this as a matrix transformation, we get this matrix:
+So now we know that the transformation should do this:
+$$
+\begin{bmatrix}
+x \\ y \\ z \\ 1
+\end{bmatrix}
+\Rightarrow
+\begin{bmatrix}
+\frac{x}{z/d} \\
+\frac{y}{z/d} \\
+d \\
+1
+\end{bmatrix}
+$$
+
+We can apply a trick here to simplify the transformation matrix:
+$$
+\begin{bmatrix}
+\frac{x}{z/d} \\
+\frac{y}{z/d} \\
+d \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{x}{z/d} \\
+\frac{y}{z/d} \\
+\frac{z}{z/d} \\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \\
+y \\
+z \\
+z/d
+\end{bmatrix}
+$$
+The last step is possible because of normalisation; the resulting coordinate will be divided by $z/d$ in order to make $w$ equal $1$. Using this observation, we can achieve this simple transformation matrix:
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 1/d & 0 \\
+\end{bmatrix}
+$$
+### Summary
+To perform a 1-point perspective projection we can use this matrix:
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 1/d_z & 0 \\
+\end{bmatrix}
+$$
+(note that $d$ has been renamed $d_z$ to make it clear that it's a z coordinate)
+You can perform a 3-point perspective projection using this matrix (which you don't need to derive):
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+1/d_x & 1/d_y & 1/d_z & 0 \\
+\end{bmatrix}
+$$
+Where $(d_x, d_y, d_z)$ is the point where the projection plane intersects with the XYZ axis.
