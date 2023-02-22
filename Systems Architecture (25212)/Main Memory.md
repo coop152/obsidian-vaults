@@ -34,3 +34,17 @@ As it has a different function to RAM, it is only used for special use cases suc
 - Highly associative caches
 - Packet routing in networks
 - AI/ML acceleration
+## Dynamic RAM (DRAM)
+- Not completely randomly accessible.
+- Very compact, best bits/area of all kinds of 'RAM'.
+- Moderate power usage.
+- Volatile, **and** must be continuously refreshed to hold data
+- Requires a specialised manufacturing process, can not be made with regular logic gates
+- Extensively used.
+
+Note that the 'SDRAM' featured later is a kind of DRAM. The S does not stand for static!
+![](Pasted%20image%2020230222112020.png)
+![](Pasted%20image%2020230222112140.png)
+The row and column addresses are parts of the input address. When something is read from DRAM, the entire row of data is actually destroyed, but not before it's sent to the data interface. The data is sent through some latches, which save the value temporarily and allow it to be written back. 
+#### DRAM Timing
+![](Pasted%20image%2020230222112706.png)
