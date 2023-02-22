@@ -54,3 +54,4 @@ You have a set of axes, an eye point (centre of projection), and a projection pl
 ![](Pasted%20image%2020230222134954.png)
 Consider this scene when facing down each of the axis. If looking down the Y axis at the XZ plane, you see this:
 ![](Pasted%20image%2020230222135447.png)
+$$\frac{x_p}{d} = \frac{x}{z}$$
