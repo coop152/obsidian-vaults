@@ -129,4 +129,4 @@ $$
 $$
 Where $(d_x, d_y, d_z)$ is the point where the projection plane intersects with the XYZ axis.
 
-## 
+## Viewing volumes & clipping
