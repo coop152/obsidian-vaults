@@ -60,3 +60,6 @@ This provides high bandwidth burst access, but the long latency and scheduling c
 #### Banks
 ![](Pasted%20image%2020230222114148.png)
 An SDRAM chip may contain multiple DRAM arrays, called 'Banks'. These banks operate largely independently, allowing multiple operations to interleave. The interface is still shared so operations cannot truly be done in parallel, but there is still a speed improvement.
+
+#### SDRAM Timing
+![](Pasted%20image%2020230222114849.png)
