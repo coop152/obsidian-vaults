@@ -54,5 +54,11 @@ You have a set of axes, an eye point (centre of projection), and a projection pl
 ![](Pasted%20image%2020230222134954.png)
 Consider this scene when facing down each of the axis. If looking down the Y axis at the XZ plane, you see this:
 ![](Pasted%20image%2020230222135447.png)
-$$\frac{x_p}{x} = \frac{z_p}{z}$$
-$$\frac{x_p}{d} = \frac{x}{z}$$
+You can observe that the distance from the origin of $x$ and $x_p$ will have the same ratio as the distance from the origin of $z$ and $z_p/d$. Therefore, this is true:
+$$\frac{x_p}{x} = \frac{d}{z}$$
+$$x_p = \frac{dx}{z}$$
+$$x_p = \frac{x}{z / d}$$
+Do this again with the YZ axis to get this result:
+![](Pasted%20image%2020230222141423.png)
+$$y_p = \frac{y}{z/d}$$
+If we express this as a matrix transformation, we get this matrix:
