@@ -139,3 +139,6 @@ This rectangular view volume is defined by a near plane and a far plane, which a
 Perspective projection view volume:
 ![](Pasted%20image%2020230222150206.png)
 This view volume is in the shape of a frustum - imagine an infinite pyramid with its peak at the eye point, then cut off the top and bottom leaving a frustum behind. The near and far planes are parallel to the projection plane.
+
+#### Orthographic projection in three.js
+![](Pasted%20image%2020230222151912.png)
