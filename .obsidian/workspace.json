@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cf019035c24a8cc2",
+        "id": "238661ca12cb1a6f",
         "type": "tabs",
         "children": [
           {
-            "id": "d357f0d60f776ba3",
+            "id": "2c8b856fc49664d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
+                "file": "Introduction to Visual Computing (27112)/Projections.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
+                "file": "Introduction to Visual Computing (27112)/Projections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md",
+                "file": "Introduction to Visual Computing (27112)/Projections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Architecture (25212)/Main Memory.md"
+                "file": "Introduction to Visual Computing (27112)/Projections.md"
               }
             }
           },
@@ -156,17 +156,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d357f0d60f776ba3",
+  "active": "15cb789415892a8c",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/Index.md",
+    "Introduction to Visual Computing (27112)/Projections.md",
+    "Systems Architecture (25212)/Main Memory.md",
     "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
     "Programming Languages & Paradigms/Compilers/Compilers.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Algorithms and Data Structures (26120)/Semester 1/Disjoint Sets.md",
     "Algorithms and Data Structures (26120)/Index.md",
     "Systems Architecture (25212)/Index.md",
-    "Systems Architecture (25212)/Caches.md",
-    "Systems Architecture (25212)/More Caches.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
+    "Systems Architecture (25212)/Caches.md"
   ]
 }
