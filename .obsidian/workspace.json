@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Lexical Analysis.md"
+                "file": "Systems Architecture (25212)/Main Memory.md"
               }
             }
           },

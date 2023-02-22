@@ -10,9 +10,9 @@ This is in contrast to **serial access memory** (e.g. a tape reel) which has dra
 - Extensively used.
 
 Applications include:
-- Working RAM in 'small' systems (e.g. microcontrollers)
+- Main memory in 'small' systems (e.g. microcontrollers)
 - Cache memory in 'big' systems (e.g. regular computers)
-- Buffer memory in interfaces (e.g. USB, ethernet)
+- Buffer memory in interfaces (e.g. USB, Ethernet)
 - Temporary storage in hardware (e.g. FSMs)
 - And others.
 SRAM is a standard architectural component.
@@ -28,3 +28,9 @@ FPGAs often provide this feature already.
 Bigger memories require longer wires, so they're slower and more power-hungry. Therefore, **bigger is slower, smaller is faster**.
 The usual logical representation of RAM is quite "long and thin"; you generally imagine it as one long contiguous string of data. In reality, the physical construction of ram is closer to a square: (logical model on the right, "real" shape on the left)
 ![](Pasted%20image%2020230216134343.png)
+## Content Addressable Memory (CAM)
+Also known as "associative memory". In RAM, an address is the input and some data is the output. In CAM, the data is the input and the address is the output.
+As it has a different function to RAM, it is only used for special use cases such as:
+- Highly associative caches
+- Packet routing in networks
+- AI/ML acceleration
