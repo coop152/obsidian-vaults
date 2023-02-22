@@ -15,3 +15,5 @@ This page defines the Projection Transformation.
 ## Planar geometric projections
 How do we map 3D world coordinates to 2D coordinates on a screen? 
 ![](Pasted%20image%2020230222125601.png)
+There are many ways to do this, each with different properties.
+![](Pasted%20image%2020230222130149.png)
