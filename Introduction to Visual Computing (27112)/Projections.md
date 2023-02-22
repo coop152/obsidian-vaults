@@ -36,4 +36,4 @@ There are multiple types of axonometric projection to choose from:
 
 ![](Pasted%20image%2020230222131836.png)
 #### Making an oblique projection
-
+![](Pasted%20image%2020230222133027.png)
