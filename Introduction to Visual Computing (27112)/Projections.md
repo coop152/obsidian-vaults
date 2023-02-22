@@ -129,7 +129,7 @@ $$
 $$
 Where $(d_x, d_y, d_z)$ is the point where the projection plane intersects with the XYZ axis.
 
-## Viewing volumes & clipping
+## Viewing volumes
 In order to describe the field of view of the 'camera', the viewing angle of the rendered image must be limited. We can do this by defining a **3D view volume**.
 Only parts of 3D objects which lie inside the view volume are displayed - objects outside are **clipped**.
 The shape of the view volume depends on the kind of projection.
@@ -142,3 +142,26 @@ This view volume is in the shape of a frustum - imagine an infinite pyramid with
 
 #### Orthographic projection in three.js
 ![](Pasted%20image%2020230222151912.png)
+#### Perspective projection in three.js
+![](Pasted%20image%2020230222152721.png)
+
+## Projection normalisation
+When we perform projection, we completely destroy the depth information from the scene. For example, consider the result a 1-point perspective projection:
+$$
+\begin{bmatrix}
+\frac{x}{z/d} \\
+\frac{y}{z/d} \\
+d \\
+1
+\end{bmatrix}
+$$
+The depth of any point is a shared constant. This is a problem; we want to keep the depth information so that we can perform hidden surface removal. We can solve this problem using **projection normalisation**.
+Suppose we have some perspective transformation expressed in terms of a frustrum $F$ and a matrix $M$.
+It can be shown that we can derive a new transformation matrix $PN$, based on $M$, that distorts $F$ into a cube.
+We transform our model by $PN$ and then take an orthographic projection.
+This produces exactly the same result as performing the original transformation $M$, but with depth values preserved.
+![](Pasted%20image%2020230222153710.png)
+
+## Clipping
+Clipping is the process of removing geometry that falls outside of the viewing area.
+![](Pasted%20image%2020230222153809.png)
