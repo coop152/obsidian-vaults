@@ -132,3 +132,10 @@ Where $(d_x, d_y, d_z)$ is the point where the projection plane intersects with 
 ## Viewing volumes & clipping
 In order to describe the field of view of the 'camera', the viewing angle of the rendered image must be limited. We can do this by defining a **3D view volume**.
 Only parts of 3D objects which lie inside the view volume are displayed - objects outside are **clipped**.
+The shape of the view volume depends on the kind of projection.
+Parallel projection view volume:
+![](Pasted%20image%2020230222145911.png)
+This rectangular view volume is defined by a near plane and a far plane, which are parallel to the projection plane.
+Perspective projection view volume:
+![](Pasted%20image%2020230222150206.png)
+This view volume is in the shape of a frustum - imagine an infinite pyramid with its peak at the eye point, then cut off the top and bottom leaving a frustum behind. The near and far planes are parallel to the projection plane.
