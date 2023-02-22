@@ -52,3 +52,7 @@ The row and column addresses are parts of the input address. When something is r
 - The easiest way to exploit this 'feature' is using burst access (i.e. reading from consecutive addresses). This depends on the address bits being allocated appropriately.
 - Burst access is appropriate for much code behaviour. Most of the time, instructions will be fetched in a continuous stream.
 - Burst access is also excellent for filling cache lines.
+
+## Synchronous DRAM (SDRAM)
+The modern way of interfacing with DRAM. Provides a clocked wrapper ('synchronous') around the DRAM to make timing/interfacing easier.
+This provides high bandwidth burst access, but the long latency and scheduling complications remain.
