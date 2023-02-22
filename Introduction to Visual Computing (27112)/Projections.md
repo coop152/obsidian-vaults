@@ -39,4 +39,18 @@ There are multiple types of axonometric projection to choose from:
 ![](Pasted%20image%2020230222133027.png)
 (making matrices for axonometric or oblique projections isnt examined.)
 
-## Perspective projections
+## Perspective projection
+In a perspective projection, the lines between 3D points and their 2D projections are **not** parallel. Instead of a projector line, there is a centre of projection (or an "eye point"); the lines between 3D points and their 2D projections must meet at this eye point, which is behind the projection plane. In this kind of projection, distant objects appear to converge toward a vanishing point, and lines of an object that are truly parallel may not appear to be.
+![](Pasted%20image%2020230222134141.png)
+![](Pasted%20image%2020230222134323.png)
+There are three kinds of perspective projection:
+- **1-point perspective**: The projection plane is parallel to two of the axes (i.e. the 'camera' is looking 'straight at' the scene). This projection will have 1 vanishing point.
+- **2-point perspective**: The projection plane is parallel to one of the axes. This projection will have 2 vanishing points.
+- **3-point perspective**: The projection plane is parallel to none of the axes. This projection will have 3 vanishing points.
+
+![](Pasted%20image%2020230222134553.png)
+#### Making a 1-point perspective projection
+You have a set of axes, an eye point (centre of projection), and a projection plane. To project a point onto the projection plane, you need to trace a line from the eye point to the point and find the point $(x_p, y_p, z_p)$ where this line intersects with the projection plane. But how do you accomplish this?
+![](Pasted%20image%2020230222134954.png)
+Consider this scene when facing down each of the axis. If looking down the Y axis at the XZ plane, you see this:
+![](Pasted%20image%2020230222135447.png)
