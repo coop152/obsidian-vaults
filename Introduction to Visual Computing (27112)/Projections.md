@@ -130,3 +130,5 @@ $$
 Where $(d_x, d_y, d_z)$ is the point where the projection plane intersects with the XYZ axis.
 
 ## Viewing volumes & clipping
+In order to describe the field of view of the 'camera', the viewing angle of the rendered image must be limited. We can do this by defining a **3D view volume**.
+Only parts of 3D objects which lie inside the view volume are displayed - objects outside are **clipped**.
