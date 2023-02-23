@@ -55,7 +55,7 @@ This fills things in, but all depth is completely lost. Here is how the ambient 
 ![](Pasted%20image%2020230223163653.png)
 #### Directional Lighting
 ![](Pasted%20image%2020230223163855.png)
-In order to provide a greater sense of depth and shape, we need to factor in the influence of angle and distance. Intuitively, you can see that objects farther from a light source will be less illuminated by it, and objects at a sharper angle to a light source will also be less illuminated.
+In order to provide a greater sense of depth and shape, we need to factor in the influence of angle and distance. Intuitively, you can see that objects at a sharper angle to a light source will be less illuminated. How to model this?
 ![](Pasted%20image%2020230223164106.png)
 Take these variables regarding the position of an object relative to a light source. We can use Lambert's Law:
 $I_p$ = intensity of light source
@@ -64,7 +64,7 @@ $$ I_e = I_p\cos{\theta}$$
 #### Diffuse reflectivity
 We describe the diffuse reflectivity of a surface by assigning it a value $k_d$.
 This number is the **diffuse reflection coefficient**, $0 \leq k_d \leq 1$.
-The amount of diffusely reflected light is:
+By Lambert's Law, the amount of diffusely reflected light is:
 $I_{\text{diffuse}} = I_pk_d\cos{\theta}$
 or in terms of vectors:
 $I_{\text{diffuse}} = I_pk_d(\hat{N} \cdot \hat{L})$
@@ -76,3 +76,4 @@ $$I = k_aI_a + I_pk_d(\hat{N} \cdot \hat{L})$$
 ![](Pasted%20image%2020230223165056.png)
 This adds a sense of depth that the purely ambient model lacked. Here is how the diffuse reflection coefficient affects the lighting:
 ![](Pasted%20image%2020230223165230.png)
+#### Light source distance
