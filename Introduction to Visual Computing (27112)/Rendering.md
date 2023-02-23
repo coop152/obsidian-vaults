@@ -41,4 +41,33 @@ Most surfaces actually exhibit a mixture of diffuse and specular reflections. Mo
 ## Developing a local illumination model
 #### Ambient Illumination
 ![](Pasted%20image%2020230223161626.png)
-When a light source emits a ray inside a room, 
+When a light source emits a ray inside a room, it bounces around and illuminates more than just the first place it touched. This changes the ambient brightness and colour of the room. This can be defined by these rules:
+- If the monochrome intensity of ambient light is $I_a$
+- Amount of ambient light diffusely reflected from a surface is $I_{\text{ambient}} = k_aI_a$.
+- $k_a$ is the ambient reflection coefficient of the surface. $0 \leq k_a \leq 1$.
+
+So our first model for reflections off a surface is this:
+$I$ = ambient light
+$$I = k_aI_a$$
+![](Pasted%20image%2020230223163548.png)
+This fills things in, but all depth is completely lost. Here is how the ambient reflection coefficient affects the lighting:
+![](Pasted%20image%2020230223163653.png)
+#### Directional Lighting
+![](Pasted%20image%2020230223163855.png)
+In order to provide a greater sense of depth and shape, we need to factor in the influence of angle and distance. Intuitively, you can see that objects farther from a light source will be less illuminated by it, and objects at a sharper angle to a light source will also be less illuminated.
+![](Pasted%20image%2020230223164106.png)
+Take these variables regarding the position of an object relative to a light source. We can use Lambert's Law:
+$I_p$ = intensity of light source
+$I_e$ = effective intensity received
+$$ I_e = I_p\cos{\theta}$$
+#### Diffuse reflectivity
+We describe the diffuse reflectivity of a surface by assigning it a value $k_d$.
+This number is the **diffuse reflection coefficient**, $0 \leq k_d \leq 1$.
+The amount of diffusely reflected light is:
+$I_{\text{diffuse}} = I_pk_d\cos{\theta}$
+or in terms of vectors:
+$I_{\text{diffuse}} = I_pk_d(\hat{N} \cdot \hat{L})$
+
+So our second version of our local illumination model is:
+$I$ = ambient + diffuse light
+$$I = k_aI_a + I_pk_d(\hat{N} \cdot \hat{L})$$
