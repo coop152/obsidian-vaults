@@ -46,7 +46,7 @@ When a light source emits a ray inside a room, it bounces around and illuminates
 - Amount of ambient light diffusely reflected from a surface is $I_{\text{ambient}} = k_aI_a$.
 - $k_a$ is the ambient reflection coefficient of the surface. $0 \leq k_a \leq 1$.
 
-So our first model for reflections off a surface is this:
+So the first model for reflections off a surface is this:
 $I$ = ambient light
 $$I = k_aI_a$$
 ![](Pasted%20image%2020230223163548.png)
@@ -68,7 +68,7 @@ $I_{\text{diffuse}} = I_pk_d\cos{\theta}$
 or in terms of vectors:
 $I_{\text{diffuse}} = I_pk_d(\hat{N} \cdot \hat{L})$
 
-So our second version of our local illumination model is:
+So the second version of our local illumination model is:
 $I$ = ambient + diffuse light
 $$I = k_aI_a + I_pk_d(\hat{N} \cdot \hat{L})$$
 ![](Pasted%20image%2020230223165011.png)
@@ -83,7 +83,7 @@ Note that in certain situations $d^2$ changes very rapidly, so instead we use th
 $$I_e = \frac{I_p}{k_c + k_ld + k_qd^2}$$
 We then tune the three coefficients $k_c, k_l, k_q$ for the best results.
 
-So our third version of our local illumination model is:
+So the third version of our local illumination model is:
 $I$ = ambient + distance(diffuse)
 $$I = k_aI_a + \frac{I_p}{d'}k_d(\hat{N} \cdot \hat{L})$$
 where $d' = k_c + k_ld + k_qd^2$
@@ -105,3 +105,55 @@ Or, using vectors:
 $I_\text{specular} = I_p(\hat{R} \cdot \hat{V})^n$
 This produces results like this:
 ![](Pasted%20image%2020230223172428.png)
+Increasing the power has the effect of "narrowing" the light.
+
+#### Incident angle and wavelength
+So we've found some function that represent's $\phi$'s influence on the specular reflections, but we still need to find functions for $\theta$ and $\lambda$.
+![](Pasted%20image%2020230223173044.png)
+To show why this isn't a simple thing to do, observe this diagram showing the reflectivity of real polished copper:
+![](Pasted%20image%2020230223173123.png)
+And here is a diagram of the reflectance of aluminium:
+![](Pasted%20image%2020230223173231.png)
+For our purposes, we will be assuming that the angle of incidence and the wavelength of the incident light affect the illumination of the surface independently. This isn't actually true, but it would make things much harder so let's pretend.
+Consider this diagram:
+![](Pasted%20image%2020230223173519.png)
+As a refresher:
+$\hat{L}$ = The (inverse of the) vector giving the direction of the incident light
+$\hat{N}$ = The surface normal of the surface being lit
+$\hat{R}$ = The vector giving the direction of maximum specular reflection
+$\phi$ = The angle between the surface normal and the incident light and/or $\hat{R}$
+And the new symbols are:
+$\hat{T}$ = The vector giving the direction of the transmitted light
+$\theta$ = The angle between (the inverse of) the surface normal and the transmitted light.
+With these defined, we can use **Fresnel's equation**:
+![](Pasted%20image%2020230223174050.png)
+where:
+- $F$ is the fraction of light reflected
+- $\sin\theta = \frac{\sin\phi}{\mu}$ 
+- $\mu$ is the refractive index of the material in air (which depends on $\lambda$)
+
+(You don't have to remember this, obviously.)
+Now clearly this is a lot of computation, so another approximation can be enacted:
+![](Pasted%20image%2020230223174336.png)
+This degrades the visual appearance, but provides a great improvement in performance.
+
+So the fourth version of our local illumination model is:
+$I$ = ambient + distance(diffuse + specular)
+$$I = k_aI_a + \frac{I_p}{d'}[k_d(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
+where $d' = k_c + k_ld + k_qd^2$
+
+This model produces results like this:
+![](Pasted%20image%2020230223174800.png)
+![](Pasted%20image%2020230223174843.png)
+Here is how changing the coefficients for specular and diffuse illumination looks:
+![](Pasted%20image%2020230223174858.png)
+#### Incorporating colour
+We have only considered monochrome intensity so far. How would we express colour?
+Its actually quite easy - we express coloured light as a triple of RGB intensities $I_{pR}, I_{pG}, I_{pB}$. Therefore, we express surface colour using 6 coefficients $k_{aR}, k_{aG}, k_{aB}$ and $k_{dR}, k_{dG}, k_{dB}$.
+
+So the final colour version of our local illumination model is:
+$I$ = ambient + distance(diffuse + specular)
+$$I_R = k_{aR}I_{aR} + \frac{I_{pR}}{d'}[k_{dR}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
+$$I_G = k_{aG}I_{aG} + \frac{I_{pG}}{d'}[k_{dG}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
+$$I_B = k_{aB}I_{aB} + \frac{I_{pB}}{d'}[k_{dB}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
+where $d' = k_c + k_ld + k_qd^2$
