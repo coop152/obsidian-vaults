@@ -151,9 +151,17 @@ Here is how changing the coefficients for specular and diffuse illumination look
 We have only considered monochrome intensity so far. How would we express colour?
 Its actually quite easy - we express coloured light as a triple of RGB intensities $I_{pR}, I_{pG}, I_{pB}$. Therefore, we express surface colour using 6 coefficients $k_{aR}, k_{aG}, k_{aB}$ and $k_{dR}, k_{dG}, k_{dB}$.
 
-So the final colour version of our local illumination model is:
+So the fifth colour version of our local illumination model is:
 $I$ = ambient + distance(diffuse + specular)
 $$I_R = k_{aR}I_{aR} + \frac{I_{pR}}{d'}[k_{dR}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
 $$I_G = k_{aG}I_{aG} + \frac{I_{pG}}{d'}[k_{dG}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
 $$I_B = k_{aB}I_{aB} + \frac{I_{pB}}{d'}[k_{dB}(\hat{N} \cdot \hat{L}) + k_s(\hat{R} \cdot \hat{V})^n]$$
 where $d' = k_c + k_ld + k_qd^2$
+
+#### Multiple Lights
+Finally, what if we have multiple lights? Easy again - Compute the illumination separately for each light and sum. For M lights:
+$$I = \text{ambient} + \sum^M_{i = 1}(\text{diffuse}_i + \text{specular}_i)$$
+Here is how that looks:
+![](Pasted%20image%2020230223175917.png)
+And some various examples of the finished model:
+![](Pasted%20image%2020230223175942.png)
