@@ -102,4 +102,6 @@ A popular approximation of this function is $F(\phi) \approx \cos^n{\phi}$, but 
 However, if we stay with this approximation we end up with this formula:
 $I_\text{specular} = I_p\cos^n\phi$
 Or, using vectors:
-$I_\text{specular} = I_p\cos^n\phi$
+$I_\text{specular} = I_p(\hat{R} \cdot \hat{V})^n$
+This produces results like this:
+![](Pasted%20image%2020230223172428.png)
