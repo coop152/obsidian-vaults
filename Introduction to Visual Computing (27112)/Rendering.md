@@ -1,4 +1,3 @@
-
 ## Illumination
 ![](Pasted%20image%2020230223160035.png)
 In a local illumination model, the lights casts directly onto individual objects and colours them. Global illumination also calculates the indirecting lighting of objects caused by light continuing to bounce after contacting a surface.
@@ -77,3 +76,30 @@ $$I = k_aI_a + I_pk_d(\hat{N} \cdot \hat{L})$$
 This adds a sense of depth that the purely ambient model lacked. Here is how the diffuse reflection coefficient affects the lighting:
 ![](Pasted%20image%2020230223165230.png)
 #### Light source distance
+You can also intuitively tell that objects further from a light source should be less lit; light intensity falls off over a distance. This is given by the inverse square law:
+After travelling $d$, original intensity $I_p$ becomes $I_e$
+$$I_e = \frac{I_p}{4\pi d^2}$$
+Note that in certain situations $d^2$ changes very rapidly, so instead we use this approximation:
+$$I_e = \frac{I_p}{k_c + k_ld + k_qd^2}$$
+We then tune the three coefficients $k_c, k_l, k_q$ for the best results.
+
+So our third version of our local illumination model is:
+$I$ = ambient + distance(diffuse)
+$$I = k_aI_a + \frac{I_p}{d'}k_d(\hat{N} \cdot \hat{L})$$
+where $d' = k_c + k_ld + k_qd^2$
+#### Specular reflections
+Our objects are now well shaded and display depth, but they all look dull and matte. Some objects are smooth, and display specularity. We would like to simulate partial specularity, as most objects are some mix of diffuse and specular. Consider the previously given definition of specular reflections:
+![](Pasted%20image%2020230223171056.png)
+![](Pasted%20image%2020230223171158.png)
+Consider these cases:
+![](Pasted%20image%2020230223171440.png)
+The observer is looking directly down the vector of max specular reflection, giving them 100% of the specular reflection.
+![](Pasted%20image%2020230223171536.png)
+If the observer moves away from the vector of max specular reflection, naturally the amount of observed specular reflections decreases. Therefore, when $\phi$ increases, $I_{\text{specular}}$ decreases.
+So the variation in the observed specular reflection is a function on $\phi$. What is this function?
+###### Phong shading
+A popular approximation of this function is $F(\phi) \approx \cos^n{\phi}$, but this approximation has no basis in reality and just happens to look quite good while being computationally tractable. The true definition of $F$ is rather complex.
+However, if we stay with this approximation we end up with this formula:
+$I_\text{specular} = I_p\cos^n\phi$
+Or, using vectors:
+$I_\text{specular} = I_p\cos^n\phi$
