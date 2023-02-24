@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Rendering.md",
+                "file": "Systems Architecture (25212)/Index.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Rendering.md",
+                "file": "Systems Architecture (25212)/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Rendering.md",
+                "file": "Systems Architecture (25212)/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Rendering.md"
+                "file": "Systems Architecture (25212)/Index.md"
               }
             }
           },
@@ -159,6 +158,7 @@
   },
   "active": "2c8b856fc49664d7",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223175942.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223175917.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174858.png",
@@ -169,10 +169,8 @@
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173519.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173231.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173123.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173044.png",
     "Introduction to Visual Computing (27112)/Projections.md",
     "Introduction to Visual Computing (27112)/Index.md",
-    "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Viewing.md",
     "Systems Architecture (25212)/Main Memory.md",
