@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
+                "file": "Systems Architecture (25212)/Main Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
+                "file": "Systems Architecture (25212)/Main Memory.md"
               }
             }
           },
@@ -158,28 +158,30 @@
   },
   "active": "b2ca218103988715",
   "lastOpenFiles": [
+    "Systems Architecture (25212)/attachments/Pasted image 20230227145715.png",
+    "Introduction to Visual Computing (27112)/Viewing.md",
+    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
+    "Introduction to Visual Computing (27112)/Shaders.md",
+    "Systems Architecture (25212)/Main Memory.md",
+    "Systems Architecture (25212)/attachments/Pasted image 20230227142644.png",
+    "Systems Architecture (25212)/attachments/Pasted image 20230227142457.png",
+    "Systems Architecture (25212)/attachments/Pasted image 20230227141803.png",
+    "Systems Architecture (25212)/attachments/Pasted image 20230227141341.png",
+    "Systems Architecture (25212)/Index.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/Index.md",
-    "Introduction to Visual Computing (27112)/Shaders.md",
     "Systems Architecture (25212)/Caches.md",
-    "Systems Architecture (25212)/Index.md",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223175942.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223175917.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174858.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174843.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174800.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174336.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223174050.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173519.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173231.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230223173123.png",
     "Introduction to Visual Computing (27112)/Projections.md",
-    "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
-    "Introduction to Visual Computing (27112)/Viewing.md",
-    "Systems Architecture (25212)/Main Memory.md",
     "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
     "Programming Languages & Paradigms/Compilers/Compilers.md",
     "Algorithms and Data Structures (26120)/Semester 1/Disjoint Sets.md"
