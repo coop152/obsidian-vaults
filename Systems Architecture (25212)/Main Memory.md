@@ -127,3 +127,9 @@ There are many types of error correction codes, but the ones covered here are **
 #### Hamming Codes
 Group up data bits in different patterns. For each group, add "check" bits which force a known parity for that group. Assuming the bit flip was only a single bit, you can find the location of the error and fix it.
 ![](Pasted%20image%2020230227145715.png)
+For longer bit sequences:
+![](Pasted%20image%2020230227150428.png)
+Note the pattern. I can't explain it in words so just look really hard at it idk
+
+Hamming codes are fairly cost effective for memory protection: The overhead shrinks as the data size increases.
+![](Pasted%20image%2020230227150941.png)
