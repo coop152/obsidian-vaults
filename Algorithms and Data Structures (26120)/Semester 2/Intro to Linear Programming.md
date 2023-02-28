@@ -25,4 +25,37 @@ $10x_b + 2x_w \leq 30$
 (and implicitly, $x_b, x_w \geq 0$)
 If you take $x_b$ and $x_w$ as the two axes of the graph, you can plot the constraints as lines, with the exclusive area (or the inclusive area, if you like) shaded in. In this graph, $x_w$ is horizontal and $x_b$ is vertical:
 ![](Pasted%20image%2020230228132143.png)
+The blue line on this graph is **the formula that you are trying to maximise**. The optimal value of the formula is the value for which the line is touching just one point of the constraints.
+
+## Standard Form
+To express this problem in standard form:
+Maximise: $5x_b + 4x_w$
+Constrained by:
+$x_b + x_w \leq 4$
+$2x_b + 10x_w \leq 30$
+$10x_b + 2x_w \leq 30$
+And: $x_b, x_w \geq 0$
+The function you are maximising is called the **Objective Function**. Another way to say "constrained by" would be "subject to", i.e. "Maximise the objective function subject to these constraints".
+
+For example, let's convert this problem to standard form:
+![](Pasted%20image%2020230228133114.png)
+Implicitly, you can tell the objective is to maximise the council's approval rating. This can be given by:
+$6x_{sr} + 3x_h + 1x_{sc}$
+As for constraints, the council has a budget of £300,000 so we must limit the amount of money spent:
+$10,000x_{sr} + 10,000x_h + 10,000x_{sc} \leq 300,000$
+which you can simplify to:
+$x_{sr} + x_h + x_{sc} \leq 30$
+The government requires they spend at least £100,000 on homelessness and social care:
+$10,000x_{h} + 10,000x_{sc} \geq 100,000$
+We have to simplify and then convert this one to use a greater than or equal to:
+$x_{h} + x_{sc} \geq 10$
+$-x_{h} + -x_{sc} \leq -10$
+And we have to say that these variables are non-negative:
+$x_{sr}, x_h, x_{sc} \geq 0$
+The final problem is this:
+Maximise $6x_{sr} + 3x_h + 1x_{sc}$
+Constraints:
+$x_{sr} + x_h + x_{sc} \leq 30$
+$-x_{h} + -x_{sc} \leq -10$
+And: $x_{sr}, x_h, x_{sc} \geq 0$
 
