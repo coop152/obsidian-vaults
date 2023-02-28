@@ -59,3 +59,8 @@ $x_{sr} + x_h + x_{sc} \leq 30$
 $-x_{h} + -x_{sc} \leq -10$
 And: $x_{sr}, x_h, x_{sc} \geq 0$
 
+Here is another example, watch the video for the full explanation:
+![](Pasted%20image%2020230228134650.png)
+
+## Matrix Representation
+A linear programming problem can also be represented as a matrix, which makes solving it
