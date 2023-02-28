@@ -63,4 +63,4 @@ Here is another example, watch the video for the full explanation:
 ![](Pasted%20image%2020230228134650.png)
 
 ## Matrix Representation
-A linear programming problem can also be represented as a matrix, which makes solving it
+A linear programming problem can also be represented as a matrix, which makes solving it 
