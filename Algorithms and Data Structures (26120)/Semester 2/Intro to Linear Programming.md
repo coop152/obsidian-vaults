@@ -24,4 +24,5 @@ $2x_b + 10x_w \leq 30$
 $10x_b + 2x_w \leq 30$
 (and implicitly, $x_b, x_w \geq 0$)
 If you take $x_b$ and $x_w$ as the two axes of the graph, you can plot the constraints as lines, with the exclusive area (or the inclusive area, if you like) shaded in. In this graph, $x_w$ is horizontal and $x_b$ is vertical:
-![](Pasted%20image%2020230228131812.png)
+![](Pasted%20image%2020230228132143.png)
+
