@@ -41,3 +41,19 @@ You can also nest RAID arrays to get hybrid systems, for example:
 - RAID 01 - a RAID 1 array of RAID 0 arrays
 - RAID 10 - a RAID 0 array of RAID 1 arrays
 
+## Connecting Disks
+Generally connected to a computer using **SATA** (Serial AT Attachment, AT as in IBM PC-AT). SATA is a serial bus interface that can carry up to 6.0Gb/s (600MB/s). A spinning platter disk can usually manage about 100 MB/s.
+You can also connect a drive using PCIe (using M.2 commonly) for even higher speeds.
+
+## Disk Caches
+The hard drive will contain an SDRAM "disk buffer" which allows the disk to save pages, act as a write buffer, etc...
+
+## SSDs (Solid State Drives)
+Non-volatile semi-conductor stores, typically using 'Flash' memory.
+Pros:
+- Robust and quiet (no moving parts)
+- Compact (e.g. flash drives, SD cards)
+- Lower latency, random access
+Cons:
+- Long term data retention is (probably) worse.
+- Finite number of write operations before the flash wears out.
