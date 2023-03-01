@@ -2,3 +2,5 @@
 - [Operating Modes](Operating%20Modes.md)
 
 - [Lab Manual](lab_manual.pdf)
+ Character set for LCD: ![](Pasted%20image%2020230228152042.png)
+ 
