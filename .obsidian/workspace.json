@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Systems Architecture (25212)/Index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ecabb1d57849b9d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Systems Architecture (25212)/Secondary Storage.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Systems Architecture (25212)/Secondary Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Systems Architecture (25212)/Secondary Storage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md"
+                "file": "Systems Architecture (25212)/Secondary Storage.md"
               }
             }
           },
@@ -156,8 +169,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b2ca218103988715",
+  "active": "ecabb1d57849b9d7",
   "lastOpenFiles": [
+    "Systems Architecture (25212)/Index.md",
+    "Systems Architecture (25212)/Secondary Storage.md",
+    "Microcontrollers (22712)/Index.md",
     "Microcontrollers (22712)/attachments/Pasted image 20230228152042.png",
     "Systems Architecture (25212)/Caches.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
@@ -177,8 +193,6 @@
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Systems Architecture (25212)/attachments/Pasted image 20230227142644.png",
-    "Systems Architecture (25212)/attachments/Pasted image 20230227142457.png",
-    "Systems Architecture (25212)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
