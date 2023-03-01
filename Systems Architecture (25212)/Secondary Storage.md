@@ -42,7 +42,7 @@ You can also nest RAID arrays to get hybrid systems, for example:
 - RAID 10 - a RAID 0 array of RAID 1 arrays
 
 ## Connecting Disks
-Generally connected to a computer using **SATA** (Serial AT Attachment, AT as in IBM PC-AT). SATA is a serial bus interface that can carry up to 6.0Gb/s (600MB/s). A spinning platter disk can usually manage about 100 MB/s.
+Generally connected to a computer using **SATA** (Serial AT Attachment, AT as in IBM PC-AT). SATA is a serial bus interface that can carry up to 6.0 Gb/s (600 MB/s). A spinning platter disk can usually manage about 100 MB/s.
 You can also connect a drive using PCIe (using M.2 commonly) for even higher speeds.
 
 ## Disk Caches
