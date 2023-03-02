@@ -4,57 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "9d85d22d813abd44",
+        "id": "4e555875f51a79a9",
         "type": "tabs",
         "children": [
           {
-            "id": "b2ca218103988715",
+            "id": "b5a712763c07df5a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Architecture (25212)/Index.md",
+                "file": "Introduction to Visual Computing (27112)/Index.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ecabb1d57849b9d7",
+            "id": "9604fb8af0dc2430",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems Architecture (25212)/Index.md",
+                "file": "Introduction to Visual Computing (27112)/Rendering.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "7b7f62a4b59e0a7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Systems Architecture (25212)/First Half Summary.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "806ef73125456d7d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.16"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems Architecture (25212)/First Half Summary.md",
+                "file": "Introduction to Visual Computing (27112)/Rendering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems Architecture (25212)/First Half Summary.md",
+                "file": "Introduction to Visual Computing (27112)/Rendering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems Architecture (25212)/First Half Summary.md"
+                "file": "Introduction to Visual Computing (27112)/Rendering.md"
               }
             }
           },
@@ -191,11 +169,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "806ef73125456d7d",
+  "active": "9604fb8af0dc2430",
   "lastOpenFiles": [
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302143845.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302143741.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302143537.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302143001.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302142636.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302142544.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302142318.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302142014.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302141928.png",
+    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302141745.png",
+    "Introduction to Visual Computing (27112)/Illumination.md",
+    "Introduction to Visual Computing (27112)/Rendering.md",
+    "Introduction to Visual Computing (27112)/Index.md",
+    "Systems Architecture (25212)/First Half Summary.md",
     "Systems Architecture (25212)/Caches.md",
     "Systems Architecture (25212)/Address Translation.md",
-    "Systems Architecture (25212)/First Half Summary.md",
     "Systems Architecture (25212)/More Caches.md",
     "Systems Architecture (25212)/Main Memory.md",
     "Systems Architecture (25212)/Interconnection and Buses.md",
@@ -205,24 +196,13 @@
     "Microcontrollers (22712)/attachments/Pasted image 20230228152042.png",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Algorithms and Data Structures (26120)/Semester 2/Intro to Linear Programming.md",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230228135356.png",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230228134650.png",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230228133114.png",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230228132143.png",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230228131812.png",
     "Algorithms and Data Structures (26120)/Index.md",
-    "Systems Architecture (25212)/attachments/Pasted image 20230227150941.png",
-    "Systems Architecture (25212)/attachments/Pasted image 20230227150428.png",
-    "Systems Architecture (25212)/attachments/Pasted image 20230227145715.png",
     "Introduction to Visual Computing (27112)/Viewing.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
-    "Systems Architecture (25212)/attachments/Pasted image 20230227142644.png",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
-    "Introduction to Visual Computing (27112)/Rendering.md",
-    "Introduction to Visual Computing (27112)/Index.md",
     "Introduction to Visual Computing (27112)/Projections.md",
     "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
     "Programming Languages & Paradigms/Compilers/Compilers.md",
