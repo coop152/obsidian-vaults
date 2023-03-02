@@ -29,3 +29,25 @@ The result is definitely smoother, but polygons on the edge are still sharp. Thi
 This implementation needs to be as optimised as possible. For each scanline we compute the colour increment between pixels instead of doing a full interpolation for every pixel:
 ![](Pasted%20image%2020230302143845.png)
 We can do this same optimisation for the interpolation between the vertices to find $C_\text{Left}$ and $C_\text{Right}$.
+## Phong (aka normal vector) interpolation
+Similar to Gouraud, but instead of interpolating the colours for each pixel we interpolate the surface normals themselves. This method requires calculating a surface normal and then computing the illumination model for every pixel.
+
+First, calculate the vertex normals in the same was as Gouraud. Now, instead of using them to calculate the vertex colours, perform this procedure:
+![](Pasted%20image%2020230302144722.png)
+For each scanline, find the average normals along the two edges of the polygon, instead of the average colour like in Gouraud. Then, interpolate between these two in the same way as with Gouraud, but again with the normals themselves. When this is done, compute the final colour using the illumination model.
+This gives results like these (compared to Gouraud):
+![](Pasted%20image%2020230302144925.png)
+Here is a final comparison between all three:
+![](Pasted%20image%2020230302145004.png)
+## Rendering performance
+Our local illumination model takes about 60 floating point operations (FLOPS) to compute the colour of one pixel. For a Gouraud-shaded triangle, it takes **180 FLOPS** to calculate the colours then about **2 FLOPS per pixel**. Phong, however, takes **60 FLOPS** for every pixel.
+
+## Texture Mapping
+One way of applying surface detail is to apply a texture to a mesh; that is, to wrap some image around the mesh. There are two kinds of texture that can be applied to a mesh:
+- Image-based - The texture is a bitmap image of some fixed size
+- Procedural - The image is generated on the fly, limiting the kind of textures that can be produced but giving "perfect" detail (i.e. no bitmap artifacts)
+
+#### Defining a Texture
+A texture is a 2D collection of pixels, just like any other image. In a texture, pixels are called **texels**. In order to map a texture onto a mesh, a coordinate system must be defined to refer to these texels:
+![](Pasted%20image%2020230302145819.png)
+Generally, the axis are called $u$ and $v$.
