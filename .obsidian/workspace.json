@@ -42,9 +42,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "806ef73125456d7d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -181,7 +191,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7b7f62a4b59e0a7f",
+  "active": "806ef73125456d7d",
   "lastOpenFiles": [
     "Systems Architecture (25212)/Caches.md",
     "Systems Architecture (25212)/Address Translation.md",
