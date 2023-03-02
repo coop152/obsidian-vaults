@@ -5,3 +5,7 @@ When you need higher bandwidth but you can't decrease the latency any further, y
 - In disks, use RAID 0
 - In processors, use a superscalar architecture (multiple components such as ALUs or FPUs acting in parallel)
 This can cost a lot (more wires, pins or space required).
+## Interleaving
+Dividing responsibilities of something between multiple of it. For example:
+- RAID 0 interleaves blocks along multiple drives
+- 
