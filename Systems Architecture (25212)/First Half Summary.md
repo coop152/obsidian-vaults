@@ -41,3 +41,13 @@ Important to present information in the original order, regardless of if it was 
 	- Whenever multiprocessors are involved
 - Synchronising parallel threads
 	- e.g. atomic operations in memory
+## Error correction
+Memory may use parity or block ECC.
+Disk blocks, network packets, etc. use CRC.
+## Profiling
+Features of an architecture are introduced to support the execution of "typical" code. There is no point optimising rare events (which costs time, money, potentially space on the chip or power usage). You optimise common features to maximise the benefit.
+An ISA includes common (and cheap) operations and excludes expensive ones - unless there's a powerful incentive.
+You might profile a program in order to find slow pieces of code; hardware may also implement features such as performance counters in order to help with this.
+## Benchmarks
+Software to profile an architecture for some specific application, generally a program meant to represent "general purposes".
+
