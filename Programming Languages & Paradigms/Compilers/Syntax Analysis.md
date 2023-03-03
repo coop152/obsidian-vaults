@@ -50,3 +50,9 @@ The **LL(1) property** says that if $A \rightarrow B$ and $A \rightarrow C$ both
 ## Bottom-up Parsing
 Given a grammar $G$, construct a parse tree for some sentence by starting from the leaves and working to the root (i.e. work from the input sentence back toward the start symbol S).
 ![](Pasted%20image%2020230303142817.png)
+What are we actually trying to find here?
+- A substring $B$ that matches the right side of a production that occurs as one step in the rightmost derivation. Informally, this substring is called a **handle**.
+- If a grammar is unambiguous, then every right-sentential form has a unique handle. So if we know these handles, we have a derivation!
+![](Pasted%20image%2020230303143323.png)
+![](Pasted%20image%2020230303143355.png)
+![](Pasted%20image%2020230303143524.png)
