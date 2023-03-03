@@ -17,3 +17,13 @@ Consider the leftmost and rightmost derivations plus the parse tree for this seq
 ![](Pasted%20image%2020230303135443.png)
 You may notice that there are two different leftmost and two different rightmost derivations. Because of this, there are also different parse trees. Assuming a standard way of traversing the parse tree, these two different derivations will evaluate to $x - (2 * y)$ and $(x - 2) * y$. This demonstrates a problem with this grammar; it is **ambiguous**.
 An ambiguous grammar is a grammar that produces more than one parse tree, leftmost derivation or rightmost derivation for some sentence. Only one needs to be true.
+## Parsing Techniques
+- Top-down parsers:
+	- Construct the top node of the tree and grow towards the leaves, trying to match the input in pre-order (depth-first).
+	- Pick some production and try to match the input; if you fail, backtrack.
+	- Essentially, we find some leftmost derivation for the input string (which we scan left to right)
+	- Some grammars are backtrack-free (known as predictive parsing).
+- Bottom-up parsers
+	- Construct the tree for an input string, beginning at the leaves and working up towards the top/root.
+	- Bottom-up parsing, using left to right scan of the input, tries to construct a rightmost derivation in reverse.
+	- Can handle a large class of grammars - used more commonly than top-down in modern compilers.
