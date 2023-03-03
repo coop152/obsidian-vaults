@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b5a712763c07df5a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Visual Computing (27112)/Index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9604fb8af0dc2430",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Visual Computing (27112)/Rendering.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "4fd90532f7891008",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Texture Mapping.md",
+                "file": "Microcontrollers (22712)/Index.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Texture Mapping.md",
+                "file": "Microcontrollers (22712)/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Texture Mapping.md",
+                "file": "Microcontrollers (22712)/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Visual Computing (27112)/Texture Mapping.md"
+                "file": "Microcontrollers (22712)/Index.md"
               }
             }
           },
@@ -181,8 +156,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4fd90532f7891008",
+  "active": "15cb789415892a8c",
   "lastOpenFiles": [
+    "Microcontrollers (22712)/attachments/lab_manual.pdf",
+    "Microcontrollers (22712)/Index.md",
+    "Introduction to Visual Computing (27112)/Texture Mapping.md",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155534.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155402.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155238.png",
@@ -193,9 +171,7 @@
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302154057.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302153816.png",
     "Introduction to Visual Computing (27112)/Index.md",
-    "Introduction to Visual Computing (27112)/Texture Mapping.md",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302153029.png",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302152957.png",
     "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/Illumination.md",
     "Systems Architecture (25212)/First Half Summary.md",
@@ -206,7 +182,6 @@
     "Systems Architecture (25212)/Interconnection and Buses.md",
     "Systems Architecture (25212)/Index.md",
     "Systems Architecture (25212)/Secondary Storage.md",
-    "Microcontrollers (22712)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Algorithms and Data Structures (26120)/Semester 2/Intro to Linear Programming.md",
     "Algorithms and Data Structures (26120)/Index.md",
