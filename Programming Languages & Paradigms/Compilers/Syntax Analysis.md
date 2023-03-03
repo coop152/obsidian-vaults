@@ -11,3 +11,9 @@ Rightmost derivation: at each step, replace the rightmost non-terminal.
 
 A parse tree is a graphical representation oof a derivation that filters out the choice regarding the replacement order.
 ![](Pasted%20image%2020230303134943.png)
+#### Derivations and Precedence
+Consider the leftmost and rightmost derivations plus the parse tree for this sequence on this grammar:
+`x - 2 * y`
+![](Pasted%20image%2020230303135443.png)
+You may notice that there are two different leftmost and two different rightmost derivations. Because of this, there are also different parse trees. Assuming a standard way of traversing the parse tree, these two different derivations will evaluate to $x - (2 * y)$ and $(x - 2) * y$. This demonstrates a problem with this grammar; it is **ambiguous**.
+An ambiguous grammar is a grammar that produces more than one parse tree, leftmost derivation or rightmost derivation for some sentence. Only one needs to be true.
