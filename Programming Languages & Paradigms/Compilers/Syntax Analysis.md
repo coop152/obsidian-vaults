@@ -27,3 +27,10 @@ An ambiguous grammar is a grammar that produces more than one parse tree, leftmo
 	- Construct the tree for an input string, beginning at the leaves and working up towards the top/root.
 	- Bottom-up parsing, using left to right scan of the input, tries to construct a rightmost derivation in reverse.
 	- Can handle a large class of grammars - used more commonly than top-down in modern compilers.
+### Top-down Parsing
+1. Begin with the starting symbol of the grammar. This is the root of the parse tree.
+2. Repeat these steps until you fully match the input string:
+	1. Find the leftmost non-terminal symbol in the current sentence (sentential form)
+	2. Select a production rule with A on its left-hand-side and substitute with the right-hand-side
+	3. Match any terminal symbols to the input
+![](Pasted%20image%2020230303140600.png)
