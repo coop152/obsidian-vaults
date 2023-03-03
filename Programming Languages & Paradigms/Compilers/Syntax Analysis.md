@@ -1,3 +1,4 @@
+
 Syntax Analysis is a part of the front-end which takes a series of tokens as input (that is, the output of lexical analysis) and derives meaningful constructs from it.
 
 ## Expressing Syntax
@@ -45,3 +46,7 @@ Look ahead in the input and use upcoming information to pick the correct rule.
 - How much lookahead is needed? In general, an arbitrarily large amount. Fortunately, most programming languages fall into subclasses of context-free grammars that can be parsed with a limited amount of lookahead.
 The **LL(1) property** says that if $A \rightarrow B$ and $A \rightarrow C$ both appear in the grammar, we need to make sure that any first terminal symbol produced by B is different from any first terminal symbol produced by C. This would allow the parser to make a correct choice with a lookahead of exactly one symbol.
 ![](Pasted%20image%2020230303142450.png)
+
+## Bottom-up Parsing
+Given a grammar $G$, construct a parse tree for some sentence by starting from the leaves and working to the root (i.e. work from the input sentence back toward the start symbol S).
+![](Pasted%20image%2020230303142817.png)
