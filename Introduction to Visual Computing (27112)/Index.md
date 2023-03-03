@@ -5,4 +5,6 @@
 - [Viewing](Viewing.md)
 - [Projections](Projections.md)
 - [Illumination](Illumination.md)
+- [Rendering](Rendering.md)
+- [Texture Mapping](Texture%20Mapping.md)
 - 

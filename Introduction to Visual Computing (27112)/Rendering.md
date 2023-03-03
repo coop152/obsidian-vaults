@@ -42,32 +42,3 @@ Here is a final comparison between all three:
 ## Rendering performance
 Our local illumination model takes about 60 floating point operations (FLOPS) to compute the colour of one pixel. For a Gouraud-shaded triangle, it takes **180 FLOPS** to calculate the colours then about **2 FLOPS per pixel**. Phong, however, takes **60 FLOPS** for every pixel.
 
-## Texture Mapping
-One way of applying surface detail is to apply a texture to a mesh; that is, to wrap some image around the mesh. There are two kinds of texture that can be applied to a mesh:
-- Image-based - The texture is a bitmap image of some fixed size
-- Procedural - The image is generated on the fly, limiting the kind of textures that can be produced but giving "perfect" detail (i.e. no bitmap artifacts)
-
-An image-based texture is a 2D collection of pixels, just like any other image. In a texture, pixels are called **texels**. In order to map a texture onto a mesh, a coordinate system must be defined to refer to these texels:
-![](Pasted%20image%2020230302145819.png)
-Generally, the axis are called $u$ and $v$. Texture Mapping is the process of mapping these UV coordinates from the texture onto the mesh.
-![](Pasted%20image%2020230302150213.png)
-In order to find the colour of some point on the polygon, that point's corresponding UV coordinate must be calculated, then the colour at that texel in the texture is taken and blended with the pixel colour.
-![](Pasted%20image%2020230302150435.png)
-The colour and coordinate interpolation is done the same way as in previous examples.
-There are some difficulties with mapping textures onto a model:
-#### Texture Seams
-![](Pasted%20image%2020230302150656.png)
-If a texture is not mapped correctly, or doesn't repeat well, the seams between one occurrence of a texture and the next may have a visible discontinuity. 
-#### Resolution mismatches
-![](Pasted%20image%2020230302150853.png)
-When the size of the texture doesn't match up with the on-screen size of the polygon, the texture needs to be scaled or transformed in some way to fit, which can pose many difficulties. There are two cases to consider:
-**When the polygon's pixel size is bigger than the texture's**
-In this case, we have to 'spread' the same number of texels out over many pixels. We can:
-1. Apply no filter
-
-Simply select the texel that the pixel maps to with no modification. This is easy, but the result will look blocky.
-![](Pasted%20image%2020230302151443.png)
-2. Bilinear Interpolation
-
-Given some pixel coordinate, map it to it's corresponding texel **keeping the fractional part** and then consider distance of this fractional texel from the actual texels that it falls into. Use linear interpolation on both axis to find an averaged colour for the pixel.
-![](Pasted%20image%2020230302151958.png)
