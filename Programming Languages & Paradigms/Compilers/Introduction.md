@@ -29,7 +29,7 @@ A *good* compiler will:
 
 ## Most common uses of compiler technology
 - Translating a high-level program to object code. By far the most popular usage.
-	- May be to binary executable code, or hardware synthesis (e.g. verilog)
+	- May be to binary executable code, or hardware synthesis (e.g. Verilog)
 - Optimisations for specific computer architectures
 - Automatic parallelisation or vectorisation
 - Performance instrumentation

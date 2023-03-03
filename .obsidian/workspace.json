@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md",
+                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microcontrollers (22712)/Index.md"
+                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md"
               }
             }
           },
@@ -156,10 +156,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "15cb789415892a8c",
+  "active": "4fd90532f7891008",
   "lastOpenFiles": [
-    "Microcontrollers (22712)/attachments/lab_manual.pdf",
+    "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
+    "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
+    "Programming Languages & Paradigms/Compilers/Introduction.md",
     "Microcontrollers (22712)/Index.md",
+    "Microcontrollers (22712)/attachments/lab_manual.pdf",
     "Introduction to Visual Computing (27112)/Texture Mapping.md",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155534.png",
     "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155402.png",
@@ -191,8 +194,6 @@
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
     "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
-    "Introduction to Visual Computing (27112)/Projections.md",
-    "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
-    "Programming Languages & Paradigms/Compilers/Compilers.md"
+    "Introduction to Visual Computing (27112)/Projections.md"
   ]
 }
