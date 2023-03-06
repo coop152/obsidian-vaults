@@ -1,4 +1,3 @@
-
 Syntax Analysis is a part of the front-end which takes a series of tokens as input (that is, the output of lexical analysis) and derives meaningful constructs from it.
 
 ## Expressing Syntax
