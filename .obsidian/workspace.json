@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4e555875f51a79a9",
+        "id": "1f36b56a7d49598e",
         "type": "tabs",
         "children": [
           {
-            "id": "4fd90532f7891008",
+            "id": "10155556f8306cdb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md"
-              }
+              "state": {}
             }
           },
           {
@@ -156,8 +148,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4fd90532f7891008",
+  "active": "10155556f8306cdb",
   "lastOpenFiles": [
+    "Software Engineering 2 (23412)/Index.md",
+    "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307125406.png",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307125353.png",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307125247.png",
@@ -168,7 +162,6 @@
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307123721.png",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307123454.png",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307122511.png",
-    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307122308.png",
     "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
     "Microcontrollers (22712)/Index.md",
     "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
@@ -178,14 +171,14 @@
     "Introduction to Visual Computing (27112)/Index.md",
     "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/Illumination.md",
-    "Systems Architecture (25212)/First Half Summary.md",
-    "Systems Architecture (25212)/Caches.md",
-    "Systems Architecture (25212)/Address Translation.md",
-    "Systems Architecture (25212)/More Caches.md",
-    "Systems Architecture (25212)/Main Memory.md",
-    "Systems Architecture (25212)/Interconnection and Buses.md",
-    "Systems Architecture (25212)/Index.md",
-    "Systems Architecture (25212)/Secondary Storage.md",
+    "System Architecture (25212)/First Half Summary.md",
+    "System Architecture (25212)/Caches.md",
+    "System Architecture (25212)/Address Translation.md",
+    "System Architecture (25212)/More Caches.md",
+    "System Architecture (25212)/Main Memory.md",
+    "System Architecture (25212)/Interconnection and Buses.md",
+    "System Architecture (25212)/Index.md",
+    "System Architecture (25212)/Secondary Storage.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Algorithms and Data Structures (26120)/Semester 2/Intro to Linear Programming.md",
     "Algorithms and Data Structures (26120)/Index.md",
@@ -193,7 +186,6 @@
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
     "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md"
+    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
   ]
 }

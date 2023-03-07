@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:\"Logic and Modelling (21111)\"",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "path:\"Systems Architecture (25212)\"",
+      "query": "path:\"System Architecture (25212)\"",
       "color": {
         "a": 1,
         "rgb": 11621088
@@ -85,12 +85,12 @@
       }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 11.6666666666667,
   "linkStrength": 1,
