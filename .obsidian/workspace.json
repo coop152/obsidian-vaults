@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Architecture (25212)/Index.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "System Architecture (25212)/Index.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "System Architecture (25212)/Index.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "System Architecture (25212)/Index.md"
+                "file": "System Architecture (25212)/Pipelining.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "10155556f8306cdb",
   "lastOpenFiles": [
+    "System Architecture (25212)/Index.md",
+    "System Architecture (25212)/Pipelining.md",
     "Software Engineering 2 (23412)/Index.md",
     "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
     "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307125406.png",
@@ -185,7 +187,6 @@
     "System Architecture (25212)/More Caches.md",
     "System Architecture (25212)/Main Memory.md",
     "System Architecture (25212)/Interconnection and Buses.md",
-    "System Architecture (25212)/Index.md",
     "System Architecture (25212)/Secondary Storage.md",
     "Algorithms and Data Structures (26120)/Semester 2/Minimum Spanning Trees.md",
     "Algorithms and Data Structures (26120)/Semester 2/Intro to Linear Programming.md",
@@ -193,7 +194,6 @@
     "Introduction to Visual Computing (27112)/Viewing.md",
     "Introduction to Visual Computing (27112)/Transformations & Homogeneous Coordinates.md",
     "Introduction to Visual Computing (27112)/Shaders.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md",
-    "Algorithms and Data Structures (26120)/Semester 2/Shortest Paths.md"
+    "Algorithms and Data Structures (26120)/Semester 2/Dijkstra's and A-star Search.md"
   ]
 }
