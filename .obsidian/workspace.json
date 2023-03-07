@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/Syntax Analysis.md"
+                "file": "Algorithms and Data Structures (26120)/Semester 2/Simplex Algorithm.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "4fd90532f7891008",
   "lastOpenFiles": [
+    "Algorithms and Data Structures (26120)/Semester 2/attachments/Pasted image 20230307114018.png",
+    "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230303143524.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230303143355.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230303143323.png",
@@ -169,12 +171,10 @@
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230303134943.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230303134732.png",
     "Microcontrollers (22712)/Index.md",
-    "Programming Languages & Paradigms/Compilers/Syntax Analysis.md",
     "Programming Languages & Paradigms/Compilers/Lexical Analysis.md",
     "Programming Languages & Paradigms/Compilers/Introduction.md",
     "Microcontrollers (22712)/attachments/lab_manual.pdf",
     "Introduction to Visual Computing (27112)/Texture Mapping.md",
-    "Introduction to Visual Computing (27112)/attachments/Pasted image 20230302155534.png",
     "Introduction to Visual Computing (27112)/Index.md",
     "Introduction to Visual Computing (27112)/Rendering.md",
     "Introduction to Visual Computing (27112)/Illumination.md",
