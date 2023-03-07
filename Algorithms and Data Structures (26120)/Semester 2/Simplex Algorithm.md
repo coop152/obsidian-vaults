@@ -5,4 +5,8 @@ Each of these formulae are inequalities, so they have a sort of "slack"; in the 
 ![](Pasted%20image%2020230307115306.png)
 Using these equalities instead of the previous inequalities gives this slack form problem:
 ![](Pasted%20image%2020230307115344.png)
-A problem is in **slack form** if all of the constraints are equalities (apart from the non-negativity constraints), and 
+A problem is in **slack form** if all of the constraints are equalities (apart from the non-negativity constraints), and each equation contains a **slack variable** which appears only in that equation and whose coefficient is 1.
+Some more terminology:
+- Slack variables are also called "basic variables"
+- The other variables are called "non-basic variables"
+- The solution where every non-basic variable is zero is called the "basic solution"
