@@ -1,3 +1,4 @@
+
 Take this example of a linear programming problem:
 ![](Pasted%20image%2020230307114018.png)
 First, we convert this into **slack form**:
@@ -10,3 +11,13 @@ Some more terminology:
 - Slack variables are also called "basic variables"
 - The other variables are called "non-basic variables"
 - The solution where every non-basic variable is zero is called the "basic solution"
+
+## Pivoting
+Now that we have our problem in slack form, we can use a technique called **pivoting**. First, add every slack variable to every equation. Continuing on from the previous example:
+![](Pasted%20image%2020230307121242.png)
+Lets also rewrite the objective function to make it match the format of the other equations:
+![](Pasted%20image%2020230307121354.png)
+We can now represent this as an augmented matrix:
+![](Pasted%20image%2020230307121445.png)
+And here is the objective function (note that the coefficient of the $z$ is omitted):
+![](Pasted%20image%2020230307121520.png)
