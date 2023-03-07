@@ -76,4 +76,20 @@ At the end of the ID cycle, the `MUL` instruction *should* have selected the val
 ## Dealing with Data Dependencies
 1. Detect dependencies in hardware and **hold the instructions** in the ID stage until the data is ready; this is known as 'pipeline stall'. This is undesirable, as it introduces bubbles and wasted cycles.
 ![](Pasted%20image%2020230307145532.png)
-2. 
+2. Detect dependencies in the compiler and attempt to **reorder instructions** to avoid conflicts. This only provides any benefit if there is something useful we can do; if not, then we have to insert `NOP`s and it's just as bad as holding the instructions back.
+![](Pasted%20image%2020230307150359.png)
+3. Implement **forwarding**.
+
+#### Forwarding
+Add **extra data paths** that account for these specific data dependency cases. With this solution, the output of EX will feed back into the input of EX, sending the data to the next instruction. This will stop any cycles from being wasted, but it will increase the complexity of the control.
+![](Pasted%20image%2020230307150525.png)
+But this still isn't a solution; this only accounts for cases where the result is ready after the EX stage. What about this?
+```arm
+LDR r1, [r2, r3]
+MUL r0, r1, r1
+```
+Now the result of the first instruction isn't ready until the MEM stage, and we can't apply the same solution because the second instruction's EX stage is already over. Therefore, the MUL will just have to wait until the preceding LDR has finished its MEM stage. We can add extra paths from MEM to EX similarly to the other solution, which introduces even more complexity into the control path. This does reduce the penalty, but there is still an unavoidable one cycle bubble.
+![](Pasted%20image%2020230307151443.png)
+With both methods of forwarding implemented, we get results like this:
+![](Pasted%20image%2020230307151610.png)
+Forwarding is an example of something that gets less effective as the pipeline gets deeper; as the distance gets bigger between dependent steps, the forwarding gets more complicated and more stalls are introduced.
