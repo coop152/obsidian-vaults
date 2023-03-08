@@ -11,5 +11,6 @@
   "useMarkdownLinks": true,
   "attachmentFolderPath": "./attachments",
   "showLineNumber": false,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "defaultViewMode": "preview"
 }

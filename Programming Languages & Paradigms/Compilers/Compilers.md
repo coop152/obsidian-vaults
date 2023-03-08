@@ -1,5 +1,5 @@
 - [Introduction](Programming%20Languages%20&%20Paradigms/Compilers/Introduction.md)
 - [Lexical Analysis](Lexical%20Analysis.md)
 - [Syntax Analysis](Syntax%20Analysis.md)
-- [The middle-end](The%20middle-end.md)
+- [The Middle-End](The%20Middle-End.md)
 - [Code Generation](Code%20Generation.md)

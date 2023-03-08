@@ -1,0 +1,2 @@
+The Middle-End is the final part of the front-end, where the user's input (now in the form of a parse tree) is converted into the intermediate representation.
+At this point, it has been determined (by syntax analysis) that the input is a valid program in the source language. 
