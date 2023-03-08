@@ -80,3 +80,59 @@ An IR should be easy to generate and manipulate, while having a high level of ab
 
 There may also be an auxiliary IR that captures properties of the code instead of the whole code; these are usually graphical.
 There is no universally correct choice for the type of IR to use; it depends on the goals of the compiler.
+
+#### Parse Tree to Abstract Syntax Tree
+Why not just use the parse tree? It contains a lot of unnecessary information:
+![](Pasted%20image%2020230308131038.png)
+Instead, let's convert it to an Abstract Syntax Tree (AST):
+1. Traverse the tree in post-order (that is, traverse the node's left child, then its right child, then the node itself.)
+2. Remove any non-terminal symbols
+
+For the previous example:
+![](Pasted%20image%2020230308131424.png)
+
+## Abstract Syntax Trees (ASTs)
+An AST is a parse tree with the non-terminal symbols removed. It is a near source-level representation; the source code can be easily generated from an AST by performing an in-order traversal, printing each node as it is visited.
+
+## Three-address code
+An umbrella term used to describe many different linear representations, where each statement is a single operator with at most three operands. For example:
+![](Pasted%20image%2020230308132151.png)
+This kind of IR is compact, makes intermediate values explicit, and resembles the instruction set of many kinds of machine.
+
+## Other N-address codes
+**Two address code** is more compact. In general, it allows statements of the form `x = x OP y` with a single operator and at most two operands. This form resembles certain instruction sets better than three-address does, but it less representative for some others.
+![](Pasted%20image%2020230308132451.png)
+**One address code** is more compact still, and resembles the instruction set of a stack machine. Is useful for environments where space is at a premium (has been used to construct bytecode interpreters for Java).
+![](Pasted%20image%2020230308132609.png)
+## Auxiliary Graph Representations
+Can be useful for analysis.
+- **Control-Flow Graph (CFG)**: models the way that the code transfers control as a result of conditional or loop statements.
+	- Node: a single basic block (=a maximal straight line of code)
+	- Edge: transfer of control between basic blocks.
+	- (Captures loops, if statements, case, goto, ...).
+- **Data Dependence Graph**: encodes the flow of data.
+	- Node: program statement
+	- Edge: connects two nodes if one uses the result of the other
+	- Useful in examining the legality of program transformations
+- **Call Graph**: shows dependencies between procedures.
+	- Useful for inter-procedural analysis.
+
+## High-level Code Optimisations
+Once the IR is in place, the compiler may try to apply some transformations in order to optimise the program. The goal is to improve the performance of the program in some way (e.g. reduce runtime, code size, power consumption, etc).
+Issues include:
+- **Legality**: The meaning of the program must be preserved.
+- **Benefit**: Must improve performance on average or common cases.
+- **Compile-time cost is justifiable**: The improvement in runtime performance is good enough to justify any worsening at compile-time (i.e. longer compile times)
+
+Finding an appropriate sequence of transofmrations is a major challenge: modern optimisers are structure into a series of passes (i.e. each optimisation is applied on top of the last).
+These transformations may improve the program at the source level (e.g. algorithm specifics), the IR level (e.g. machine independent transformations) or the target level (machine-dependent transformations).
+Typical transformations include:
+- Discover and propagate constant values 
+- Remove unreachable and/or redundant code
+- Replace a certain kind of computation with an equivalent but more efficient form
+
+#### Classifications
+![](Pasted%20image%2020230308133804.png)
+
+#### Some transformations
+![](Pasted%20image%2020230308133930.png)
