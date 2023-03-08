@@ -50,3 +50,33 @@ How do we represent the symbol table in order to maximise efficiency?
 - Hash table: The solution used by modern compilers. Use a function to map names/identifiers into integers; this is potentially $O(1)$, but it requires:
 	- An inexpensive hash function that behaves well (e.g. maps uniformly)
 	- A policy to handle collisions
+
+## Other symbol table issues
+- Choosing a good hash function is of paramount importance. This problem has had a lot of work done on it; for example, see universal hash function, Knuth's multiplicative function, etc... The theory is very important in this case!
+- Lexical scoping is a problem in most languages:
+	- Many languages introduce independent name scopes. For example, 
+		- C has global, static, local and block scopes
+		- Pascal can have nested procedure declarations
+		- C++, Java, and other OOP languages have class inheritance, nested classes, packages, namespaces, etc...
+	- At any given point, which declaration of `y` is currently being used?
+	- Multiple symbol tables must be allocated and initialised for each scope.
+	- It is by far the easiest to just have a single global namescope, but it isn't the most efficient; if you define a variable one time at the start of the program and never use it again, it will remain in the symbol table.
+
+## Intermediate Representation
+Once the code has been checked for (lexical, syntactical, and semantic) errors, it needs to be converted into a convenient intermediate representation. This representation can be used to:
+- Facilitate retargeting (compile for different target architectures)
+- Enable machine-independent code optimisations and/or aggressive code generation strategies.
+
+An IR should be easy to generate and manipulate, while having a high level of abstraction from any one target architecture and a minimal size. These decisions on how the IR is designed have a major impact on the speed and effectiveness of a compiler.
+
+#### Types of IR
+- Graphical (structural): such as a tree
+	- Close to the source code and the parse tree
+	- Node and edge structures tend to be large
+- Linear: pseudo-code for some abstract machine.
+	- The format of these kinds of IR may vary significantly
+	- Close to the target code
+- Hybrid: some combination of the above
+
+There may also be an auxiliary IR that captures properties of the code instead of the whole code; these are usually graphical.
+There is no universally correct choice for the type of IR to use; it depends on the goals of the compiler.
