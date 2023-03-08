@@ -136,3 +136,6 @@ Typical transformations include:
 
 #### Some transformations
 ![](Pasted%20image%2020230308133930.png)
+![](Pasted%20image%2020230308134143.png)
+#### Loop Unrolling
+![](Pasted%20image%2020230308134314.png)
