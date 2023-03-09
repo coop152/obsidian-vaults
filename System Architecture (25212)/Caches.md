@@ -23,6 +23,7 @@ For example:
 - $T_{miss} = 10ns$
 - $P_{miss} = 10\%$
 - $T_{ave} = 1ns + (10\% \cdot 10ns) = 2ns$
+
 If 10% of accesses miss cache, speed is halved.
 
 ## Size Trade-offs
@@ -31,6 +32,7 @@ SRAM is good for random access, and fairly fuss-free.
 SDRAM is good for big memories with burst access but it's harder to use.
 
 ## Associativity
+#### Fully associative cache
 The simple view of a cache with N entries is that it can cache N completely different and unrelated items. This is called **fully associative**. However, this is expensive; each lookup requires a search of the entire tag table which is $O(n)$.
 
 #### Direct-mapped cache
@@ -43,6 +45,7 @@ Common classifications:
 - Conflict misses: The architecture of the cache limits the tags that may be stored.
 	- These don't occur in fully associative caches
 	- They occur frequently in direct mapped caches
+
 Every miss imposes a performance penalty.
 - A fully associative cache is slower but misses less often
 - A direct mapped cache is faster but it misses more often
@@ -55,6 +58,7 @@ For example, have two half-size direct mapped caches in parallel:
 - But cost is also increased - a bit.
 - And the speed of a cache hit is decreased - a little bit.
 - Otherwise, acts like direct mapping
+
 This can be extended to more sets (4-way, 8-way and onwards).
 This method of caching exploits **spatial locality**: several consecutive words will be stored in a single tag, so the effectiveness remains almost as high with a considerable reduction in the tag overhead.
 

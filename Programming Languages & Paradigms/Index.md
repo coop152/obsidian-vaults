@@ -1,4 +1,5 @@
-- C
-- C++
-- [Haskell](Haskell.md)
+- C (Didn't make notes for this)
+- C++ (Also didn't make notes for this)
+- [Haskell](Haskell.md) 
+- [Compilers](Compilers.md)
 - Solidity

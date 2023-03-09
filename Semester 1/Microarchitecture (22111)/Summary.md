@@ -1,6 +1,6 @@
 ## Topics
 ### First half (Paul)
-1.  [x] [[Introduction]]
+1.  [x] [[Semester 1/Microarchitecture (22111)/Part 1 (Paul)/Introduction]]
 	Overview, introduction to the lab, approaches to design and the management of complexity, Stump, etc.
 2.  [ ] [[Verilog & Testing]]
     Verilog recap and new features - tasks, functions and structural Verilog. Verification, validation and testing - the testbench.

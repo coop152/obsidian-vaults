@@ -3,7 +3,7 @@
     "includeName": true,
     "pageSize": "Letter",
     "landscape": false,
-    "margin": "0",
+    "margin": "2",
     "downscalePercent": 100
   },
   "spellcheck": true,
@@ -11,5 +11,6 @@
   "useMarkdownLinks": true,
   "attachmentFolderPath": "./attachments",
   "showLineNumber": false,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "defaultViewMode": "preview"
 }

@@ -14,7 +14,7 @@
 #### Semester 2
 - [Introducing Graphs](Introducing%20Graphs.md)
 - [Shortest Paths](Shortest%20Paths.md)
-- [Dijkstra's and A* Search](Dijkstra's%20and%20A*%20Search.md)
+- [Dijkstra's and A* Search](Dijkstra's%20and%20A-star%20Search.md)
 - [Minimum Spanning Trees](Minimum%20Spanning%20Trees.md)
 - [Intro to Linear Programming](Intro%20to%20Linear%20Programming.md)
 - [Simplex Algorithm](Simplex%20Algorithm.md) (two weeks)

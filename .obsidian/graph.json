@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": false,
   "showAttachments": false,
@@ -48,6 +48,41 @@
         "a": 1,
         "rgb": 5431473
       }
+    },
+    {
+      "query": "path:\"Introduction to Visual Computing (27112)\"",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:\"System Architecture (25212)\"",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    },
+    {
+      "query": "path:\"Software Engineering 2 (23412)\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
+    },
+    {
+      "query": "path:\"Programming Languages & Paradigms\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Microcontrollers (22712)\"",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
     }
   ],
   "collapse-display": true,
@@ -55,11 +90,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 10.5,
+  "repelStrength": 11.6666666666667,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.5254696871440558,
+  "scale": 0.3205136193141007,
   "close": false
 }

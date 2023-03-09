@@ -27,6 +27,7 @@ Because we are adding nodes as they are discovered:
 - There is no need for infinity in the queue
 
 When the algorithm is complete, the answers are in `F`. Take the predecessors of the desired destination to backtrack and find the shortest path.
+Note that Dijkstra's does not work on graphs with **any** negative edges. That includes graphs with negative edges but no loops.
 #### Complexity
 Operations:
 - Every edge is relaxed **at most one time**.
@@ -59,7 +60,7 @@ procedure relax(u):
 			D[v] = D[u] + w(u, v)
 			P[v] = u
 ```
-
+A* also cannot handle negative edges.
 #### Heuristic Admissibility and Monotonicity
 To use a heuristic it must be:
 - Admissible: It must not overestimate the true cost of reaching the destination (i.e. $h(u) \leq \delta(u, t)$)
