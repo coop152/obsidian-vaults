@@ -93,3 +93,5 @@ Now the result of the first instruction isn't ready until the MEM stage, and we 
 With both methods of forwarding implemented, we get results like this:
 ![](Pasted%20image%2020230307151610.png)
 Forwarding is an example of something that gets less effective as the pipeline gets deeper; as the distance gets bigger between dependent steps, the forwarding gets more complicated and more stalls are introduced.
+A bigger example of no forwarding vs forwarding:
+![](Pasted%20image%2020230309135127.png)

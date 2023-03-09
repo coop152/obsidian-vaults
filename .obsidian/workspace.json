@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/The Middle-End.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/The Middle-End.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/The Middle-End.md",
+                "file": "System Architecture (25212)/Pipelining.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming Languages & Paradigms/Compilers/The Middle-End.md"
+                "file": "System Architecture (25212)/Pipelining.md"
               }
             }
           },
@@ -158,6 +158,8 @@
   },
   "active": "10155556f8306cdb",
   "lastOpenFiles": [
+    "System Architecture (25212)/attachments/Pasted image 20230309135127.png",
+    "Programming Languages & Paradigms/Compilers/The Middle-End.md",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308134314.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308134143.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308133930.png",
@@ -168,10 +170,8 @@
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308131424.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308131038.png",
     "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308122226.png",
-    "Programming Languages & Paradigms/Compilers/attachments/Pasted image 20230308121527.png",
     "Programming Languages & Paradigms/Compilers/Compilers.md",
     "Programming Languages & Paradigms/Index.md",
-    "Programming Languages & Paradigms/Compilers/The Middle-End.md",
     "System Architecture (25212)/Pipelining.md",
     "System Architecture (25212)/Index.md",
     "Software Engineering 2 (23412)/Index.md",
