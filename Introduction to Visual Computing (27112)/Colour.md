@@ -80,3 +80,8 @@ To do this in OpenCV, you would do this:
 We want yellow, so let's check the HSV diagram:
 ![](Pasted%20image%2020230309154511.png)
 ![](Pasted%20image%2020230309154533.png)
+
+## Colour to Greyscale
+There is no one correct way to convert from colour to greyscale; it depends on how you (or your program) wants it to look:
+![](Pasted%20image%2020230309154928.png)
+Notice that GIMP and OpenCV use weighted averages, but they use different weights.
