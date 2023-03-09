@@ -9,4 +9,4 @@
 - [Rendering](Rendering.md)
 - [Texture Mapping](Texture%20Mapping.md)
 #### Second Half (Image Processing)
-- 
+- [Point Processing](Point%20Processing.md)
