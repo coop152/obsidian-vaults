@@ -8,3 +8,5 @@ A point processing function takes an image and applies some function to each pix
 ![](Pasted%20image%2020230309144815.png)
 To negate an image, subtract the intensity (mono or colour) from the max value.
 To increase/decrease brightness, add some constant to the intensity (and clamp to the acceptable range).
+You can implement a threshold like this:
+![](Pasted%20image%2020230309145424.png)
