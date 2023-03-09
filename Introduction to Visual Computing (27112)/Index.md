@@ -1,3 +1,4 @@
+#### First Half (3D Rendering)
 - [Matrices and Vectors](Matrices%20and%20Vectors.md)
 - [Transformations & Homogeneous Coordinates](Transformations%20&%20Homogeneous%20Coordinates.md)
 - [Shaders](Shaders.md)
@@ -7,4 +8,5 @@
 - [Illumination](Illumination.md)
 - [Rendering](Rendering.md)
 - [Texture Mapping](Texture%20Mapping.md)
+#### Second Half (Image Processing)
 - 
