@@ -46,3 +46,10 @@ You can also add a hat (`^`) to an `LDMFD` (`POP`) instruction to make it restor
 			...                               ; service the interrupt
 			LDMFD SP!, {r0, r1, r2, PC}^      ; restore and return
 ```
+or with the pseudo-instructions:
+```arm
+			SUB LR, LR, #4                    ; correct return addr
+			PUSH {r0, r1, r2, LR}             ; save working registers
+			...                               ; service the interrupt
+			POP {r0, r1, r2, PC}^             ; restore and return
+```
