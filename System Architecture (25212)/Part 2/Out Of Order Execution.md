@@ -47,3 +47,39 @@ Conflicted instructions can be caused by:
 - Cache misses - An instruction has to wait for a long time for something to be retrieved from main memory
 - Structural hazards - The required resource (i.e. a functional unit) is not available
 - Data hazards - An instruction depends on the result of another instruction
+
+## More on data dependencies
+Out of order execution imposes some new types of data dependencies to preserve program semantics:
+![](Pasted%20image%2020230313111226.png)
+
+## Dynamic Scheduling
+The key idea behind dynamic scheduling is to allow instructions behind a stall to proceed; there are multiple execution units, so use them.
+![](Pasted%20image%2020230313111420.png)
+This overcomes the limitations of in-order pipelined execution.
+
+## Concrete Implementation: Scoreboard
+The scoreboard is a **centralised** hardware mechanism; instructions are executed as soon as their operands are available and there are no hazard conditions to stop them.
+The hardware dynamically constructs a dependency graph for a window of the instructions as they are issued in the regular program order.
+The scoreboard is a data structure that provides the information necessary for all pieces of the processor to work together.
+
+Out of order execution divides the Instruction Decode stage:
+1. Issue - Decode instructions, check for structural hazards
+2. Read operands - wait until there are no data hazards, then read the operands
+
+Scoreboard allows the instruction to execute whenever both of these stages can be completed, without waiting for prior instructions.
+Our implementation will use in-order issue, out-of-order execution, out-of-order commit (aka completion).
+A typical scoreboard will look like this:
+![](Pasted%20image%2020230313111929.png)
+With a pipeline like this:
+![](Pasted%20image%2020230313111954.png)
+
+#### Stages
+1. Issue (ID) - Decode the instructions and check for structural (or write after write) hazards. If a suitable functional unit is free (there are no structural hazards) and no other instruction has the same destination register (no write after write), then the scoreboard issues the instruction to the FU and updates its info. If a hazard **does** exist, then the issue stalls and no further instructions will issue until the hazards are cleared. **This stage is always done in program order.**
+2. Read operands (RO) - wait until there are no data hazards, then read the operands. An operand is available if no active instruction is going to write it (no Read after Write). **This stage can be done out of program order.**
+3. Execution (EX) - operate on the operands. The functional unit begins execution on the recieved operands. When the result is ready, it notifies the scoreboard. **This stage can be done out of program order.**
+4. Writeback (WB) - Finish execution and write the results back. Once the functional unit completes execution, the scoreboard checks for Write after Read hazards. If there are none it writes the results, otherwise the stage is stalled and the functional unit stays busy. **This stage can be done out of program order.** For example:
+![](Pasted%20image%2020230313112612.png)
+
+#### Storing status in the Scoreboard
+![](Pasted%20image%2020230313112943.png)
+![](Pasted%20image%2020230313113000.png)
