@@ -43,3 +43,7 @@ Notice the significant increase in complexity in the out of order processor.
 
 ## Summary
 A processor using out of order execution will **not** preserve the original order of instructions in the program. It will execute instructions as input data becomes available, just like a regular in-order processor. However, if the pipeline stalls due to **conflicting instructions**, it will minimise the performance impact by processing instructions *which are still able to be run immediately*. This takes full advantage of the ILP (Instruction Level Parallelism) of a superscalar processor and causes an increase in IPC (Instructions Per Cycle).
+Conflicted instructions can be caused by:
+- Cache misses - An instruction has to wait for a long time for something to be retrieved from main memory
+- Structural hazards - The required resource (i.e. a functional unit) is not available
+- Data hazards - An instruction depends on the result of another instruction
