@@ -83,3 +83,10 @@ With a pipeline like this:
 #### Storing status in the Scoreboard
 ![](Pasted%20image%2020230313112943.png)
 ![](Pasted%20image%2020230313113000.png)
+**Exercise:** Draw the dependency graph for this code: (Solutions are on the right, cover them up).
+![](Pasted%20image%2020230313113621.png)
+Solution:
+![](Pasted%20image%2020230313113758.png)
+Now, execute these instructions and fill in this scoreboard:
+![](Pasted%20image%2020230313113843.png)
+Watch a walkthrough of this in week 7 video 2, at about 16 minutes in.
