@@ -77,7 +77,11 @@ Our basic solution does **not** satisfy the non-negativity constraints.
 The solution is to add some new variables called **artificial variables** that will allow $x_1=0, x_2=0$ to be a valid solution to any of the equations where this problem arises. We then penalise the inclusion of these variables in the the objective function, so that they will go to 0 when the optimal solution is reached.
 So, lets add an artificial variable to the problem equation:
 ![](Pasted%20image%2020230314140426.png)
-We add this artificial variable to the objective function, multiplied by a coefficient $M_1$ which we take to be arbitrarily large (that is, it's always the most negative element in the objective row).
+We add this artificial variable to the objective function, multiplied by a coefficient $M_1$ which we take to be arbitrarily large. Here is the tableaux:
+![](Pasted%20image%2020230314141315.png)
+First step is to pivot on column with $M_1$ in it. The only row with a usable slack is the second one (and it will always be the one corresponding to the equation with the artificial variable in it), so pivot on that row.
+![](Pasted%20image%2020230314141554.png)
+Remember that $M_1$ is an arbitrarily large number. We now begin simplex as usual, in this case picking $-3-2M_1$ as the pivot column as it is the most negative (highest negative amount of the arbitrarily large $M_1$).
 #### The solution space is unbounded
 
 #### There is zero slack (degeneracy)
