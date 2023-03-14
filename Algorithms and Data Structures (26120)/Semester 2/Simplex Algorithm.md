@@ -64,3 +64,20 @@ And this means we are finished:
 But why does this work? Consider that these rows represent equations. That first example can be written as:
 $z -10x_1 + 0x_2 + 6s_1 + 0s_2 + 0s_3 = 66$
 Remember the non-negativity constraints; $x_1$ and $x_2$ is either 0 or a positive number; a negative coefficient in this formula is subtracting a positive number from $z$, thus reducing $z$'s value. If we want to maximise $z$, we therefore need to remove these negative coefficients.
+
+## Special Cases
+#### The origin isn't a feasible solution
+Consider the following example:
+![](Pasted%20image%2020230314135806.png)
+The second constraint removes the origin from the set of feasible solutions. The graph looks like this:
+![](Pasted%20image%2020230314135846.png)
+If we convert this to slack form and try to solve using simplex, we get this tableaux:
+![](Pasted%20image%2020230314135924.png)
+Our basic solution does **not** satisfy the non-negativity constraints.
+The solution is to add some new variables called **artificial variables** that will allow $x_1=0, x_2=0$ to be a valid solution to any of the equations where this problem arises. We then penalise the inclusion of these variables in the the objective function, so that they will go to 0 when the optimal solution is reached.
+So, lets add an artificial variable to the problem equation:
+![](Pasted%20image%2020230314140426.png)
+We add this artificial variable to the objective function, multiplied by a coefficient $M_1$ which we take to be arbitrarily large (that is, it's always the most negative element in the objective row).
+#### The solution space is unbounded
+
+#### There is zero slack (degeneracy)
