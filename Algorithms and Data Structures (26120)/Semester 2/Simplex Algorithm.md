@@ -66,7 +66,7 @@ $z -10x_1 + 0x_2 + 6s_1 + 0s_2 + 0s_3 = 66$
 Remember the non-negativity constraints; $x_1$ and $x_2$ is either 0 or a positive number; a negative coefficient in this formula is subtracting a positive number from $z$, thus reducing $z$'s value. If we want to maximise $z$, we therefore need to remove these negative coefficients.
 
 ## Special Cases
-#### The origin isn't a feasible solution
+#### The origin isn't a feasible solution (Artificial Variables)
 Consider the following example:
 ![](Pasted%20image%2020230314135806.png)
 The second constraint removes the origin from the set of feasible solutions. The graph looks like this:
@@ -82,6 +82,15 @@ We add this artificial variable to the objective function, multiplied by a coeff
 First step is to pivot on column with $M_1$ in it. The only row with a usable slack is the second one (and it will always be the one corresponding to the equation with the artificial variable in it), so pivot on that row.
 ![](Pasted%20image%2020230314141554.png)
 Remember that $M_1$ is an arbitrarily large number. We now begin simplex as usual, in this case picking $-3-2M_1$ as the pivot column as it is the most negative (highest negative amount of the arbitrarily large $M_1$).
+![](Pasted%20image%2020230314142208.png)
+And then:
+![](Pasted%20image%2020230314142331.png)
+The final solution is $x_1=10, x_2=0$. The value of the artificial variable can be ignored.
 #### The solution space is unbounded
+Consider this example:
+![](Pasted%20image%2020230314142639.png)
+When drawn as a graph, it looks like this:
+![](Pasted%20image%2020230314142717.png)
+You can see that the solution space goes on forever.
 
 #### There is zero slack (degeneracy)
