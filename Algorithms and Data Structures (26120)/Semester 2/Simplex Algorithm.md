@@ -93,7 +93,6 @@ When drawn as a graph, it looks like this:
 ![](Pasted%20image%2020230314142717.png)
 You can see that the solution space goes on forever. If you attempt to solve this with the regular method, you will eventually reach a situation where all of the slacks are negative, thus making it unsolvable. Simplex cannot solve unbounded problems; if you encounter one, it is most likely that a constraint is missing.
 #### There is zero slack (degeneracy)
-It is possible while doing Simplex to encounter a row with a slack of 0. Consider this example:
-![](Pasted%20image%2020230314143718.png)
-Ignore the lack of an objective function; this is just for illustrative purposes. Here is the graph of this problem:
-![](Pasted%20image%2020230314143748.png)
+It is possible while doing Simplex to encounter a row with a slack of 0. 
+(Just watch the video for this one, I can't write notes for this that are any more useful than the video)
+[Click here for video](zeroSlackVideo.mp4)
