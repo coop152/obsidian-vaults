@@ -92,7 +92,11 @@ Consider this example:
 When drawn as a graph, it looks like this:
 ![](Pasted%20image%2020230314142717.png)
 You can see that the solution space goes on forever. If you attempt to solve this with the regular method, you will eventually reach a situation where all of the slacks are negative, thus making it unsolvable. Simplex cannot solve unbounded problems; if you encounter one, it is most likely that a constraint is missing.
+You can tell if the solution space is there exists a valid entering variable (i.e. a column with a negative value in the objective row) where all of the co-efficients in that column are negative. For example:
+![](Pasted%20image%2020230314150537.png)
+You can tell this is an unbounded problem because $x_1$ is a valid entering variable but all of its coefficients are negative
 #### There is zero slack (degeneracy)
 It is possible while doing Simplex to encounter a row with a slack of 0. 
 (Just watch the video for this one, I can't write notes for this that are any more useful than the video)
 [Click here for video](zeroSlackVideo.mp4)
+The rule is that you can pick a row with zero slack if the co-efficient for the entering variable is positive (the number you divided by to get the slack, the one in the crossover between the row and column). If none of the zero slack rows have a positive entering variable, then we can choose the entering variable with the smallest positive slack.
