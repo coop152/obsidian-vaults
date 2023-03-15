@@ -16,3 +16,13 @@ For ongoing examples, assume a RISC-like target language defined like this:
 #### Code generation for arithmetic expressions
 We can adopt a simple tree walk scheme, and emit code in post-order:
 ![](Pasted%20image%2020230315121346.png)
+This (extremely simple) method simply represents each variable as a load from memory, and each operator as the corresponding operation. Any literals are also loaded into a register. This method demonstrates some issues that must be handled when generating code for arithmetic expressions:
+- What about values that have already been loaded into registers?
+	- We need to modify the IDENTIFIER case.
+- Why evaluate the left subtree first and not the right?
+	- You should evaluate the most demanding (i.e. requiring the most registers) subtree first (this is the Sethi-Ullman labelling scheme)
+- You might need a second pass to minimise register usage and improve performance.
+- The compiler could also be taking advantage of commutativity and associativity for integers to improve code.
+- You might also be able to reduce multiplications down to shifts and adds, depending on the values in the expressions. For example:
+	- $325x = 256x+64x+4x+x$ 
+	- On some systems, integer multiplication may be significantly slower than other operations.
