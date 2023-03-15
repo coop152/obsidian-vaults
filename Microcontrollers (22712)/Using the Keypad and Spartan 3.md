@@ -3,7 +3,7 @@ The FPGA is mapped to `0x2000_0000`, and each location is only a byte wide. You 
 ![](Pasted%20image%2020230315154347.png)
 We have the keypad connected to the lower left port (named S0), so we are only concerned with these locations:
 ![](Pasted%20image%2020230315154822.png)
-In fact we only use the upper pins, so all we care about is upper S0:
+In fact we only use upperS0, so all we care about is this:
 ![](Pasted%20image%2020230315155011.png)
 So we have a data register mapped to `0x2000_0002` and a control register mapped to `0x2000_0003`.
 The control register defines, for each bit of the data register, if that bit is an input or an output. If a bit is 1, then the corresponding bit of the data register will be an **input** to the FPGA, meaning you can use it to read the output of the connected peripheral. If a bit is 0, then the corresponding bit will be an **output** from the FPGA, meaning you can use it to send data to the input of the connected peripheral.
