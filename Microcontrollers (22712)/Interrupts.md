@@ -4,15 +4,16 @@ When an IRQ signal is raised, the interrupt service routine will be called as so
 - The mode is set to IRQ in the CPSR
 - IRQ is disabled in the CPSR (the IRQ disable bit is set high)
 - The Thumb bit is cleared
-- PC is set to 0x00000018
+- PC is set to `0x00000018`
 
-FIQ behaves similarly, except that both IRQ and FIQ are disabled and the PC is set to 0x0000001C.
+FIQ behaves similarly, except that both IRQ and FIQ are disabled and the PC is set to `0x0000001C`.
 The only user-mode registers that are changed are the PC and the CPSR, which are both stored in the IRQ-mode LR and the SPSR respectively. As interrupts change the operating mode, the mode must be changed back to user to return correctly.
 
 ## Interrupt Enable/Disable
 Bit 7 in the CPSR will disable IRQ **when set high**, and bit 6 will disable FIQ. These bits can only be modified in privileged mode, as they are in the control byte of the CPSR.
 On hardware startup these bits are set, meaning no interrupts will be serviced until they are cleared.
 These interrupt disable bits are in the processor, and apply to all interrupts; Individual devices often have their own interrupt enable/disable bits that allow you to prevent interrupts from that device from reaching the processor at all. The interrupt enable bits are exposed on the boards at address `0x1000001C`:
+
 | Bit | Function                                  |
 | --- | ----------------------------------------- |
 | 0   | Timer compare                             |
@@ -23,6 +24,7 @@ These interrupt disable bits are in the processor, and apply to all interrupts; 
 | 5   | Serial TxD available                      |
 | 6   | Upper button                              |
 | 7   | Lower button                              |
+
 You also need to know which device raised an interrupt; interrupt bits are exposed at `0x10000018` in this same pattern which will be 1 when a device has raised an interrupt. Check this address to see which device raised the interrupt.
 
 ## State Preservation
