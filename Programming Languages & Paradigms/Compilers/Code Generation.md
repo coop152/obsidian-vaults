@@ -13,7 +13,7 @@ We could solve all of these independently, but they all end up being inter-relat
 This step is essentially pattern matching; we need to match certain IR patterns to snippets of target code. It is easy to make locally optimal choices (i.e. just choose the most optimal instructions for the current pattern) but making a globally optimal program is an NP-complete problem. Note that in this step we assume we have enough registers to represent all values.
 For ongoing examples, assume a RISC-like target language defined like this:
 ![](Pasted%20image%2020230315121204.png)
-#### Code generation for arithmetic expressions
+#### Arithmetic expressions
 We can adopt a simple tree walk scheme, and emit code in post-order:
 ![](Pasted%20image%2020230315121346.png)
 This (extremely simple) method simply represents each variable as a load from memory, and each operator as the corresponding operation. Any literals are also loaded into a register. This method demonstrates some issues that must be handled when generating code for arithmetic expressions:
@@ -26,3 +26,8 @@ This (extremely simple) method simply represents each variable as a load from me
 - You might also be able to reduce multiplications down to shifts and adds, depending on the values in the expressions. For example:
 	- $325x = 256x+64x+4x+x$ 
 	- On some systems, integer multiplication may be significantly slower than other operations.
+
+#### Array references
+The compiler needs to decide on a memory storage scheme for N-dimensional array elements:
+- Row-major order: store as a sequence of consecutive rows (most common)
+	- `A[1, 1], A[1, 2], A[1, 3], A[2, 1], A[2, 2], A[2, 3]`
