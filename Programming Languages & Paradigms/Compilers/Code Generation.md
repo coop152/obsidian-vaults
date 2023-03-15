@@ -36,3 +36,19 @@ The compiler needs to decide on a memory storage scheme for N-dimensional array 
 	- `A[1, 1], A[2, 1], A[3, 1], A[1, 2], A[2, 2], A[3, 2]`
 	- Derive an element's place with the formula $\text{baseAddr} + w\cdot(j\cdot(m+1)+i)$ where n, m are the array sizes `[n][m]`, i, j are the desired locations `[i][j]` and w is the size of an element.
 
+#### Control Flow
+- `if expr then stmt1 else stmt2`
+	1. Evaluate the expression to true or false
+	2. If true, fall through to the `then` block, otherwise branch to the else
+	3. If false, branch to the else, otherwise fall through to the `then` block
+- While loop, for loop, do loop (e.g. `while (expr) do stmt`)
+	1. Evaluate expr
+	2. If false, branch beyond the end of the loop, if true fall through to stmt
+	3. At the end of stmt, re-evaluate expr
+	4. If true, branch to the start of the loop, if false, fall through
+- Complex boolean expressions can also be evaluated using treewalk, but it requires more. For example:
+	- Short-circuiting. the expression `x != 0 && y / x > 1` **requires** short circuiting to prevent a divide by zero. May also apply to higher-level things, e.g. `while (file.notEmpty() && file.readByte() != "\0")` requires short circuiting to prevent the program from trying to read past the end of a file.
+#### Procedures/Functions/Methods
+Procedures are fundamental to building complex software, but they are a high-level abstraction that has no analogue in low-level hardware. The ocmpiler needs to generate code that emulates the behaviour of procedures. For each call, the calling method must arrange some memory in preparation for the call (**pre-call**), the called function must set up its own memory for variables and such (**prologue**), the called function must discard its memory after it's done (**epilogue**) and the caller must then clean up the memory it set up for calling (**post-return**).
+![](Pasted%20image%2020230315125237.png)
+This is a costly abstraction which the compiler will attempt to avoid if at all possible. For example, the compiler may **inline** some functions, meaning it will insert the function directly into the caller, avoiding all of this calling overhead. This results in code duplication, and the compiler must decide somehow if the trade-off between code size and speed is worth it.
