@@ -1,4 +1,4 @@
-The Spartan 3 FPGA is the piece of hardware on the board that connects the CPU to the connectors to which the keypad is connected. To use the keypad, we must pass data through the FPGA.
+To use the keypad we must interface with the Spartan 3 FPGA, as the connectors that the keypad connects to are accessed through it. 
 The FPGA is mapped to `0x2000_0000`, and each location is only a byte wide. You **MUST** use `LDRB` and `STRB` when interacting with it.
 ![](Pasted%20image%2020230315154347.png)
 We have the keypad connected to the lower left port (named S0), so we are only concerned with these locations:
@@ -6,6 +6,7 @@ We have the keypad connected to the lower left port (named S0), so we are only c
 In fact we only use upperS0, so all we care about is this:
 ![](Pasted%20image%2020230315155011.png)
 So we have a data register mapped to `0x2000_0002` and a control register mapped to `0x2000_0003`.
+The data register can be imagined as a direct connection to the keypad. (It's actually going to the FPGA, which is relaying the signals to the keypad).
 The control register defines, for each bit of the data register, if that bit is an input or an output. If a bit is 1, then the corresponding bit of the data register will be an **input** to the FPGA, meaning you can use it to read the output of the connected peripheral. If a bit is 0, then the corresponding bit will be an **output** from the FPGA, meaning you can use it to send data to the input of the connected peripheral.
 
 ## Configuring the FPGA to use the keypad
