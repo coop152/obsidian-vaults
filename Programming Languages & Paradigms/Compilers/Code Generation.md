@@ -31,3 +31,8 @@ This (extremely simple) method simply represents each variable as a load from me
 The compiler needs to decide on a memory storage scheme for N-dimensional array elements:
 - Row-major order: store as a sequence of consecutive rows (most common)
 	- `A[1, 1], A[1, 2], A[1, 3], A[2, 1], A[2, 2], A[2, 3]`
+	- Derive an element's place with the formula $\text{baseAddr} + w\cdot(i\cdot(m+1)+j)$ where n, m are the array sizes `[n][m]`, i, j are the desired locations `[i][j]` and w is the size of an element.
+- Column-major order: store as a sequence of consecutive columns (FORTRAN does it this way):
+	- `A[1, 1], A[2, 1], A[3, 1], A[1, 2], A[2, 2], A[3, 2]`
+	- Derive an element's place with the formula $\text{baseAddr} + w\cdot(j\cdot(m+1)+i)$ where n, m are the array sizes `[n][m]`, i, j are the desired locations `[i][j]` and w is the size of an element.
+
