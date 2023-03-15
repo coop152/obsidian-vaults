@@ -1,0 +1,20 @@
+The Spartan 3 FPGA is the piece of hardware on the board that connects the CPU to the connectors to which the keypad is connected. To use the keypad, we must pass data through the FPGA.
+The FPGA is mapped to `0x2000_0000`, and each location is only a byte wide. You **MUST** use `LDRB` and `STRB` when interacting with it.
+![](Pasted%20image%2020230315154347.png)
+We have the keypad connected to the lower left port (named S0), so we are only concerned with these locations:
+![](Pasted%20image%2020230315154822.png)
+In fact we only use the upper pins, so all we care about is upper S0:
+![](Pasted%20image%2020230315155011.png)
+So we have a data register mapped to `0x2000_0002` and a control register mapped to `0x2000_0003`.
+The control register defines, for each bit of the data register, if that bit is an input or an output. If a bit is 1, then the corresponding bit of the data register will be an **input** to the FPGA, meaning you can use it to read the output of the connected peripheral. If a bit is 0, then the corresponding bit will be an **output** from the FPGA, meaning you can use it to send data to the input of the connected peripheral.
+
+## Configuring the FPGA to use the keypad
+To discover how we should configure the control bits, let's consider the matrix of the keypad:
+![](Pasted%20image%2020230315154332.png)
+Bits 0..3 are outputs of the keypad (and thus inputs to the FPGA), while bits 5..7 are inputs of the keypad (and thus outputs of the FPGA). Therefore, we want bits 0..3 to be inputs and bits 5..7 to be outputs. We accomplish this by setting the upperS0 control register to `0b0000_1111` (the value of bit 4 is irrelevant).
+
+```
+```
+
+## Reading the keypad (scanning)
+To check a single button on the keypad, we set its row high and then check if its column is high. For example, if we want to check if the '5' key is pressed, we should bring bit 6 of the data register high and then check bit 1.
