@@ -89,6 +89,9 @@ Assume for this section a RISC-like (that is, three-address) type of code.
 ![](Pasted%20image%2020230315132437.png)
 #### Priority functions
 ![](Pasted%20image%2020230315132342.png)
-## Local list scheduling
+## List scheduling
 ![](Pasted%20image%2020230315132623.png)
 ![](Pasted%20image%2020230315132721.png)
+![](Pasted%20image%2020230315133802.png)
+## Conclusion
+![](Pasted%20image%2020230315133925.png)
