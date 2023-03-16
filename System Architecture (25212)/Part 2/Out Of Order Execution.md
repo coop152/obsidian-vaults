@@ -90,3 +90,5 @@ Now, execute these instructions and fill in this scoreboard:
 ![](Pasted%20image%2020230313113843.png)
 Watch a walkthrough of this in week 7 video 2, at about 16 minutes in.
 
+## Tomasulo's Algorithm
+(Watch the week 7 live session)
