@@ -51,7 +51,6 @@ Conflicted instructions can be caused by:
 ## More on data dependencies
 Out of order execution imposes some new types of data dependencies to preserve program semantics:
 ![](Pasted%20image%2020230313111226.png)
-
 ## Dynamic Scheduling
 The key idea behind dynamic scheduling is to allow instructions behind a stall to proceed; there are multiple execution units, so use them.
 ![](Pasted%20image%2020230313111420.png)
