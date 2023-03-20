@@ -5,96 +5,18 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [
-    {
-      "query": "path:\"Logic and Modelling (21111)\"",
-      "color": {
-        "a": 1,
-        "rgb": 14701138
-      }
-    },
-    {
-      "query": "path:\"Database Systems (23111)\"",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:\"Algorithms and Data Structures (26120)/Semester 1\"",
-      "color": {
-        "a": 1,
-        "rgb": 12669664
-      }
-    },
-    {
-      "query": "path:\"Algorithms and Data Structures (26120)/Semester 2\"",
-      "color": {
-        "a": 1,
-        "rgb": 7820031
-      }
-    },
-    {
-      "query": "path:\"Microarchitecture (22111)\"",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
-      }
-    },
-    {
-      "query": "path:\"Software Engineering 1 (23311)\"",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
-      }
-    },
-    {
-      "query": "path:\"Introduction to Visual Computing (27112)\"",
-      "color": {
-        "a": 1,
-        "rgb": 5395168
-      }
-    },
-    {
-      "query": "path:\"System Architecture (25212)\"",
-      "color": {
-        "a": 1,
-        "rgb": 11621088
-      }
-    },
-    {
-      "query": "path:\"Software Engineering 2 (23412)\"",
-      "color": {
-        "a": 1,
-        "rgb": 14701233
-      }
-    },
-    {
-      "query": "path:\"Programming Languages & Paradigms\"",
-      "color": {
-        "a": 1,
-        "rgb": 14701138
-      }
-    },
-    {
-      "query": "path:\"Microcontrollers (22712)\"",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
-      }
-    }
-  ],
+  "collapse-color-groups": false,
+  "colorGroups": [],
   "collapse-display": true,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
+  "collapse-forces": false,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 11.6666666666667,
+  "repelStrength": 10.5,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.3205136193141007,
+  "scale": 0.37480463419174637,
   "close": false
 }
