@@ -64,3 +64,39 @@ And this means we are finished:
 But why does this work? Consider that these rows represent equations. That first example can be written as:
 $z -10x_1 + 0x_2 + 6s_1 + 0s_2 + 0s_3 = 66$
 Remember the non-negativity constraints; $x_1$ and $x_2$ is either 0 or a positive number; a negative coefficient in this formula is subtracting a positive number from $z$, thus reducing $z$'s value. If we want to maximise $z$, we therefore need to remove these negative coefficients.
+
+## Special Cases
+#### The origin isn't a feasible solution (Artificial Variables)
+Consider the following example:
+![](Pasted%20image%2020230314135806.png)
+The second constraint removes the origin from the set of feasible solutions. The graph looks like this:
+![](Pasted%20image%2020230314135846.png)
+If we convert this to slack form and try to solve using simplex, we get this tableaux:
+![](Pasted%20image%2020230314135924.png)
+Our basic solution does **not** satisfy the non-negativity constraints.
+The solution is to add some new variables called **artificial variables** that will allow $x_1=0, x_2=0$ to be a valid solution to any of the equations where this problem arises. We then penalise the inclusion of these variables in the the objective function, so that they will go to 0 when the optimal solution is reached.
+So, lets add an artificial variable to the problem equation:
+![](Pasted%20image%2020230314140426.png)
+We add this artificial variable to the objective function, multiplied by a coefficient $M_1$ which we take to be arbitrarily large. Here is the tableaux:
+![](Pasted%20image%2020230314141315.png)
+First step is to pivot on column with $M_1$ in it. The only row with a usable slack is the second one (and it will always be the one corresponding to the equation with the artificial variable in it), so pivot on that row.
+![](Pasted%20image%2020230314141554.png)
+Remember that $M_1$ is an arbitrarily large number. We now begin simplex as usual, in this case picking $-3-2M_1$ as the pivot column as it is the most negative (highest negative amount of the arbitrarily large $M_1$).
+![](Pasted%20image%2020230314142208.png)
+And then:
+![](Pasted%20image%2020230314142331.png)
+The final solution is $x_1=10, x_2=0$. The value of the artificial variable can be ignored.
+#### The solution space is unbounded
+Consider this example:
+![](Pasted%20image%2020230314142639.png)
+When drawn as a graph, it looks like this:
+![](Pasted%20image%2020230314142717.png)
+You can see that the solution space goes on forever. If you attempt to solve this with the regular method, you will eventually reach a situation where all of the slacks are negative, thus making it unsolvable. Simplex cannot solve unbounded problems; if you encounter one, it is most likely that a constraint is missing.
+You can tell if the solution space is there exists a valid entering variable (i.e. a column with a negative value in the objective row) where all of the co-efficients in that column are negative. For example:
+![](Pasted%20image%2020230314150537.png)
+You can tell this is an unbounded problem because $x_1$ is a valid entering variable but all of its coefficients are negative.
+#### There is zero slack (degeneracy)
+It is possible while doing Simplex to encounter a row with a slack of 0. 
+(Just watch the video for this one, I can't write notes for this that are any more useful than the video)
+[Click here for video](zeroSlackVideo.mp4)
+The rule is that you can pick a row with zero slack if the co-efficient for the entering variable is positive (the number you divided by to get the slack, the one in the crossover between the row and column). If none of the zero slack rows have a positive entering variable, then we can choose the entering variable with the smallest positive slack.
