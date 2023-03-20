@@ -3,4 +3,5 @@
 3. 7.9986 instructions per branch.
 4. 20% of execution time is wasted. The program takes 428065 branches, each of which wastes two cycles in addition to the cycle that it takes to execute. Therefore, the program runs for $\text{instructionCount} + 2\cdot\text{branchCount}$ cycles, which is 4280063 for the given trace. The proportion of wasted time is $\frac{2\cdot\text{branchCount}}{\text{totalTime}}$, which is almost exactly 20%.
 5. 89.28% of the branches in the program are invariant.
-6. 2.61% of execution time is wasted when invariant branches are perfectly predicted. When excluding invariant branches, only 45859 branches will incur a 2 cycle penalty to the runtime of the program. Doing the calculation from ex4 again, we get $\frac{2\cdot45859}{3515651}$ 
+6. 2.61% of execution time is wasted when invariant branches are perfectly predicted. When excluding invariant branches, only 45859 branches will incur a 2 cycle penalty to the runtime of the program. Doing the calculation from ex4 again, we get $\frac{2\cdot45859}{3515651}$ = 2.61%.
+7. The BTB has a limited size, and may have to evict some cached branches 
