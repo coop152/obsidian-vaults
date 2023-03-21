@@ -8,4 +8,4 @@
 8. Approx. 43:24
 9. Approx. 27:24
 10. Forwards has a ratio of approx. 12:15, backwards has a ratio of approx. 15:60
-11. 
+11. Assume that all backwards branches will not be taken (regular fetching behaviour) 
