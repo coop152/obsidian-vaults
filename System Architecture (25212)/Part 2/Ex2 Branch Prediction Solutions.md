@@ -14,4 +14,4 @@
 14. See `model.py`.
 15. Note that on this graph "overhead" is defined as $\frac{\text{wastedFetches}}{\text{executedInstructions}}$ (i.e. perfect branch prediction would have 0% overhead).![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead.png)
 16. The definition of overhead is the same as the previous graph.![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead%20(1).png)
-17. 
+17. 59%
