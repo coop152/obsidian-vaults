@@ -10,4 +10,5 @@
 10. Forwards has a ratio of approx. 12:15, backwards has a ratio of approx. 15:60
 11. Assume that all backwards branches will not be taken (i.e. regular fetching behaviour) and use the previous destination for forward branches (i.e. BTB)
 12. Fully associative, as the small number of required entries means the O(n) lookup time will have a negligible impact on performance and thus it will likely perform better than a direct mapped cache.
-13. 
+13. Cache lines should be the length of one address, as the CPU only needs a single address from it at any one time.
+14. 
