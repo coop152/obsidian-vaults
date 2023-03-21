@@ -6,3 +6,5 @@
 6. 2.61% of execution time is wasted when invariant branches are perfectly predicted. When excluding invariant branches, only 45859 branches will incur a 2 cycle penalty to the runtime of the program. Doing the calculation from ex4 again, we get $\frac{2\cdot45859}{3515651}$ = 2.61%.
 7. The BTB has a limited size and may have to evict some cached branches, which if they are used later will cause a delay. In general, it is unlikely that variant branches (e.g. jump tables or procedure return calls) will repeatedly go to the same location, so prediction is not likely to be perfect for them.
 8. Approx. 43:24
+9. Approx. 51:24
+10. 
