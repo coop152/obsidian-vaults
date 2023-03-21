@@ -8,7 +8,7 @@
 8. Approx. 43:24
 9. Approx. 27:24
 10. Forwards has a ratio of approx. 12:15, backwards has a ratio of approx. 15:6
-11. Assume that all backwards branches will be taken (i.e. ) and that all forwards branches will not be taken (i.e. don't interrupt the regular fetching)
+11. Assume that all backwards branches will be taken and that all forwards branches will not be taken.
 12. Fully associative, as the small number of required entries means the O(n) lookup time will have a negligible impact on performance and thus it will likely perform better than a direct mapped cache.
 13. Cache lines should be the length of one address, as the CPU only needs a single address from it at any one time.
 14. See `model.py`.
