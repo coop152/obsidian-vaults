@@ -13,7 +13,7 @@
 13. Cache lines should be the length of one address, as the CPU only needs a single address from it at any one time.
 14. See `model.py`.
 15. Note that on this graph "overhead" is defined as $\frac{\text{wastedFetches}}{\text{executedInstructions}}$ (i.e. perfect branch prediction would have 0% overhead).![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead.png)
-16. The definition of overhead is the same as the previous graph.![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead%20(1).png)
+16. See `model_twolevel.py` for implementation. The definition of overhead is the same as the previous graph.![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead%20(1).png)
 17. 59%
 18. Newer processors may make use of "pattern history tables", which predict on patterns of repeated branches. For example, a pattern of branches like "100100100100" (where a branch is taken every third time) would behave poorly with a regular BTB or a two level BTB, but would be handled well by modern branch predictors. Some processors also incorporate special loop handling logic, with internal counters that correctly predict the entry and exit points of a loop, and special return handling logic, which remembers the address that a procedure was called from and predicts that it will be returned to.
 19. 
