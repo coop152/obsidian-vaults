@@ -8,4 +8,5 @@
 8. Approx. 43:24
 9. Approx. 27:24
 10. Forwards has a ratio of approx. 12:15, backwards has a ratio of approx. 15:60
-11. Assume that all backwards branches will not be taken (regular fetching behaviour) and use a BTB 
+11. Assume that all backwards branches will not be taken (i.e. regular fetching behaviour) and use the previous destination for forward branches (i.e. BTB)
+12. 
