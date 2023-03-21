@@ -8,10 +8,11 @@
 8. Approx. 43:24
 9. Approx. 27:24
 10. Forwards has a ratio of approx. 12:15, backwards has a ratio of approx. 15:60
-11. Assume that all backwards branches will not be taken (i.e. regular fetching behaviour) and use the previous destination for forward branches (i.e. BTB)
+11. Assume that all backwards branches will not be taken (i.e. regular fetching behaviour) and use the previous destination for forward branches (i.e. BTB) ***{{this contradicts wikipedia, along with the ratios from the previous questions. try again}}***
 12. Fully associative, as the small number of required entries means the O(n) lookup time will have a negligible impact on performance and thus it will likely perform better than a direct mapped cache.
 13. Cache lines should be the length of one address, as the CPU only needs a single address from it at any one time.
 14. See `model.py`.
 15. Note that on this graph "overhead" is defined as $\frac{\text{wastedFetches}}{\text{executedInstructions}}$ (i.e. perfect branch prediction would have 0% overhead).![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead.png)
 16. The definition of overhead is the same as the previous graph.![](Correlation%20between%20BTB%20Size%20and%20Execution%20Overhead%20(1).png)
 17. 59%
+18. Newer processors may make use of "pattern history tables", which instead of keeping only one measure of how likely 
