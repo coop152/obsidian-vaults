@@ -81,3 +81,6 @@ If we have someone's public key $(p, g, y)$ and we want to encrypt a number $M$ 
 4. Send $(a, b)$.
 
 ## Calculating multiplicative inverses
+(random theory i dont understand)
+![](Pasted%20image%2020230322133341.png)
+Essentially the same as Euclid's but returns some extra values $i$ and $j$.
