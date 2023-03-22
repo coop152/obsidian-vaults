@@ -73,9 +73,11 @@ The discrete logarithm of some integer $y$ to the base $b$ is an integer $x$ suc
 $$b^x \equiv y \text{ mod } n$$
 This is the inverse of modular exponentiation. Crucially, there is **no fast algorithm** for computing these. This is why El Gamal is one-way.
 
-## Bring-together: How to encrypt with El Gamal
+#### Bring-together
 If we have someone's public key $(p, g, y)$ and we want to encrypt a number $M$ we follow these steps:
 1. Pick a random integer $k$ which is relatively prime to $p-1$.
 2. Compute $a \leftarrow g^k \text{ mod } p$
 3. Compute $b \leftarrow My^k \text{ mod } p$
 4. Send $(a, b)$.
+
+## Calculating multiplicative inverses
