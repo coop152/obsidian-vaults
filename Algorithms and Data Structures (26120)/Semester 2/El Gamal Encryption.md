@@ -84,3 +84,35 @@ If we have someone's public key $(p, g, y)$ and we want to encrypt a number $M$ 
 (random theory i dont understand)
 ![](Pasted%20image%2020230322133341.png)
 Essentially the same as Euclid's but returns some extra values $i$ and $j$.
+Watch the video for an example.
+
+## Full procedure
+#### Encryption
+Watch the video for the full example including working.
+Let's send an encrypted message with El Gamal. Before anything is sent, the recipient must generate a public key by picking a prime $p$, a primitive root of that prime $2$, and a random private key $x$.
+$p = 13$
+$g = 2$
+(In an exam question, you will be given a primitive root.)
+$x = 5$
+The public key is $(p, q, g^x \text{ mod } p)$. To find $y$ ($g^x \text{ mod } p$) we use **Fast Modular Exponentiation**.
+This gives the recipient a public key of $(13, 2, 6)$. They give this to the sender, which allows them to encrypt their message.
+Now the sender has the recipient's public key. They want to send the message $M=10$. First, they must pick a number $k$ that is relatively prime to the $p$ in the public key.
+$k = 7$
+This is trivial for such small numbers. In a real situation with large prime numbers, you might randomly generate values of $k$ and then use **Euclid's Algorithm** to check that they are relatively prime, retrying until you get something usable.
+Now we must calculate $g^k \text{ mod } p$ and $My^k \text{ mod } p$:
+$g^k \text{ mod } p = 2^7 \text{ mod } 13 = 11$
+$My^k \text{ mod } p = 10\cdot6^7 \text{ mod } 13 = 5$
+Our encrypted message is $(11, 5)$. We send this to the recipient, who then decrypts it:
+#### Decryption
+The recipient gets the message from the sender. They have all of this information, in total:
+$p = 13, g = 2, x = 5$
+$a, b = (11, 5)$ (The message)
+To decrypt this message we will:
+1. Find $a^x \text{ mod } p$
+2. Find the multiplicative inverse of that
+3. Multiply it by $b$
+
+**Find $a^x \text{ mod } p$**:
+$11^5 \text{ mod } 13 = 7$
+**Find the multiplicative inverse of 7**:
+This step can be done with **Euclid's Extended Algorithm** or with **Fast Modular Exponentiation**.
