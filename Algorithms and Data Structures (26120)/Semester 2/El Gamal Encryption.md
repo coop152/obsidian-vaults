@@ -45,4 +45,21 @@ $\mathbb{Z}_n^*$ is the set of numbers less than $n$ that have multiplicative in
 #### Generators
 Consider the set where 7 is our prime number. What happens if we look at all the exponents of 2 modulo 7?
 $2^1=2, 2^2=4, 2^3=1, 2^4=2$ and then it repeats.
-We say that the order of 2 in $\mathbb{Z}_p^*$ is 3, from the 3 unique values you can get from exponentiating it.
+We say that the order of 2 in $\mathbb{Z}_7^*$ is 3, from the 3 unique values you can get from exponentiating it.
+Now consider the exponents of 3 modulo 7:
+$3^1 = 3, 3^2=2, 3^3=6, 3^4=4, 3^5=5, 3^6=1$
+The order of 3 in $\mathbb{Z}_7^*$ is 6, and it gives every element in $\mathbb{Z}_7^*$. We call these numbers *generators*. In this case, 3 is a generator of $\mathbb{Z}_7^*$, or a *primitive root modulo 7*.
+For any prime number $p$ there exists a generator.
+(Again, you do not need to know how to find the primitive roots of a prime number.)
+
+#### Public Key Generation
+In El Gamal Encryption, someone picks a prime $p$ and a primitive root of that prime $g$.
+The recipient of a message picks a private key $x \in \mathbb{Z}_p^*$ (that is, some number that has a multiplicative inverse modulo $p$). The public key is:
+$$(p, g, g^x \text{ mod } p)$$
+Let's work through an example.
+The sender picks these values:
+$p = 7, g = 3$ (in the real world, a much bigger prime would be used.)
+The recipient must pick a private key. They decide upon $x = 3$.
+Now they calculate $g^x \text{ mod } p$:
+$3^3 \text{ mod } 7 = 2$
+Thus the public key is $(7, 3, 2)$. Anyone can access this if they want to send a message to the recipient; They use the public key to encrypt the data, and the recipient uses the private key to decrypt the data, which can only be done with the private key.
