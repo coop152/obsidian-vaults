@@ -66,5 +66,5 @@ Thus the public key is $(7, 3, 2)$. This is accessible to anyone.
 #### Fast Modular Exponentiation
 Here are two representations of the same algorithm:
 ![](Pasted%20image%2020230322130522.png)
-(They look different but they're actually doing the same thing.)
+(They look different but they're actually doing the same thing. You can ignore the c in the second one, it's just there from the textbook for analysis reasons.)
 What these do is 
