@@ -116,3 +116,11 @@ To decrypt this message we will:
 $11^5 \text{ mod } 13 = 7$
 **Find the multiplicative inverse of 7**:
 This step can be done with **Euclid's Extended Algorithm** or with **Fast Modular Exponentiation**.
+With Euclid:
+![](Pasted%20image%2020230322140738.png)
+With Fast Modular Exponentiation:
+![](Pasted%20image%2020230322140942.png)
+The multiplicative inverse is 2. ($(7 \cdot 2) \text{ mod } 13 = 1$)
+**Multiply 2 by $b$**:
+$2 \cdot 5 = 10$.
+The decrypted message is 10.
