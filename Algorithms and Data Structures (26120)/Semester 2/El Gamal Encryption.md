@@ -15,3 +15,13 @@ To encrypt a message using El Gamal Encryption, you first need to find some rand
 
 ## Decrypting Messages
 To Decrypt the message, you need to be able to find the inverse modulo some prime of a number. You can do this with **Euclid's Extended Algorithm**, or you can use **fast modular exponentiation** for this too.
+
+## Euclid's Algorithm
+The **greatest common divisor** (gcd) or **highest common factor** (hcf) of two numbers is the largest number that divides them both. if $gcd(a, b) = 1$ (that is, they have no common factors other than 1) then we say that $a$ and $b$ are **relatively prime**. But how to calculate the gcd? Take this recursive definition:
+$$gcd(a, b) = gcd(b, a \text{ mod } b)$$
+or, as pseudocode:
+```python
+algorithm gcd(a, b):
+	if b == 0: return a
+	else: return gcd(b, a mod b)
+```
