@@ -8,13 +8,13 @@ $y = a^b \text{ mod } p$
 It is easy to compute $y$ in this equation. However, even if you know $y$, $a$ and $p$ it is average case "hard" to find $b$.
 
 ## Public Keys
-El Gamal encryption creates public keys by finding the **primitive roots module n** of a prime. (Note: the exam does not require being able to find primitive roots, only that you know what they are. You **will** need to know how to check if two numbers are relatively prime, which can be done using **Euclid's Algorithm**.)
+El Gamal encryption creates public keys by finding the **primitive roots modulo n** of a prime. (Note: the exam does not require being able to find primitive roots, only that you know what they are. You **will** need to know how to check if two numbers are relatively prime, which can be done using **Euclid's Algorithm**.)
 
 ## Encrypting Messages
 To encrypt a message using El Gamal Encryption, you first need to find some random number $k$ which is relatively prime to $p - 1$ ($p$ being a prime that appears in the public key). You then compute $a^b \text{ mod } k$ for various numbers; to do this you will need a **fast modular exponentiation** algorithm.
 
 ## Decrypting Messages
-To Decrypt the message, you need to be able to find the inverse modulo some prime of a number. You can do this with **Euclid's Extended Algorithm**, or you can use **fast modular exponentiation** for this too.
+To Decrypt the message, you need to be able to find the "inverse modulo prime $p$" of a number. You can do this with **Euclid's Extended Algorithm**, or you can use **fast modular exponentiation** for this too.
 
 ## Euclid's Algorithm
 The **greatest common divisor** (gcd) or **highest common factor** (hcf) of two numbers is the largest number that divides them both. if $gcd(a, b) = 1$ (that is, they have no common factors other than 1) then we say that $a$ and $b$ are **relatively prime**. But how to calculate the gcd? Use **Euclid's Algorithm**, a recursive definition of the gcd:
@@ -59,7 +59,12 @@ $$(p, g, g^x \text{ mod } p)$$
 Let's work through an example.
 The sender picks these values:
 $p = 7, g = 3$ (in the real world, a much bigger prime would be used.)
-The recipient must pick a private key. They decide upon $x = 3$.
+The recipient must pick a private key. They decide upon $x = 3$. They keep this to themselves.
 Now they calculate $g^x \text{ mod } p$:
 $3^3 \text{ mod } 7 = 2$
-Thus the public key is $(7, 3, 2)$. Anyone can access this if they want to send a message to the recipient; They use the public key to encrypt the data, and the recipient uses the private key to decrypt the data, which can only be done with the private key.
+Thus the public key is $(7, 3, 2)$. This is accessible to anyone.
+#### Fast Modular Exponentiation
+Here are two representations of the same algorithm:
+![](Pasted%20image%2020230322130522.png)
+(They look different but they're actually doing the same thing.)
+What these do is 
