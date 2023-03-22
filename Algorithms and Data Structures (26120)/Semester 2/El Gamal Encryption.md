@@ -68,3 +68,14 @@ Here are two representations of the same algorithm:
 ![](Pasted%20image%2020230322130522.png)
 (They look different but they're actually doing the same thing. You can ignore the c in the second one, it's just there from the textbook for analysis reasons.)
 Through means that I do not understand, they calculate $a^p \text{ mod } n$. (Just watch the video)
+#### Discrete Logarithm
+The discrete logarithm of some integer $y$ to the base $b$ is an integer $x$ such that
+$$b^x \equiv y \text{ mod } n$$
+This is the inverse of modular exponentiation. Crucially, there is **no fast algorithm** for computing these. This is why El Gamal is one-way.
+
+## Bring-together: How to encrypt with El Gamal
+If we have someone's public key $(p, g, y)$ and we want to encrypt a number $M$ we follow these steps:
+1. Pick a random integer $k$ which is relatively prime to $p-1$.
+2. Compute $a \leftarrow g^k \text{ mod } p$
+3. Compute $b \leftarrow My^k \text{ mod } p$
+4. Send $(a, b)$.
