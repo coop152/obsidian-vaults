@@ -23,4 +23,4 @@
 - [Pipelining](Pipelining.md)
 - [Out Of Order Execution](Out%20Of%20Order%20Execution.md)
 - [Pipelining](Pipelining.md)
-- [Hardware Multithreading](Hardware%20Multithreading.md)
+- [Multithreading](Multithreading.md)
