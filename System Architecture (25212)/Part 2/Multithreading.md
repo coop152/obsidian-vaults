@@ -74,3 +74,4 @@ The performance improvement in a non-superscalar processor is something like thi
 ![](Pasted%20image%2020230323144844.png)
 (ICM stands for Instruction Cache Miss.)
 For a superscalar processor, it's something like this:
+![](Pasted%20image%2020230323152953.png)
