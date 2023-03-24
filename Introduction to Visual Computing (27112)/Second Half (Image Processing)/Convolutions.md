@@ -107,3 +107,9 @@ Noise is a deviation of a value from its expected value. There are a few kinds o
 	- randomly distributed, with a mean of zero
 	- $n$ is usually significantly smaller than $\max(x)$
 - Salt and pepper noise
+	- $I \rightarrow \{ max, min\}$, totally random
+	- Not a very common kind of noise
+- Imaging artefacts
+	- Streaks of light
+	- Bloom
+
