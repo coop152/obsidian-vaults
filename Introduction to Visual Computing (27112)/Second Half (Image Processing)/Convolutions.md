@@ -53,4 +53,9 @@ In point processing, we can calculate a new pixel value and then write it "in-pl
 $$I(x, y) = I(x, y) - 28$$
 Rather than:
 $$I'(x, y) = I(x, y) - 28$$
-But we cannot do the same thing with convolution.
+But we cannot do the same thing with convolution; you need a new image for the result.
+
+## Off the edges?
+You probably already noticed a problem with the previous diagrams:
+![](Pasted%20image%2020230324121548.png)
+What to do for the pixels around the edge? The kernel is off the edge of the image.
