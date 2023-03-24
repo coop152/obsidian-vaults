@@ -85,3 +85,25 @@ So, if we want to apply two filters to an image we can do it two ways:
 It's true that applying these two small matrices will be the same as applying the bigger one, but is there a benefit to this? Yes:
 ![](Pasted%20image%2020230324125336.png)
 For a 7x7 kernel, this would change to $49MN$ vs $14MN$, and the efficiency gains would only increase as the size goes up.
+## Some kernels
+**Smoothing**:
+![](Pasted%20image%2020230324130200.png)
+Simply average out the colours of an area. Softens the image.
+![](Pasted%20image%2020230324130308.png)
+Bigger filter maps will blur more.
+**Sharpening**:
+![](Pasted%20image%2020230324130404.png)
+Emphasises the discontinuities of the image, but also amplifies noise.
+![](Pasted%20image%2020230324130541.png)
+**Edge detection (Laplace)**:
+![](Pasted%20image%2020230324130633.png)
+The kernel is similar to the sharpening filter, but instead of just emphasising the discontinuities it shows only the discontinuities.
+![](Pasted%20image%2020230324130823.png)
+## Noise
+Noise is a deviation of a value from its expected value. There are a few kinds of noise which demand different methods of handling and arise for different reasons:
+- Random changes
+	- $I \rightarrow I + n$
+	- where n is positive or negative
+	- randomly distributed, with a mean of zero
+	- $n$ is usually significantly smaller than $\max(x)$
+- Salt and pepper noise
