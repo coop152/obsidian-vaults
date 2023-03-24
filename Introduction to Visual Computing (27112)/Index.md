@@ -12,4 +12,6 @@
 - [Point Processing](Point%20Processing.md)
 - [OpenCV](OpenCV.md)
 - [Colour](Colour.md)
-- 
+- [Image Properties](Image%20Properties.md)
+- [Geometrical Transformations](Geometrical%20Transformations.md)
+- [Convolutions](Convolutions.md)
