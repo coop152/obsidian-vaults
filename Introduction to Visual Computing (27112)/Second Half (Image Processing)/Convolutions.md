@@ -67,3 +67,17 @@ What to do for the pixels around the edge? The kernel is going off the edge of t
 ## Normalisation
 What would be the result of applying this filter mask to an image where each pixel is 255?
 ![](Pasted%20image%2020230324122541.png)
+Answer: $255 \times 9$, which is too big to put in the output image.
+How to solve this? We can either normalise the mask, or normalise the input.
+Normalising the mask looks like this:
+![](Pasted%20image%2020230324123133.png)
+Where the sum of the weights must add up to 1. This can be done simply by dividing each element by 9.
+## Composite Filters
+Convolution is associative:
+$$A \otimes (B \otimes C) = (A\otimes B) \otimes C$$
+(A and B are kernels and C is an image)
+So, if we want to apply two filters to an image we can do it two ways:
+- Apply kernel A to kernel B to get a 5x5 kernel. When applied to an image, this kernel will perform both of the filters at once.
+- Apply both kernels to the image one after the other.
+
+![](Pasted%20image%2020230324123724.png)
