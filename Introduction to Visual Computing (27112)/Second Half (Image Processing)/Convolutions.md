@@ -79,5 +79,6 @@ $$A \otimes (B \otimes C) = (A\otimes B) \otimes C$$
 So, if we want to apply two filters to an image we can do it two ways:
 - Apply kernel A to kernel B to get a 5x5 kernel. When applied to an image, this kernel will perform both of the filters at once.
 - Apply both kernels to the image one after the other.
-
 ![](Pasted%20image%2020230324123724.png)
+## Separable Kernels
+![](Pasted%20image%2020230324124150.png)
