@@ -82,3 +82,6 @@ So, if we want to apply two filters to an image we can do it two ways:
 ![](Pasted%20image%2020230324123724.png)
 ## Separable Kernels
 ![](Pasted%20image%2020230324124150.png)
+It's true that applying these two small matrices will be the same as applying the bigger one, but is there a benefit to this? Yes:
+![](Pasted%20image%2020230324125336.png)
+For a 7x7 kernel, this would change to $49MN$ vs $14MN$, and the efficiency gains would only increase as the size goes up.
