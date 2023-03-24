@@ -15,3 +15,4 @@
 - [Image Properties](Image%20Properties.md)
 - [Geometrical Transformations](Geometrical%20Transformations.md)
 - [Convolutions](Convolutions.md)
+- [More on Edge Detection](More%20on%20Edge%20Detection.md)
