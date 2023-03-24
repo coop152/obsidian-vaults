@@ -58,4 +58,7 @@ But we cannot do the same thing with convolution; you need a new image for the r
 ## Off the edges?
 You probably already noticed a problem with the previous diagrams:
 ![](Pasted%20image%2020230324121548.png)
-What to do for the pixels around the edge? The kernel is off the edge of the image.
+What to do for the pixels around the edge? The kernel is going off the edge of the image. You could:
+- Assume all of the outside "pixels" are 0
+- Assume all of the outside "pixels" are 255 (or whatever the max intensity is)
+- Wrap around to the other side of the image (using modulo or similar)
