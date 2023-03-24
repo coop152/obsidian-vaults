@@ -113,3 +113,44 @@ Noise is a deviation of a value from its expected value. There are a few kinds o
 	- Streaks of light
 	- Bloom
 
+![](Pasted%20image%2020230324132441.png)
+When it comes to the source of noise, there are two schools of thought:
+- Anything within the imaging system that is causing an unintended change
+	- Electrical interference
+	- Optical aberration
+- Anything (at all) that causes a change
+	- Atmospheric disturbance
+
+Generally, the first is the preferred definition.
+
+Here are some examples of real-world noise:
+![](Pasted%20image%2020230324132704.png)
+These are images taken by a phone camera, with good lighting on the left and bad lighting on the right. Both of these images were taken in colour; the signal had to be boosted so much that not only is it full of noise, it's devoid of colour.
+And another example:
+![](Pasted%20image%2020230324132813.png)
+This is video tape interference, caused by a misalignment of the magnetic read or write head of either the recording device or the playing device.
+And another:
+![](Pasted%20image%2020230324132954.png)
+This is a digital video, suffering from the effects of corrupted blocks in the MPEG encoding.
+And another (two):
+![](Pasted%20image%2020230324133125.png)
+![](Pasted%20image%2020230324133153.png)
+These are examples of atmospheric interference introducing noise. The first image was taken in heavy fog conditions, obscuring everything. The satellite image was taken while it was overcast, causing clouds to block the land that is being photographed.
+And another:
+![](Pasted%20image%2020230324133351.png)
+Some CCDs are vulnerable to this effect when photographing very bright light sources, where the light bleeds into other pixels in the frame.
+
+## Noise Reduction
+So how do we remove the more typical kinds of noise?
+- Smoothing
+	- $\sum{x + n} = \sum{x} + \sum{n} \approx \sum{x}$
+	- Since noise is random and has a mean of zero
+- Local smoothing
+	- Convolution (with which kernel?)
+	- Removes detail
+	- Introduces ringing
+	- The amplitude of the noise will be reduced by template length
+- Temporal Smoothing
+	- Average together multiple images of the same subject
+	- Called "stacking" in astronomy, commonly used
+
