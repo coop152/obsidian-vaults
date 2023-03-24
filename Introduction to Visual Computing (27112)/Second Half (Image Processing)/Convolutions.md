@@ -62,3 +62,8 @@ What to do for the pixels around the edge? The kernel is going off the edge of t
 - Assume all of the outside "pixels" are 0
 - Assume all of the outside "pixels" are 255 (or whatever the max intensity is)
 - Wrap around to the other side of the image (using modulo or similar)
+- "Extend" the image out by repeating the outermost rows/columns (just add/subtract 1 from the out-of-bounds image coordinates)
+
+## Normalisation
+What would be the result of applying this filter mask to an image where each pixel is 255?
+![](Pasted%20image%2020230324122541.png)
