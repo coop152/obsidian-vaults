@@ -154,3 +154,13 @@ So how do we remove the more typical kinds of noise?
 	- Average together multiple images of the same subject
 	- Called "stacking" in astronomy, commonly used
 
+Local smoothing doesn't produce particularly good results, and temporal smoothing requires many images, where small differences between them will introduce blurring. However, there is another method:
+#### Adaptive Smoothing
+For each pixel in the image $g$:
+- Compute the smoothed value $s$ (using local or temporal smoothing)
+- ![](Pasted%20image%2020230324134336.png)
+
+In other words, only use the smoothed value if it is close enough to the original value. Adaptive smoothing is about as effective as regular smoothing at actually removing Gaussian noise, but it blurs the image less (i.e. keeps edges sharp). It doesn't work for salt and pepper noise, however, as the specs of noise are very different from their surroundings and fall under the *otherwise* case where the unsmoothed pixels are used.
+#### Gaussian Smoothing (aka Gaussian Blur)
+![](Pasted%20image%2020230324134821.png)
+We can use these Gaussian functions (the functions for finding the Gaussian distribution) to create a filter kernel with normally distributed weights. Compared to regular smoothing, it doesn't suffer from ringing and gives sharper results.
