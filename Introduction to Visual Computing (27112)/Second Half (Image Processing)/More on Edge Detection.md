@@ -93,3 +93,26 @@ In summary:
 3. Apply non-maxima suppression to the magnitudes 
 4. Use double-thresholding and connectivity analysis to detect and link edges
 
+Canny suggested that $T_H$ should be two or three times $T_L$.
+This edge detection method is available in OpenCV as `Canny(imIn, ImOut, ThL, ThH)`.
+The results look like this:
+![](Pasted%20image%2020230328125339.png)
+Sobel is still noticeably noisy, and the edges are quite thick. In contrast Canny has thin, continuous lines and less noise. Here is another example, with a human retina:
+![](Pasted%20image%2020230328125500.png)
+## Laplace
+![](Pasted%20image%2020230328125836.png)
+This edge detection kernel performs the **second derivative** on the gradients in the image. The point on the second derivative where the value crosses zero while going from positive to negative (the **zero-crossing point**) is the location of the edge.
+The previous edge detection methods have required us to apply two kernels, one for each direction. However, Laplace can find edges using **a single kernel**. However, it does highlight noise. This can be helped using a Gaussian blur, as with Canny, but the results are (predictably) not as good:
+![](Pasted%20image%2020230328130250.png)
+This is called **Laplacian of Gaussian (LoG)**.
+This leads into the next algorithm:
+## Marr-Hildreth Algorithm
+1. Blur the image with a Gaussian blur
+2. Convolve with a Laplacian kernel (these two steps are LoG with signed arithmetic)
+3. Mark zero-crossing pixels as edge pixels
+	- That is, pixel **e** is an edge pixel if there is a differing sign on **any** of the pairs b/h, d/f, a/i, c/h
+	- ![](Pasted%20image%2020230328130805.png)
+
+## Difference of Gaussians (DoG)
+This is performed by applying two Gaussian blurs to an image with different sigmas, then subtracting one from the other.
+![](Pasted%20image%2020230328131055.png)
