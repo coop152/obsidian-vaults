@@ -2,4 +2,4 @@
 - C++ (Also didn't make notes for this)
 - [Haskell](Haskell.md) 
 - [Compilers](Compilers.md)
-- Solidity
+- [Concurrency](Concurrency.md)
