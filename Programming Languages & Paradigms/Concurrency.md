@@ -93,3 +93,13 @@ Somehow the program needs to describe the constraints on interleaving and thus m
 	- Very difficult to implement, though easier for functional languages.
 	- Would be ideal if only it weren't so hard.
 
+## Mutual Exclusion (Mutex)
+A basic coordination principle for threads. Threads can only access shared state in **Critical Sections**. Only one thread is allowed in each critical section; this makes them effectively atomic.
+The "granularity of atomicity" (i.e. the size of an atomic operation) is increased from a single memory operation with regular threads to a whole critical section with a mutex. In other words, none of a thread's changes are presented to the other threads until a critical section ends, while with regular threads the changes would be seen right as they were written to memory.
+#### Creating a critical section
+A critical section requires an entry and an exit, called a **preprotocol** and a **postprotocol** respectively:
+![](Pasted%20image%2020230417092701.png)
+The preprotocol checks if a critical section is safe to enter (that is, if it is the only thread that will be running it) and then continues if it is, or waits if it isn't. If the critical section is entered, then it will be announced to the other threads that the critical section is currently occupied and that they must wait.
+The postprotocol announces to the other threads that the critical section is over and that they may enter it.
+#### Stipulations
+The time that a critical section takes must be limited. It must be **at least** definitely finite - if a critical section does not complete then the other threads will be **starved**, meaning they will wait forever. They should also preferably be short, containing only the absolute minimum of operations that definitely need to be atomic. Critical sections reduce the speed of the program by essentially reducing them to a single thread temporarily; of course, you want to avoid this if it all possible.
