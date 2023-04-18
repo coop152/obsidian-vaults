@@ -24,3 +24,5 @@
 - [Out Of Order Execution](Out%20Of%20Order%20Execution.md)
 - [Pipelining](Pipelining.md)
 - [Multithreading](Multithreading.md)
+- [Multicore](Multicore.md)
+
