@@ -86,3 +86,36 @@ alg perimeter_of_chain_code(code):
 ```
 #### Area from a chain code
 ![](Pasted%20image%2020230419125827.png)
+In other words:
+```python
+alg shoelace(points[]):
+	last_point = points[0]
+	Ds = []
+	for each point in points.skip_first():
+	    Ds.add(point.y * last_point.x - (point.x * last_point.y))
+	return 0.5 * abs(sum(Ds))
+```
+This allows us to calculate the area of a polygon from its vertices (the actual area, not the pixel count, though they should be fairly close). How do we get coordinates from the chain code, though?
+![](Pasted%20image%2020230419130550.png)
+![](Pasted%20image%2020230419130707.png)
+## Colour Distribution
+The colour distribution is another useful characteristic of blobs, independent of their area and orientation. Typically, the colour attributes recorded will be Hue and/or Saturation, with Brightness normalised out. This can be useful for tracking colourful objects, e.g. people with colourful clothes.
+## Blob Tracking
+Say we are finding blobs in a video instead of a single image, and we wish to track a blob's movement over time. How do we match a blob in one image, taken at a certain time, with a blob in another, taken later?
+We must look for invariant properties, but this is not trivial as in images with lots of blobs and with a potentially changing blob population, these can be hard to come by.
+This is a combinatorial problem. We have $N$ blobs in frame $t$, and $M$ blobs in frame $t + 1$. Which subsets of $N$ best match which subsets of $M$? The number of combinations will quickly increase in size.
+#### Predictive Tracking
+For each blob, maintain a record of the current location, **current velocity** (the distance and direction moved from its previous location) and any invariants. Using these details, **predict** the location of the blob in the next frame. Then **verify** if there is a blob somewhere near this predicted location; do the previous blob and this new blob have the same invariants?
+
+These variables require ongoing upkeep: the velocity estimate may be incorrect, or may change over time, requiring a margin of error to be kept (which will also most likely change over time). The invariants may change depending on certain conditions, for example a colour invariant may change depending on lighting and orientation.
+
+Even beyond this there are some more complexities that need handling:
+- What if there are multiple blobs in the predicted location?
+	- Two things moved into the same spot?
+	- Need to record this in case they split in the future
+- No blobs at the predicted location?
+	- Could be any of the variables that are incorrect, or the tracked object just behaved unpredictably
+	- Keep track of the missing blob for some amount of time
+- A new blob appeared where there was nothing predicted
+	- Add a new object to track, find invariants, etc.
+	- Or is it an old object that's become displaced?
