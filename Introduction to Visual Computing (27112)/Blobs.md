@@ -70,3 +70,19 @@ A regular chain code, as stated before, is not rotationally invariant. If this i
 Clearly, this method is a pain to do manually. Instead, think in terms of the differential nature of the method:
 ![](Pasted%20image%2020230419124855.png)
 As mentioned before, these differential chain codes are **rotationally invariant**, and they are also **cyclic**.
+#### Perimeter from a chain code
+(Note this is for a regular chain code, not a differential one.)
+![](Pasted%20image%2020230419125521.png)
+Basically,
+```python
+alg perimeter_of_chain_code(code):
+	let sum = 0
+	for direction in code:
+		if direction in [0, 2, 4, 6]:
+			sum += 1
+		else:
+			sum += sqrt(2)
+	return sum
+```
+#### Area from a chain code
+![](Pasted%20image%2020230419125827.png)
