@@ -25,3 +25,8 @@ The most straight forward way to do this is to vary the camera's aperture:
 ![](Pasted%20image%2020230419133227.png)
 You can also vary the camera's shutter time:
 ![](Pasted%20image%2020230419133334.png)
+![](Pasted%20image%2020230419133605.png)
+![](Pasted%20image%2020230419133726.png)
+![](Pasted%20image%2020230419133747.png)
+![](Pasted%20image%2020230419133920.png)
+![](Pasted%20image%2020230419133955.png)
