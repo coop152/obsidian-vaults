@@ -17,3 +17,4 @@
 - [Convolutions](Convolutions.md)
 - [More on Edge Detection](More%20on%20Edge%20Detection.md)
 - [Blobs](Blobs.md)
+- [File Formats](File%20Formats.md)
