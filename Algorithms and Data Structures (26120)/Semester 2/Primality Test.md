@@ -54,3 +54,25 @@ So we have a way to efficiently test for primes given some witness function, but
 
 In fact, we can improve on this. If $p$ is prime and $x^2 \text{ mod } p \equiv 1$, then it must be true that either $x \equiv 1 (\text{ mod } p)$ or $x \equiv -1 (\text{ mod } p)$.
 Moreover, if $n$ is odd then $n - 1 = 2^tm$ for some odd number $m$. 
+This leads us to a pattern that we are looking for:
+![](Pasted%20image%2020230420151526.png)
+So with this improvement, our witness function is this:
+```python
+alg witness(x, n):
+	derive 2^t * m from n - 1, where m is odd
+	y = x^m mod n
+	if y == 1:
+		return False 
+	for i = 1 to t - 1:
+		y = y^2 mod n
+		if y == -1:
+			return False
+	return True
+```
+What is the error probability ($q$) of this witness function? $q = \frac{1}{4}$, meaning that $t = \frac{k}{2}$ when it is used in the Randomised Primality Testing algorithm. This is the Rabin-Miller algorithm.
+#### Complexity
+When using the Rabin-Miller witness, what is the complexity of Randomised Primality Testing?
+- Our main arithmetic operation is modular exponentiation, which is linear in the size of the input ($\log{n}$)
+- We do it at most $\frac{k}{2}$ times
+- Given some odd positive integer $n$ and a confidence parameter $k > 0$, the Rabin-Miller algorithm will determine if $n$ is prime with an error probability of $2^{-k}$ in $O(k\log{n})$ time.
+
