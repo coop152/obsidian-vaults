@@ -23,7 +23,7 @@ In addition to the base architectural requirements that the interconnect must fu
 	- This needs to be handled efficiently to avoid becoming a bottleneck
 - The interconnection network becomes an important part of the design, which much of the performance hinges on.
 - An example of this is the Intel Single-chip Cloud Computer, or the Xeon Phi (which was cache-coherent)
-#### Evaluating a network
+## Evaluating a network
 - **Bandwidth**: How much data can it move per unit of time?
 - **Latency**: How long does it take a single piece of a message to traverse the network?
 - **Congestion**: How are bandwidth and latency impacted when the network is close to peak usage?
@@ -42,3 +42,18 @@ An average broadband internet connection
 - **Topology**: How the cores and networking elements are connected together (like a regular network topology)
 - **Routing**: How traffic moves through the topology (like regular network routing)
 - **Switching**: How traffic moves from one component to the next
+
+## Topologies
+#### Bus
+![](Pasted%20image%2020230425110226.png)
+- Has one common wire interconnect - the **broadcast medium**
+	- Only one thing can use the wire at any point in time
+	- Controlled by a clock, so it must be divided into time slots
+	- The sender must 'grab' a time slot (via arbitration) to transmit a message
+- Often utilises **split transactions**
+	- for example, one component sends a memory address in one time slot
+	- the data is returned by another component in a later time slot
+	- The time slots in-between those two are free for use by other components
+- Main **scalability issue** is the limited throughput
+	- The bandwidth of the bus is divided by the number of cores
+
