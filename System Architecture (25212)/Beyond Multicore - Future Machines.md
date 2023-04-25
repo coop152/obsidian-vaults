@@ -45,3 +45,9 @@ All three of these terms are overloaded and commonly misused. Essentially, if a 
 	- These contain user functions (e.g. compile programs to be run, read out results, start a procedure, etc.) and take the load of user interaction off of the compute nodes
 
 These networks of devices can come together to make supercomputers/clusters that are essentially incomprehensible in scale. The most powerful supercomputer (as of time of writing) is the Frontier in the Oak Ridge National Laboratory in the US, with 8,730,112 total cores across all computers. It is theoretically capable (Rpeak) of 1,685.65 PetaFLOP/s, while drawing 21.1 megawatts of power, though real world performance (Rmax) is closer to "just" 1,102.00 PetaFLOP/s.
+![](Pasted%20image%2020230425123224.png)
+Trends in supercomputers show:
+- Clusters have dominated the space for a while
+- Intel dominates when it comes to CPUs
+- Most of the machines are actually used in industry, though a large percentage is still for research and academics
+- NVIDIA dominates when it comes to co-processors
