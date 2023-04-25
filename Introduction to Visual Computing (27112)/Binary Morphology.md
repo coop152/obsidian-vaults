@@ -46,8 +46,8 @@ To solve this, there are two more operations which are composites of Erosion and
 #### Opening
 This operation will remove 'sticky out bits' and object noise while enlarging holes, like Erosion. However, it will not change the size of objects. It is achieved by first eroding then dilating:
 $$\text{open(I)} = \text{dilate}(\text{erode}(I))$$
-
-
+![](Pasted%20image%2020230425142346.png)
 #### Closing
 This operation will fill in holes and enlarge 'sticky out bits' like Dilation. However, it will not change the size of objects. It is achieved by first dilating then eroding:
 $$\text{close(I)} = \text{erode}(\text{dilate}(I))$$
+![](Pasted%20image%2020230425142400.png)
