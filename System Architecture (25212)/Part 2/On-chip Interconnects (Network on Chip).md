@@ -9,7 +9,7 @@
 	- If both variables are written by two different cores often, they will generate a lot of invalidate/update traffic
 
 We've seen a concrete implementation of a Snoopy cache coherence protocol, but how would a directory-based one work? What would be connecting all of the chips?
-## On-chip Interconnects/Networks
+## Networks
 Any multi-core system must clearly contain the means for cores to communicate - both with memory and with each other, for synchronisation and coherence. There are many ways to connect these components, each having different characteristics and tradeoffs (performance, energy, area, fault-tolerance, scalability...). Each one may not have the same 
 functionality, which can restrict the coherence mechanism that you must use with it.
 In addition to the base architectural requirements that the interconnect must fulfil (e.g. cache coherency, core synchronisation) it also needs to be effective at allowing programs to communicate between cores; most multi-core applications will require the cores to communicate in some manner, and what constitutes "effective" depends on the context.
@@ -129,5 +129,3 @@ and **Fat Trees**
 - A node will forward a packet as soon as its header has arrived
 - Provides better performance (Latency = distance + phit count)
 - However, faults can only be detected at the final destination (this does mean less hardware at the intermediate nodes, though.)
-- 
-

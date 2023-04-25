@@ -25,7 +25,7 @@
 #### Second Half
 - [Pipelining](Pipelining.md)
 - [Out Of Order Execution](Out%20Of%20Order%20Execution.md)
-- [Pipelining](Pipelining.md)
 - [Multithreading](Multithreading.md)
 - [Multicore](Multicore.md)
-- [Beyond Multicore (Future Computing)](Beyond%20Multicore%20(Future%20Computing).md)
+- [On-chip Interconnects (Network on Chip)](On-chip%20Interconnects%20(Network%20on%20Chip).md)
+- 
