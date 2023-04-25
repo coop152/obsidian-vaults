@@ -44,4 +44,4 @@ All three of these terms are overloaded and commonly misused. Essentially, if a 
 - There will be some **frontend** node(s) that regular users will interact with
 	- These contain user functions (e.g. compile programs to be run, read out results, start a procedure, etc.) and take the load of user interaction off of the compute nodes
 
-These networks of devices can come together to make supercomputers/clusters that are essentially incomprehensible in scale. The most powerful supercomputer (as of time of writing) is the Frontier in the Oak Ridge National Laboratory in the US, with 8,730,112 total cores across all computers. It is capable of 1,685.65 PetaFLOP/s, while drawing 21.1 megawatts of power.
+These networks of devices can come together to make supercomputers/clusters that are essentially incomprehensible in scale. The most powerful supercomputer (as of time of writing) is the Frontier in the Oak Ridge National Laboratory in the US, with 8,730,112 total cores across all computers. It is theoretically capable (Rpeak) of 1,685.65 PetaFLOP/s, while drawing 21.1 megawatts of power, though real world performance (Rmax) is closer to "just" 1,102.00 PetaFLOP/s.
