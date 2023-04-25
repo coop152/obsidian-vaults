@@ -19,3 +19,4 @@
 - [Blobs](Blobs.md)
 - [File Formats](File%20Formats.md)
 - [Line Detection](Line%20Detection.md)
+- [Binary Morphology](Binary%20Morphology.md)
