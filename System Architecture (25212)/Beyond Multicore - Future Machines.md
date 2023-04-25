@@ -48,6 +48,51 @@ These networks of devices can come together to make supercomputers/clusters that
 ![](Pasted%20image%2020230425123224.png)
 Trends in supercomputers show:
 - Clusters have dominated the space for a while
-- Intel dominates when it comes to CPUs
+- Intel dominates when it comes to CPUs (although AMD's CPUs are currently in the most powerful supercomputer as of 2023)
 - Most of the machines are actually used in industry, though a large percentage is still for research and academics
 - NVIDIA dominates when it comes to co-processors
+
+#### Examples
+**Xeon Phi**:
+- A many-core processor
+	- 57 4-way multithreaded x86 general-purpose cores (228 hardware threads)
+	- 512-bit SIMD operations with AVX-512
+- Higher performance than a standard processor (obviously)
+	- Peak performance **1.2 TeraFLOP/s**
+	- Power dissipation **300W**
+	- Efficiency of **4GFLOP/s/Watt**
+- Moving data from/to memory is **very expensive**
+	- Large chunks of data need to be moved to start executing
+	- The most recent PCIe versions alleviate this (PCIe 5.0 has max bandwidth of up to 128GB/s)
+- Programmed using **well known parallel programming models**, nothing specialised
+	- e.g. MPI, OpenMP, autovectorisation...
+![](Pasted%20image%2020230425124950.png)
+- Uses a **bidirectional ring** interconnect, which connects all cores, PCIe devices, memory controllers...
+	- Due to this, communications can quickly become a bottleneck
+	- Newer architectures from Intel implement a 2D mesh instead
+- Achieves cache coherency through a **distributed directory (TD)**
+	- This is necessary to support the large number of cores
+- In multi-computer environments, the local machine's RAM will need to be updated with the host machine's RAM through PCIe, which can be a big bottleneck
+
+## Recap: Single Instruction Multiple Data (SIMD)
+![](Pasted%20image%2020230425125156.png)
+## General Purpose Computing with GPUs (GPGPU)
+![](Pasted%20image%2020230425125704.png)
+- GPU architectures are based on long arrays of cores executing the same instructions over large series of data. It's like SIMD, but even more aggressive (which would not come as a surprise considering Intel's first vector extension, MMX, was specifically made for tasks that GPUs commonly execute nowadays such as video playback and 3D rendering)
+- GPUs offer the best raw performance and efficiency. For example, the NVIDIA Volta V100 offers:
+	- Peak performance of more than 7 TFLOP/s
+	- Relatively low power usage of 300W
+	- Extremely high power efficiency of more than 25 GFLOP/s/Watt
+
+However, there are limitations which stop GPUs from being used for every application.
+- Moving data from/to memory is **very** expensive
+	- Like with the Xeon Phi, large chunks of data need to be moved to start execution
+	- Again, newer versions of PCIe alleviate this
+	- More modern solutions will use custom high-performance interconnects (100s of GB/s)
+- The memory accessed by all the cores within an array needs to be consecutive (i.e. you need to have a flat buffer of data)
+	- If your data has any indirection at all (e.g. pointers) this becomes difficult
+- All of the cores execute the same instruction
+	- e.g. You are forced to execute control operations (`if`/`else`) on every core
+- Programming a GPU differs significantly from the standard sequential models used in CPUs
+	- Cuda, OpenCL, and others
+- Due to these limitations, certain workloads simply cannot be ported to a GPU (at least, not without destroying the efficiency)
