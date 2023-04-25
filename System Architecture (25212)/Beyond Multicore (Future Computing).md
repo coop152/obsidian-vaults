@@ -41,7 +41,7 @@ An average broadband internet connection
 #### Important Attributes of a Network on Chip
 - **Topology**: How the cores and networking elements are connected together (like a regular network topology)
 - **Routing**: How traffic moves through the topology (like regular network routing)
-- **Switching**: How traffic moves from one component to the next
+- **Switching**: How traffic moves from one component to the next (like regular network packet switching)
 
 ## Topologies
 #### Bus
@@ -56,4 +56,78 @@ An average broadband internet connection
 	- The time slots in-between those two are free for use by other components
 - Main **scalability issue** is the limited throughput
 	- The bandwidth of the bus is divided by the number of cores
+
+#### Crossbar
+![](Pasted%20image%2020230425110642.png)
+- This structure will connect N inputs to N outputs
+- Can transmit from any input to any output in **parallel**
+- Main **scalability issue** is the area and power scale growing quadratically to the number of nodes
+
+#### Tree
+![](Pasted%20image%2020230425110939.png)
+and **Fat Trees**
+![](Pasted%20image%2020230425111003.png)
+#### Ring
+![](Pasted%20image%2020230425111021.png)
+- Simple, but low bandwidth and variable latency
+- Used in the Cell processor in the PS3
+
+#### Mesh/Grid
+![](Pasted%20image%2020230425111239.png)
+- Reasonable bandwidth
+- Variable latency
+- Convenient for very large systems (in terms of physical layout)
+- Examples include:
+![](Pasted%20image%2020230425111351.png)
+## Routing
+#### Minimal vs non-minimal Routing
+**Minimal**:
+![](Pasted%20image%2020230425111448.png)
+- Always select the shortest path to a destination
+	- That is, packets will always move closer to their destination
+- Packets are more likely to be blocked in this scheme, as there is no variance in route
+
+**Non-minimal**:
+![](Pasted%20image%2020230425111658.png)
+- Packets can be diverted
+	- to avoid blocking and to keep traffic moving
+	- or, to entirely avoid congested areas
+- There is a risk of a livelock, if the packets find themselves in a circular loop of avoiding each other and never moving to the destination
+
+#### Oblivious vs Adaptive Routing
+**Oblivious**:
+![](Pasted%20image%2020230425111954.png)
+- Packets are unaware of the network state
+	- Can be deterministic, e.g. fixed path
+	- Can be non-deterministic, e.g. variable path, which requires more complex strategies
+- Results in a simpler router, which is deadlock-free
+- However, is prone to contention
+
+**Adaptive**:
+![](Pasted%20image%2020230425112421.png)
+- Packets are aware of the network state, and will adapt to avoid contention
+- Provides higher performance due to the lack of contention
+- However, is much more complex due to the required instrumentation, and is deadlock prone which requires even more hardware to remedy
+- This is barely used in Network on Chips
+
+## Switching
+![](Pasted%20image%2020230425112651.png)
+- Data is split into small packets, and each packet into **phits**
+- Some extra info is added to the packets to identify the data and to perform routing
+- This allows time-multiplexing of network resources, which generally leads to better performance (especially for short messages)
+- There are several packet switching strategies, e.g. Store and forward, cut-through, wormhole...
+
+#### Store and Forward
+![](Pasted%20image%2020230425113115.png)
+- A node will not forward a packet until all of its phits have arrived
+- Provides **on-the-fly failure detection**
+- However, is low performance (Latency = distance * phit count) and requires lots of buffering
+- Good for long, bursty transmissions (e.g. the internet) but not so much for a Network on Chip
+
+#### Cut-through/wormhole
+![](Pasted%20image%2020230425113345.png)
+- A node will forward a packet as soon as its header has arrived
+- Provides better performance (Latency = distance + phit count)
+- However, faults can only be detected at the final destination (this does mean less hardware at the intermediate nodes, though.)
+- 
 
