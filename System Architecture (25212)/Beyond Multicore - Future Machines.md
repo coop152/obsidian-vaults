@@ -25,3 +25,23 @@ All three of these terms are overloaded and commonly misused. Essentially, if a 
 - **Big Data Analytics**
 	- Analysing and extracting patterns from large, complex data sets
 	- Would only be done by a Datacentre
+
+#### Building a Cluster/Supercomputer/Datacentre
+- Large numbers of self contained computers in a **small form factor** (e.g. thin blades in a server rack)
+- Optimised for **cooling and power** efficiency, so many can be safely and efficiently put in server racks next to many others, in a single room
+![](Pasted%20image%2020230425121818.png)
+- Whole racks will house 1000s of cores
+- High redundancy on an individual device and a collective level, to increase fault tolerance
+	- Components in devices (e.g. hard drives, memory, processors) will be identical to allow fast and easy switching
+	- Devices themselves will essentially be able to act as drop-in replacements for each other, minimising downtime in the event of a fault
+- Normally also contain separate units for networking and power distribution (e.g. UPS's and a network switch for each rack)
+![](Pasted%20image%2020230425121840.png)
+- Many of these compute racks will be joined together. This needs:
+	- A network to connect them
+	- Power distribution
+	- Cooling
+	- Most likely, **dedicated storage** (likely network attached, one or multiple storage racks)
+- There will be some **frontend** node(s) that regular users will interact with
+	- These contain user functions (e.g. compile programs to be run, read out results, start a procedure, etc.) and take the load of user interaction off of the compute nodes
+
+These networks of devices can come together to make supercomputers/clusters that are essentially incomprehensible in scale. The most powerful supercomputer (as of time of writing) is the Frontier in the Oak Ridge National Laboratory in the US, with 8,730,112 total cores across all computers. It is capable of 1,685.65 PetaFLOP/s, while drawing 21.1 megawatts of power.
