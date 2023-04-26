@@ -13,8 +13,13 @@ Decision problems are problems with a yes or no output, e.g.
 
 The other kind of problem is an **optimisation problem**, where you try to find a value, for example Travelling Salesman.
 
+#### Decision vs Optimisation problems
+> Let $D(x, k)$ be a decision problem, and let $O(x)$ be an optimisation problem of the form "For some input $x$, find a maximal/minimal $k$ such that $D(x, k)$ holds".
+
+
+
 ## Reductions
-You have a decision problem $A$ and a verification problem $B$. If you can solve the verification problem $B$ using the decision problem $A$, then there are properties of both problems that you can infer based on the other.
+You have a problem $A$ and a problem $B$. If you can solve problem $B$ using problem $A$, then there are properties of both problems that you can infer based on the other.
 
 More formally, we can define it as such:
 > For two languages/problems $A$ and $B$, when we say "$A$ is reducible to $B$" it means that we can use $B$ to solve $A$. ($A \leq_p B$)
@@ -36,7 +41,7 @@ That gives these rules:
 ## Poly-time Mapping Reducibility
 > $A$ is "polynomial time mapping reducible" to B (that is, $A \leq_p B$) if there is a polynomial time function $f$ where $w \in A$ iff $f(w) \in B$.
 
-That is, if you can find a polynomial-time function which maps the set of valid inputs for $A$ exactly to the set of valid inputs for $B$, then $A$ is reducible to $B$.
+That is, if you can find a polynomial-time function which maps the set of solutions for $A$ exactly to the set of solutions for $B$, then $A$ is reducible to $B$. Non-solutions should also map to non-solutions.
 
 ## Abstract and Concrete Inputs
 In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
@@ -95,3 +100,4 @@ Another definition of the class NP is this:
 > A problem is in NP if there exists an algorithm that solves it in polynomial time on a nondeterministic machine.
 
 This is equivalent to the definition as before.
+
