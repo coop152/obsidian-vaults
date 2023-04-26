@@ -7,3 +7,13 @@
 ## Reductions
 You have two problems $A$ and $B$, and you know how to solve $B$.
 (this shit doesnt make sense)
+
+## Encodings
+#### Decision Problems
+Decision problems are problems with a yes or no output, e.g.
+- Is element $e$ in list $L$? `SEARCH(e, L)`
+- Is there a path from nodes $u$ to $v$ in a directed graph $G$, with at most $k$ edges? `PATH(G, u, v, k)`
+- Does a boolean combinatorial circuit C have a set of inputs that make its output 1? `CIRCUIT-SAT(C)`
+
+The other kind of problem is an **optimisation problem**, where you try to find a value, for example Travelling Salesman.
+
