@@ -4,6 +4,10 @@
 - **NP-Hard**: Problems that are at least as hard as every problem in **NP**.
 - **NP-Complete**: Problems that are in both **NP** and **NP-Hard**.
 
+All of the classes are related like this:
+![](Pasted%20image%2020230426130826.png)
+(NP-Hard left off, just because)
+
 ## Encodings
 #### Decision Problems
 Decision problems are problems with a yes or no output, e.g.
@@ -12,11 +16,6 @@ Decision problems are problems with a yes or no output, e.g.
 - Does a boolean combinatorial circuit C have a set of inputs that make its output 1? `CIRCUIT-SAT(C)`
 
 The other kind of problem is an **optimisation problem**, where you try to find a value, for example Travelling Salesman.
-
-#### Decision vs Optimisation problems
-> Let $D(x, k)$ be a decision problem, and let $O(x)$ be an optimisation problem of the form "For some input $x$, find a maximal/minimal $k$ such that $D(x, k)$ holds".
-
-
 
 ## Reductions
 You have a problem $A$ and a problem $B$. If you can solve problem $B$ using problem $A$, then there are properties of both problems that you can infer based on the other.
@@ -38,10 +37,22 @@ That gives these rules:
 - If you can find a hard problem $A$ that reduces to another problem $B$, then you know that $B$ is also hard.
 - If you can find an easy problem $B$ that another problem $A$ reduces to, then you know that $A$ is also easy.
 
-## Poly-time Mapping Reducibility
+#### Poly-time Mapping Reducibility
 > $A$ is "polynomial time mapping reducible" to B (that is, $A \leq_p B$) if there is a polynomial time function $f$ where $w \in A$ iff $f(w) \in B$.
 
 That is, if you can find a polynomial-time function which maps the set of solutions for $A$ exactly to the set of solutions for $B$, then $A$ is reducible to $B$. Non-solutions should also map to non-solutions.
+
+#### Decision vs Optimisation problems
+> Let $D(x, k)$ be a decision problem, and let $O(x)$ be an optimisation problem of the form "For some input $x$, find a maximal/minimal $k$ such that $D(x, k)$ holds".
+
+For a concrete example, consider `CLIQUE` and `OPTCLIQUE`:
+> CLIQUE(G, k) is the decision problem that decides if a graph G contains a clique of size k.
+> OPTCLIQUE(G) is the optimisation problem that computes the largest clique in G and returns it's size k.
+
+Since we are using CLIQUE to solve OPTCLIQUE, we can say that OPTCLIQUE reduces to CLIQUE.
+However, if we can solve OPTCLIQUE then we can also definitely solve CLIQUE; run OPTCLIQUE and return true if the answer is equal to k. Since you can use OPTCLIQUE to solve CLIQUE, we can also say that CLIQUE reduces to OPTCLIQUE.
+In this case, both problems must be the same difficulty.
+(Note that decision problems will never be harder than the associated optimisation problems.)
 
 ## Abstract and Concrete Inputs
 In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
@@ -101,3 +112,13 @@ Another definition of the class NP is this:
 
 This is equivalent to the definition as before.
 
+## What is the class NP-Complete?
+> A problem given by language $L$ is NP-Complete (or NPC) if:
+> 1. $L \in NP$
+> 2. Every problem in $NP$ can be reduced to $L$ ($L' \leq_p L \text{ for all } L' \in NP$)
+
+(Note: if 1. is not true but 2 is, then the problem is NP-Hard instead of NP-Complete)
+
+The obvious problem here is that there are infinitely many problems in NP, so proving a problem NP-Complete ought to be impossible.
+This can be solved by using a useful property of the $\leq_p$ operator. As it is transitive, we can show that $L$ is reduced to by everything in NP by showing that L is **reduced to by an existing NPC problem**. That is, $A \leq_p L \text{ for some } A \in NPC$.
+This still doesn't solve the issue, because that requires at least one problem to be proven NP-Complete by other means first. So how do you show the first NP-Complete problem? You achieve this using the **Cook-Levin Theorem** (which is in next week's content).
