@@ -6,3 +6,4 @@
 
 ## Reductions
 You have two problems $A$ and $B$, and you know how to solve $B$.
+(this shit doesnt make sense)
