@@ -61,3 +61,15 @@ Aside: SAT is the **canonical NP-Complete problem** - that is, it was the first 
 > Given a set $B$ of 2-clauses over variables $V$, is there an assignment $A$ of truth values to $V$ that makes each clause in $B$ true?
 
 Solving the regular SAT problem is exponential in terms of the number of variables, making it **NP**. 3-SAT is also **NP**, though not in the same manner. 2-SAT is **P**, which means that you **can not** reduce SAT or 3-SAT problems to 2-SAT problems.
+#### NP as Polynomial-time Verification
+A verification algorithm $A$ for a problem takes an input $x$ and a certificate $y$ such that
+![](Pasted%20image%2020230426115936.png)
+Formally, the definition is this:
+> ![](Pasted%20image%2020230426120144.png)
+> (There should be a closing bracket after the $|x|^c$.)
+
+#### NP as Nondeterministic Computation
+A nondeterministic machine is a theoretical machine that can try all possible computations at the same time.
+Another definition of the class NP is this:
+> A problem is in NP if there exists an algorithm that solves it in polynomial time on a nondeterministic machine.
+
