@@ -17,3 +17,6 @@ Decision problems are problems with a yes or no output, e.g.
 
 The other kind of problem is an **optimisation problem**, where you try to find a value, for example Travelling Salesman.
 
+## Abstract and Concrete Inputs
+In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
+We use a standard encoding of integers and lists to a binary representation so we can serialise anything and encode it. As long as any encoding we use is **polynomially related** to these standard encodings, then our results will hold.
