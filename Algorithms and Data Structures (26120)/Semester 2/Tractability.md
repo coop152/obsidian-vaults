@@ -4,10 +4,6 @@
 - **NP-Hard**: Problems that are at least as hard as every problem in **NP**.
 - **NP-Complete**: Problems that are in both **NP** and **NP-Hard**.
 
-## Reductions
-You have two problems $A$ and $B$, and you know how to solve $B$.
-(this shit doesnt make sense)
-
 ## Encodings
 #### Decision Problems
 Decision problems are problems with a yes or no output, e.g.
@@ -16,6 +12,31 @@ Decision problems are problems with a yes or no output, e.g.
 - Does a boolean combinatorial circuit C have a set of inputs that make its output 1? `CIRCUIT-SAT(C)`
 
 The other kind of problem is an **optimisation problem**, where you try to find a value, for example Travelling Salesman.
+
+## Reductions
+You have a decision problem $A$ and a verification problem $B$. If you can solve the verification problem $B$ using the decision problem $A$, then there are properties of both problems that you can infer based on the other.
+
+More formally, we can define it as such:
+> For two languages/problems $A$ and $B$, when we say "$A$ is reducible to $B$" it means that we can use $B$ to solve $A$. ($A \leq_p B$)
+
+For example, 
+(A): You are lost in a city and you need to find your way back to your hotel.
+(B): You need to find a map of the city.
+If you can find a map to the city, then you can find your hotel; you can reduce A to B.
+Finding your hotel cannot be "harder" than finding a map; if you've found a map then you can always find your hotel.
+**If finding a map is easy, then finding the hotel must be easy. If finding the hotel is hard then finding a map must be hard.**
+That said, if finding the hotel is easy then we can't say much about the difficulty of finding a map. (Finding the map must be *at least* as hard as finding the hotel, but it could be much harder; perhaps you didn't even bother finding a map and just asked for directions instead)
+Similarly, if finding a map is hard then we can't say much about the difficulty of finding the hotel. (Finding the hotel is at most as hard as finding a map, but there might be an easier way).
+In summary, The reducible problem ($A$) is **at most as hard as** the problem it is reduced to ($B$), but it may be easier. The problem that it is reduced to ($B$) is **at least as hard as** the reducible problem ($A$), but it may be harder.
+(There is a visualisation in the video that might be useful, video 4 around 4 mins)
+That gives these rules:
+- If you can find a hard problem $A$ that reduces to another problem $B$, then you know that $B$ is also hard.
+- If you can find an easy problem $B$ that another problem $A$ reduces to, then you know that $A$ is also easy.
+
+## Poly-time Mapping Reducibility
+> $A$ is "polynomial time mapping reducible" to B (that is, $A \leq_p B$) if there is a polynomial time function $f$ where $w \in A$ iff $f(w) \in B$.
+
+That is, if you can find a polynomial-time function which maps the set of valid inputs for $A$ exactly to the set of valid inputs for $B$, then $A$ is reducible to $B$.
 
 ## Abstract and Concrete Inputs
 In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
