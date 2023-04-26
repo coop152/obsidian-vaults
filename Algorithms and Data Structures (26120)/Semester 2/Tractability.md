@@ -73,3 +73,4 @@ A nondeterministic machine is a theoretical machine that can try all possible co
 Another definition of the class NP is this:
 > A problem is in NP if there exists an algorithm that solves it in polynomial time on a nondeterministic machine.
 
+This is equivalent to the definition as before.
