@@ -44,3 +44,20 @@ to this:
 ## What is the class NP?
 #### An example - The Vertex Cover Problem
 > Given a graph $G = (V, E)$ and an integer $k$, is there a subset $C \subseteq V$ such that $|C| \leq k$ and for every $(u, v) \in E$ either $u \in C$ or $v \in C$?
+
+We can check if some $C$ is a solution in $O(kn)$ - just check that each edge has an end in C.
+Therefore, a brute-force algorithm can check all $2^n$ subsets of $V$ to see if such a subset exists.
+This solution $C$ is a **polynomial-time verifiable certificate** for the vertex cover problem. 
+#### More examples - SAT problems
+> **SAT Problem**
+> Given a boolean expression $B$ over variables $V$, does there exist an assignment $A$ of truth values to $V$ that makes $B$ true?
+
+Aside: SAT is the **canonical NP-Complete problem** - that is, it was the first problem to be proven NP-Complete.
+
+> **3-SAT Problem**
+> Given a set $B$ of 3-clauses over variables $V$, is there an assignment $A$ of truth values to $V$ that makes each clause in $B$ true?
+
+> **2-SAT Problem**
+> Given a set $B$ of 2-clauses over variables $V$, is there an assignment $A$ of truth values to $V$ that makes each clause in $B$ true?
+
+Solving the regular SAT problem is exponential in terms of the number of variables, making it **NP**. 3-SAT is also **NP**, though not in the same manner. 2-SAT is **P**, which means that you **can not** reduce SAT or 3-SAT problems to 2-SAT problems.
