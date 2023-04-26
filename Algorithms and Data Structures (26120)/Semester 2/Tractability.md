@@ -21,8 +21,26 @@ The other kind of problem is an **optimisation problem**, where you try to find 
 In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
 We use a standard encoding of integers and lists to a binary representation so we can serialise anything and encode it. As long as any encoding we use is **polynomially related** to these standard encodings, then our results will hold.
 
+Note that the encoding of numbers is logarithmic in their value. The binary encoding of a number $n$ takes $k = \log_2{n}$ bits. Therefore, an algorithm that is linear in $n$ is exponential in $k$:
+$$O(n) = O(2^k)$$
+For example, consider primality checking - this is linear in the value.
+Dynamic programming solutions often give solutions that are linear in the **value** of the input, not its size.
+This is called **pseudo-polynomial**.
 ## Language of a Decision Problem
 With our standard encodings, we can assume that all inputs are binary strings. 
 With this, an alternative interpretation of a decision problem is therefore the set of binary strings where the answer is 1. This is the **language** of the decision problem.
 The same name is often used to refer to a problem and its language:
 ![](Pasted%20image%2020230426110908.png)
+## What is the class P?
+There is some algorithm $A$ which takes a bitstring $x$ and either accepts ($A(x) = 1$) or rejects ($A(x) = 0$) it.
+The language $L$ is **decided by** $A$ if $A(x) = 1$ for all bitstrings $x$ in $L$, and $A(x) = 0$ otherwise.
+It is decided in polynomial time if there exists a constant $k$ such that for any $n$-length bitstring $x$ in $L$, the algorithm $A$ runs in time $O(n^k)$.
+By this definition, we can formalise the informal definition:
+> A problem is in $P$ if it is solvable in polynomial time
+
+to this:
+> ![](Pasted%20image%2020230426112124.png)
+
+## What is the class NP?
+#### An example - The Vertex Cover Problem
+> Given a graph $G = (V, E)$ and an integer $k$, is there a subset $C \subseteq V$ such that $|C| \leq k$ and for every $(u, v) \in E$ either $u \in C$ or $v \in C$?
