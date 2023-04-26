@@ -20,3 +20,9 @@ The other kind of problem is an **optimisation problem**, where you try to find 
 ## Abstract and Concrete Inputs
 In the descriptions of problems, our inputs are **abstractly defined**. When making an algorithm, we need a **concrete** representation of our inputs, i.e. and actual representation that could be applied in a computer program.
 We use a standard encoding of integers and lists to a binary representation so we can serialise anything and encode it. As long as any encoding we use is **polynomially related** to these standard encodings, then our results will hold.
+
+## Language of a Decision Problem
+With our standard encodings, we can assume that all inputs are binary strings. 
+With this, an alternative interpretation of a decision problem is therefore the set of binary strings where the answer is 1. This is the **language** of the decision problem.
+The same name is often used to refer to a problem and its language:
+![](Pasted%20image%2020230426110908.png)
