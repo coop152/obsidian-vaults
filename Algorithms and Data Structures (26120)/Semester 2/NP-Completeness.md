@@ -1,2 +1,2 @@
-## Some NP-Complete Problems
-#### SAT
+## Levin-Cook Theorem
+We need to prove that SAT is NP-Complete in order to prove that anything else is. This is because (the easy method of) proving a problem is NP-Complete requires showing that the problem can be made by reducing another NP-Complete problem. Therefore, we need at least one NP-Complete problem to be proven another way.
