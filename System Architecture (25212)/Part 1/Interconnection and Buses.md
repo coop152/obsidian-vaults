@@ -9,7 +9,7 @@ A single shared bus is simple, and it scales to more chips easily, but it become
 ![](Pasted%20image%2020230509112353.png)
 A crossbar offers parallelism which improves performance vs a single bus, but it scales very badly to larger amounts of chips ($O(n^2)$ with regards to the number of chips):
 ![](Pasted%20image%2020230509112412.png)
-Network on a Chip is a rectangular grid pattern well suited to a silicon layout.
+Network on a Chip is a rectangular grid pattern well suited to a silicon layout. Offers improved performance over a shared bus, but doesn't scale as badly as crossbar. Is more architecturally complex, however:
 ![](Pasted%20image%2020230509112526.png)
 
 ## Bytes and Words
@@ -31,13 +31,14 @@ Network on a Chip is a rectangular grid pattern well suited to a silicon layout.
 	- The width of a bus is the size of a data transfer
 - Misaligned operations will be slower, or maybe even malfunction
 	- Therefore, keep data at appropriate addresses that lie on the right boundaries
-	- Depending on the ISA, this also applies to code
+	- Depending on the ISA, this also applies to the code itself (e.g. x86 with its variable length instructions)
 Imagine trying to read something from memory that is contained in two separate words. You can only address one of the words at a time; you need to do two reads and then stitch the results together to get what you wanted!
+![](Pasted%20image%2020230509112852.png)
 Some ISAs may not even try to give you the result you wanted; if you do an unaligned read on arm, it will simply shift the first word it received from memory such that you can access the least significant byte. Not good if you expected all 4 of those bytes.
 
 #### Code Alignment
-- Some architectures may enforce this. e.g. RISC architectures with fixed length instructions
-- However, some others with variable length operations can't feasibly do it. e.g. x86. Compilers may still try, though.
+- Some architectures may enforce code to be aligned to word boundaries. e.g. RISC architectures with fixed length instructions
+- However, some others with variable length operations can't feasibly do it. e.g. x86 with its variable length instructions. Compilers may still try though, as there is a performance gain to be had.
 
 ## Endianness
 The order that bytes are arranged in a word.
