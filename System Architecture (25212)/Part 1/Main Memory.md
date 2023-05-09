@@ -15,9 +15,9 @@ Applications include:
 - Buffer memory in interfaces (e.g. USB, Ethernet)
 - Temporary storage in hardware (e.g. FSMs)
 - And others.
-SRAM is a standard architectural component.
+As you can see, SRAM is a standard architectural component with a wide variety of usecases.
 ## Multi-port SRAM
-SRAM macrocells with many buses, capable of simultaneous access are feasible.
+It is feasible to make "macrocells" of SRAM with many buses, which are capable of simultaneous access.
 However, the cost is high:
 - Area per bit may be doubled (due to the duplicated wiring)
 - Energy per access is also increased
@@ -29,14 +29,15 @@ Bigger memories require longer wires, so they're slower and more power-hungry. T
 The usual logical representation of RAM is quite "long and thin"; you generally imagine it as one long contiguous string of data. In reality, the physical construction of ram is closer to a square: (logical model on the right, "real" shape on the left)
 ![](Pasted%20image%2020230216134343.png)
 ## Content Addressable Memory (CAM)
-Also known as "associative memory". In RAM, an address is the input and some data is the output. In CAM, the data is the input and the address is the output.
+Also known as "associative memory".
+In RAM, an address is the input and some data is the output. In CAM, the data is the input and the address is the output.
 As it has a different function to RAM, it is only used for special use cases such as:
 - Highly associative caches
 - Packet routing in networks
 - AI/ML acceleration
 ## Dynamic RAM (DRAM)
 - Not completely randomly accessible.
-- Very compact, best bits/area of all kinds of 'RAM'.
+- Very compact, best bits per unit area of any kind of 'RAM'.
 - Moderate power usage.
 - Volatile, **and** must be continuously refreshed to hold data
 - Requires a specialised manufacturing process, can not be made with regular logic gates

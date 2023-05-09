@@ -42,21 +42,24 @@ Some ISAs may not even try to give you the result you wanted; if you do an unali
 
 ## Endianness
 The order that bytes are arranged in a word.
+![](Pasted%20image%2020230509113226.png)
 **Little Endian**: Least significant byte at the lowest address.
 **Big Endian**: Most significant byte at the lowest address.
-Becomes confusing when mixing transfer sizes
-
+Becomes confusing when mixing transfer sizes.
+> [!TIP]
+> Little Endian has the "little end first" - that is, the small end of the number comes before the rest.
+> Big Endian has the "big end first" - that is, the big end of the number comes before the rest.
 ## Von Neumann & Others
-Most mainstream processors are von Neumann. At least, from a software perspective; Not always at an architectural level.
+Most mainstream processors are von Neumann. At least, from a software perspective; This doesn't always extend to the architectural level.
 Harvard architectures have separate address spaces, e.g. Code, Data, Constants.
-A common approach is to present a Harvard interface to the processor, but keep a von Neumann model for the programmer. The memory has a "soft" partition that can be moved. This allows the flexibility of von Neumann for the programmer with some of the improved performance of Harvard,
-(IMAGE OF THE NEUMANN/HARVARD CACHE THING FROM THE SLIDES)
+A common approach is to present a Harvard interface to the processor, but keep a von Neumann model for the programmer. The memory has a "soft" partition that can be moved. This allows the flexibility of von Neumann for the programmer with some of the improved performance of Harvard.
+![](Pasted%20image%2020230509113658.png)
 
 ## System Buses
-(IMAGE OF NORTHBRIDGE DIAGRAM FROM THE SLIDES)
-- The buses form a hierarchy with the memory
-	- Wide buses to increase bandwidth
-	- Slower I/O is lower down the hierarchy, past more buses and bridges
+![](Pasted%20image%2020230509113719.png)
+- The buses (alongside the memory/cache) form a hierarchy that delivers higher speed to components that need it while reducing overall cost:
+	- Wide, fast (and expensive) buses connect the components that require it (e.g. RAM, PCI-e devices)
+	- Slower I/O is lower down the hierarchy, past more buses and bridges. This reduces cost, while keeping full functionality for these low-bandwidth devices.
 
 ## Recap: Info carried by Buses
 - Operation

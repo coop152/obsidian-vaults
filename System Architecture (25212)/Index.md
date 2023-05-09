@@ -1,4 +1,4 @@
-![](Pasted%20image%2020230509112155.png)## First Half Website Links
+## First Half Website Links
 - [Course Overview](https://online.manchester.ac.uk/bbcswebdav/pid-13877526-dt-content-rid-132936572_1/courses/I3132-COMP-25212-1221-2SE-001895/html/intro.html)
 - [Moore's Law](https://online.manchester.ac.uk/bbcswebdav/pid-13877526-dt-content-rid-132936572_1/courses/I3132-COMP-25212-1221-2SE-001895/html/Moore.html)
 - [Addressing](https://online.manchester.ac.uk/bbcswebdav/pid-13877526-dt-content-rid-132936572_1/courses/I3132-COMP-25212-1221-2SE-001895/html/addressing.html)
