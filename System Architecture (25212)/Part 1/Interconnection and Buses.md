@@ -1,16 +1,16 @@
 ## Interconnection
 In this example, "bus" refers to the logical bundle of connections between the processor(s) and memory. e.g. address line, read and write lines or data line, enable line.
 
-(IMAGE FROM "Buses" SLIDE GOES HERE, add definitions for the words)
+![](Pasted%20image%2020230509112322.png)
 
 In general, a bus is a bundle of connections that connect many components together, for example the buses connecting the processors to memory, IO, the DMA controller, the graphics system (i.e. GPU).
 
-A single bus is simple, and it scales to more chips easily, but it becomes a bottleneck due to the number of chips sharing it.
-(IMAGE OF SINGLE BUS FROM SLIDES)
-A crossbar offers better parallelism than a single bus, but it scales very badly to larger amounts of chips ($O(n^2)$ with regards to the number of chips).
-(IMAGE OF CROSSBAR FROM SLIDES)
+A single shared bus is simple, and it scales to more chips easily, but it becomes a bottleneck due to the number of chips sharing it:
+![](Pasted%20image%2020230509112353.png)
+A crossbar offers parallelism which improves performance vs a single bus, but it scales very badly to larger amounts of chips ($O(n^2)$ with regards to the number of chips):
+![](Pasted%20image%2020230509112412.png)
 Network on a Chip is a rectangular grid pattern well suited to a silicon layout.
-(IMAGE OF NoC FROM SLIDES)
+![](Pasted%20image%2020230509112526.png)
 
 ## Bytes and Words
 - A byte is usually the smallest addressable unit (for example, in ARM)
