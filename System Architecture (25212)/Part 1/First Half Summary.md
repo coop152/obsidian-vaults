@@ -19,7 +19,7 @@ Keep some subset of data in a 'close', fast store. Performance depends significa
 - Web browsers (caching in software)
 - Recently used files in software ('caching' for the user)
 ## Speculation
-Try and predict the future, in order to prepare for the most likely case and improve performance.
+Try and predict future events, in order to prepare for the most likely case and improve performance.
 - Instruction prefetch
 	- Relies on the fact that most instruction fetches will be sequential
 	- Improved by **branch prediction**, which deduces the fetch path from the past behaviour of the program
@@ -27,9 +27,9 @@ Try and predict the future, in order to prepare for the most likely case and imp
 If the speculation is wrong it will cost performance, but if it's right performance will improve. 
 ## Lazy vs Eager
 - Lazy - don't start on something until it's needed.
-	- Efficient in effort, but can have poor latency
+	- Efficient in effort, but can have poor latency.
 - Eager - Try and do things before they're needed.
-	- Typically reduces latency, but may waste effort is something isn't required after all.
+	- Typically reduces latency, but may waste effort if something isn't required after all.
 	- May also do the 'wrong' thing, depending on what's being done eagerly.
 ## Synchronisation
 Important to present information in the original order, regardless of if it was calculated in that order or not. Examples include:
