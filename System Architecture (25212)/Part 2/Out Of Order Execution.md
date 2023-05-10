@@ -73,9 +73,9 @@ With a pipeline like this:
 ![](Pasted%20image%2020230313111954.png)
 
 #### Stages
-1. Issue (ID) - Decode the instructions and check for structural (or write after write) hazards. If a suitable functional unit is free (there are no structural hazards) and no other instruction has the same destination register (no write after write), then the scoreboard issues the instruction to the FU and updates its info. If a hazard **does** exist, then the issue stalls and no further instructions will issue until the hazards are cleared. **This stage is always done in program order.**
+1. Issue (ID) - Decode the instructions and check for structural (or write after write) hazards. If a suitable functional unit is free (there are no structural hazards) and no other instruction has the same destination register (no write after write), then the scoreboard issues the instruction to the functional unit and updates its info. If a hazard **does** exist, then the issue stalls and no further instructions will issue until the hazards are cleared. **This stage is always done in program order.**
 2. Read operands (RO) - wait until there are no data hazards, then read the operands. An operand is available if no active instruction is going to write it (no Read after Write). **This stage can be done out of program order.**
-3. Execution (EX) - operate on the operands. The functional unit begins execution on the recieved operands. When the result is ready, it notifies the scoreboard. **This stage can be done out of program order.**
+3. Execution (EX) - operate on the operands. The functional unit begins execution on the received operands. When the result is ready, it notifies the scoreboard. **This stage can be done out of program order.**
 4. Writeback (WB) - Finish execution and write the results back. Once the functional unit completes execution, the scoreboard checks for Write after Read hazards. If there are none it writes the results, otherwise the stage is stalled and the functional unit stays busy. **This stage can be done out of program order.** For example:
 ![](Pasted%20image%2020230313112612.png)
 
