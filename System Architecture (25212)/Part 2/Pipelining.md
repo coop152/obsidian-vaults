@@ -95,3 +95,18 @@ With both methods of forwarding implemented, we get results like this:
 Forwarding is an example of something that gets less effective as the pipeline gets deeper; as the distance gets bigger between dependent steps, the forwarding gets more complicated and more stalls are introduced.
 A bigger example of no forwarding vs forwarding:
 ![](Pasted%20image%2020230309135127.png)
+## Summary
+There are two kinds of Hazard:
+- Control Hazards - If a branch instruction changes the flow of the program, some pipelined instructions will become invalid
+- Data Hazards - If one instruction depends on the result of another, it needs to wait for that data to be ready
+
+These hazards introduce "bubbles" in the pipeline. That is, they force the pipeline to stall the  execution of instructions, wasting cycles.
+
+To fix control hazards, you employ branch prediction such as a BTB. There is no penalty when a branch is guessed correctly (the pipeline can just continue, as the correct instructions were already being executed), so increasing the likelihood of the initial guess being correct will eliminate control hazards.
+
+To fix data hazards, you implement **forwarding** at various points of the pipeline, allowing the output of one stage to reach other stages that need it sooner. For example, the result of the EX stage (or the input to the MEM stage, depending on how you look at it) can be forwarded to the input of the next instruction's EX stage, eliminating any stalling for situations like this:
+```arm
+ADD r1, r2, r2
+SUB r2, r3, r1    ; data dependency on result of the last ADD
+```
+You cannot entirely remove stalling using forwarding; if the required result is simply too many stages ahead then there is nothing that can be done. Forwarding simply allows you to take an already complete result that hasn't propagated yet and give it a "shortcut"; if the result is not ready yet (i.e. it needs to be loaded from memory, but the dependent instruction is ready to perform a calculation with it) then there is nothing that can be done.
