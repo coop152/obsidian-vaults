@@ -242,3 +242,5 @@ The sender has this behaviour:
 ![](Pasted%20image%2020230511124432.png)
 And the snooping caches have this behaviour:
 ![](Pasted%20image%2020230511124446.png)
+## Directory Protocols
+Snooping protocols scale badly to large numbers of cores, due to the need to share a bus. Directory protocols 
