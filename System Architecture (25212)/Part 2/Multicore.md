@@ -138,3 +138,35 @@ Some other instances of hardware support for locks include:
 ![](Pasted%20image%2020230418123131.png)
 The ISA might also use **transactional memory**:
 ![](Pasted%20image%2020230418123227.png)
+## Coherence Protocols
+#### Snooping protocols
+Each individual cache listens continuously for any activity regarding its own cached addresses (for example, if another core has written to that address.) This allows the cache to keep *itself* coherent. This requires a **broadcast** communications structure; that is, communication must be visible to all, even if it is not intended for them. This typically takes the form of a bus.
+
+**Write Update:**
+1. A core wants to write to memory.
+2. The core grabs the bus for a cycle and broadcasts both the address and the new data, while also writing to its own cache.
+3. Every other cache snoops on this, and updates their copy (if they have one).
+4. Main memory **does not** need to be written to.
+
+**Write Invalidate:**
+1. A core wants to write to memory.
+2. The core grabs the bus for a cycle and broadcasts a "Write Invalidate" message containing the address it is writing to.
+3. Every other cache snoops on this, and invalidates their copy of that data (if they have one).
+4. The core then **writes to main memory**.
+5. Any other cores that try to read at that location will now get a cache miss and read from the up-to-date main memory.
+
+Update might seem preferable at first, as it doesn't need to write to main memory. However, there are significant downsides compared to write invalidate:
+- The messages are long
+	- Address + data, invalidate only needs the address
+- What if you repeatedly write the same memory location without reading? (common)
+	- Update sends a useless update for each write, invalidate only needs to send one message
+- What if you write to subsequent words in the same cache line without reading? (very common)
+	- Update sends many useless updates, invalidate sends just one message
+
+In real applications, Invalidate has been shown as the preferable method. Bus bandwidth is a precious commodity on multicore chips, and Update simply uses too much.
+
+A further optimisation for either of these methods is to store if a cache entry is **shared**; that is, if any other cores also hold it. A core can entirely avoid sending certain messages using this information, which saves on precious bandwidth. Another problem that can be solved is that the previously given description of an invalidate protocol requires writing back to memory, which is slow. We would prefer to use **copy back** (recap: only copy from cache to memory when a dirty line is displaced).
+A concrete implementation of Invalidate with both of these optimisations is the **MESI protocol**.
+#### MESI Protocol
+Also known as the **Illinois protocol**, this is a practical multicore invalidate protocol which attempts to minimise bus usage.
+It is designed to allow the usage of **copy back** instead of **write back**, meaning that the next level of memory is not updated until a dirty cache line is displaced.
