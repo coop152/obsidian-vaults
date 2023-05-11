@@ -71,15 +71,15 @@ How to divy up work? We could:
 ## Example Architectures
 This is the traditional structure of a single core computer:
 ![](Pasted%20image%2020230418120248.png)
-Along with being single-core, it also uses some older concepts such as the north/south bridges. A multicore system may look something like this:
+Along with being single-core, it also uses some older concepts such as the north/south bridges. A modern multicore system may look something like this:
 ![](Pasted%20image%2020230418120411.png)
 Note that the caches are layered, with L1 being core-specific and split between data and instructions, L2 being core specific but holding both types of data and L3 being a shared cache. The memory controller handles memory accesses.
 
 ## Data Coherency and Consistency
-When discussing memory access, it is important to make the distinction between the two ways that multicores may be used:
+When discussing memory access, it is important to make the distinction between the two ways that multiple cores may be used:
 - **Independent processes** - e.g. single threaded applications running as separate operating system processes
 	- Normally these do not share any data, as they as separate virtual memory spaces
-	- When they do, communication is explicit through I/O (storage, network) or other carefully managed means (messages)
+	- When they do, communication is explicit through I/O (storage, network) or other carefully managed means (messaging)
 - **Threads** - parallel parts of the same application which **share the same memory**. This is where problems arise:
 	- Memory coherency: ensure that changes are seen everywhere, on all cores
 	- Memory consistency: ensure that memory operations are ordered correctly
