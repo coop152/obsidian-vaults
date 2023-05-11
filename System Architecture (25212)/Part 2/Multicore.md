@@ -167,6 +167,78 @@ In real applications, Invalidate has been shown as the preferable method. Bus ba
 
 A further optimisation for either of these methods is to store if a cache entry is **shared**; that is, if any other cores also hold it. A core can entirely avoid sending certain messages using this information, which saves on precious bandwidth. Another problem that can be solved is that the previously given description of an invalidate protocol requires writing back to memory, which is slow. We would prefer to use **copy back** (recap: only copy from cache to memory when a dirty line is displaced).
 A concrete implementation of Invalidate with both of these optimisations is the **MESI protocol**.
-#### MESI Protocol
+## MESI Protocol
 Also known as the **Illinois protocol**, this is a practical multicore invalidate protocol which attempts to minimise bus usage.
 It is designed to allow the usage of **copy back** instead of **write back**, meaning that the next level of memory is not updated until a dirty cache line is displaced.
+This is achieved with a simple extension of the usual cache tags; In a regular copy back cache, there are 2 bits for invalid and dirty. Invalid is set if the current cache line is unusable, and dirty is set if the line must be committed to higher memory when it is evicted.
+MESI swaps these out for **4 distinct states** (still using just 2 bits):
+- Modified - This cache line has been modified, and is yet to be written to main memory. This also means that this is the only copy. (essentially the same as "dirty").
+- Exclusive - This cache line has **NOT** been modified, but it is the only cached copy.
+- Shared - This cache line contains **unmodified** data that is also present in other caches.
+- Invalid - This cache line contains invalid data and should not be used (same as with the regular cache.)
+
+Cache lines transition from one state to another as a result of **memory access events**. This may be from the cache's own core performing some memory operation, or from the cache snooping on bus activity and reacting to another cache's actions. The state of a cache line is only affected if the address of some event matches its own address.
+Here are some of the events described informally (state transition diagram comes later):
+#### Local Read Hit
+The core tried to read from the cache and the requested data was present.
+For this to occur, the cache line must have been in M, E or S (i.e. not invalid.)
+The cache can simply return the cached value to the core. There is no need to send a message or to change state.
+#### Local Read Miss
+The core tried to read from the cache but the requested data was not present.
+This means that either the line was not present in the cache at all or it was with state I.
+The cache must now send out a MEM_READ message along the bus. There are multiple possible outcomes of this:
+- No other cache has a copy
+	- The core waits for a response from main memory.
+	- When the value arrives, it is cached and marked as E (this core is the only owner.)
+- Another cache has an Exclusive (E) copy
+	- The cache with the copy snoops on the bus and sees the message, then sends the value down the bus.
+	- The memory access is cancelled, as it is not needed.
+	- The requesting core caches the sent value, and sets the state to S.
+	- The sending cache sets the state of the line to S (as the value is now shared).
+- Multiple caches have a Shared (S) copy.
+	- One of the caches with a copy snoops on the bus and sees the message, then sends the value down the bus.
+	- The memory access is cancelled, as it is not needed.
+	- The requesting core caches the sent value.
+	- The receiver sets the tag to S, and the other caches remain with their existing state of S.
+- Another cache has a Modified (M) copy.
+	- The cache with the copy snoops on the bus and sees the message, then sends the value down the bus.
+	- The memory access is cancelled, as it is not needed.
+	- The requesting core caches the sent value and gives it a state of S.
+	- **The sending core copies back the modified value to memory.**
+	- The sending core then sets the state of the cache line to S.
+
+#### Local Write Hit
+The core tried to write to the cache, and the value it wanted to change was already cached.
+This means the written cache line was either M, E or S.
+There are multiple possible outcomes:
+- The cache line is M - It is exclusive and has already been changed.
+	- Update the value in cache.
+	- No state change or message required.
+- The cache line is E - It is exclusive, but not changed.
+	- Update the value in cache.
+	- Change the state from E to M. No message is required.
+- The cache line is S - It is shared among other caches.
+	- The core broadcasts an **invalidate** across the bus.
+	- Snooping cores will invalidate their copies. (i.e. set the state to I)
+	- Update the value in the local cache.
+	- Change the state from S to M.
+
+#### Local Write Miss
+The core tried to write to the cache, but the value it wanted to change was not there.
+The core sends a **Read with intent to modify** (RWITM). There are multiple possible outcomes:
+- No other cache has a copy.
+	- Memory sends the data.
+	- The local cache saves the written value and sets the cache line's state to M.
+- Other caches have **non-dirty** (E or S) copies. 
+	- The snooping cores see the RWITM and invalidate their copies.
+	- The local cache saves the written value and sets the cache line's state to M.
+- Another cache has a **dirty** (M) copy.
+	- The snooping core with the dirty copy sees the RWITM and blocks the request.
+	- The snooping core **copies back** to memory, and sets the state of it's copy to I.
+	- The original core, having gotten no response, re-issues its RWITM. This is now identical to the first case (no other cache has a copy).
+
+#### In the form of state transition diagrams
+The sender has this behaviour:
+![](Pasted%20image%2020230511124432.png)
+And the snooping caches have this behaviour:
+![](Pasted%20image%2020230511124446.png)
