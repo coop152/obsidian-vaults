@@ -271,4 +271,6 @@ With this system, most operations require **more messages**. However, since thes
 
 #### Distributed Directory
 While directory does remove the centralised bottleneck of the shared bus, it introduces another one in the form of the directory itself. This can limit performance in much the same way.
-Therefore, many highly multi-core systems (e.g. TILERA, Xeon Phi) employ **multiple directories**
+Therefore, many highly multi-core systems (e.g. TILERA, Xeon Phi) employ **multiple directories**:
+![](Pasted%20image%2020230512101122.png)
+This requires adding a "home" number to each cache line, indicating in which directory the information for that line is stored. The protocol is the same apart from this
