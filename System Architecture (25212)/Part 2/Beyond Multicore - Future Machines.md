@@ -15,7 +15,7 @@ See how the benefit of multiple processors wanes when even a small portion of a 
 ![](Pasted%20image%2020230425120620.png)
 However, this law is somewhat misleading. $S$ (the proportion of code that is strictly serial) is usually a constant amount, while $P$ depends on the size of the input data. Therefore, if you want more parallelism, **increase your dataset**.
 ## Clusters, Datacentres and Supercomputers
-All three of these terms are overloaded and commonly misused. Essentially, if a computer has lots of CPUs and lots of motherboards, someone will call it one of the three. The actual distinction *is* becoming increasingly blurred. The applications for all three generally include:
+All three of these terms are overloaded and commonly misused. Essentially, if a computer has lots of CPUs and lots of motherboards, someone will call it one of the three (though the actual distinction *is* becoming increasingly blurred.) The applications for all three generally include:
 - **High Performance Computing**
 	- Running one large task as quickly as possible
 	- Generally done by Supercomputers, and (to some extent) clusters
@@ -40,7 +40,7 @@ All three of these terms are overloaded and commonly misused. Essentially, if a 
 	- A network to connect them
 	- Power distribution
 	- Cooling
-	- Most likely, **dedicated storage** (likely network attached, one or multiple storage racks)
+	- Most likely, **dedicated storage** (likely network attached, with one or multiple storage racks)
 - There will be some **frontend** node(s) that regular users will interact with
 	- These contain user functions (e.g. compile programs to be run, read out results, start a procedure, etc.) and take the load of user interaction off of the compute nodes
 
