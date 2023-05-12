@@ -34,7 +34,6 @@ SDRAM is good for big memories with burst access but it's harder to use.
 
 ## Associativity
 #### Fully associative cache
-
 The simple view of a cache with N entries is that it can cache N completely different and unrelated items. This is called **fully associative**. However, this is expensive; each lookup requires a search of the entire tag table which is $O(n)$.
 ![](Pasted%20image%2020230509114720.png)
 
@@ -44,9 +43,9 @@ An alternative view of caching, that simplifies the implementation. Any particul
 
 ## Cache misses
 Common classifications:
-- Compulsory misses: The data wasn't used previously.
-- Capacity misses: The cache is full, and more space is needed.
-- Conflict misses: The architecture of the cache limits the tags that may be stored.
+- Compulsory misses: The data you're looking for wasn't used previously. **Will always occur** no matter the cache implementation, since the cache starts out empty when a program is first executed.
+- Capacity misses: The cache is full, and more space was needed. Therefore, the data you were looking for was evicted.
+- Conflict misses: The architecture of the cache limits the tags that may be stored. Therefore, the data you wanted was evicted to store something else, even though the cache may not be full.
 	- These don't occur in fully associative caches
 	- They occur frequently in direct mapped caches
 
