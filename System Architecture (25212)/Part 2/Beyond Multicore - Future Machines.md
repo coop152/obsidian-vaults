@@ -78,11 +78,11 @@ Trends in supercomputers show:
 ![](Pasted%20image%2020230425125156.png)
 ## General Purpose Computing with GPUs (GPGPU)
 ![](Pasted%20image%2020230425125704.png)
-- GPU architectures are based on long arrays of cores executing the same instructions over large series of data. It's like SIMD, but even more aggressive (which would not come as a surprise considering Intel's first vector extension, MMX, was specifically made for tasks that GPUs commonly execute nowadays such as video playback and 3D rendering)
+- GPU architectures are based on long arrays of cores executing the same instructions over large series of data. It's like SIMD, but even more aggressive (which does not come as a surprise considering Intel's first vector extension, MMX, was specifically made for tasks such as video playback and 3D rendering that GPUs commonly execute nowadays)
 - GPUs offer the best raw performance and efficiency. For example, the NVIDIA Volta V100 offers:
-	- Peak performance of more than 7 TFLOP/s
-	- Relatively low power usage of 300W
-	- Extremely high power efficiency of more than 25 GFLOP/s/Watt
+	- Peak performance of more than **7 TFLOP/s**
+	- Relatively low power usage of **300W**
+	- Extremely high power efficiency of more than **25 GFLOP/s/Watt**
 
 However, there are limitations which stop GPUs from being used for every application.
 - Moving data from/to memory is **very** expensive
@@ -95,4 +95,4 @@ However, there are limitations which stop GPUs from being used for every applica
 	- e.g. You are forced to execute control operations (`if`/`else`) on every core
 - Programming a GPU differs significantly from the standard sequential models used in CPUs
 	- Cuda, OpenCL, and others
-- Due to these limitations, certain workloads simply cannot be ported to a GPU (at least, not without destroying the efficiency)
+- Due to these limitations, certain workloads simply cannot be ported to a GPU (at least, not without destroying the efficiency and defeating the point of using the GPU)
