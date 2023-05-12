@@ -273,4 +273,19 @@ With this system, most operations require **more messages**. However, since thes
 While directory does remove the centralised bottleneck of the shared bus, it introduces another one in the form of the directory itself. This can limit performance in much the same way.
 Therefore, many highly multi-core systems (e.g. TILERA, Xeon Phi) employ **multiple directories**:
 ![](Pasted%20image%2020230512101122.png)
-This requires adding a "home" number to each cache line, indicating in which directory the information for that line is stored. The protocol is the same apart from this
+This requires adding a "home" number to each cache line, indicating in which directory the information for that line is stored. There is still no shared bus, meaning that cores are still only connected to one directory; therefore if a cache line's info is in a different directory than the one the core is connected to, it will have to wait for an extra hop while it's messages are redirected to the correct one. Other than this the protocol is the same.
+
+## Snooping vs Directory
+In summary, the protocols differ in these ways:
+![](Pasted%20image%2020230512101948.png)
+
+## False Sharing
+This is an undesirable, inherent behaviour that is present with all architectures and coherence protocols.
+This occurs when two cores are using **different words** on **the same** cache line.
+When one core writes to its word, it invalidates the other core's copy. (Depending on the protocol it may update instead, but the penalty will be large in either case).
+![](Pasted%20image%2020230512102052.png)
+This can cause another form of **cache thrashing**, significantly harming performance!
+- If the two cores are continuously modifying their values, the cache line will be continuously switching ownership from one to the other.
+- Every time, the other core's cache line will be invalidated or updated
+
+This problem cannot be solved with an architecture or protocol change. It is something that parallel compilers must be aware of when choosing the locations of data in memory.
