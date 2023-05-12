@@ -282,7 +282,7 @@ In summary, the protocols differ in these ways:
 ## False Sharing
 This is an undesirable, inherent behaviour that is present with all architectures and coherence protocols.
 This occurs when two cores are using **different words** on **the same** cache line.
-When one core writes to its word, it invalidates the other core's copy. (Depending on the protocol it may update instead, but the penalty will be large in either case).
+When one core writes to its word, it invalidates the other core's cache line. (Depending on the protocol it may update instead, but the penalty will be large in either case).
 ![](Pasted%20image%2020230512102052.png)
 This can cause another form of **cache thrashing**, significantly harming performance!
 - If the two cores are continuously modifying their values, the cache line will be continuously switching ownership from one to the other.
