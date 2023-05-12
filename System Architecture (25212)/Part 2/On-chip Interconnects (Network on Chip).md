@@ -61,7 +61,7 @@ An average broadband internet connection
 ![](Pasted%20image%2020230425110642.png)
 - This structure will connect N inputs to N outputs
 - Can transmit from any input to any output in **parallel**
-- Main **scalability issue** is the area and power scale growing quadratically to the number of nodes
+- Main **scalability issue** is the area and power scale growing **quadratically** to the number of nodes
 
 #### Tree
 ![](Pasted%20image%2020230425110939.png)
