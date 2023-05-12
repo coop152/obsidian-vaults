@@ -243,4 +243,32 @@ The sender has this behaviour:
 And the snooping caches have this behaviour:
 ![](Pasted%20image%2020230511124446.png)
 ## Directory Protocols
-Snooping protocols scale badly to large numbers of cores, due to the need to share a bus. Directory protocols 
+![](Pasted%20image%2020230512100623.png)
+Snooping protocols scale badly to large numbers of cores, due to the need to share a single bus. Directory protocols overcome this limitation by **distributing** the hardware.
+The memory system is equipped with a central directory that stores information about what is stored and where. This information is **more complex** than in snooping protocols.
+Instead of coherence messages being sent globally, they are **point-to-point**. This allows the use of a network-on-chip instead of a shared bus, improving scaling for high core counts.
+Using this approach each operation needs **more messages**, but they can be transmitted **in parallel**.
+#### Simple example protocol
+![](Pasted%20image%2020230512095705.png)
+- Cache lines store one of these three states:
+	- I (Invalid) - Cached value is not valid
+	- S (Shared) - Cached value is valid and coherent with main memory; other caches may also have this
+	- M (Modified) - Cached value is valid but has been changed; there are no other copies
+- The directory marks every cache line as one of these three states:
+	- NC (Not Cached) - This cache line is not present in any cores
+	- S (Shared) - This cache line is present in at least one core, and hasn't been modified
+	- M (Modified) - This cache line is present in exactly one core, and has been modified
+- The directory also stores a **sharing vector** for each cache line, which encodes which cores have a copy of that line. Each bit in the vector represents a core.
+
+In a directory protocol, the individual caches only hold **local state**; they know nothing about the state of the other caches. Global status is stored in the directory.
+Operations involving multiple caches are performed by the directory. For example:
+- A cache experiences a read miss:
+	- Directory checks if the value is present in other caches, if those caches have modified it, etc.
+- A cache writes to a shared or invalid cache line:
+	- Directory checks if other caches have that line, invalidates if so, etc.
+
+With this system, most operations require **more messages**. However, since these messages can be sent in parallel, the overall bandwidth is usually higher. This leads to directory protocols being generally higher performance.
+
+#### Distributed Directory
+While directory does remove the centralised bottleneck of the shared bus, it introduces another one in the form of the directory itself. This can limit performance in much the same way.
+Therefore, many highly multi-core systems (e.g. TILERA, Xeon Phi) employ **multiple directories**
