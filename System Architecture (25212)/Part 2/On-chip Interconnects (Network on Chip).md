@@ -92,7 +92,7 @@ and **Fat Trees**
 - Packets can be diverted
 	- to avoid blocking and to keep traffic moving
 	- or, to entirely avoid congested areas
-- There is a risk of a livelock, if the packets find themselves in a circular loop of avoiding each other and never moving to the destination
+- There is a risk of a **livelock**, if the packets find themselves in a circular loop of avoiding each other and never moving to the destination
 
 #### Oblivious vs Adaptive Routing
 **Oblivious**:
