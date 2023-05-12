@@ -65,16 +65,14 @@ For example, have two half-size direct mapped caches in parallel:
 ![](Pasted%20image%2020230509114914.png)
 (pictured here is 2-way set associative)
 This can be extended to more sets (4-way, 8-way and onwards).
-This method of caching exploits **spatial locality**: several consecutive words will be stored in a single tag, so the effectiveness remains almost as high with a considerable reduction in the tag overhead.
-
 ## Cache Lines
 This is another way to exploit **spatial locality**; instead of storing one word per tag, store many words per tag. In practise, this causes very little loss in effectiveness while significantly reducing the tag overhead.
 ![](Pasted%20image%2020230509115012.png)
 Typical line sizes are 4 or 8 words. For example, 64 bytes (8 bytes * 8) on Intel x86_64 chips.
-
+Why does this cause very little loss in effectiveness? Wouldn't this lead to lots of cache lines containing only a single useful word? No, because of spatial locality; a large proportion of memory operations are likely to be done in sequence (for example, loading instructions, processing an array, accessing local variables that are next to each other on the stack...). This means that for most applications, the likelihood of this method wasting space is very low.
 ## How to Choose?
 Any cache architecture will be a compromise. You have to choose between 
-- Size - depends on the space available
+- Size (as in physical size, not capacity) - depends on the space available
 - Expected use - more locality would benefit from a bigger cache line size
 - Associativity - higher for smaller caches
 - Power - Higher associativity leads to more activity, thus more power usage
