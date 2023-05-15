@@ -30,3 +30,6 @@ v) conflict miss
 Desired hitrate = $3/1.5 = 2$
 Let hit rate of L2 be $L2_{H}$.
 Average memory access time = $1 + 0.02(10 + (1 - L2_H)100) = 2$ 
+Solve for $L2_H$...
+$L2_H = 0.6$
+The level 2 cache must have a hit rate of 60% or greater.
