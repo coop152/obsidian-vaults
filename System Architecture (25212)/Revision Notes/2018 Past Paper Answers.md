@@ -41,8 +41,18 @@ Directory schemes have many advantages; while the Directory itself is a centrali
 Prov#1 = 2,000,000,000 * 4 = 8,000,000,000 IPS
 Prov#2 = 1,000,000,000 * 3 = 3,000,000,000 IPS
 2) Peak IPC of whole system
-Prov#1 = 4 * 8 = 64 IPC
+Prov#1 = 4 * 8 = 32 IPC
 Prov#2 = 3 * 36 = 108 IPC
 3) Peak instructions per second
 Prov#1 = 2,000,000,000 * 4 * 8 = 64,000,000,000 IPC
 Prov#2 = 1,000,000,000 * 3 * 36 = 108,000,000,000 IPC
+4) Total hardware threads
+Prov#1 = 8 * 2 = 16 threads
+Prov#2 = 36 threads
+
+4d. 
+Prov1#: i) 2.7 * 2,000,000,000 = 5,400,000,000 IPS
+ii) 1.5 * 16 * 2,000,000,000 = 48,000,000,000 IPS all core
+Prov2#: i) 1.4 * 1,000,000,000 = 1,400,000,000 IPS
+ii) 1.4 * 36 * 1,000,000,000 = 50,400,000,000 IPS all core
+Provider 1 runs at about 3.9x the speed of Provider 2 in the first phase, but Provider 2 runs at about 1.05x the speed of Provider 1 in the second phase. As both phases are said to be roughly even in size, provider 1 has the superior performance due to its significantly better performance in phase 1 and its very minor performance loss in phase 2.
