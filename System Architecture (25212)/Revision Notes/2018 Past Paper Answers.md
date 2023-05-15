@@ -5,4 +5,4 @@ Conflict miss: Occurs when the cache already holds an old cache line with the sa
 1b. Temporal locality: When something in memory is used, it will likely be used again soon. To exploit this, you may implement "blocking"; that is, breaking a problem down into smaller chunks so that the working set of data can fit entirely in the cache. This improves performance in algorithms where data is repeatedly used, by preventing data that is still in use from being evicted from the cache.
 Spacial locality: When something in memory is used, it is likely that something nearby will also be used. To exploit this you may use "flat" data structures over ones with more indirection; using an array allows a cache with wide cache lines to retrieve multiple entries in the array at once, while a linked list or similar structure will only retrieve one element at a time, drastically increasing the number of cache misses.
 
-3a. 
+3a. Dependencies: ()
