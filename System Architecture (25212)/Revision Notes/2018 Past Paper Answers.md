@@ -32,5 +32,17 @@ Another way that they differ is in their handling of writeback - Scoreboard is c
 
 4a. Cache is "coherent" in a multicore system if every core's cache can present the same up-to-date view of memory to their core. For example, consider one core writing a value to memory and its cache holding it locally, waiting to copy it back later. If another core tries to read that same memory location, that core's cache needs to be aware that the other cache holds an updated value and that any existing copy it holds is no longer valid, even if the updated value hasn't been written to main memory yet. This is important to ensure that all cores are seeing the same up-to-date values. 
 
-4b. In a Snoopy cache coherence protocol, every cache is connected to every other cache and to main memory through a common bus. Caches keep the whole system up-to-date by sending globally visible messages down the bus; for example, if a core modifies a value locally then that cache will send out a message along the bus telling the other cores to invalidate their own copies (if they have them) as they are out of date. This approach has advantages 
-In a directory cache coherence protocol
+4b. In a Snoopy cache coherence protocol, every cache is connected to every other cache and to main memory through a common bus. Caches keep the whole system up-to-date by sending globally visible messages down the bus. For example, if a core modifies a value locally then that cache will send out a message along the bus telling the other cores to invalidate their own copies (if they have them) as they are out of date. Snoopy keeps track of the global state of cache lines using a scheme like MESI (Modified, Exclusive, Shared, Invalidated); Each cache is aware if other caches do or do not hold the same cache line, allowing them to act accordingly when messages are received.
+In a directory cache coherence protocol, a centralised Directory keeps track of the state of each cache line on behalf of the caches, meaning that the caches themselves are not aware of the state of the others like in Snoopy. The caches themselves have a more typical set of states such as Modified, Shared (which does not actually indicate if other cores share the line or not) and Invalid, as in a regular single-core cache system. The directory stores extra state for each line, marking it as either Not Cached, Shared or Modified, as well as a listing of which cores currently have that line cached. The directory can then use this information to keep the caches in sync; for example, if one cache modifies a cache line it will send a message to the Directory, which will see that the line is shared and other cores hold it. The directory will then signal these cores to invalidate their copy.
+Directory schemes have many advantages; while the Directory itself is a centralised structure, it is more scalable than a centralised interconnect like the common bus of Snoopy. Because each cache now has its own connection to the directory instead of having to share a single bus, messages can be sent in parallel, which increases bandwidth. Snoopy does have an advantage in that it requires less messages than Directory.
+
+4c. 
+1) Single thread peak performance (IPS)
+Prov#1 = 2,000,000,000 * 4 = 8,000,000,000 IPS
+Prov#2 = 1,000,000,000 * 3 = 3,000,000,000 IPS
+2) Peak IPC of whole system
+Prov#1 = 4 * 8 = 64 IPC
+Prov#2 = 3 * 36 = 108 IPC
+3) Peak instructions per second
+Prov#1 = 2,000,000,000 * 4 * 8 = 64,000,000,000 IPC
+Prov#2 = 1,000,000,000 * 3 * 36 = 108,000,000,000 IPC
