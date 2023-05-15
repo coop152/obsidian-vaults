@@ -24,4 +24,7 @@ ADD R1, R1, R3
 This ordering has no data hazards, and therefore no wasted cycles.
 With no wasted cycles, the execution time will be 8 + 4 = 12 cycles. This gives a CPI of 12/8 = 1.5.
 
-3c. Scoreboard is centralised, with the scoreboard handling data dependencies and distributing work to the functional units. Tomasulo is decentralised, with 
+3c. Scoreboard is centralised, with the scoreboard handling data dependencies and distributing work to the functional units. Tomasulo is decentralised, with each functional unit's Reservation Station handling the resolution of data dependencies and work distribution by itself. Tomasulo provides better performance in multiple ways:
+1. Removing the scoreboard as a centralised bottleneck allows more instructions to be run out-of-order at once
+2. The use of register renaming allows Tomasulo to avoid WAR and WAW dependencies without stalling, unlike Scoreboard which needs to stall
+3. 
