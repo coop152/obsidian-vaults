@@ -12,4 +12,18 @@ There are 32 lines, so the index will be log2(32) = 5 bits long.
 Each line holds 32 addressable items, so the offset will be 5 bits long.
 The tag will be the left over 6 bits.
 
-1c. 
+1c. Assume order is tag\:index\:offset
+i) tag = 010111, index = 11101, offset = 10101: miss
+ii) tag = 010101, index = 10110, offset = 01010: miss
+iii) tag = 110010, index = 01101, offset = 00000: miss
+iv) tag = 010101, index = 10110,  offset = 11101: hit
+v) tag = 111011, index = 10110, offset = 01001: miss
+
+1d.
+i) compulsory miss
+ii) compulsory miss
+iii) compulsory miss
+iv) hit
+v) conflict miss
+
+1e. 
