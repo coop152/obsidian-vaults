@@ -24,4 +24,4 @@ ADD R1, R1, R3
 This ordering has no data hazards, and therefore no wasted cycles.
 With no wasted cycles, the execution time will be 8 + 4 = 12 cycles. This gives a CPI of 12/8 = 1.5.
 
-3c. Scoreboard is centralised, with the scoreboard
+3c. Scoreboard is centralised, with the scoreboard handling data dependencies and distributing work to the functional units. Tomasulo is decentralised, with 
