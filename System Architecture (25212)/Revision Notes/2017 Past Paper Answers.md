@@ -26,4 +26,6 @@ iii) compulsory miss
 iv) hit
 v) conflict miss
 
-1e. 
+1e. Hit rate of L1 = 0.98 (calculated from given values)
+Let hit rate of L2 be $L2_{H}$.
+Average memory access time = $1 + 0.02(10 + (L2_))$
