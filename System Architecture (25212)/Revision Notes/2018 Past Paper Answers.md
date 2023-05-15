@@ -30,4 +30,7 @@ With no wasted cycles, the execution time will be 8 + 4 = 12 cycles. This gives 
 
 Another way that they differ is in their handling of writeback - Scoreboard is connected directly to the register bank, so it can perform parallel writes of results. On the other hand, Tomasulo is limited to serial writing due to its use of a Common Data Bus. This could give better performance for Scoreboard, although Tomasulo's CDB also allows reservation units to snoop on the results of other reservation units and take results directly from them instead of from the register bank, cutting out the wasted cycle of writing then reading from the register bank.
 
-4. 
+4a. Cache is "coherent" in a multicore system if every core's cache can present the same up-to-date view of memory to their core. For example, consider one core writing a value to memory and its cache holding it locally, waiting to copy it back later. If another core tries to read that same memory location, that core's cache needs to be aware that the other cache holds an updated value and that any existing copy it holds is no longer valid, even if the updated value hasn't been written to main memory yet. This is important to ensure that all cores are seeing the same up-to-date values. 
+
+4b. In a Snoopy cache coherence protocol, every cache is connected to every other cache and to main memory through a common bus. Caches keep the whole system up-to-date by sending globally visible messages down the bus; for example, if a core modifies a value locally then that cache will send out a message along the bus telling the other cores to invalidate their own copies (if they have them) as they are out of date. This approach has advantages
+In a directory cache coherence protocol
