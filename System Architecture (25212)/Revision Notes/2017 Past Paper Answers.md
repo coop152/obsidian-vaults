@@ -27,5 +27,6 @@ iv) hit
 v) conflict miss
 
 1e. Hit rate of L1 = 0.98 (calculated from given values)
+Desired hitrate = $3/1.5 = 2$
 Let hit rate of L2 be $L2_{H}$.
-Average memory access time = $1 + 0.02(10 + (L2_))$
+Average memory access time = $1 + 0.02(10 + (1 - L2_H)100) = 2$ 
