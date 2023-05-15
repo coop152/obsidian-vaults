@@ -1,5 +1,6 @@
-Parts where marks were gained are indicated by italic markers like this: *(1)*.
-
-1a. Compulsory miss: Occurs when the cache has just been started *(1)*, for example when the program first starts. The cache doesn't contain anything yet, so any reads or writes will necessarily cause a cache miss. This kind of miss happens on any kind of cache. *(1)*
-Capacity miss: Occurs when the cache is too full to hold a new cache line *(1)*, and must evict an old cache line to make space. This kind of miss is most common on a fully associative cache. *(1)*
+1a. Compulsory miss: Occurs when the cache has just been started, for example when the program first starts. The cache doesn't contain anything yet, so any reads or writes will necessarily cause a cache miss. This kind of miss happens on any kind of cache.
+Capacity miss: Occurs when the cache is too full to hold a new cache line, and must evict an old cache line to make space. This kind of miss is most common on a fully associative cache. 
 Conflict miss: Occurs when the cache already holds an old cache line with the same location (or index) as the cache line that is being inserted, meaning that the old cache line must be evicted. This kind of miss is most likely to happen in a direct mapped cache, is less likely to happen in a set-associative cache, and cannot happen in a fully associative cache.
+
+1b. Temporal locality: When something in memory is used, it will likely be used again soon. To exploit this, you may use "blocking"; that is, breaking a problem down into smaller chunks so that the working set of data can fit entirely in the cache. This improves performance by preventing data that is still in use from being evicted from the cache due to the dataset being too large.
+Spacial locality: When something in memory is used, it is likely that something nearby will also be used
