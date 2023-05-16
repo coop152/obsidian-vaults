@@ -19,4 +19,4 @@
 2d. A victim cache should be fully associative. This is because direct mapped and set-associative caches don't have any inherent ordering, which adds complexity to the implementation of the copy-back queue. 
 2e. **(come back to this later)**
 
-3a. 
+3a. SUB instruction must stall for 
