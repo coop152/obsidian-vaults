@@ -11,3 +11,4 @@
 1b. 
 1. The processor send the command to write to the word, using the virtual address.
 2. The L1 cache updates the value that it holds, and marks the cache line as dirty/modified.
+3. The write is complete. When this cache line is evicted/invalidated, the value will be copied back to L2, and then to main memory if the line in L2 is evicted/invalidated.
