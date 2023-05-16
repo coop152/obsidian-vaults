@@ -12,3 +12,6 @@
 1. The processor send the command to write to the word, using the virtual address.
 2. The L1 cache updates the value that it holds, and marks the cache line as dirty/modified.
 3. The write is complete. When this cache line is evicted/invalidated, the value will be copied back to L2, and then to main memory if the line in L2 is evicted/invalidated.
+
+2a. A memory buffer allows the memory system to perform write operations without needing to stall the processor and wait for slow memory to finish storing the data.
+2b. 
