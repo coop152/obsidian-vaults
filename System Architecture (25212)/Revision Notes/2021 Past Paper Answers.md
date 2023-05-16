@@ -24,4 +24,4 @@
 3bi. Dependencies: (1 -> 3), (1 -> 4), (1 -> 7), (2 -> 6), (3 -> 5), (4 -> 6), (7 -> 8)
 Anti-dependencies: (6 -> 7)
 Output dependencies: (4 -> 7), (5 -> 6)
-3bii. Using a Scoreboard out-of-order 
+3bii. When not using register renaming, Write After Reads (anti-dependencies) and Write After Writes (output dependencies) require the latter operation to be delayed until the former has been completed, incurring a runtime penalty. 
