@@ -24,4 +24,4 @@
 3bi. Dependencies: (1 -> 3), (1 -> 4), (1 -> 7), (2 -> 6), (3 -> 5), (4 -> 6), (7 -> 8)
 Anti-dependencies: (6 -> 7)
 Output dependencies: (4 -> 7), (5 -> 6)
-3bii. When not using register renaming, Write After Reads (anti-dependencies) and Write After Writes (output dependencies) require the latter operation to be delayed until the former has been completed, incurring a runtime penalty like with Read After Writes. These delays are not necessary to maintain the correct meaning of the program; as long as the Read in a Write After Read gets the correct desired value from before the Write, then it does not matter which actually runs first
+3bii. When not using register renaming, Write After Reads (anti-dependencies) and Write After Writes (output dependencies) require the latter operation to be delayed until the former has been completed, incurring a runtime penalty like with Read After Writes. With register renaming, the order of the operations 
