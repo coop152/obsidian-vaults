@@ -48,3 +48,9 @@ len [] = 0
 len (x : xs) = 1 + len xs
 ```
 `len` is strict in the spine of its argument, but not in the head or tail.
+
+## Infinite Values
+Using recursion, you can define infinite values:
+```haskell
+naturals = 0:[n + 1 | n <- naturals]
+```
