@@ -16,3 +16,5 @@ safeHead (x : xs) = Just x
 main = print (badhead []) -- defined, outputs Nothing
 ```
 
+## Strictness of Functions
+A function is strict in some part of its arguments if an error value in that part will cause 
