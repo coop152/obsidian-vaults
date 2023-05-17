@@ -116,3 +116,26 @@ desc1 = describe True
 desc2 = describe 12
 ```
 
+You can make custom operators if the functions have symbol-only names:
+```haskell
+class MyEq a where
+	(===) :: a -> a -> Bool
+	(/==) :: a -> a -> Bool
+	x /== y = not(x === y)
+
+instance MyEq Bool where
+	False === False = True
+	True  === True  = True
+	True  === False = False
+	False === True  = False
+```
+
+Functions can define the required typeclasses like this:
+```haskell
+ifEqDesc :: (MyEq a, Descriptive a) => a -> a -> a -> a -> String
+ifEqDesc w x y z = if w === x then (describe y) else (describe z)
+```
+(the `=>` is the important thing)
+
+There are some builtin typeclasses like Show and Eq...
+using `derive(Show, Eq)` or similar at the end of the definition for a data type will use some default implementations (Show will print as the structure is shown in code, Eq will check two instances are the exact same)
