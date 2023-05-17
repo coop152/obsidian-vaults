@@ -54,3 +54,27 @@ Using recursion, you can define infinite values:
 ```haskell
 naturals = 0:[n + 1 | n <- naturals]
 ```
+This generates the natural numbers by repeatedly increasing every number in the list by one and adding a new 0 to the start.
+You can take some numbers from an infinite list using the `take` function:
+```haskell
+main = print (take 6 naturals)
+```
+Or use the index operator to take one (equivalent to square braces in other languages):
+```haskell
+main = print (naturals 45)
+```
+
+Here is the list of Fibonacci numbers:
+```haskell
+fib = 1:1:[fib !! n + fib !! (n + 1) | n <- [0..]]
+```
+
+You can have infinite lists like this due to Haskell's lazy evaluation; the list is only populated up to the point you access. Of course, if you try summing an infinite list then nothing will happen.
+
+You can define the primes using a filter on an infinite list:
+```haskell
+sieve [] = []
+sieve (x:xs) = x:[v | v <- xs, v `mod` x /= 0]
+
+primes = sieve [2..]
+```
