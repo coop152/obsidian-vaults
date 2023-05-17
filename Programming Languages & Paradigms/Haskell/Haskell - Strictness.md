@@ -45,5 +45,6 @@ Because this operator short circuits, it is only strict on **it's first argument
 ```haskell
 len :: [Integer] -> Integer
 len [] = 0
-len ()
+len (x : xs) = 1 + len xs
 ```
+`len` is strict in the spine of its argument, but not in the head or tail.
