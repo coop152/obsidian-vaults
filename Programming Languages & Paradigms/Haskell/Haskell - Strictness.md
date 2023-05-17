@@ -15,3 +15,4 @@ safeHead (x : xs) = Just x
 
 main = print (badhead []) -- defined, outputs Nothing
 ```
+
