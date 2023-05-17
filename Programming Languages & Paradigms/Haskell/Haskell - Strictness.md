@@ -37,7 +37,7 @@ sum :: [Integer] -> Integer
 sum [] = 0
 sum (x:xs) = x + sum xs
 ```
-`sum` is strict in the argument, it's head, and its tail. In addition it is also strict in its "spine"; that is, the shape of the object must be correct. In this case, if the list was `1 : 2 : errVal` then `sum` would also fail.
+`sum` is strict in the argument, it's head, and its tail. In addition it is also strict in its "spine"; that is, the object must be constructed correctly. In this case, if the list was `1 : 2 : errVal` then `sum` would also fail.
 
 Consider the logical AND operator: `x && y`
 Because this operator short circuits, it is only strict on **it's first argument**. In some cases the second argument will be evaluated, but not all.
