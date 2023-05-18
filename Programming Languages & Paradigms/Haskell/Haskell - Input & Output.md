@@ -1,0 +1,32 @@
+In Haskell, the `main` "function" is actually a variable of type `IO ()`. This is a type that defines input/output behaviours; the compiler reduces the expressions in your program down to a single `IO ()`, which gives the resulting program.
+For example:
+```haskell
+a = print "this"
+b = print "that"
+
+main = a
+```
+will print "this" to the console, but not "that".
+You can chain IO behaviours together using the `>>` operator:
+```haskell
+main = (print "Hello, ") >> (print "world!")
+```
+
+We know `print` for output, but what about input? There is the function `getLine` that returns an `IO String`:
+```haskell
+main = getLine
+```
+This isn't very helpful, because we can't do anything with the result.
+To actually use the result, we need the **bind operator** `>>=`. This operator allows us to feed the result of `getLine` into a function.
+```haskell
+main = getLine >>= (\n -> print n)
+```
+To be exact about the types:
+```haskell
+-- types of given functions
+getLine :: IO String
+main :: IO ()
+(>>=) :: IO a -> (IO a -> IO b) -> IO b
+-- that is, it takes an IO of one kind and a function that maps it to another, then returns the mapped value
+
+```
