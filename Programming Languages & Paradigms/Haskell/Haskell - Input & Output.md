@@ -34,3 +34,29 @@ print :: String -> IO () -- in this case, anyway
 
 main = getLine >>= (\n -> print n)
 ```
+A more complicated example of IO, using recursion to loop infinitely:
+```haskell
+main = putStrLn "Type \"foo\" rn:" >>
+       getLine >>=
+      (\n -> if n == "foo"
+             then putStrLn "yeahhhhhh baby"
+             else (putStrLn "that is not foo" >> main))
+```
+This syntax is verbose and ugly, even when you make it as tidy as possible with no brackets:
+```haskell
+main = putStrLn "Enter a name:" >>
+       getLine >>=
+       \n -> 
+       putStrLn "Enter another name:" >>
+       getLine >>=
+       \m -> putStrLn ("Hello " ++ n ++ " and " ++ m)
+```
+Haskell has the `do` keyword which allows you to simplify it.
+```haskell
+main = do
+    putStrLn "Enter a name:"
+    n <- getLine
+    putStrLn "Enter another name:"
+    m <- getLine
+    putStrLn ("Hello " ++ n ++ " and " ++ m)
+```
