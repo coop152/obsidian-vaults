@@ -28,5 +28,9 @@ getLine :: IO String
 main :: IO ()
 (>>=) :: IO a -> (IO a -> IO b) -> IO b
 -- that is, it takes an IO of one kind and a function that maps it to another, then returns the mapped value
+-- in this case, the types are
+-- (>>=) :: IO String -> (IO String -> IO ()) -> IO ()
+print :: String -> IO () -- in this case, anyway
 
+main = getLine >>= (\n -> print n)
 ```
