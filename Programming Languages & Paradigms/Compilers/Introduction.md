@@ -17,6 +17,7 @@ A compiler must:
 	- Debugging (target can be easy related to the source code)
 	- Compile-time efficiency (fast compiles)
 	- Not all of these may be possible at the same time.
+
 A *good* compiler will:
 - Generate correct code
 - Generate fast code
@@ -51,11 +52,13 @@ the **Front-end** is the part that performs **analysis** on the source code.
 - "understands" the input program and converts its semantics into an intermediate representation (IR).
 - Produces the IR, which forms the input of the **Back-end**.
 - Can be very automated.
+
 the **Back-end** is the part that performs the **synthesis** into the target language.
 - Chooses the instructions to implement for each IR operation.
 - Translates the IR into the target code.
 - Must conform to the system interfaces.
 - Not particularly good at being automated.
+
 Typically the front-end is $O(n)$, while the back-end is **NP-complete**.
 The benefit of this conceptual split is:
 ![](Pasted%20image%2020230216154934.png)
