@@ -34,6 +34,7 @@ Why study lexical analysis?
 - To avoid writing lexical analysers by hand
 - To simplify the specification and implementation.
 - To understand the techniques and technologies.
+
 We want to know how to specify lexical patterns. Some parts of this are easy (e.g. defining operators, comments, whitespace, etc.) but some are significantly harder such as identifiers (letter followed by alphanumeric characters), numbers (integer vs floating point, multiple base literals, etc.).
 
 ## Regular Expressions
