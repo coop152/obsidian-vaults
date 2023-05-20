@@ -56,3 +56,7 @@ What are we actually trying to find here?
 ![](Pasted%20image%2020230303143323.png)
 ![](Pasted%20image%2020230303143355.png)
 ![](Pasted%20image%2020230303143524.png)
+This is not a perfect method; the yellow lines could have instead been handled as reductions, which would have stopped us from reaching a result. To fix this, we need an **LR(1) grammar**.
+
+#### LR(1) Grammars
+A grammar is LR(1) if, given a rightmost derivation, we can:
