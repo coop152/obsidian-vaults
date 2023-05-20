@@ -58,6 +58,7 @@ With this approach, the first step of creating a lexical analyser is to create a
 - Deterministic (DFA): For every state and symbol combination, there is only one transition to another state
 - Non-Deterministic (NFA): for every state and symbol combination, there may be more than one possible transition. for example, consider the regex `(a|b)*abb`:
 ![](Pasted%20image%2020230221145924.png)
+
 In summary:
 - Write down a regular expression that expresses the input language.
 - Convert the regular expression to an NFA (using Thompson's construction).
