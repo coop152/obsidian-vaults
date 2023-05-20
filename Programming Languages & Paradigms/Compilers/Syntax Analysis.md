@@ -60,3 +60,7 @@ This is not a perfect method; the yellow lines could have instead been handled a
 
 #### LR(1) Grammars
 A grammar is LR(1) if, given a rightmost derivation, we can:
+- **Isolate the handle of each right-sentential form**
+- **Determine the production rule that must be used to reduce**, by scanning the sentential form from left-to-right, going at most 1 symbol beyond the right-end of the handle.
+
+![](Pasted%20image%2020230520174626.png)
