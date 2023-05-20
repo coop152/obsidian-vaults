@@ -9,7 +9,7 @@ There are two kinds of derivation which we are interested in:
 Leftmost derivation: at each step, replace the leftmost non-terminal.
 Rightmost derivation: at each step, replace the rightmost non-terminal.
 
-A parse tree is a graphical representation oof a derivation that filters out the choice regarding the replacement order.
+A parse tree is a graphical representation of a derivation that filters out the choice regarding the replacement order.
 ![](Pasted%20image%2020230303134943.png)
 #### Derivations and Precedence
 Consider the leftmost and rightmost derivations plus the parse tree for this sequence on this grammar:
