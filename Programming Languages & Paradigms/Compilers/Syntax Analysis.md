@@ -34,6 +34,7 @@ An ambiguous grammar is a grammar that produces more than one parse tree, leftmo
 	2. Select a production rule with A on its left-hand-side and substitute with the right-hand-side
 	3. Match any terminal symbols to the input
 ![](Pasted%20image%2020230303140600.png)
+
 One of the factors that can lead to non-termination like in the right example is **left-recursive grammars**.
 A grammar is left-recursive if it has some non-terminal symbol $A$ such that there is a derivation $A \Rightarrow Aa$ for some string $a$. Left-recursive grammars can cause a top-down parser to go into an infinite loop.
 To eliminate left-recursion, in many cases it is sufficient to replace $A \rightarrow Aa|b$ with $A \rightarrow bA'$ and $A' \rightarrow aA'|\epsilon$.
