@@ -124,7 +124,7 @@ Issues include:
 - **Benefit**: Must improve performance on average or common cases.
 - **Compile-time cost is justifiable**: The improvement in runtime performance is good enough to justify any worsening at compile-time (i.e. longer compile times)
 
-Finding an appropriate sequence of transofmrations is a major challenge: modern optimisers are structure into a series of passes (i.e. each optimisation is applied on top of the last).
+Finding an appropriate sequence of transformations is a major challenge: modern optimisers are structured into a series of passes (i.e. each optimisation is applied on top of the last).
 These transformations may improve the program at the source level (e.g. algorithm specifics), the IR level (e.g. machine independent transformations) or the target level (machine-dependent transformations).
 Typical transformations include:
 - Discover and propagate constant values 
