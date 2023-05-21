@@ -3,7 +3,7 @@ At this point, it has been determined (by syntax analysis) that the input is a v
 ![](Pasted%20image%2020230308121527.png)
 ## Context sensitive questions
 To generate code, the compiler needs to answer questions such as:
-- Is `x` a scalar, an array, a function? Is `x` event declared in this context?
+- Is `x` a scalar, an array, a function? Is `x` available in this context?
 - Are there names used which are not declared? Declared but not used?
 - What declaration of `x` does each use refer to?
 - Is the expression `x - 2 * y` type-consistent?
@@ -14,7 +14,7 @@ To generate code, the compiler needs to answer questions such as:
 
 None of these questions can be answered by a context-free grammar.
 This phase is called **semantic analysis**. The answers to these questions depend on the values of identifiers, not the syntax of the program. We need non-local information, and potentially some computation, to check these properties.
-Semantic analysis **does not** use format methods like parsing (using context-sensitive grammars and such is called **attribute grammars**) because it is too complicated. Ad hoc techniques which are unsuited for parsing are very effective for **semantic analysis**.
+Semantic analysis **does not** use formal methods like parsing (using context-sensitive grammars and such for semantic analysis is called **attribute grammars**) because it is too complicated. Ad hoc techniques which are unsuited for parsing are very effective for semantic analysis.
 ## Type Systems
 The **type** of a value is a set of properties associated with it. The set of all types in a programming language is called a **type system**.
 **Type checking** refers to assigning/inferring types for expressions and checking that they are used in legal contexts.
