@@ -4,7 +4,7 @@
 - [Security](Security.md)
 
 ## Examinable Reading
-- [ ] [Original MVC Specification](https://online.manchester.ac.uk/bbcswebdav/pid-13877036-dt-content-rid-132935762_1/xid-132935762_1)
+- [x] [Original MVC Specification](https://online.manchester.ac.uk/bbcswebdav/pid-13877036-dt-content-rid-132935762_1/xid-132935762_1)
 - [ ] [Eight Golden Rules of Interface Design](https://www.cs.umd.edu/users/ben/goldenrules.html)
 - [ ] [Dark Patterns](https://online.manchester.ac.uk/bbcswebdav/pid-13877040-dt-content-rid-132935757_1/xid-132935757_1)
 - [ ] [Web Application Security Engineering](https://online.manchester.ac.uk/bbcswebdav/pid-13877049-dt-content-rid-132935748_1/xid-132935748_1)
