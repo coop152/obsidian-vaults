@@ -26,6 +26,7 @@ It bears repeating:
 **There is no camera.**
 
 ## Finding the camera's coordinate system
+![](Pasted%20image%2020230524110409.png)
 Given the camera's location $E$ and it's centre of view $C$, can you calculate the coordinate system $\hat{U},\hat{F},\hat{S}$?
 1. Find the vector from the centre of view to the camera: $F = E - C$
 2. Normalise $F$ to get $\hat{F}$.
