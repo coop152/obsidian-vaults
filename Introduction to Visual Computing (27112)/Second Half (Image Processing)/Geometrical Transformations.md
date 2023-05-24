@@ -50,5 +50,5 @@ Produces sharp, jagged results. May be desirable in a few cases, but not usually
 ![](Pasted%20image%2020230317151511.png)
 This **does not** just apply to scaling; any kind of transformation where you might sample non-integer coordinates from the source image need some kind of interpolation.
 The initially described method of scaling where you loop through the source pixels and produce result pixels from it is called **Forward Mapping**, and it is not suitable for interpolation any more complicated than nearest-neighbour.
-The inverse of this method, **Reverse Mapping**, involves looping through the result pixels and then calculating the corresponding pixels in the source image. This will often give non-integer pixel coordinates in the source image, which is what facilitates the more complicated  interpolation methods.
+The inverse of this method, **Reverse Mapping**, involves looping through the result pixels and then calculating the corresponding pixels in the source image. This will often give non-integer pixel coordinates in the source image, which is what facilitates the more complicated interpolation methods.
 ![](Pasted%20image%2020230317152048.png)
