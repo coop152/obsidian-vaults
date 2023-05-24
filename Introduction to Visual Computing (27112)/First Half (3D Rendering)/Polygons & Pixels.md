@@ -53,7 +53,7 @@ The process of converting a line into a grid of pixels. This is done using **Bre
 4. Round $y_{n+1}$ to the nearest pixel (just for drawing, the decimal place remains for the next iteration)
 According to the gradient of the line, $x$ and $y$ may need to be swapped.
 How to apply this to a polygon? Well, scan conversion is applied at a point after the viewing pipeline, meaning that the polygon to be rendered has already been given coordinates in **screen space** - that is, for vertex coordinates $(x, y, z)$, $x, y$ correspond to position on the screen and $z$ is distance from the camera (or depth into the screen).
-In theory $z$ can simply be ignored, giving you a set of vertices that can be drawn as lines using Bresenham's algorithm. These lines can then be filled in. However, this is naive and not very efficient.
+In theory $z$ can simply be ignored, giving you a set of vertices that can be drawn as lines using Bresenham's algorithm. These lines can then be filled in. However, drawing the lines then filling is naive and not very efficient.
 ![](Pasted%20image%2020230214122326.png)
 An alternative is the "sweep-line algorithm" where the gradient of each line is calculated and used to find the point on each scanline in which the polygon begins and ends. In between these two points is the section on that scanline where the polygon should be filled.
 ![](Pasted%20image%2020230214122726.png)
