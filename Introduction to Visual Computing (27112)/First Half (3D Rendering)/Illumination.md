@@ -1,6 +1,6 @@
 ## Illumination
 ![](Pasted%20image%2020230223160035.png)
-In a local illumination model, the lights casts directly onto individual objects and colours them. Global illumination also calculates the indirecting lighting of objects caused by light continuing to bounce after contacting a surface.
+In a local illumination model, the lights casts directly onto individual objects and colours them. Global illumination also calculates the indirect lighting of objects caused by light continuing to bounce after contacting a surface.
 In this unit, we will develop a simpler local illumination model. COMP37111 next year covers global models.
 
 In illumination, we approximate the interaction of light and matter; the standard local model is a simple approximation. Adding per-material algorithms (called shaders) often gives better results, and a global model is always better than a local model.
