@@ -70,7 +70,7 @@ $I_{\text{diffuse}} = I_pk_d(\hat{N} \cdot \hat{L})$
 
 So the second version of our local illumination model is:
 $I$ = ambient + diffuse light
-$$I = k_aI_a + I_pk_d(\hat{N} \cdot \hat{L})$$
+$$I = k_aI_a + k_dI_p(\hat{N} \cdot \hat{L})$$
 ![](Pasted%20image%2020230223165011.png)
 ![](Pasted%20image%2020230223165056.png)
 This adds a sense of depth that the purely ambient model lacked. Here is how the diffuse reflection coefficient affects the lighting:
