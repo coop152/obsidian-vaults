@@ -112,3 +112,5 @@ If the vectors are normalised, the dot product is the cosine of the angle betwee
 **Cross Product**:
 ![](Pasted%20image%2020230207140752.png)
 For any two vectors, their cross product is a vector perpendicular to both of them. This forms a right handed system.
+
+You can remember the method by imagining a line going through both vectors for the line you're currently calculating. For example, say you're finding the result for the first row; you cover up $x_1$ and $x_2$, leaving the bottom two rows (ignore $w$). With these two leftover rows, you multiply the diagonals, like finding the discriminator of a matrix. First value of first vector times last value of second vector, minus the bottom value of the first vector times the top value of the second vector. In this example, $y_1 \cdot z_2 - z_1 \cdot y_2$. Note that you don't pick the highest and lowest, you pick the next and the one after; the "first" value in the first vector is the one below the line that you are blocking out, and the "second" is the one below that, wrapping around if you reach the end.
