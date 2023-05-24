@@ -55,9 +55,9 @@ There are many sets of guidelines an application may follow.
 	- Where possible, the user should be able to easily undo their previous actions
 7. Keep users in control
 	- Show the information that users requested, and nothing more.
-	- NO FUCKING COUPON POPUPS
-	- NO FUCKING SURVEY POPUPS
-	- NO FUCKING COOKIE POPUPS THAT DEFAULT TO ALL SPYING ENABLED
+	- NO COUPON POPUPS
+	- NO SURVEY POPUPS
+	- NO COOKIE POPUPS THAT DEFAULT TO ALL SPYING ENABLED
 8. Reduce short-term memory load
 	- Minimise the amount of stimuli on any given screen or section, allowing the user to take in every element and remember what everything does easily
 	- Cluttered designs are confusing
