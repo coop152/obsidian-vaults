@@ -31,7 +31,7 @@ You may notice that this matrix (and in fact all projection matrices) are **sing
 #### Making an axonometric projection
 There are multiple types of axonometric projection to choose from:
 - **Isometric**: The plane that is being projected onto is symmetrical to all three axes (i.e. the projector is at a $45\degree$ angle to all of the axes.)
-- **Dimetric**: The plane that is being projected onto is symmetrical to three of the axes (i.e. the project is at a $45\degree$ angle with 2 of the axes.)
+- **Dimetric**: The plane that is being projected onto is symmetrical to two of the axes (i.e. the project is at a $45\degree$ angle with 2 of the axes.)
 - **Trimetric**: The plane that is being projected onto is placed in any location.
 
 ![](Pasted%20image%2020230222131836.png)
