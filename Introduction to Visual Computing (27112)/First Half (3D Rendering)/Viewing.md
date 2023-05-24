@@ -32,13 +32,13 @@ Given the camera's location $E$ and it's centre of view $C$, can you calculate t
 2. Normalise $F$ to get $\hat{F}$.
 3. What now?
 
-More information is required; suppose we are also given a vector $V$ which gives the upward direction of the camera. We can't just normalise this and use it as $\hat{U}$, as there is no guarantee that its orthogonal to $\hat{F}$, and if it weren't then the coordinate system would be invalid. Therefore, the full method is this:
+More information is required; suppose we are also given a vector $V$ which gives the upward direction of the camera. We can't just normalise this and use it as $\hat{U}$, as (if we make no assumptions about $V$) there is no guarantee that its orthogonal to $\hat{F}$, and if it weren't then the coordinate system would be invalid. Therefore, the full method is this:
 1. Find the vector from the centre of view to the camera: $F = E - C$
 2. Normalise $F$ to get $\hat{F}$.
 3. Normalise $V$ to get $\hat{V}$.
 4. Take the dot product of $\hat{F}$ and $\hat{V}$ and normalise it, which gives a vector $\hat{S}$ perpendicular to both: $\hat{S} = \text{normalise}(\hat{F} \times \hat{V})$
 5. Do it again with $\hat{F}$ and $\hat{S}$, to get $\hat{U}$: $\hat{U} = \text{normalise}(\hat{F} \times \hat{S})$
-6. Discard $\hat{V}$; $\hat{U}$ will be the up vector.
+6. Discard $\hat{V}$; $\hat{U}$ is the up vector.
 7. Complete; we have found the camera's coordinate system where $\hat{F}$ is anti parallel to where the camera is facing, $\hat{U}$ points upwards (in parallel with the columns of the image) and $\hat{S}$ points sideways (in parallel with the rows of the image). This system makes no assumptions about the properties of $V$ and is guaranteed to be a valid orthogonal coordinate system.
 
 ## Deriving the view transformation (and justifying the duality by way of example)
