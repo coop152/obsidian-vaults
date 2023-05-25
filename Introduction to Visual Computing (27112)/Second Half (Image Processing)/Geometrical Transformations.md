@@ -1,4 +1,4 @@
-(Note: Some of these would require interpolation for most uses will be covered later)
+(Note: Some of these would require interpolation for most uses, which will be covered later)
 ## Scaling
 ![](Pasted%20image%2020230317144821.png)
 ## Transformation
