@@ -19,4 +19,6 @@
 	- $\text{Cow}' = M_1^{-1}M_2^{-1}M_3^{-1}M_4M_3M_2M_1\text{Cow}$
 
 5. The near and far clip planes are minimum and maximum distances that objects must be from the camera to be rendered. The near clip plane is the minimum distance, and the far clip plane is the maximum.
-6. 
+6. I would use Phong shading to ensure specular reflections are properly handled, as Gouraud performs poorly with specularity. To apply Phong for one polygon in the mesh you first calculate the surface normal for each vertex. Then you go over the polygon in scanlines; for each scanline, find the edge where drawing begins. Interpolate between the surface normals of that edge's vertices to get the surface normal at that specific point on the edge where the scanline intersects with it. Do the same with the edge where drawing finishes. Now that you have two surface normals for the beginning and end of the drawing area in the scanline, interpolate between these two normals for each pixel, finding the surface normal of that exact pixel and then applying the global illumination model. Do this for every scanline containing the polygon, and then do this for every polygon in the mesh.
+7. A normalised vector is a vector that has a magnitude of 1. These are used in computer graphics as part of local illumination, specifically when calculating the angle between a light source and a surface for directional lighting.
+8. The matrix stack is a series of matrices that are applied to the given 3D scene before 
