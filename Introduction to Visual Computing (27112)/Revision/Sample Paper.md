@@ -23,4 +23,4 @@
 7. A normalised vector is a vector that has a magnitude of 1. These are used in computer graphics as part of local illumination, specifically when calculating the angle between a light source and a surface for directional lighting.
 8. (not examinable this year)
 9. Rotation followed by translation.
-10. Textures usually need to be filtered during rendering because the size of the texture and the size of the destination surface do not match exactly. If they did then the texture could be drawn trivially, but most of the time the texture will need to be scaled or otherwise transformed in order to fit. Bilinear interpolation achieves this by calculating the (fractional) coordinate of the desired pixel in the source texture
+10. Textures usually need to be filtered during rendering because the size of the texture and the size of the destination surface do not match exactly. If they did then the texture could be drawn trivially, but most of the time the texture will need to be scaled or otherwise transformed in order to fit. Bilinear interpolation achieves this by taking the pixel coordinate of the 
