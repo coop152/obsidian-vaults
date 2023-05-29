@@ -19,7 +19,7 @@ Some privileges may be:
 General solution: never trust user input.
 #### SQL Injection
 a five year old could give a definition of sql injection
-they didnt even explain what the injection methods are :OMEGALUL:
+they didnt even explain what the injection methods are
 
 ## In Spring
 ![](Pasted%20image%2020230220092814.png)
