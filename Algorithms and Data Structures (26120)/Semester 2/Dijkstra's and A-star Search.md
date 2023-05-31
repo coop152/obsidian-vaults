@@ -54,7 +54,7 @@ Same loop invariant argument as with Bellman Ford.
 
 ## A* Search Algorithm
 ```python
-procedure dijkstra(s):
+procedure astar(s):
 	F = empty set
 	D: priorityQueue = initial estimate for s
 	while D is not empty:
