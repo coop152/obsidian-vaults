@@ -22,7 +22,12 @@ In plain English:
 2. While the priority queue is not empty (i.e. there are still nodes to explore)
 	1. Dequeue a node (this node being the one that has the lowest distance from the source)
 	2. Add to the set of found nodes
-	3. Add all of it's successors that have not yet been found
+	3. Add all of it's successors that are not found or in the queue to the queue
+	4. Try to relax the graph with the dequeued node.
+
+Relaxing:
+1. For every one of the given node's successors:
+	1. 
 
 This uses a priority queue, which complicates the implementation:
 - After relaxation a node's value may **decrease**.
