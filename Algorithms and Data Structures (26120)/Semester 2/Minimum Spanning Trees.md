@@ -59,7 +59,7 @@ procedure prim(G, w, r):  # start from some arbitrary node r
 				v.parent = u
 				v.key = w[u, v]
 ```
-In plain english:
+In plain English:
 1. 
 #### Complexity
 Depends on the implementation of the priority queue. If a fibonacci heap is used, it will be $O(|E| + |V|log|V|)$.
