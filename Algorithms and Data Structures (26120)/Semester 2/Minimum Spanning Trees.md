@@ -32,6 +32,12 @@ procedure kruskal(G, w):
 			D.union(u, v)  # join the two sets in the disjoint set structure
 	return A
 ```
+In plain English (and disregarding the concrete implementation using a disjoint set):
+1. Make an empty set that will hold edges. This represents the resulting MST.
+2. Sort the edges in the graph in ascending order of weight
+3. For each edge, starting with the one of least weight, consider if you can add that edge to the MST without introducing a cycle. If you can, add it to the set.
+4. When you have considered every edge, the algorithm is complete. Return the set representing the MST.
+
 For a worked example, watch **the end of the second video in the MST week**.
 #### Complexity
 Depends on the implementation of the disjoint-set data structure. As long as path-compression and union-by-rank heuristics are used, it will be $O(|E|log|V|)$.
@@ -53,5 +59,6 @@ procedure prim(G, w, r):  # start from some arbitrary node r
 				v.parent = u
 				v.key = w[u, v]
 ```
+
 #### Complexity
 Depends on the implementation of the priority queue. If a fibonacci heap is used, it will be $O(|E| + |V|log|V|)$.
