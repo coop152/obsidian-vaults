@@ -17,6 +17,13 @@ procedure relax(u):
 			D[v] = D[u] + w(u, v)
 			P[v] = u
 ```
+In plain English:
+1. Start with an empty set of found nodes, and a priority queue holding the first node. The priority queue is ordered based on lowest distance first.
+2. While the priority queue is not empty (i.e. there are still nodes to explore)
+	1. Dequeue a node (this node being the one that has the lowest distance from the source)
+	2. Add to the set of found nodes
+	3. Add all of it's successors that have not yet been found
+
 This uses a priority queue, which complicates the implementation:
 - After relaxation a node's value may **decrease**.
 - We need a "decrease key" operation
