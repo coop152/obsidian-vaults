@@ -30,7 +30,6 @@ succs[6] = {5}
 succs[7] = {}
 succs[8] = {}
 succs[9] = {2}
-
 ```
 - `Succs(u)` is very easy to implement
 ![](Pasted%20image%2020230130125317.png)
