@@ -26,8 +26,8 @@ In plain English:
 	4. Try to relax the graph with the dequeued node.
 
 Relaxing:
-1. For every one of the given node's successors:
-	1. 
+1. For every one of the given node's successors, does that node give a shorter path than the current best?
+2. If so, update the shortest distance and the predecessor map
 
 This uses a priority queue, which complicates the implementation:
 - After relaxation a node's value may **decrease**.
