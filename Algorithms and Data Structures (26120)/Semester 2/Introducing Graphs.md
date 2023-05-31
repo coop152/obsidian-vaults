@@ -56,6 +56,7 @@ Similar to [Tree Traversals](Search%20Tree.md#Traversal).
 4. If not, add the current node to the `explored` list. Then, go to the first node in the `toExplore` list, removing it in the process.
 5. Repeat from step 2 at this new node.
 ![](Pasted%20image%2020230130130908.png)
+
 In non-maths-speak:
 ```python
 procedure Explore(s):
