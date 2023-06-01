@@ -1,4 +1,4 @@
 21. The polygon needs to be tessellated. The result of this will be a set of triangles which give the same shape as ABCD when combined, but which can be rendered by OpenGL. One such tessellation is: DFC, FGC, GCB, EGB, AEB, AEF, AFD.
 ![](Pasted%20image%2020230601103318.png)
 22. Displays have limited resolution, meaning that the resulting images only contain a small amount of visual information. Displays also have limited ability to recognise colour, with most using colour spaces such as sRGB that cannot encode all of the colours that humans can perceive, and all displays only being able to display a fixed selection of colours (although the collection of colours is large). There is also a limited amount of computation available to render the images, which restricts the techniques that can be used and necessitates approximations.
-23. In order to construct Q, we must transform E such that the axes SUF coincide with the axes XYZ
+23. In order to construct Q, we must transform E such that S coincides with X+, U coincides with Y+ and F coincides with Z-. First we translate E to lie on the origin
