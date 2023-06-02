@@ -44,6 +44,7 @@ We select $x_1$, as it's the only negative value:
 Some more rules are shown here:
 - You must select a negative number when deciding on the pivot column.
 - You cannot pivot on a row with negative slack. (in this example, the first row where slack is $\frac{11}{-1}$.)
+
 The $s_3$ row has the smallest slack, so we select this row for a pivot and then pivot. We divide the third row by seven to make the pivot equal 1, then make the other values 0 by adding multiples of the pivot row:
 ![](Pasted%20image%2020230307124309.png)
 We now have another basic solution, better than the last. However we still aren't finished, as there is still a negative value in the objective row. Some other notes:
@@ -79,7 +80,7 @@ So, lets add an artificial variable to the problem equation:
 ![](Pasted%20image%2020230314140426.png)
 We add this artificial variable to the objective function, multiplied by a coefficient $M_1$ which we take to be arbitrarily large. Here is the tableaux:
 ![](Pasted%20image%2020230314141315.png)
-First step is to pivot on column with $M_1$ in it. The only row with a usable slack is the second one (and it will always be the one corresponding to the equation with the artificial variable in it), so pivot on that row.
+First step is to pivot on the column with $M_1$ in it. The only row with a usable slack is the second one (and it will always be the one corresponding to the equation with the artificial variable in it), so pivot on that row.
 ![](Pasted%20image%2020230314141554.png)
 Remember that $M_1$ is an arbitrarily large number. We now begin simplex as usual, in this case picking $-3-2M_1$ as the pivot column as it is the most negative (highest negative amount of the arbitrarily large $M_1$).
 ![](Pasted%20image%2020230314142208.png)
