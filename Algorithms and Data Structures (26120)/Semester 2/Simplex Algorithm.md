@@ -93,7 +93,7 @@ Consider this example:
 When drawn as a graph, it looks like this:
 ![](Pasted%20image%2020230314142717.png)
 You can see that the solution space goes on forever. If you attempt to solve this with the regular method, you will eventually reach a situation where all of the slacks are negative, thus making it unsolvable. Simplex cannot solve unbounded problems; if you encounter one, it is most likely that a constraint is missing.
-You can tell if the solution space is there exists a valid entering variable (i.e. a column with a negative value in the objective row) where all of the co-efficients in that column are negative. For example:
+You can tell if the solution space is unbounded if there exists a valid entering variable (i.e. a column with a negative value in the objective row) where all of the co-efficients in that column are negative. For example:
 ![](Pasted%20image%2020230314150537.png)
 You can tell this is an unbounded problem because $x_1$ is a valid entering variable but all of its coefficients are negative.
 #### There is zero slack (degeneracy)
