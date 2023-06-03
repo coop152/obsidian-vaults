@@ -80,7 +80,7 @@ procedure DFS(s):
 	F = empty set
 	while D is not empty:
 		u = D.pop()
-		D.push(all nodes that u leads to)
+		D.push(u.successors)
 		F.insert(u)
 	return F
 ```
