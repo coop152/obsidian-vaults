@@ -89,7 +89,7 @@ Watch the video for an example.
 ## Full procedure
 #### Encryption
 Watch the video for the full example including working.
-Let's send an encrypted message with El Gamal. Before anything is sent, the recipient must generate a public key by picking a prime $p$, a primitive root of that prime $2$, and a random private key $x$.
+Let's send an encrypted message with El Gamal. Before anything is sent, the recipient must generate a public key by picking a prime $p$, a primitive root of that prime $g$, and a random private key $x$.
 $p = 13$
 $g = 2$
 (In an exam question, you will be given a primitive root.)
