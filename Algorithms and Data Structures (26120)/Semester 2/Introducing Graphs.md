@@ -117,8 +117,14 @@ A set of tasks, e.g. a build sequence for software or a project's schedule, can 
 ![](Pasted%20image%2020230130132811.png)
 Strictly speaking, the objective of a topological sorting algorithm is to find a sequence of nodes such that all edges point forwards. This is only possible if the graph has **no cycles**.
 
-## Cycle detection with DFS
-- Perform DFS, keeping a list of all finished nodes as usual.
-- When searching for nodes to add to the `toExplore` stack, check against the finished nodes.
-- If an upcoming node is found that has already been explored (i.e. is in the list of finished nodes) then a cycle has been found.
+#### Cycle Detection with DFS
 ![](Pasted%20image%2020230130133147.png)
+Perform DFS as usual, but instead of each node just being found or unfound it can be New, Open and Done.
+- If a node is New, then it hasn't been encountered yet (same as unfound in regular DFS).
+- If a node is Open, then it has been found and its children are currently being explored.
+- If a node is Done, then it has been found and its children have been fully explored.
+
+If you are exploring and you encounter an Open node, you have doubled back on yourself: the graph contains a cycle, and you abort. If you do this for every node then you can be sure there are no cycles in your graph.
+
+#### Topological Sorting with DFS
+Take the previously defined algorithm. When a node becomes Done, *prepend* it to a list. This results in a topological sort. 
