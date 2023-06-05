@@ -87,15 +87,17 @@ Essentially the same as Euclid's but returns some extra values $i$ and $j$.
 Watch the video for an example.
 
 ## Full procedure
-#### Encryption
 Watch the video for the full example including working.
-Let's send an encrypted message with El Gamal. Before anything is sent, the recipient must generate a public key by picking a prime $p$, a primitive root of that prime $g$, and a random private key $x$.
+Let's send an encrypted message with El Gamal.
+#### Key Generation
+Before anything is sent, the recipient must generate a public key by picking a prime $p$, a primitive root of that prime $g$, and a random private key $x$.
 $p = 13$
 $g = 2$
 (In an exam question, you will be given a primitive root.)
 $x = 5$
 The public key is $(p, q, g^x \text{ mod } p)$. To find $y$ ($g^x \text{ mod } p$) we use **Fast Modular Exponentiation**.
 This gives the recipient a public key of $(13, 2, 6)$. They give this to the sender, which allows them to encrypt their message.
+#### Encryption
 Now the sender has the recipient's public key. They want to send the message $M=10$. First, they must pick a number $k$ that is relatively prime to the $p$ in the public key.
 $k = 7$
 This is trivial for such small numbers. In a real situation with large prime numbers, you might randomly generate values of $k$ and then use **Euclid's Algorithm** to check that they are relatively prime, retrying until you get something usable.
