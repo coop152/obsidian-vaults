@@ -6,8 +6,9 @@
 - Depth First Search (DFS)
 - Breadth First Search (BFS)
 - Topological Sorting + Cycle Detection
-#### Shortest Path
+#### Shortest Path (Node Count)
 - Shortest Path w/ BFS
+#### Shortest Path (Total Weight)
 - Bellman Ford
 - Dijkstra's Algorithm
 - A\* Search
@@ -15,4 +16,4 @@
 - Generic Greedy
 - Kruskal's Algorithm
 - Prim's Algorithm
-- 
+
