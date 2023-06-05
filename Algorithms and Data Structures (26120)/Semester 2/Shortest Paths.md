@@ -47,7 +47,7 @@ $\delta(u,v)$ is the shortest distance from node $u$ to node $v$. If no path exi
 
 ## Bellman Ford Algorithm
 An algorithm to compute the shortest paths from some starting node $s$ to any other node.
-In the context of this algorithm, shorten $\delta(s, v)$ to $\delta(v)$. Its always the same starting node anyway.
+In the context of this algorithm, shorten $\delta(s, v)$ to $\delta(v)$ - it's always the same starting node anyway.
 ![](Pasted%20image%2020230208130140.png)
 ![](Pasted%20image%2020230208130048.png)
 1. Create estimate map, with the distance being $\infty$ for all edges but the one connecting the start node to itself, which is 0.
