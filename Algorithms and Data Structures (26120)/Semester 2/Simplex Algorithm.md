@@ -100,4 +100,5 @@ It is possible while doing Simplex to encounter a row with a slack of 0.
 (Just watch the video for this one, I can't write notes for this that are any more useful than the video)
 [Click here for video](zeroSlackVideo.mp4)
 The rule:
-Pick a row with zero slack if the co-efficient for the entering variable is positive (the number you divided by to get the slack, the one in the crossover between the row and column). If none of the zero slack rows have a positive entering variable, then we can choose the entering variable like usual (i.e. pick the one with the smallest positive slack).
+You must pick a row with zero slack **if** the co-efficient for the entering variable is positive (the number in the pivot column on that row). If none of the zero slack rows have a positive entering variable, then we choose the entering variable like usual (i.e. pick the one with the smallest positive slack).
+
