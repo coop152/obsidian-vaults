@@ -42,7 +42,7 @@ Alternatively, we can stipulate that all numbers in the set must be prime:
 $$p \text{ is prime, } \mathbb{z}_p=\{0, 1, \dots, p-1\}$$
 It is always true that $gcd(x, n) = 1$ if and only if $x$ has a multiplicative inverse in $\mathbb{Z}_n$. So multiplicative inverses exist for all numbers except 0, modulo prime numbers.
 $\mathbb{Z}_n^*$ is the set of numbers less than $n$ that have multiplicative inverses modulo $n$. There is also $\mathbb{Z}_p^*$, the same set for primes.
-#### Generators
+#### Generators/Primitive Roots
 Consider the set where 7 is our prime number. What happens if we look at all the exponents of 2 modulo 7?
 $2^1=2, 2^2=4, 2^3=1, 2^4=2$ and then it repeats.
 We say that the order of 2 in $\mathbb{Z}_7^*$ is 3, from the 3 unique values you can get from exponentiating it.
