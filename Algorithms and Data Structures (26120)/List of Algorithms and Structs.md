@@ -5,7 +5,7 @@
 #### Traversals
 - Depth First Search (DFS)
 - Breadth First Search (BFS)
-- Topological Sorting + Cycle Detection
+- DFS Topological Sorting + Cycle Detection
 #### Shortest Path (Node Count)
 - Shortest Path w/ BFS
 #### Shortest Path (Total Weight)
