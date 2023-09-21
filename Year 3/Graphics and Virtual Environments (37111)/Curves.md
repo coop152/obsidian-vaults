@@ -85,3 +85,10 @@ We can find the direction that the curve is turning (aka the curvature, or accel
 As you might expect, you can get the acceleration by taking the second derivative of P, or the first derivative of T:
 ![](Pasted%20image%2020230921164950.png)
 (Normalising again.)
+
+### Orders of Continuity
+There are many ways in which two curves can be connected.
+**C0** - They are connected in any way. Sharp corners may be present.
+![](Pasted%20image%2020230921170437.png)
+**G1** - They are connected, and the tangents at the meeting point are in the same direction.
+![](Pasted%20image%2020230921170514.png)
