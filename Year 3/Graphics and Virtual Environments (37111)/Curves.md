@@ -69,10 +69,10 @@ The two smaller Bezier Curves are here:
 ![](Pasted%20image%2020230921161754.png)
 You take the first of each group of points for the first curve, and the last of each group of points for the second curve.
 
-### Differential Properties of Curves
+#### Differential Properties
 ![](Pasted%20image%2020230921164354.png)
 There are many properties of curves that you may want to know, for various reasons. These include:
-#### Velocity
+##### Velocity
 We can find the velocity of the curve at a given point by finding the tangent of the curve.
 Recall this function for a Bezier curve:
 ![](Pasted%20image%2020230921164605.png)
@@ -80,15 +80,40 @@ We can find the tangent of the curve at a given point by differentiating:
 ![](Pasted%20image%2020230921164648.png)
 (We also normalise the vector.)
 This is the velocity of the curve.
-#### Curvature/acceleration
+##### Curvature/acceleration
 We can find the direction that the curve is turning (aka the curvature, or acceleration) by finding the normal of the curve.
 As you might expect, you can get the acceleration by taking the second derivative of P, or the first derivative of T:
 ![](Pasted%20image%2020230921164950.png)
 (Normalising again.)
 
-### Orders of Continuity
-There are many ways in which two curves can be connected.
+#### Orders of Continuity
+There are many ways in which two Bezier curves can be connected.
 **C0** - They are connected in any way. Sharp corners may be present.
 ![](Pasted%20image%2020230921170437.png)
-**G1** - They are connected, and the tangents at the meeting point are in the same direction.
+**G1** - They are connected, and the tangents at the meeting point are in the same direction. The connection is quite smooth.
 ![](Pasted%20image%2020230921170514.png)
+**C1** - They are connected, and the tangents at the meeting point are the exact same. The connection is completely smooth, and appears continuous.
+![](Pasted%20image%2020230921180318.png)
+
+### Cubic B-Spline Curves
+![](Pasted%20image%2020230921180559.png)
+Cubic B-Spline Curves are another approximating curve. They are locally cubic (like a Bezier curve), but instead of having a fixed number of points, they have a *minimum* of 4 points; Adding more points creates more turns in the curve, while keeping a smooth appearance with no visible discontinuity. For example:
+![](Pasted%20image%2020230921180905.png)
+As you can see, B-Spline curves do not need to pass through *any* of the control points.
+
+B-Spline curves, like Bezier curves, are contained entirely within the convex hull formed by the control points.
+Also like a Cubic Bezier curve, they are composed of 4 Bernstein basis functions:
+![](Pasted%20image%2020230921181157.png)
+The same properties apply as with a Cubic Bezier curve, but observe that while the sum of the basis functions does add up to 1 when $t = 0$ and $t= 1$, no single basis function equals 1. This is why the curve never touches the control points.
+
+### Converting between curves
+![](Pasted%20image%2020230921181639.png)
+These two matrices are the spline basis matrices for Bezier and B-spline, respectively. Because both of these produce a cubic curve, we can make an identical curve using either of these; the control points will just be different.
+For example, say we have a Bezier curve. Let $B_1$ be the spline basis matrix for Bezier, and $B_2$ be the spline basis matrix for B-spline.
+Our Bezier curve can be represented in matrix form:
+![](Pasted%20image%2020230921181951.png)
+A B-spline curve would be represented in the same form, but with the B-spline spline basis matrix. So, we introduce that matrix:
+![](Pasted%20image%2020230921182232.png)
+If you multiply the first three elements, you have a B-spline curve:
+![](Pasted%20image%2020230921182303.png)
+Because we multiplied by a matrix and its inverse, we didn't change the result of the function.
