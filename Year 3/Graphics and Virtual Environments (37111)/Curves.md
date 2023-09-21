@@ -67,3 +67,4 @@ First, take the points halfway between the control points. Connect these dots wi
 ![](Pasted%20image%2020230921161634.png)
 The two smaller Bezier Curves are here:
 ![](Pasted%20image%2020230921161754.png)
+You take the first of each group of points for the first curve, and the last of each group of points for the second curve.
