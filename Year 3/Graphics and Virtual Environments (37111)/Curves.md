@@ -46,3 +46,15 @@ But why use these Bernstein Polynomials? Because of these properties:
 - **Partition of unity** - The sum of all of the Bernstein Polynomials at any given value of $t$ will add up to 1.
 
 These two properties are why the Bezier curve remains inside the convex hull.
+
+What about the other Bezier curves?
+A degree 1 Bezier curve is a straight line, and only takes two control points:
+![](Pasted%20image%2020230921160407.png)
+A degree 2 Bezier curve ("Quadratic Bezier curve") takes three control points:
+![](Pasted%20image%2020230921160454.png)
+The Cubic Bezier curve is degree 3.
+A degree 4 Bezier curve takes 5 control points:
+![](Pasted%20image%2020230921160627.png)
+And so on. To find the Bernstein polynomials for these other degrees, use this formula:
+![](Pasted%20image%2020230921160705.png)
+Where $n$ is the number of control points and $i$ is which of the polynomials you want. 
