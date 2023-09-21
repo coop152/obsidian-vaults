@@ -8,17 +8,24 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "file:\"Year 2 Index\"",
+      "query": "path:\"Year 2\"",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "file:\"Year 3 Index\"",
+      "query": "path:\"Year 3\"",
       "color": {
         "a": 1,
         "rgb": 7143581
+      }
+    },
+    {
+      "query": "",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
       }
     }
   ],
@@ -28,10 +35,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
+  "centerStrength": 0.526041666666667,
   "repelStrength": 11.7708333333333,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.37480463419174637,
+  "linkDistance": 196,
+  "scale": 0.26733894884615317,
   "close": false
 }
