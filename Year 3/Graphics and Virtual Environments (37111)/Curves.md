@@ -11,7 +11,7 @@ In many cases, we want properties of our geometry or animation to be smooth. For
 Simply a set of points connected by lines. While simple, they completely lack smoothness.
 They are still of great importance, as they are essentially what a GPU takes as input for rendering; while other kinds of lines may be used, when it comes to rendering polylines must be used.
 
-## Spline
+## Splines
 ![](Pasted%20image%2020230921152126.png)
 Spline is a general term for any kind of curve that smoothly connects a set of lines. The points that are used to construct a spline are called **control points**.
 There are two distinct categories of splines:
@@ -57,4 +57,13 @@ A degree 4 Bezier curve takes 5 control points:
 ![](Pasted%20image%2020230921160627.png)
 And so on. To find the Bernstein polynomials for these other degrees, use this formula:
 ![](Pasted%20image%2020230921160705.png)
-Where $n$ is the number of control points and $i$ is which of the polynomials you want. 
+Where $n$ is the number of control points (or $n - 1$ is the degree of the curve) and $i$ is which of the polynomials you want. 
+
+#### Subdivision
+Subdivision is the process of splitting a curve into multiple smaller curves, where the combination of the smaller curves is identical to the original curve.
+![](Pasted%20image%2020230921161320.png)
+A method for subdividing a Bezier curve is **De Casteljau Construction**.
+First, take the points halfway between the control points. Connect these dots with new lines, then take the points halfway along these new lines. Repeat this until we only get one point (the number of repetitions depends on the degree of the curve). This point lies exactly halfway along the curve.
+![](Pasted%20image%2020230921161634.png)
+The two smaller Bezier Curves are here:
+![](Pasted%20image%2020230921161754.png)
