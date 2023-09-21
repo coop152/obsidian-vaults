@@ -114,6 +114,6 @@ Our Bezier curve can be represented in matrix form:
 ![](Pasted%20image%2020230921181951.png)
 A B-spline curve would be represented in the same form, but with the B-spline spline basis matrix. So, we introduce that matrix:
 ![](Pasted%20image%2020230921182232.png)
-If you multiply the first three elements, you have a B-spline curve:
+Multiply the first three elements:
 ![](Pasted%20image%2020230921182303.png)
-Because we multiplied by a matrix and its inverse, we didn't change the result of the function.
+Because we multiplied by a matrix and its inverse, we didn't change the result of the function. Therefore, we have the same curve but expressed as a B-Spline curve.
