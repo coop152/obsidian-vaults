@@ -68,3 +68,20 @@ First, take the points halfway between the control points. Connect these dots wi
 The two smaller Bezier Curves are here:
 ![](Pasted%20image%2020230921161754.png)
 You take the first of each group of points for the first curve, and the last of each group of points for the second curve.
+
+### Differential Properties of Curves
+![](Pasted%20image%2020230921164354.png)
+There are many properties of curves that you may want to know, for various reasons. These include:
+#### Velocity
+We can find the velocity of the curve at a given point by finding the tangent of the curve.
+Recall this function for a Bezier curve:
+![](Pasted%20image%2020230921164605.png)
+We can find the tangent of the curve at a given point by differentiating:
+![](Pasted%20image%2020230921164648.png)
+(We also normalise the vector.)
+This is the velocity of the curve.
+#### Curvature/acceleration
+We can find the direction that the curve is turning (aka the curvature, or acceleration) by finding the normal of the curve.
+As you might expect, you can get the acceleration by taking the second derivative of P, or the first derivative of T:
+![](Pasted%20image%2020230921164950.png)
+(Normalising again.)
