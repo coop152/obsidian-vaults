@@ -117,3 +117,10 @@ A B-spline curve would be represented in the same form, but with the B-spline sp
 Multiply the first three elements:
 ![](Pasted%20image%2020230921182303.png)
 Because we multiplied by a matrix and its inverse, we didn't change the result of the function. Therefore, we have the same curve but expressed as a B-Spline curve.
+Here is a concrete example of this:
+![](Pasted%20image%2020230921183810.png)
+
+### NURBS (Non-Uniform Rational Basis Spline)
+![](Pasted%20image%2020230921184023.png)
+NURBS is different in that the control points (called knots in a NURBS curve) each have a weight. This weight determines how closely the curve must adhere to each point.
+NURBS curves are known for being very flexible and very smooth. You are able to get a very specific shape without sacrificing smoothness.
