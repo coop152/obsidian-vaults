@@ -23,3 +23,5 @@ Simple: Because the graph is simple, there can be no loops. Therefore, the highe
 
 ![](Pasted%20image%2020230925190050.png)
 Proof: just think about it for a few minutes
+
+## Depth First Search
