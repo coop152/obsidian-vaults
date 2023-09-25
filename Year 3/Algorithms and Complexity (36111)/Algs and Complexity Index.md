@@ -1,3 +1,5 @@
 ## Textbooks
 - [Goodrich and Tamassia](https://r4.vlereader.com/Reader?ean=9781119028482) (Probably doesn't work cause dumbass book DRM, [here's a random PDF](https://canvas.projekti.info/ebooks/Algorithm%20Design%20and%20Applications%5BA4%5D.pdf))
+
+## Topics
 - 
