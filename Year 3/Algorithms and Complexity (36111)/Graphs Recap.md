@@ -1,7 +1,7 @@
 ## Definitions
-- **Degree** - Property of a vertex. The number of *incident* edges; that is, the number of edges that are connected to it both inbound and outbound.
-- **Out-degree** - Property of a vertex. The number of outbound edges.
-- **In-degree** - Property of a vertex. The number of inbound edges.
+- **Degree** - Of a vertex is the number of *incident* edges; that is, the number of edges that are connected to it both inbound and outbound.
+- **Out-degree** - Of a vertex is the number of outbound edges.
+- **In-degree** - Of a vertex is the number of inbound edges.
 - **Simple graph** - A graph with no *loops* (edges connecting a vertex to itself) or *parallel edges* (multiple identical edges). A simple graph has a **set** of nodes, while a non-simple graph has a **collection** of nodes.
 - **Cycle** - A path that starts and ends at the same vertex.
 - **Simple Cycle** - A path where each vertex is distinct apart from the start/end point. 
