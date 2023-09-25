@@ -7,7 +7,7 @@
 - **Simple Cycle** - A path where each vertex is distinct apart from the start/end point. 
 - **Subgraph** - A graph whose vertices and edges are subsets of the vertices and edges of another graph. (These notes will use the word "supergraph" as the inverse, but the textbook does not.)
 - **Spanning Subgraph** - A subgraph whose set of vertices is the same as its supergraph. That is, a subgraph that contains all vertices of its supergraph.
-- **Spanning Tree** - A spanning subgraph that is also a tree (i.e. has no cycles)
+- **Spanning Tree** - A spanning subgraph that is also a tree (i.e. has no cycles).
 - **Strongly Connected** - A graph is strongly connected if every vertex is reachable from every other, directly or indirectly.
 - **Connected Components** - If a graph is not **connected**, then the maximally connected subgraphs are called the Connected Components of the graph.
 
@@ -21,3 +21,5 @@ Simple: The sum of in-degrees is equal to the sum of out-degrees in a directed g
 ![](Pasted%20image%2020230925151514.png)
 Simple: Because the graph is simple, there can be no loops. Therefore, the highest degree possible in G is $n-1$; A vertex that connects to every other. If every vertex has this highest degree (i.e. every vertex is connected to every other) then the total degree will be $n(n-1)$. Theorem 13.6 says the total degree is less than $2m$, therefore $2m \leq n(n-1)$ and $m \leq n(n-1)/2$. The same logic applies to a directed graph, but the total degree is doubled because each vertex connecting to every other requires two edges back and forth.
 
+![](Pasted%20image%2020230925190050.png)
+Proof: just think about it for a few minutes
