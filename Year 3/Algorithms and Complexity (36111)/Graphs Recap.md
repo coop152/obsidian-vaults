@@ -25,3 +25,12 @@ Simple: Because the graph is simple, there can be no loops. Therefore, the highe
 Proof: just think about it for a few minutes
 
 ## Depth First Search
+```python
+function DFS(G, s):
+	s.markAsVisited()
+	for vertex v in s.successors:
+		if not v.visited():
+			DFS(G, v)
+		
+	
+```
