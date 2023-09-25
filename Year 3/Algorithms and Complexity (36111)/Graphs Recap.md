@@ -3,6 +3,9 @@
 - **Out-degree** - Property of a vertex. The number of outbound edges.
 - **In-degree** - Property of a vertex. The number of inbound edges.
 - **Simple graph** - A graph with no *loops* (edges connecting a vertex to itself) or *parallel edges* (multiple identical edges). A simple graph has a **set** of nodes, while a non-simple graph has a **collection** of nodes.
+- **Cycle** - A path that starts and ends at the same vertex.
+- **Simple Cycle** - A path where each vertex is distinct apart from the start/end point. 
+- 
 
 ## Theorems
 ![](Pasted%20image%2020230925150703.png)
