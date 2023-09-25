@@ -5,7 +5,8 @@
 - **Simple graph** - A graph with no *loops* (edges connecting a vertex to itself) or *parallel edges* (multiple identical edges). A simple graph has a **set** of nodes, while a non-simple graph has a **collection** of nodes.
 - **Cycle** - A path that starts and ends at the same vertex.
 - **Simple Cycle** - A path where each vertex is distinct apart from the start/end point. 
-- 
+- **Subgraph** - A graph whose vertices and edges are subsets of the vertices and edges of another graph. (These notes will use the word "supergraph" as the inverse, but the textbook does not.)
+- **Spanning Subgraph** - A subgraph whose set of vertices is the same as its supergraph. That is, a subgraph that contains all vertices of its supergraph.
 
 ## Theorems
 ![](Pasted%20image%2020230925150703.png)

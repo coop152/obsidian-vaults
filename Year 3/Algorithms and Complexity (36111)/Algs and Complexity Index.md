@@ -3,4 +3,4 @@
 
 ## Topics
 - [Graphs Recap](Graphs%20Recap.md)
-- 
+- [Strongly Connected Components](Strongly%20Connected%20Components.md)
