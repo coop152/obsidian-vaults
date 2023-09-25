@@ -7,6 +7,7 @@
 - **Simple Cycle** - A path where each vertex is distinct apart from the start/end point. 
 - **Subgraph** - A graph whose vertices and edges are subsets of the vertices and edges of another graph. (These notes will use the word "supergraph" as the inverse, but the textbook does not.)
 - **Spanning Subgraph** - A subgraph whose set of vertices is the same as its supergraph. That is, a subgraph that contains all vertices of its supergraph.
+- **Strongly Connected** - A graph is strongly connected if every vertex is reachable from every other, directly or indirectly.
 
 ## Theorems
 ![](Pasted%20image%2020230925150703.png)
