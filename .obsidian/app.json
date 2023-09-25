@@ -12,5 +12,6 @@
   "attachmentFolderPath": "./attachments",
   "showLineNumber": false,
   "newFileLocation": "current",
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "focusNewTab": true
 }

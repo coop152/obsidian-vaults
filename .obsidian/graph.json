@@ -3,20 +3,42 @@
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
-  "collapse-display": true,
+  "colorGroups": [
+    {
+      "query": "path:\"Year 2\" file:Index",
+      "color": {
+        "a": 1,
+        "rgb": 8856098
+      }
+    },
+    {
+      "query": "path:\"Year 3\"",
+      "color": {
+        "a": 1,
+        "rgb": 7143581
+      }
+    },
+    {
+      "query": "path:\"Year 2\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    }
+  ],
+  "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "nodeSizeMultiplier": 1.0953125,
+  "lineSizeMultiplier": 0.993229166666667,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10.5,
+  "centerStrength": 0.526041666666667,
+  "repelStrength": 11.7708333333333,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.37480463419174637,
+  "linkDistance": 196,
+  "scale": 0.2673389488461535,
   "close": false
 }
