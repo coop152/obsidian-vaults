@@ -89,3 +89,18 @@ function BFS(Graph G, node s):
 						e.markAsCross()
 		i++  # go to the next level
 ```
+The levels in this version represent the length of the shortest path from start node $s$ to any given node.
+
+### Theorems
+![](Pasted%20image%2020230926111258.png)
+Simple: these are obviously apparent
+
+![](Pasted%20image%2020230926111334.png)
+Simple: Same as the explanation for DFS basically
+
+## Directed Graph Specifics
+- **Reachability** - If a node is able to be reached from another node in a directed graph. Node $w$ is **reachable** from node $v$ if there is a directed path from $v$ to $w$.
+- **Transitive closure** - For a directed graph $G$, the transitive closure $G^*$ is a graph containing the same vertices as $G$ but containing an edge for every directed path in $G$. That is, if $G$ contains a path from node $v$ to node $w$ then $G^*$ contains **a direct edge** connecting the nodes.
+
+### DFS for Digraphs
+	
