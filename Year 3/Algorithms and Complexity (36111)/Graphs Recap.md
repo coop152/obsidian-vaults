@@ -38,7 +38,6 @@ function DFS(Graph G, Node v):
 				DFS(G, w)  # recur on newly discovered node
 			else:  # found an explored node via this edge
 				e.markAsBack()
-
 ```
 If the graph is not connected, you need to do this in a loop for every vertex.
 ### Complexity
@@ -103,4 +102,15 @@ Simple: Same as the explanation for DFS basically
 - **Transitive closure** - For a directed graph $G$, the transitive closure $G^*$ is a graph containing the same vertices as $G$ but containing an edge for every directed path in $G$. That is, if $G$ contains a path from node $v$ to node $w$ then $G^*$ contains **a direct edge** connecting the nodes.
 
 ### DFS for Digraphs
-	
+```python
+function DFS(Graph G, Node v):
+	v.labelAsExplored()
+	for Edge e in v.edges:
+		if e.isUnexplored():  # edge has not been traversed yet
+			Node w = e.destination
+			if w.isUnexplored():  # found a new node via this edge
+				e.markAsDiscovery()
+				DFS(G, w)  # recur on newly discovered node
+			else:  # found an explored node via this edge
+				e.markAsBack()
+```
