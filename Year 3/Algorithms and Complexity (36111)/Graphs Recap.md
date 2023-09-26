@@ -104,3 +104,24 @@ Simple: Same as the explanation for DFS basically
 Traversing a directed graph is the same complexity as an undirected one. I'm not writing down the proof.
 
 See [Strongly Connected Components](Strongly%20Connected%20Components.md) For more content relating to directed graph operation complexity.
+
+### Transitive Closures
+#### Floyd-Warshall Algorithm for finding Transitive Closures
+Let $G$ be a digraph with $n$ vertices and $m$ edges. This algorithm works in a series of rounds, starting with $G_0 = G$. First, we number the vertices of $G$ (the order does not matter):
+$$
+v_1, v_2, ..., v_n
+$$
+We begin round 1, where we will construct $G_1$.
+Start with $G_1 = G_0$.
+Does $G_0$ contain any pairs of edges like $(v_i, v_k)$ and $(v_k, v_j)$? If so, add the directed edge $(v_i, v_j)$ to $G_1$.
+
+We then continue onto the next round, and repeat for $n$ rounds (the number of vertices in the graph). For a generic round $k$:
+We begin round $k$, where we will construct $G_k$.
+Start with $G_k = G_{k-1}$.
+Does $G_{k-1}$ contain any pairs of edges like $(v_i, v_k)$ and $(v_k, v_j)$? If so, add the directed edge $(v_i, v_j)$ to $G_k$.
+
+The result of this process, $G_n$, is equal to the transitive closure $G^*$.
+Notice that this is a **dynamic programming** algorithm:
+![](Pasted%20image%2020230926114548.png)
+The main loop runs $n$ times and the inner loop considers every pair of vertices (of which there is $O(n^2)$) performing an $O(1)$ calculation for each pair. Assuming the graph operations are $O(1)$ (as they are in an adjacency matrix) then the total running time is $O(n^3)$.
+Note that there are some fringe cases where this is actually inferior to just running DFS repeatedly; if the graph is sparse and is represented using an adjacency list.
