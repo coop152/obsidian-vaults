@@ -51,6 +51,7 @@ In one run of DFS, every vertex is analysed exactly once and every edge is analy
 Simple: A run of DFS checks each vertex one time and each edge two times (at both ends.) Therefore, it runs in $O(n + m)$ time. These other algorithms exist because they can be reduced to DFS.
 
 ## Breadth-first Search
+Sane version for normal people:
 ```python
 function BFS(Graph G, node v):
 	v.markAsExplored()
@@ -58,11 +59,33 @@ function BFS(Graph G, node v):
 	for Edge e in v.edges:  # queue up all edges outbound from v
 		q.enqueue(e)
 	while not q.empty():  # while there remains unexplored nodes
-		e = q.dequeue()
-		w = e.destination
+		Edge e = q.dequeue()
+		Node w = e.destination
 		if w.isNotExplored():  # found a new node via this edge
 			e.markAsDiscovery()
 			q.enqueue(w)
 		else:
-			e.markAsBack() 
+			e.markAsCross() 
+```
+Insane version that the book gives:
+```python
+function BFS(Graph G, node s):
+	List[List] levels = new List[List]  # every level of nodes goes in here
+	levels[0] = new List  # create the 0th level
+	s.markAsExplored()
+	levels[0].append(s)
+	int i = 0
+	while levels[i] is not empty:  # repeat until we encounter an empty level
+		levels[i + 1] = new List
+		for Node v in levels[i]:
+			for Edge e in v.edges:
+				Node w = e.destination
+				if e.isNotExplored():
+					if w.isNotExplored():
+						e.markAsDiscovery()
+						w.markAsExplored()
+						levels[i + 1].append(w)
+					else:
+						e.markAsCross()
+		i++  # go to the next level
 ```
