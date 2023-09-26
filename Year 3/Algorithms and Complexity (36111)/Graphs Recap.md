@@ -101,16 +101,6 @@ Simple: Same as the explanation for DFS basically
 - **Reachability** - If a node is able to be reached from another node in a directed graph. Node $w$ is **reachable** from node $v$ if there is a directed path from $v$ to $w$.
 - **Transitive closure** - For a directed graph $G$, the transitive closure $G^*$ is a graph containing the same vertices as $G$ but containing an edge for every directed path in $G$. That is, if $G$ contains a path from node $v$ to node $w$ then $G^*$ contains **a direct edge** connecting the nodes.
 
-### DFS for Digraphs
-```python
-function DFS(Graph G, Node v):
-	v.labelAsExplored()
-	for Edge e in v.edges:
-		if e.isUnexplored():  # edge has not been traversed yet
-			Node w = e.destination
-			if w.isUnexplored():  # found a new node via this edge
-				e.markAsDiscovery()
-				DFS(G, w)  # recur on newly discovered node
-			else:  # found an explored node via this edge
-				e.markAsBack()
-```
+Traversing a directed graph is the same complexity as an undirected one. I'm not writing down the proof.
+
+See [Strongly Connected Components](Strongly%20Connected%20Components.md) For more content relating to directed graph operation complexity.
