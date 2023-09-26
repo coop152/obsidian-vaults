@@ -126,3 +126,9 @@ Notice that this is a **dynamic programming** algorithm:
 ![](Pasted%20image%2020230926114548.png)
 The main loop runs $n$ times and the inner loop considers every pair of vertices (of which there is $O(n^2)$) performing an $O(1)$ calculation for each pair. Assuming the graph operations are $O(1)$ (as they are in an adjacency matrix) then the total running time is $O(n^3)$.
 Note that there are some fringe cases where this is actually inferior to just running DFS repeatedly; if the graph is sparse and is represented using an adjacency list.
+
+### Directed Acyclic Graphs (DAGs)
+If a digraph has no cycles it is called a Directed Acyclic Graph, or DAG. DAGs are significant due to some of their very popular usecases:
+- Inheritance in object oriented languages
+- Prerequisites for courses on a university degree
+- Scheduling constraints with tasks in a project
