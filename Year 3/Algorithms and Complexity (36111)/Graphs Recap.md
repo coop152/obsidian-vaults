@@ -1,4 +1,5 @@
-## Definitions
+## Graphs
+### Definitions
 - **Degree** - Of a vertex is the number of *incident* edges; that is, the number of edges that are connected to it both inbound and outbound.
 - **Out-degree** - Of a vertex is the number of outbound edges.
 - **In-degree** - Of a vertex is the number of inbound edges.
@@ -11,7 +12,7 @@
 - **Strongly Connected** - A graph is strongly connected if every vertex is reachable from every other, directly or indirectly.
 - **Connected Components** - If a graph is not **connected**, then the maximally connected subgraphs are called the Connected Components of the graph.
 
-## Theorems
+### Theorems
 ![](Pasted%20image%2020230925150703.png)
 Simple: The sum of degrees in a graph is double the number of edges, because each edge contributes +1 to the degrees of both of its endpoints.
 
@@ -24,13 +25,44 @@ Simple: Because the graph is simple, there can be no loops. Therefore, the highe
 ![](Pasted%20image%2020230925190050.png)
 Proof: just think about it for a few minutes
 
-## Depth First Search
+## Depth-first Search
+(Looks different from previous depictions because this textbook represents edges in a graph as objects unto themselves as opposed to abstract relations between nodes)
 ```python
-function DFS(G, s):
-	s.markAsVisited()
-	for vertex v in s.successors:
-		if not v.visited():
-			DFS(G, v)
-		
-	
+function DFS(Graph G, Node v):
+	v.labelAsExplored()
+	for Edge e in v.edges:
+		if e.isUnexplored():  # edge has not been traversed yet
+			Node w = e.destination
+			if w.isUnexplored():  # found a new node via this edge
+				e.markAsDiscovery()
+				DFS(G, w)  # recur on newly discovered node
+			else:  # found an explored node via this edge
+				e.markAsBack()
+
+```
+If the graph is not connected, you need to do this in a loop for every vertex.
+### Complexity
+In one run of DFS, every vertex is analysed exactly once and every edge is analysed exactly twice (Note that these are only vertices and edges **in the connected component of the starting vertex.**) Therefore, DFS runs in $O(m)$ time, where $m$ is the number of edges in the starting vertex's connected component. This complexity depends on a few properties of the data structure used to represent the graph:
+- Finding the incident edges to a vertex must be $O(\text{degree}(v))$. Adjacency lists satisfy this, but matrices do not.
+- We must be able to mark vertices (and/or edges) as explored and to check this marking in $O(1)$ time. This can be achieved by constructing vertex/edge objects with an `explored` field, for example.
+
+## Theorems
+![](Pasted%20image%2020230926104728.png)
+Simple: A run of DFS checks each vertex one time and each edge two times (at both ends.) Therefore, it runs in $O(n + m)$ time. These other algorithms exist because they can be reduced to DFS.
+
+## Breadth-first Search
+```python
+function BFS(Graph G, node v):
+	v.markAsExplored()
+	Queue q = new Queue()
+	for Edge e in v.edges:  # queue up all edges outbound from v
+		q.enqueue(e)
+	while not q.empty():  # while there remains unexplored nodes
+		e = q.dequeue()
+		w = e.destination
+		if w.isNotExplored():  # found a new node via this edge
+			e.markAsDiscovery()
+			q.enqueue(w)
+		else:
+			e.markAsBack() 
 ```
