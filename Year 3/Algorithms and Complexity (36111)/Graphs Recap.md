@@ -138,4 +138,27 @@ For a given DAG $G$, a topological ordering of $G$ is an ordering of the vertice
 ![](Pasted%20image%2020230926122521.png)
 
 ![](Pasted%20image%2020230926122542.png)
-Simple: 
+Simple: If the graph $G$ is acyclic, then it must contain a vertex with an in-degree of 0; if there wasn't we would always double back on ourselves eventually. If we remove this in-degree vertex (call it $v_1$) then we know that the resulting graph is still acyclic, therefore it must also contain a vertex with an in-degree of 0 (call it $v_2$). We can do this repeatedly until $G$ is empty, obtaining an order of vertices $v_1, v_2, ... v_n$. Because our numbering was strictly increasing, our ordering is a topological ordering.
+The algorithm for this process is as so:
+```python
+function topoSort(Graph G):
+	Stack S = new Stack()
+	Map incounter = new Map()  # could be an array if the nodes have integer IDs
+	for Node u in G.nodes:
+		incounter[u] = u.inDegree()
+		if incounter[u] == 0:
+			S.push(u)
+	int i = 1
+	while not S.empty():
+		Node u = S.pop()
+		u.numbering = i
+		i++
+		for Edge e in u.outEdges:
+			Node w = e.destination
+			incounter[w]--
+			if incounter[w] == 0:
+				S.push(w)
+	if i > G.nodeCount:
+		return the order that was found
+	return "digraph G has a directed cycle"
+```
