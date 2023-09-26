@@ -113,7 +113,8 @@ v_1, v_2, ..., v_n
 $$
 We begin round 1, where we will construct $G_1$.
 Start with $G_1 = G_0$.
-Does $G_0$ contain any pairs of edges like $(v_i, v_k)$ and $(v_k, v_j)$? If so, add the directed edge $(v_i, v_j)$ to $G_1$.
+Does $G_0$ contain any pairs of edges like $(v_i, v_1)$ and $(v_1, v_j)$? In other words, are there any pairs of edges that create a directed path where $v_1$ is in the middle?
+If so, add the directed edge $(v_i, v_j)$ to $G_1$.
 
 We then continue onto the next round, and repeat for $n$ rounds (the number of vertices in the graph). For a generic round $k$:
 We begin round $k$, where we will construct $G_k$.
