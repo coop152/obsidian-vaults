@@ -9,3 +9,4 @@ It is a fairly simple state machine, which can often be programmed to accommodat
 In theory, a 2D array of memory whree each cell is a 'numeric' representation of a single pixel's colour.
 Depending on the colour depth, the length of one location will vary; this course assumes 8-bit colour (as in 8 bits per pixel, not per colour. 256 colours.)
 
+# Drawing Lines
