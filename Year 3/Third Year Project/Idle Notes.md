@@ -7,8 +7,9 @@
 4. By substituting the Cygwin versions of the libraries for native ones, we have caused a crash: The program is looking for resources on the fake Cygwin drive, but the native libraries are using the actual Windows drive. This causes an error trying to find things in `/usr/local/`. Therefore, copy these files from the Cygwin drive to the real Windows drive:
 	1. `C:/cygwin64/usr/local` -> `C:/usr/local`
 	2. `C:/cygwin64/usr/share/zoneinfo/zone.tab` -> `C:/usr/share/zoneinfo/zone.tab`
-	3. There may be more, not fully tested yet.
-5. The program fails to save the calendar file; the default seems to resolve to `C:/.calendar` for some reason, which it obviously is not allowed to write to. This bug seems to originate from `startup.tcl.in` on line 38; it tries to put it in the home directory and bizarrely expands `~` to the C drive. (Cygnal actually fixes this! It correctly expands to `C:/Users/Kyle Coop/.calendar`.)
+	3. There may be more.
+
+The program fails to save the calendar file; the default seems to resolve to `C:/.calendar` for some reason, which it obviously is not allowed to write to. This bug seems to originate from `startup.tcl.in` on line 38; it tries to put it in the home directory and bizarrely expands `~` to the C drive. (Cygnal actually fixes this - It correctly expands to `C:/Users/Kyle Coop/.calendar`.)
 
 It seems like giving a windows path as the prefix to ./configure works fine; may be the way to go forwards? This works fine for ical's own files in `/usr/local` but it does not seem to work for the time zone file; maybe just fix this by itself by using an actual Tcl time zone API instead of reading a file (lol).
 
