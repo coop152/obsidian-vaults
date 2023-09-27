@@ -15,7 +15,18 @@ It seems like giving a windows path as the prefix to ./configure works fine; may
 
 Alternatively, use [Cygnal](https://www.kylheku.com/cygnal/), a drop in replacement for the main Cygwin dll that makes it use actual windows paths instead of the fake root filesystem. Rename the dll to `cygwin1.dll` and put alongside the exe, the same as Tcl/Tk.
 This way it actually looks in `C:/usr/share/zoneinfo/zone.tab` for the time zone file instead of in `C:/cygwin64`. Doesn't let me put it in an actually decent location, but its better than nothing.
-(Also watch out for having the Cygnal dll in the current folder when compiling stuff - it messes with the compilation tools. It should be moved in next to the ical.exe in `/usr/share/bin` so its in effect when you run it on the PATH.)
+(Also watch out for having the Cygnal dll in the current folder when compiling stuff - it messes with the compilation tools. It should be moved in next to the ical.exe in `/usr/share/bin` so its in effect when you run it from there.)
 
 # Full process for making a standalone windows compile
 
+1. Compile.
+2. `make install`.
+3. Create `C:/usr/`.
+4. Copy all of ical's files from the cygwin "drive" (`C:/cygwin64`) into this folder. The files are:
+	- `/usr/local/bin/ical`
+	- `/usr/local/lib/ical` (the entire folder and its contents)
+	- `/usr/local/share/applications/ical.desktop` (this is almost definitely not required but I'm being thorough)
+	- `/usr/local/share/man/man1/ical.1` (same as above)
+5. Download [IronTcl](https://www.irontcl.com/index.html).
+6. Extract `bin/tcl86t.dll` to `C:/usr/bin/libtcl8.6.dll` (that is an extract *and* a rename)
+7. Extract `bin/tk86t.dll` to `C:/usr/bin/libtk8.6.dll`
