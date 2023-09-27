@@ -22,11 +22,18 @@ This way it actually looks in `C:/usr/share/zoneinfo/zone.tab` for the time zone
 1. Compile.
 2. `make install`.
 3. Create `C:/usr/`.
-4. Copy all of ical's files from the cygwin "drive" (`C:/cygwin64`) into this folder. The files are:
+4. Copy all of ical's files from the Cygwin "drive" (`C:/cygwin64`) into this folder. The files are:
 	- `/usr/local/bin/ical`
 	- `/usr/local/lib/ical` (the entire folder and its contents)
 	- `/usr/local/share/applications/ical.desktop` (this is almost definitely not required but I'm being thorough)
 	- `/usr/local/share/man/man1/ical.1` (same as above)
 5. Download [IronTcl](https://www.irontcl.com/index.html).
-6. Extract `bin/tcl86t.dll` to `C:/usr/bin/libtcl8.6.dll` (that is an extract *and* a rename)
-7. Extract `bin/tk86t.dll` to `C:/usr/bin/libtk8.6.dll`
+6. Extract `bin/tcl86t.dll` to `C:/usr/local/bin/libtcl8.6.dll` (note that the file was renamed)
+7. Extract `bin/tk86t.dll` to `C:/usr/local/bin/libtk8.6.dll` (note that the file was renamed)
+8. Extract `lib/tcl8.6/` to `C:/usr/local/lib/tcl8.6/` (the whole folder)
+9. Extract `lib/tk8.6/` to `C:/usr/local/lib/tk8.6/` (the whole folder)
+10. Copy these Cygwin dlls into `C:/usr/local/bin`, beside `ical.exe`:
+	- `C:/cygwin64/bin/cyggcc_s-seh-1.dll`
+	- `C:/cygwin64/bin/cygstdc++-6.dll`
+11. Finally, download [Cygnal](https://www.kylheku.com/cygnal/), rename the file to `cygwin1.dll` and put it beside `ical.exe` like the other dlls.
+12. It's That Simple!™
