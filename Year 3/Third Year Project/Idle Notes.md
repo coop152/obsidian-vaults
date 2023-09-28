@@ -41,4 +41,4 @@ This way it actually looks in `C:/usr/share/zoneinfo/zone.tab` for the time zone
 
 # Current Bugs
 Location: filesel.tcl, Line 150 and 154
-Trying to open a file (e.g. Include Calendar) makes ical freeze. This is because there is a loop that terminates when it reaches a filesystem path of "/", which cannot happen on Windows. Replacing "/" with "C:/" works, but is obviously not a very good solution. In fact, this entire file needs a once over to make it even slightly Windows compatible.
+Trying to open a file (Include Calendar, Link to Local File, etc.) makes ical freeze. This is because there is a loop that terminates when it reaches a filesystem path of "/", which cannot happen on Windows. Replacing "/" with "C:/" works, but is obviously not a very good solution. In fact, this entire file needs a once over to make it even slightly Windows compatible. Probably the only reason this custom file selector component exists is cause it was written for a version of Tcl/Tk so old that it didnt have a file selector built in.
