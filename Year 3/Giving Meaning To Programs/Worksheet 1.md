@@ -23,4 +23,4 @@ Given: $\lambda w.(w\lambda x.[\lambda y.(\lambda{x}.[(xb)x])])$
 $\alpha$-equivalent: $\lambda c.(c\lambda e.[\lambda d.(\lambda{a}.[(ab)a])])$ 
 
 Given: $\lambda w.w(\lambda x. \lambda y. \lambda x.xbx) \lambda x.x(\lambda x.x) awy$
-$\alpha$-equivalence: $$
+$\alpha$-equivalence: $\lambda l.l(\lambda m. \lambda n. \lambda o.obo) \lambda p.p(\lambda q.q) awy$
