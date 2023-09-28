@@ -10,3 +10,23 @@
 # Variables
 We assume that we have an infinite set of variables $\text{Vars}$, so that we can always produce a new variable which hasn't been used yet. To show this precisely, we use the fact that for an infinite set we can find an injective function from the set to itself that is not surjective. Create a function that takes a variable and returns a new, as-of-yet unused one:
 ![](Pasted%20image%2020230928114024.png)
+The actual implementation of this function is unimportant.
+
+# Definitions
+![](Pasted%20image%2020230928114454.png)
+Simple:
+- Case bcVar: Every variable is a $\lambda$-term.
+- Case scAbs: You can add $\lambda{x}.$ to the outside of any $\lambda$-term to make a new $\lambda$-term. This is called **$\lambda$-abstraction**.
+- Case scApp: Two $\lambda$-terms beside each other (in brackets) make a new $\lambda$-term. This is called **application**.
+
+![](Pasted%20image%2020230928115012.png)
+Simple:
+- Case bcVar: A variable is a subterm of itself.
+- Case scAbs: The subterms of a $\lambda$-extraction are itself, the rightmost $\lambda$-term, and the subterms of the rightmost $\lambda$-term.
+- Case scApp: The subterms of an application are itself, both lambda-terms in it and their subterms.
+
+Also, a **proper subterm** is a subterm that is not equal (in the same fashion as a proper subset).
+
+Take this lambda-term for example:
+$\lambda x.x$
+When we apply
