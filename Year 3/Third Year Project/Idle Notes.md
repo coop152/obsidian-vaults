@@ -37,3 +37,8 @@ This way it actually looks in `C:/usr/share/zoneinfo/zone.tab` for the time zone
 	- `C:/cygwin64/bin/cygstdc++-6.dll`
 11. Finally, download [Cygnal](https://www.kylheku.com/cygnal/), rename the file to `cygwin1.dll` and put it beside `ical.exe` like the other dlls.
 12. It's That Simple!™
+
+
+# Current Bugs
+Location: filesel.tcl, Line 150 and 154
+Trying to open a file makes ical freeze. This is because there is a loop that terminates when it reaches a filesystem path of "/", which cannot happen on Windows. Replacing "/" with "C:/" works, but is obviously not a very good solution. In fact, this entire file needs a once over to make it even slightly Windows compatible.
