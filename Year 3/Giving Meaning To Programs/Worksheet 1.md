@@ -19,3 +19,6 @@ $\lambda w.(w\lambda x.[\lambda y.(\lambda{x}.[(xb)x])])$
 Free = {b}, Bound = {w, x, y}
 
 1d. 
+Given: $\lambda w.(w\lambda x.[\lambda y.(\lambda{x}.[(xb)x])])$
+$\alpha$-equivalent: $\lambda c.(c\lambda a.[\lambda b.(\lambda{a}.[(ab)a])])$ 
+
