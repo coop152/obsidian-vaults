@@ -27,6 +27,4 @@ Simple:
 
 Also, a **proper subterm** is a subterm that is not equal (in the same fashion as a proper subset).
 
-Take this lambda-term for example:
-$\lambda x.x$
-When we apply
+![](Pasted%20image%2020230928120446.png)
