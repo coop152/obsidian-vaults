@@ -28,3 +28,6 @@ Simple:
 Also, a **proper subterm** is a subterm that is not equal (in the same fashion as a proper subset).
 
 ![](Pasted%20image%2020230928120446.png)
+![](Pasted%20image%2020230928131436.png)
+![](Pasted%20image%2020230928131444.png)
+![](Pasted%20image%2020230928131455.png)
