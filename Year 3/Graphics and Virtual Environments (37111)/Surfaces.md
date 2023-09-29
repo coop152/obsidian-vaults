@@ -15,3 +15,7 @@ This surface has a very similar formula, with the new parameter added:
 Formerly $P1$, $P2$, etc. represented the location of each control point and were constant values. Now, the control points move according to the value of $v$, so they have become functions on $v$.
 This surface (specifically with a degree of 3) is called a **Bicubic Bezier surface**.
 ![](Pasted%20image%2020230929140345.png)
+## Parametric Surfaces
+A more general type of surface, which includes Tensor Product Splines. Any kind of curve that is defined in terms of parameters fits into this category.
+![](Pasted%20image%2020230929143218.png)
+From now on, parametric surfaces will be used as an interchangeable way to refer to tensor product splines such as the Bicubic Bezier Surface.
