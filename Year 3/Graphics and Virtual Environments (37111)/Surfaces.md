@@ -35,3 +35,23 @@ This can be given in matrix form like this, much like a curve:
 ![](Pasted%20image%2020230929145916.png)
 For comparison:
 ![](Pasted%20image%2020230929150035.png)
+
+
+## Displacement Maps
+Sometimes you don't want a perfectly smooth surface - after all, most natural surfaces are rough. We can do this using a displacement map:
+![](Pasted%20image%2020230929154058.png)
+A displacement map is a texture/function/something that you apply to a surface. The brightness of the map at a given point shows how far the surface should displace in the direction of the normal. Pure black will remain at the actual surface location, while pure white will stick out massively in the normal direction from the surface. Grey will stick out less.
+Note that this is done to an explicit mesh; therefore it will usually be necessary to tessellate the surface before applying the displacement to get fine detail.
+
+## Subdivision Surfaces
+Unlike subdividing a curve, subdividing a surface begins with an explicit polygon mesh. Subdividing a surface involves splitting the polygons of the surface apart; there are many methods of doing this, but generally they make the mesh smoother.
+One method is "corner-cutting". Start with this mesh:
+![](Pasted%20image%2020230929155024.png)
+We cut the sharp edges, giving us more edges:
+![](Pasted%20image%2020230929155107.png)
+Eventually we approach the "limit", which is perfectly smooth:
+![](Pasted%20image%2020230929155124.png)
+With this method, also called **Chaikin's Algorithm**, the resulting mesh (or the limit that it approaches) is actually a **quadratic B-Spline curve**. The original mesh's vertices become the control points to the curve.
+![](Pasted%20image%2020230929155305.png)
+In 3D:
+![](Pasted%20image%2020230929155456.png)
