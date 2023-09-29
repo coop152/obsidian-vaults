@@ -29,6 +29,7 @@ Another (less important sounding) use for union-find structures is for construct
 The goal is to create a maze with a single solution, and with a solution that isn't trivial (e.g. a straight line down and then right from start to finish).
 Here is an algorithm for creating such a maze:
 ```python
-algorithm MazeGenerator(Grid G, Set[Wall] E):
-	
+# note that E is full initially; that is, it includes every possible wall and completely isolates every cell in G
+algorithm MazeGenerator(Cell[][] G, Set[Wall] E):
+	Set[Wall] R = 
 ```
