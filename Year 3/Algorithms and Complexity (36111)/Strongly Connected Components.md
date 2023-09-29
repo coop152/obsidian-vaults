@@ -52,6 +52,7 @@ algorithm dfs1(Graph G, Vertex v):
 ```
 These fill the stack with every vertex in the order they were returned.
 ```python
+# 
 algorithm K2(Graph H, Stack S):
 	while not S.empty():
 		Vertex v = S.pop()
