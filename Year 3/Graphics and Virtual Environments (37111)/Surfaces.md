@@ -29,4 +29,9 @@ We can find the velocity/tangent at point P along $v$ (called B, or "bi-normal" 
 We can find the normal at point P by finding the second derivative.
 
 ### Matrix Representation
-A parametric curve can also be represented as a matrix. 
+A parametric curve can also be represented as a matrix. Here is a general form of a parametric curve:
+![](Pasted%20image%2020230929145813.png)
+This can be given in matrix form like this, much like a curve:
+![](Pasted%20image%2020230929145916.png)
+For comparison:
+![](Pasted%20image%2020230929150035.png)
