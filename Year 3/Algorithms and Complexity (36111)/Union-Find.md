@@ -90,3 +90,7 @@ algorithm union(Head u, Head v):
 			x.head = u
 		Remove v from the union-find structure
 ```
+
+There was some proof about amortised analysis that I just didn't understand, see page 227 for that.
+
+Conclusion, if you amortise over all operations involving $n$ initial elements, union is $O(\log{n})$. makeSet and find are still $O(1)$.

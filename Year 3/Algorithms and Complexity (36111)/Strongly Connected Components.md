@@ -17,15 +17,8 @@ function DFS(G, v):
 Given: a directed graph $G$
 Return: Yes if every node in the graph is reachable from every other, No otherwise.
 
-Essentially, st-CON must be true for all vertices.
+Essentially, st-CON must be true for all pairs of vertices.
 This can be solved in the "obvious" way by running st-CON on every combination of vertices in the graph. This runs in quadratic time, and is an awful solution.
-A better solution is to *(lecturer was going too quick and i forgot the solution)*
-
-
-
-## Topological Sort
-
-
+A better solution is to **Kosaraju's Algorithm**.
 
 ## Kosaraju's Algorithm
-The **Strongly connected component** of a graph G is the largest possible set of strongly connected vertices in G.
