@@ -31,5 +31,11 @@ Here is an algorithm for creating such a maze:
 ```python
 # note that E is full initially; that is, it includes every possible wall and completely isolates every cell in G
 algorithm MazeGenerator(Cell[][] G, Set[Wall] E):
-	Set[Wall] R = 
+	Set[Wall] R = new Set[Wall] # empty set of Walls
+	while R.size() < G.cellCount() - 1:
+		Edge (x, y) = E.getRandomUnchosenEdge()
+		if find(x) != find(y): # 
+			union(find(x), find(y))
+			R.add((x, y))
+	
 ```
