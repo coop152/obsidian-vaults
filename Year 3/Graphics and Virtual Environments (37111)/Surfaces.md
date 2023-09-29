@@ -2,6 +2,12 @@ Unlike curves, there are 4 kinds of surface:
 ![](Pasted%20image%2020230929134030.png)
 # Explicit Surfaces
 Surfaces defined in terms of a collection of concrete units, such as points in a point cloud or vertices in a mesh. Meshes are the more common type.
+## Point Set
+The points in a point set are unconnected and have no control over anything. They are just a free set of points:
+![](Pasted%20image%2020230929162327.png)
+This is often the result of doing a 3D scan of a real life object. Generally you don't actually want a point set, and need to convert it to another kind of surface somehow.
+There are, however, some uses for them that make them useful in modelling.
+![](Pasted%20image%2020230929162435.png)
 # Tensor Product Splines
 Analogous to splines when talking about curves. A tensor product spline is a surface defined in terms of a curve function, which produces a smooth surface.
 We know how to define Bezier curves - how might we extend this from a line to a solid surface?
@@ -55,3 +61,39 @@ With this method, also called **Chaikin's Algorithm**, the resulting mesh (or th
 ![](Pasted%20image%2020230929155305.png)
 In 3D:
 ![](Pasted%20image%2020230929155456.png)
+Here is what happens when you do it on a cube:
+![](Pasted%20image%2020230929155904.png)
+(That is a perfect sphere, not just a vaguely sphere-like shape.)
+In fact, you can get any shape out of a cube.
+# Implicit Surfaces
+An implicit surface is a mesh defined by an equation. For example:
+![](Pasted%20image%2020230929160057.png)
+Implicit surfaces are very efficient, as you can make a perfectly smooth shape with no need for a large amount of polygons. They are also very efficient for boolean operations such as intersection, as there is only a single equation to handle.
+
+However, the obvious limitation is that you can only create shapes which you can express as an equation. If you want to create the shape shown above but with a bump on the surface, you cannot.
+
+Notably, you can do very easy bounds checks:
+![](Pasted%20image%2020230929160613.png)
+
+# Procedural Surfaces
+A **surface of revolution** defines a 3d surface by first defining a 2d shape, and then rotating it around some axis to create a 3d surface. For example:
+![](Pasted%20image%2020230929160753.png)
+A surface of revolution can be represented as this formula:
+![](Pasted%20image%2020230929160825.png)
+Where $s(u,v)$ is the function defining the surface, $R(v)$ is the rotation matrix and $q(u)$ is the vector being rotated around.
+
+Another kind of procedural surface is the **Generalised cylinder** (aka **General Swept Surface**), which takes a 2D profile and a 3D curve and produces the shape of the 2D profile sweeping across the 3d curve. For example:
+![](Pasted%20image%2020230929161305.png)
+A surface of revolution is actually a special case of a generalised cylinder, where the trajectory is a circle.
+![](Pasted%20image%2020230929161503.png)
+
+# Differential Parameters of Surfaces
+## Frenet Frame
+The Frenet Frame of a surface is a right-hand system formed by the first, second and third derivatives of a surface.
+![](Pasted%20image%2020230929161825.png)
+T (tangent/velocity) is the first derivative.
+N (normal) is the second derivative.
+B (binormal) is the third derivative, and is equal to the cross product of the other two.
+
+The tangent is usable, but there is a problem with the normal: At points of inflection (when the curvature changes sign) the normal becomes zero and then flips sides.
+![](Pasted%20image%2020230929162211.png)
