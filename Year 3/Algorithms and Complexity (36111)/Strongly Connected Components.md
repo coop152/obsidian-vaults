@@ -71,4 +71,4 @@ algorithm dfs2(Graph H, Vertex w):
 
 ### Correctness
 Why does this work?
-After K1 is complete, the stack contains 
+After K1 is complete, the stack (essentially) contains the DFS trees of every connected component in the graph. At the top of the stack will be the root of one of them, with all it's children below it in levels descending from the top. After each tree will be either the next tree, or the end of the stack.
