@@ -71,5 +71,22 @@ Here are the algorithm implementations:
 ```python
 algorithm makeSet(e):
 	Head u = new Head()
-	u.name = ""
+	u.name = "e"
+	u.items.append(e)
+	e.head = u
+
+algorithm find(Item x):
+	return x.head
+
+algorithm union(Head u, Head v):
+	if u.length < v.length:
+		for Item x in u.items:
+			v.items.add(x)
+			x.head = v
+		Remove u from the union-find structure
+	else:
+		for Item x in v.items:
+			u.items.add(x)
+			x.head = u
+		Remove v from the union-find structure
 ```
