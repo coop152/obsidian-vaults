@@ -19,8 +19,14 @@ This surface (specifically with a degree of 3) is called a **Bicubic Bezier surf
 A more general type of surface, which includes Tensor Product Splines. Any kind of curve that is defined in terms of parameters fits into this category.
 ![](Pasted%20image%2020230929143218.png)
 From now on, parametric surfaces will be used as an interchangeable way to refer to tensor product splines such as the Bicubic Bezier Surface.
-A point across a parametric surface is defined by the function $P(u,v)$. This was seen previously in the bicubic Bezier surface example.
+A point on a parametric surface is defined by the function $P(u,v)$. This was seen previously in the bicubic Bezier surface example.
 Like a curve, you can extract some useful differential properties from this function.
 ### Differential Properties
 ![](Pasted%20image%2020230929144243.png)
-The first 
+Because there are now two parameters, we find partial differentials instead.
+We can find the velocity/tangent at point P along $u$ (called T on the diagram) by finding the derivative with respect to $u$.
+We can find the velocity/tangent at point P along $v$ (called B, or "bi-normal" on the diagram) by finding the derivative with respect to $v$.
+We can find the normal at point P by finding the second derivative.
+
+### Matrix Representation
+A parametric curve can also be represented as a matrix. 
