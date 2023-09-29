@@ -71,3 +71,4 @@ algorithm dfs2(Graph H, Vertex w):
 
 ### Correctness
 Why does this work?
+After K1 is complete, the stack contains 
