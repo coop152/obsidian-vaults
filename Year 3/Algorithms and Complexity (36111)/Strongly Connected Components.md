@@ -23,3 +23,4 @@ A better solution is to use **Kosaraju's Algorithm**.
 
 ## Kosaraju's Algorithm
 A **Strongly Connected Component** is a subset of vertices in a graph which are strongly connected among themselves.
+
