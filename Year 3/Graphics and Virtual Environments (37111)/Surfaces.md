@@ -13,5 +13,5 @@ Here is the formula for a Bezier curve, as seen previously:
 This surface has a very similar formula, with the new parameter added:
 ![](Pasted%20image%2020230929140126.png)
 Formerly $P1$, $P2$, etc. represented the location of each control point and were constant values. Now, the control points move according to the value of $v$, so they have become functions on $v$.
-This surface is called a **Bicubic Bezier surface**.
+This surface (specifically with a degree of 3) is called a **Bicubic Bezier surface**.
 ![](Pasted%20image%2020230929140345.png)
