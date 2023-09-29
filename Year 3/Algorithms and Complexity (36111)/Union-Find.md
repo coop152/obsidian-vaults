@@ -34,8 +34,42 @@ algorithm MazeGenerator(Cell[][] G, Set[Wall] E):
 	Set[Wall] R = new Set[Wall] # empty set of Walls
 	while R.size() < G.cellCount() - 1:
 		Edge (x, y) = E.getRandomUnchosenEdge()
-		if find(x) != find(y): # 
+		# Remove random edge, as long as it adds a new cell to the connected component
+		if find(x) != find(y):
 			union(find(x), find(y))
 			R.add((x, y))
+	return R
 	
+```
+This algorithm works based on two facts:
+- We only remove walls if they introduce a new cell into the connected component, so there will be no cells with two entrances and thus no alternative way to reach any given point
+- We repeat until the number of removed walls is equal to the number of cells minus 1. Because each wall we remove adds one cell to the size of the connected component, the resulting component will include every single cell in the grid. 
+
+Because we have a connected component, it is possible to access any cell from any other. Therefore our maze absolutely has a solution, but it also features lots of twists, turns and dead ends because every cell is reachable.
+The running time of this algorithm scales linearly with the time it takes to perform $m$ union and find operations on a set of $n$ singleton sets. (The notes say $O(t(n, m))$ which is completely meaningless because $t$ is never defined but WHATEVER)
+
+This problem actually relates to the science of **percolation theory**, the study of how liquids permeate porous materials.
+
+## Implementation
+### List-based
+This is a simple implementation involving linked lists.
+The base structure holds a collection of linked lists, one for each set. The list for each set contains a `head` node which stores
+- the size of the set
+- the name of the set
+- A pointer to the first and last nodes of the actual linked list, which holds pointers to the elements of the set.
+
+Each node of the actual linked list stores a pointer to the element that belongs to the set, as well as a pointer to the head node of the set.
+![](Pasted%20image%2020230929122800.png)
+With this implementation, we have these complexities:
+- `find(e)`: $O(1)$. Follow the pointer from the node to the head, and return the name.
+- `makeSet(e)`: $O(1)$. Create a new head node and a single element linked list containing `e`, then register this in the structure's collection of lists.
+- `union(A, B)`: $O(\min(|a|, |b|))$, which is $O(n)$ in the worst case. Select the biggest list of $A$ and $B$; this biggest set keeps it's head pointer and list. Merge the items of the smaller set into the bigger set's linked list, updating the head pointer in each to point to the larger set's head.
+
+The complexity of union sounds bad, but it actually isn't as bad as it sounds when you perform amortised analysis.
+
+Here are the algorithm implementations:
+```python
+algorithm makeSet():
+	Head u = new Head()
+	u.name = ""
 ```
