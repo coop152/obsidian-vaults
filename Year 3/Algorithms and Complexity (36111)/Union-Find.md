@@ -69,7 +69,7 @@ The complexity of union sounds bad, but it actually isn't as bad as it sounds wh
 
 Here are the algorithm implementations:
 ```python
-algorithm makeSet():
+algorithm makeSet(e):
 	Head u = new Head()
 	u.name = ""
 ```
