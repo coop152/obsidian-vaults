@@ -19,6 +19,7 @@ Return: Yes if every node in the graph is reachable from every other, No otherwi
 
 Essentially, st-CON must be true for all pairs of vertices.
 This can be solved in the "obvious" way by running st-CON on every combination of vertices in the graph. This runs in quadratic time, and is an awful solution.
-A better solution is to **Kosaraju's Algorithm**.
+A better solution is to use **Kosaraju's Algorithm**.
 
 ## Kosaraju's Algorithm
+A **Strongly Connected Component** is a subset of vertices in a graph which are strongly connected among themselves.
