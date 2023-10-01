@@ -38,7 +38,7 @@ This way it actually looks in `C:/usr/share/zoneinfo/zone.tab` for the time zone
 11. Finally, download [Cygnal](https://www.kylheku.com/cygnal/), rename the file to `cygwin1.dll` and put it beside `ical.exe` like the other dlls.
 12. It's That Simple!™
 
-If you configure like this: `./configure --prefix="C:/usr/local"` then `make install` will do lots of the work for you.
+If you configure like this: `./configure --prefix="C:/usr/local"` then `make install` will do steps 3 and 4 for you.
 # Current Bugs
 ~~Location: filesel.tcl, Line 150 and 154
 Trying to open a file (Include Calendar, Link to Local File, etc.) makes ical freeze. This is because there is a loop that terminates when it reaches a filesystem path of "/", which cannot happen on Windows. Replacing "/" with "C:/" works, but is obviously not a very good solution. In fact, this entire file needs a once over to make it even slightly Windows compatible. Probably the only reason this custom file selector component exists is cause it was written for a version of Tcl/Tk so old that it didnt have a file selector built in. (investigate tk_getOpenFile and similar functions, which opens a native file picker dialogue.)~~ **SOLVED**
