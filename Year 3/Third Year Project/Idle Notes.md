@@ -44,5 +44,5 @@ Location: filesel.tcl, Line 150 and 154
 Trying to open a file (Include Calendar, Link to Local File, etc.) makes ical freeze. This is because there is a loop that terminates when it reaches a filesystem path of "/", which cannot happen on Windows. Replacing "/" with "C:/" works, but is obviously not a very good solution. In fact, this entire file needs a once over to make it even slightly Windows compatible. Probably the only reason this custom file selector component exists is cause it was written for a version of Tcl/Tk so old that it didnt have a file selector built in. (investigate tk_getOpenFile and similar functions, which opens a native file picker dialogue.)
 
 Location: main.C, Line 54
-The program runs in a minimal text mode if it doesn't think you have an X server running. That is, if you have a `DISPLAY` env var defined or if you use the `-display` flag. Cause this clearly doesn't make sense on Windows, invert this check; assume graphical mode, and add a new cmdline argument for text mode.
+The program runs in a minimal text mode if it doesn't think you have an X server running. That is, if you don't have a `DISPLAY` env var defined or if you don't use the `-display` flag. Cause this clearly doesn't make sense on Windows, invert this check; assume graphical mode, and add a new cmdline argument for text mode.
 
