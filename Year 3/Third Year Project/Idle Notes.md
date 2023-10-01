@@ -46,3 +46,5 @@ Trying to open a file (Include Calendar, Link to Local File, etc.) makes ical fr
 Location: main.C, Line 54
 The program runs in a minimal text mode if it doesn't think you have an X server running. That is, if you don't have a `DISPLAY` env var defined or if you don't use the `-display` flag. Cause this clearly doesn't make sense on Windows, invert this check; assume graphical mode, and add a new cmdline argument for text mode.
 
+Location: Somewhere in the toolchain
+Currently, the generated makefile makes an exe with the console application flag set, so it opens a console window when ical is run. Cygwin will set the GUI application flag if you pass `-mwindows` when compiling the final .exe, and just editing the Makefile works; now to figure out how to make `./configure` produce that.
