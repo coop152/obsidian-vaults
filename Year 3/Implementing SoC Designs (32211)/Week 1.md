@@ -1,5 +1,6 @@
 # Intro Hour
 ## VDU Controller
+![](Pasted%20image%2020230928110537.png)
 The task of the VDU controller is to:
 - Generate Sync signals and blanking signals
 - Framestore addresses and read the framestore data
@@ -67,10 +68,10 @@ Where:
 - `a`, `b` and `q` are the names of the module's inputs/outputs
 - `x`, `y`, `z` are wires at the higher hierarchical level
 ## Synthesis
-((Get the slide from the lecture notes))
+![](Pasted%20image%2020230928110349.png)
 
 ## Truth tables
-((Get the tables from the lecture notes))
+![](Pasted%20image%2020230928110406.png)
 A wire can be in 4 states: 1, 0, z, x.
 Z (high impedance) is the state of a wire when there is nothing driving the wire. For example, if you forgot to connect something. 
 X is a simulation-only state that represents a wire which is either 1 or 0, but the simulator doesn't know which. Can occur intentionally, or by mistake if two value outputs are connected together.
