@@ -59,3 +59,10 @@ Simple: (**Note that $y$ is a fresh variable in all of these. This is very impor
 (a): If you replace a variable with a fresh one in a term then the set of variables no longer contains the old variable, and if the old variable was indeed present in the term it now contains the fresh variable. Note that the old variable is *never present* after this operation.
 (b): If a free variable is inside a $\lambda$-abstraction and you rename that variable to one that is bound in that scope, then it is no longer in the set of free variables for that term.
 (c): If you rename a variable that isn't in the term then the set of free variables does not change. If you rename a variable that *is* in a term into a fresh variable, then the set of free variables loses the old variable and gains the fresh one.
+
+## Alpha-equivalence
+![](Pasted%20image%2020231002112755.png)
+![](Pasted%20image%2020231002112806.png)
+![](Pasted%20image%2020231002112816.png)
+Simplified: Two terms are $\alpha$-equivalent if they differ only in the naming of their bound variables. We do not need to remember the proposition, but for understanding's sake:
+Two $\lambda$-abstractions are $\sim_\exists$ if for each bound variable there exists some fresh variable $w$ that makes all of the variables identical.
