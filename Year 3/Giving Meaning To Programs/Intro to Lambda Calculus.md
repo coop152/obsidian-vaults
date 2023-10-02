@@ -13,12 +13,13 @@ We assume that we have an infinite set of variables $\text{Vars}$, so that we ca
 The actual implementation of this function is unimportant.
 
 # Definitions
+## Lambda-terms
 ![](Pasted%20image%2020230928114454.png)
 Simple:
 - Case bcVar: Every variable is a $\lambda$-term.
 - Case scAbs: You can add $\lambda{x}.$ to the outside of any $\lambda$-term to make a new $\lambda$-term. This is called **$\lambda$-abstraction**.
 - Case scApp: Two $\lambda$-terms beside each other (in brackets) make a new $\lambda$-term. This is called **application**.
-
+## Subterms
 ![](Pasted%20image%2020230928115012.png)
 Simple:
 - Case bcVar: A variable is a subterm of itself.
@@ -26,8 +27,33 @@ Simple:
 - Case scApp: The subterms of an application are itself, both lambda-terms in it and their subterms.
 
 Also, a **proper subterm** is a subterm that is not equal (in the same fashion as a proper subset).
-
+## Bound Variables
 ![](Pasted%20image%2020230928120446.png)
+Simple: The set of bound variables is the set of variables that are beside the $\lambda$ in a $\lambda$-abstraction.
+## Free Variables
 ![](Pasted%20image%2020230928131436.png)
+Simple: The set of free variables is the set of variables that are not bound. Note that a single variable can be both bound and free, for example: $(\lambda{x}.xy)x$
+In this example $x$ is bound because it is given in the $\lambda$-abstraction, but it is also free because there is an occurrence outside of the $\lambda$-abstraction.
+## Total Variables
 ![](Pasted%20image%2020230928131444.png)
+Simple: The set of variables is the set of variables in the term. (lol)
+## Variable Renaming
 ![](Pasted%20image%2020230928131455.png)
+Simple:
+- **bcVarren**: If the variable equals $x$, replace it with $z$
+- **scAbsren**: Recur on both subterms
+- **scAbsren**: Recur on both subterms
+
+In other words, do find and replace.
+![](Pasted%20image%2020231002105153.png)
+Simple:
+(a): Renaming a variable to itself has no effect on the term.
+(b): Renaming from $x$ to $y$ and then from $y$ to $z$ is the same as renaming from $x$ to $z$ GIVEN THAT $y$ is not already present in the term.
+(c): Renaming from $x$ to $y$ and then back to $x$ has no effect on the term GIVEN THAT $y$ is not already present in the term.
+(d): The order in which you replace two variables does not matter GIVEN THAT you do not rename the same variable twice or rename the result of the other renaming.
+(e): Renaming has no effect on the term if the variable being renamed is not present in the term.
+
+Some more about renaming and free variables:
+![](Pasted%20image%2020231002110242.png)![](Pasted%20image%2020231002110250.png)
+Simple: (Note that $y$ is not present in the term for all of these)
+(a): If you replace a variable with another in a term, then remove
