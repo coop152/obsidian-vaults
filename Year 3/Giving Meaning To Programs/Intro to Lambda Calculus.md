@@ -68,4 +68,5 @@ Simplified: Two terms are $\alpha$-equivalent if they differ only in the naming 
 Two terms are $\sim_\exists$ if they are identical in structure, and for each pair of $\lambda$-abstractions **there exists some** fresh variable $w$ you can swap with the associated bound variable and end up with identical terms.
 Two terms are $\sim_\forall$ if they are identical in structure, and for each pair of $\lambda$-abstractions you can swap **all possible** fresh variables $w$ with the associated bound variable and end up with identical terms.
 We can use either of these two relations, due to the unusual requirements of $\alpha$-equivalence.
-
+This is a more informal (but still mathsy) description of $\alpha$-equivalence.
+![](Pasted%20image%2020231002114508.png)
