@@ -1,2 +1,0 @@
-- [Curves](Curves.md)
-- [[Surfaces]]
