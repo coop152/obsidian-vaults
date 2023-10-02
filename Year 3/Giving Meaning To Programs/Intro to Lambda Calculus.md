@@ -55,5 +55,7 @@ Simple:
 
 Some more about renaming and free variables:
 ![](Pasted%20image%2020231002110242.png)![](Pasted%20image%2020231002110250.png)
-Simple: (Note that $y$ is not present in the term for all of these)
-(a): If you replace a variable with another in a term, then remove
+Simple: (**Note that $y$ is a fresh variable in all of these. This is very important**)
+(a): If you replace a variable with a fresh one in a term then the set of variables no longer contains the old variable, and if the old variable was indeed present in the term it now contains the fresh variable. Note that the old variable is *never present* after this operation.
+(b): If a free variable is inside a $\lambda$-abstraction and you rename that variable to one that is bound in that scope, then it is no longer in the set of free variables for that term.
+(c): If you rename a variable that isn't in the term then the set of free variables does not change. If you rename a variable that *is* in a term into a fresh variable, then the set of free variables loses the old variable and gains the fresh one.
