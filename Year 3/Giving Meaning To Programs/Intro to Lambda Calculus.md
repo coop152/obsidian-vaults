@@ -65,4 +65,7 @@ Simple: (**Note that $y$ is a fresh variable in all of these. This is very impor
 ![](Pasted%20image%2020231002112806.png)
 ![](Pasted%20image%2020231002112816.png)
 Simplified: Two terms are $\alpha$-equivalent if they differ only in the naming of their bound variables. We do not need to remember the proposition, but for understanding's sake:
-Two $\lambda$-abstractions are $\sim_\exists$ if for each bound variable there exists some fresh variable $w$ that makes all of the variables identical.
+Two terms are $\sim_\exists$ if they are identical in structure, and for each pair of $\lambda$-abstractions **there exists some** fresh variable $w$ you can swap with the associated bound variable and end up with identical terms.
+Two terms are $\sim_\forall$ if they are identical in structure, and for each pair of $\lambda$-abstractions you can swap **all possible** fresh variables $w$ with the associated bound variable and end up with identical terms.
+We can use either of these two relations, due to the unusual requirements of $\alpha$-equivalence.
+
