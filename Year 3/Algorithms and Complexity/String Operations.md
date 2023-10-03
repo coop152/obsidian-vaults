@@ -40,6 +40,8 @@ This solution has a bad complexity; For each possible index of P in T, we perfor
 This algorithm involves preprocessing the pattern string $P$ in order to compute a **failure function** $f$. This function informs us of a proper shift of $P$ such that, as much as possible, we can reuse previously performed comparisons.
 Specifically, the failure function $f(j)$ gives the length of the longest prefix of $P$ that is also a suffix of $P[1..j]$ (take note, starting at 1 and not 0.) This failure function is important because it "encodes" repeated substrings inside the pattern itself. Here is an example $f(j)$:
 ![](Pasted%20image%2020231003140523.png)
+In the context of KMP, the output of $f(j - 1)$ represents how many characters we can skip comparing if the match failed on character $j$ of the pattern. For example, if the current substring of T has matched P up until $j = 5$ but failed ("abacab"), then you can start checking one character after the start because there is a one character overlap between the end of the substring you know to match ("abaca") and the start of the pattern.
+
 Here is the KMP algorithm, which uses the failure function to find a match:
 ```python
 algorithm KMPMatch(str T, str P):
@@ -53,17 +55,20 @@ algorithm KMPMatch(str T, str P):
 			i++
 			j++
 		else if j > 0:  # no match, but we did match a bit of the start
-			j = f(j - 1)  # 
+			j = f(j - 1)  # we can skip this many comparisons
 		else:
 			i++
 	return "No substring of T matching P"
 ```
 
-```
-T = [aaaba]
-P = [aab]
+Here is an example run, using the pattern for which we found the failure function prior:
+![](Pasted%20image%2020231003144205.png)
+### Complexity
+For now, forget about the time taken to compute the failure function.
+The running time of the algorithm is proportional to the number of iterations of the while loop. For the sake of the analysis, let's define $k = i - j$, which is the total amount by which $P$ has been shifted with respect to $T$. Note that $k \leq n$.
+We have these three cases for each iteration of the loop:
+- If $T[i] = P[j]$, then $i$ increases by 1, $j$ increases by 1, and $k$ does not change.
+- If $T[i] \neq P[j]$ and $j>0$, then $i$ does not change and $k$ increases by at least 1 (but maybe more). In this case $k$ changes from $i - j$ to $i - f(j-1)$, which is an increase of $j - f(j-1)$. We know this to be positive because $f(j - 1)<j$.
+- If $T[i] \neq P[j]$ and $j = 0$, then $i$ increases by 1, $j$ does not change, and $k$ increases by 1.
 
-[aaaba]
-[aab]
-
-```
+Therefore at each iteration of the loop either $i$ or $k$ increases by at least 1 (and potentially both). As the algorithm terminates when $i$ reaches $n$ (end of text, no match found), the worst case is that 
