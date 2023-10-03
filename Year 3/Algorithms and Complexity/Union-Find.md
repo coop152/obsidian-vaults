@@ -106,4 +106,5 @@ With this representation, we have these complexities:
 - `find(e)`: $O(n)$. Traverse the tree from the given element to the root. Worst case, every element is in one long chain of length $n$.
 
 This simple version seems on-par with the simpler list implementation, but there are optimisations that can be applied to make it better:
-- **Union-by-Size**: When performing a union, make the smaller tree the child of the larger tree. This requires storing a tree size at each node
+- **Union-by-Size**: When performing a union, make the smaller tree the child of the larger tree. This requires storing a tree size at each node.
+- **Path Compression**: When performing a find, change the parent of every node you visit to point to it's root.
