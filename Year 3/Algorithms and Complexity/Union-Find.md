@@ -94,3 +94,9 @@ algorithm union(Head u, Head v):
 There was some proof about amortised analysis that I just didn't understand, see page 227 for that.
 
 Conclusion, if you amortise over all operations involving $n$ initial elements, union is $O(\log{n})$. makeSet and find are still $O(1)$.
+
+## Tree-based
+This is a more complicated (but more efficient) implementation based on trees.
+The tree $T$ is populated by a series of nodes, each node holding a single element of the set that $T$ represents and a pointer to its parent. If the node is a root (see 1, 2 and 5 in the following diagram) then it's parent pointer points to itself; this is how a root node is identified.
+
+![](Pasted%20image%2020231003112232.png)
