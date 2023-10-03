@@ -35,3 +35,26 @@ algorithm BruteForceMatch(str T, str P):
 ```
 The correctness of this algorithm is obvious.
 This solution has a bad complexity; For each possible index of P in T, we perform up to $m$ character comparisons in the worst case. As there are $n - m + 1$ possible indices, in the absolute worst case our running time is $O((n-m+1)m)$, which is $O(nm)$. In the case that $m=n/2$, it actually becomes $O(n^2)$.
+
+## Knuth-Morris-Pratt Algorithm (KMP)
+This algorithm involves preprocessing the pattern string $P$ in order to compute a **failure function** $f$. This function informs us of a proper shift of $P$ such that, as much as possible, we can reuse previously performed comparisons.
+Specifically, the failure function $f(j)$ gives the length of the longest prefix of $P$ that is also a suffix of $P[1..j]$ (take note, starting at 1 and not 0.) This failure function is important because it "encodes" repeated substrings inside the pattern itself. Here is an example $f(j)$:
+![](Pasted%20image%2020231003140523.png)
+Here is the KMP algorithm, which uses the failure function to find a match:
+```python
+algorithm KMPMatch(str T, str P):
+	Func f = KMPFailureFunction(P)  # find the failure function for P
+	i = 0
+	j = 0
+	while i < T.length:
+		if P[j] == T[i]:
+			if j == P.length - 1:
+				return i - m + 1  # match found
+			i++
+			j++
+		else if j > 0:
+			j = f(j - 1)
+		else:
+			i++
+	return "No substring of T matching P"
+```
