@@ -106,5 +106,37 @@ With this representation, we have these complexities:
 - `find(e)`: $O(n)$. Traverse the tree from the given element to the root. Worst case, every element is in one long chain of length $n$.
 
 This simple version seems on-par with the simpler list implementation, but there are optimisations that can be applied to make it better:
-- **Union-by-Size**: When performing a union, make the smaller tree the child of the larger tree. This requires storing a tree size at each node.
+- **Union-by-Size**: When performing a union, make the smaller tree the child of the larger tree. This requires storing a tree size at each node. 
 - **Path Compression**: When performing a find, change the parent of every node you visit to point to it's root.
+![](Pasted%20image%2020231003114220.png)
+Both of these optimisations increase the running time of operations by some constant amount, but they significantly improve the amortised running time of a sequence of unions and finds.
+Here are the implementations of the operations:
+```python
+algorithm makeSet(e):
+	Node x = new Node()
+	x.parent = x
+	x.size = 1
+	return x
+
+# Note that x and y must both be roots
+algorithm union(x, y):
+	if x.size < y.size:
+		x.parent = y
+		y.size += y.size + x.size
+	else:
+		y.parent = x
+		x.size = x.size + y.size
+
+algorithm find(x):
+	Node r = x
+	while r.parent != r:  # find the root
+		r = r.parent
+	Node z = x
+	while z.parent != z: # go through again and perform path compression
+		w = z
+		z = z.parent
+		w.parent = r
+```
+
+Assertion: Performing a sequence of $m$ union and find operations on this implementation, starting with $n$ singleton sets, will take $O(n+m\log{n})$ time.
+Proof: There are at most 
