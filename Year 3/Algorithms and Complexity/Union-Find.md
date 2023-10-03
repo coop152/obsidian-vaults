@@ -98,5 +98,12 @@ Conclusion, if you amortise over all operations involving $n$ initial elements, 
 ## Tree-based
 This is a more complicated (but more efficient) implementation based on trees.
 The tree $T$ is populated by a series of nodes, each node holding a single element of the set that $T$ represents and a pointer to its parent. If the node is a root (see 1, 2 and 5 in the following diagram) then it's parent pointer points to itself; this is how a root node is identified.
-
+Each set in the structure is identified by the root of it's tree.
 ![](Pasted%20image%2020231003112232.png)
+With this representation, we have these complexities:
+- `makeSet(e)`: $O(1)$. Make a new node that is it's own parent.
+- `union(u, v)`: $O(1)$. Take the root of one tree and set it's parent to the root of the other.
+- `find(e)`: $O(n)$. Traverse the tree from the given element to the root. Worst case, every element is in one long chain of length $n$.
+
+This simple version seems on-par with the simpler list implementation, but there are optimisations that can be applied to make it better:
+- **Union-by-Size**: When performing a union, make the smaller tree the child of the larger tree. This requires storing a tree size at each node
