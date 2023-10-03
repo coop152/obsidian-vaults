@@ -144,4 +144,4 @@ Proof: There are at most $O(n)$ union operations, each running in constant time,
 We can do a more detailed analysis using the **Ackermann function**, which is defined as such:
 ![](Pasted%20image%2020231003120809.png)
 ![](Pasted%20image%2020231003121715.png)
-We use $\Alpha(x) = A_x(2)$, which is extremely fast-growing. Likewise, the inverse $\alpha(x)$ is extremely slow-growing.
+We use $A(x) = A_x(2)$, which is extremely fast-growing. Likewise, the inverse $\alpha(x)$ is extremely slow-growing.
