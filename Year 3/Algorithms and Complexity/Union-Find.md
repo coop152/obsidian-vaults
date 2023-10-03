@@ -139,4 +139,7 @@ algorithm find(x):
 ```
 
 Assertion: Performing a sequence of $m$ union and find operations on this implementation, starting with $n$ singleton sets, will take $O(n+m\log{n})$ time.
-Proof: There are at most $O(n)$ union operations, each running in constant time, so the time for the union operations is O(n).
+Proof: There are at most $O(n)$ union operations, each running in constant time, so the time for the union operations is $O(n)$. We only change a node's parent when we union it's set into a set that is at least as large as it; therefore, the parent of each node must be at least double the size. Therefore, you can only go up a max of $O(\log{n})$ nodes before you have reached the size of the entire set by doubling.
+
+We can do a more detailed analysis using the **Ackermann function**, which is defined as such:
+![](Pasted%20image%2020231003120809.png)
