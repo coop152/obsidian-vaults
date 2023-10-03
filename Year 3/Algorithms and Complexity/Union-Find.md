@@ -154,8 +154,10 @@ $r(v)$: The rank of node $v$: $r(v) = \lfloor\log{n(v)}\rfloor + 2$
 
 We can immediately rearrange the definition of rank to get $n(v) \geq 2^{r(v)-2}$ (greater than because of the removed floor.) Because there are at most $n$ nodes in $U$, you can also say that $r(v) \leq \lfloor\log{n}\rfloor + 2$ (because the largest possible $n(v)$ is $n$).
 
-Take this as fact, because I cannot remember the proof:
+Take these as fact, because I do not understand the proofs:
 If node $w$ is the parent of node $v$ then $$r(v) < r(w).$$
 That is, ranks are strictly increasing as you go up the tree.
-Using this we can prove:
 The number of nodes of some rank $s$ is at most $$\frac{n}{2^{s-2}}.$$
+This entire section is just fucking nonsense, actually.
+
+Final result: The total time to perform $m$ union and find operations, with the optimisations given, is $O((n + m)\alpha(n))$. $\alpha$ being a very slow-growing function.
