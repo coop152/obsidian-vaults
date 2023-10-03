@@ -19,3 +19,19 @@ The null string is a prefix and suffix of any other string.
 # Pattern Matching
 We are given a text string $T$ (length $n$) and a pattern string $P$ (length $m$), and we want to find if $P$ is a substring of $T$. We have found a match if there is a substring of $T$ at some index $i$ such that $$T[i]=P[0], T[i+1]=P[1], \dots, T[i+m-1]=P[m-1].$$
 The output of the algorithm is either an indication that the pattern was not found, or the starting index in $T$ of the matching substring.
+The representation of character strings being used does not have a specific character set in mind, so instead we represent the set of characters that can be used with the **alphabet** $\Sigma$. We usually assume that $\Sigma$ is a finite set, meaning that $|\Sigma|$ is a fixed constant.
+## Brute Force
+The simplest solution is to just test every possible placement of $P$ relative to $T$.
+```python
+algorithm BruteForceMatch(str T, str P):
+	for i = 0 to T.size - P.size:  # try every index where the strings overlap
+		j = 0
+		# while the pattern string is not complete and it matches the text
+		while j < P.size and T[i + j] == P[j]:
+			j++
+		if j == m:  # did we match the entire pattern?
+			return i
+	return "No substring of T matching P"
+```
+The correctness of this algorithm is obvious.
+This solution has a bad complexity; For each possible index of P in T, we perform up to $m$ character comparisons in the worst case. As there are $n - m + 1$ possible indices, in the absolute worst case our running time is $O((n-m+1)m)$, which is $O(nm)$. In the case that $m=n/2$, it actually becomes $O(n^2)$.
