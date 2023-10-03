@@ -139,4 +139,4 @@ algorithm find(x):
 ```
 
 Assertion: Performing a sequence of $m$ union and find operations on this implementation, starting with $n$ singleton sets, will take $O(n+m\log{n})$ time.
-Proof: There are at most 
+Proof: There are at most $O(n)$ union operations, each running in constant time, so the time for the union operations is O(n).
