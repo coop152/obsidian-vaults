@@ -58,3 +58,12 @@ algorithm KMPMatch(str T, str P):
 			i++
 	return "No substring of T matching P"
 ```
+
+```
+T = [aaaba]
+P = [aab]
+
+[aaaba]
+[aab]
+
+```
