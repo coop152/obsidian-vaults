@@ -150,4 +150,13 @@ We use $A(x) = A_x(2)$, which is extremely fast-growing. Likewise, the inverse $
 More definitions before the analysis really starts:
 $U$ - The tree given after performing every `union` operation, but without performing any path compressions (i.e. `find`s)
 $n(v)$: For node $v$, $n(v)$ is the number of nodes in $v$'s subtree
-$r(v)$: The rank of node $v$. That is, the 
+$r(v)$: The rank of node $v$: $r(v) = \lfloor\log{n(v)}\rfloor + 2$
+
+We can immediately rearrange the definition of rank to get $n(v) \geq 2^{r(v)-2}$ (greater than because of the removed floor.) Because there are at most $n$ nodes in $U$, you can also say that $r(v) \leq \lfloor\log{n}\rfloor + 2$ (because the largest possible $n(v)$ is $n$).
+
+Take this as fact, because I cannot remember the proof:
+If node $w$ is the parent of node $v$ then $$r(v) < r(w).$$
+That is, ranks are strictly increasing as you go up the tree.
+Using this we can prove:
+The number of nodes of some rank $s$ is at most $$\frac{n}{2^{s-2}}.$$
+
