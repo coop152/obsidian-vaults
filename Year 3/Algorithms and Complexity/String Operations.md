@@ -47,13 +47,13 @@ algorithm KMPMatch(str T, str P):
 	i = 0
 	j = 0
 	while i < T.length:
-		if P[j] == T[i]:
-			if j == P.length - 1:
+		if P[j] == T[i]:  # matching char in text and pattern
+			if j == P.length - 1:  # finished the whole pattern
 				return i - m + 1  # match found
 			i++
 			j++
-		else if j > 0:
-			j = f(j - 1)
+		else if j > 0:  # no match, but we did match a bit of the start
+			j = f(j - 1)  # 
 		else:
 			i++
 	return "No substring of T matching P"
