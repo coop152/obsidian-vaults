@@ -159,4 +159,3 @@ If node $w$ is the parent of node $v$ then $$r(v) < r(w).$$
 That is, ranks are strictly increasing as you go up the tree.
 Using this we can prove:
 The number of nodes of some rank $s$ is at most $$\frac{n}{2^{s-2}}.$$
-
