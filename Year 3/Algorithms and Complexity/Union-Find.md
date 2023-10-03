@@ -143,3 +143,6 @@ Proof: There are at most $O(n)$ union operations, each running in constant time,
 
 We can do a more detailed analysis using the **Ackermann function**, which is defined as such:
 ![](Pasted%20image%2020231003120809.png)
+
+$A_1(x) = A_0^x(x)$ 
+$=A_0$
