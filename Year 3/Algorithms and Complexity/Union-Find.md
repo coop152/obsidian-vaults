@@ -158,6 +158,6 @@ Take these as fact, because I do not understand the proofs:
 If node $w$ is the parent of node $v$ then $$r(v) < r(w).$$
 That is, ranks are strictly increasing as you go up the tree.
 The number of nodes of some rank $s$ is at most $$\frac{n}{2^{s-2}}.$$
-This entire section is just fucking nonsense, actually.
+This entire section is just nonsense, actually.
 
 Final result: The total time to perform $m$ union and find operations, with the optimisations given, is $O((n + m)\alpha(n))$. $\alpha$ being a very slow-growing function.
