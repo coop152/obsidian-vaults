@@ -32,3 +32,49 @@ The objective is to verify the logic behaviour of the design; we want to exercis
 
 Achieving complete coverage can range from challenging to literally impossible.
 
+# Useful Constructs
+`if (bool_exp) statement_1 <else statement_2>`
+Makes decisions, in hardware or testbench
+`while (bool_exp) statement`
+Useful for simulation control (e.g. waiting for handshake)
+`for (addr = 0; addr < 1024; addr = addr + 1) statement`
+Iterate over a number of items (e.g. testing memory)
+Not useful in synthesised code.
+`forever statement`
+Repeat indefinitely. Must include some kind of delay (@ or # in the testbench) or it will stall at a single point in time forever.
+
+# Parallelism
+Hardware is highly parallel, and therefore HDL is too.
+Each `initial` and `always` block is an independent parallel 'thread' within which you can have:
+- A sequential block: `begin ... end`
+- A parallel block: `fork ... join`
+
+In a parallel block all statements are executed 'simultaneously' as if they were in separate blocks. Sometimes this makes no difference, but it is important when managing delays:
+```verilog
+begin  
+#10 a = 1;  
+#20 b = 0;  
+end  
+```
+Elapsed time 30 units.
+vs
+```verilog
+fork  
+#10 a = 1;  
+#20 b = 0;  
+join  
+```
+Elapsed time 20 units.
+
+# Simulation time
+Time, of course, goes forth in a single continuous dimension. In Verilog time is discrete, but also multidimensional.
+- There is the overall simulation time which represents real delays
+	- Available as `$time`
+	- The resolution of this time is controllable: can be a fraction of `#1`
+- There is a list of things which happen simultaneously in one time-step:
+	- Some are ordered, e.g. blocking assignments in the same block
+	- Some are unpredictable, e.g. blocking assignments in **different** blocks
+	- Things act in phases. First are blocking assignments, second is non-blocking assignments
+
+To be clear; this has nothing to do with the real time it takes to run the simulation.
+
