@@ -31,3 +31,4 @@ The objective is to verify the logic behaviour of the design; we want to exercis
 	- Can be tricky for behavioural HDL where there are no 'nodes' to check
 
 Achieving complete coverage can range from challenging to literally impossible.
+
