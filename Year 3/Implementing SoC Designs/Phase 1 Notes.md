@@ -1,2 +1,2 @@
 # Unit 1
-- Lines is a pixel too long at the end. That is, if the line is vertical then it goes one pixel extra in Y and if the line is horizontal then it goes one pixel extra in X.
+- Lines is a pixel too long at the end. That is, if the line is vertical then it goes one pixel too far in Y, if the line is horizontal then it goes one pixel too far in X, and if it's 45 degrees then it goes one pixel too far in both (CHECK THIS BETTER)
