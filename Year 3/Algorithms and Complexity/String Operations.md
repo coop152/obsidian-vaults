@@ -71,4 +71,30 @@ We have these three cases for each iteration of the loop:
 - If $T[i] \neq P[j]$ and $j>0$, then $i$ does not change and $k$ increases by at least 1 (but maybe more). In this case $k$ changes from $i - j$ to $i - f(j-1)$, which is an increase of $j - f(j-1)$. We know this to be positive because $f(j - 1)<j$.
 - If $T[i] \neq P[j]$ and $j = 0$, then $i$ increases by 1, $j$ does not change, and $k$ increases by 1.
 
-Therefore at each iteration of the loop either $i$ or $k$ increases by at least 1 (and potentially both). As the algorithm terminates when $i$ reaches $n$ (end of text, no match found), the worst case is that 
+Therefore at each iteration of the loop either $i$ or $k$ increases by at least 1 (and potentially both). As the algorithm terminates when $i$ reaches $n$ (end of text, no match found), the worst case is that $i$ reaches $n$ from only the first case and $k$ reaches $n$ by only the second case, with increases of 1. Therefore, the number of iterations is at worst $2n$. This is still assuming we have already computed the failure function for $P$.
+
+### Constructing the Failure Function
+Essentially, perform KMP on the pattern against itself but for each match record how far ahead the suffix is from the prefix ($j + 1$).
+```python
+algorithm KMPFailureFunction(str P):
+	i = 0
+	j = 0
+	Func f(0) = 0  # this is really more of a map than a function
+	while i < P.length:
+		if P[j] == P[i]:  # pattern has matched itself
+			f(i) = j + 1  # j + 1 characters from the prefix matched here
+			i++
+			j++
+		else if j > 0:  # no match, but we did match a bit of the start
+			j = f(j - 1)  # we can skip this many comparisons
+		else:  # no match here
+			f(i) = 0
+			i++
+	return "No substring of T matching P"
+```
+Note how the failure function uses previous values of itself to increase efficiency.
+Considering the algorithm for finding the failure function is essentially identical to KMP, it comes as no surprise that it also runs in $O(n)$-time.
+
+Therefore, the overall complexity of KMP is $O(n + m)$.
+
+It is most efficient for small alphabets, due to the higher chance of repeated characters and substrings. An example of such an alphabet is DNA sequences.
