@@ -48,3 +48,9 @@ The program runs in a minimal text mode if it doesn't think you have an X server
 
 ~~Location: Somewhere in the toolchain
 Currently, the generated makefile makes an exe with the console application flag set, so it opens a console window when ical is run. Cygwin will set the GUI application flag if you pass `-mwindows` when compiling the final .exe, and just editing the Makefile works; now to figure out how to make `./configure` produce that.~~ **SOLVED**
+
+# Steps so far
+- Compiled in Cygwin using an X server and the pretend Cygwin drive
+- Compiled in Cygwin using native windows Tcl/Tk libraries and the pretend Cygwin drive
+- Compiled in Cygwin using native windows Tcl/Tk libraries and Cygnal
+- Made a new Visual Studio C++ project - use native Tcl/Tk but supplant unix libraries with win32
