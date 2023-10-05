@@ -11,7 +11,7 @@
 #### Second Half (Image Processing)
 - [Point Processing](Point%20Processing.md)
 - [OpenCV](OpenCV.md)
-- [Colour](Colour.md)
+- [Colour](Year%202/Semester%202/Introduction%20to%20Visual%20Computing%20(27112)/Second%20Half%20(Image%20Processing)/Colour.md)
 - [Image Properties](Image%20Properties.md)
 - [Geometrical Transformations](Geometrical%20Transformations.md)
 - [Convolutions](Convolutions.md)
