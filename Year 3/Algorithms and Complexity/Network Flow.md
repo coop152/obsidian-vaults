@@ -41,4 +41,5 @@ Therefore $F = |f| = f(\chi)$.
 
 This shows that no matter where we cut a flow network, the flow across the cut is equal to the flow of the entire network.
 
-We also define the **capacity** of a cut $\chi$, denoted $c(\chi)$, as the sum of the capacities of the forward edges in $\chi$ (but not the backward edges.)
+We also define the **capacity** of a cut $\chi$, denoted $c(\chi)$, as the sum of the capacities of the forward edges in $\chi$ (but not the backward edges). The following lemma shows that $c(\chi)$ of a cut is an upper bound on any flow across $\chi$.
+![](Pasted%20image%2020231009132630.png)
