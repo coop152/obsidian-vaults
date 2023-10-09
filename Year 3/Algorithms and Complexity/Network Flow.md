@@ -25,7 +25,7 @@ It is also clearly apparent that the flow value is equal to the total amount of 
 ![](Pasted%20image%2020231009111818.png)
 A **maximum flow** for $N$ is a flow with the maximum possible value of $|f|$ of all flows for $N$. It is the most efficient possible use of a flow network. Here is an example of the maximum flow of the previous graph:
 ![](Pasted%20image%2020231009111957.png)
-## Cuts
+# Cuts
 Flows are closely related to cuts. In the context of flow networks:
 Cuts are a division of the vertices of a network $N$ into two sets, with the source on one side and the sink on the other.
 Formally speaking, a **cut** of $n$ is a partition $\chi = (V_s, V_t)$ of the vertices of $N$ where $s \in V_t$ and $t \in V_t$.
@@ -43,3 +43,17 @@ This shows that no matter where we cut a flow network, the flow across the cut i
 
 We also define the **capacity** of a cut $\chi$, denoted $c(\chi)$, as the sum of the capacities of the forward edges in $\chi$ (but not the backward edges). The following lemma shows that $c(\chi)$ of a cut is an upper bound on any flow across $\chi$.
 ![](Pasted%20image%2020231009132630.png)
+Simple:
+By the definition of $f(\chi)$, we have that it equals the sum of the outgoing edges' flows minus the sum of the incoming edges' flows. We can drop the negative terms and convert the equation into an inequality, giving us that $f(\chi)$ is less than or equal to the sum of the outgoing edges' flows.
+The capacity rule says that the flow of each edge is less than it's capacity, so we substitute this in to get that $f(\chi)$ is less than the sum of the outgoing edges' capacities.
+The sum of the outgoing edges' capacities is the capacity of the cut, meaning that the flow of a cut is less than or equal to it's capacity.
+
+We can combine these two lemmas to arrive at this important result:
+![](Pasted%20image%2020231009133705.png)
+Simple: Take any cut $\chi$ of the flow network $N$. The capacity of $\chi$ is an upper bound on every flow for $N$. This applies even to **minimum cuts** of $N$, allowing us to find the strictest upper bound on the maximum flow.
+
+We have shown that the value of a maximum flow is no more than the capacity of a minimum cut.
+We can go further, though, and prove that the value of a maximum flow is in fact **equal** to the capacity of a minimum cut.
+
+# Residual Capacity
+To prove that a certain flow is maximum, we need a way to show there is no more flow that can possibly be introduced into it. The following concepts of **residual capacity** and **augmenting paths** allow us to do this. 
