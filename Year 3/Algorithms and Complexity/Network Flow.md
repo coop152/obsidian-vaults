@@ -35,4 +35,5 @@ Envision a cut as a separation of $s$ and $t$ done by cutting across the edges o
 ![](Pasted%20image%2020231009112727.png)
 The **flow across cut $\chi$** (denoted $f(\chi)$) is equal to the sum of the flows in the forward edges of $\chi$ minus the sums of the flows in the backward edges of $\chi$. In other words, it is the net amount of commodity that flows from $s$'s side to $t$'s side. Consider this property of $f(\chi)$:
 ![](Pasted%20image%2020231009113143.png)
-Simple: For some vertex $v$ in $s$'s side of the partition (that isn't $s$), consider that the incoming flow and outgoing flow will be equal, 
+Simple: For every vertex $v$ in $s$'s side of the partition other than $s$, the incoming and outcoming flow of $v$ will be equal and cancel out in the inner equation. For $s$ itself, there are no incoming edges and the inner equation will equal $|f|$. Therefore, $F$ will equal $|f|$ as every other vertex gave 0.
+(continue here)
