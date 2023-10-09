@@ -8,7 +8,31 @@ We are given a weighted, directed graph $G$ and asked to find a way of transport
 The maximum flow problem is closely related to the **maximum matching problem**, where you find the maximum number of ways to match vertices of one type in a graph to vertices of another type. The maximum flow problem can be used to efficiently solve the maximum matching problem, which will be shown subsequently.
 Sometimes in solving the problem we may have many different maximum flows. Although they may be equal in the flow they produce (i.e. the bandwidth they provide) they may be different in cost. We will also study methods for computing the maximum flow of minimum cost.
 
-# Flows and Cuts
+# Flows
 A flow network $N$ consists of the following:
 - A connected digraph $G$ with non-negative integer weights on the edges. The weight of an edge $e$ is called the **capacity** $c(e)$ of $e$.
-- 
+- Two vertices $s$ and $t$, called the **source** and **sink** respectively, such that $s$ has no incoming edges and $t$ has no outgoing edges.
+
+![](Pasted%20image%2020231009111115.png)
+We define a "flow" for the network $N$ is an assignment of some integer value $f(e)$ to each edge $e$ that satisfies the following properties:
+![](Pasted%20image%2020231009111211.png)
+In other words, the flow through each edge must not exceed it's capacity, and the amount of flow going into one vertex must equal the amount of flow leaving the vertex. Here is an example flow for the previously shown graph:
+![](Pasted%20image%2020231009111527.png)
+(For a label $x/y$, $x$ is the amount given by the flow and $y$ is the capacity of that edge.)
+The total **flow** of the graph ($|f|$) is equal to the total amount of flow leaving the source $s$:
+![](Pasted%20image%2020231009111752.png)
+It is also clearly apparent that the flow value is equal to the total amount of flow entering the sink $t$:
+![](Pasted%20image%2020231009111818.png)
+A **maximum flow** for $N$ is a flow with the maximum possible value of $|f|$ of all flows for $N$. It is the most efficient possible use of a flow network. Here is an example of the maximum flow of the previous graph:
+![](Pasted%20image%2020231009111957.png)
+## Cuts
+Flows are closely related to cuts. In the context of flow networks:
+Cuts are a division of the vertices of a network $N$ into two sets, with the source on one side and the sink on the other.
+Formally speaking, a **cut** of $n$ is a partition $\chi = (V_s, V_t)$ of the vertices of $N$ where $s \in V_t$ and $t \in V_t$.
+An edge with an origin in $V_s$ and a destination in $V_t$ is said to be a **forward edge** of cut $\chi$.
+An edge with an origin in $V_t$ and a destination in $V_s$ is said to be a **backward edge** of cut $\chi$.
+Envision a cut as a separation of $s$ and $t$ done by cutting across the edges of $N$, with forward edges going from $s$'s side to $t$'s side and vice versa.
+![](Pasted%20image%2020231009112727.png)
+The **flow across cut $\chi$** (denoted $f(\chi)$) is equal to the sum of the flows in the forward edges of $\chi$ minus the sums of the flows in the backward edges of $\chi$. In other words, it is the net amount of commodity that flows from $s$'s side to $t$'s side. Consider this property of $f(\chi)$:
+![](Pasted%20image%2020231009113143.png)
+Simple: For some vertex $v$ in $s$'s side of the partition, consider that 
