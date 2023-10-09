@@ -1,2 +1,2 @@
 Consider a computer network modelled by a digraph $G$. Each vertex represents a computer, each edge represents a one-way communication channel from one computer to another, and the weight of each edge represents the *bandwidth* of that channel (i.e. the maximum number of bytes that can be sent along that channel per second.)
-Suppose we want to send a high-bandwidth stream
+Suppose we want to send a high-bandwidth stream of data from some computer $s$ to some computer $t$, even higher bandwidth than the highest bandwidth single link in the network. This might seem impossible at first, but it may be possible by splitting our stream into packets and routing these packets through multiple paths in the network.
