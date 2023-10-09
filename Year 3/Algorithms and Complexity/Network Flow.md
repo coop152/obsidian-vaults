@@ -1,2 +1,6 @@
 Consider a computer network modelled by a digraph $G$. Each vertex represents a computer, each edge represents a one-way communication channel from one computer to another, and the weight of each edge represents the *bandwidth* of that channel (i.e. the maximum number of bytes that can be sent along that channel per second.)
 Suppose we want to send a high-bandwidth stream of data from some computer $s$ to some computer $t$, even higher bandwidth than the highest bandwidth single link in the network. This might seem impossible at first, but it may be possible by splitting our stream into packets and routing these packets through multiple paths in the network.
+We formulate this problem by imagining that each edge in $G$ represents a "pipe" that can transport some commodity (in this case, packets) with the weight of that edge representing the maximum amount it can transport per unit time. When formulated like this, the problem is known as the **maximum flow problem**.
+
+# Maximum Flow Problem
+We are given a weighted, directed graph $G$ and asked to find a way of transporting the maximum amount of the given commodity from some vertex $s$, called the *source*, to some vertex $t$, called the *sink*.
