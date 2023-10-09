@@ -6,4 +6,5 @@
 - [Strongly Connected Components](Strongly%20Connected%20Components.md)
 - [Union-Find](Union-Find.md)
 - [[String Operations]]
+- [[Network Flow]]
 ## List of Algorithms
