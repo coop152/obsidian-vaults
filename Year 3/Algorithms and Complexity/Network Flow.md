@@ -146,4 +146,4 @@ We begin the analysis by noting that the residual distance is non-decreasing in 
 There is a very long proof for this.
 In other words, when we do an Edmonds-Karp augmentation, the residual distance from the source to any vertex can only increase or stay the same.
 
-(Continue from page 456 of the notes, at the proof for lemma )
+(Continue from page 456 of the notes, at the proof for lemma 16.7)
