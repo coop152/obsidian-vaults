@@ -84,4 +84,4 @@ The residual capacity of this path is 2 (from the edge with the lowest residual 
 ![](Pasted%20image%2020231009141150.png)
 We can always add the residual capacity of an augmenting path to a flow to get another valid flow in this manner, as shown by this lemma:
 ![](Pasted%20image%2020231009141341.png)
-Simple: 
+Simple: Because we are adding less than the residual capacity to forward edges we will never exceed their capacities, and because we are subtracting less than the residual capacity from backward edges we will never go below zero. Therefore, the new flow is valid and the new flow is increased by the 
