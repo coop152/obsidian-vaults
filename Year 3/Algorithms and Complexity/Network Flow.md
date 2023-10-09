@@ -89,3 +89,38 @@ Simple: Because we are adding less than the residual capacity to forward edges w
 According to this lemma, the existence of an augmenting path $\pi$ for a flow $f$ implies that $f$ is not maximal. In addition, if we are given an augmenting path $\pi$ we can improve $f$ by pushing $\Delta_f(\pi)$ units of flow along it.
 Conversely, what if there is no augmenting path? In this case, we know that $f$ is a maximal flow, which is shown by the following lemma:
 ![](Pasted%20image%2020231009143430.png)
+
+These lemmas give rise to some algorithms for finding maximum flows.
+# The Ford-Fulkerson Algorithm
+The idea of this algorithm is to incrementally increase the value of a flow in stages by pushing along augmenting paths.
+Initially the flow of each edge equals zero. At each stage, an augmenting path $\pi$ is computed and then the corresponding amount of flow is pushed along it. The algorithm terminates when the current flow $f$ does not produce an augmenting path.
+Consider this pseudocode implementation:
+```python
+algorithm MaxFlowFordFulkerson(Network N):
+	Flow f = new Flow()
+	for Edge e in N:
+		f(e) = 0
+	Bool stop = false
+	while (!stop):
+		pi = N.findAugmentingPath()
+		if pi.exists():  # if an augmenting path exists
+			# compute the residual capacity of pi
+			resCap = +Infinity
+			for Edge e in pi:
+				if f.residualCapacity(e) < resCap:
+					resCap = f.residualCapacity(e)
+			# Push the residual capacity along pi
+			for Edge e in pi:
+				if e.isForwardEdge():
+					f(e) += resCap
+				else:  # backward edge
+					f(e) -= resCap
+		else:
+			stop = true  # maximum flow found
+```
+
+## Implementation Details
+To represent a flow, we label each edge of the network with an attribute representing the flow along that edge.
+To compute an augmenting path, we use a special traversal of the graph $G$ representing the flow network; such a traversal is a simple modification of DFS or BFS, where instead of considering all incident edges on the current vertex $v$, we only consider:
+- The outgoing edges of $v$ with flow less than their capacity
+- The incoming edges of $v$ with nonzero flow.
