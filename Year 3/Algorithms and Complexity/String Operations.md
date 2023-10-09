@@ -51,7 +51,7 @@ algorithm KMPMatch(str T, str P):
 	while i < T.length:
 		if P[j] == T[i]:  # matching char in text and pattern
 			if j == P.length - 1:  # finished the whole pattern
-				return i - m + 1  # match found
+				return i - P.length + 1  # match found
 			i++
 			j++
 		else if j > 0:  # no match, but we did match a bit of the start
