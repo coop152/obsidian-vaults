@@ -124,3 +124,5 @@ To represent a flow, we label each edge of the network with an attribute represe
 To compute an augmenting path, we use a special traversal of the graph $G$ representing the flow network; such a traversal is a simple modification of DFS or BFS, where instead of considering all incident edges on the current vertex $v$, we only consider:
 - The outgoing edges of $v$ with flow less than their capacity
 - The incoming edges of $v$ with nonzero flow.
+
+Alternatively, we create a new directed graph $R_f$ from $G$ by taking the same set of vertices and only adding edges where $\Delta_f(u,v) > 0$.
