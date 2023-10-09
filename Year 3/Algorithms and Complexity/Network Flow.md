@@ -57,3 +57,9 @@ We can go further, though, and prove that the value of a maximum flow is in fact
 
 # Residual Capacity
 To prove that a certain flow is maximum, we need a way to show there is no more flow that can possibly be introduced into it. The following concepts of **residual capacity** and **augmenting paths** allow us to do this. 
+
+Let $N$ be a flow network, specified by graph $G$, with capacity $c$, source $s$, and sink $t$.
+Let $f$ be a flow for $N$. Given an edge $e$ directed from vertex $u$ to $v$, the **residual capacity** from $u$ to $v$ with respect to flow $f$ is defined as:
+$$\Delta_f(u,v) = c(e) - f(e)$$
+and the residual capacity in the opposite (wrong) direction is defined as:
+$$\Delta_f(v, u) = f(e)$$
