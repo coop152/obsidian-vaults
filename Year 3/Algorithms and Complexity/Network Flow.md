@@ -63,3 +63,16 @@ Let $f$ be a flow for $N$. Given an edge $e$ directed from vertex $u$ to $v$, th
 $$\Delta_f(u,v) = c(e) - f(e)$$
 and the residual capacity in the opposite (wrong) direction is defined as:
 $$\Delta_f(v, u) = f(e)$$
+In other words, it is the additional capacity that has not been taken advantage of by flow $f$.
+
+Let $\pi$ be a path from $s$ to $t$ that is allowed to traverse edges in either the forward *or* the backward (wrong) direction. In this special kind of path, a **forward edge** is defined as an edge that occurs in the path and is followed normally while a **backward edge** is an edge that occurs in the path and is followed backwards. Let's extend the definition of residual capacity from a pair of vertices to an edge:
+$$\Delta_f(e)= \begin{cases}
+	c(e) - f(e) & \text{if } e \text{ is a forward edge.} \\
+	f(e) & \text{if } e \text{ is a backward edge.}
+\end{cases}$$
+In other words, the residual capacity of an edge $e$ going in the forward direction is the leftover capacity that $f$ is yet to consume, while the residual capacity in the opposite direction is the flow that $f$ has already consumed (and could potentially "give back", if there were a more optimal solution).
+
+# Augmenting Paths
+We define the residual capacity $\Delta_f(\pi)$ of a path $\pi$ as the minimal residual capacity of its edges. That is,
+![](Pasted%20image%2020231009140025.png)
+This represents the maximum amount of addition flow we can possibly direct down the path $pi$ without violating a capacity constraint on one of the edges. An **augmenting path** for flow $f$ is a path $\pi$ from the source $s$ to the sink $t$ with non-zero residual capacity.
