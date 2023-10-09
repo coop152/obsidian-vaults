@@ -137,3 +137,9 @@ From this we conclude that Ford-Fulkerson is pseudo-polynomial-time, since its r
 # The Edmonds-Karp Algorithm
 This is a variation of the Ford-Fulkerson algorithm that utilises a simple technique to find good augmenting paths, which results in a faster running time. 
 The technique is based on being "more greedy" than the previous solution; namely, at each iteration we choose an augmenting path with the minimal number of edges, which can be easily done in $O(m)$ time with a modified BFS traversal.
+First, we introduce some extra notation:
+- The **length** of a path $\pi$ is the number of edges in $\pi$.
+- For a flow $f$ in some network $N$, define $d_f(v)$ as the minimum length of an augmenting path from the source to $v$. This is the **residual distance** of $v$ with respect to flow $f$.
+
+We begin the analysis by noting that the residual distance is non-decreasing in a series of applications:
+![](Pasted%20image%2020231009152427.png)
