@@ -125,4 +125,15 @@ To compute an augmenting path, we use a special traversal of the graph $G$ repre
 - The outgoing edges of $v$ with flow less than their capacity
 - The incoming edges of $v$ with nonzero flow.
 
-Alternatively, we create a new directed graph $R_f$ from $G$ by taking the same set of vertices and only adding edges where $\Delta_f(u,v) > 0$.
+Alternatively, we create a new directed graph $R_f$ (the **residual graph**) from $G$ by taking the same set of vertices, and adding edges between vertices $u$, $v$ where $\Delta_f(u,v) > 0$. We can then perform a regular DFS traversal on this residual graph to find an augmenting path.
+## Analysis
+Let $n$ and $m$ be the number of vertices and edges of the flow network, respectively, and let $f^*$ be a maximum flow.
+The graph underlying the network is connected, so we have that $n \leq m + 1$. Every time we find an augmenting path we increase the value of the flow by at least 1, meaning that $|f^*|$ (the value of the maximum flow) is an upper bound on the number of times the algorithm must find an augmenting path.
+We can find an augmenting path by a simple graph traversal such as DFS or BFS which will take $O(m)$ time. Thus, we can bound the running time of Ford-Fulkerson as being at most $O(|f^*|m)$.
+With especially bad choices of augmenting paths, this bound can actually be reached:
+![](Pasted%20image%2020231009151158.png)
+From this we conclude that Ford-Fulkerson is pseudo-polynomial-time, since its running time depends on both the size of the input and the value of a numeric parameter. This shows that the running time of Ford-Fulkerson can be very poor if the maximum flow is large and/or the augmenting paths are chosen poorly.
+
+# The Edmonds-Karp Algorithm
+This is a variation of the Ford-Fulkerson algorithm that utilises a simple technique to find good augmenting paths, which results in a faster running time. 
+The technique is based on being "more greedy" than the previous solution; namely, at each iteration we choose an augmenting path with the minimal number of edges, which can be easily done in $O(m)$ time with a modified BFS traversal.
