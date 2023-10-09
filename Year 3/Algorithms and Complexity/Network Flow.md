@@ -141,5 +141,9 @@ First, we introduce some extra notation:
 - The **length** of a path $\pi$ is the number of edges in $\pi$.
 - For a flow $f$ in some network $N$, define $d_f(v)$ as the minimum length of an augmenting path from the source to $v$. This is the **residual distance** of $v$ with respect to flow $f$.
 
-We begin the analysis by noting that the residual distance is non-decreasing in a series of applications:
+We begin the analysis by noting that the residual distance is non-decreasing in a series of Edmonds-Karp augmentations:
 ![](Pasted%20image%2020231009152427.png)
+There is a very long proof for this.
+In other words, when we do an Edmonds-Karp augmentation, the residual distance from the source to any vertex can only increase or stay the same.
+
+(Continue from page 456 of the notes, at the proof for lemma )
