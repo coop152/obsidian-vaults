@@ -84,4 +84,8 @@ The residual capacity of this path is 2 (from the edge with the lowest residual 
 ![](Pasted%20image%2020231009141150.png)
 We can always add the residual capacity of an augmenting path to a flow to get another valid flow in this manner, as shown by this lemma:
 ![](Pasted%20image%2020231009141341.png)
-Simple: Because we are adding less than the residual capacity to forward edges we will never exceed their capacities, and because we are subtracting less than the residual capacity from backward edges we will never go below zero. Therefore, the new flow is valid and the new flow is increased by the 
+Simple: Because we are adding less than the residual capacity to forward edges we will never exceed their capacities, and because we are subtracting less than the residual capacity from backward edges we will never go below zero. Therefore, the new flow is valid and the new flow is increased by $\Delta_f(\pi)$.
+
+According to this lemma, the existence of an augmenting path $\pi$ for a flow $f$ implies that $f$ is not maximal. In addition, if we are given an augmenting path $\pi$ we can improve $f$ by pushing $\Delta_f(\pi)$ units of flow along it.
+Conversely, what if there is no augmenting path? In this case, we know that $f$ is a maximal flow, which is shown by the following lemma:
+![](Pasted%20image%2020231009143430.png)
