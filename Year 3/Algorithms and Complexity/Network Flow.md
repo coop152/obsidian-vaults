@@ -192,4 +192,10 @@ If you can achieve a flow value equal to the total number of games the other tea
 Therefore, we can solve the baseball elimination problem in $O(n^2)$ time, where $n$ is the number of teams.
 ![](Pasted%20image%2020231010124258.png)
 # Minimum-Cost Flow
-A variant of the maximum flow problem where there is a cost associated with sending a unit of flow through an edge. We extend the definition of a network by 
+A variant of the maximum flow problem where there is a cost associated with sending a unit of flow through an edge. We extend the definition of a network by giving a second non-negative integer weight $w(e)$ for each edge $e$ which represents the **cost** of edge $e$.
+![](Pasted%20image%2020231010124808.png)
+Flow $f$ is a **minimum-cost flow** if it has the minimum possible cost among all flows with the same value. The minimum-cost flow problem involves finding a maximal flow that has the lowest cost over all of the maximal flows.
+Given an augmenting path $\pi$ with respect to a flow $f$, we define the cost $w(\pi)$ as the sum of the costs of the forward edges minus the sum of costs of the backward edges.
+
+You can also have **augmenting cycles**, which are augmenting paths that are cycles (no shit). Notably, applying augmenting cycles doesn't affect the flow value.
+![](Pasted%20image%2020231010125350.png)
