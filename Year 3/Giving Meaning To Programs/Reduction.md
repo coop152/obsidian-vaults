@@ -27,6 +27,21 @@ Here are some properties that define how multiple substitutions interact:
 ![](Pasted%20image%2020231010141446.png)
 Simple:
 (a): If you're substituting for the same term twice, just apply the outermost substitution to the innermost substitution's left part.
-(b): If you're substituting for two different terms, you can swap the order given that you also apply the formerly outermost, now innermost substitution to the formerly innermost, now outermost substitution's left part.
+(b): If you're substituting for two different terms, you can swap the order given that you also apply the formerly outermost substitution to the formerly innermost substitution's left part.
 
 # Beta-Reduction
+An operation that "applies" our set of terms in a way similar to a programming language.
+![](Pasted%20image%2020231010145027.png)
+Simple:
+- bcVar: "Apply" an abstraction like a function, by substituting the value to the right of it in for the bound variable.
+- scAbs: If you can beta-reduce one term to another then you can do the same if it is in an abstraction.
+- scApp: If you can beta reduce one term to another, then you can do the same to both of the terms in an application.
+
+The step cases essentially allow you to apply the base case to terms that are inside abstractions and applications.
+A **redex** is a term that matches the bcVar case - that is, a redex is an application with an abstraction on the left and another term on the right.
+
+The symbol for a beta-reduction is $\xrightarrow{\beta}$. This refers specifically to a single step of reduction.
+If we wish to indicate that a term beta-reduces to another in multiple steps, we can use this symbol:
+![](Pasted%20image%2020231010150008.png)
+Which represents the reflexive transitive closure of $\xrightarrow{\beta}$.
+You can refer to the single step beta-reduction by "beta-reduces in one step" versus "beta-reduces in many steps" for the reflexive transitive closure.
