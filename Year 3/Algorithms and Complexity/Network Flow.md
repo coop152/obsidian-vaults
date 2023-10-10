@@ -145,4 +145,14 @@ We begin the analysis by noting that the residual distance is non-decreasing in 
 ![](Pasted%20image%2020231009152427.png)
 There is a very long proof for this.
 In other words, when we do an Edmonds-Karp augmentation, the residual distance from the source to any vertex can only increase or stay the same.
-We can use this to further show that the number of flow augmentations will be no more than $nm$.
+We can further show that the number of flow augmentations will be no more than $nm$.
+![](Pasted%20image%2020231010110827.png)
+![](Pasted%20image%2020231010110820.png)
+Using the fact that a single augmentation can be done in $O(m)$, we can conclude that Edmonds-Karp computes a maximum flow in $O(nm^2)$ time.
+
+# Maximum Bipartite Matching
+In this problem, we are given a connected undirected graph with these properties:
+- The vertices of $G$ are partitioned into two sets $X$ and $Y$.
+- Every edge in $G$ has one endpoint in $X$ and the other in $Y$.
+
+Graphs that fit this description are called **bipartite graphs**. A **matching** in $G$ is a set of edges that share no endpoints - this set pairs up vertices in $X$ with vertices in $Y$ such that each vertex has **at most one** "partner" in the other set. The maximum bipartite matching problem is to find a matching with the greatest number of edges.
