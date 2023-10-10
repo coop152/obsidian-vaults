@@ -174,4 +174,15 @@ Let $g_{i,j}$ represent the number of games remaining between team $i$ and team 
 $$g_i=\sum_{j\in T}{g_{i,j}}$$
 (The number of games remaining for $i$ is the sum of the games remaining with each other team.)
 For example:
-![](Pasted%20image%2020231010114334.png)
+![](Pasted%20image%2020231010114952.png)
+With all the different ways a team $k$ can be eliminated, it might at first seem computationally infeasible to determine whether team $k$ is eliminated. However, this problem can also be reduced to a network flow problem.
+Let $T'$ denote the set of teams other than $k$ ($T' = T - \{k\}$). Let $L$ denote the set of games that are left to play among the teams in $T'$. That is:
+$$L = \{\{i,j\}:i,j \in T' \text{ and } g_{i,j} > 0\}$$
+Finally, let $W$ denote the largest number of wins possible for team $k$ given the current standings ($w_k + g_k$).
+If $W < w_i$ for some team $i$ then $k$ is immediately and directly eliminated, so let us assume that no single team eliminates team $k$. To consider how combinations of game outcomes might eliminate team $k$, we create a graph $G$ with this structure:
+- Include the items in the sets $T'$ and $L$ as vertices, as well as a source $s$ and a sink $t$.
+- For each game pair $\{i,j\}$ in $L$, add an edge $(s, \{i,j\})$ with capacity $g_{i,j}$. That is, connect the source to every game node and give the edge a capacity equal to the number of those games remaining.
+- For each game pair $\{i,j\}$ in $L$, add the edges $(\{i,j\}, i)$ and $(\{i,j\}, j)$ with capacity $+\infty$. That is, connect each game node to both of the participating teams with edges of infinite capacity.
+- For each team $i$, add an edge $(i, t)$ with capacity $W - w_i$. That is, connect each team node to the sink. Note that $W - w_i$ cannot be negative because we already ruled out the case where $W < w_i$ (a team is eliminated instantly by a single team's win count). 
+
+![](Pasted%20image%2020231010120643.png)
