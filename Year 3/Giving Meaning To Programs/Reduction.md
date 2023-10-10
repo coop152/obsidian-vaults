@@ -50,4 +50,11 @@ You can refer to the single step beta-reduction by "beta-reduces in one step" ve
 Simple: If you can beta-reduce the term $u$ to $u'$, and $u$ is a subterm of a term $t$, then there must exist a term $t'$ with $u'$ as a subterm that $t$ can beta-reduce to.
 ![](Pasted%20image%2020231010152212.png)
 Simple: If you have a term $t$ that beta-reduces to $t'$, then you can rename a variable in $t$ to something fresh and beta-reduce that to a new term $u$ which is alpha-equivalent to $t'$ after being renamed in the same way.
-![](Pasted%20image%2020231010152837.png)Simple: The set of free variables of a beta-reduced term is a subset of the free variables of the non-reduced term.
+![](Pasted%20image%2020231010152837.png)Simple: 
+(a): The set of free variables of a beta-reduced term is a subset of the free variables of the non-reduced term.
+(b): If you have a term $t$ that beta-reduces to $t'$ then you can substitute a variable for some term and reduce the result of that to a term $u'$, which is alpha-equivalent to the result of performing the same substitution on $t'$.
+(c): Same as (b), but to any depth of beta-reduction.
+
+In general, this pattern of behaviour is true with beta-reduction:
+![](Pasted%20image%2020231010154542.png)
+![](Pasted%20image%2020231010154602.png)
