@@ -26,4 +26,7 @@ Here are some properties that define how multiple substitutions interact:
 ![](Pasted%20image%2020231010141437.png)
 ![](Pasted%20image%2020231010141446.png)
 Simple:
-(a): If you're substituting 
+(a): If you're substituting for the same term twice, just apply the outermost substitution to the innermost substitution's left part.
+(b): If you're substituting for two different terms, you can swap the order given that you also apply the formerly outermost, now innermost substitution to the formerly innermost, now outermost substitution's left part.
+
+# Beta-Reduction
