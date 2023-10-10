@@ -188,4 +188,8 @@ If $W < w_i$ for some team $i$ then $k$ is immediately and directly eliminated, 
 ![](Pasted%20image%2020231010120643.png)
 
 Imagine that wins flow from the source, are split at each game node $\{i, j\}$ to allocate wins between each pair of teams $i$ and $j$, and are then absorbed by the sink. The flow on each edge $(\{i, j\}, i)$ represents the number of games in which team $i$ beats $j$, and the flow on each edge $(i, t)$ represents the number of games that could be won by team $i$. Therefore, maximising the flow in $G$ is equivalent to testing if it is possible to allocate wins among the remaining games such that no team goes above $W$ wins.
-If 
+If you can achieve a flow value equal to the total number of games the other teams are going to play, then you have shown that it is possible for some combination of game outcomes to occur that doesn't have any one team's score exceeding $W$ and thus does not eliminate team $k$. If you cannot achieve this flow value, it means there is no combination of game outcomes that allows team $k$ to win.
+Therefore, we can solve the baseball elimination problem in $O(n^2)$ time, where $n$ is the number of teams.
+![](Pasted%20image%2020231010124258.png)
+# Minimum-Cost Flow
+A variant of the maximum flow problem where there is a cost associated with sending a unit of flow through an edge. We extend the definition of a network by 
