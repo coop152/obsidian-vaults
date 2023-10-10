@@ -145,5 +145,4 @@ We begin the analysis by noting that the residual distance is non-decreasing in 
 ![](Pasted%20image%2020231009152427.png)
 There is a very long proof for this.
 In other words, when we do an Edmonds-Karp augmentation, the residual distance from the source to any vertex can only increase or stay the same.
-
-$$\sum_{\Sigma=\sigma}^{\Sigma'}{\sigma'}$$
+We can use this to further show that the number of flow augmentations will be no more than $nm$.
