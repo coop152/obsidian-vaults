@@ -21,3 +21,9 @@ Simple:
 
 Another important property is that substituting alpha-equivalent terms into alpha-equivalent terms gives us terms that are again alpha-equivalent. That is,
 ![](Pasted%20image%2020231010140741.png)
+
+Here are some properties that define how multiple substitutions interact:
+![](Pasted%20image%2020231010141437.png)
+![](Pasted%20image%2020231010141446.png)
+Simple:
+(a): If you're substituting 
