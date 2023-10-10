@@ -18,3 +18,6 @@ Simple:
 (d): This is just the second step case
 (e): You can apply a renaming to a substitution by simply renaming every occurrence of the given variable to the new one, assuming the new variable occurs nowhere in the substitution.
 (f): You can change the variable to be substituted to another one by renaming and replacing the term right of the slash, as long as the new variable does not occur anywhere already.
+
+Another important property is that substituting alpha-equivalent terms into alpha-equivalent terms gives us terms that are again alpha-equivalent. That is,
+![](Pasted%20image%2020231010140741.png)
