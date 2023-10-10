@@ -186,3 +186,5 @@ If $W < w_i$ for some team $i$ then $k$ is immediately and directly eliminated, 
 - For each team $i$, add an edge $(i, t)$ with capacity $W - w_i$. That is, connect each team node to the sink. Note that $W - w_i$ cannot be negative because we already ruled out the case where $W < w_i$ (a team is eliminated instantly by a single team's win count). 
 
 ![](Pasted%20image%2020231010120643.png)
+
+Imagine that wins flow from the source, are split at each game node $\{i, j\}$ to allocate wins between each pair of teams $i$ and $j$, and are then absorbed by the sink. The flow on each edge $(\{i, j\}, i)$ represents the number of games in which team $i$ beats $j$, and the flow on each edge $(i, t)$ represents the number of games that could be won by team $i$. Therefore, maximising the flow in $G$
