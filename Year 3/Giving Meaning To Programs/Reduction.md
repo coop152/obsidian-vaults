@@ -17,4 +17,4 @@ Simple:
 (c): You can still combine two renamings even if a substitution is being applied to the inner one, as long as the intermediate and final renaming variables are fresh.
 (d): This is just the second step case
 (e): You can apply a renaming to a substitution by simply renaming every occurrence of the given variable to the new one, assuming the new variable occurs nowhere in the substitution.
-(f): 
+(f): You can change the variable to be substituted to another one by renaming and replacing the term right of the slash, as long as the new variable does not occur anywhere already.
