@@ -199,3 +199,4 @@ Given an augmenting path $\pi$ with respect to a flow $f$, we define the cost $w
 
 You can also have **augmenting cycles**, which are augmenting paths that are cycles (no shit). Notably, applying augmenting cycles doesn't affect the flow value.
 ![](Pasted%20image%2020231010125350.png)
+ complete nonsense (just start this section again, page 462)
