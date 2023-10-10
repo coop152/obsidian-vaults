@@ -15,4 +15,6 @@ Simple:
 (a): After substitution $[a/x]$, the set of free variables will gain $a$ and lose $x$ (if it had it).
 (b): If $x$ wasn't in the free variables of a term then substituting something in for it will produce an alpha-equivalent result.
 (c): You can still combine two renamings even if a substitution is being applied to the inner one, as long as the intermediate and final renaming variables are fresh.
-(d): 
+(d): This is just the second step case
+(e): You can apply a renaming to a substitution by simply renaming every occurrence of the given variable to the new one, assuming the new variable occurs nowhere in the substitution.
+(f): 
