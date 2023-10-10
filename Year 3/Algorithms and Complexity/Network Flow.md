@@ -187,4 +187,4 @@ If $W < w_i$ for some team $i$ then $k$ is immediately and directly eliminated, 
 
 ![](Pasted%20image%2020231010120643.png)
 
-Imagine that wins flow from the source, are split at each game node $\{i, j\}$ to allocate wins between each pair of teams $i$ and $j$, and are then absorbed by the sink. The flow on each edge $(\{i, j\}, i)$ represents the number of games in which team $i$ beats $j$, and the flow on each edge $(i, t)$ represents the number of games that could be won by team $i$. Therefore, maximising the flow in $G$
+Imagine that wins flow from the source, are split at each game node $\{i, j\}$ to allocate wins between each pair of teams $i$ and $j$, and are then absorbed by the sink. The flow on each edge $(\{i, j\}, i)$ represents the number of games in which team $i$ beats $j$, and the flow on each edge $(i, t)$ represents the number of games that could be won by team $i$. Therefore, maximising the flow in $G$ is equivalent to testing if it is possible to allocate wins among the remaining games such that no team goes above $W$ wins. 
