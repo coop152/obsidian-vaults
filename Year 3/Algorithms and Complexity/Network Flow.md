@@ -156,3 +156,14 @@ In this problem, we are given a connected undirected graph with these properties
 - Every edge in $G$ has one endpoint in $X$ and the other in $Y$.
 
 Graphs that fit this description are called **bipartite graphs**. A **matching** in $G$ is a set of edges that share no endpoints - this set pairs up vertices in $X$ with vertices in $Y$ such that each vertex has **at most one** "partner" in the other set. The maximum bipartite matching problem is to find a matching with the greatest number of edges.
+![](Pasted%20image%2020231010111734.png)
+
+## Reduction to the Maximum Flow Problem
+Let $G$ be a bipartite graph whose vertices are partitioned into sets $X$ and $Y$. We can create a flow network $H$ such that a maximum flow of $H$ can be immediately converted into a maximum matching in $G$:
+1. Include all the vertices of $G$ in $H$, plus a new source vertex $s$ and sink vertex $t$.
+2. Add every edge in $G$ to $H$, but direct the edges such that they depart from the endpoint in $X$ and arrive at the endpoint in $Y$. In addition, insert a directed edge from $s$ to every vertex in $X$, and a directed edge from every vertex in $Y$ to $t$. Finally, assign each edge of $H$ a capacity of 1.
+
+Now we calculate a maximum flow for $H$, and define a set $M$ of edges by taking every edge from $G$ where $f(e) = 1$. We assert that this set $M$ is a matching.
+Consider the vertices in $Y$; they have an outgoing flow of exactly 1 because each vertex connects to the sink, and to achieve a max flow each of these edges will be fully utilised. Therefore, in order to satisfy the conservation rule each vertex in $Y$ must also have an incoming flow of exactly 1, meaning it must be paired with exactly one vertex from $X$.
+Consider the vertices in $X$; each vertex has a single incoming edge with a capacity of 1, so they can have an incoming flow of either 0 or 1. If the incoming flow is 1, then they must send flow to exactly one vertex in $Y$. If the incoming flow is 0, then they cannot send any flow. Therefore, each vertex in $X$ is matched with either 1 or no vertices from $Y$.
+Therefore, the set $M$ is indeed a matching.
