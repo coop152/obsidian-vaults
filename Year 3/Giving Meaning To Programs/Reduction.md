@@ -45,3 +45,8 @@ If we wish to indicate that a term beta-reduces to another in multiple steps, we
 ![](Pasted%20image%2020231010150008.png)
 Which represents the reflexive transitive closure of $\xrightarrow{\beta}$.
 You can refer to the single step beta-reduction by "beta-reduces in one step" versus "beta-reduces in many steps" for the reflexive transitive closure.
+
+![](Pasted%20image%2020231010151649.png)
+Simple: If you can beta-reduce the term $u$ to $u'$, and $u$ is a subterm of a term $t$, then there must exist a term $t'$ with $u'$ as a subterm that $t$ can beta-reduce to.
+![](Pasted%20image%2020231010152212.png)
+Simple: If $t$ beta-reduces to $t'$, then renaming a variable in $t$ to something suitably fresh
