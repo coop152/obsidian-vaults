@@ -67,3 +67,10 @@ For example, you can say that
 This is not a valid beta-reduction because the bound variable in the abstraction has not been replaced with a fresh one, but it is valid for this relation.
 This relation is also well-behaved for subterms:
 ![](Pasted%20image%2020231011111547.png)
+
+We also confirm that the properties of beta-reduction all apply to the many step version:
+![](Pasted%20image%2020231011111857.png)
+Simple:
+(a), (b), (c): If a subterm $t$ can (eventually) beta-reduce to $t'$, then the parent term can (eventually) beta-reduce to itself with $t'$ swapped in for $t$.
+(d): The free variables of a beta-reduced term are a subset of the original term's.
+(e): 
