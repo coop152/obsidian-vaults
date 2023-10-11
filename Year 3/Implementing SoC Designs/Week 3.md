@@ -28,3 +28,12 @@ Then, check the output is actually correct:
 - Some data faults will be readily apparent, such as out-of-range values, the wrong number of operations being performed, graphics being obviously wrong (if you can view them)
 - For certain designs, self-testing may be possible (e.g. a processor can be tested by running software on it, which will probably crash if there is an error)
 
+## Designs for tests
+Here are some suggested ways to design verification tests:
+- Individual, deliberately targeted tests
+	- Manually create test cases so that (at least) one case of every circumstance is exercised
+	- Effective, but expensive (in time taken manually writing them)
+- Algorithmically generated
+	- for example, iterate over all possible cases of inputs, or over regular input patterns
+	- Relatively easy to do, requires some design effort
+- 
