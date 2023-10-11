@@ -8,9 +8,8 @@
 - Seems fine, with very basic testing and at a first glance
 
 # Unit 4
-- `de_req` is really freaking out on the vertical line. **investigate further**
-- May not actually be an issue per se, just strange?
-- 
+- `de_req` is really freaking out on the vertical line. **investigate further** - May not actually be an issue, just strange?
+- Something strange is happening to things drawn in the bottom right corner. **investigate further, and test the others with these bottom-right corner tests**
 
 # Unit 5
 - Is treating `de_nbyte` as active high instead of active low.
