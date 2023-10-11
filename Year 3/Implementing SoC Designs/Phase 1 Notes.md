@@ -8,7 +8,7 @@
 - Seems fine, with very basic testing and at a first glance
 
 # Unit 4
-- Also seems fine. Looks the same as unit 3 but slower, which i dont think counts as a bug
+- `de_req` is really freaking out on the vertical line. **investigate further**
 
 # Unit 5
 - Is treating `de_nbyte` as active high instead of active low.
