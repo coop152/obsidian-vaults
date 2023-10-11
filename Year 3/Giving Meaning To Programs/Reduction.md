@@ -58,3 +58,7 @@ Simple: If you have a term $t$ that beta-reduces to $t'$, then you can rename a 
 In general, this pattern of behaviour is true with beta-reduction:
 ![](Pasted%20image%2020231010154542.png)
 ![](Pasted%20image%2020231010154602.png)
+By extension:
+![](Pasted%20image%2020231011105131.png)
+This essentially says that we can interleave beta-reduction and alpha-equivalence to get a relation with reasonable properties. This relation can be written as $\xrightarrow{\beta\alpha}$, and is defined as such:
+![](Pasted%20image%2020231011105249.png)
