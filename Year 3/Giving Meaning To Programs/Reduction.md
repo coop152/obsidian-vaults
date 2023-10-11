@@ -73,4 +73,5 @@ We also confirm that the properties of beta-reduction all apply to the many step
 Simple:
 (a), (b), (c): If a subterm $t$ can (eventually) beta-reduce to $t'$, then the parent term can (eventually) beta-reduce to itself with $t'$ swapped in for $t$.
 (d): The free variables of a beta-reduced term are a subset of the original term's.
-(e): 
+(e): like (a), (b) and (c) but for substitution (?)
+
