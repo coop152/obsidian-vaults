@@ -5,7 +5,10 @@
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
 
 # Unit 3
-- 
+- Seems fine, with very basic testing and at a first glance
+
+# Unit 4
+- Also seems fine. Looks the same as unit 3 but slower, which i dont think counts as a bug
 
 # Unit 5
 - Is treating `de_nbyte` as active high instead of active low.
