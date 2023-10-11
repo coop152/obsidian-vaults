@@ -9,3 +9,22 @@ When writing the later tests you should be sure:
 - You test every statement
 - You try to break it
 
+## What to look for
+Start with simple sequences:
+- Is the protocol being honoured?
+- Are state machines behaving as expected? (Needs to be observable to check internal state)
+- Have you observed every transition in the state diagram? (use test coverage)
+- …for all of the possible triggers?
+- Does it terminate properly?
+
+For example, a processor design:
+- Feed the instruction bus with NOP instructions
+- Does it reset and start fetching instructions?
+- Is the fetch-decode-execute sequence running successfully?
+- Does it handle slow memory properly? (e.g. can it wait for memory)
+
+Then, check the output is actually correct:
+- Can compare data values with independently generated test results
+- Some data faults will be readily apparent, such as out-of-range values, the wrong number of operations being performed, graphics being obviously wrong (if you can view them)
+- For certain designs, self-testing may be possible (e.g. a processor can be tested by running software on it, which will probably crash if there is an error)
+
