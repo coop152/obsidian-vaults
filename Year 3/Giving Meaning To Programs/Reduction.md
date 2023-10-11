@@ -62,3 +62,8 @@ By extension:
 ![](Pasted%20image%2020231011105131.png)
 This essentially says that we can interleave beta-reduction and alpha-equivalence to get a relation with reasonable properties. This relation can be written as $\xrightarrow{\beta\alpha}$, and is defined as such:
 ![](Pasted%20image%2020231011105249.png)
+For example, you can say that
+![](Pasted%20image%2020231011111358.png)
+This is not a valid beta-reduction because the bound variable in the abstraction has not been replaced with a fresh one, but it is valid for this relation.
+This relation is also well-behaved for subterms:
+![](Pasted%20image%2020231011111547.png)
