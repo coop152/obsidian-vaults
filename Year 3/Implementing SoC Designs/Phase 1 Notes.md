@@ -9,6 +9,8 @@
 
 # Unit 4
 - `de_req` is really freaking out on the vertical line. **investigate further**
+- May not actually be an issue per se, just strange?
+- 
 
 # Unit 5
 - Is treating `de_nbyte` as active high instead of active low.
