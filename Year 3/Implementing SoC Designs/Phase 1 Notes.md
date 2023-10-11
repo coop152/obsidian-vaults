@@ -4,4 +4,4 @@
 
 # Unit 5
 - Is treating de_nbyte as active high instead of active low
-- 
+- Dipping de_req for a very short amount of time
