@@ -36,4 +36,7 @@ Here are some suggested ways to design verification tests:
 - Algorithmically generated
 	- for example, iterate over all possible cases of inputs, or over regular input patterns
 	- Relatively easy to do, requires some design effort
-- 
+- Random patterns ("Monte Carlo")
+	- Can give high (but incomplete) coverage of common cases
+	- Will probably miss specific input combinations
+	- Cheap to produce
