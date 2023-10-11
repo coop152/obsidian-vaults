@@ -1,1 +1,1 @@
-- Switched `Time.cpp` to use chrono in a very rudimentary way;
+- Switched `Time.cpp` to use chrono in a very rudimentary way; just uses chrono to get the unix epoch time where unix libraries where previously used, and then makes imitations of the unix library functions.
