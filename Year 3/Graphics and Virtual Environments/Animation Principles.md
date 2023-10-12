@@ -73,7 +73,7 @@ We calculate the position of the point $P'_1$ by applying the same transformatio
 There are plenty of nuances to the implementation of SSD:
 Vertices' positions are given in world space, while transformations applied to bones (and thus to the vertices) will be taking place locally. To remedy this we must convert the vertices' positions to local space using a formula like this:
 ![](Pasted%20image%2020231012114615.png)
-$p_i$ is the global position of the vertex in bind position, $B_j$ is the matrix representing the coordinate system of bone $j$, and $T_j$ is the matrix representing the transformations that have been applied to the bone $j$. In total, 
+$p_i$ is the global position of the vertex in bind position, $B_j$ is the matrix representing the coordinate system of bone $j$ relative to world space (where applying the inverse converts the world space vertex coords to local bone space coords), and $T_j$ is the matrix representing
 
 
 The order of operations is of utmost importance due to the hierarchical nature of the rig.
