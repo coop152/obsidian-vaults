@@ -17,9 +17,6 @@ When you animate, you don't go frame by frame and create each pose one after the
 # Procedural Animation
 Procedural animation, like procedural surfaces or curves, is animation that is expressed as a function of a number of parameters. For example, if you wanted to animate a clock you could manually set the position of the clock hands for every single second, for the entire time the clock is visible. More reasonably, you could define the position of the clock hands according to a function which takes the current time as a parameter, making the animation completely automatic.
 This also includes simulations, such as foliage, objects with physics, cloth physics, etc.
-
-# Physically-Based Animation
-Animating objects by assigning them physical properties, e.g. weight, density, and performing a physics simulation. Examples include rigid and soft body simulations, wind simulations, and cloth simulations.
 # Skeleton Animation
 Animating a mesh by binding it to a skeleton and animating the skeleton.
 First, you create an articulated skeleton that represents the bones and joints of the mesh.
@@ -76,3 +73,31 @@ $p_i$ is the global position of the vertex in bind position, $B_j$ is the matrix
 Basically, $T_jB_j^{-1}$ gives the relative change between the bone in bind and in current pose, and applying it to the point will transform it accordingly.
 
 How do we get the vertex weights? Usually, by painting them on by hand. There are some automatic methods, but they aren't good enough to supersede doing it manually.
+
+# Physically-Based Animation
+Animating objects by assigning them physical properties, e.g. weight, density, and performing a physics simulation. Examples include rigid and soft body simulations, wind simulations, and cloth simulations.
+## Mass Spring Models
+Simulate a surface that folds like cloth, which is hold together using internal springs. Ideal for cloth animations.
+![](Pasted%20image%2020231012122746.png)
+## Particle Systems
+Simulate a large set of small particles. Ideal for fluid simulations (e.g. water, smoke, flames, sparks). We will cover Point Dynamics.
+![](Pasted%20image%2020231012121759.png)
+For each particle we need to store some properties representing their current state. This can include:
+- Position
+- Velocity
+- Age
+- Colour
+
+Emitters are objects that create particles, for example a sprinkler or an exhaust pipe.
+Forcefields affect the particles, for example a wind or gravity forcefield will change the acceleration/velocity.
+Finally, using the properties of the particles and taking into account external forces, we make the particles move by implementing the laws of mechanics. We do this using Ordinary Differential Equations (ODEs). 
+In the simplest case, particles are completely independent of each other. They often have lifetimes, beyond which they are removed.
+By using enough particles (and enough randomness), we can achieve some nice effects; while we are treating them as points while calculating the dynamics, we can render them however we like.
+Here is something you might recreate using a particle system:
+![](Pasted%20image%2020231012122538.png)
+
+## Ordinary Differential Equations (ODEs)
+We have many tools to solve differential equations and thus implement the laws of mechanics in our simulations. Take, for example, this equation representing the Newtonian mechanics for point mass:
+![](Pasted%20image%2020231012123013.png)
+We can rewrite this as a differential equation, as both force and acceleration are vectors:
+![](Pasted%20image%2020231012123055.png)
