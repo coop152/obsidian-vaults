@@ -70,10 +70,9 @@ We want to find the position of $P_0$ after some transformation of the bones.
 (In less ugly notation, $P'_0 = 0.5P'_1 + 0.5P'_2$).
 We calculate the position of the point $P'_1$ by applying the same transformation that was applied to $T_1$ to $P_0$. The same is done for $T_2$ to get $P'_2$. We now multiply these two positions by the weights of the corresponding bones and sum them up to get the final position $P'_0$.
 
-There are plenty of nuances to the implementation of SSD:
-Vertices' positions are given in world space, while transformations applied to bones (and thus to the vertices) will be taking place locally. To remedy this we must convert the vertices' positions to local space using a formula like this:
+Vertices' positions are given in world space, while transformations applied to bones (and thus to the vertices) will be taking place locally. To remedy this we must convert the vertices' positions to local space using like this:
 ![](Pasted%20image%2020231012114615.png)
-$p_i$ is the global position of the vertex in bind position, $B_j$ is the matrix representing the coordinate system of bone $j$ relative to world space (where applying the inverse converts the world space vertex coords to local bone space coords), and $T_j$ is the matrix representing
+$p_i$ is the global position of the vertex in bind position, $B_j$ is the matrix representing the coordinate system of bone $j$ relative to world space (where applying the inverse converts the world space vertex coords to local bone space coords), and $T_j$ converts back from local bone space to world space.
+Basically, $T_jB_j^{-1}$ gives the relative change between the bone in bind and in current pose, and applying it to the point will transform it accordingly.
 
-
-The order of operations is of utmost importance due to the hierarchical nature of the rig.
+How do we get the vertex weights? Usually, by painting them on by hand. There are some automatic methods, but they aren't good enough to supersede doing it manually.
