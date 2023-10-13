@@ -82,8 +82,19 @@ Simulate a surface that folds like cloth, which is hold together using internal 
 Here is a simple implementation of internal springs, shown in 2D simulating a strand of hair:
 ![](Pasted%20image%2020231013111846.png)
 The objective here is to keep the distance between particles constant, so we use **Hooke's Law** for calculating the force exerted by a spring. The variables involved are:
-- $P_i, P_j$ - The points connected by the spring. The calculated force acts 
+- $P_i, P_j$ - The points connected by the spring. The calculated force acts on $P_j$ and pulls it towards $P_i$.
+- $L_0$ - The length of the spring when at rest.
+- $||P_x||$ - The magnitude of a vector (I don't know why it's double lines)
+- $K$ - A scalar value representing the stiffness of the spring. A stiffer spring will pull back to rest length with greater force.
 
+$F(P_i, P_j)$ calculates the force exerted on $P_j$ by the spring between it and $P_i$, but we can easily find the force exerted on $P_i$ by the same spring by simply inverting the result. Remember Newton's third law; for each action (force) there is an equal and opposite reaction (force).
+
+You can essentially implement this same idea for strings as hair simulation.
+
+With this method, we get three types of forces interacting on the model (be it string, hair or cloth):
+- **Structural forces**, which enforce strict invariant properties on the system. For example, you may require certain particles to have constant distance from each other or to not move (e.g. anchoring one side of a flag to a pole), or you may enforce a constant distance between all particles if the cloth material you are simulating is non-elastic. These should ideally be **hard constraints**, and not forces.
+- **Internal deformation forces**, which are the internal forces described prior that cause a string to bend, a piece of cloth to flatten, etc.
+- **External forces**, such as gravity, friction, wind, etc.
 ## Particle Systems
 Simulate a large set of small particles. Ideal for fluid simulations (e.g. water, smoke, flames, sparks). We will cover Point Dynamics.
 ![](Pasted%20image%2020231012121759.png)
