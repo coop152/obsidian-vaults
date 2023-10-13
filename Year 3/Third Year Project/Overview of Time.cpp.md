@@ -6,4 +6,6 @@
 - `static int junkInt`: Used as a default argument for some functions that take references to integers as arguments. Funny.
 # Fields
 - `double rep`: Stores seconds that have elapsed since `offset`. While offset is only accurate to a second, rep is accurate to a microsecond. The actual time since epoch is `(offset + rep)`.
-# Public
+# Methods
+- `void Time::Convert(timeval&)`: Convert this Time object into a unix timeval struct, given as a reference.
+- `void Time::BreakDown(lots of references, char *tz)`: Split this Time object into hour, min, second, weekday, etc. according to some timezone string given by `tz`. Return the  
