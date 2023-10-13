@@ -106,9 +106,3 @@ Split this into two ODEs:
 Then combine into a single state vector $X$ to get a 1st order ODE, and take the derivative of both sides:
 ![](Pasted%20image%2020231013105151.png)
 We can calculate $X$ (that is, $x$ and $v$) using this result.
-### Euler's Method
-We can use Euler's method to approximate differential equations, which is simpler.
-![](Pasted%20image%2020231013105940.png)
-1. Pick a step size $h$. The smaller, the smoother.
-2. Give an initial position at $t = 0$, called $X_0$.
-3. Calculate $X_1$ using the value of $X_0$
