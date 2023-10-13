@@ -5,7 +5,7 @@
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
 
 # Unit 3
-- Seems fine, with very basic testing and at a first glance
+- Disregards the start point and always draws from (0,0)
 
 # Unit 4
 - `de_req` is really freaking out on the vertical line. **investigate further** - May not actually be an issue, just strange?
