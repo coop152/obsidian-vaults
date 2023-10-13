@@ -99,5 +99,5 @@ Here is something you might recreate using a particle system:
 ## Ordinary Differential Equations (ODEs)
 We have many tools to solve differential equations and thus implement the laws of mechanics in our simulations. Take, for example, this equation representing the Newtonian mechanics for point mass:
 ![](Pasted%20image%2020231012123013.png)
-We can rewrite this as a differential equation, as both force and acceleration are vectors:
+We can rewrite this as a differential equation, as both force and acceleration are vectors. Express acceleration in terms of the position vector:
 ![](Pasted%20image%2020231012123055.png)
