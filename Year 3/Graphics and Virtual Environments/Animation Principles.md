@@ -106,3 +106,7 @@ Split this into two ODEs:
 Then combine into a single state vector $X$ to get a 1st order ODE, and take the derivative of both sides:
 ![](Pasted%20image%2020231013105151.png)
 We can calculate $X$ (that is, $x$ and $v$) using this result.
+
+### Estimation stuff
+
+## Forces
