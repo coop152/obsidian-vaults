@@ -79,6 +79,10 @@ Animating objects by assigning them physical properties, e.g. weight, density, a
 ## Mass Spring Models
 Simulate a surface that folds like cloth, which is hold together using internal springs. Ideal for cloth animations.
 ![](Pasted%20image%2020231012122746.png)
+Here is a simple implementation of internal springs, shown in 2D simulating a strand of hair:
+![](Pasted%20image%2020231013111846.png)
+The objective here is to keep the distance between particles constant, so we use **Hooke's Law**
+
 ## Particle Systems
 Simulate a large set of small particles. Ideal for fluid simulations (e.g. water, smoke, flames, sparks). We will cover Point Dynamics.
 ![](Pasted%20image%2020231012121759.png)
