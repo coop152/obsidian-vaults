@@ -101,3 +101,8 @@ We have many tools to solve differential equations and thus implement the laws o
 ![](Pasted%20image%2020231012123013.png)
 We can rewrite this as a differential equation, as both force and acceleration are vectors. Express acceleration in terms of the position vector:
 ![](Pasted%20image%2020231012123055.png)
+Split this into two ODEs:
+![](Pasted%20image%2020231013105050.png)
+Then combine into a single state vector $X$ to get a 1st order ODE, and take the derivative of both sides:
+![](Pasted%20image%2020231013105151.png)
+We can calculate $X$ (that is, $x$ and $v$) using this result.
