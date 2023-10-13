@@ -6,4 +6,4 @@
 - `static int junkInt`: Used as a default argument for some functions that take references to integers as arguments. Funny.
 # Fields
 - `double rep`: Stores seconds that have elapsed since `offset`. While offset is only accurate to a second, rep is accurate to a microsecond. The actual time since epoch is `(offset + rep)`.
-- 
+# Public
