@@ -5,7 +5,7 @@
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
 
 # Unit 3
-- Disregards the start point and always draws from (0,0)
+- Disregards the start point and always draws from (0,0).
 
 # Unit 4
 - Fully functional, though it's slower than the others.
