@@ -81,7 +81,8 @@ Simulate a surface that folds like cloth, which is hold together using internal 
 ![](Pasted%20image%2020231012122746.png)
 Here is a simple implementation of internal springs, shown in 2D simulating a strand of hair:
 ![](Pasted%20image%2020231013111846.png)
-The objective here is to keep the distance between particles constant, so we use **Hooke's Law**
+The objective here is to keep the distance between particles constant, so we use **Hooke's Law** for calculating the force exerted by a spring. The variables involved are:
+- $P_i, P_j$ - The points connected by the spring. The calculated force acts 
 
 ## Particle Systems
 Simulate a large set of small particles. Ideal for fluid simulations (e.g. water, smoke, flames, sparks). We will cover Point Dynamics.
