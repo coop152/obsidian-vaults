@@ -14,4 +14,5 @@
 - `void Time:BreakDownDate(lots of references)`: Same, but for calendar times, i.e. day of month, day of week, month of year, year. Also doesn't let you provide a timezone.
 
 # Duration
-Is an incred
+Is an incredibly convoluted wrapper around literally a single double value. Just replace this with chrono::duration (or dont touch it at all who cares)
+
