@@ -17,4 +17,9 @@
 Is an incredibly convoluted wrapper around literally a single double value. Just replace this with chrono::duration (or dont touch it at all who cares)
 
 # WeekDay
-Another class like Duration that's basically a wrapper around a single double value. Represents a day of the week (i.e. 1 = Sunday, 7 = Saturday). Offers 
+Another class like Duration that's basically a wrapper around a single double value. Represents a day of the week (i.e. 1 = Sunday, 7 = Saturday). Offers conversion to string names, as well.
+
+# Month
+Similar to WeekDay, but it does actually contain two copies of certain bits of data in order to return correct values on leap years.
+
+# Year
