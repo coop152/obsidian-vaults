@@ -16,3 +16,5 @@
 # Duration
 Is an incredibly convoluted wrapper around literally a single double value. Just replace this with chrono::duration (or dont touch it at all who cares)
 
+# WeekDay
+Another class like Duration that's basically a wrapper around a single double value. Represents a day of the week (i.e. 1 = Sunday, 7 = Saturday). Offers 
