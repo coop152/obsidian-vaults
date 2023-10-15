@@ -23,3 +23,6 @@ Another class like Duration that's basically a wrapper around a single double va
 Similar to WeekDay, but it does actually contain two copies of certain bits of data in order to return correct values on leap years.
 
 # Year
+Includes some maths to deal with leap years (at least, i think thats what it is?). Like the rest of these, i imagine it can be replaced with a chrono class and it only exists cause of how old the program is.
+Presents this interface:
+- `static int IsLeap(int year)` - return true if year is leap. Can be replaced by `chrono::year.is_leap()`, which isn't a static method, so use time literals instead (e.g. `1995y.is_leap()`)
