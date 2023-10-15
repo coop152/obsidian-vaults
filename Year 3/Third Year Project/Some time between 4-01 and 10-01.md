@@ -1,1 +1,3 @@
 - Switched `Time.cpp` to use chrono in a very rudimentary way; just uses chrono to get the unix epoch time where unix libraries where previously used, and then makes imitations of the unix library functions.
+- Did very hasty conversion in many files, mostly related to file system stuff. Microsoft provides some useful unix porting functions for this purpose, though they dont provide all of them so some modifications (and hacks) were required. 
+- Did actual proper conversion to the modern c++ file api in calendar.cpp (i believe)
