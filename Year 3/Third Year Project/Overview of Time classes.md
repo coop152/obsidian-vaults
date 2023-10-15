@@ -25,7 +25,7 @@ Similar to WeekDay, but it does actually contain two copies of certain bits of d
 # Year
 Includes some maths to deal with leap years (at least, i think thats what it is?). Like the rest of these, i imagine it can be replaced with a chrono class and it only exists cause of how old the program is.
 Presents this interface:
-- `static int IsLeap(int year)`: return true if year is leap. Can be replaced by `chrono::year.is_leap()`, which isn't a static method, so use time literals instead (e.g. `(2020y).is_leap()` vs `Year::IsLeap(2020)`)
+- `static int IsLeap(int year)`: return true if year is leap. Can be replaced by `chrono::year.is_leap()`, which isn't a static method, so use time literals instead (e.g. `(2020y).is_leap()` vs `Year::IsLeap(2020)`) or construct a `year` object
 - `static int Size(int year)`: returns the number of days in a year. Just check if the year is a leap year and use 366 instead of 365. Doesn't actually have a direct equivalent in chrono cause its so trivial.
 - `static First()` and `static Last()` are just `chrono::year::min` and `chrono::year::max`.
-- `static long Offset(int year)`: 
+- `static long Offset(int year)`: Gives the number of days between the first year and the current one (i think?)
