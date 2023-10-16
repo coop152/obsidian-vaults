@@ -44,4 +44,6 @@ Here is an example of a turing machine, given formally:
 ![](Pasted%20image%2020231016141645.png)
 # Variants of Turing Machines
 There are some variants of Turing machines, such as multitape machines or nondeterministic machines. All of these variants have the same power as a regular Turing machine, which will be shown shortly. This property of Turing machines, that they maintain the same power in the face of certain changes in definition, is called **robustness**.
-How do we show robustness? Take the example variant of a Turing machine where you can stay still, in addition to moving left or right. Can this simulate
+How do we show robustness? Take the example variant of a Turing machine where you can stay still, in addition to moving left or right. Can this recognize more languages, and thus increase the power of the model? For this one at least, the answer is obviously no - you can simulate the new "stay still" feature in the regular Turing machine by just moving back and forth.
+This example contains the key to showing the equivalence of these variants. To show two models are equivalent, we show that one can simulate the other.
+## Multitape Turing Machines
