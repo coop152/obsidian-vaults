@@ -1,0 +1,2 @@
+Turing machines are as previously taught; machines with an infinite spool of tape representing memory. It can move around on the tape and read and write symbols to it. They are controlled by state machines, where the next action is decided by the current state and the symbol written on the tape below the read head. A turing machine either outputs *accept*, *reject*, or does not halt.
+![](Pasted%20image%2020231016132215.png)

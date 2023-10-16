@@ -7,4 +7,4 @@
 - [Union-Find](Union-Find.md)
 - [[String Operations]]
 - [[Network Flow]]
-- 
+- [[Turing Machines]]
