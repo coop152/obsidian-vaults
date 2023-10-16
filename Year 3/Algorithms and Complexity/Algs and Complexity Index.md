@@ -8,4 +8,3 @@
 - [[String Operations]]
 - [[Network Flow]]
 - 
-## List of Algorithms
