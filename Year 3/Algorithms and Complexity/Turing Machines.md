@@ -47,4 +47,7 @@ There are some variants of Turing machines, such as multitape machines or nondet
 How do we show robustness? Take the example variant of a Turing machine where you can stay still, in addition to moving left or right. Can this recognize more languages, and thus increase the power of the model? For this one at least, the answer is obviously no - you can simulate the new "stay still" feature in the regular Turing machine by just moving back and forth.
 This example contains the key to showing the equivalence of these variants. To show two models are equivalent, we show that one can simulate the other.
 ## Multitape Turing Machines
-This variant is like an ordinary Turing machine, but with several tapes that each have their own head for reading and writing. The input appears initially on tape 1, with the others blank. The transition function is changed to give the required actions for every tape simultaneously
+This variant is like an ordinary Turing machine, but with several tapes that each have their own head for reading and writing. The input appears initially on tape 1, with the others blank. The transition function is changed to give the required actions for every tape simultaneously. Formally, it is
+![](Pasted%20image%2020231016144348.png)
+where $k$ is the number of tapes. In other words, the function now takes the current state and the current tape symbol from **every roll of tape**, and returns the next state plus a symbol to draw and a move to take for **every roll of tape**. Here is an example expression:
+![](Pasted%20image%2020231016144504.png)
