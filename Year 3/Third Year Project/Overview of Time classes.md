@@ -40,3 +40,6 @@ int main() {
 }
 ```
 1900y is just an arbitrary year, to get the same number as Offset. The range could be much greater than the original program (you know, if the year 2400 wasn't enough future proofing for you.)
+
+# Date
+Real monster of a class. Hypothesis: 
