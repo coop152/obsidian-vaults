@@ -41,3 +41,6 @@ Here is an example of a turing machine, given formally:
 ![](Pasted%20image%2020231016141114.png)
 ![](Pasted%20image%2020231016141130.png)
 ![](Pasted%20image%2020231016141141.png)
+![](Pasted%20image%2020231016141645.png)
+# Variants of Turing Machines
+There are some variants of Turing machines, such as multitape machines or nondeterministic machines. All of these variants have the same power as a regular Turing machine, which will be shown shortly. This property of Turing machines, that they maintain the same power in the face of certain changes in definition, is called **robustness**
