@@ -29,4 +29,4 @@ Presents this interface:
 - `static int Size(int year)`: returns the number of days in a year. Just check if the year is a leap year and use 366 instead of 365. Doesn't actually have a direct equivalent in chrono cause its so trivial.
 - `static First()` and `static Last()` are just `chrono::year::min` and `chrono::year::max`.
 - `static long Offset(int year)`: Gives the number of days between the first year and the current one. This is only used to construct the `Date` object, as far as I can tell.
-- There's a bunch of stuff about centuries for some reason?
+- There's a bunch of stuff about centuries to handle century leap years.
