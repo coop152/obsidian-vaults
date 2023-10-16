@@ -51,3 +51,11 @@ This variant is like an ordinary Turing machine, but with several tapes that eac
 ![](Pasted%20image%2020231016144348.png)
 where $k$ is the number of tapes. In other words, the function now takes the current state and the current tape symbol from **every roll of tape**, and returns the next state plus a symbol to draw and a move to take for **every roll of tape**. Here is an example expression:
 ![](Pasted%20image%2020231016144504.png)
+Meaning: If the machine is in state $q_i$, and every head 1 to $k$ is reading symbol $a_1$ to $a_k$, change to state $q_j$, and each head writes the corresponding symbol and then does the corresponding movement.
+This might seem more powerful than an ordinary Turing machine, but we can show they are equivalent.
+### Equivalence Proof
+We will show how to simulate a multitape machine $M$ with an ordinary machine $S$.
+Say that $M$ has $k$ tapes. $S$ will simulate the effect of $k$ tapes by storing the information of every tape on its one tape.
+We use the symbol \# (which we are assuming is not in the tape language) as a delimiter that separates the contents of the different logical tapes on our single real tape. We must also keep track of the locations of each head; we do this by adding a dot above one of the symbols on each logical tape, which we think of as a kind of virtual head. The dots are not a new feature, they are just new symbols that correspond to the non-dotted symbols.
+Here is an illustration:
+![](Pasted%20image%2020231016150856.png)
