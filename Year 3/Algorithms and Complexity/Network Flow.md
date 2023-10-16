@@ -171,7 +171,7 @@ Therefore, the set $M$ is indeed a matching.
 # Gale-Shapley Algorithm
 Like the first example for the previous procedure, but instead of each man and woman just getting paired with anyone they give a ranking of their most to least desired partner. This algorithm pairs people up such that there is no pair of unmatched man and woman who would prefer to be matched than to stay with their current partners.
 ![](Pasted%20image%2020231016163647.png)
-This algorithm could be described as featuring many very desperate men.
+This algorithm could be described as featuring many desperate men.
 # Baseball Elimination
 Let $T$ be a set of teams in a baseball league. At any given point in the season, each team $i$ in $T$ will have some number of wins ($w_i$) and some number of games left to play ($g_i$). The **baseball elimination problem** is to determine if it is even possible for a team $i$ to finish the season given the games it has already won and the games it has left to play. This depends on more than just $w_i$ and $g_i$; it also depends on the schedules of every team involved.
 Let $g_{i,j}$ represent the number of games remaining between team $i$ and team $j$, such that
