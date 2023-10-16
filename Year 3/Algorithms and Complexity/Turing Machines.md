@@ -59,3 +59,17 @@ Say that $M$ has $k$ tapes. $S$ will simulate the effect of $k$ tapes by storing
 We use the symbol \# (which we are assuming is not in the tape language) as a delimiter that separates the contents of the different logical tapes on our single real tape. We must also keep track of the locations of each head; we do this by adding a dot above one of the symbols on each logical tape, which we think of as a kind of virtual head. The dots are not a new feature, they are just new symbols that correspond to the non-dotted symbols.
 Here is an illustration:
 ![](Pasted%20image%2020231016150856.png)
+To maintain this structure during computation:
+1. At the start of computation, $S$ puts it's tape into the format ![](Pasted%20image%2020231016151242.png). That is, the input on the first logical tape, an empty logical tape for each in $M$, and the first item of each logical tape marked, with a \# separating the tapes.
+2. To simulate a single move, the head scans from the first \# to the final one in order to determine the symbols under the virtual heads. It then makes a second pass to update the tapes according to $M$'s transition function.
+3. If $M$'s transition function dictates that a virtual head must move to the right, and $S$ encounters a \#, then the virtual head has moved onto what would be a blank space in $M$. $S$ writes a blank symbol onto this cell and then shifts the contents of the tape to the right. It then continues the simulation where it left off.
+
+## Nondeterministic Turing Machines
+A Turing machine, but at any point in a computation the machine may proceed in several directions. The transition function for this variant has the form
+![](Pasted%20image%2020231016152016.png)
+That is, the same as a regular transition function but for each state and symbol there can be many resulting actions to take.
+The computation of this nondeterministic Turing machine is a tree whose branches correspond to the different possible actions that the machine could have taken. If any of the branches leads to the accept state, the machine accepts the input. This variant also does not affect the power of the model.
+
+### Equivalence Proof
+The idea for having an ordinary Turing machine $D$ simulate this nondeterministic variant $N$ is to have $D$ try all possible branches of $N$'s computation. If $D$ ever finds the accept state, then it accepts. Otherwise, $D$ will not terminate.
+Represent $N$'s computation for some input $w$ as a tree, with each tree branch representing a branch of the nondeterminism. The nodes of the tree represent a configuration of $N$, and the root is the start configuration.
