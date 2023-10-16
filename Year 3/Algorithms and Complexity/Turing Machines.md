@@ -72,4 +72,14 @@ The computation of this nondeterministic Turing machine is a tree whose branches
 
 ### Equivalence Proof
 The idea for having an ordinary Turing machine $D$ simulate this nondeterministic variant $N$ is to have $D$ try all possible branches of $N$'s computation. If $D$ ever finds the accept state, then it accepts. Otherwise, $D$ will not terminate.
-Represent $N$'s computation for some input $w$ as a tree, with each tree branch representing a branch of the nondeterminism. The nodes of the tree represent a configuration of $N$, and the root is the start configuration.
+Represent $N$'s computation for some input $w$ as a tree, with each tree branch representing a branch of the nondeterminism. The nodes of the tree represent a configuration of $N$, and the root is the start configuration. We want $D$ to search this tree for an accepting configuration.
+A bad idea would be a depth-first search; there is a possibility that a single infinite branch is explored and $D$ never halts, even though another branch held an accepting configuration. Hence, we use a breadth-first search, which guarantees $D$ will visit every node in the tree until it encounters an accepting configuration.
+
+In order to do the proof, we will actually use a multitape Turing machine as $D$ - as per the previous proof, this is equivalent to an ordinary one.
+![](Pasted%20image%2020231016153157.png)
+The input tape represents the input to $N$ which is never altered, the simulation tape contains $N$'s tape along the current branch of computation, and the address tape keeps track of the current location in $N$'s computation tree.
+(Would take too long to copy this perfectly good explanation, so here's a screenshot:)
+![](Pasted%20image%2020231016153413.png)
+We can modify this proof so that if $N$ always halts on every branch of computation, then $D$ will also always halt. If this is true then $N$ is a decider.
+This leads to this assertion:
+![](Pasted%20image%2020231016153622.png)
