@@ -30,3 +30,13 @@ Presents this interface:
 - `static First()` and `static Last()` are just `chrono::year::min` and `chrono::year::max`.
 - `static long Offset(int year)`: Gives the number of days between the first year and the current one. This is only used to construct the `Date` object, as far as I can tell.
 - There's a bunch of stuff about centuries to handle century leap years.
+
+Chrono example that gives the same results as `Offset`:
+```cpp
+int main() {
+    const days d_dur = duration_cast<days>(year(2020) - 1900y);
+    std::cout << d_dur.count() << "\n";
+    std::cout << Offset(2020);
+}
+```
+1900y is just an arbitrary year, to get the same number as Offset. The range could be much greater than the original program (you know, if the year 2400 wasn't enough future proofing for you.)
