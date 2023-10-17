@@ -101,3 +101,20 @@ Informally speaking, an algorithm is a collection of instructions to carry out s
 Hilbert's 10th problem is a problem regarding polynomials: the objective is *to test if a polynomial has an integral root* (that is, a root with integral values for all variables).
 At the time he posed this problem, he simply assumed that a procedure for solving this problem must exist, but it is in fact **impossible** to create an algorithm that solves this problem. With the contemporary (1900s) understanding of algorithms it would have been impossible to arrive at this absolute conclusion that there is no algorithm. Indeed, proving that a problem does or does not have an algorithm that can solve it requires a clear definition of "an algorithm".
 This framework was provided in 1936, when Alonzo Church and Alan Turing released papers regarding their own representations of algorithms. Alonzo Church had represented them using his $\lambda$-calculus, while Turing had represented them using his "machines". These two definitions were shown to be equivalent, and the combination of the two led to the precise definition of algorithms known as the **Church-Turing thesis**.
+
+## The solution
+![](Pasted%20image%2020231017112904.png)
+
+# Describing Turing Machines
+We are now comfortable with the idea that Turing machines capture all algorithms. Now we standardize the way we describe Turing machine implementations of algorithms.
+Turing machines work on strings, but usually the input of an algorithm is not a string. For some object $O$, we give a string encoding $\langle O \rangle$ that can be given to a Turing machine. The Turing machine must decode this string representation in order to execute the algorithm. We are not concerned with which encoding is used.
+We format our descriptions similarly to previous examples, with the machine being equal to an English description of the algorithm in quotes. For example, here is the Turing machine that solves the "connected graph" problem
+![](Pasted%20image%2020231017113709.png)
+Here is a high level description of the Turing machine $M$ that decides $A$:
+![](Pasted%20image%2020231017113747.png)
+Notice that:
+- The input must be specified as either a string or a string encoding of an object. There is an implicit step at the beginning where the machine checks the validity of the input.
+- Indentations are used to indicate block structure of the algorithm.
+
+More specifically, what is a valid encoding of a graph into a string? Here is one such encoding:
+![](Pasted%20image%2020231017114047.png)
