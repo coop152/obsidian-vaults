@@ -83,3 +83,10 @@ The input tape represents the input to $N$ which is never altered, the simulatio
 We can modify this proof so that if $N$ always halts on every branch of computation, then $D$ will also always halt. If this is true then $N$ is a decider.
 This leads to this assertion:
 ![](Pasted%20image%2020231016153622.png)
+
+## Enumerators
+An enumerator is a Turing machine with an attached printer. At any point the Turing machine may send a string to this printer, which is added to the infinite page of outputs.
+![](Pasted%20image%2020231017110319.png)
+An enumerator $E$ starts with a blank work tape. If the enumerator doesn't halt then it may print an infinite list of strings, but if it does halt then collection of strings it prints out is the **language enumerated by $E$**. $E$ can generate these strings in any order, and potentially with repetitions.
+This leads to this theorem:
+![](Pasted%20image%2020231017110700.png)
