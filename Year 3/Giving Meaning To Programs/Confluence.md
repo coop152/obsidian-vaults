@@ -27,3 +27,21 @@ A projection function simply returns an argument. For example:
 $$\lambda x.\lambda y.\lambda z.x$$
 Just returns the first argument and ignores the other 2.
 ### Returning multiple results
+Consider this term:
+$$\lambda q.qxyz$$
+This is comparable to a function $f(g) = g(x, y, z)$ where x, y, and z are free variables.
+Notably, if you pass in a lambda-term $g$ which is a projection, the result will be one of $x$, $y$ or $z$ by itself. In that sense, the term acts like a 3-tuple in which the individual values can be extracted by giving one of the three projection functions. Imagine representing the 3-tuple `(5, 10, 50)` in Python like this:
+```python
+# free variables
+x = 5
+y = 10
+z = 50
+# define tuple
+three_tuple = lambda g : g(x, y, z)
+# access first item: 5
+three_tuple(lambda p, s, r: p)
+# access second item: 10
+three_tuple(lambda p, s, r: s)
+# access third item: 50
+three_tuple(lambda p, s, r: r)
+```
