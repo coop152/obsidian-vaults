@@ -90,3 +90,6 @@ An enumerator is a Turing machine with an attached printer. At any point the Tur
 An enumerator $E$ starts with a blank work tape. If the enumerator doesn't halt then it may print an infinite list of strings, but if it does halt then collection of strings it prints out is the **language enumerated by $E$**. $E$ can generate these strings in any order, and potentially with repetitions.
 This leads to this theorem:
 ![](Pasted%20image%2020231017110700.png)
+
+# Equivalence with other models
+There are many other models of general purpose computation other than Turing machines, and some of them are quite different. However, they all share the essential feature of Turing machines in that they have unrestricted access to unlimited memory, which distinguishes them from weaker models such as finite automata. Remarkably, *all* models with this feature are equivalent in power so long as they satisfy some reasonable requirements.
