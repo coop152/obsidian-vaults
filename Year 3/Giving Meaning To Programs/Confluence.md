@@ -45,3 +45,26 @@ three_tuple(lambda p, s, r: s)
 # access third item: 50
 three_tuple(lambda p, s, r: r)
 ```
+### If-else
+You can think of the previous example in a different way - if the free variables were functions instead of values, then applying the projection serves as a way to choose a branch of computation. Take this simple example that provides something akin to an if-else:
+$$\lambda g. gxy$$
+Where $x$ and $y$ are complex terms encoding subsequent behaviour. Depending on the projection $g$, either $x$ or $y$ may be left. Using the python analogy:
+```python
+# subterms
+x = lambda x1 : 2 + x1
+y = lambda y1 : 2 * y1
+# define if-else thing
+if_else = lambda g : g(x, y)
+# first branch taken: recieve the function x
+if_else(lambda p, s: p)
+# second branch taken: recieve the function y
+if_else(lambda p, s: s)
+```
+### Iteration
+Suppose we have two lambda-terms $s$ and $z$, and we want to apply $s$ to $z$ 5 times. We could write this:
+$$s(s(s(s(sz))))$$
+Maybe we make this into an "iterate five times" function:
+$$\lambda z. \lambda s.s(s(s(s(sz))))$$
+This applies the given term $s$ to the given term $z$ 5 times. We might call this an "iterator". We could write a term that takes such an iterator as an argument, and applies some term to another a number of times according to that iterator:
+$$\lambda n.(nt)f$$
+This will apply the function $f$ to $t$ the number of times indicated by the iterator $n$.
