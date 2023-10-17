@@ -118,3 +118,4 @@ Notice that:
 
 More specifically, what is a valid encoding of a graph into a string? Here is one such encoding:
 ![](Pasted%20image%2020231017114047.png)
+The encoding begins with a bracketed list of every node in the graph, then a list of every edge as pairs of endpoints.
