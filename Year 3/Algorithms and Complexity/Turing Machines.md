@@ -167,3 +167,6 @@ Conclusion:
 We can now prove that $A_\text{TM}$ is undecidable.
 ![](Pasted%20image%2020231017123214.png)
 (Yeah just read the notes ive got nothing to contribute)
+
+# Turing-Unrecognizability
+We have exhibited a language $A_\text{TM}$ that is undecidable, and now we exhibit one that is not even Turing-recognizable.
