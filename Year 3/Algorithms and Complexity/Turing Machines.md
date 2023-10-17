@@ -119,3 +119,27 @@ Notice that:
 More specifically, what is a valid encoding of a graph into a string? Here is one such encoding:
 ![](Pasted%20image%2020231017114047.png)
 The encoding begins with a bracketed list of every node in the graph, then a list of every edge as pairs of endpoints.
+Generally you will not have to describe the low-level implementation of an algorithm with regards to how the Turing machine specifically executes it.
+
+# Decidability
+This section includes some examples of languages that are decidable by algorithms, with a focus on languages concerning automata and grammars.
+
+## Acceptance problem for DFAs
+This problem concerns testing whether a particular DFA accepts a given string, and can be expressed as the language $A_\text{DFA}$, which contains every pair of possible DFA and accepted input:
+![](Pasted%20image%2020231017115122.png)
+Answering the acceptance problem for some DFA $B$ and input $w$ is the same as testing if $\langle B,w \rangle$ is a member of the language $A_\text{DFA}$.
+In the following theorem we show that this language is decidable, and hence the acceptance problem for DFAs is decidable.
+![](Pasted%20image%2020231017115454.png)
+You can say the same about the acceptance problem for NFAs, but including a new first step where the given NFA is converted to a DFA.
+The same approach suggests that the problem of determining if a regular expression generates a given string is decidable; Simply convert the regular expression to an NFA, then convert that to a DFA, then run the same procedure on that. You can use the description of the previous machine in the description of the next, if you like (i.e. machine $P$ decides the regex problem by converting the given regex to an NFA, then giving it to machine $N$ to solve, which converts the given NFA to a DFA and gives it to machine $D$ to solve).
+
+## Emptiness testing for DFA
+In this problem, we must determine if a DFA accepts any strings at all. Let the language be
+![](Pasted%20image%2020231017120109.png)
+i.e. the set of all DFAs with a non-empty language.
+![](Pasted%20image%2020231017120238.png)
+
+## Equivalence for DFA
+In this problem, we must determine if two DFAs recognize the same language. Let
+![](Pasted%20image%2020231017120354.png)
+i.e. The set of all pairs of DFAs with equal languages.
