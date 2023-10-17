@@ -23,4 +23,7 @@ Our curried "function" behaves as expected.
 
 ## Non-trivial behaviour
 ### Projections
-A projection function simply returns an argument.
+A projection function simply returns an argument. For example:
+$$\lambda x.\lambda y.\lambda z.x$$
+Just returns the first argument and ignores the other 2.
+### Returning multiple results
