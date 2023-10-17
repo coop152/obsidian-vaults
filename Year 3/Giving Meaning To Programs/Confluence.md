@@ -71,4 +71,6 @@ This will apply the function $f$ to $t$ the number of times indicated by the ite
 #### Successor
 We want a term that, given an iterator, returns an iterator that is one iteration longer. For example, take the iterator $\lambda z. \lambda s. s(sz)$ and make it $\lambda z. \lambda s. s(s(sz))$.
 In order to accomplish this, we might try to replace $z$ with $sz$, but this requires some tricks to actually be alpha-equivalent and to not fall apart when performing capture-avoiding substitution. If we take the original iterator and replace the original $s$ and $z$ with new ones, we can safely do this:
-$$\lambda n.(\lambda z)$$
+$$\lambda n.(\lambda z. \lambda s.n(sz)s)$$
+
+Lets use this to perform a more complicated operation. Namely, let's write a term that takes an iterator and returns the iterator with double the number of iterations. 
