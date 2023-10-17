@@ -143,3 +143,20 @@ i.e. the set of all DFAs with a non-empty language.
 In this problem, we must determine if two DFAs recognize the same language. Let
 ![](Pasted%20image%2020231017120354.png)
 i.e. The set of all pairs of DFAs with equal languages.
+![](Pasted%20image%2020231017120636.png)
+
+## Etc
+This section goes on for ages and doesn't really seem to do much but give examples.
+BASICALLY, you can make a Turing machine that decides regular and context-free languages. Therefore, the hierarchy of languages looks like this:
+![](Pasted%20image%2020231017120850.png)
+
+# Undecidability
+Undecidability is a property of a problem in that it is algorithmically unsolvable. This is much more important of a property to be able to determine that Decidability, as it shows the inherent limitation of computation.
+There are some important unsolvable problems outside the realm of mathematical theory. Consider the problem of "software verification" - that is, given a program and a precise specification of what it should do, verify that the program is correct. You may hope that because the program and the specification can be expressed as mathematically precise objects, you could automate this process, but the problem is completely undecidable.
+Here is an introductory example:
+We want to determine if a Turing machine accepts a given input string. Let
+![](Pasted%20image%2020231017121548.png)
+This may look similar to the acceptance problems for DFAs and CFGs, but it is **not decidable**.
+![](Pasted%20image%2020231017121639.png)
+![](Pasted%20image%2020231017121831.png)
+![](Pasted%20image%2020231017121839.png)
