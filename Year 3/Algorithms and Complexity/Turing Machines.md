@@ -93,3 +93,11 @@ This leads to this theorem:
 
 # Equivalence with other models
 There are many other models of general purpose computation other than Turing machines, and some of them are quite different. However, they all share the essential feature of Turing machines in that they have unrestricted access to unlimited memory, which distinguishes them from weaker models such as finite automata. Remarkably, *all* models with this feature are equivalent in power so long as they satisfy some reasonable requirements.
+
+# The definition of "Algorithm"
+Informally speaking, an algorithm is a collection of instructions to carry out some task. While this intuitive description was acceptable for a time, it became insufficient when mathematicians aimed to gain a deeper understanding of algorithms. Therefore, a more rigorous definition is needed.
+
+## Hilbert's 10th Problem
+Hilbert's 10th problem is a problem regarding polynomials: the objective is *to test if a polynomial has an integral root* (that is, a root with integral values for all variables).
+At the time he posed this problem, he simply assumed that a procedure for solving this problem must exist, but it is in fact **impossible** to create an algorithm that solves this problem. With the contemporary (1900s) understanding of algorithms it would have been impossible to arrive at this absolute conclusion that there is no algorithm. Indeed, proving that a problem does or does not have an algorithm that can solve it requires a clear definition of "an algorithm".
+This framework was provided in 1936, when Alonzo Church and Alan Turing released papers regarding their own representations of algorithms. Alonzo Church had represented them using his $\lambda$-calculus, while Turing had represented them using his "machines". These two definitions were shown to be equivalent, and the combination of the two led to the precise definition of algorithms known as the **Church-Turing thesis**.
