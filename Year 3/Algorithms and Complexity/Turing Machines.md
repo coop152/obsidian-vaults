@@ -165,3 +165,5 @@ This may look similar to the acceptance problems for DFAs and CFGs, but it is **
 Conclusion:
 ![](Pasted%20image%2020231017122730.png)
 We can now prove that $A_\text{TM}$ is undecidable.
+![](Pasted%20image%2020231017123214.png)
+(Yeah just read the notes ive got nothing to contribute)
