@@ -68,3 +68,7 @@ $$\lambda z. \lambda s.s(s(s(s(sz))))$$
 This applies the given term $s$ to the given term $z$ 5 times. We might call this an "iterator". We could write a term that takes such an iterator as an argument, and applies some term to another a number of times according to that iterator:
 $$\lambda n.(nt)f$$
 This will apply the function $f$ to $t$ the number of times indicated by the iterator $n$.
+#### Successor
+We want a term that, given an iterator, returns an iterator that is one iteration longer. For example, take the iterator $\lambda z. \lambda s. s(sz)$ and make it $\lambda z. \lambda s. s(s(sz))$.
+In order to accomplish this, we might try to replace $z$ with $sz$, but this requires some tricks to actually be alpha-equivalent and to not fall apart when performing capture-avoiding substitution. If we take the original iterator and replace the original $s$ and $z$ with new ones, we can safely do this:
+$$\lambda n.(\lambda z)$$
