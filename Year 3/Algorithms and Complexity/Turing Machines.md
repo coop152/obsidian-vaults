@@ -170,3 +170,4 @@ We can now prove that $A_\text{TM}$ is undecidable.
 
 # Turing-Unrecognizability
 We have exhibited a language $A_\text{TM}$ that is undecidable, and now we exhibit one that is not even Turing-recognizable.
+First, we show that a language is decidable *if and only if* it is Turing-recognizable and it's complement is Turing-recognizable (called co-Turing-recognizability).
