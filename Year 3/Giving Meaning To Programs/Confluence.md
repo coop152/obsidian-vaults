@@ -26,3 +26,24 @@ Consider this example:
 ![](Pasted%20image%2020231018113833.png)
 In this case it is clear that with just one more beta-reduction we could make either of those options into $(fu)u$, so this isn't cause for alarm.
 ![](Pasted%20image%2020231018114228.png)
+This example shows that we might be forced to do any number of beta-reductions before we can get the same result from two diverging branches. The best we can hope for is that beta-reduction satisfies the following (weaker) property, which will still be good enough for our purposes.
+![](Pasted%20image%2020231018114740.png)
+Note that this new property "confluence" is essentially the diamond property but on the reflexive transitive closure of $R$. In other words, it's like the diamond property but it accepts cases where the branches "eventually" meet again, instead of only cases where they meet again immediately. In terms of beta-reduction, we can picture it the same as the diamond property but using beta-reduction in multiple steps:
+![](Pasted%20image%2020231018115057.png)
+In reality, the situation is slightly more complicated; We only achieve what you might call "confluence up to alpha-equivalence" for beta-reduction. 
+![](Pasted%20image%2020231018115258.png)
+So, we can show confluence but only to the point that the final terms achieved are alpha equivalent.
+# Parallel Reduct
+How would we prove confluence (or rather, this specific version of it)? We start by thinking about our counter-example to the diamond property: In that example, the reason beta-reduction could not bring the derivations together is because one of our branches copied a term that could have been reduced while another reduced it before copying. After this first step, the first version can't "catch up" with the other because it can only reduce one of the copies in a single step.
+You might conjecture that this is "the only thing that can go wrong". To solve this, you might define a new relation which acts as a "parallel reduction", which can reduce as many redexes in a single step as it wants. This leads to very complicated proofs, however, so instead we define the parallel reduct **operation**:
+![](Pasted%20image%2020231018120127.png)
+Think of the diamond as an operator or a function that takes a lambda-term as input and produces another lambda-term. It behaves similarly to carrying out a number of beta-reduction steps at once.
+The rules in plain English are:
+- bcVar: The parallel reduct of a variable is itself.
+- scAbs: The parallel reduct ignores the bound variable of an abstraction and goes into the right subterm.
+- scApp1: If the term is a redex, then perform the beta-reduction step case of removing the bound variable and substituting the right subterm in for the bound variable. Also, apply the operator to both subterms involved.
+- scApp2: If the term isn't a redex, apply parallel reduct to both of the subterms.
+
+You can write $\Diamond^n t$ to mean the result of applying the parallel reduct operation $n$ times on the term $t$.
+Here is an example application of the operation:
+![](Pasted%20image%2020231018120749.png)
