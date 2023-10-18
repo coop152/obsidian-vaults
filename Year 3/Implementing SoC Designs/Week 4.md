@@ -11,3 +11,5 @@ When picking an implementation, we want to consider it's qualities in this top-d
 	- Pad limitations
 	- etc.
 
+Algorithms refers to the actual algorithm used; if you can use a Fast Fourier Transform (for example) instead of a Discrete Fourier Transform then the difference in speed that makes will trump the difference of anything else.
+Architecture refers to the general design (e.g. how smaller parts connect and communicate, etc.)
