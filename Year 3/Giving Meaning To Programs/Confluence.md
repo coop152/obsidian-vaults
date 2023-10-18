@@ -73,4 +73,8 @@ We want a term that, given an iterator, returns an iterator that is one iteratio
 In order to accomplish this, we might try to replace $z$ with $sz$, but this requires some tricks to actually be alpha-equivalent and to not fall apart when performing capture-avoiding substitution. If we take the original iterator and replace the original $s$ and $z$ with new ones, we can safely do this:
 $$\lambda n.(\lambda z. \lambda s.n(sz)s)$$
 
-Lets use this to perform a more complicated operation. Namely, let's write a term that takes an iterator and returns the iterator with double the number of iterations. ***CONTINUE FROM HERE***
+Lets use this to perform a more complicated operation. Namely, let's write a term that takes an iterator and returns the iterator with double the number of iterations. We can do this by creating an iterator like the given one, but where the step case is applied twice per iteration. In other words, given a step case $s$ (which is a "function") we want the new step case $\lambda r.s(sr)$, a "function" that takes a value and applies $s$ to it twice. Now, we build a function that takes an iterator, with base and step case bound variables:
+$$\lambda n.(\lambda z.\lambda s.??)$$
+And we "replace" the new step case into the old iterator by applying the iterator to them:
+$$\lambda n.(\lambda z.\lambda s.z(\lambda r.s(sr)))$$
+And we have our desired function.
