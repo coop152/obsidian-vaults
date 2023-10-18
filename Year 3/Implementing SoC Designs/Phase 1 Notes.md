@@ -1,5 +1,5 @@
 # Unit 1
-- Lines is a pixel too long at the end. That is, if the line is vertical then it goes one pixel too far in Y, if the line is horizontal then it goes one pixel too far in X, and if it's 45 degrees then it goes one pixel too far in both
+- Lines are a pixel too long in the Y direction at the end. For example, drawing a single pixel will result in a 2 pixel tall line, and drawing a horizontal line will result in an extra stray pixel at the end with y coordinate +1 from the rest of the line.
 
 # Unit 2
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
