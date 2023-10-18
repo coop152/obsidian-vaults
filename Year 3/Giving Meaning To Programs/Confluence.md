@@ -50,3 +50,9 @@ Here is an example application of the operation:
 
 We must now prove that parallel reduct is both relevant to beta-reduction, and that it behaves nicely.
 Before comparing parallel reduct to beta-reduction, we need to make sure it interacts well with free variables and capture avoiding substitution.
+
+First we prove this proposition with a straightforward proof by induction:
+![](Pasted%20image%2020231018124420.png)
+This shows that it is well-behaved w.r.t. free variables.
+In order to show it is well-behaved w.r.t. alpha-equivalence, we first show this property about renaming:
+![](Pasted%20image%2020231018124706.png)
