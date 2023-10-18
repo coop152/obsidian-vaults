@@ -6,6 +6,7 @@
 
 # Unit 3
 - Something very wrong with the line drawing implementation. Draws lines with completely wrong lengths and angles, as well as going out of the bounds of the screen.
+- Calculates dx as x1 - y0 and dy as y1 - x0
 
 # Unit 4
 - Fully functional, though it's slower than the others.
