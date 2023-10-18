@@ -5,9 +5,7 @@
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
 
 # Unit 3
-- Disregards the start point and always draws from (0,0).
-- OR
-- The line starts with one coordinate growing in the wrong direction, 
+- Something very wrong with the line drawing implementation. Draws lines with completely wrong lengths and angles, as well as going out of the bounds of the screen.
 
 # Unit 4
 - Fully functional, though it's slower than the others.
