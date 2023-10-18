@@ -58,3 +58,30 @@ Pipelines are generally a Good Thing, because they:
 **Interleaving** can allow individual units more time for individual operations by interleaving requests between multiple units. An example is memory - a single memory access takes some indivisible amount of time, but if the same amount of memory is split into two units then each unit can make up the slack of the other and deliver data twice as fast.
 ![](Pasted%20image%2020231018094001.png)
 The circuit on the right provides a counter by way of having two parallel units that generate the odd numbers and even numbers, then interleaving the results.
+
+# RTL Parallelism
+Here is an implementation of Bresenham's:
+```c
+while (c > 0)  
+  {  
+  x = x + 1;  
+  e = e + 2*dy;  
+  if (e > 0)  
+    {  
+    y = y + 1;  
+    e = e - 2*dx;  
+    }  
+  c--;  
+  plot(x, y, col);  
+  }
+```
+Here it is split into chunks of possibly parallelised parts:
+```c
+while (c > 0)  
+  {  
+  x = x + 1; e = e + 2*dy; c--;  
+  if (e > 0)  
+    { y = y + 1; e = e - 2*dx; }  
+  plot(x, y, col);  
+  }
+```
