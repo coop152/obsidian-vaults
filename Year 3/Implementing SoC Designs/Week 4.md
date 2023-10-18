@@ -41,3 +41,20 @@ You can achieve parallelism by:
 - Pre-evaluating some logic in earlier stages, if possible (at the consequence of maybe making the structure messier)
 - Finding more parallel logic expressions (For example, an adder's carries can be evaluated in parallel)
 
+# Pipelining
+![](Pasted%20image%2020231018093342.png)
+Pipelines are generally a Good Thing, because they:
+- Allow an increase in clock speed
+	- And therefore an increase in throughput (assuming there are not many dependencies)
+	- But an increase in latency
+- Have small area overhead
+- May (or may not) save power
+	- clock loading is increased, but logic switching may be reduced (by preventing glitch propagation)
+- Can simplify the design process, assuming the design is decomposed into sensible blocks
+
+# Data Parallelism
+**SIMD** architectures can process many smaller data elements simultaneously, which increases speed for operations on smaller data:
+![](Pasted%20image%2020231018093812.png)
+**Interleaving** can allow individual units more time for individual operations by interleaving requests between multiple units. An example is memory - a single memory access takes some indivisible amount of time, but if the same amount of memory is split into two units then each unit can make up the slack of the other and deliver data twice as fast.
+![](Pasted%20image%2020231018094001.png)
+The circuit on the right provides a counter by way of having two parallel units that generate the odd numbers and even numbers, then interleaving the results.
