@@ -6,6 +6,8 @@
 
 # Unit 3
 - Disregards the start point and always draws from (0,0).
+- OR
+- The variable 
 
 # Unit 4
 - Fully functional, though it's slower than the others.
