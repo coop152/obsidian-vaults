@@ -23,4 +23,21 @@ When converting this implementation to an actual concrete design, the design we 
 Optimising for most of these requires skill and good judgement.
 In the case of Speed, RTL simulations do give immediate feedback on cycle counts. 
 
-# Code style
+# Stay Synchronous
+There are good reasons to keep to a synchronous style when constructing a design:
+- It simplifies the design by guaranteeing that time is the same everywhere. Given a state and some inputs, the next state can be determined unambiguously, and any glitches during switching are irrelevant.
+- Toolchains are optimised for synchronous circuits
+- Implementation technology is designed with synchronous circuits in mind (e.g. D-type flip-flops)
+
+# Think Parallel
+Hardware programming, unlike (most) software programming is implicitly parallel. Increasing the parallelism in a design typically:
+- Increases speed
+- Increases required resources
+- Can *decrease* complexity
+- May decrease power
+
+You can achieve parallelism by:
+- Subdividing the logic using pipelining (just make sure the stages are reasonably balanced)
+- Pre-evaluating some logic in earlier stages, if possible (at the consequence of maybe making the structure messier)
+- Finding more parallel logic expressions (For example, an adder's carries can be evaluated in parallel)
+
