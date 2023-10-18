@@ -47,3 +47,6 @@ The rules in plain English are:
 You can write $\Diamond^n t$ to mean the result of applying the parallel reduct operation $n$ times on the term $t$.
 Here is an example application of the operation:
 ![](Pasted%20image%2020231018120749.png)
+
+We must now prove that parallel reduct is both relevant to beta-reduction, and that it behaves nicely.
+Before comparing parallel reduct to beta-reduction, we need to make sure it interacts well with free variables and capture avoiding substitution.
