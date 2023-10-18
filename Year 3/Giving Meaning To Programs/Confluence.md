@@ -56,3 +56,4 @@ First we prove this proposition with a straightforward proof by induction:
 This shows that it is well-behaved w.r.t. free variables.
 In order to show it is well-behaved w.r.t. alpha-equivalence, we first show this property about renaming:
 ![](Pasted%20image%2020231018124706.png)
+From here we can prove this:
