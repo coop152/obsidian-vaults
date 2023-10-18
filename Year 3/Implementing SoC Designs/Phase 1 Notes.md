@@ -5,8 +5,8 @@
 - `ack` is staying high for the same amount of time that `busy` does - it should be a single clock pulse.
 
 # Unit 3
-- Something very wrong with the line drawing implementation. Draws lines with completely wrong lengths and angles, as well as going out of the bounds of the screen.
-- Calculates dx as x1 - y0 and dy as y1 - x0
+- Is calculating dx as x1 - y0 and dy as y1 - x0
+- Calculates dx as x1 - y0 instead of x1 - x0, and calculates dy as y1 - x0 instead of y1 - y0 in Bresenham's. This causes the unit to draw lines that start at the correct point but are the wrong length and angle, and sometimes go out of bounds.
 
 # Unit 4
 - Fully functional, though it's slower than the others.
