@@ -70,9 +70,21 @@ We can extend this to iterations of the parallel reduct (i.e. multiple applicati
 In other words, any number of parallel reducts on a term will still result in a term you could have gotten with beta-reduction (up to alpha-equivalence). The second part asserts that this is true also for intermediate parallel reducts.
 
 Next we show that parallel reduct is *monotone* with respect to beta-reduction (in multiple steps).
-For redexes:
 ![](Pasted%20image%2020231019112227.png)
-I.e. 
+(not sure what this is for)
 
-For 
 ![](Pasted%20image%2020231019113108.png)
+I.e. For a term $t$ and one of its beta-reductions $t'$, the parallel reduct of $t$ can be beta reduced to the parallel reduct of $t'$ (up to alpha equivalence).
+![](Pasted%20image%2020231019113613.png)
+...also true for multiple beta-reductions.
+![](Pasted%20image%2020231019113646.png)
+...also true for multiple parallel reducts.
+
+Finally, we show that any sequence of beta-reductions can always be extended such that it ends at the parallel reduct of the starting term, as indicated by this diagram:
+![](Pasted%20image%2020231019114007.png)
+![](Pasted%20image%2020231019114031.png)
+(i give up on this proof for now, but theres some more steps that culminate in showing that beta-reduction is confluent up to alpha-equivalence.)
+Final result: We can be confident that if a lambda-term has been reduced to the point of being reducible no more, we have a unique final answer.
+![](Pasted%20image%2020231019114308.png)
+
+# The behaviour of $\lambda$-terms
