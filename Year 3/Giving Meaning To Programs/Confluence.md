@@ -73,3 +73,6 @@ Next we show that parallel reduct is *monotone* with respect to beta-reduction (
 For redexes:
 ![](Pasted%20image%2020231019112227.png)
 I.e. 
+
+For 
+![](Pasted%20image%2020231019113108.png)
