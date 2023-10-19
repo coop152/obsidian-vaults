@@ -88,3 +88,5 @@ Final result: We can be confident that if a lambda-term has been reduced to the 
 ![](Pasted%20image%2020231019114308.png)
 
 # The behaviour of $\lambda$-terms
+Knowing that every computation in our system can have at most one answer is important. Beyond that, as a programmer, a property we are particularly interested in is whether two programs behave in the same way - knowing this allows us to do things like substitute one program for another.
+At this stage, we know that two alpha-equivalent terms have identical behaviour. We also know that if two terms beta-reduce to a common term, then they must have the same behaviour. By proving confluence we have also shown that 
