@@ -89,4 +89,9 @@ Final result: We can be confident that if a lambda-term has been reduced to the 
 
 # The behaviour of $\lambda$-terms
 Knowing that every computation in our system can have at most one answer is important. Beyond that, as a programmer, a property we are particularly interested in is whether two programs behave in the same way - knowing this allows us to do things like substitute one program for another.
-At this stage, we know that two alpha-equivalent terms have identical behaviour. We also know that if two terms beta-reduce to a common term, then they must have the same behaviour. By proving confluence we have also shown that 
+At this stage, we know that two alpha-equivalent terms have identical behaviour. We also know, thanks to our proof of confluence, that if two terms beta-reduce to a common term, then they must have the same behaviour. 
+We name these two combined equivalences in behaviour $\alpha\beta$-equivalence:
+![](Pasted%20image%2020231019115536.png)
+You can picture this relation like so:
+![](Pasted%20image%2020231019115737.png)
+Note that this image is misleading; $t$ 
