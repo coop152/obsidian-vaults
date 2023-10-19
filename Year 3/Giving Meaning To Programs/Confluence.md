@@ -69,5 +69,7 @@ We can extend this to iterations of the parallel reduct (i.e. multiple applicati
 ![](Pasted%20image%2020231019111817.png)
 In other words, any number of parallel reducts on a term will still result in a term you could have gotten with beta-reduction (up to alpha-equivalence). The second part asserts that this is true also for intermediate parallel reducts.
 
-Next we show that parallel reduct is *monotone* with respect to beta-reduction (in multiple steps):
+Next we show that parallel reduct is *monotone* with respect to beta-reduction (in multiple steps).
+For redexes:
 ![](Pasted%20image%2020231019112227.png)
+I.e. 
