@@ -94,4 +94,11 @@ We name these two combined equivalences in behaviour $\alpha\beta$-equivalence:
 ![](Pasted%20image%2020231019115536.png)
 You can picture this relation like so:
 ![](Pasted%20image%2020231019115737.png)
-Note that this image is misleading; $t$ 
+Note that this image is misleading; $t$ is also alpha-beta-equivalent with $u'$, $t'$ (and even itself?). 
+![](Pasted%20image%2020231019120342.png)
+Let's show that when we replace a subterm with an alpha-beta-equivalent one we get an alpha-beta-equivalent term:
+![](Pasted%20image%2020231019120530.png)
+The resulting relation is the minimum possible relation that shows an equivalence in behaviour between two lambda terms. Any other relation that aims to relate terms which behave similarly will **at least** include alpha-beta-equivalence.
+That said, this is not very general; we also want to understand if swapping one term for another as part of a bigger term would cause different behaviours. For example:
+![](Pasted%20image%2020231019121126.png)
+This example shows that if two non-alpha-beta-equivalent terms are put in the right
