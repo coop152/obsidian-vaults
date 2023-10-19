@@ -56,4 +56,18 @@ First we prove this proposition with a straightforward proof by induction:
 This shows that it is well-behaved w.r.t. free variables.
 In order to show it is well-behaved w.r.t. alpha-equivalence, we first show this property about renaming:
 ![](Pasted%20image%2020231018124706.png)
-From here we can prove this:
+I.e. parallel reduct over renaming maintains alpha equivalence.
+From here we prove this:
+![](Pasted%20image%2020231019111000.png)
+I.e. parallel reduct maintains alpha-equivalence between terms.
+Next we want to show that parallel reduct is actually what we think it is; that is, for any term you can get the result of a parallel reduct by instead beta-reducing a number of times (that is, up to alpha-equivalence).
+![](Pasted%20image%2020231019111352.png)
+Combining these previous two results, we get this new result:
+![](Pasted%20image%2020231019111444.png)
+That is, for any two alpha-equivalent terms $t$ and $u$, the results of parallel reduct on these two terms are alpha equivalent.
+We can extend this to iterations of the parallel reduct (i.e. multiple applications):
+![](Pasted%20image%2020231019111817.png)
+In other words, any number of parallel reducts on a term will still result in a term you could have gotten with beta-reduction (up to alpha-equivalence). The second part asserts that this is true also for intermediate parallel reducts.
+
+Next we show that parallel reduct is *monotone* with respect to beta-reduction (in multiple steps):
+![](Pasted%20image%2020231019112227.png)
