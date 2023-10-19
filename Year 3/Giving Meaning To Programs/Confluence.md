@@ -122,4 +122,4 @@ It is also possible to have a term that can be reduced to an irreducible term, b
 ![](Pasted%20image%2020231019122753.png)
 If we reduce the innermost redex first then we loop forever, but if we reduce the outermost redex then we immediately get an irreducible term.
 
-So unfortunately for Church, the lambda-calculus is not useful as a fundamental foundation for mathematics. The problem terms above give rise to unfixable paradoxes. 
+So unfortunately for Church, the lambda-calculus is not useful as a fundamental foundation for mathematics. The problem terms above give rise to unfixable paradoxes. In order to fix this limitation and allow us to model mathematical functions, we need to introduce a concept of types to our calculus in order to prevent this self-application problem.
