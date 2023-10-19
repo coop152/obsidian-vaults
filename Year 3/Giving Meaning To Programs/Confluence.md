@@ -101,4 +101,25 @@ Let's show that when we replace a subterm with an alpha-beta-equivalent one we g
 The resulting relation is the minimum possible relation that shows an equivalence in behaviour between two lambda terms. Any other relation that aims to relate terms which behave similarly will **at least** include alpha-beta-equivalence.
 That said, this is not very general; we also want to understand if swapping one term for another as part of a bigger term would cause different behaviours. For example:
 ![](Pasted%20image%2020231019121126.png)
-This example shows that if two non-alpha-beta-equivalent terms are put in the right
+This example shows that if two non-alpha-beta-equivalent terms are surrounded with the right things, they might still behave the same. Therefore, if we really want to reason about terms like functions, we need to go beyond alpha-beta-equivalence. This topic will be taken back up later.
+
+# Non-termination
+We are now assured that lambda-terms do work like functions in that they cannot have multiple fundamentally different answers.
+But what else might "go wrong"? Another problem is non-termination; does a calculation always yield some final answer, or are there terms that can be beta-reduced forever?
+Before answering this question, we must attend another problem. We have been encoding various kinds of data as lambda-terms, but this encoding is fragile in the sense that nothing stops us from taking a function written with the assumption of a specific kind of data and applying it to an arbitrary lambda-term. You might wonder what other bad things you haven't been prevented from doing.
+Consider the term $$\lambda x.xx.$$
+This is clearly a valid lambda-term, but what does this mean as a function? We are applying $x$ to itself, but this does not make sense in set theory. A function has a source and a target set, and a function cannot be an element of it's own source, so you can't possibly apply a function to itself. The lambda-calculus doesn't care about this; it is merely a syntactic rewriting system.
+So lambda-terms come with a strange operation that functions do not, in that they can be applied to themselves. So, what actually happens when we do this? Let's apply the self-application operator to itself, and see what happens:
+![](Pasted%20image%2020231019122254.png)
+![](Pasted%20image%2020231019122343.png)
+We've found a lambda-term that beta-reduces to itself. This means that if you naively beta-reduced this lambda-term until you got an irreducible term, you would be going forever!
+You might think this doesn't matter, and you could just add a check for terms that reduce to themselves. Alas, this is not the worst case - consider this term:
+![](Pasted%20image%2020231019122537.png)
+Apply this to a term $g$ and this happens:
+![](Pasted%20image%2020231019122552.png)
+So now we have a term that beta-reduces to a *more complicated term*! This would be even worse if $g$ was a complicated term itself.
+It is also possible to have a term that can be reduced to an irreducible term, but also has another reduction branch that is infinite:
+![](Pasted%20image%2020231019122753.png)
+If we reduce the innermost redex first then we loop forever, but if we reduce the outermost redex then we immediately get an irreducible term.
+
+So unfortunately for Church, the lambda-calculus is not useful as a fundamental foundation for mathematics. The problem terms above give rise to unfixable paradoxes. 
