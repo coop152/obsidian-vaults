@@ -5,4 +5,4 @@
 - [ ] (?) Refactor code to use modern C++
 	- [ ] Use chrono for time
 	- [ ] use modern file APIs
-	- [ ] Resolve code safety warnings from 
+	- [ ] Resolve code safety warnings (remove `_CRT_SECURE_NO_WARNINGS` from preprocessor definitions to see them)
