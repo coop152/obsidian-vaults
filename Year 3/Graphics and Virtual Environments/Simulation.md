@@ -23,4 +23,6 @@ We can see that this object has **7 degrees of freedom**: this is because each o
 - Angle of the joint between the two rigid bodies, in one direction.
 
 These articulated rigid bodies can be used for simulating rigged meshes as ragdolls, but they are also useful for any kind of object with rigid connected components. For example, a car has a main rigid body with wheels attached with a single degree of freedom (rotating to go backwards or forwards).
-## Deformable Body Simulation
+## Deformable Object Simulation
+The other kind of simulation we will discuss is deformable object simulation, where objects are not solid. For example, this elastic octopus:
+![](Pasted%20image%2020231020122032.png)
