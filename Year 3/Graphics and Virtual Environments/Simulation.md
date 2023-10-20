@@ -50,3 +50,33 @@ The final kind of fluid simulation is Hybrid Fluid Simulation, where there is bo
 ![](Pasted%20image%2020231020124625.png)
 
 # Collisions
+When performing simulations of any kind, we need to know if two objects have intersected, and if so how they should respond. These problems are **collision detection** and **collision response**, respectively.
+![](Pasted%20image%2020231020131908.png)
+## Collision Detection
+There are many different algorithms for detecting a collision between two objects, and the main factor that informs your choice is the geometry of the colliding object. For example, here is a collision between two rigid bodies, where the orange rectangle is an implicit surface (i.e. mathematically defined):
+![](Pasted%20image%2020231020132039.png)
+We know that when the function representing this surface equals zero that a coordinate is on the surface, and when the function is less than zero a coordinate is inside the surface. Therefore, it is trivial to know if a collision has occurred.
+This is not so simple with all definitions of a surface, specifically with meshes. There is no guarantee that a mesh is even closed, so how could you know if you are "inside" it?
+## Collision Response
+Collision response has to do with the result of the collision; that is, how the objects involve move as a result of colliding.
+Usually when we detect a collision we are already "too late" - in the last simulation step the colliding object was outside the collider, and in this step it is inside it.
+![](Pasted%20image%2020231020132409.png)
+One solution is to retroactively adjust our colliding object's position such that it is in the place where it should be. This is called backtracking:
+![](Pasted%20image%2020231020132519.png)
+We can do this by computing the intersection point between the colliding object's movement path and the collider, which gives us the exact point of collision.
+With this point of collision, we can calculate the new direction, speed, etc. of the colliding object and advance it in that direction for the fractional time steps that we undid.
+Alternatively, we can do a quick and dirty hack called "Fixing", where we simply take the final position of the colliding object and roughly adjust it to be on the surface of the collider:
+![](Pasted%20image%2020231020132754.png)
+We then apply the response from this point. This is inaccurate, but it may be simpler to compute in some situations.
+
+## Complexity
+The complexity of (naïve) collision detection is high; for $n$ dynamic objects, we must compare each object to every other and check for collisions, meaning collision detection runs in $O(n^2)$ time.
+There are ways to improve the running time of collision detection, such as:
+- Use simple, conservative proxies to reduce the impact of non-colliding checks
+	- And use recursive/hierarchical tests to make these proxies more "precise", weeding out even more non-colliding checks
+- Only compare objects that are both in the same close part of the scene
+
+### Bounding Volumes
+A common approach to improving the efficiency of collision detection is to collide with the bounding volumes of an object before the actual object's geometry.
+![](Pasted%20image%2020231020133753.png)
+Bounding boxes are generally very simple and 
