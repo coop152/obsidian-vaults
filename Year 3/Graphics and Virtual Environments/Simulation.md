@@ -80,3 +80,6 @@ There are ways to improve the running time of collision detection, such as:
 A common approach to improving the efficiency of collision detection is to collide with the bounding volumes of an object before the actual object's geometry.
 ![](Pasted%20image%2020231020133753.png)
 Bounding volumes are generally very simple and easy to calculate intersections for. If the bounding volumes of two objects intersect, then they may or may not have actually intersected and a second check with the actual meshes is required.
+There are various types of bounding boxes:
+![](Pasted%20image%2020231020134843.png)
+(AABB = Axis Aligned Bounding Box)
