@@ -6,5 +6,5 @@ My notes for Year 3.
 - [Giving Meaning to Programs](Giving%20Meaning%20to%20Programs%20Index.md)
 
 Uncategorised stuff:
-- [Idle Notes on the Third year project](Idle%20Notes.md)
+- [Idle Notes on the Third year project](Proof%20of%20Concept%20Notes.md)
 
