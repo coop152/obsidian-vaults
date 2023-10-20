@@ -6,3 +6,5 @@
 	- [ ] Use chrono for time
 	- [ ] use modern file APIs
 	- [ ] Resolve code safety warnings (remove `_CRT_SECURE_NO_WARNINGS` from preprocessor definitions to see them)
+- [ ] (?) Port from Tk to Qt (or similar), remove tcl completely from the project
+- [ ] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
