@@ -82,4 +82,11 @@ A common approach to improving the efficiency of collision detection is to colli
 Bounding volumes are generally very simple and easy to calculate intersections for. If the bounding volumes of two objects intersect, then they may or may not have actually intersected and a second check with the actual meshes is required.
 There are various types of bounding boxes:
 ![](Pasted%20image%2020231020134843.png)
-(AABB = Axis Aligned Bounding Box)
+(AABB = Axis Aligned Bounding Box, OBB = Oriented Bounding Box, k-DOP = k-Discrete Oriented Polytopes)
+
+We will cover sphere bounding boxes.
+![](Pasted%20image%2020231020135328.png)
+A bounding sphere is a sphere that is placed around an object such that the entire object fits exactly in the sphere. If the bounding spheres of two objects do not intersect, then the objects definitely don't intersect and we can skip the check. Vitally, checking if spheres are intersecting is very easy.
+We can extend this to a hierarchical model, by performing a series of increasingly precise bounding sphere checks:
+![](Pasted%20image%2020231020135753.png)
+So first we check the bounding sphere, then we increase the number and decrease the size of the bounding spheres repeatedly in a series of more precise (but more time consuming) collision checks. Finally, if an object passes all of these tests then the actual collision of the meshes will be tested.
