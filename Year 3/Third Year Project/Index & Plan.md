@@ -1,3 +1,6 @@
+# Important Dates
+- Code Freeze: Friday 15th March 2024 
+- Report & Screencast Submission: Friday 12th April
 # Things that need doing
 - [x] Create a visual studio project that compiles and functions a baseline amount
 - [ ] Achieve full functionality
