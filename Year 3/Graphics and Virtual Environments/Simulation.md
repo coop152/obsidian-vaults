@@ -48,3 +48,5 @@ For each step of the animation, we analyse each voxel's current properties (such
 
 The final kind of fluid simulation is Hybrid Fluid Simulation, where there is both a voxel grid and a particle system, which are both used for certain aspects of the simulation.
 ![](Pasted%20image%2020231020124625.png)
+
+# Collisions
