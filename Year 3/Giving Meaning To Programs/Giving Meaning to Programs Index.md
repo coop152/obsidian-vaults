@@ -3,3 +3,4 @@
 - [Intro to Lambda Calculus](Intro%20to%20Lambda%20Calculus.md)
 - [[Reduction]]
 - [[Confluence]]
+- [[Types for the Lambda Calculus]]
