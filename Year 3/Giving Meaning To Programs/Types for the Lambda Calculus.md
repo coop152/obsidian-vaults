@@ -90,4 +90,24 @@ Simple:
 - (a): The concatenation of two type environments has some assumption for $x$ as the most recent, if and only if:
 	- The second type environment in the concatenation has that assumption as the most recent for $x$, OR
 	- The first type environment has that assumption as the most recent for $x$ and there is no assumption about $x$ in the second type environment that shadows it.
-- (b): 
+- (b): If some type environment $\Delta$ is equal to some type environment $\Gamma$, then the most recent assumption made for variable $x$ in $\Gamma$ must also be true for $\Delta$.
+
+(Not 100% on those but I think that's the point of the propositions, anyway.)
+
+## Typing rules
+We can now give a formal definition of the type of a term. The syntax for these definitions resembles the natural deduction system for classical logic from COMP11120.
+A statement of the form:
+![](Pasted%20image%2020231023151233.png)
+This means that if we make the assumptions in the type environment $\Gamma$, then the term $t$ has the type $\iota$.
+We define the rules of this typing relation as an inference system of formal logic.
+![](Pasted%20image%2020231023151441.png)
+Recap on inference:
+Consider the rule for applications:
+![](Pasted%20image%2020231023151507.png)
+The judgements above the line are the **premises** and the statement below the line is the **conclusion**. This rule dictates that, under the premise that $t$ is a function from $\sigma$ to $\tau$ and $u$ is of type $\sigma$, we can conclude that the term $tu$ is of type $\tau$, the output of function $t$. Note that the type environments must be the same in both of the premises to make this conclusion.
+Consider the rule for abstractions:
+![](Pasted%20image%2020231023152018.png)
+If we are assuming that $x$ is of type $\sigma$ in the type environment, and we know that $t$ is of type $\tau$, then we can conclude that the term $\lambda x:\sigma.t$ is of type $\sigma \rightarrow \tau$. We also remove $x$ from the type environment.
+When using these rules to find the type of some term, we start at the **bottom** with the fully formed term. We then follow the rules backwards/up the page, breaking the term apart until you have only axioms left.
+Here is an example of how to use these rules to type-check a term:
+![](Pasted%20image%2020231023152437.png)
