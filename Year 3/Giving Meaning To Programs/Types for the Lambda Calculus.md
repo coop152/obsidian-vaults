@@ -30,3 +30,7 @@ It is important to realise that two types are only *equal* if they are syntactic
 ## Type decorations
 Now we need to assign these types to terms.
 There are subtleties to consider while defining this; Take the term $\lambda y.y$. This could be typed as the identity term $\iota \rightarrow \iota$, but you could also imagine applying this term to other terms. Because these other terms are not the base type, this typing is too strict for them. Indeed, if we want the identity term to be able to applied to anything then we instead must give it the type $\sigma \rightarrow \sigma$, for every type $\sigma$.
+By introducing types we hope to incorporate the idea that terms should only applied to suitable inputs, and that terms only have a single type. To accomplish this we integrate some type information into the term itself, by adding an annotation to the argument of a lambda-abstraction that indicates the type it should have. For example:
+![](Pasted%20image%2020231023140148.png)
+This is the identity function that only takes a function from the base type to the base type, and returns the same. The overall type of this whole term is
+![](Pasted%20image%2020231023140237.png)
