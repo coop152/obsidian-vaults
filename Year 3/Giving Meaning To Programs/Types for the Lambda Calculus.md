@@ -46,4 +46,30 @@ We do have to make a change to alpha-equivalence, for when both terms are abstra
 ![](Pasted%20image%2020231023141154.png)
 Simple:
 - bcPVar$\alpha$: two identical variables are alpha-equivalent (same as untyped.)
-- scPAbs$\alpha$: Two typed abstractions are alpha-equivalent if the type of the bound variable is the same
+- scPAbs$\alpha$: Two typed abstractions are alpha-equivalent if the type of the bound variable is the same and the subterms are alpha-equivalent.
+- scPApp$\alpha$: Two applications are alpha-equivalent if the left subterms are alpha equivalent and the right subterms are alpha-equivalent (same as untyped.)
+
+We can easily adjust capture-avoiding substitution and beta-reduction, noting that the base case of beta-reduction becomes:
+![](Pasted%20image%2020231023142017.png)
+All of the results for the untyped lambda calculus apply to to this new system.
+
+## Type environments
+Consider this example:
+![](Pasted%20image%2020231023142332.png)
+This example shows that we build our typed expressions by assigning types to the free variables of subterms. To do this we need to remember the assumptions we made about the type of those free variables based on the lambda-abstractions they are in. We call this set of assumptions a *type environment*. A formal definition will come later, but first we consider how these assumptions work with shadowing.
+![](Pasted%20image%2020231023142603.png)
+![](Pasted%20image%2020231023142612.png)
+The steps of this example show that we can deal with assumptions properly in the presence of shadowing using a stack-like structure, where the most recent assumption about a variable name is used and then forgotten when it goes out of the scope that defined it.
+We do need to consider shadowing, or else our type system would allow typeable terms that are alpha-equivalent to untypeable terms. There are some bizarre workarounds that one can do to avoid shadowing, but they all either defeat the point of defining a typed lambda calculus or make the lambda calculus behave not at all like a real programming language.
+We define our type environment which can accommodate shadowing as such:
+![](Pasted%20image%2020231023143238.png)
+Simple:
+- bcTE: There is an empty type environment where no assumptions about the type of free variables are made.
+- scTE: Given some type environment $\Gamma$ (Gamma), we can make another type environment by adding a mapping from a variable to a type at the end.
+
+Vitally, equality for type environments is **NOT** given by syntactic equality.
+The definition of a type environment is quite simple, but determining if two type environments should be considered equal is much more complicated. We should be allowed to swap the order of some of our assumptions, but we cannot do it freely; it is clear that when we have several assumptions for the same variable due to shadowing, the order of the assumptions is important. We want our definition of equality to follow these principles:
+- Typing assumptions for distinct variables may be swapped freely.
+- Type assumptions for the same variable may not be swapped without changing the type environment and therefore breaking equality.
+
+To define equality on type environments we define an equivalence relation $\approx$. (recap: an equivalence relation is a relation that is reflexive, transitive, and symmetric.)
