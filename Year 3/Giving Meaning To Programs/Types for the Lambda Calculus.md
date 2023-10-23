@@ -72,4 +72,22 @@ The definition of a type environment is quite simple, but determining if two typ
 - Typing assumptions for distinct variables may be swapped freely.
 - Type assumptions for the same variable may not be swapped without changing the type environment and therefore breaking equality.
 
-To define equality on type environments we define an equivalence relation $\approx$. (recap: an equivalence relation is a relation that is reflexive, transitive, and symmetric.)
+To define equality on type environments we define an equivalence relation $\approx$. (recap: an equivalence relation is a relation that is reflexive, transitive, and symmetric.) Let's begin by giving an intermediate relation:
+For distinct variables $x, y$, and type environments $\Gamma, \Delta$:
+![](Pasted%20image%2020231023144744.png)
+Note that this relation is symmetric.
+We now define the equality relation in terms of this relation:
+![](Pasted%20image%2020231023145059.png)
+Because the intermediate relation is symmetric, and we are taking the reflexive transitive closure, this definition of equality is a valid equivalence relation.
+Consider this example:
+![](Pasted%20image%2020231023145210.png)
+Note that there is another obvious operation for type environments: If $\Gamma$ and $\Delta$ are type environments then $\Gamma, \Delta$ is a type environment. This operation is well behaved with respect to equality:
+![](Pasted%20image%2020231023145426.png)
+We also find the following useful when manipulating type environments:
+![](Pasted%20image%2020231023145519.png)
+![](Pasted%20image%2020231023145530.png)
+Simple:
+- (a): The concatenation of two type environments has some assumption for $x$ as the most recent, if and only if:
+	- The second type environment in the concatenation has that assumption as the most recent for $x$, OR
+	- The first type environment has that assumption as the most recent for $x$ and there is no assumption about $x$ in the second type environment that shadows it.
+- (b): 
