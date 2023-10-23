@@ -34,3 +34,16 @@ By introducing types we hope to incorporate the idea that terms should only appl
 ![](Pasted%20image%2020231023140148.png)
 This is the identity function that only takes a function from the base type to the base type, and returns the same. The overall type of this whole term is
 ![](Pasted%20image%2020231023140237.png)
+Note that many of these annotated terms cannot be assigned a type in the system we will soon introduce; for this reason, they are called **preterms**. This is the definition of the set of preterms:
+![](Pasted%20image%2020231023140748.png)
+Simple:
+- bcPVar: A variable is a preterm.
+- scPAbs: An abstraction on some preterm is also a preterm.
+- scPApp: An application on two preterms is a preterm.
+
+Before we concern ourselves with assigning types to these preterms, we revisit some of the definitions on the untyped lambda calculus. Most of the ideas presented without types can be easily adjusted to type-annotated terms; For example, subterms, free and bound variables, and renaming are all essentially the same.
+We do have to make a change to alpha-equivalence, for when both terms are abstractions:
+![](Pasted%20image%2020231023141154.png)
+Simple:
+- bcPVar$\alpha$: two identical variables are alpha-equivalent (same as untyped.)
+- scPAbs$\alpha$: Two typed abstractions are alpha-equivalent if the type of the bound variable is the same
