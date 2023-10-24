@@ -147,4 +147,8 @@ We can begin by noting that if we have a derivation showing some term has a part
 ![](Pasted%20image%2020231024114907.png)![](Pasted%20image%2020231024114917.png)
 Simple:
 (a): If a derivation shows that some variable $x$ has type $\tau$, then we know it was an axiom rule derivation and that the type environment contained $x:\tau$ as the most recent typing for that variable.
-(b): If a derivation shows that some 
+(b): If a derivation shows that some abstraction has type $\tau$, then we know that the conclusion was the abstraction rule, that $\tau = \sigma \rightarrow \alpha$ for some type $\alpha$, and that we can derive that the abstraction's subterm is of type $\alpha$.
+(c): If a derivation shows that some application has type $\tau$, then we know that the conclusion was the application rule, that the applied function/left subterm is of type $\alpha \rightarrow \tau$ for some type $\alpha$, and that the argument/right subterm is of type $\alpha$.
+
+
+This inversion allows us to turn an induction over the shape of a term into an induction over the shape of the corresponding derivation, because the shape of the term directly determines the shape of the derivation.
