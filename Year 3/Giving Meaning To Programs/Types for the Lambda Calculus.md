@@ -150,5 +150,14 @@ Simple:
 (b): If a derivation shows that some abstraction has type $\tau$, then we know that the conclusion was the abstraction rule, that $\tau = \sigma \rightarrow \alpha$ for some type $\alpha$, and that we can derive that the abstraction's subterm is of type $\alpha$.
 (c): If a derivation shows that some application has type $\tau$, then we know that the conclusion was the application rule, that the applied function/left subterm is of type $\alpha \rightarrow \tau$ for some type $\alpha$, and that the argument/right subterm is of type $\alpha$.
 
-
 This inversion allows us to turn an induction over the shape of a term into an induction over the shape of the corresponding derivation, because the shape of the term directly determines the shape of the derivation.
+We can prove this proposition using inversion:
+![](Pasted%20image%2020231024122645.png)
+(Proof in the notes.)
+This proposition tells us that the only terms we can type without using any assumptions are terms containing no free variables. Even in derivations for such terms, we still need to assume some types along the way:
+- We can only start a derivation using the axiom rule, and that requires a non-empty type environment.
+- We can only form an abstraction by having an assumption of the bound variable's type appear in the premise's type environment.
+
+So, even when we are interested in terms that are typeable with an empty type environment, we still need to reason about other terms with non-empty type environments.
+
+One of the goals of this type system was to rule out terms with an infinite number of reduction steps.
