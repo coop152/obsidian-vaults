@@ -111,3 +111,7 @@ If we are assuming that $x$ is of type $\sigma$ in the type environment, and we 
 When using these rules to find the type of some term, we start at the **bottom** with the fully formed term. We then follow the rules backwards/up the page, breaking the term apart until you have only axioms left.
 Here is an example of how to use these rules to type-check a term:
 ![](Pasted%20image%2020231023152437.png)
+The structure we build when we perform these type-checks on the lambda-calculus is called a **formal derivation**. They are also called *proof trees* more generally (for example, when performing the analogous operation in classical logic.) Note that these formal derivations are themselves recursively defined - we can express the rules in word form with a similar format to previous recursive definitions:
+![](Pasted%20image%2020231024104144.png)
+We can use these to prove some (quite strong) statements about derivations by induction (though this isn't covered here.)
+At this point, we might wonder what we can already say about terms that can be typed.
