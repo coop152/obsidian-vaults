@@ -125,3 +125,26 @@ To cope with shadowing we have to worry about type environments that may contain
 ![](Pasted%20image%2020231024105915.png)
 We have to cover shadowing first because it is requires for most of the other statements we want to show.
 ![](Pasted%20image%2020231024110809.png)
+Simple:
+(a): Introducing a new typing at the end of two consistent environments maintains their consistency.
+(b): If two environments are consistent, then you can derive a typing for some variable if and only if you can derive it in the other.
+These propositions are fairly clear from just thinking about consistency. The following propositions are less obvious, and demonstrate a useful property: We indeed can add extra assumptions to a type environment in a manner similar to weakening in classical logic. We have to be careful about how we do it, though!
+![](Pasted%20image%2020231024112229.png)
+Simple:
+(a): Supposedly a low level detail that doesn't really help understanding-wise.
+(b): Can't really simplify this one.
+(c): If you can derive a typing for a term from a certain type environment, then concatenating this environment onto the end of any other will also yield this typing.
+(d): If some variable $y$ isn't in the free variables of some term $t$, then you can assume any type for $y$ in the environment without affecting the typing of $t$.
+(e): Similarly, if $y$ isn't a free variable in $t$ then you can remove an assumption about $y$'s type from the environment without affecting the typing of $t$.
+
+This final statement is very helpful; it tells us that we only need make assumptions about the free variables of a term in order to derive a typing for it. So, we can perform a "weakening" operation by adding unnecessary assumptions about the types of bound or unused variables, but we cannot add assumptions about the types of variables that are free in the type-checked term because it could change the outcome. Inversely, we can perform a new "strengthening" operation by *removing* assumptions about the types of bound or unused variables, as long as we do not remove assumptions about variables that are free in the type-checked term, because this could change the outcome.
+
+### Terms as a typing blueprint
+When performing a derivation, we end up carrying potentially large amounts of type data that can make proofs regarding types very hard. For example, consider this fragment of a derivation:
+![](Pasted%20image%2020231024114004.png)
+Reasoning about this derivation using one of the step cases for derivation from earlier seems simple enough. However, notice that a type $\sigma$ is mentioned in one of the sub-proofs, but is **not** mentioned in the conclusion; this type could be huge! This could hugely complicate matters, but fortunately our derivation system is "self-documenting". That is, the information which would appear to have vanished is actually encoded in $t$ ($\sigma$ being it's type), and therefore in $tu$. So, when faced with some derivation $\Gamma \vdash t: \tau$ that we need to base a proof around, we should concern ourselves with the term $t$ and not it's type.
+We can begin by noting that if we have a derivation showing some term has a particular type, then we can use the term to say something about the derivation:
+![](Pasted%20image%2020231024114907.png)![](Pasted%20image%2020231024114917.png)
+Simple:
+(a): If a derivation shows that some variable $x$ has type $\tau$, then we know it was an axiom rule derivation and that the type environment contained $x:\tau$ as the most recent typing for that variable.
+(b): If a derivation shows that some 
