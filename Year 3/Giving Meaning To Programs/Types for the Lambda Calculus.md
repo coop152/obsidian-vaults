@@ -123,4 +123,5 @@ We might wonder if we can add additional assumptions to type environments withou
 
 To cope with shadowing we have to worry about type environments that may contain more than one typing for a given variable. There is a more general condition that covers this case:
 ![](Pasted%20image%2020231024105915.png)
-In other words, two type environments that give the same outcomes in any derivation are called **consistent**.
+We have to cover shadowing first because it is requires for most of the other statements we want to show.
+![](Pasted%20image%2020231024110809.png)
