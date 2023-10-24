@@ -179,3 +179,8 @@ We need to make sure that, for any given type environment, we can only assign a 
 ### Types and reduction
 Now we are ready to prove that the types we assign are preserved by beta-reduction. We know that most of this proof will deal with substitution, so we investigate this first.
 ![](Pasted%20image%2020231024135514.png)
+Now we prove that typing is preserved by beta-reduction.
+![](Pasted%20image%2020231024135756.png)
+The following result follows from the previous by a straightforward induction:
+![](Pasted%20image%2020231024135827.png)
+Why is this property so important? It tells us that when we write a program that we think will give an output of a certain type, then as computation proceeds the type will not change. The result we obtain must be of the expected type.
