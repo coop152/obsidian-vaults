@@ -160,4 +160,15 @@ This proposition tells us that the only terms we can type without using any assu
 
 So, even when we are interested in terms that are typeable with an empty type environment, we still need to reason about other terms with non-empty type environments.
 
-One of the goals of this type system was to rule out terms with an infinite number of reduction steps.
+One of the goals of this type system was to rule out terms with an infinite number of reduction steps. We can prove that we have done this using an inversion proof. (See exercise 15).
+
+# Correctness of the Type System
+We have defined our type system according to our notions of beta-reduction and alpha-equivalence, but we do not strictly know if these operations actually hold their meaning with regards to this new typed lambda calculus.
+We have thought of beta-reduction as "simplifying the expression" or "calculating an answer" - that is, if we beta-reduce a term to another then the resulting term should have the same type as the one we started with. We took this into account in the previous section but only in an informal manner; we will now prove that we did the job right.
+
+## Typing and alpha-equivalence
+To establish properties for alpha-equivalence we first need to check that renaming behaves well.
+![](Pasted%20image%2020231024131247.png)
+(It does.)
+We now use inversion to establish that our typing rules interact well with alpha-equivalence. We would expect that all alpha-equivalence terms have the same type, and the following proposition asserts that this is indeed the case.
+![](Pasted%20image%2020231024131420.png)
