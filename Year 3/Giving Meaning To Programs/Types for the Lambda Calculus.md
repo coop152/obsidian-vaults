@@ -172,3 +172,6 @@ To establish properties for alpha-equivalence we first need to check that renami
 (It does.)
 We now use inversion to establish that our typing rules interact well with alpha-equivalence. We would expect that all alpha-equivalence terms have the same type, and the following proposition asserts that this is indeed the case.
 ![](Pasted%20image%2020231024131420.png)
+## Uniqueness of types
+We need to make sure that, for any given type environment, we can only assign a single type to a given preterm. That is, we need to show:
+![](Pasted%20image%2020231024132246.png)
