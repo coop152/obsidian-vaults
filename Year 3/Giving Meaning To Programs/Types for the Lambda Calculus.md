@@ -113,5 +113,14 @@ Here is an example of how to use these rules to type-check a term:
 ![](Pasted%20image%2020231023152437.png)
 The structure we build when we perform these type-checks on the lambda-calculus is called a **formal derivation**. They are also called *proof trees* more generally (for example, when performing the analogous operation in classical logic.) Note that these formal derivations are themselves recursively defined - we can express the rules in word form with a similar format to previous recursive definitions:
 ![](Pasted%20image%2020231024104144.png)
-We can use these to prove some (quite strong) statements about derivations by induction (though this isn't covered here.)
-At this point, we might wonder what we can already say about terms that can be typed.
+We can use these to prove some (quite strong) statements about derivations by induction.
+At this point, we might wonder what we can already say about terms that can be typed. So far, the only terms we know of in the base type are either variables or the result of applying some function to a base type variable. Are there more terms in the base type? (I think that's what the text is asking, anyway)
+## Properties of Derivations
+Now we build up some properties of derivations, so that we can show some important properties of our type system (for example, that it is well-behaved w.r.t. alpha-equivalence and beta-reduction.) We also demonstrate that some terms which cause problems in the form of infinite reductions cannot be typed in our system.
+
+### Type environments in derivations
+We might wonder if we can add additional assumptions to type environments without affecting our derivations. Because we've allowed shadowing, the situation here is more subtle than the straight-forward weakening rule from the analogous classical logic. We show some relevant results in order to answer this question.
+
+To cope with shadowing we have to worry about type environments that may contain more than one typing for a given variable. There is a more general condition that covers this case:
+![](Pasted%20image%2020231024105915.png)
+In other words, two type environments that give the same outcomes in any derivation are called **consistent**.
