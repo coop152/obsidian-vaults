@@ -175,5 +175,7 @@ We now use inversion to establish that our typing rules interact well with alpha
 ## Uniqueness of types
 We need to make sure that, for any given type environment, we can only assign a single type to a given preterm. That is, we need to show:
 ![](Pasted%20image%2020231024132246.png)
-
-
+(It is true.)
+### Types and reduction
+Now we are ready to prove that the types we assign are preserved by beta-reduction. We know that most of this proof will deal with substitution, so we investigate this first.
+![](Pasted%20image%2020231024135514.png)
