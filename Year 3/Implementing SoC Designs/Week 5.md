@@ -39,3 +39,11 @@ If we have two synchronous domains with no certain frequency or phase relationsh
 The chance of these failures can be made very small with a **synchroniser**, which:
 - Delays the input to give it a chance to resolve
 - Also delays the output, for the same reason, hence increased latency
+
+Here is an example of a synchroniser with two clock domains:
+![](Pasted%20image%2020231025093822.png)
+With this timing:
+![](Pasted%20image%2020231025093846.png)
+
+Not every signal needs synchronising, though. In a data bus the data can simply be latched by the receiver, as long as the control signals are synchronised.
+![](Pasted%20image%2020231025094059.png)
