@@ -53,7 +53,7 @@ Simple: If you have a term $t$ that beta-reduces to $t'$, then you can rename a 
 ![](Pasted%20image%2020231010152837.png)Simple: 
 (a): The set of free variables of a beta-reduced term is a subset of the free variables of the non-reduced term.
 (b): If you have a term $t$ that beta-reduces to $t'$ then you can substitute a variable for some term and reduce the result of that to a term $u'$, which is alpha-equivalent to the result of performing the same substitution on $t'$.
-(c): Same as (b), but to any depth of beta-reduction.
+(c): 
 
 In general, this pattern of behaviour is true with beta-reduction:
 ![](Pasted%20image%2020231010154542.png)
