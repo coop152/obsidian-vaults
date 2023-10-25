@@ -47,3 +47,22 @@ With this timing:
 
 Not every signal needs synchronising, though. In a data bus the data can simply be latched by the receiver, as long as the control signals are synchronised.
 ![](Pasted%20image%2020231025094059.png)
+Depending on what you are sending over the clock domain, there are many ways to reduce the impact of synchronisation:
+![](Pasted%20image%2020231025094414.png)
+
+# Time stealing
+This is a mechanism that can alleviate the impact of a single slow pipeline stage. You selectively delay part of the clock distribution, which allows the slow step in the pipeline to finish but still allows the clock speed to be increased.
+![](Pasted%20image%2020231025094723.png)
+This is useful around slow macrocells such as RAM blocks.
+
+# Clock Generation
+Dividing a clock is easy; just make an FSM:
+![](Pasted%20image%2020231025094923.png)
+Clock multiplication (which is usually required) is much harder and requires a **Phase-Locked Loop** (PLL) or similar.
+![](Pasted%20image%2020231025095038.png)
+Given a reference frequency, the phase comparator compares that frequency to the output of the circuit. If they are different, it sends a signal to the low-pass filter, which passes it along to the voltage controller which will slightly slow down or speed up the clock. This is a partially analogue signal, which makes this a very specialised job.
+Why do this?
+- It is difficult to carry UHF signals across a PCB; great care with tracking is required.
+- Switching signals dissipates power. The more you switch, the more it costs.
+- Switching signals transmits Radio Frequency Interference (RFI). (Where do you think the power goes?) This is a Bad Thing, and may be illegal.
+- Generating stable clocks at UHF directly is impractical.
