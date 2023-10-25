@@ -1,1 +1,1 @@
-d) $$\$$
+$\xtwoheadrightarrow{\beta}$
