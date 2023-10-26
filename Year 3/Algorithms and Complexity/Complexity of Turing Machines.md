@@ -41,3 +41,9 @@ So earlier we showed that $A \in \text{TIME}(n^2)$, but now we've found a better
 We can, in fact decide language $A$ in $O(n)$ time *if* we have a multi-tape machine. Here is the multi-tape machine that will do this:
 ![](Pasted%20image%2020231026122842.png)
 Clearly this runs in $O(n)$ time. This running time is the best possible for a multi-tape machine.
+
+Through some complicated proofs, we can say that:
+- If an $O(t(n))$ multi-tape machine exists to decide $A$, then there is an equivalent single-tape machine that runs in $O(t^2(n))$.
+- If an $O(t(n))$ non-deterministic (single-tape) machine exists to decide $A$, then there is an equivalent single-tape machine that runs in $2^{O(t(n))}$ time. (We consider the running time of a non-deterministic machine to be the running time of it's longest branch, as if all branches were running in parallel.)
+
+# The class $P$
