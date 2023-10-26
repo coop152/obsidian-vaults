@@ -32,3 +32,6 @@ In total, the running time is $O(n) + O(n^2) + O(n)$, or $O(n^2)$. This conclude
 
 Let's introduce some more notation for classifying languages according to their complexity:
 ![](Pasted%20image%2020231026114531.png)
+For example, the language $A$ is in $\text{TIME}(n^2)$, because our analysis of $M_1$ showed that it ran in $O(n^2)$ time and $\text{TIME}(n^2)$ contains all languages that can be decided in $O(n^2)$ time.
+
+Can $A$ be decided faster than $M_1$ can? Yes - here is the Turing machine that does it:
