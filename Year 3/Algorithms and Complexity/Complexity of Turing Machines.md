@@ -36,3 +36,8 @@ For example, the language $A$ is in $\text{TIME}(n^2)$, because our analysis of 
 
 Can $A$ be decided faster than $M_1$ can? Yes - here is the Turing machine that does it:
 ![](Pasted%20image%2020231026122145.png)
+Skipping the analysis (which is simple), this machine runs in $O(n\log n)$ time.
+So earlier we showed that $A \in \text{TIME}(n^2)$, but now we've found a better bound of $A \in \text{TIME}(n \log n)$. This is the **best result possible** for a single tape turing machine. We can actually show that any language decidable in $O(n \log n)$ time on a single tape machine is **regular**.
+We can, in fact decide language $A$ in $O(n)$ time *if* we have a multi-tape machine. Here is the multi-tape machine that will do this:
+![](Pasted%20image%2020231026122842.png)
+Clearly this runs in $O(n)$ time. This running time is the best possible for a multi-tape machine.
