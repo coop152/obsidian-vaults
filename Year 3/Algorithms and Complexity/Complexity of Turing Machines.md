@@ -47,3 +47,7 @@ Through some complicated proofs, we can say that:
 - If an $O(t(n))$ non-deterministic (single-tape) machine exists to decide $A$, then there is an equivalent single-tape machine that runs in $2^{O(t(n))}$ time. (We consider the running time of a non-deterministic machine to be the running time of it's longest branch, as if all branches were running in parallel.)
 
 # The class $P$
+We have shown that there is at most a *polynomial* difference between the time complexity of a problem on a single-tape vs a multi-tape Turing machine. On the other hand, there is at most an *exponential* difference between the time complexity of a problem on a deterministic vs a non-deterministic Turing machine.
+
+For our purposes, polynomial differences in running time can be considered small, while exponential differences can be considered large. Why separate the classes here?
+The difference in growth rate between polynomials and exponentials is drastic: let $n$ be 1000, which is a reasonable input size for an algorithm. A machine that runs in $n^3$ time will take 1 billion steps, which is a lot but it is at least a feasible number. A machine that runs in $2^n$ time will take a number of steps so large that it has 300 digits in it. In many cases a polynomial algorithm will be fast enough, but there are very few cases where an exponential time algorithm will be useful.
