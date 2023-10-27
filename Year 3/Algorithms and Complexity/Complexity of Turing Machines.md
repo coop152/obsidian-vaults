@@ -46,7 +46,7 @@ Through some complicated proofs, we can say that:
 - If an $O(t(n))$ multi-tape machine exists to decide $A$, then there is an equivalent single-tape machine that runs in $O(t^2(n))$.
 - If an $O(t(n))$ non-deterministic (single-tape) machine exists to decide $A$, then there is an equivalent single-tape machine that runs in $2^{O(t(n))}$ time. (We consider the running time of a non-deterministic machine to be the running time of it's longest branch, as if all branches were running in parallel.)
 
-# The class $P$
+# The class $\text{P}$
 We have shown that there is at most a *polynomial* difference between the time complexity of a problem on a single-tape vs a multi-tape Turing machine. On the other hand, there is at most an *exponential* difference between the time complexity of a problem on a deterministic vs a non-deterministic Turing machine.
 
 For our purposes, polynomial differences in running time can be considered small, while exponential differences can be considered large. Why separate the classes here?
@@ -54,11 +54,11 @@ The difference in growth rate between polynomials and exponentials is drastic: l
 Exponential algorithms usually arise when we solve a problem with a **brute-force search**. For example, we can find the prime factors of a number by searching through all possible divisors; the search space is exponential in size, so the search runs in exponential time. You can often avoid brute-force solutions through a deeper understanding of a problem, which can lead to a polynomial time algorithm of much greater utility.
 All "reasonable" computational models are **polynomially equivalent** - that is, any one of them can simulate another with only a polynomial increase in running time. By "reasonable", we mean any model that approximates the running time of an algorithm on an actual computer. For example, single and multi tape Turing machines are "reasonable" models while a non-deterministic Turing machine is not.
 The purpose of defining these classes of algorithms as polynomial, exponential, etc. is to allow us to think of the time complexity of an algorithm in a way that doesn't depend on the specific model of computation we are using; we are not concerned with how long a multi-tape Turing machine takes to run an algorithm, we are concerned with the inherent complexity of the algorithm regardless of model. By defining classes that are so large they encompass any possible variance from reasonable model to reasonable model, we can eliminate that variable entirely and classify algorithms independently from the machine they were analysed with.
-This is the definition of the class $P$:
+This is the definition of the class $\text{P}$:
 ![](Pasted%20image%2020231027131559.png)
 This follows from the previous conversation:
 ![](Pasted%20image%2020231027131752.png)
-## Example problems in $P$
+## Example problems in $\text{P}$
 When presenting a polynomial time algorithm, we will give high-level descriptions without referencing features of any particular computational model. This avoids tedious details of tape and head movement. We continue listing algorithms in numbered stages. We must be sensitive to the number of Turing machine steps required for each stage, and the total number for all stages.
 When analysing an algorithm, we must first set a polynomial upper bound on the number of stages that the algorithm uses. That is, the program can not be defined in such a way that it has more than a polynomial number of steps given an input of length $n$.
 Then we examine the individual stages and ensure they can all be implemented in polynomial time in our model. We make sure when describing our algorithm that we choose stages that make this easy.
@@ -69,7 +69,19 @@ Many of these example problems will concern graphs. One reasonable representatio
 ### PATH Problem
 ![](Pasted%20image%2020231027133631.png)
 ![](Pasted%20image%2020231027133642.png)
-We assert that PATH is in class $P$.
+We assert that PATH is in class $\text{P}$.
 ![](Pasted%20image%2020231027133720.png)
 Steps 1 and 4 only run once, and clearly run in polynomial time.
-Step 3 requires a scan across the input, along with a marking 
+Step 3 requires a scan across the input, with some testing if nodes are marked. This is easily accomplished in polynomial time.
+Step 2 consists of running Step 3 a maximum of $1 + 1 + m$ times, as on each run except the last a node is marked and the iteration ends when all edges are marked. Running the polynomial Step 3 a polynomial number of times is polynomial.
+Therefore, $M$ is a polynomial time algorithm for PATH and PATH is in $\text{P}$.
+
+## The class $\text{NP}$
+There are many interesting and useful problems for which we have not found polynomial time algorithms. Why haven't we? The answer is that we don't know why - perhaps these problems *do* have polynomial time solutions and we simply haven't found them yet, or perhaps they simply *cannot* be solved in polynomial time due to some kind of intrinsic difficulty.
+What we do know is that the complexities of many problems are linked. If a polynomial time algorithm is found for one of these problems, then that solution can be used to solve an entire group of related problems. To show this, let's begin with an example:
+### Hamiltonian Path Problem
+A Hamiltonian path is a path in some directed graph $G$ that goes through every node exactly once. Here is a Hamiltonian path:
+![](Pasted%20image%2020231027135754.png)
+We describe the problem as such:
+![](Pasted%20image%2020231027135717.png)
+We can easily solve this in exponential time by taking the brute-force algorithm for PATH and adding a check that verifies the path is Hamiltonian. Nobody knows if this problem can be solved in polynomial time.
