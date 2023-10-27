@@ -59,3 +59,17 @@ This is the definition of the class $P$:
 This follows from the previous conversation:
 ![](Pasted%20image%2020231027131752.png)
 ## Example problems in $P$
+When presenting a polynomial time algorithm, we will give high-level descriptions without referencing features of any particular computational model. This avoids tedious details of tape and head movement. We continue listing algorithms in numbered stages. We must be sensitive to the number of Turing machine steps required for each stage, and the total number for all stages.
+When analysing an algorithm, we must first set a polynomial upper bound on the number of stages that the algorithm uses. That is, the program can not be defined in such a way that it has more than a polynomial number of steps given an input of length $n$.
+Then we examine the individual stages and ensure they can all be implemented in polynomial time in our model. We make sure when describing our algorithm that we choose stages that make this easy.
+When we have confirmed both of these things, we can conclude that the algorithm runs in polynomial time.
+Note that this also assumes that the encoding used for the input is reasonable. Most encodings, e.g. graphs, automata, numbers in most bases, are already known to be reasonable and scale polynomially or slower. There is an exception to note, in that numbers encoded in base 1 (unary) scale extremely fast and are not considered a reasonable representation.
+Many of these example problems will concern graphs. One reasonable representation is a list of its nodes and edges. Another is an adjacency matrix. When analysing an algorithm on graphs we may compute the running time in terms of the number of nodes instead of the size of the representation; this is acceptable because in these reasonable encodings the size of the representation is polynomial in the number of nodes.
+
+### PATH Problem
+![](Pasted%20image%2020231027133631.png)
+![](Pasted%20image%2020231027133642.png)
+We assert that PATH is in class $P$.
+![](Pasted%20image%2020231027133720.png)
+Steps 1 and 4 only run once, and clearly run in polynomial time.
+Step 3 requires a scan across the input, along with a marking 
