@@ -79,9 +79,45 @@ Therefore, $M$ is a polynomial time algorithm for PATH and PATH is in $\text{P}$
 ## The class $\text{NP}$
 There are many interesting and useful problems for which we have not found polynomial time algorithms. Why haven't we? The answer is that we don't know why - perhaps these problems *do* have polynomial time solutions and we simply haven't found them yet, or perhaps they simply *cannot* be solved in polynomial time due to some kind of intrinsic difficulty.
 What we do know is that the complexities of many problems are linked. If a polynomial time algorithm is found for one of these problems, then that solution can be used to solve an entire group of related problems. To show this, let's begin with an example:
-### Hamiltonian Path Problem
+### Verifiability
 A Hamiltonian path is a path in some directed graph $G$ that goes through every node exactly once. Here is a Hamiltonian path:
 ![](Pasted%20image%2020231027135754.png)
 We describe the problem as such:
 ![](Pasted%20image%2020231027135717.png)
 We can easily solve this in exponential time by taking the brute-force algorithm for PATH and adding a check that verifies the path is Hamiltonian. Nobody knows if this problem can be solved in polynomial time.
+This problem, while not decidable in polynomial time, is **verifiable** in polynomial time. That is to say, you cannot check if a graph has a Hamiltonian cycle in polynomial time, but given a resulting Hamiltonian path from some external source you can verify if the graph does actually contain that path.
+Another problem that is polynomially verifiable is **compositeness**. A natural number is *composite* if it is the product of two integers greater than 1. In other words, a composite number is a number that is not prime. We can define this problem:
+![](Pasted%20image%2020231027140758.png)
+We can easily verify that a number is composite given a divisor of that number, but deciding if a number is composite without that extra information is not so easy. There is a recently discovered algorithm that can actually test if a number is prime or composite in polynomial time, but it is very complicated compared to the method for verifying compositeness.
+Some problems are not polynomially verifiable. For example, the inverse of HAMPATH $\overline{\text{HAMPATH}}$ cannot be verified in polynomial time - what would the result given to check even be?
+We formally define this concept of a verifier:
+![](Pasted%20image%2020231027141517.png)
+A verifier takes in some additional info, represented by $c$ in the definition, and using this info checks if some string is a member of $A$. This information is called a **certificate**, or a **proof**, and it proves the string's membership in $A$. Note that this certificate is polynomially bounded in size, because the verifier will have to access it.
+In HAMPATH, the certificate for some string $\langle G,s,t \rangle$ is a Hamiltonian path from $s$ to $t$, encoded in some sensible way. For the COMPOSITES problem, it is a divisor of the input number.
+This leads to the definition of $\text{NP}$ we are using:
+![](Pasted%20image%2020231027142104.png)
+The name, **N**ondeterministic **P**olynomial time, is derived from the alternate definition (remember from Algorithms and Data Structures) where an algorithm is in $\text{NP}$ if it is solvable by a non-deterministic Turing machine in polynomial time.
+Here is an example solution of HAMPATH that is in polynomial time, but using a nondeterministic Turing machine:
+![](Pasted%20image%2020231027142628.png)
+Each step clearly runs in polynomial time (for each branch of the computation), so the machine runs in nondeterministic polynomial time and HAMPATH is in $\text{NP}$.
+We define the complexity class $\text{NTIME}$, which is the same as $\text{TIME}$ but for nondeterministic machines.
+![](Pasted%20image%2020231027143007.png)
+
+Here is an example of an NP problem:
+### Clique Problem
+A **clique** in an undirected graph is a subgraph such that every node is connected to every other. For example, here is a graph with the maximal clique highlighted:
+![](Pasted%20image%2020231027143239.png)
+A **k-clique** is a clique with exactly $k$ nodes. The previous example contains a 5-clique.
+We formalise this problem:
+![](Pasted%20image%2020231027143328.png)
+We can solve this in one of two ways:
+- Verifier: We show that there is a verifier for CLIQUE. That is, there is a deterministic machine that can determine if a given certificate is in CLIQUE. In this case our certificate will be a set of nodes, which we assert is a clique.
+![](Pasted%20image%2020231027143543.png)
+- Nondeterministic Machine: We can show that there is a nondeterministic Turing machine that solves the problem in polynomial time.
+![](Pasted%20image%2020231027143627.png)
+
+## $\text{P}$ vs $\text{NP}$
+In summary:
+![](Pasted%20image%2020231027143735.png)
+It may seem that polynomial verifiability is much more powerful than polynomial decidability, but we do **not** know if it actually is; it is possible that $\text{P}$ and $\text{NP}$ are equal. We have not been able to prove there is a single language in $\text{NP}$ that is definitely not in $\text{P}$.
+This question, if $\text{P} = \text{NP}$, is one of the greatest unsolved problems in theoretical computer science and contemporary mathematics. If these classes were equal then any $\text{NP}$ problem would be guaranteed to have some polynomial time solution. Most researchers do not believe the classes are equal, due to the massive amount of fruitless effort invested into finding polynomial time solutions for certain $\text{NP}$ problems. People have tried proving the inverse, that the classes are unequal, but that would
