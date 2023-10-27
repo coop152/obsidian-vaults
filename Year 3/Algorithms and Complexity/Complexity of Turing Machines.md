@@ -76,7 +76,7 @@ Step 3 requires a scan across the input, with some testing if nodes are marked. 
 Step 2 consists of running Step 3 a maximum of $1 + 1 + m$ times, as on each run except the last a node is marked and the iteration ends when all edges are marked. Running the polynomial Step 3 a polynomial number of times is polynomial.
 Therefore, $M$ is a polynomial time algorithm for PATH and PATH is in $\text{P}$.
 
-## The class $\text{NP}$
+# The class $\text{NP}$
 There are many interesting and useful problems for which we have not found polynomial time algorithms. Why haven't we? The answer is that we don't know why - perhaps these problems *do* have polynomial time solutions and we simply haven't found them yet, or perhaps they simply *cannot* be solved in polynomial time due to some kind of intrinsic difficulty.
 What we do know is that the complexities of many problems are linked. If a polynomial time algorithm is found for one of these problems, then that solution can be used to solve an entire group of related problems. To show this, let's begin with an example:
 ### Verifiability
@@ -116,8 +116,13 @@ We can solve this in one of two ways:
 - Nondeterministic Machine: We can show that there is a nondeterministic Turing machine that solves the problem in polynomial time.
 ![](Pasted%20image%2020231027143627.png)
 
-## $\text{P}$ vs $\text{NP}$
+# $\text{P}$ vs $\text{NP}$
 In summary:
 ![](Pasted%20image%2020231027143735.png)
 It may seem that polynomial verifiability is much more powerful than polynomial decidability, but we do **not** know if it actually is; it is possible that $\text{P}$ and $\text{NP}$ are equal. We have not been able to prove there is a single language in $\text{NP}$ that is definitely not in $\text{P}$.
 This question, if $\text{P} = \text{NP}$, is one of the greatest unsolved problems in theoretical computer science and contemporary mathematics. If these classes were equal then any $\text{NP}$ problem would be guaranteed to have some polynomial time solution. Most researchers do not believe the classes are equal, due to the massive amount of fruitless effort invested into finding polynomial time solutions for certain $\text{NP}$ problems. People have tried proving the inverse, that the classes are unequal, but that would require proving that there is no fast algorithm with the same power as brute-force, which is beyond scientific reach.
+
+# The classes $\text{L}$ and $\text{NL}$
+Until now we have concerned ourselves with time complexity, in which the minimum possible time complexity is linear due to the need to read in the entire input. When we talk about space complexity, we can discuss **sub-linear** bounds.
+To analyse space complexity, we introduce a new Turing machine with two tapes: a read-only tape that contains exactly the input at all times and cannot be changed, and a read/write work tape. We give the machine some way to detect when the read head is at the left or right ends of the input, and say that it must remain on the portion of tape holding the input.
+The work tape works in the usual manner, and the only cells that we count towards the space complexity are the ones on the work tape.
