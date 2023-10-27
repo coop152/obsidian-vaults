@@ -132,3 +132,9 @@ We define new classes:
 Here is an example of a language in $\text{L}$:
 ![](Pasted%20image%2020231027152344.png)
 This language has previously been given with a single-tape Turing machine. That machine was linear in space, as it crossed 0s and 1s off as they were matched resulting in the entire input being worked on. We can implement another machine that is logarithmic in space using a two-tape machine by instead keeping a counter of the number of occurrences of 0s and 1s. Because a binary counter will be logarithmic, the algorithm will only use logarithmic space and therefore $A$ is in $\text{L}$.
+
+Here is an example of a language in $\text{NL}$:
+![](Pasted%20image%2020231027153349.png)
+We know an algorithm that is in $\text{P}$, but that algorithm uses linear time. It is not known if PATH can be solved deterministically in logarithmic space, but we do know of a nondeterministic logarithmic space algorithm for PATH.
+The nondeterministic machine starts at node $s$ and nondeterministically guesses the nodes of a path from $s$ to $t$. The machine need only record the position of the current node at each step on the work tape. It then nondeterministically selects the next node from those pointed at by the current node and repeats until it reaches $t$ and accepts or it has repeated $m$ times and rejects.
+Therefore, PATH is in $\text{NL}$.

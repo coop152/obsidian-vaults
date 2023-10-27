@@ -1,1 +1,1 @@
-- Fixed timezones in Appointment
+- Fixed timezones in Appointment. There is still a bug where changing timezone can change the time in the day, but not the date itself, but this appears to be a bug in the original program (?)
