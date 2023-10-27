@@ -126,3 +126,6 @@ This question, if $\text{P} = \text{NP}$, is one of the greatest unsolved proble
 Until now we have concerned ourselves with time complexity, in which the minimum possible time complexity is linear due to the need to read in the entire input. When we talk about space complexity, we can discuss **sub-linear** bounds.
 To analyse space complexity, we introduce a new Turing machine with two tapes: a read-only tape that contains exactly the input at all times and cannot be changed, and a read/write work tape. We give the machine some way to detect when the read head is at the left or right ends of the input, and say that it must remain on the portion of tape holding the input.
 The work tape works in the usual manner, and the only cells that we count towards the space complexity are the ones on the work tape.
+This model is equivalent to a one-tape model for space bounds of linear and above, but we can only use this model for sublinear space bounds.
+We define new classes:
+![](Pasted%20image%2020231027150503.png)
