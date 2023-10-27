@@ -129,3 +129,6 @@ The work tape works in the usual manner, and the only cells that we count toward
 This model is equivalent to a one-tape model for space bounds of linear and above, but we can only use this model for sublinear space bounds.
 We define new classes:
 ![](Pasted%20image%2020231027150503.png)
+Here is an example of a language in $\text{L}$:
+![](Pasted%20image%2020231027152344.png)
+This language has previously been given with a single-tape Turing machine. That machine was linear in space, as it crossed 0s and 1s off as they were matched resulting in the entire input being worked on. We can implement another machine that is logarithmic in space using a two-tape machine by instead keeping a counter of the number of occurrences of 0s and 1s. Because a binary counter will be logarithmic, the algorithm will only use logarithmic space and therefore $A$ is in $\text{L}$.
