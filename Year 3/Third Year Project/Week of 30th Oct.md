@@ -1,2 +1,3 @@
 - Did an absolutely insane amount of re-typing to make every function that returned 0/1 actually return a bool instead.
 - In the process of doing that, changed lots of `0` pointer literals to `nullptr`.
+- Found bug where changing the calendar an item is in will not immediately update it's appearance. For example, it will not hide if the destination calendar is hidden and it will not take on the destination calendar's colour.
