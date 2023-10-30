@@ -1,0 +1,2 @@
+- Did an absolutely insane amount of re-typing to make every function that returned 0/1 actually return a bool instead.
+- In the process of doing that, changed lots of `0` pointer literals to `nullptr`.
