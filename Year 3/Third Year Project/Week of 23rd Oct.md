@@ -1,3 +1,2 @@
 - Fixed timezones in Appointment. There is still a bug where changing timezone can change the time in the day, but not the date itself, but this appears to be a bug in the original program (?)
-- Discovered bug which is also present in the original program. Setting an item as todo in the right click menu sets its date to today. (i.e. doing it on old items makes them disappear to today)
-- 
+- ~~Discovered bug which is also present in the original program. Setting an item as todo in the right click menu sets its date to today. (i.e. doing it on old items makes them disappear to today)~~ it's listed in the user guide as a feature you absolute bean
