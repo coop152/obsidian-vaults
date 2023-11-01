@@ -1,3 +1,10 @@
 - Did an absolutely insane amount of re-typing to make every function that returned 0/1 actually return a bool instead.
 - In the process of doing that, changed lots of `0` pointer literals to `nullptr`.
 - Found bug where changing the calendar an item is in will not immediately update it's appearance. For example, it will not hide if the destination calendar is hidden and it will not take on the destination calendar's colour.
+
+# Building Tcl/Tk statically from source
+Pretty simple:
+1. Download the source from the website (both tcl and tk) and extract them
+2. Open a visual studio dev console
+3. navigate to the source directory and then into the win folder (**you must use short paths because it doesn't like spaces in the path**, for example `C:\Users\KYLECO~1\source\TK86~1.13\win>`)
+4. run `nmake -f makefile.vc OPTS=static` and wait. Do this for both tcl and tk.
