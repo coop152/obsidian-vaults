@@ -12,3 +12,6 @@ Now to link to the project:
 1. Include some header files (i forgot which ones, check the branch)
 2. Link to some lib files (check the branch)
 3. add a `STATIC_BUILD` flag to the c++ compiler command (`/D "STATIC_BUILD"` in the compiler extra flags box)
+
+This removes the requirement for the dll files (I think), but it still requires the entire lib folder so what even is the point?
+Look into starpacks.
