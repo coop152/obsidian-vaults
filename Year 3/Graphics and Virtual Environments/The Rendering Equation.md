@@ -58,3 +58,8 @@ But can we simply just solve this equation to render a scene? Unfortunately, it 
 The rendering equation is one of many equations in the "Fredholm Equations of the Second Kind". Mathematicians have found analytical solutions to several of these equations, but unfortunately the rendering equation is not one of those. Part of the reason why is that it's infinitely recursive; The $L_i(\textbf{x}, \omega_i)$ inside the integral is a nested rendering equation that must also be solved. It's worse than just being a potentially deep recursion:
 ![](Pasted%20image%2020231102131702.png)
 For example, finding the reflected light on $\textbf{x}$ requires finding the reflected light on the plinth, which requires finding the reflected light on the ball, which in fact **requires finding the reflected light on $\mathbf{x}$**, creating a loop that never ends. Clearly we need to cut corners somewhere here.
+
+# Light and Materials
+There are three ways that light can interact with a material:
+![](Pasted%20image%2020231102134233.png)
+1. It can reflect off, which gives a shiny appearance to the surface with specular highlights.
