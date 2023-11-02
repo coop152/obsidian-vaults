@@ -116,4 +116,4 @@ This can seem quite complicated, so let's start from the basics. We have a hemis
 ![](Pasted%20image%2020231102143940.png)
 We have our incident ray and reflected ray, both of which are parameterized in terms of their **altitude** $\theta$ and the **azimuth** $\phi$.
 ![](Pasted%20image%2020231102144025.png)
-The BRDF then does calculations in terms of a **delta solid angle** ($\delta A$) in the plane and a 
+The BRDF then does calculations some calculations in terms of the delta solid angle and the delta projected area
