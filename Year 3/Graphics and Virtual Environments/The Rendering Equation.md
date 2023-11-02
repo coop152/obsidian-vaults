@@ -116,4 +116,8 @@ This can seem quite complicated, so let's start from the basics. We have a hemis
 ![](Pasted%20image%2020231102143940.png)
 We have our incident ray and reflected ray, both of which are parameterized in terms of their **altitude** $\theta$ and the **azimuth** $\phi$.
 ![](Pasted%20image%2020231102144025.png)
-The BRDF then does calculations some calculations in terms of the delta solid angle and the delta projected area
+The BRDF then does some integration over some delta quantities (i dont understand what they are). When you take this to the limit, you get *something* in the direction of the reflected ray which represents *something*. I think.
+![](Pasted%20image%2020231102150202.png)
+This is where $\lambda$ can be re-introduced; the result of this calculation will be different depending on the wavelength of colour:
+![](Pasted%20image%2020231102150248.png)
+This gives how 
