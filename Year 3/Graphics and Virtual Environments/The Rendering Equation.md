@@ -121,3 +121,19 @@ The BRDF then does some integration over some delta quantities (i dont understan
 This is where $\lambda$ can be re-introduced; the result of this calculation will be different depending on the wavelength of colour:
 ![](Pasted%20image%2020231102150248.png)
 How this function behaves for different wavelengths of light defines how the surface colours the light it reflects.
+
+In summary, the BRDF of a surface represents its general behaviour when reflecting light. It gives how diffuse or specular it is, how much light it absorbs of each wavelength, etc.
+![](Pasted%20image%2020231102151133.png)
+However, that does not cover every way that light can interact with a surface. You may have a transmissive surface that transmits light through it. Often the light will be refracted, coming out parallel on the other side but shifted over. And often the light will come out of the object in a similar manner to the light that reflected off of it. None of this behaviour is captured in the BRDF, but there is another component called a **BTDF** (Bidirectional Transmittance Distribution Function) which is very similar and which can describe this.
+In addition to these, there is another behaviour called **Subsurface Scattering** that neither of these describe:
+![](Pasted%20image%2020231102151537.png)
+Some light, instead of reflecting immediately or refracting through to the other side of the object, may meander around in the object for a while before being ejected back out of the object. This is visible in many non-metallic objects in real life, for example human skin.
+![](Pasted%20image%2020231102151705.png)
+The subsurface scattering is the red glow.
+Here is a rendered example. First, without subsurface scattering:
+![](Pasted%20image%2020231102151801.png)
+And with subsurface scattering:
+![](Pasted%20image%2020231102151819.png)
+The function that models Subsurface Scattering is called a **BSSSDF** (Bidirectional SubSurface Scattering Distribution Function), following the naming pattern of the other functions.
+
+A combination of any of these things (BRDF + BTDF + BSSSDF) is often called a **BSDF**, for Bidirectional Scattering Distribution Function.
