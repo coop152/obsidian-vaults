@@ -107,7 +107,7 @@ Also note that this spectrum doesn't contain every colour; where is purple? Purp
 
 # Bidirectional Reflectance Distribution Function
 ![](Pasted%20image%2020231102143105.png)
-The BRDF (in a simplified form) describes the ratio between radiance and irradiance for a surface. Radiance and irradiance are terms from radiometry with specific meanings:
+A BRDF (in a simplified form) describes the ratio between radiance and irradiance for a surface. Radiance and irradiance are terms from radiometry with specific meanings:
 **Radiance** is the **radiant flux** emitted, reflected, transmitted or received by a given surface, **per unit solid angle per unit projected area**.
 **Radiant flux** is a measure of energy over time. Essentially, it's how much energy is imparted in some amount of time.
 **Per unit solid angle, per unit projected area** is what really complicates the calculation (and the definition). What this means is that instead of measuring our quantity (radiant flux) over some flat surface (in which case it would be **per unit distance squared** or similar), we are measuring over the projected surface of a (hemi)sphere:
@@ -120,4 +120,4 @@ The BRDF then does some integration over some delta quantities (i dont understan
 ![](Pasted%20image%2020231102150202.png)
 This is where $\lambda$ can be re-introduced; the result of this calculation will be different depending on the wavelength of colour:
 ![](Pasted%20image%2020231102150248.png)
-This gives how 
+How this function behaves for different wavelengths of light defines how the surface colours the light it reflects.
