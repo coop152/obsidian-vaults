@@ -18,5 +18,16 @@ We now forge a connection between these selections at different types by demandi
 consists of all pairs $(\Gamma, f)$ with  $\Gamma \vdash \sigma \rightarrow \tau$ such that when $f$ is applied to a term from $\mathit{R}_\sigma$, it produces a term in $\mathit{R}_\tau$. We just need to figure out how to include the type environments in an appropriate manner.
 We want to build a condition which says that
 $$(\Gamma, f) \in \mathit{R}_{\sigma \rightarrow \tau}$$
-if and only if
-$$\text{for all } (\Delta,u) \in \mathit{R}_\sigma \text{, } (?, fu) \in \mathit$$
+if and only if for all $(\Delta,u) \in \mathit{R}_\sigma$ you have
+$$(?, fu) \in \mathit{R}_\tau.$$
+We have to ensure that the type environment $?$ is sufficient to type the application of $f$ to $u$. That is, we must be able to derive
+$$? \vdash f: \sigma \rightarrow \tau$$
+as well as
+$$? \vdash u: \sigma.$$
+We know that $\Gamma$ contains sufficient information to derive the type of $f$, so $?$ must contain the information given in $\Gamma$. We also need the information in $\Delta$ to derive the type of $\sigma$ for $u$, but we can't just add $\Delta$ after $\Gamma$ because while we will definitely be able to derive the type of $u$ correctly, the correct typing of $f$ might be "overwritten" by $\Delta$.
+For this reason, we cannot quantify over all type environments $\Delta$ - we have to add a technical condition:
+## Compatibility of type environments
+![](Pasted%20image%2020231106150100.png)
+In other words, the type environment $\Delta$ is **compatible** with $\Gamma$ if adding $\Delta$ onto the end of $\Gamma$ does not "overwrite" any of the assigned typings of $\Gamma$.
+Note in particular that if $\Gamma$ is a type environment and the variable $z$ does not occur in it, then the type environment $z:\sigma$ is compatible with $\Gamma$ for every type $\sigma$.
+We check that this definition behaves as intended. That is, if we can derive a type for some term $t$ in $\Gamma$ then we can derive the same type from $\Gamma\Delta$ where $\Delta$ is compatible with $\Gamma$.
