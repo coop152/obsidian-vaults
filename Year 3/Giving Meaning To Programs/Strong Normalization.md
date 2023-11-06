@@ -14,4 +14,9 @@ such that:
 
 We denote the logical predicate $\mathit{R}$ at some type $\tau$ as $\mathit{R}_\tau$.
 This notation poses a minor problem in that commas are now being used in pairs but also to combine type environments. We solve this by adopting the convention of dropping the comma between type environments in this context.
-We now forge a connection between these selections at different types by demanding that for all types $\sigma$ and $\tau$, the selection of pairs at type $\sigma \rightarrow \tau$ is completely determined by the selections at type $\sigma$ and $\tau$. We do this by requiring that $\mathit$
+We now forge a connection between these selections at different types by demanding that for all types $\sigma$ and $\tau$, the selection of pairs at type $\sigma \rightarrow \tau$ is completely determined by the selections at type $\sigma$ and $\tau$. We do this by requiring that $$\mathit{R}_{\sigma \rightarrow \tau}$$
+consists of all pairs $(\Gamma, f)$ with  $\Gamma \vdash \sigma \rightarrow \tau$ such that when $f$ is applied to a term from $\mathit{R}_\sigma$, it produces a term in $\mathit{R}_\tau$. We just need to figure out how to include the type environments in an appropriate manner.
+We want to build a condition which says that
+$$(\Gamma, f) \in \mathit{R}_{\sigma \rightarrow \tau}$$
+if and only if
+$$\text{for all } (\Delta,u) \in \mathit{R}_\sigma \text{, } (?, fu) \in \mathit$$
