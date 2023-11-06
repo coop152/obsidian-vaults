@@ -31,3 +31,9 @@ For this reason, we cannot quantify over all type environments $\Delta$ - we hav
 In other words, the type environment $\Delta$ is **compatible** with $\Gamma$ if adding $\Delta$ onto the end of $\Gamma$ does not "overwrite" any of the assigned typings of $\Gamma$.
 Note in particular that if $\Gamma$ is a type environment and the variable $z$ does not occur in it, then the type environment $z:\sigma$ is compatible with $\Gamma$ for every type $\sigma$.
 We check that this definition behaves as intended. That is, if we can derive a type for some term $t$ in $\Gamma$ then we can derive the same type from $\Gamma\Delta$ where $\Delta$ is compatible with $\Gamma$.
+![](Pasted%20image%2020231106151004.png)
+## Defining the formal predicate
+With this, we are in a position to give the formal definition of a logical predicate.
+![](Pasted%20image%2020231106151129.png)
+![](Pasted%20image%2020231106151143.png)
+In other words, 
