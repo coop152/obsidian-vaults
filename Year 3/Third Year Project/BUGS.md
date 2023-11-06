@@ -1,1 +1,2 @@
 - Changing the calendar that an item is in will not immediately update it's appearance. For example, it will not hide if the destination calendar is hidden and it will not take on the destination calendar's colour.
+- There is a dependency in the tcl on an icon file in `tcl/contrib`
