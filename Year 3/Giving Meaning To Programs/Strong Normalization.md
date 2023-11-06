@@ -6,4 +6,12 @@ In this case we model the properties we are interested in by defining the set of
 Because we've decided to show how a property varies using the type of the terms involved, it makes sense to define not just a single set of "terms which satisfy the property", but instead to make many sets for each type $\tau$, containing only terms of that type. This makes it easier to state what we mean by "varying uniformly" with the type.
 The general idea is that whenever our language gives a way for two terms to interact, there should be a well behaved property that the interaction preserves. In the simply typed lambda calculus the only interaction we have is for one term to be applied to the other. Therefore we need a way of saying that, if two terms hold some property and one is applied to the other, then the resulting term also holds this property. In fact we want an even more uniform notion: we concern ourselves with properties that hold for some function type *if and only if* every application involving that term will preserve the property. 
 Above we described the idea of sets of terms as a way of modelling properties, but this is not actually enough and we need to add a bit of extra information to the terms involved. This is because of free variables, which prevent us from finding the type of a term without an attached type environment. We could try restricting ourselves to terms that contain no free variables, but then we would have no examples at the base type $\iota$. Even for other types we would be making things impossibly difficult because the subterms of our terms with no free variables may themselves contain free variables. Therefore, we attach a type environment to each term in order to keep the reasoning simple.
-A logical predicate $$
+A logical predicate $\mathit{R}$, at a given type $\tau$, is a "set" (strictly, a selection) of pairs of form
+$$(\Gamma,t)$$
+such that:
+- $\Gamma$ is a type environment, and
+- $t$ is a term of type $\tau$ such that $\Gamma \vdash t:\tau$ is derivable.
+
+We denote the logical predicate $\mathit{R}$ at some type $\tau$ as $\mathit{R}_\tau$.
+This notation poses a minor problem in that commas are now being used in pairs but also to combine type environments. We solve this by adopting the convention of dropping the comma between type environments in this context.
+We now forge a connection between these selections at different types by demanding that for all types $\sigma$ and $\tau$, the selection of pairs at type $\sigma \rightarrow \tau$ is completely determined by the selections at type $\sigma$ and $\tau$. We do this by requiring that $\mathit$
