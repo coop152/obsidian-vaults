@@ -40,3 +40,20 @@ With this, we are in a position to give the formal definition of a logical predi
 So, a logical predicate at the base type is defined as a suitable selection of pairs with terms of the base type. Using the recursive structure given, we can determine what happens at higher types.
 Working with this recursive definition is not easy, and if you want to work with a logical predicate you are generally trying to characterise elements at higher types. Later on we provide a particular logical predicate such that $(\Gamma, t)$ being an element of some type implies that term $t$ has a property we care about.
 The definition of a logical predicate means that knowing what happens at base type should allow us to determine if particular pairs are also elements at other types (for example $\iota \rightarrow \iota$). Here is an example:
+
+i give up on this topic
+# Strong Normalization
+One of the concerns we had with the untyped lambda-calculus was that a computation might continue forever by becoming circular. This is one of the ways that we are prevented from reasoning about terms as if they were functions: a function always has a well defined output for every input. We know from the Halting problem that a sufficiently powerful programming language must contain programs that might continue forever, but we show in this section that our type system is so strong that it has eliminated non-termination completely.
+You could consider this a both a good and a bad thing. Bad because while we've made reasoning about programs easier, we've made another language that isn't useful in practise; Good because we have a solid foundation with good properties on top of which we can carefully add features, instead of randomly finding them as a consequence of mind-bending hacks. Either way, it is clearly valuable to prove that the simply typed lambda-calculus really does contain only terminating programs.
+We prove this claim by constructing a suitable logical predicate. Along the way we will introduce another powerful technique, which we then extend to **logical relations** to allow us to prove further results.
+## Terminating reductions
+First we clarify the idea of a program that always halts. We call terms that cannot keep reducing forever **strongly normalizing**. In other words, no matter how we reduce such a term, a sequence of reduction steps starting from that term finishes after a finite number of reductions.
+![](Pasted%20image%2020231107122302.png)
+Note that for some terms $t$ and $t'$ there may be various lengths of reduction sequences. For example, the term
+$$(\lambda x.xx)\lambda x.xx$$
+beta-reduces to itself, so we can construct a reduction sequence of any length where all terms are equal to the given term. This includes a reduction sequence of length 0, because eventual beta reduction is reflexive.
+Using this idea, we define the notion that we are interested in.
+![](Pasted%20image%2020231107122700.png)
+In other words, if we drew a graph indicating all of the possible reductions for a strongly normalizing term then all the branches would end after a finite number of steps. This is a comforting property from the point of view of a compiler writer - it means that to calculate the "final answer" of a strongly normalizing term we don't need to be particularly careful about which branch of computation we go down, because every branch will eventually resolve. In this section we will show that the simply typed lambda-calculus demonstrates this property for all terms.
+Similarly to previous proofs, we first check that this notion works well with alpha equivalence:
+![](Pasted%20image%2020231107123146.png)
