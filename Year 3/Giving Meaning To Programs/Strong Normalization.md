@@ -57,3 +57,5 @@ Using this idea, we define the notion that we are interested in.
 In other words, if we drew a graph indicating all of the possible reductions for a strongly normalizing term then all the branches would end after a finite number of steps. This is a comforting property from the point of view of a compiler writer - it means that to calculate the "final answer" of a strongly normalizing term we don't need to be particularly careful about which branch of computation we go down, because every branch will eventually resolve. In this section we will show that the simply typed lambda-calculus demonstrates this property for all terms.
 Similarly to previous proofs, we first check that this notion works well with alpha equivalence:
 ![](Pasted%20image%2020231107123146.png)
+What examples of strongly normalizing terms can we give at this stage? At the very least, every variable of base type is strongly normalizing because there are no reductions to take. We can say no more with our current progress defining strong normalization. We can, at least, show some useful properties of strong normalization to make it easier to work with.
+![](Pasted%20image%2020231107125435.png)
