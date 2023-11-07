@@ -59,3 +59,7 @@ Similarly to previous proofs, we first check that this notion works well with al
 ![](Pasted%20image%2020231107123146.png)
 What examples of strongly normalizing terms can we give at this stage? At the very least, every variable of base type is strongly normalizing because there are no reductions to take. We can say no more with our current progress defining strong normalization. We can, at least, show some useful properties of strong normalization to make it easier to work with.
 ![](Pasted%20image%2020231107125435.png)
+## A logical predicate for strong normalization
+Our strategy to prove that all typeable terms must be strongly normalizing is to build a logical predicate $S$ which obviously implies strong normalization.
+We start by defining the logical predicate for the base type. We set
+![](Pasted%20image%2020231107130055.png)
