@@ -64,4 +64,3 @@ Our strategy to prove that all typeable terms must be strongly normalizing is to
 We start by defining the logical predicate for the base type. We set
 ![](Pasted%20image%2020231107130055.png)
 What about higher types? Assume that $\Gamma \vdash x:\sigma \rightarrow \tau$ is derivable. We need to check the given condition, so let's assume we have $(\Delta, u) \in S_\sigma$ such that $\Delta$ is compatible with $\Gamma$. Now we need to confirm that $(\Gamma\Delta, xu)$ is in $S_\tau$.
-This requires us to also know something about $S_\sigma$ 
