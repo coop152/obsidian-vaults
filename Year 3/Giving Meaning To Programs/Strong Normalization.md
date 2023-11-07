@@ -36,6 +36,7 @@ We check that this definition behaves as intended. That is, if we can derive a t
 With this, we are in a position to give the formal definition of a logical predicate.
 ![](Pasted%20image%2020231106151129.png)
 ![](Pasted%20image%2020231106151143.png)
+(I think this definition is wrong. in the step case it ought to say $\Gamma \vdash t:\sigma \rightarrow \tau$)
 So, a logical predicate at the base type is defined as a suitable selection of pairs with terms of the base type. Using the recursive structure given, we can determine what happens at higher types.
 Working with this recursive definition is not easy, and if you want to work with a logical predicate you are generally trying to characterise elements at higher types. Later on we provide a particular logical predicate such that $(\Gamma, t)$ being an element of some type implies that term $t$ has a property we care about.
 The definition of a logical predicate means that knowing what happens at base type should allow us to determine if particular pairs are also elements at other types (for example $\iota \rightarrow \iota$). Here is an example:
