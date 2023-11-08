@@ -140,3 +140,8 @@ They broadly fall into two categories:
 2D/3D grids of components, which form convenient regular structures on a silicon surface.
 ![](Pasted%20image%2020231108122417.png)
 'Random' networks, which behave like conventional computer networks. They may be packet or circuit switched.
+# Timing (GALS)
+As clock speeds increase and wiring delays become more significant, it is difficult to maintain a synchronous clock model across an entire chip.
+One solution to this problem is to allow different IP blocks to be clocked independently - It is then the job of the interconnection to cross the clock domains.
+This form of interconnection is known as GALS (Globally Asynchronous, Locally Synchronous). GALS removes a number of timing constraints which makes timing closure much easier. Each block is developed as a synchronous circuit but there is no need for chip-wide skew-free clock distribution.
+As a consequence, you may be able to run each block at a more suitable frequency than you could otherwise, achieving power reduction.
