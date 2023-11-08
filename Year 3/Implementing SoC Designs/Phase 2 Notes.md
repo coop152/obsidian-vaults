@@ -28,6 +28,12 @@ switch (state) {
 	case DRAW {
 		/* see other section, itll be big */
 	}
+	case ITER {
+		pixnum = 0;
+		if (x <= y) { // off by one error? CHECK LATER
+			
+		}
+	}
 }
 ```
 
@@ -53,7 +59,6 @@ switch (pixnum) {
 		x = -y;
 		y = -x; // swap and negate coords, to get back to (x, y) from the start
 		// then go onto the next angle
-		pixnum = 0;
 		state = ITER;
 	}
 }
