@@ -1,3 +1,25 @@
+# Circle algorithm in python
+```python
+def circ(x0, y0, r, fb):
+    x = 0									// IDLE 
+    y = r									// IDLE 
+    p = r									// IDLE 
+    while x <= y:							// ITER 
+        fb[x0 + x, y0 + y] = (255,0,0)	    // DRAW
+        fb[x0 + y, y0 + x] = (255,0,0)	    // DRAW
+        fb[x0 - x, y0 + y] = (255,0,0)    	// DRAW
+        fb[x0 - y, y0 + x] = (255,0,0)    	// DRAW
+        fb[x0 + x, y0 - y] = (255,0,0)    	// DRAW
+        fb[x0 + y, y0 - x] = (255,0,0)    	// DRAW
+        fb[x0 - x, y0 - y] = (255,0,0)    	// DRAW
+        fb[x0 - y, y0 - x] = (255,0,0)    	// DRAW
+            
+        p = p - 2*x					    	// ITER
+        x = x + 1					    	// ITER
+        if p < 0:					    	// ITER
+            p = p + 2*y			        	// ITER
+            y = y - 1			        	// ITER
+```
 # State switching
 ```c
 switch (state) {
