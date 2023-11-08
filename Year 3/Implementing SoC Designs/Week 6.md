@@ -106,3 +106,16 @@ Transactions may be completed out-of-order to maximise performance.
 The transaction for a write operation comprises a write command of the address and the burst size, followed by a burst of write data, and concluding with a status response.
 A read transaction is similar, but the data burst and status response are returned together.
 Each channel has a transaction ID, which allows elements from multiple outstanding transactions to be matched appropriately.
+
+### AXI Pipelining
+Data transfer through AXI can be pipelined to reduce the distance travelled per clock cycle and thus allow faster clocking and higher throughput.
+![](Pasted%20image%2020231108114934.png)
+When a stage receives data, it checks it and if it is valid it asserts valid to the next stage. In addition, if the stage is not ready (i.e. it is working) then it will not assert ready to the previous stage. If a stage is asserting valid, and the next stage is asserting ready, then a transfer takes place.
+If the pipeline can accept and pass on data simultaneously, then data can move on every single cycle.
+![](Pasted%20image%2020231108115227.png)If a stage indicates that it is ready to accept data then that is a **commitment**. It cannot take it back - there is no time to propagate a signal through the pipe to indicate this. There are two solutions to this:
+1. Don't indicate that you are ready unless you are absolutely ready (i.e. empty). This is simple in design, but the pipeline can never be more than half full.
+2. Be prepared to accept new data, even if you failed to pass on the current packet. This unlocks the full bandwidth of the pipeline but it requires twice as many flip-flops in each stage, half of which are normally unused.
+
+Solution 1 takes less area, but Solution 2 is faster.
+![](Pasted%20image%2020231108115831.png)
+# Bus Hierarchies
