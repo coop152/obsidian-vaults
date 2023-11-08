@@ -73,4 +73,31 @@ What kinds of errors can arise on a bus? We know of some memory operations error
 	- May be writing to a privileged area.
 - Page fault: the address given is legal, but it doesn't map to any physical memory at this time.
 
-These errors are generally detected by a Memory Management Unit (MMU) before they reach the bus, but there are some that cannot be trapped there and will cause bus cycles. For example, consider an I/O device that has 16 internal registers, but is mapped into the master's memory as an entire 1KB page. If the master attempts to access outside of the first 16 addresses in the "page", then the device must indicate that an invalid operation has occurred. The MMU **could not** catch this error early; it is only concerned with entire pages and not individual addresses
+These errors are generally detected by a Memory Management Unit (MMU) before they reach the bus, but there are some that cannot be trapped there and *will* cause bus cycles.
+For example, consider an I/O device that has 16 internal registers, but is mapped into the master's memory as an entire 1KB page. If the master attempts to access outside of the first 16 addresses in the "page", then the device must indicate that an invalid operation has occurred. The MMU **could not** catch this error early; it is only concerned with entire pages and not individual addresses.
+
+## AHB (Advanced High-performance Bus)
+AHB is a pipelined bus, which can perform one transfer per clock cycle.
+![](Pasted%20image%2020231108111424.png)
+AHB is moderately complex. Not shown on the diagram is the centralised arbitration system, which allows multiple masters to use the bus. Like APB, bus cycles can be extended or aborted. AHB is high performance enough to be used as a processor bus on medium performance devices (e.g. ARM9).
+
+Because AHB is pipelined, the procedure for using it is more complicated. In one clock cycle, the master must:
+1. Latch any incoming data on the read bus
+2. Provide data on the write bus, if the previous clock was a write command
+3. Send the next command, if it has another command to send
+
+The peripheral must:
+1. Latch the address from the last cycle's command
+2. Begin whatever work it has been told to do (if writing, read the write data bus)
+3. Put the result on the read data bus
+
+This arrangement allows high bus throughput, but it causes difficulties when things don't go smoothly:
+- If a peripheral is slow and needs to insert wait states, it does this in the "data phase". In other words, it informs the master (and other peripherals) that it needs more time the cycle it was expected to give a result; in this case, the master needs to hold the *next* command for longer, and the peripheral that performs that next command (if it is not the current one) needs to wait too.
+![](Pasted%20image%2020231108113154.png)
+- If a cycle results in an abort, the pipeline needs to be flushed. In this case, all peripherals must watch carefully for other devices aborting so that they don't start working on the subsequent cycle (which may already have been requested).
+![](Pasted%20image%2020231108113301.png)
+
+## AXI (Advanced eXtensible Interface)
+AXI works more like a network than a bus. It revolves around **transactions** as opposed to bus cycles.
+![](Pasted%20image%2020231108113639.png)
+Information is sent over (semi-)independent channels, each of which is unidirectional and may also be pipelined. 
