@@ -100,4 +100,9 @@ This arrangement allows high bus throughput, but it causes difficulties when thi
 ## AXI (Advanced eXtensible Interface)
 AXI works more like a network than a bus. It revolves around **transactions** as opposed to bus cycles.
 ![](Pasted%20image%2020231108113639.png)
-Information is sent over (semi-)independent channels, each of which is unidirectional and may also be pipelined. 
+Information is sent over (semi-)independent channels, each of which is unidirectional and may also be pipelined.  The latency for each command may be many cycles, but the support for **burst transmission** can significantly improve the throughput.
+Transactions may be completed out-of-order to maximise performance.
+
+The transaction for a write operation comprises a write command of the address and the burst size, followed by a burst of write data, and concluding with a status response.
+A read transaction is similar, but the data burst and status response are returned together.
+Each channel has a transaction ID, which allows elements from multiple outstanding transactions to be matched appropriately.
