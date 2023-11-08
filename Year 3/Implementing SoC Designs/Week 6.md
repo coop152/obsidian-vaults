@@ -119,3 +119,24 @@ If the pipeline can accept and pass on data simultaneously, then data can move o
 Solution 1 takes less area, but Solution 2 is faster.
 ![](Pasted%20image%2020231108115831.png)
 # Bus Hierarchies
+## An example
+![](Pasted%20image%2020231108120956.png)
+This is the block diagram for the ARM device used in the laboratories. It uses:
+- AHB interfaces for high-performance devices (ROM, USB, LCD controller)
+- A bus switch to facilitate parallel operations
+- APB via a bridge for the low-performance peripherals
+- A direct bus to RAM (TCM, Tightly Coupled Memory)
+
+The bridge between the crossbar switch and the APB bus handles converting from the AHB protocol to the APB protocol.
+
+While this device does not use of AXI, there is still a possibility here for completing commands out of order. For example, a request can be sent to the slow I/O over the bridge and the APB, and before that completes a request can be made to RAM and completed.
+![](Pasted%20image%2020231108121709.png)
+This reduces latency for certain urgent operations (in this case, preventing RAM from having to wait for the slow I/O), but introduces more complexity into the design.
+
+## Network on Chip (NoC)
+As the amount of things integrated into SoC's increases, simple bus structures like previously shown have become inadequate. Network on Chip is a new approach for these dense SoC's.
+They broadly fall into two categories:
+![](Pasted%20image%2020231108122326.png)
+2D/3D grids of components, which form convenient regular structures on a silicon surface.
+![](Pasted%20image%2020231108122417.png)
+'Random' networks, which behave like conventional computer networks. They may be packet or circuit switched.
