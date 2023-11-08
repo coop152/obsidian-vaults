@@ -1,3 +1,9 @@
+# Inputs
+We say that
+- r0 is x0
+- r1 is y0
+- r4 is radius (as to not step on x1 and y1's toes from line drawing)
+- r6 is colour (to match with line drawing)
 # Circle algorithm in python
 ```python
 def circ(x0, y0, r, fb):
