@@ -77,3 +77,6 @@ We give a name to these irreducible terms that are either variables or applicati
 ![](Pasted%20image%2020231109123317.png)
 In other words:
 A term is $\Gamma$-concrete for a first order type environment $\Gamma$ if it is a free variable given a type by $\Gamma$, or if it is an application of many such variables.
+Conversely, If a first order type environment assigns some term a first order type $\tau$ then either $t$ reduces to a $\Gamma$-concrete term or it reduces to an abstraction that returns an irreducible term.
+
+$\Gamma$-concrete terms are alpha-equivalent only to themselves, so in the first case of Corollary 2.22 our term reduces to a unique irreducible term. If our term is of base type, then the irreducible term it reduces to cannot be an abstraction and it must be $\Gamma$-concrete. Therefore in that situation there is a unique value we can think of as a result of the calculation represented by the term.
