@@ -66,3 +66,10 @@ We start by defining the logical predicate for the base type. We set
 What about higher types? Assume that $\Gamma \vdash x:\sigma \rightarrow \tau$ is derivable. We need to check the given condition, so let's assume we have $(\Delta, u) \in S_\sigma$ such that $\Delta$ is compatible with $\Gamma$. Now we need to confirm that $(\Gamma\Delta, xu)$ is in $S_\tau$.
 
 (just watch the videos this is baffling)
+
+# Irreducible terms and computation of values
+Since every typeable term in the simply typed lambda-calculus is strongly normalising, we know that every term evaluates to an irreducible term that is unique up to alpha-equivalence. We can consider this term the result of our computation, or as the value that was encoded in the original term.
+When we try to understand the behaviour of terms in the coming sections, we would like to test them with terms that produce a result/term of type $\iota$, and we would like to only test them with data that is 'concrete'. We begin by defining the types that we expect to employ.
+![](Pasted%20image%2020231109105003.png)
+In other words, a type is first order if it is composed entirely of $\iota$. That includes types that are themselves composed entirely of $\iota$ (i.e. are first order types), even if they are included by another name (e.g. $\tau$).
+![](Pasted%20image%2020231109105026.png)
