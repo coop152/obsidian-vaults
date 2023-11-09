@@ -17,7 +17,10 @@
 	- [ ] use modern file APIs
 	- [ ] Resolve code safety warnings (remove `_CRT_SECURE_NO_WARNINGS` from preprocessor definitions to see them)
 - [ ] (?) Port from Tk to Qt (or similar), remove tcl completely from the project
-- [ ] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
+- [x] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
 
 # How should deleting work
-have another file .calendar.del
+- Have another file %s.del for each calendar file (e.g. .calendar has .calendar.del, .coolcal has .coolcal.del)
+- When an appointment/note is deleted, write it to the .del file and remove it from the main calendar file
+	- Fortunately the program is so old it lacks a "delete" operation, so this can easily be added to the menus and bound to the Del key
+- 
