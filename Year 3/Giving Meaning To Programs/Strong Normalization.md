@@ -73,3 +73,7 @@ When we try to understand the behaviour of terms in the coming sections, we woul
 ![](Pasted%20image%2020231109105003.png)
 In other words, a type is first order if it is composed entirely of $\iota$. That includes types that are themselves composed entirely of $\iota$ (i.e. are first order types), even if they are included by another name (e.g. $\tau$).
 ![](Pasted%20image%2020231109105026.png)
+We give a name to these irreducible terms that are either variables or applications.
+![](Pasted%20image%2020231109123317.png)
+In other words:
+A term is $\Gamma$-concrete for a first order type environment $\Gamma$ if it is a free variable given a type by $\Gamma$, or if it is an application of many such variables.
