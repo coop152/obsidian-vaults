@@ -20,3 +20,4 @@
 - [x] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
 
 # How should deleting work
+Check emails sent to Richard for a plan that I sent previously. Some fake mock-ups wouldn't go wrong! ALSO REMEMBER TO MAKE A BRANCH
