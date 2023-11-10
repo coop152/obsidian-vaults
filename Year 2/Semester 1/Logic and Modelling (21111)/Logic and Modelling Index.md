@@ -1,5 +1,5 @@
 ## Topics
-- [Propositional Logic](Propositional%20Logic.md)
+- [Propositional Logic](Year%202/Semester%201/Logic%20and%20Modelling%20(21111)/Propositional%20Logic.md)
 - [Conjunctive Normal Form](Conjunctive%20Normal%20Form.md)
 
 ## Algorithms & Data Structures

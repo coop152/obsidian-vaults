@@ -10,3 +10,4 @@
 - [[Turing Machines]]
 - [[Complexity of Turing Machines]]
 - [NP-Completeness](Year%203/Algorithms%20and%20Complexity/NP-Completeness.md)
+- [Propositional Logic](Year%203/Algorithms%20and%20Complexity/Propositional%20Logic.md)
