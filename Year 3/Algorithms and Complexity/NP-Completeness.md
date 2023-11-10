@@ -33,3 +33,10 @@ For an assignment to satisfy a cnf formula (of any clause size), each clause mus
 So we have shown that if CLIQUE is solvable in polynomial time, so is 3SAT. This connection may seem quite remarkable at first, because these problems are superficially quite different. Regardless, polynomial time reducibility allows us to link their complexities. Now we turn to a definition that will allow us to similarly link the complexities of an entire class of problems.
 ![](Pasted%20image%2020231110143942.png)
 ![](Pasted%20image%2020231110144032.png)
+![](Pasted%20image%2020231110144259.png)
+# The Cook-Levin Theorem
+Once we have one NP-Complete problem, we can obtain others by polynomial time reduction from it. However, how do we establish the first NP-complete problem? The following theorem proves that SAT is NP-complete:
+
+![](Pasted%20image%2020231110144520.png)
+![](Pasted%20image%2020231110144736.png)
+![](Pasted%20image%2020231110144831.png)
