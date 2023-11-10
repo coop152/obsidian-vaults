@@ -40,3 +40,22 @@ Perhaps we want to allow the user to select an object. Cast a ray through the pi
 Hitscan weapons in video games (assuming they are perfectly accurate) work in much the same way.
 And, back to graphics, if you want to find the colour of a pixel then you start by casting a ray.
 ![](Pasted%20image%2020231110155244.png)
+With this new technique, we are ready to describe an algorithm for rendering a scene using rays that is actually feasible.
+## Whitted's Algorithm
+While every ray that reaches the viewpoint definitely originated from a light source, not every ray that originates from a light source will reach the viewpoint. This is the most important observation that Turner Whitted made, and which motivates this algorithm.
+Whitted's algorithm functions by casting rays from the viewpoint, through the view plane and into the scene and noting interactions with surfaces and light sources as it bounces around the scene. When the ray expires these interactions can be "reversed", giving a colour for the pixel.
+
+Lets go through an example. We shoot a ray through the pixel we wish to render:
+![](Pasted%20image%2020231110160451.png)
+The ray moves forward until it comes in contact with an object, in this case the semi-transparent green ball. At this point we generate a new kind of ray called a **shadow ray**, or a **shadow feeler ray**. These rays are fired toward every light source in the scene - in this case there is only the one.
+![](Pasted%20image%2020231110160548.png)
+Our shadow ray reached the light source without any interactions with other objects, so we know there is direct light upon the sphere from the direction of the light. We note this interaction down and carry on.
+![](Pasted%20image%2020231110160921.png)
+The light refracts through the sphere and reaches the other side. At this point another shadow ray is generated, which reaches the light source again.
+![](Pasted%20image%2020231110161030.png)
+We continue following the ray until it hits the box. Again we cast a shadow ray, but this time it collides with the cylinder: The box is in shadow at that point.
+We carry on doing this until some stopping point. This may be because the ray runs out of energy, because it leaves the scene, or because we set a max bounce count which it has exceeded.
+We do this for every single pixel until we have filled the view plane in:
+![](Pasted%20image%2020231110161315.png)
+And we have a completed render.
+You may have noticed that rays were never scattered; how does this rendering algorithm handle diffuse reflections? The answer is that it does not. Whitted's algorithm disregards any scattering properties of materials and thus renders all objects as perfectly specular (and very shiny).
