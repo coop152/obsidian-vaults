@@ -21,7 +21,7 @@
 - [El Gamal Encryption](El%20Gamal%20Encryption.md)
 - [Primality Test](Primality%20Test.md)
 - [Tractability](Tractability.md)
-- [NP-Completeness](NP-Completeness.md)
+- [NP-Completeness](Year%202/Algorithms%20and%20Data%20Structures%20(26120)/Semester%202/NP-Completeness.md)
 
 #### [Menti](www.menti.com)
 1232 7163
