@@ -17,19 +17,20 @@ Using raytracing to render an image can generate some incredibly realistic image
 - The soft shadows
 - The depth of field (!)
 
-## A simple example
+## An algorithm
+Imagine a simple 3D scene with a camera, a light, and some objects with varied materials. Let's try rendering this scene by accurately simulating a light ray from the lightbulb.
 ![](Pasted%20image%2020231110153329.png)
-A lightbulb emits a ray of light towards the semi-transparent green ball. When the ray connects with the surface it is reflected, transmitted and absorbed in some proportion according to the BSDF of the ball. Some light reflects into the camera, and is shifted to a green shade. Some transmits through the ball to the other side, bouncing again into the diffuse blue floor where it is scattered evenly. One of those rays, with the last of it's energy, bounces into the blue cube and is absorbed.
+The ray of light is emitted towards the semi-transparent green ball. When the ray connects with the surface it is reflected, transmitted and absorbed in some proportion according to the BSDF of the ball. Some light reflects into the camera, and is shifted to a green shade. Some transmits through the ball to the other side, bouncing again into the diffuse blue floor where it is scattered evenly. One of those rays, with the last of it's energy, bounces into the blue cube and is absorbed.
 This happens again and again, for every ray that the lightbulb emits (which is an innumerable amount).
 ![](Pasted%20image%2020231110153716.png)
-There are some obvious problems here aside from just the number of rays; the fact that our rays are splitting apart and becoming more rays is giving us a recursive tree-like structure: We only considered one of the rays that scattered from the floor, but its much more likely that the scattering created a multitude more rays:
+There are some obvious problems here aside from just the number of rays; the fact that our rays are splitting apart and becoming more rays is giving us a recursive tree-like structure. We only considered one of the rays that scattered from the floor, but its much more likely that the scattering created a multitude more rays:
 ![](Pasted%20image%2020231110153925.png)
 All of these new rays might spawn yet more rays when they collide with other surfaces, leading to an insane amount of calculation. And all of this to potentially **not even land a single ray into the camera**.
 
-Before we discuss how this can be resolved, we clear out the scene and introduce the **view plane**:
+Before we discuss how this can be resolved, lets learn another technique. We clear out the scene and introduce the **view plane**:
 ![](Pasted%20image%2020231110154205.png)
 This is a plane perpendicular to the camera, with a grid that represents the pixels in the final image we wish to render.
-Imagine that we shoot a single ray **from the camera** and into the scene, through one of the pixels in this view plane. This is called **raycasting**:
+We shoot a single ray **from the camera** and into the scene, through one of the pixels in this view plane. This is called **raycasting**:
 ![](Pasted%20image%2020231110154338.png)
 We can use the intersection of this ray with the objects in the scene to generate an image that represents certain properties of the scene, such as perspective, distance and occlusion.
 Raycasting can be used for many things, including things not related to graphics. Imagine seeing the scene from the point of view of the camera, through the view plane:
