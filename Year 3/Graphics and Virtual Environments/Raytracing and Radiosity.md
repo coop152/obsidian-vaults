@@ -59,3 +59,4 @@ We do this for every single pixel until we have filled the view plane in:
 ![](Pasted%20image%2020231110161315.png)
 And we have a completed render.
 You may have noticed that rays were never scattered; how does this rendering algorithm handle diffuse reflections? The answer is that it does not. Whitted's algorithm disregards any scattering properties of materials and thus renders all objects as perfectly specular (and very shiny).
+![](Pasted%20image%2020231110161706.png)
