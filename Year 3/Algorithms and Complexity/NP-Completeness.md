@@ -15,3 +15,7 @@ We have a concept of reducing a problem to another. When problem $A$ reduces to 
 When problem $A$ is *efficiently* reducible to problem $B$, an *efficient* solution to $B$ can be used to solve $A$ *efficiently*.
 ![](Pasted%20image%2020231110141806.png)
 ![](Pasted%20image%2020231110141842.png)
+![](Pasted%20image%2020231110142355.png)
+As with the regular reduction, a polynomial time reduction of $A$ to $B$ provides a way to take a membership test for $A$ and use it to test for membership in $B$. To test if $w \in A$, we use $f$ to map $w$ to $f(w)$ and then test if $f(w) \in B$.
+If a language is polynomial time reducible to a language that is already known to have a polynomial time solution, then we have a polynomial time solution to the original language:
+![](Pasted%20image%2020231110142450.png)
