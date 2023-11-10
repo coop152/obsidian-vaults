@@ -32,3 +32,10 @@ This is a plane perpendicular to the camera, with a grid that represents the pix
 Imagine that we shoot a single ray **from the camera** and into the scene, through one of the pixels in this view plane. This is called **raycasting**:
 ![](Pasted%20image%2020231110154338.png)
 We can use the intersection of this ray with the objects in the scene to generate an image that represents certain properties of the scene, such as perspective, distance and occlusion.
+Raycasting can be used for many things, including things not related to graphics. Imagine seeing the scene from the point of view of the camera, through the view plane:
+![](Pasted%20image%2020231110154941.png)
+Perhaps we want to allow the user to select an object. Cast a ray through the pixel the user clicks, and select the first object that intersects the ray:
+![](Pasted%20image%2020231110155045.png)
+Hitscan weapons in video games (assuming they are perfectly accurate) work in much the same way.
+And, back to graphics, if you want to find the colour of a pixel then you start by casting a ray.
+![](Pasted%20image%2020231110155244.png)
