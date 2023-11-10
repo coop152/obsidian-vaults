@@ -8,3 +8,27 @@ For example, if you want to find a point along the ray at some distance $t$, you
 ![](Pasted%20image%2020231110151818.png)
 Which is called the explicit equation of the ray.
 
+![](Pasted%20image%2020231110152857.png)
+Using raytracing to render an image can generate some incredibly realistic images. Many of the impressive effects in this image just come standard with using raytracing:
+- The realistic reflections
+- The transparency
+- The glass and liquid refractions
+- The specular highlights
+- The soft shadows
+- The depth of field (!)
+
+## A simple example
+![](Pasted%20image%2020231110153329.png)
+A lightbulb emits a ray of light towards the semi-transparent green ball. When the ray connects with the surface it is reflected, transmitted and absorbed in some proportion according to the BSDF of the ball. Some light reflects into the camera, and is shifted to a green shade. Some transmits through the ball to the other side, bouncing again into the diffuse blue floor where it is scattered evenly. One of those rays, with the last of it's energy, bounces into the blue cube and is absorbed.
+This happens again and again, for every ray that the lightbulb emits (which is an innumerable amount).
+![](Pasted%20image%2020231110153716.png)
+There are some obvious problems here aside from just the number of rays; the fact that our rays are splitting apart and becoming more rays is giving us a recursive tree-like structure: We only considered one of the rays that scattered from the floor, but its much more likely that the scattering created a multitude more rays:
+![](Pasted%20image%2020231110153925.png)
+All of these new rays might spawn yet more rays when they collide with other surfaces, leading to an insane amount of calculation. And all of this to potentially **not even land a single ray into the camera**.
+
+Before we discuss how this can be resolved, we clear out the scene and introduce the **view plane**:
+![](Pasted%20image%2020231110154205.png)
+This is a plane perpendicular to the camera, with a grid that represents the pixels in the final image we wish to render.
+Imagine that we shoot a single ray **from the camera** and into the scene, through one of the pixels in this view plane. This is called **raycasting**:
+![](Pasted%20image%2020231110154338.png)
+We can use the intersection of this ray with the objects in the scene to generate an image that represents certain properties of the scene, such as perspective, distance and occlusion.
