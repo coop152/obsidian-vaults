@@ -27,3 +27,9 @@ A formula is in 3-cnf form if it is in Conjunctive Normal Form and each clause h
 ![](Pasted%20image%2020231110142902.png)
 For an assignment to satisfy a cnf formula (of any clause size), each clause must contain at least one literal that evaluates to 1. The following theorem presents a polynomial time reduction from 3SAT to the **CLIQUE** problem.
 ![](Pasted%20image%2020231110143108.png)
+![](Pasted%20image%2020231110143659.png)
+![](Pasted%20image%2020231110143708.png)
+![](Pasted%20image%2020231110143716.png)
+So we have shown that if CLIQUE is solvable in polynomial time, so is 3SAT. This connection may seem quite remarkable at first, because these problems are superficially quite different. Regardless, polynomial time reducibility allows us to link their complexities. Now we turn to a definition that will allow us to similarly link the complexities of an entire class of problems.
+![](Pasted%20image%2020231110143942.png)
+![](Pasted%20image%2020231110144032.png)
