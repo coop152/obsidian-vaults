@@ -143,5 +143,25 @@ Before all that though, we need to be able to solve the radiosity equation, and 
 ## Form Factor
 Form Factor is the $F_{ij}$ part of this equation (and the $F(x,x')$ part of the integral version) which we glossed over before:
 ![](Pasted%20image%2020231111144243.png)
-
+The form factor is a number between 0 and 1 which represents the visibility of one patch from another. In other words, it attenuates the exchange of energy between two patches from "none" to "as much as possible".
+Calculating the form factor requires some more math involving hemispheres.
 ![](Pasted%20image%2020231111150646.png)
+Before getting directly into any formulae, consider the 4 things that influence visibility between two patches:
+The size of the patches. All other variables being equal, a bigger patch will emit more energy.
+
+The distance between the two patches. Electromagnetic energy (such as light) attenuates according to the inverse square of the distance between the source and destination. More concretely, we say that the irradiance of a surface is proportional to $1/r^2$.
+![](Pasted%20image%2020231111152237.png)
+
+The orientation of the two patches relative to eachother. If two patches are barely facing each other, then there will be little meaningful exchange of energy:
+![](Pasted%20image%2020231111152402.png)
+But if they are facing each other head-on, there is a maximal amount of energy transfer:
+![](Pasted%20image%2020231111152441.png)
+We can express this orientation in terms of the angles between the normals.
+
+If we assemble these observations, we get this formula:
+![](Pasted%20image%2020231111152917.png)
+But we've only talked about 3 things so far. The final observation missing is:
+
+If something is in the way. 
+![](Pasted%20image%2020231111153108.png)
+An object occluding the energy transfer could completely block the energy, or only absorb some of it. This is where the hemispheres come into the equation
