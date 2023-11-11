@@ -101,7 +101,7 @@ Despite being a single surface with a single colour, the actual perceived colour
 Any meaningful model based on Radiosity will need to deal with this fact; if we just take every surface in the scene as a patch then each surface can only be one exact colour. We do this by splitting surfaces apart into many small patches.
 ![](Pasted%20image%2020231111141722.png)
 
-## An example
+## The theoretical definition
 Let's take the surface $A_X$ and consider it's relationship to the other surfaces in the scene (a single one shown here as $A_{X'}$):
 ![](Pasted%20image%2020231111141947.png)
 This relationship is expressed via this formula:
@@ -114,15 +114,34 @@ $$\int_S B(x') \cdot F(x,x') \delta A'$$
 which is the sum of all inbound energy on the section.
 Breaking this integral down further, we note that $S$ simply represents all surfaces in the scene.
 $B(x')$ is a recursion, representing the total energy leaving that surface and being received by this one.
-$F(x,x')$ is the "form factor" of $x$ to $x'$. This evaluates to 1 if the two points are completely visible to each other, and 0 if they aren't.
+$F(x,x')$ is the "form factor" of $x$ to $x'$. This ranges from 1 if the two points are completely visible to each other, to 0 if they aren't.
 
 Since this is an integration, we would like to take it to it's limit and get a continuous result - this would give us perfectly smooth shadows. Unfortunately, this is another Fredholm Equation of the Second Kind, and there is no analytical solution. It has the same infinite recursion problem as the rendering equation. So, can we make this method computationally feasible?
 
+## The actual definition
 First of all, we drop the integral and give up on a perfectly continuous result. We will be calculating radiosity on actual small patches of the surface. Changing the equation to take this into account, we get:
 ![](Pasted%20image%2020231111144243.png)
-So we subdivide our surfaces into tiny patches which can only have a single colour. We have to make these patches small if we want a smooth looking result:
+So we subdivide our surfaces into tiny patches which can only have a single colour each. We have to make these patches small if we want a smooth looking result:
 ![](Pasted%20image%2020231111144156.png)
 Even this example would be noticeably blocky unless it was rendered at a very low resolution.
 Let's return to our new equation:
 ![](Pasted%20image%2020231111144243.png)
-Solving this is now technically possible, by solving a number of simultaneous equations that scales with the number of patches. This is still insanely computationally intensive, considering how small the patches must be and therefore how many there must be.
+Solving this is now technically possible, by solving a number of simultaneous equations that scales with the number of patches. This is still insanely computationally intensive, considering how small the patches must be and therefore how many there must be. It would be completely unfeasible to render this in real-time. Fortunately, we don't need to.
+While we have discussed how surfaces, light sources and light itself factors into this model, we haven't mentioned a viewpoint yet, and this is for good reason; **radiosity does not have a viewpoint**. 
+The light information calculated during raytracing is specific to the location of the observer, making it an **image space** algorithm. Conversely, the light information calculated with radiosity is in **object space**. In other words, if you move the viewpoint when using a raytracing model then you have to fire all of the rays again from the new viewpoint to get an image because the calculated light information is now useless. If you move the viewpoint when using a radiosity model, you don't need to do the compute intensive calculations again because the light information is still valid.
+## Texture baking
+You can optimise it even further; instead of rendering each of the individual patches (which might still be computationally taxing), you can **bake** the colours of the patches into a texture, which you apply to the original un-subdivided surface.
+Looks like patches:
+![](Pasted%20image%2020231111150032.png)
+Actually just a texture:
+![](Pasted%20image%2020231111150012.png)
+This is called a **lightmap**.
+![](Pasted%20image%2020231111150141.png)
+Up to a point, pre-baked lighting like this is very flexible; as long as the light sources in the scene do not change then you only need one light map, and even if they do you can probably get away with making several light maps and switching between them (e.g. for flickering lights).
+
+Before all that though, we need to be able to solve the radiosity equation, and we're still missing a part of it.
+## Form Factor
+Form Factor is the $F_{ij}$ part of this equation (and the $F(x,x')$ part of the integral version) which we glossed over before:
+![](Pasted%20image%2020231111144243.png)
+
+![](Pasted%20image%2020231111150646.png)
