@@ -62,3 +62,64 @@ You may have noticed that rays were never scattered; how does this rendering alg
 ![](Pasted%20image%2020231110161706.png)
 
 # Radiosity
+Radiosity is another rendering technique which, unlike raycasting, can handle diffuse reflections. 
+While raytracing treats light as a concrete object (rays), radiosity instead treats light as a quantity on a surface which is exchanged directly between surfaces.
+![](Pasted%20image%2020231111133927.png)
+While raytracing can cope very well with transparent and specular objects, it is infeasible to render diffuse reflections due to the massive explosion in the number of light rays required for scattering. In contrast Radiosity excels at soft shadows, colour bleed and subtle lighting but significantly complicates the rendering of transparent and specular materials.
+
+When raytracing a scene, we are concerned with the relationship between rays, the surfaces they collide with, and the light sources in the scene. The result is an image with all of the "detail": In this example raytracing does a good job rendering the glassy texture on the plaque and wine glasses, the reflectivity of the doors on the cabinet, and the specular sheen on the plant pot.
+![](Pasted%20image%2020231111134618.png)
+When using radiosity to render a scene, we are concerned with **patches** of surfaces and how they are influenced by both the light sources in the scene and the surrounding patches.
+![](Pasted%20image%2020231111134824.png)
+This method does better at rendering matte surfaces, which in most cases are much more prevalent than the kind of surfaces that raytracing excels at.
+
+To show how accurate radiosity can be, here is a classic example called the Cornel Box:
+![](Pasted%20image%2020231111135156.png)
+On the left is a real photograph of a physical Cornel Box, with everything from lighting to positioning carefully calibrated. On the right is a computer render of the same scene. The idea is to use the real photograph as a reference to compare a render against. If we subtract one image from the other, we can get a representation of the difference between our real photo and our render:
+![](Pasted%20image%2020231111135428.png)
+These are actual historical images from Cornel's original experiment, so they are quite low quality and the render itself has more errors than a modern one would. Here is a modern recreation in Blender (keeping in mind that Blender doesn't actually use Radiosity anymore):
+![](Pasted%20image%2020231111135642.png)
+First of all you'll notice the more saturated colours; this is mostly an artefact of the Cornel images being old. The left box also isn't reflective because this is a Radiosity render, which cannot handle reflections like the rendering algorithm used in the Cornel image does.
+
+You can see the properties of Radiosity in the image; the colour of the walls has bled onto the pure white cubes, giving them slightly red and green sides and tinting the shadows. This is called **colour bleed**.
+The boxes are casting realistic soft shadows. There are also subtle shadows where faces meet at hard angles, and especially in the corners.
+
+Another important difference between raytracing and radiosity is shown here: The light source is represented as actual geometry in the scene, unlike raytracing where every light source is an infinitesimally small point.
+With raytracing, we have a **Point Light**:
+![](Pasted%20image%2020231111140602.png)
+With radiosity, we have an **Area Light**:
+![](Pasted%20image%2020231111140620.png)
+The light source in the radiosity example is not a special object like in raytracing; it is simply a polygon that has been defined as emitting light.
+
+## Energy transfer
+Radiosity as a general method originates from the field of heat transfer. At its most basic level it's based on the idea of conservation of energy, or energy equilibrium. There is some energy in a scene, and the components exchange energy until they reach some steady state. One must also consider the energy coming into and leaving the scene.
+![](Pasted%20image%2020231111140833.png)
+The term **thermodynamic radiosity**, or **radiance** is defined as the *flux* leaving a surface at point $x$. The counterpart is **irradiance**, which is the *flux* arriving at that point. *Flux* here is just a term meaning a flow of particles. In our case, the particles are protons.
+Now clearly we cannot just calculate the energy exchanged between single surfaces, because on a surface of any realistic size the energy exchanged will not be constant. For example, take a look at the back wall of the Cornel Box:
+![](Pasted%20image%2020231111141446.png)
+Despite being a single surface with a single colour, the actual perceived colour of the surface varies greatly.
+Any meaningful model based on Radiosity will need to deal with this fact; if we just take every surface in the scene as a patch then each surface can only be one exact colour. We do this by splitting surfaces apart into many small patches.
+![](Pasted%20image%2020231111141722.png)
+
+## An example
+Let's take the surface $A_X$ and consider it's relationship to the other surfaces in the scene (a single one shown here as $A_{X'}$):
+![](Pasted%20image%2020231111141947.png)
+This relationship is expressed via this formula:
+![](Pasted%20image%2020231111142035.png)
+Noting that $\delta A$ in these terms represents a small section of $A_x$:
+$B(x)\delta A$ is the total energy leaving the small section of $A$ around the point $x$.
+$E(x)\delta A$ is the total energy emitted by the section.
+$\rho (x) \delta A$ (that's Greek letter rho) is the reflectivity of the section, which multiplies:
+$$\int_S B(x') \cdot F(x,x') \delta A'$$
+which is the sum of all inbound energy on the section.
+Breaking this integral down further, we note that $S$ simply represents all surfaces in the scene.
+$B(x')$ is a recursion, representing the total energy leaving that surface and being received by this one.
+$F(x,x')$ is the "form factor" of $x$ to $x'$. This evaluates to 1 if the two points are completely visible to each other, and 0 if they aren't.
+
+Since this is an integration, we would like to take it to it's limit and get a continuous result - this would give us perfectly smooth shadows. Unfortunately, this is another Fredholm Equation of the Second Kind, and there is no analytical solution. It has the same infinite recursion problem as the rendering equation. So, can we make this method computationally feasible?
+
+First of all, we drop the integral and give up on a perfectly continuous result. We will be calculating radiosity on actual small patches of the surface. Changing the equation to take this into account, we get:
+![](Pasted%20image%2020231111144243.png)
+So we subdivide our surfaces into tiny patches which can only have a single colour. We have to make these patches small if we want a smooth looking result:
+![](Pasted%20image%2020231111144156.png)
+Even this example would be noticeably blocky unless it was rendered at a very low resolution.
