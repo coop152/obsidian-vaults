@@ -35,15 +35,9 @@ KROM-SAT is the same as 2-SAT.
 KROM-UNSAT is the problem of deciding if a set of Krom clauses is unsatisfiable.
 
 Theorem: KROM-UNSAT is in NLOGSPACE.
-![](Pasted%20image%2020231110173739.png)
-![](Pasted%20image%2020231110174741.png)
-Simple:
-We have a set $\Gamma$ of Krom clauses.
-Assume their are no unit clauses, empty clauses or clauses that are falsum.
-Put these clauses in the form of implications. ($l \rightarrow m$, which is equivalent to $\bar{m} \rightarrow \bar{l}$).
-Define an order $\geq$. $l \geq m$ iff there is a "path" from $l$ to $m$ where an implication is taken as an edge in a directed graph. $\geq$ is a **pre-order** (reflexive and transitive).
-We also define $\sim$ as $l \sim m$ if $l \geq m$ and $m \geq l$.
+Proof: Look at the slides
 
-We can prove that $\Gamma$ is satisfiable iff there exists no literal $l$ such that $l \sim \bar{l}$.
-
-It is obvious that $\Gamma$ is unsatisfiable if there exists a literal $l$ such that $l \sim \bar{l}$, because 
+# Co-classes of languages
+If $C$ is a class of languages (e.g. PTIME, NLOGSPACE), then **co-$C$** is the class of languages
+![](Pasted%20image%2020231110175408.png)
+For example, KROM-UNSAT is in NLOGSPACE and thus KROM-SAT is in co-NLOGSPACE.
