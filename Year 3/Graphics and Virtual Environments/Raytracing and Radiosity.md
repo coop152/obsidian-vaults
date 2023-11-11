@@ -123,3 +123,6 @@ First of all, we drop the integral and give up on a perfectly continuous result.
 So we subdivide our surfaces into tiny patches which can only have a single colour. We have to make these patches small if we want a smooth looking result:
 ![](Pasted%20image%2020231111144156.png)
 Even this example would be noticeably blocky unless it was rendered at a very low resolution.
+Let's return to our new equation:
+![](Pasted%20image%2020231111144243.png)
+Solving this is now technically possible, by solving a number of simultaneous equations that scales with the number of patches. This is still insanely computationally intensive, considering how small the patches must be and therefore how many there must be.
