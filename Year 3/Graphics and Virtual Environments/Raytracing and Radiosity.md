@@ -164,4 +164,20 @@ But we've only talked about 3 things so far. The final observation missing is:
 
 If something is in the way. 
 ![](Pasted%20image%2020231111153108.png)
-An object occluding the energy transfer could completely block the energy, or only absorb some of it. This is where the hemispheres come into the equation
+An object occluding the energy transfer could completely block the energy, or only absorb some of it. This is where the hemispheres come into the equation.
+## Progressive Radiosity
+The way we've been writing the formula (and describing the algorithm) heavily implies that for each patch we are "gathering" the light energy from every other patch, but it doesn't have to be expressed that way.
+![](Pasted%20image%2020231111153711.png)
+We know that some patches are emitting light, and they'll definitely have an effect on the scene. So instead of treating every patch with equal importance, lets start with the ones that are emitting light and have them "give" their light energy to the other patches, instead of having the other patches "take" it.
+![](Pasted%20image%2020231111154144.png)
+After this the patches that received light will have some light of their own to impart on other patches, so we do it again from these. We've found an iterative process: We identify the patches with the most light and shoot energy into the scene from them. Repeat until you are satisfied with the result.
+This is important, because it allows us to stop rendering **before** we have solved all of the simultaneous equations. Each **pass** of this iterative process will improve the result with diminishing returns.
+Here is the first pass, with only light sources having imparted any energy into the scene.
+![](Pasted%20image%2020231111154644.png)
+Here is a second pass, where the illuminated patches from the first pass illuminate their surrounding patches in turn.
+![](Pasted%20image%2020231111154730.png)
+And here is a 16th pass, where the light has had plenty of chances to bounce around and entirely fill the room:
+![](Pasted%20image%2020231111154829.png)
+
+# Conclusion
+Both raycasting and radiosity-based models have been superseded in actual use by a new technique, which we will cover next.
