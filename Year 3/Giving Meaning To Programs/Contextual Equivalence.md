@@ -45,3 +45,5 @@ We interpret the types as sets of items. For the base type $\iota$, we can inter
 Simple: The denotation of the base type relative to some set is just that set. The denotation of a function type recurs in the obvious way.
 ![](Pasted%20image%2020231113142625.png)
 ## Valuations
+It is convenient to be able to refer to the elements which appear in the denotation of some type. We take the union of the denotations of all the types to assemble all these elements:
+![](Pasted%20image%2020231113145705.png)
