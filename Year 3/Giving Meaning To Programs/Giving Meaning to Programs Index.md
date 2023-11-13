@@ -5,3 +5,4 @@
 - [[Confluence]]
 - [[Types for the Lambda Calculus]]
 - [[Strong Normalization]]
+- [[Contextual Equivalence]]
