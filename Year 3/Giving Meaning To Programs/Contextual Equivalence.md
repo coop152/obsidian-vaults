@@ -20,3 +20,27 @@ Simple: $C$ is a $(\Gamma,\sigma,\tau)$-context if, for every term $t$ with type
 Note that because we have no built-in data types, $\Gamma$ cannot be empty. The only way to get a term of type $\iota$ is to assume we have a variable of that type in $\Gamma$. For an example of why this is, see:
 ![](Pasted%20image%2020231113135202.png)
 ![](Pasted%20image%2020231113135329.png)
+![](Pasted%20image%2020231113135550.png)
+Notice that we only need 'input data' of type $\iota$ or $\iota \rightarrow \iota$, but never a higher order function type which takes a function as an argument. This will always be the case: just as we only want to consider tests which output a concrete piece of data (i.e. of type $\iota$), we only want to put concrete data in to test our terms.
+Now we are ready to define the key notion of equivalence, which corresponds to the intuition that two programs are equivalent if one can be used in the place of the other in any larger program without affecting the observable input.
+![](Pasted%20image%2020231113135923.png)
+![](Pasted%20image%2020231113135931.png)
+Simple: If you have two closed terms $t$ and $t'$ with the same type $\tau$, then they are contextually equivalent if they both give the same result in all type environments $\Gamma$ and $(\Gamma,\tau,\iota)$-contexts.
+We can see that $(\Gamma, \tau, \iota)$-contexts are important and we look at what we can say about how they might be built.
+Contextual equivalence is well motivated, but it is hard to work with because of the quantification over all contexts. Once one has defined contextural equivalence for a language, one is there interested in finding more concrete ways to describe the same relation. 
+
+(At this point i stopped verbatim copying the notes for no reason. Just read the notes. Only snippets of definitions from now on.)
+
+![](Pasted%20image%2020231113140850.png)
+# The Function Model
+The interpretation of a term in some model is also known as its **denotation**.
+## The idea
+For the moment we are only interested in interpreting typeable terms that do not contain free variables. That means we don’t have to worry about interpreting terms that consist of just a variable.
+We will write ![](Pasted%20image%2020231113141535.png) for the interpretation of a type. We assume that the interpretation of a function type is ![](Pasted%20image%2020231113141559.png), where ![](Pasted%20image%2020231113141626.png) is the set of all functions from $A$ to B. 
+![](Pasted%20image%2020231113141931.png)
+## Interpreting types
+We interpret the types as sets of items. For the base type $\iota$, we can interpret it as any set we like, for example booleans or natural numbers. We may also want to think about the meaning of a term with respect to any set, which is the same as considering a set whose elements we leave unspecified.
+![](Pasted%20image%2020231113142159.png)
+![](Pasted%20image%2020231113142211.png)
+Simple: The denotation of the base type relative to some set is just that set. The denotation of a function type recurs in the obvious way.
+![](Pasted%20image%2020231113142625.png)
