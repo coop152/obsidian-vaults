@@ -49,10 +49,20 @@ It is convenient to be able to refer to the elements which appear in the denotat
 ![](Pasted%20image%2020231113145705.png)
 ![](Pasted%20image%2020231113150147.png)
 ![](Pasted%20image%2020231113150715.png)
-Simple: the support of a type environment is the set of variables that the type environment assigns a function type to (in other words, every variable mentioned in the type environment apart from those of base type).
+Simple: the support of a type environment is the set of variables that the type environment assigns a function type to (in other words, every variable mentioned in the type environment apart from those of base type). (???)
 An $X$-valuation is a function that maps variables in the type environment to some value relative $X$.
 If the set $X$ is obvious from context (not the contexts defined above, just the word context) then we just call these valuations for $\Gamma$.
 Note that we may weaken $\Gamma$ and obtain a type environment where valuations do not change. For type environment $\Gamma$:
 ![](Pasted%20image%2020231113152528.png)
 and the interpretation of $x$ still exists in the same set, so X-valuations for $\Gamma,x:\tau$ are also X-valuations for $\Gamma,x:\sigma,x:\tau$.
 ![](Pasted%20image%2020231113152706.png)
+
+We need a way to move from a valuation for one type environment to a valuation for another. For a type environment $\Gamma$, a valuation $\phi$ for $\Gamma$ and a variable $y$ we would like to be able to perform two tasks:
+- If the variable $y$ is already in the support of $\Gamma$, change the value it is assigned.
+- If the variable $y$ is not already in the support of $\Gamma$, add it to the source set for $\phi$.
+
+We notate both of these by writing this:
+![](Pasted%20image%2020231113153306.png)
+Which means that the mappings given by $\phi$ stay the same for all variables except $y$, which is mapped to $a$. Formally:
+![](Pasted%20image%2020231113153344.png)
+![](Pasted%20image%2020231113153429.png)
