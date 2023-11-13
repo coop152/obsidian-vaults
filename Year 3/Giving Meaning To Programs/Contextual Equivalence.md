@@ -49,4 +49,4 @@ It is convenient to be able to refer to the elements which appear in the denotat
 ![](Pasted%20image%2020231113145705.png)
 ![](Pasted%20image%2020231113150147.png)
 ![](Pasted%20image%2020231113150715.png)
-Simple: For a set $X$, type environment $\Gamma$ 
+Simple: For a set $X$, type environment $\Gamma$ and set of variables $V$ (which includes at least the function type variables in $\Gamma$ (???)), an $X$-valuation for $\Gamma$ is a function that maps variables to 
