@@ -11,4 +11,12 @@ This restriction isn't very severe, because if we can find a good notion of equi
 By deciding to only concern ourselves with closed terms, we can simplify the notion of contexts. This is because for closed terms, there is little difference between substitution into a context and applying a term to an argument. This is true because for these terms there is also little difference between ordinary and capture-avoiding substitution.
 ![](Pasted%20image%2020231113114927.png)
 (I think theres a typo here and that $C_y$ should be $T^C_y$.)
-Simple: If you have a context $C$ where $y$ does not occur, then substituting a term into $C$ gives an alpha-equivalent result to performing 
+Simple: If you have a context $C$ that doesn't contain $y$, and a term $T^C_y$ that is the same as $C$ but with $y$ in the place of $\square$, performing a substitution into $C$ is alpha-equivalent to performing a capture-avoiding substitution into $T^C_y$. 
+
+This is one way in which the more advanced features of the simply typed lambda calculus actually make it easier to study. If we were studying a language with no notion of 'functions' which allow us to represent a context as a term, we would have to treat contexts as a completely separate notion. This corresponds to the fact that in a language with 'functions' we can wrap up tests as a piece of code, whereas if the language lacks these features, tests which embed the code to be tested in a larger program would have to be constructed by external scripts, which would be more unwieldy.
+Recalling that the results of computation are terms of type $\iota$, we need to define the notion of a context which we can use to get a 'test result' from a term of a given type $\tau$. We want these terms to have a 'hole' in the such that if we replace the 'hole' with a term of type $\sigma$, the resulting term has type $\iota$. It is also useful to consider the general idea of a context which transforms a term of type $\sigma$ into one of some type $\tau$. As usual, we have to allow for free variables to appear in our terms and so we have to include a type environment.
+![](Pasted%20image%2020231113134158.png)
+Simple: $C$ is a $(\Gamma,\sigma,\tau)$-context if, for every term $t$ with type $\sigma$, substituting $t$ into $C$ produces a term that is typed $\tau$.
+Note that because we have no built-in data types, $\Gamma$ cannot be empty. The only way to get a term of type $\iota$ is to assume we have a variable of that type in $\Gamma$. For an example of why this is, see:
+![](Pasted%20image%2020231113135202.png)
+![](Pasted%20image%2020231113135329.png)
