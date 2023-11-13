@@ -10,4 +10,5 @@ Note that substitution into a context is **not** capture avoiding. It behaves li
 This restriction isn't very severe, because if we can find a good notion of equivalence for terms with no free variables, we can extend it to terms *with* free variables by declaring them to be equivalent if the corresponding closed terms where we abstracted over those free variables are equivalent.
 By deciding to only concern ourselves with closed terms, we can simplify the notion of contexts. This is because for closed terms, there is little difference between substitution into a context and applying a term to an argument. This is true because for these terms there is also little difference between ordinary and capture-avoiding substitution.
 ![](Pasted%20image%2020231113114927.png)
-Simple: If you have a context $C$ where $y$ does not occur, there 
+(I think theres a typo here and that $C_y$ should be $T^C_y$.)
+Simple: If you have a context $C$ where $y$ does not occur, then substituting a term into $C$ is alpha-equivalent to 
