@@ -8,4 +8,4 @@ We need to define the "larger programs" into which a term can be put. A **contex
 ![](Pasted%20image%2020231113112455.png)
 Note that substitution into a context is **not** capture avoiding. It behaves like a simple copy-and-paste of a term into a larger program. For this reason we need to restrict which terms we expect to behave like functions to only consider terms with no free variables. We call terms with no free variables **closed terms**. If we didn't restrict them like this, then the context could wrongly capture one of the free variables in $t$.
 This restriction isn't very severe, because if we can find a good notion of equivalence for terms with no free variables, we can extend it to terms *with* free variables by declaring them to be equivalent if the corresponding closed terms where we abstracted over those free variables are equivalent.
-In the lambda-calculus
+By deciding to only concern ourselves with closed terms, we can simplify the notion of contexts. This is because for closed terms, there is little difference between substitution into a context and applying a term to an argument.
