@@ -48,3 +48,5 @@ Simple: The denotation of the base type relative to some set is just that set. T
 It is convenient to be able to refer to the elements which appear in the denotation of some type. We take the union of the denotations of all the types to assemble all these elements:
 ![](Pasted%20image%2020231113145705.png)
 ![](Pasted%20image%2020231113150147.png)
+![](Pasted%20image%2020231113150715.png)
+Simple: For a set $X$, type environment $\Gamma$ 
