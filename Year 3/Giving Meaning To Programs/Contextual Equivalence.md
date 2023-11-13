@@ -49,5 +49,10 @@ It is convenient to be able to refer to the elements which appear in the denotat
 ![](Pasted%20image%2020231113145705.png)
 ![](Pasted%20image%2020231113150147.png)
 ![](Pasted%20image%2020231113150715.png)
-Simple: An $X$-valuation is a function that maps variables in the type environment to some value relative $X$.
-If $X$ is clear
+Simple: the support of a type environment is the set of variables that the type environment assigns a function type to (in other words, every variable mentioned in the type environment apart from those of base type).
+An $X$-valuation is a function that maps variables in the type environment to some value relative $X$.
+If the set $X$ is obvious from context (not the contexts defined above, just the word context) then we just call these valuations for $\Gamma$.
+Note that we may weaken $\Gamma$ and obtain a type environment where valuations do not change. For type environment $\Gamma$:
+![](Pasted%20image%2020231113152528.png)
+and the interpretation of $x$ still exists in the same set, so X-valuations for $\Gamma,x:\tau$ are also X-valuations for $\Gamma,x:\sigma,x:\tau$.
+![](Pasted%20image%2020231113152706.png)
