@@ -79,3 +79,6 @@ When applying the operation in order to find the final result of a term, we foll
 If the term $t$ can be typed with the empty type environment then we don't require a valuation and we write $$[\![t]\!]^X.$$
 ![](Pasted%20image%2020231115103426.png)
 The notes have a nice but very long example with a free variable and a function typed variable.
+
+## Properties of denotations
+We note that the interpretation of a type does not change if we apply suitable weakening to the underlying type-environment
