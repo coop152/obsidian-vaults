@@ -85,3 +85,10 @@ We note that the interpretation of a type does not change if we apply suitable w
 ![](Pasted%20image%2020231115112913.png)
 We observe that the denotation of a term does not depend on what the valuation does for variables which don't occur free in it.
 ![](Pasted%20image%2020231115113015.png)
+We show that denotations behave well w.r.t. alpha-equivalence, starting with renaming as usual.
+![](Pasted%20image%2020231115113745.png)
+Using that renaming result, we can show that the denotation of a term is invariant under alpha-equivalence.
+![](Pasted%20image%2020231115113817.png)
+We now look at how beta-reduction relates to our interpretation. As usual we address substitution first.
+![](Pasted%20image%2020231115113943.png)
+![](Pasted%20image%2020231115113953.png)
