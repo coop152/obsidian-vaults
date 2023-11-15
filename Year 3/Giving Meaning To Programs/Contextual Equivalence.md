@@ -81,4 +81,7 @@ If the term $t$ can be typed with the empty type environment then we don't requi
 The notes have a nice but very long example with a free variable and a function typed variable.
 
 ## Properties of denotations
-We note that the interpretation of a type does not change if we apply suitable weakening to the underlying type-environment
+We note that the interpretation of a type does not change if we apply suitable weakening to the underlying type-environment.
+![](Pasted%20image%2020231115112913.png)
+We observe that the denotation of a term does not depend on what the valuation does for variables which don't occur free in it.
+![](Pasted%20image%2020231115113015.png)
