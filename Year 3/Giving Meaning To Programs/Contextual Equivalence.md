@@ -66,3 +66,14 @@ We notate both of these by writing this:
 Which means that the mappings given by $\phi$ stay the same for all variables except $y$, which is mapped to $a$. Formally:
 ![](Pasted%20image%2020231113153344.png)
 ![](Pasted%20image%2020231113153429.png)
+## Interpreting terms
+We define the denotations of terms by mapping them to elements of the denotations of their types. As previously indicated, we need to do this relative to a suitable type environment. 
+![](Pasted%20image%2020231115101555.png)
+![](Pasted%20image%2020231115101602.png)
+Simple: We write the $\Gamma$-denotation of a term in some type environment $\Gamma$ similarly to the denotation of a type, but we also attach the relevant valuation. 
+When applying the operation in order to find the final result of a term, we follow these rules:
+- bcVar: If the term is a variable $x$ then replace the $\Gamma$-denotation with the value for $x$ given in $\phi$.
+- scAbs: If the term is an abstraction $\lambda x:\sigma.u$, then replace the whole term with $u$, add the type $x:\sigma$ to the type environment, and add $x$ to the valuation with an unknown value of type $\sigma$. (e.g. $[\![ \Gamma, \lambda x:\sigma.u ]\!]^{X}_\phi$ goes to $[\![ \Gamma x:\sigma, u ]\!]^{X}_{\phi[x \mapsto a]}$, where $a \in [\![ \sigma ]\!]^X$.)
+- scApp: If the term is an application $rs$, split the $\Gamma$-denotation into two gamma denotations for each subterm. (e.g. $[\![ \Gamma, rs ]\!]^{X}_\phi$ goes to $[\![ \Gamma, r ]\!]^{X}_\phi[\![ \Gamma, s ]\!]^{X}_\phi$).
+
+If the term $t$ can be typed with the empty type environment then we don't require a valuation and we write $$[\![t]\!]^X.$$
