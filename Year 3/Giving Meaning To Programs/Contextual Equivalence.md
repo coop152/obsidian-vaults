@@ -77,3 +77,4 @@ When applying the operation in order to find the final result of a term, we foll
 - scApp: If the term is an application $rs$, split the $\Gamma$-denotation into two gamma denotations for each subterm. (e.g. $[\![ \Gamma, rs ]\!]^{X}_\phi$ goes to $[\![ \Gamma, r ]\!]^{X}_\phi[\![ \Gamma, s ]\!]^{X}_\phi$).
 
 If the term $t$ can be typed with the empty type environment then we don't require a valuation and we write $$[\![t]\!]^X.$$
+![](Pasted%20image%2020231115103426.png)
