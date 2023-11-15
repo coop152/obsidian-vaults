@@ -78,3 +78,4 @@ When applying the operation in order to find the final result of a term, we foll
 
 If the term $t$ can be typed with the empty type environment then we don't require a valuation and we write $$[\![t]\!]^X.$$
 ![](Pasted%20image%2020231115103426.png)
+The book has a very long example with a free variable.k
