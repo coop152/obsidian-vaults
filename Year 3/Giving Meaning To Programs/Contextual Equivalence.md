@@ -92,3 +92,7 @@ Using that renaming result, we can show that the denotation of a term is invaria
 We now look at how beta-reduction relates to our interpretation. As usual we address substitution first.
 ![](Pasted%20image%2020231115113943.png)
 ![](Pasted%20image%2020231115113953.png)
+![](Pasted%20image%2020231115114456.png)
+And as usual, we move from taking one beta-reduction step to taking any finite number.
+![](Pasted%20image%2020231115114542.png)
+So denotational semantics are preserved by alpha-equivalence and beta-reduction, making it a worthwhile technical tool for studying the lambda-calculus.
