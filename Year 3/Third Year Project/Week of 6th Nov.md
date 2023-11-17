@@ -1,0 +1,1 @@
+- Made a simple installer using microsoft's official Visual Studio Installer Projects
