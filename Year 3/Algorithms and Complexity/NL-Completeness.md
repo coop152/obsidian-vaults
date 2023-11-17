@@ -7,3 +7,10 @@ If a language is log space reducible to a language already known to be in L then
 ![](Pasted%20image%2020231117122731.png)
 
 ## Proof example
+![](Pasted%20image%2020231117123532.png)
+![](Pasted%20image%2020231117123540.png)
+![](Pasted%20image%2020231117123553.png)
+This proof also suggests another fact about NL:
+![](Pasted%20image%2020231117123745.png)
+In other words, every NL language is in P.
+This gives some useful results. For example, we know that every problem in P is polytime reducible to TQBF. We can also show that the formulas produced by TQBF are computable using only log space, meaning that TQBF is P-complete w.r.t. logspace reducibility. This shows that NL $\subsetneq$ P, and further that TQBF $\notin$ NL.
