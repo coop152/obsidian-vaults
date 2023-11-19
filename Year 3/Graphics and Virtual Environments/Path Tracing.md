@@ -26,3 +26,4 @@ We count which points fall inside the circle. In this example, we sampled 100 po
 $$\frac{inside}{total} \approx \frac{circle}{box}$$
 $$\frac{70}{100} \approx \frac{circle}{2\times 2}$$
 $$circle = 4 \times \frac{70}{100}$$
+So our final estimate is 2.8. Considering the actual area is $\pi$, that is a pretty poor estimate
