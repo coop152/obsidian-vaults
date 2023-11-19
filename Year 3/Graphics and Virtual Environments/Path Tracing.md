@@ -15,4 +15,7 @@ Looking at this diagram, you might imagine a way to get soft shadows with a reve
 ![](Pasted%20image%2020231119164804.png)
 In this example we shoot three feelers, two of which reach the light. Therefore, we say that this point is two thirds lit. Clearly only using three rays is not a good estimate, but this is easily solved by shooting more rays (at the expense of performance).
 ## The Monte-Carlo technique
-The preceding method for getting soft shadows with raytracing is an example of a **monte-carlo technique**, where we endeavour to solve something that is computationally intractable using a **statistical** approach rather than an **analytical** one. In other words, we cannot calculate the exact exposure of a point to some light source in a reasonable amount of time, so we use an estimation that apporaches
+The preceding method for getting soft shadows with raytracing is an example of a **monte-carlo technique**, where we endeavour to solve something that is computationally intractable using a **statistical** approach rather than an **analytical** one. In other words, we cannot calculate the exact exposure of a point to some light source in a reasonable amount of time: Instead, we use an estimation of the solution and stop when we deem the result acceptable.
+As an example of the Monte-Carlo technique, consider how you might find the area of this shape:
+![](Pasted%20image%2020231119170410.png)
+
