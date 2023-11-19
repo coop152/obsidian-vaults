@@ -19,4 +19,4 @@ The preceding method for getting soft shadows with raytracing is an example of a
 
 As an example of a Monte-Carlo technique, think how you might find the area of a circle.
 For finding the area of a circle there is a simple analytical solution: Get the radius and compute $\pi r ^2$.
-and then see how we could calculate the area without using it:
+Alternatively, we could **brute-force** the problem. If we take the circle at some resolution
