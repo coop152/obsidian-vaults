@@ -13,3 +13,6 @@ In contrast, radiosity produces realistic soft shadows because it models light s
 ![](Pasted%20image%2020231119164348.png)
 Looking at this diagram, you might imagine a way to get soft shadows with a reverse-raytracing model. What if instead of point lights we used area lights, like radiosity, and then when we fire shadow feelers we fire many of them instead of just one? This way, we can get (an estimation of) how exposed the point is to the light source.
 ![](Pasted%20image%2020231119164804.png)
+In this example we shoot three feelers, two of which reach the light. Therefore, we say that this point is two thirds lit. Clearly only using three rays is not a good estimate, but this is easily solved by shooting more rays (at the expense of performance).
+## The Monte-Carlo technique
+The preceding method for getting soft shadows with raytracing is an example of a **monte-carlo technique**, where we endeavour to solve something that is computationally intractable using a **statistical** approach rather than an **analytical** one. In other words, we cannot calculate the exact exposure of a point to some light source in a reasonable amount of time, so we use an estimation that apporaches
