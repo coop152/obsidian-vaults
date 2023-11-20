@@ -1,9 +1,9 @@
 # Week Journals
-- [Week of 25th Sept(-ish)](Week%20of%2025th%20Sept(-ish).md)
-- [Week of 2nd Oct](Week%20of%202nd%20Oct.md)
-- [Week of 16th Oct](Week%20of%2016th%20Oct.md)
-- [Week of 23rd Oct](Week%20of%2023rd%20Oct.md)
-- [Week of 30th Oct](Week%20of%2030th%20Oct.md)
+- [Week of 25-9(ish)](Week%20of%2025-9(ish).md)
+- [Week of 2-10](Week%20of%202-10.md)
+- [Week of 16-10](Week%20of%2016-10.md)
+- [Week of 23-10](Week%20of%2023-10.md)
+- [Week of 30-10](Week%20of%2030-10.md)
 # Important Dates
 - Code Freeze: Friday 15th March 2024 
 - Report & Screencast Submission: Friday 12th April
