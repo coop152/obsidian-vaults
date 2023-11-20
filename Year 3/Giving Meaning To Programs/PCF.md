@@ -8,3 +8,19 @@ Because we aim to use recursion, we need to be able to determine if a number is 
 `pred` is the predecessor function (which outputs $\bar{0}$ if given $\bar{0}$).
 The typing rules for these are as follows:
 ![](Pasted%20image%2020231120152309.png)
+Note that we need to use brackets with the successor due to the bracketing conventions for application. This is laborious and ugly, so we write ![](Pasted%20image%2020231120152616.png) for a term where successor is applied $n$ times.
+`ifz` is bracketed as normal for a three-argument function. However, we often add extra brackets for clarity when using `ifz`. For example, $\text{ifz}\ npq$ can be written $\text{ifz}\ n[p][q]$ or $\text{ifz}\ (n)[p][q]$.
+Let's see what beta-reduction is like for these built-ins:
+![](Pasted%20image%2020231120152908.png)
+We also want to facilitate beta-reduction of sub-terms in these built-ins, so that we can always evaluate a result:
+![](Pasted%20image%2020231120153126.png)
+These new details actually allow us to simplify many matters. The added concreteness completely removes all of the required complexity that we needed in defining contextual equivalence for the simply typed lambda-calculus. Because our new language has a concrete base type with actual elements, there is no need for type environments and the careful machinery that surrounds it.
+## Restricting beta-reduction
+The second change is to restrict beta-reduction. Our previous definitions were as general as possible, but in a real programming language we expect program execution to be deterministic - that is, there is a defined **evaluation strategy** which is taken in the same way every time. In PCF we choose the "leftmost, outermost" strategy where a subterm can only reduce if:
+1. It is by one of the rules given above for succ/pred/ifz
+2. The subterm is on the left hand side of an application
+
+This means that arguments of applications are banned from beta-reducing, as well as the bodies of abstractions. In other words, we remove these parts in red from the definition of beta reduction:
+![](Pasted%20image%2020231120153915.png)
+Again, this simplifies a lot. Confluence is now trivial because there is never any choice in how to reduce a term, and the irreducible terms are easy to classify. It does raise the question of whether there are some odd terms that can only be shown equal to ordinary elements using the removed rules - save this thought for later.
+## (Re-)introducing recursion
