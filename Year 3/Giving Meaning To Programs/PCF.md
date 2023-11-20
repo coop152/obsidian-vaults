@@ -42,3 +42,5 @@ When written like this, it looks like the body of a recursive expression is best
 ![](Pasted%20image%2020231120160915.png)
 Then we create a beta-reduction rule to express the fact that the function to use in the recursive call is *the function itself*. In our running example we want the rule to behave such that
 ![](Pasted%20image%2020231120161021.png)
+So the conclusion of this discussion is that a recursive term should be an abstraction, where the abstracted variable is the term we will use to interpret the recursive call. The special part is that the function supplies *itself* as the term to be used in the recursive call.
+Let's deduce the types involved. The body, being an abstraction, must have a function type, and the recursive function itself must be a suitable input. That is, to use recursion to specify an element of type $\tau$, we need to supply a term $t$ of type $\tau \rightarrow \tau$, and then the desired term of type $\tau$ is $\text{rec}\ t$. Then the beta-reduction rule for $\text{rec}\ t$ can safely state that $\text{rec}\ t \xrightarrow{\beta} t\text{rec}\ t$.
