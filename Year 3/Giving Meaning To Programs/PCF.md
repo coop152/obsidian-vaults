@@ -33,4 +33,5 @@ Much of the body of the function can already be translated into a PCF term using
 to represent $f$. 
 We want to express this function in the expected form $\lambda n:nat.$ so that we can apply it to a single argument via beta-reduction. Let's look ahead and see what we want a beta reduction to produce:
 ![](Pasted%20image%2020231120160047.png)
-But this contains a free $f$. Let's push the problem forwards a bit by replacing this $f$ with the previous definition, and trying again:
+But this contains a free $f$. Let's try again, but replace $f$ with the function definition instead of leaving it free:
+![](Pasted%20image%2020231120160353.png)
