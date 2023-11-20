@@ -24,3 +24,11 @@ This means that arguments of applications are banned from beta-reducing, as well
 ![](Pasted%20image%2020231120153915.png)
 Again, this simplifies a lot. Confluence is now trivial because there is never any choice in how to reduce a term, and the irreducible terms are easy to classify. It does raise the question of whether there are some odd terms that can only be shown equal to ordinary elements using the removed rules - save this thought for later.
 ## (Re-)introducing recursion
+The most important change is to introduce recursion, which allows us to write complicated programs that we cannot in the simply typed lambda-calculus. Specifically, terms that may run forever if there is no solution. We saw a form of recursion in the untyped lambda-calculus, but it relied on self referential terms which were untypable and conceptually hard to reason about. We seek a way to define recursion that has a sensible type.
+Let's consider a regular mathematical recursive function:
+![](Pasted%20image%2020231120154944.png)
+This function from naturals to naturals, as simple as it is, cannot be defined with the simply typed lambda-calculus.
+Much of the body of the function can already be translated into a PCF term using the features described previously, but the recursion itself seems to rely on our ability to name a function and then refer to it with this definition. Adding named declarations would significantly complicate our language; we want to define the function above without relying on creating some "global" name for $f$. While we investigate this, let's use the temporary notation
+![](Pasted%20image%2020231120155203.png)
+to represent $f$. 
+We want to be able to "calculate what the "
