@@ -31,4 +31,6 @@ This function from naturals to naturals, as simple as it is, cannot be defined w
 Much of the body of the function can already be translated into a PCF term using the features described previously, but the recursion itself seems to rely on our ability to name a function and then refer to it with this definition. Adding named declarations would significantly complicate our language; we want to define the function above without relying on creating some "global" name for $f$. While we investigate this, let's use the temporary notation
 ![](Pasted%20image%2020231120155203.png)
 to represent $f$. 
-We want to be able to "calculate what the "
+We want to express this function in the expected form $\lambda n:nat.$ so that we can apply it to a single argument via beta-reduction. Let's look ahead and see what we want a beta reduction to produce:
+![](Pasted%20image%2020231120160047.png)
+But this contains a free $f$. Let's push the problem forwards a bit by replacing this $f$ with the previous definition, and trying again:
