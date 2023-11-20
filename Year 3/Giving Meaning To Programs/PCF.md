@@ -1,0 +1,3 @@
+The simply typed lambda-calculus is an unrealistic programming language; while it does have nice properties such as strong normalization that make it theoretically useful, it is notably lacking features. Most important among these is **recursion**.
+Instead, we think of the simply typed lambda-calculus as a template which can be modified to make many different languages. Most importantly, it embodies the fundamental operation of substitution and how it interacts with typing, which is central to any functional language. We will define a new language PCF by adding and removing some aspects of the simply typed lambda-calculus. Before we get to adding recursion, we will consider a few other changes.
+# Built in data
