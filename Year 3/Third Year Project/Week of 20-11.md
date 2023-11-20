@@ -1,0 +1,1 @@
+- Removed the home-baked map type in `Calendar` in favour of std::map.
