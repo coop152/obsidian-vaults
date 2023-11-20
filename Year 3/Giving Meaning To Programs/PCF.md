@@ -35,3 +35,10 @@ We want to express this function in the expected form $\lambda n:nat.$ so that w
 ![](Pasted%20image%2020231120160047.png)
 But this contains a free $f$. Let's try again, but replace $f$ with the function definition instead of leaving it free:
 ![](Pasted%20image%2020231120160353.png)
+Let's use this expression to think about how we want the recursive definition to look after it is rewritten into the form of an abstraction:
+![](Pasted%20image%2020231120160644.png)
+![](Pasted%20image%2020231120160717.png)
+When written like this, it looks like the body of a recursive expression is best thought of as a *higher order function*, which takes a function as an input and uses it to interpret the recursive call. This at least lets us come up with a sensible notation for recursion. We write the recursive function above as:
+![](Pasted%20image%2020231120160915.png)
+Then we create a beta-reduction rule to express the fact that the function to use in the recursive call is *the function itself*. In our running example we want the rule to behave such that
+![](Pasted%20image%2020231120161021.png)
