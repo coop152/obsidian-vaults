@@ -58,3 +58,6 @@ We start along familiar lines by defining a collection of preterms that might no
 Note that the notion of alpha-equivalence can be extended to PCF terms, but you don't need to know the details.
 We define a "PCF term" using the following type rules:
 ![](Pasted%20image%2020231121124155.png)
+We may also extend the notion of capture-avoiding substitution to PCF recursively, but we don't bother. We just assume it works as expected.
+Now we define the rules for beta-reduction:
+![](Pasted%20image%2020231121130005.png)
