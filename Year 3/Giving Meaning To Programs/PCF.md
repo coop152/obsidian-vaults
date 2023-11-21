@@ -74,4 +74,5 @@ There are three outcomes for any reduction of some term of a type $\tau$ **with 
 - We get "stuck" at some term with the correct type, but it isn't in the correct form. In particular, consider the case where we have a term of function type but we don't achieve an abstraction.
 
 Thankfully, this last case is only theoretical and cannot occur in PCF. If we get a result, we are guaranteed that it is in the expected useful form.
-But what about when the type environment is non-empty? In that case we may construct terms with free variables, and such variables (being irreducible) can block further reductions. For example, if we apply a variable (say of type $\rho \rightarrow \sigma$) to another term, then the resulting term is irreducible because we can't apply any of the beta-reduction rules.
+But what about when the type environment is non-empty? In that case we may construct terms with free variables, and such variables (being irreducible) can block further reductions. For example, if we apply a variable (say of type $\rho \rightarrow \sigma$) to another term, then the resulting term is irreducible because we can't apply any of the beta-reduction rules. Therefore, we only characterize irreducible terms which can be typed in the empty type environment.
+![](Pasted%20image%2020231121143535.png)
