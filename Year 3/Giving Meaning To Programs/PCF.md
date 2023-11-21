@@ -94,4 +94,6 @@ We need a denotation of every type to contain a special value $\bot$ which repre
 You might think of $\bot$ as meaning "no information". This is because PCF programs do **not** necessarily run forever if one of their inputs runs forever.
 ![](Pasted%20image%2020231121151015.png)
 ![](Pasted%20image%2020231121151347.png)
-The situation for function types is more complicated.
+The situation for function types is more complicated. We know there must be a $\bot$ type for every type, but recursively defined functions can terminate on some inputs and run forever on others.
+![](Pasted%20image%2020231121151816.png)
+![](Pasted%20image%2020231121151822.png)
