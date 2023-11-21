@@ -102,3 +102,6 @@ This function is more informative than the function which doesn't halt for any i
 (just read the fucking notes, god)
 ## Section 3.3
 ![](Pasted%20image%2020231121153213.png)
+![](Pasted%20image%2020231121153856.png)
+![](Pasted%20image%2020231121154045.png)
+![](Pasted%20image%2020231121154210.png)
