@@ -1,1 +1,2 @@
 - Removed the home-baked map type in `Calendar` in favour of std::map.
+- Deleted basically everything in the type folder except for the Array type. Removal of that coming soon?
