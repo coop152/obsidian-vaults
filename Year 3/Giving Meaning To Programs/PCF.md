@@ -76,3 +76,6 @@ There are three outcomes for any reduction of some term of a type $\tau$ **with 
 Thankfully, this last case is only theoretical and cannot occur in PCF. If we get a result, we are guaranteed that it is in the expected useful form.
 But what about when the type environment is non-empty? In that case we may construct terms with free variables, and such variables (being irreducible) can block further reductions. For example, if we apply a variable (say of type $\rho \rightarrow \sigma$) to another term, then the resulting term is irreducible because we can't apply any of the beta-reduction rules. Therefore, we only characterize irreducible terms which can be typed in the empty type environment.
 ![](Pasted%20image%2020231121143535.png)
+This helps make sense of the beta-reduction rules a little better. If we have an expression that contains `pred`, for example, we want to eventually apply the base case for `pred` which will explain the computational meaning of `pred`. This proposition shows that (as long as the computation does not run forever) we can always get a valid form for the inner term that `pred` can work with. This same logic applies to all of the base cases of beta-reduction.
+## Properties of reduction
+We revisit some of the properties that were shown for the simply typed lambda-calculus.
