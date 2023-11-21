@@ -93,3 +93,5 @@ This tells us something about what our denotational semantics can be like. For i
 We need a denotation of every type to contain a special value $\bot$ which represents "never observing an output". This is conceptually different from observing some kind of error value; you would eventually actually observe an error value, but you will never actually observe $\bot$, because the term will be getting evaluated forever.
 You might think of $\bot$ as meaning "no information". This is because PCF programs do **not** necessarily run forever if one of their inputs runs forever.
 ![](Pasted%20image%2020231121151015.png)
+![](Pasted%20image%2020231121151347.png)
+The situation for function types is more complicated.
