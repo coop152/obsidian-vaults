@@ -68,3 +68,10 @@ While a beta-reduction being valid in the simply typed lambda-calculus does not 
 ![](Pasted%20image%2020231121140949.png)
 ## Irreducible terms
 Classifying the set of irreducible terms is significantly easier in PCF than with the other versions of the lambda-calculus.
+There are three outcomes for any reduction of some term of a type $\tau$ **with an empty type environment**:
+- We reach a valid irreducible term. For example, if the term is type `nat` then we reach some valid natural number (0 with some amount of successors or predecessors applied). For a function type, we reach an abstraction that we can apply to other terms in the way we expect from the type.
+- We never finish computing the result. This possibility is simply an unavoidable consequence of having a useful programming language.
+- We get "stuck" at some term with the correct type, but it isn't in the correct form. In particular, consider the case where we have a term of function type but we don't achieve an abstraction.
+
+Thankfully, this last case is only theoretical and cannot occur in PCF. If we get a result, we are guaranteed that it is in the expected useful form.
+But what about when the type environment is non-empty? In that case we may construct terms with free variables, and such variables (being irreducible) can block further reductions. For example, if we apply a variable (say of type $\rho \rightarrow \sigma$) to another term, then the resulting term is irreducible because we can't apply any of the beta-reduction rules.
