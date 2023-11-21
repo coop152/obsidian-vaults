@@ -52,4 +52,6 @@ and it's reduction rule is:
 We will bracket `rec` as if it was a term being applied to another term. `rec` will never be an allowed name for a term, and neither will any of the other built-in names, for obvious reasons.
 Now we can assemble a formal definition of PCF.
 # Defining the Language PCF
-(Continue from section 3.2 in the notes)
+## Terms, types and beta-reduction
+We start along familiar lines by defining a collection of preterms that might not typecheck, defining typing rules that describe the set of terms, and then giving a definition of beta-reduction that explains how these terms compute.
+![](Pasted%20image%2020231121123644.png)
