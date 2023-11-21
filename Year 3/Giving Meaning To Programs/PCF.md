@@ -65,3 +65,6 @@ The reflexive transitive closure of $\xrightarrow{\beta}$ has the same symbol as
 $$\lambda x:\sigma .((\lambda y:\delta.y)x)$$
 Can be beta-reduced in the simply typed lambda-calculus but not in PCF, because beta-reduction for PCF does not allow beta reducing subterms of an abstraction.
 While a beta-reduction being valid in the simply typed lambda-calculus does not mean it is valid in PCF, the opposite *is* true; that is, if a term $t$ beta-reduces to $t'$ in PCF then it must also beta-reduce in the simply-typed lambda-calculus.
+![](Pasted%20image%2020231121140949.png)
+## Irreducible terms
+Classifying the set of irreducible terms is significantly easier in PCF than with the other versions of the lambda-calculus.
