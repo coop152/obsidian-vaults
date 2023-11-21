@@ -79,3 +79,17 @@ But what about when the type environment is non-empty? In that case we may const
 This helps make sense of the beta-reduction rules a little better. If we have an expression that contains `pred`, for example, we want to eventually apply the base case for `pred` which will explain the computational meaning of `pred`. This proposition shows that (as long as the computation does not run forever) we can always get a valid form for the inner term that `pred` can work with. This same logic applies to all of the base cases of beta-reduction.
 ## Properties of reduction
 We revisit some of the properties that were shown for the simply typed lambda-calculus.
+Showing confluence is trivial for PCF because it is completely deterministic:
+![](Pasted%20image%2020231121145804.png)
+Beta-reduction still doesn't affect the type of a term:
+![](Pasted%20image%2020231121145914.png)
+We do not formally define alpha-equivalence for PCF terms, but it is worth remarking that all of the properties you would expect do hold. For example, if $t \sim_\alpha t'$ and $t$ beta-reduces to some irreducible term $u$, then there is an irreducible term $u'$ such that $t'$ reduces to $u'$ and $u \sim_\alpha u'$.
+We just assume these properties are true if they are needed; the methods used to prove them for PCF are extremely similar to those for the simply typed lambda-calculus.
+## Non-termination
+By introducing recursion, we have also introduced non-terminating programs.
+![](Pasted%20image%2020231121150315.png)
+![](Pasted%20image%2020231121150323.png)
+This tells us something about what our denotational semantics can be like. For instance, we might have hoped that we could have $[\![\text{nat}]\!] = \mathbb{N}$. But if we instantiate the term from the last example where $\sigma = \text{nat}$ we would have a term $\text{rec} \lambda x:\text{nat}.x$ which is clearly of type `nat` but is also clearly different from outputting any particular natural number.
+We need a denotation of every type to contain a special value $\bot$ which represents "never observing an output". This is conceptually different from observing some kind of error value; you would eventually actually observe an error value, but you will never actually observe $\bot$, because the term will be getting evaluated forever.
+You might think of $\bot$ as meaning "no information". This is because PCF programs do **not** necessarily run forever if one of their inputs runs forever.
+![](Pasted%20image%2020231121151015.png)
