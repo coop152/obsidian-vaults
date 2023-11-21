@@ -97,3 +97,8 @@ You might think of $\bot$ as meaning "no information". This is because PCF progr
 The situation for function types is more complicated. We know there must be a $\bot$ type for every type, but recursively defined functions can terminate on some inputs and run forever on others.
 ![](Pasted%20image%2020231121151816.png)
 ![](Pasted%20image%2020231121151822.png)
+This function is more informative than the function which doesn't halt for any input, but less informative than a function that always halts (say, the identity function on `nat`). On the other hand, it is also observably different from the function which always returns $\bar{s}\bar{0}$ because they return clearly different values when evaluated at $\bar{0}$. Clearly the information ordering of complicated types is not easily found by intuition. To define the denotational semantics of PCF we need a mathematical theory which describes what sort of ordered structures these are, and comes with a 'function space' construction which builds the correct ordered structure for us at higher type. This theory is described later on.
+![](Pasted%20image%2020231121153001.png)
+(just read the fucking notes, god)
+## Section 3.3
+![](Pasted%20image%2020231121153213.png)
