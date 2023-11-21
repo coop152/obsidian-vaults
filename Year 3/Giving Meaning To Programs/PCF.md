@@ -61,3 +61,4 @@ We define a "PCF term" using the following type rules:
 We may also extend the notion of capture-avoiding substitution to PCF recursively, but we don't bother. We just assume it works as expected.
 Now we define the rules for beta-reduction:
 ![](Pasted%20image%2020231121130005.png)
+The reflexive transitive closure of $\xrightarrow{\beta}$ has the same symbol as usual. Remember that even though we are using the same name, beta-reduction actually behaves quite differently from previous languages.
