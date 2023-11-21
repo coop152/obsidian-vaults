@@ -55,3 +55,6 @@ Now we can assemble a formal definition of PCF.
 ## Terms, types and beta-reduction
 We start along familiar lines by defining a collection of preterms that might not typecheck, defining typing rules that describe the set of terms, and then giving a definition of beta-reduction that explains how these terms compute.
 ![](Pasted%20image%2020231121123644.png)
+Note that the notion of alpha-equivalence can be extended to PCF terms, but you don't need to know the details.
+We define a "PCF term" using the following type rules:
+![](Pasted%20image%2020231121124155.png)
