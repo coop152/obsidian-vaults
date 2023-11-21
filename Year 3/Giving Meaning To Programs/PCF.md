@@ -101,7 +101,13 @@ This function is more informative than the function which doesn't halt for any i
 ![](Pasted%20image%2020231121153001.png)
 (just read the fucking notes, god)
 ## Section 3.3
+(Flashforward to chapter 4 for the definitions of preorders and related things)
+![](Pasted%20image%2020231121154617.png)
+![](Pasted%20image%2020231121154624.png)
+![](Pasted%20image%2020231121154631.png)
+(back to current chapter)
 ![](Pasted%20image%2020231121153213.png)
 ![](Pasted%20image%2020231121153856.png)
 ![](Pasted%20image%2020231121154045.png)
 ![](Pasted%20image%2020231121154210.png)
+![](Pasted%20image%2020231121154523.png)
