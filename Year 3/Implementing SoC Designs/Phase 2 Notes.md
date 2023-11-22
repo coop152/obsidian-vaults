@@ -138,4 +138,16 @@ results = {
 				   (X, Y, COLOR)]
 }
 ```
-python script generates its own list of results
+python script generates its own list of results and iterates through the generated coordinates, collating a list of coordinates that are correct, that were missed out, and that shouldn't have been there.
+It then outputs results in this format:
+```
+[Summary]
+Shape 1 - Success
+Shape 2 - Fail
+[Shape 2]
+X Y COLOR - Correct
+X Y COLOR - Should not exist, but did
+X Y COLOR - Should have existed, but didn't
+X Y COLOR - Wrong colour
+X Y COLOR - Correct
+```
