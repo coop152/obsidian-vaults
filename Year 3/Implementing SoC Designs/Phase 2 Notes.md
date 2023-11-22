@@ -106,3 +106,36 @@ switch (pixnum) {
 	}
 }
 ```
+## Checking flow
+testbench outputs the pixels that were sent to the framebuffer in a format like this:
+```
+[Shape 1]
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+[Shape 2]
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+ADDR X Y COLOR
+```
+this is written to `results.txt`.
+The python script is invoked after the file is closed, and reads these results in. In-mem structure something like this:
+```python
+results = {
+		   "Shape 1": [(X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR)],
+		   "Shape 2": [(X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR),
+				   (X, Y, COLOR)]
+}
+```
+python script generates its own list of results
