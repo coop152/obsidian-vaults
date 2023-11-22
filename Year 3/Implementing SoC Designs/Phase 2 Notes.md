@@ -110,12 +110,14 @@ switch (pixnum) {
 testbench outputs the pixels that were sent to the framebuffer in a format like this:
 ```
 [Shape 1]
+X0 Y0 R COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
 [Shape 2]
+X0 Y0 R COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
 ADDR X Y COLOR
@@ -125,18 +127,10 @@ ADDR X Y COLOR
 this is written to `results.txt`.
 The python script is invoked after the file is closed, and reads these results in. In-mem structure something like this:
 ```python
-results = {
-		   "Shape 1": [(X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR)],
-		   "Shape 2": [(X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR),
-				   (X, Y, COLOR)]
-}
+results = [
+		   ("Shape 1", (x0, y0, r, color), [(X, Y, COLOR), (X, Y, COLOR), ...]),
+		   ("Shape 1", (x0, y0, r, color), [(X, Y, COLOR), (X, Y, COLOR), ...])
+]
 ```
 python script generates its own list of results and iterates through the generated coordinates, collating a list of coordinates that are correct, that were missed out, and that shouldn't have been there.
 It then outputs results in this format:
