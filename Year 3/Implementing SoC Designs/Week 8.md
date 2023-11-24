@@ -57,3 +57,18 @@ It works like so:
 - When the gate is switching from one situation to the other, both transistors swing from on to off or vice versa. Because both are doing it at the same time, this tends to "sharpen" the edge of the change.
 
 Note that the two types of transistor are not quite complementary. This is covered later.
+
+The gate threshold of a transistor is the input voltage for which the gate's output switches.
+![](Pasted%20image%2020231124115800.png)
+This may not necessarily be a halfway point.
+The transfer from one output to the other is curved because of the time it takes for a transistor to change:
+![](Pasted%20image%2020231124120248.png)
+Observe how the switching behaviour of an entire CMOS gate and a single transistor (or capacitor in this case) are different.
+## Transistor sizes
+The bigger the load, the slower the output edge. Load is imposed by the inputs of other gates (because each transistor is a capacitor) and also by the interconnection wiring. Both of these in turn depend on the network **fanout**; in practice counting the number of gates wired to will give a decent approximation of the scale of the wiring load.
+When fanout becomes big, edges can become slow. To alleviate this you can simply use a bigger transistor! It is common for gate libraries to contain a range of implementations of each logic function where the drive strength of the gate can be selected. Bigger gates have downsides, namely that they occupy more space and that the thing driving them will also have a higher load.
+To get a bigger transistor, it is legitimate to place two or more devices in parallel:
+![](Pasted%20image%2020231124120913.png)
+# Standard cells
+The majority of VLSI is built from standard cells. These are implementations of widely used components, largely equivalent to a single gate. There will probably be some complex gates to choose from too.
+The design needs to be converted into cells which can be laid out on a chip. This phase is called **technology mapping**. CAD tools convert a circuit specification into cells from a **component cell library**.
