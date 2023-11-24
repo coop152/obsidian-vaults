@@ -140,3 +140,22 @@ Compared to a comparable complex gate latch, this is significantly better:
 ![](Pasted%20image%2020231124134458.png)
 # Macrocells
 Some components would be very inefficient in speed/area/power if constructed from standard gates, and are sufficiently common that they are worth generating differently. The most common example is memory.
+A design program may give a 'RAM generator' tool which can be fed parameters (e.g. number and size of words) and will produce a block of layout accordingly. RAM is regular and tessellates, so this is reasonable to do automatically.
+This kind of approach can generate SRAM and ROM that is 10x denser (or maybe more) than a custom implementation using D-type flip-flops, etc.
+## FPGAs
+Modern FPGAs can make extensive use of macrocells, where they will be designed in at manufacture for use by the programmable section. Examples include:
+- Blocks of memory, SRAM or ROM
+- Adder components
+- Multiplier blocks
+- Entire microprocessors
+- Specialist systems (e.g. high-speed serial interfaces)
+
+## Full-custom design
+It is, of course, possible to layout components by hand, lovingly crafting every transistor to exactly the desired dimensions. Of course on the scale of a real SoC this is not reasonable.
+Hand design may still be done to create standard cells and some specialist structures, but unless you are trying to squeeze the last bit of performance out of a design higher level structures will be built of pre-prepared cells. Hand-composition of standard cells is also possible (to minimise wiring runs) but is also unusual.
+
+One of the major problems with hand-building a layout (apart from having to hand-build a layout) is that it is **non-portable**. Each silicon foundry will have varying **design rules** (geometrical limitations on the manufacturing process), and even in a single foundry they will generally change from process to process. Designing at a higher level of abstraction may lose some minor amount of performance, but it gains massively in portability (and reduces development time).
+
+Hand placement is still useful as a sort of "hint" for place-and-route tools, especially for large components (macrocells). This can actually help performance on FPGAs in particular.
+## Analogue components
+![](Pasted%20image%2020231124141909.png)
