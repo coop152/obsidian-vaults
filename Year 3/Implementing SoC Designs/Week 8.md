@@ -69,6 +69,32 @@ The bigger the load, the slower the output edge. Load is imposed by the inputs o
 When fanout becomes big, edges can become slow. To alleviate this you can simply use a bigger transistor! It is common for gate libraries to contain a range of implementations of each logic function where the drive strength of the gate can be selected. Bigger gates have downsides, namely that they occupy more space and that the thing driving them will also have a higher load.
 To get a bigger transistor, it is legitimate to place two or more devices in parallel:
 ![](Pasted%20image%2020231124120913.png)
-# Standard cells
-The majority of VLSI is built from standard cells. These are implementations of widely used components, largely equivalent to a single gate. There will probably be some complex gates to choose from too.
+## Standard cells
+The majority of VLSI is built from standard cells. These are implementations of widely used components, largely equivalent to a single gate. There will likely be some complex gates to choose from in addition to the simple ones.
 The design needs to be converted into cells which can be laid out on a chip. This phase is called **technology mapping**. CAD tools convert a circuit specification into cells from a **component cell library**.
+Each component of this library will be visible in the layout. The full design may be visible, although sometimes manufacturers will protect these by only providing a 'phantom' which shows the size and connection points. This phantom will be a *characterised* model of the true cell, which can be used by appropriate cad tools to simulate its behaviour with it's true capacitive loads, output drive, etc.
+![](Pasted%20image%2020231124122931.png)
+Standard cells will have a fixed height with power rails of a known width in defined places. They will differ in width, though they may conform to multiples of a standard unit (to fit more easily on a 'grid').
+Cells will already be correct according to the design rules internally, and usually in some extra cases (e.g. reflected left-right or even top-bottom).
+Layout is in rectangular blocks with power fed from rails at the edges. (Other power rails may be placed above and linked down.)
+Dummy 'spacer' cells will be added to fill in any gaps, and for other functionality such as providing contacts for the wells. 
+
+Cell libraries will vary but you can expect them to at least include the common gates (e.g. inverter, AND, NAND, OR, NOR, XOR, XNOR) in a variety of input types and drive strengths.
+You can also expect a number of simpler complex gates (e.g. and-or-invert, or-and-invert) because they can reduce the critical path of a logic block.
+There will be a number of latching elements: D-type flip-flops of many kinds (with or without resets, enables, etc.) and various kinds of latches.
+Other cells are less likely, but multiplexers are not uncommon.
+
+## Examples of CMOS gates
+Gates are formed using serial and parallel combinations of transistors.
+![](Pasted%20image%2020231124124218.png)
+These basic gates are always inverting (e.g. NOT, NAND, NOR).
+They provide a load on their inputs and actively drive their outputs.
+
+Because a single CMOS logic stage inverts the output, a standard AND gate will actually be a NAND-INV combo. This will be slower, although the inverter may provide some good drive strength.
+![](Pasted%20image%2020231124123913.png)
+Larger fan-in gates may be constructible using other non-inverting cells, which is often preferable. For example, this 4-input AND:
+![](Pasted%20image%2020231124124108.png)
+Which is clearly simpler than 3 of the previously shown AND gates.
+
+## Transistor sizes (again)
+The impedance of a transistor when it is 'switched on' is inversely proportional to its gate width. If there is (for example) double the width then there is twice as much material to carry the appropriate current density, so there is twice the current.
