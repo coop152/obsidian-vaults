@@ -32,3 +32,28 @@ The images are examples of n-channel MOSFETs. The drain and source are n-type, m
 ![](Pasted%20image%2020231124111948.png)
 The important parameters of a MOSFET are the length of the channel (L), the width of the channel (W) and the thickness of the gate's insulator ($t_\text{ox}$). The channel length is usually what is being referred to when a size is given for a transistor (e.g. "28nm"). L and W can be controlled easily when making a design. We might have some control over $t_\text{ox}$, but this is usually fixed by the CMOS process being used (i.e. the manufacturer).
 The doping levels may also vary which will change the threshold voltage ($V_\text{th}$). Low-threshold transistors will start to conduct early after being switched on, making them good for 'fast' gates, but they turn off more slowly and therefore leak charge, increasing power dissipation. A high-threshold transistor will inversely be slower but lower power.
+## Layout
+![](Pasted%20image%2020231124113002.png)
+Shown in the figure is a transistor circuit, and an illustration of how that circuit might be implemented. These are the areas:
+- Green represents the diffusion areas (sources and drains)
+- Red represents the gates (which sit above the diffusion areas)
+- Blue represents wires into the transistor, which come in from above and are connected vertically (represented by the black boxes)
+- Grey represents the substrate (which also goes under the diffusion areas)
+
+Here is a 3D representation of a similar (but simpler) circuit:
+![](Pasted%20image%2020231124113534.png)
+This also includes some overhead wires that don't interact with the circuit.
+In these pictures, the transistor's length is the short horizontal length of the gate. The width is the other dimension of the gate (vertical in first diagram, into the image on the second).
+There are minimum and maximum widths and clearances for these features (e.g. minimum gate length, minimum overlap of gate and diffusion...) which are known as the **design rules**. These must be followed if the fabricated layout is to work. CAD tools provide an appropriate Design Rule Checker (DRC).
+# CMOS Gates
+CMOS stands for *Complementary* MOS. By complementary it means that a CMOS circuit consists of PMOS and NMOS transistors complementing each other, where PMOS transistors are good at pulling outputs high and NMOS transistors are good at pulling them low.
+Here is a simple example of a CMOS gate, an inverter:
+![](Pasted%20image%2020231124114249.png)
+This circuit simply switches the input from 1 to 0 or vice versa. For example:
+![](Pasted%20image%2020231124114456.png)
+It works like so:
+- With a high input the PMOS transistor is 'off' and the NMOS transistor is 'on', connecting the output to ground and outputting zero.
+- With a low input the PMOS transistor is 'on' and the NMOS transistor is 'off', connecting the output to power and outputting one.
+- When the gate is switching from one situation to the other, both transistors swing from on to off or vice versa. Because both are doing it at the same time, this tends to "sharpen" the edge of the change.
+
+Note that the two types of transistor are not quite complementary. This is covered later.
