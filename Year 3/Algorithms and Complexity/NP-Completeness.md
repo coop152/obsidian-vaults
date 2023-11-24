@@ -50,4 +50,6 @@ For example, in reducing 3SAT to CLIQUE we represent variables as nodes in the g
 ## The vertex cover problem
 For an undirected graph $G$, a vertex cover of $G$ is a subset $S$ of the nodes where every edge of $G$ has an endpoint in $S$.
 ![](Pasted%20image%2020231124150309.png)
-To show that VERTEX-COVER is NP-complete, we first show that it is in NP. This is trivial; a certificate is a vertex cover of size $k$, and we can verify it in polynomial time by 
+To show that VERTEX-COVER is NP-complete, we first show that it is in NP. This is trivial; a certificate is a vertex cover of size $k$, and we can verify it in polynomial time by iterating over each edge in $G$ and checking at least one of the endpoints is in the certificate.
+Next, we show that 3SAT is polynomial time reducible to VERTEX-COVER. This reduction will convert a 3cnf formula $\phi$ into a graph $G$ and a number $k$, such that $\phi$ is satisfiable whenever $G$ has a vertex cover with $k$ nodes. In effect, $G$ simulates $\phi$. The graph contains gadgets that mimic the variables and clauses of the formula. Designing these gadgets requires a bit of ingenuity
+(just read the notes)
