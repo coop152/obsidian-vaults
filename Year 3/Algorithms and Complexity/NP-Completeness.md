@@ -48,3 +48,6 @@ When constructing a polynomial time reduction from 3SAT to a language, we look f
 For example, in reducing 3SAT to CLIQUE we represent variables as nodes in the graph and clauses as triples of nodes. We then represent a variable's truth in a satisfying assignment with its membership in the clique. Each clause must contain at least one true literal, so each triple of nodes must contain at least one node in the clique.
 
 ## The vertex cover problem
+For an undirected graph $G$, a vertex cover of $G$ is a subset $S$ of the nodes where every edge of $G$ has an endpoint in $S$.
+![](Pasted%20image%2020231124150309.png)
+To show that VERTEX-COVER is NP-complete, we first 
