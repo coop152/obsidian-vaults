@@ -97,4 +97,12 @@ Larger fan-in gates may be constructible using other non-inverting cells, which 
 Which is clearly simpler than 3 of the previously shown AND gates.
 
 ## Transistor sizes (again)
-The impedance of a transistor when it is 'switched on' is inversely proportional to its gate width. If there is (for example) double the width then there is twice as much material to carry the appropriate current density, so there is twice the current.
+The resistance of a transistor when it is 'switched on' is inversely proportional to its gate width. If there is (for example) double the width then there is twice as much material to carry the appropriate current density, so there is twice the current.
+The resistance is also proportional to the gate length. Normally (but not always) transistors are made with the minimum feasible gate length to reduce resistance.
+Two 'on' transistors in series are roughly equivalent to one transistor of twice the length. Therefore, a transistor 'stack' of two transistors will have twice the resistance of a single transistor, 'weakening' the gate's drive strength. The transistors' widths may be doubled to counteract this. Alternatively, you could use two parallel transistors.
+## PMOS vs NMOS
+PMOS channels are less conductive than NMOS ones; as a rule of thumb, a PMOS transistor needs to be **twice as wide** as its NMOS equivalent to provide similar channel resistance. Thus for an inverter, to provide equal rising and falling output edges:
+![](Pasted%20image%2020231124125811.png)
+To provide equal switching edges from gates, transistor widths are increased proportionally to the depth of the **series stack** they are in, from power supply to output. You *do not* decrease the width of parallel transistors, because we assume that only one input change (and thus one transistor) will be responsible for the output change.
+Here is an example for NAND gates:
+![](Pasted%20image%2020231124130205.png)
