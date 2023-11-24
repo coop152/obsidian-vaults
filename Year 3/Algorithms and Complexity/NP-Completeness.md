@@ -43,3 +43,4 @@ Once we have one NP-Complete problem, we can obtain others by polynomial time re
 LMAO this proof is 5 pages long, i'll pass
 
 # NP-Complete Problems (Week 9)
+The general strategy for proving NP-Completeness is to exhibit a polynomial time reduction from 3SAT to the language in question. There may be situations where reducing from other languages is more convenient.
