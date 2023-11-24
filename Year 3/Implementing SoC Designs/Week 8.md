@@ -18,4 +18,14 @@ As these devices are off by default unless a voltage is supplied on the gate, th
 The substrate is usually omitted from circuit diagrams, but on an n-channel device it is connected to the most negative voltage in the system and on a p-channel device it is connected to the most positive.
 ## Diode Junctions
 ![](Pasted%20image%2020231123124726.png)
-A semiconductor diode is formed by a junction of p-doped and n-doped material.
+A semiconductor diode is formed by a junction of p-doped and n-doped material. An 'ideal' diode would allow current to flow from P to N but not the other way; in reality it requires some forward bias voltage to make the current flow.
+![](Pasted%20image%2020231124110322.png)
+## Structure of a MOSFET
+![](Pasted%20image%2020231124110424.png)
+- **M**etal - the gate is made from metal.
+- **O**xide - the insulator between the gate and substrate is historically made from Silicon Dioxide (SiO2), though nowadays it's probably made from "high-k dielectric" instead.
+- **S**ilicon - the substrate is made of silicon doped with Boron, Arsenic, Phosphorus, etc.
+- **F**ield **E**ffect - The current in the gate controls an electric field which causes the substrate to change conductivity...
+- **T**ransistor - Which creates a transistor.
+
+The images are examples of n-channel MOSFETs. The drain and source are n-type, like given in the name, meaning that the MOSFET will transfer 
