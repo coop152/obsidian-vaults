@@ -41,3 +41,5 @@ Once we have one NP-Complete problem, we can obtain others by polynomial time re
 ![](Pasted%20image%2020231110144736.png)
 ![](Pasted%20image%2020231110144831.png)
 LMAO this proof is 5 pages long, i'll pass
+
+# NP-Complete Problems (Week 9)
