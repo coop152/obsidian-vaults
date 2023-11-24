@@ -114,3 +114,18 @@ NOR gates are 'worse' in this regard because the PMOS transistors scale from a l
 ![](Pasted%20image%2020231124131557.png)
 ![](Pasted%20image%2020231124131706.png)
 # Pass Transistors
+Instead of using transistors to connect an output to the appropriate power supply, use a transistor to connect an output directly to some input:
+![](Pasted%20image%2020231124132518.png)
+When the transistor is 'off' the output will be high-impedance, as nothing is driving it. When the transistor is 'on', it will do a good job at transmitting it's preferred type of current (i.e. zeros for NMOS, ones for PMOS) but will still get some of the way there for the opposite kind. So, an NMOS will pass along a zero perfectly and pass along a one as a sort of 'three-quarters'.
+An example of pass transistors in action is an SRAM cell:
+![](Pasted%20image%2020231124132906.png)
+When word is high, the transistors will allow the data into the inverter loop. One of the inputs will be of poor strength (near-zero or near-one). This is good enough to store the desired state, and (over time) the inverters will strengthen the stored value.
+(NMOS transistors are used because their resistance is preferable at a given size to PMOS.)
+## Transmission Gates
+NMOS can pass zero well but not one. PMOS can pass one well but not zero. If we combine them, we can made a device with behaviour similar to a pass transistor but that delivers a strong output no matter the input. This is called a transmission gate.
+![](Pasted%20image%2020231124133249.png)
+Note that we need complementary enables.
+This gate is a switch, so it will pass signals in either direction. This is useful but it also causes problems: without buffering the output may have unwanted effects on the input.
+Here is an example usage of a transmission gate in a multiplexer:
+![](Pasted%20image%2020231124133425.png)
+When Sel is high, the top transmission gate is switched off, so it's output is high impedance. The bottom transmission gate is switched on, passing on the input to the final inverter. This type of structure also scales quite well, e.g. to a 4:1 mux.
