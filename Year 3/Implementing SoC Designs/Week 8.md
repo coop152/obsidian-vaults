@@ -111,3 +111,6 @@ NOR gates are 'worse' in this regard because the PMOS transistors scale from a l
 # Complex Gates
 ![](Pasted%20image%2020231124130538.png)
 
+![](Pasted%20image%2020231124131557.png)
+![](Pasted%20image%2020231124131706.png)
+# Pass Transistors
