@@ -129,3 +129,12 @@ This gate is a switch, so it will pass signals in either direction. This is usef
 Here is an example usage of a transmission gate in a multiplexer:
 ![](Pasted%20image%2020231124133425.png)
 When Sel is high, the top transmission gate is switched off, so it's output is high impedance. The bottom transmission gate is switched on, passing on the input to the final inverter. This type of structure also scales quite well, e.g. to a 4:1 mux.
+Here is another example in a transparent latch:
+![](Pasted%20image%2020231124133934.png)
+If enable is high, the first gate is on and the second gate is off. In this case, the input D passes through into the inverter and then through to output Q. If enable is low, then the second gate is instead on and the output of the middle inverter loops around inside the latch. In this case, the stored value will be output and D is ignored.
+This is essentially like the SRAM cell from before and the multiplexer combined.
+You could even make this design using a single transmission gate, like this:
+![](Pasted%20image%2020231124134339.png)
+For this design to work the feedback inverter (the small one) must be sufficiently weak, such that the input from D overpowers and replaces its output.
+Compared to a comparable complex gate latch, this is significantly better:
+![](Pasted%20image%2020231124134458.png)
