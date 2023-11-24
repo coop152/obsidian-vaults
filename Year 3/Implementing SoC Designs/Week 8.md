@@ -106,3 +106,8 @@ PMOS channels are less conductive than NMOS ones; as a rule of thumb, a PMOS tra
 To provide equal switching edges from gates, transistor widths are increased proportionally to the depth of the **series stack** they are in, from power supply to output. You *do not* decrease the width of parallel transistors, because we assume that only one input change (and thus one transistor) will be responsible for the output change.
 Here is an example for NAND gates:
 ![](Pasted%20image%2020231124130205.png)
+The input load to the gate increases proportionally.
+NOR gates are 'worse' in this regard because the PMOS transistors scale from a larger base. Therefore, NAND logic is slightly preferable.
+# Complex Gates
+![](Pasted%20image%2020231124130538.png)
+
