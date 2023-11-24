@@ -138,3 +138,5 @@ You could even make this design using a single transmission gate, like this:
 For this design to work the feedback inverter (the small one) must be sufficiently weak, such that the input from D overpowers and replaces its output.
 Compared to a comparable complex gate latch, this is significantly better:
 ![](Pasted%20image%2020231124134458.png)
+# Macrocells
+Some components would be very inefficient in speed/area/power if constructed from standard gates, and are sufficiently common that they are worth generating differently. The most common example is memory.
