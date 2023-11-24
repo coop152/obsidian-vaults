@@ -50,4 +50,4 @@ For example, in reducing 3SAT to CLIQUE we represent variables as nodes in the g
 ## The vertex cover problem
 For an undirected graph $G$, a vertex cover of $G$ is a subset $S$ of the nodes where every edge of $G$ has an endpoint in $S$.
 ![](Pasted%20image%2020231124150309.png)
-To show that VERTEX-COVER is NP-complete, we first show that it is in NP. This is trivial; a certificate is simply a vertex cover of size $k$, and we can verify it in polynomial time by 
+To show that VERTEX-COVER is NP-complete, we first show that it is in NP. This is trivial; a certificate is a vertex cover of size $k$, and we can verify it in polynomial time by 
