@@ -44,4 +44,7 @@ LMAO this proof is 5 pages long, i'll pass
 
 # NP-Complete Problems (Week 9)
 The general strategy for proving NP-Completeness is to exhibit a polynomial time reduction from 3SAT to the language in question, though there may be situations where reducing from other languages is more convenient.
-When constructing a polynomial time reduction from 3SAT to a language, we look for structures in that language that can simulate the variables and clauses in boolean formulas. Such structures are sometimes called **gadgets**. For example, in reducing 3SAT to CLIQUE
+When constructing a polynomial time reduction from 3SAT to a language, we look for structures in that language that can simulate the variables and clauses in boolean formulas. Such structures are sometimes called **gadgets**.
+For example, in reducing 3SAT to CLIQUE we represent variables as nodes in the graph and clauses as triples of nodes. We then represent a variable's truth in a satisfying assignment with its membership in the clique. Each clause must contain at least one true literal, so each triple of nodes must contain at least one node in the clique.
+
+## The vertex cover problem
