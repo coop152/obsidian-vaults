@@ -72,3 +72,6 @@ The contour lines are projected onto the terrain at some constant height (for ex
 But when shown from above, as it would be in a 2D map, the contour lines look like this:
 ![](Pasted%20image%2020231126152439.png)
 In combination with the colouration, the contour lines convey depth in a way that doesn't require actual 3D depth. The meaning is intuitive; if you imagine the contour line between the blue and green sections as a coastline, then following the contour line is analogous to "walking around the coastline", and it is clear that you would be at the same height all the way around. This is an **ISO line that represents constant height**.
+These also show up in weather forecasts, representing barometric pressure:
+![](Pasted%20image%2020231126153530.png)
+So, along any of these lines we have equal barometric pressure. These are called ISO bars.
