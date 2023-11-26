@@ -75,3 +75,7 @@ In combination with the colouration, the contour lines convey depth in a way tha
 These also show up in weather forecasts, representing barometric pressure:
 ![](Pasted%20image%2020231126153530.png)
 So, along any of these lines we have equal barometric pressure. These are called ISO bars.
+
+Finding an ISO line for a 2D set of values is easy:
+![](Pasted%20image%2020231126153950.png)
+We draw a line between pairs of points which 
