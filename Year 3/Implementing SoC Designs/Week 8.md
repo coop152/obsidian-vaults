@@ -18,4 +18,7 @@ As these devices are off by default unless a voltage is supplied on the gate, th
 The substrate is usually omitted from circuit diagrams, but on an n-channel device it is connected to the most negative voltage in the system and on a p-channel device it is connected to the most positive.
 ## Diode Junctions
 ![](Pasted%20image%2020231123124726.png)
-A semiconductor diode is formed by a junction of p-doped and n-doped material.
+A semiconductor diode is formed by a junction of p-doped and n-doped material. An 'ideal' diode allows current to flow from P to N but not the other way. An actual diode will require some amount of forward bias voltage to make the current flow.
+![](Pasted%20image%2020231123171201.png)
+(Theres also this thing which i dont know the meaning of)
+fuck it just read the notes
