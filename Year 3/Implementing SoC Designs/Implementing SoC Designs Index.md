@@ -3,6 +3,7 @@
 - [[Week 3]]
 - [[Week 4]]
 - [[Week 5]]
+- Week 6 (Reading Week)
 - [Week 7](Week%207.md)
 - [[Week 8]]
 

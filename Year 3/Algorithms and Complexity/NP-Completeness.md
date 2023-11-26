@@ -41,3 +41,15 @@ Once we have one NP-Complete problem, we can obtain others by polynomial time re
 ![](Pasted%20image%2020231110144736.png)
 ![](Pasted%20image%2020231110144831.png)
 LMAO this proof is 5 pages long, i'll pass
+
+# NP-Complete Problems (Week 9)
+The general strategy for proving NP-Completeness is to exhibit a polynomial time reduction from 3SAT to the language in question, though there may be situations where reducing from other languages is more convenient.
+When constructing a polynomial time reduction from 3SAT to a language, we look for structures in that language that can simulate the variables and clauses in boolean formulas. Such structures are sometimes called **gadgets**.
+For example, in reducing 3SAT to CLIQUE we represent variables as nodes in the graph and clauses as triples of nodes. We then represent a variable's truth in a satisfying assignment with its membership in the clique. Each clause must contain at least one true literal, so each triple of nodes must contain at least one node in the clique.
+
+## The vertex cover problem
+For an undirected graph $G$, a vertex cover of $G$ is a subset $S$ of the nodes where every edge of $G$ has an endpoint in $S$.
+![](Pasted%20image%2020231124150309.png)
+To show that VERTEX-COVER is NP-complete, we first show that it is in NP. This is trivial; a certificate is a vertex cover of size $k$, and we can verify it in polynomial time by iterating over each edge in $G$ and checking at least one of the endpoints is in the certificate.
+Next, we show that 3SAT is polynomial time reducible to VERTEX-COVER. This reduction will convert a 3cnf formula $\phi$ into a graph $G$ and a number $k$, such that $\phi$ is satisfiable whenever $G$ has a vertex cover with $k$ nodes. In effect, $G$ simulates $\phi$. The graph contains gadgets that mimic the variables and clauses of the formula. Designing these gadgets requires a bit of ingenuity
+(just read the notes)
