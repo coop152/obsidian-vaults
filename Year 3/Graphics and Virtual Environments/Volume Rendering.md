@@ -78,4 +78,13 @@ So, along any of these lines we have equal barometric pressure. These are called
 
 Finding an ISO line for a 2D set of values is easy:
 ![](Pasted%20image%2020231126153950.png)
-We draw a line between pairs of points which pass between our defined constant. If we classify the points based on this boundary, we can 
+We draw a line between pairs of points which pass between our defined constant. We can classify points based on this boundary:
+![](Pasted%20image%2020231126154936.png)
+We might say that blue pixels are rock and pink pixels are air, which allows us to represent them accordingly.
+Depending on the thing we are sampling we might use a smooth line instead:
+![](Pasted%20image%2020231126155046.png)
+But that poses it's own challenges (which we won't cover now).
+In essence, this is what we're trying to do with **ISO surfaces**. We want to perform a process like this in 3D, but with surfaces separating different classifiable things instead of lines. We then use these ISO surfaces to convert the point grid into a mesh.
+This is not an easy process in 3D. Creating these surfaces is known as **marching cubes**.
+![](Pasted%20image%2020231126155434.png)
+(Watch the video for a video visualisation.)
