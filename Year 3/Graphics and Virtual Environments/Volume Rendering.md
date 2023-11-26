@@ -88,3 +88,25 @@ In essence, this is what we're trying to do with **ISO surfaces**. We want to pe
 This is not an easy process in 3D. Creating these surfaces is known as **marching cubes**.
 ![](Pasted%20image%2020231126155434.png)
 (Watch the video for a video visualisation.)
+The output of marching cubes is a regular mesh, which can be rendered extremely quickly by the graphics card.
+## Proxy Surfaces
+Another approach is to use **proxy geometry**. The idea is to use each layer of the scan as a texture, and pile them up into a stack of transparent screens. When the layers come together they will make a coherent image.
+![](Pasted%20image%2020231126160405.png)
+In terms of polygons, it takes very few to draw this proxy. Each scan only takes a few polygons, and there are only as many layers as there are scans. Rendering a texture on these layers is, of course, extremely fast on a GPU. But how do we create these textures?
+Recall how UV mapping takes place for 2D textures:
+![](Pasted%20image%2020231126160733.png)
+We interpolate between the points on the surface and then find the colour at the calculated UV coordinate by interpolating over the texture. Now imagine doing this with a 3D texture, where that 3D texture is the voxel grid of scans:
+![](Pasted%20image%2020231126161042.png)
+Modern GPUs usually support hardware 3D textures (known as volumetric textures) which makes this just as trivial as regular UV mapping. So the solution is to convert our voxel grid into a 3D texture and then simply apply this texture to our proxy surfaces.
+
+We can tell that simply having a static stack of surfaces will not be good enough: If viewed from the side, we would see the gaps.
+![](Pasted%20image%2020231126161338.png)
+To fix this, we need the surfaces to be parallel to the viewplane at all times.
+![](Pasted%20image%2020231126161424.png)
+This is an easy and fast calculation, so while this does technically make this method viewpoint dependent it is an insignificant amount of work.
+The amount of slices is very important. Not enough slices and the image simply doesn't come together:
+![](Pasted%20image%2020231126161528.png)
+As we add more layers, it becomes clearer and clearer:
+![](Pasted%20image%2020231126161554.png)
+And when we reach a suitable amount the image becomes clear.
+![](Pasted%20image%2020231126161627.png)
