@@ -7,6 +7,7 @@ Imagine we want to scan this golf ball, which has a bumpy surface and a rubber i
 ![](Pasted%20image%2020231126131740.png)
 If we imagine performing a CAT scan on this golf ball, we would have a series of (in this instance) vertically ascending slices of the golf ball, each slice being a 2D scan of one layer of the ball. We can represent this as a 3D grid of voxels:
 ![](Pasted%20image%2020231126131942.png)
-Each voxel containing a single data point.
-
+Each voxel containing a single data point. If we do a scan of the ball we get these values:
+![](Pasted%20image%2020231126135214.png)
+You can see where the layers of the ball roughly begin, as well as the volume of the inside.
 # Direct Volume Rendering
