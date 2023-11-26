@@ -10,4 +10,5 @@ If we imagine performing a CAT scan on this golf ball, we would have a series of
 Each voxel containing a single data point. If we do a scan of the ball we get these values:
 ![](Pasted%20image%2020231126135214.png)
 You can see where the layers of the ball roughly begin, as well as the volume of the inside.
+Importantly, we don't have any actual identification for each of these parts. In a real CAT scan, where we get a full continuum of values for each layer, we have to somehow identify which part is what, manually or otherwise.
 # Direct Volume Rendering
