@@ -78,4 +78,4 @@ So, along any of these lines we have equal barometric pressure. These are called
 
 Finding an ISO line for a 2D set of values is easy:
 ![](Pasted%20image%2020231126153950.png)
-We draw a line between pairs of points which 
+We draw a line between pairs of points which pass between our defined constant. If we classify the points based on this boundary, we can 
