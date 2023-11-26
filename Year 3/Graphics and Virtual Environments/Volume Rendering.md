@@ -55,3 +55,7 @@ This gives us images that look like this:
 The images look much like x-rays, with no discernible depth apart from the little clues given by the shapes themselves (e.g. the curves of the teapot). Indeed, when raycasting to get our render we essentially performed an x-ray on the volume. This is called **Additive Reprojection**, and it gives quite acceptable results. If you generate an animated turn-around or similar then the results can convey quite a good sense of depth.
 We can do better, though. We would rather have a result like this:
 ![](Pasted%20image%2020231126144906.png)
+The most noticeable difference here is the specular highlights on the surfaces. We don't even have a concept of surfaces in our volume, though; how would we have specular highlights?
+We can improvise a surface normal for each point in our volume using the colours. For each point, take the difference from each surrounding point in the three dimensions and use these differences to find a vector:
+![](Pasted%20image%2020231126150641.png)
+By using this as a surface normal, we can add a light source and find specular highlights using a local illumination model. This is completely physically unfounded (most of the things being lit here aren't even exposed to light in reality, after all) but more importantly it assists our depth perception and allows us to more easily visually parse
