@@ -2,7 +2,7 @@ All of the previous rendering techniques we have covered are concerned with tota
 "Volume rendering" is not to be confused with "Volumetric rendering", which refers to effects such as fog or dust interacting with light.
 In volume rendering, objects do not have explicitly defined surfaces. This might be because we are modelling something that doesn't have a meaningful "surface", such as wind patterns or temperatures in a weather simulation.
 On the other hand, the object may still have a well-defined surface but we are also interested in the matter inside, beyond that surface level. It is even useful where we are only concerned with the surface, but we have captured our object in such a way that information about that surface is not easily or obviously presented. An example of both of these is a CAT scan, where a 3D scan of a body is found by taking multiple x-ray "slices" and then stitching the slices back together to make a 3d mesh. This provides no "surface" information, but it does describe a volume which we want to visualise.
-# CAT scanning and Direct Volume Rendering
+# CAT scans
 Imagine we want to scan this golf ball, which has a bumpy surface and a rubber inside.
 ![](Pasted%20image%2020231126131740.png)
 If we imagine performing a CAT scan on this golf ball, we would have a series of (in this instance) vertically ascending slices of the golf ball, each slice being a 2D scan of one layer of the ball. We can represent this as a 3D grid of voxels:
@@ -34,7 +34,7 @@ Clearly the low resolution is diminishing the usefulness of this result, but at 
 So, we have a clear scan and we need to display it in 3D. We could simply display it as voxels or as spheres like we did for the golf ball:
 ![](Pasted%20image%2020231126143010.png)
 This is okay, but it isn't a great visualisation in most cases.
-## Additive Reprojection
+# Direct Volume Rendering
 Introduce a viewpoint and a viewplane. We shoot a ray through a pixel in the viewplane and into the voxel grid.
 ![](Pasted%20image%2020231126143641.png)
 When we enter the volume, we begin **marching** through the grid in regular increments, taking a measurement of the current colour and opacity of the voxel that point falls in. We stop the ray when it leaves the volume, and then take these sampled values to make a single resulting colour. Do this multiple times per pixel and for each pixel in the image (like path tracing) and we can assemble an image.
@@ -58,4 +58,17 @@ We can do better, though. We would rather have a result like this:
 The most noticeable difference here is the specular highlights on the surfaces. We don't even have a concept of surfaces in our volume, though; how would we have specular highlights?
 We can improvise a surface normal for each point in our volume using the colours. For each point, take the difference from each surrounding point in the three dimensions and use these differences to find a vector:
 ![](Pasted%20image%2020231126150641.png)
-By using this as a surface normal, we can add a light source and find specular highlights using a local illumination model. This is completely physically unfounded (most of the things being lit here aren't even exposed to light in reality, after all) but more importantly it assists our depth perception and allows us to more easily visually parse
+By using this as a surface normal, we can add a light source and find specular highlights using a local illumination model. This assumes that the transition between colours will be gradual and smooth, but in a realistic setting this should be the case.
+This is completely unfounded in reality (most of the things being lit here aren't even exposed to light) but more importantly it assists our depth perception and allows us to more easily visually parse the 3D scan.
+This gives results like this:
+![](Pasted%20image%2020231126151311.png)
+# Indirect Volume Rendering
+There is a problem with direct volume rendering in that is it **viewpoint dependent**; if we want to see the scan from a different angle, we need to completely redo the entire raycasting process, which is computationally intense. The reason it is computationally intense to recalculate is because graphics cards are not designed to render volumes: they are however extremely efficient at rendering textured polygon meshes. If we wish to have a 3D scan that can be inspected with a moving viewpoint with high speeds, we need to somehow convert it into a traditional mesh that the GPU can easily re-render. There are many ways to do this, and these methods fall under **Indirect Volume Rendering**.
+## ISO Surfaces
+An **ISO line** is a line that represents some constant value. You see this often in 2D visualisations of 3D objects. For example, here is a 3D "mountain", where the height is represented by contour lines and colouring (and actual 3D height, of course):
+![](Pasted%20image%2020231126152305.png)
+The contour lines are projected onto the terrain at some constant height (for example, 100 m apart). You can see this distance in this side view:
+![](Pasted%20image%2020231126152354.png)
+But when shown from above, as it would be in a 2D map, the contour lines look like this:
+![](Pasted%20image%2020231126152439.png)
+In combination with the colouration, the contour lines convey depth in a way that doesn't require actual 3D depth. The meaning is intuitive; if you imagine the contour line between the blue and green sections as a coastline, then following the contour line is analogous to "walking around the coastline", and it is clear that you would be at the same height all the way around. This is an **ISO line that represents constant height**.
