@@ -107,3 +107,17 @@ So it is still possible in the simply-typed lambda calculus to have two function
 Consider the previous example and think how you might rewrite one of those terms to make them alpha-beta equivalent. Roughly, we assert that a term of form $\lambda x.fx$ can always be simplified to just $f$. We have to be careful, because if $x$ occurs free in subterm $f$ then removing the abstraction will change the meaning of the term. We also would like to perform this simplification anywhere inside a larger term. We define a relation for lambda-terms, starting with untyped terms:
 ![](Pasted%20image%2020231127134722.png)
 And we use $\xrightarrow{\ \eta}\!\!\!\!\!\rightarrow$ for the reflexive transitive closure.
+This relation is well-behaved with respect to renaming:
+![](Pasted%20image%2020231127135546.png)
+and alpha-equivalence:
+![](Pasted%20image%2020231127135603.png)
+This proposition can be pictured like this:
+![](Pasted%20image%2020231127135647.png)
+## $\alpha\beta\eta$-equivalence
+We combine eta-conversion with alpha-beta-equivalence in order to get a relation that expresses contextual equivalence. We want any of these situations to be allowed in our relation:
+![](Pasted%20image%2020231127135910.png)
+Including combinations of them. This is the definition we reach that fits these requirements:
+![](Pasted%20image%2020231127140041.png)
+Recall that we can always find the smallest equivalence relation containing some relation by forming its reflexive symmetric transitive closure. Using this method, we know that for terms $t$ and $t'$ we have
+![](Pasted%20image%2020231127140140.png)
+In other words, two terms are alpha-beta-eta-equivalent
