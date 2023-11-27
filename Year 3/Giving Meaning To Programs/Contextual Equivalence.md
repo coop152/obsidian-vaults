@@ -120,4 +120,4 @@ Including combinations of them. This is the definition we reach that fits these 
 ![](Pasted%20image%2020231127140041.png)
 Recall that we can always find the smallest equivalence relation containing some relation by forming its reflexive symmetric transitive closure. Using this method, we know that for terms $t$ and $t'$ we have
 ![](Pasted%20image%2020231127140140.png)
-In other words, two terms are alpha-beta-eta-equivalent
+In other words, two terms are alpha-beta-eta-equivalent if 
