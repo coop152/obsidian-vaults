@@ -123,4 +123,15 @@ Recall that we can always find the smallest equivalence relation containing some
 ## For the simply typed calculus
 We are only interested in typeable terms, meaning we must take type environments into account. We redefine eta-conversion with this in mind:
 ![](Pasted%20image%2020231127143749.png)
-Simple: You can do eta-conversion if the type environment allows it.
+Simple: You can do only eta-conversion in the simply typed lambda-calculus if the type environment allows it.
+![](Pasted%20image%2020231127145027.png)
+This tells us that eta-conversion relative to a type environment is type-preserving, and that we have defined it in such a way that it only applies to terms, not preterms.
+It behaves well with renaming:
+![](Pasted%20image%2020231127145121.png)
+And it behaves well with alpha-equivalence:
+![](Pasted%20image%2020231127145256.png)
+We redefine alpha-beta-eta-equivalence to be in relation to some type environment:
+![](Pasted%20image%2020231127145505.png)
+Now we show that this constitutes contextual equivalence for the simply-typed lambda calculus:
+![](Pasted%20image%2020231127145557.png)
+![](Pasted%20image%2020231127145606.png)
