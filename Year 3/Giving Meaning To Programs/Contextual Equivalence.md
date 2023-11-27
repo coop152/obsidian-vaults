@@ -123,3 +123,4 @@ Recall that we can always find the smallest equivalence relation containing some
 ## For the simply typed calculus
 We are only interested in typeable terms, meaning we must take type environments into account. We redefine eta-conversion with this in mind:
 ![](Pasted%20image%2020231127143749.png)
+Simple: You can do eta-conversion if the type environment allows it.
