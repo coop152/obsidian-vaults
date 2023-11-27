@@ -98,3 +98,12 @@ And as usual, we move from taking one beta-reduction step to taking any finite n
 So denotational semantics are preserved by alpha-equivalence and beta-reduction, making it a worthwhile technical tool for studying the lambda-calculus.
 
 (ALSO there is the rest of chapter 2 starting at 2.10, which is the adequacy stuff. read it
+
+# $\eta$-conversion
+Now we have formalized our notion of "same behaviour" for our typed calculus via contextual equivalence. Recall that in our non-typed calculus we attempted to formalize this same notion in the form of alpha-beta-equivalence, but found that it was not sufficient: There were terms that behaved the same in the context of a larger program but were not alpha-beta-equivalent. Has this changed when we introduced types?
+![](Pasted%20image%2020231127133823.png)
+![](Pasted%20image%2020231127133833.png)
+So it is still possible in the simply-typed lambda calculus to have two functionally interchangeable terms that are not alpha-beta-equivalent. Let's investigate if it is possible to extend alpha-beta-equivalence to cover this situation, giving us a second formal notion of "same behaviour". 
+Consider the previous example and think how you might rewrite one of those terms to make them alpha-beta equivalent. Roughly, we assert that a term of form $\lambda x.fx$ can always be simplified to just $f$. We have to be careful, because if $x$ occurs free in subterm $f$ then removing the abstraction will change the meaning of the term. We also would like to perform this simplification anywhere inside a larger term. We define a relation for lambda-terms, starting with untyped terms:
+![](Pasted%20image%2020231127134722.png)
+And we use $\xrightarrow{\ \eta}\!\!\!\!\!\rightarrow$ for the reflexive transitive closure.
