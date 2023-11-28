@@ -36,3 +36,12 @@ The other part of dynamic dissipation comes from "short circuit" or "crowbar" cu
 - Use high threshold transistors - these turn on later and off sooner, minimising time spent when charge is wasted. This will also slow down switching and thus increase the propagation delay of the gate. This is best employed on gates off the critical path.
 
 ## Static Power Dissipation
+![](Pasted%20image%2020231128142258.png)
+## Transistor threshold
+A CMOS transistor can be regarded as a switch (for digital circuits).
+The threshold of a transistor is the gate voltage where it switches from 'off' to 'on'. This voltage is measured from the gate to the channel - for PMOS this is between the gate and drain ($V_{gd}$) and for NMOS this is between the gate and source ($V_{gs}$).
+![](Pasted%20image%2020231128142649.png)![](Pasted%20image%2020231128142656.png)
+![](Pasted%20image%2020231128142705.png)
+This threshold can be determined when the transistor is manufactured. Different threshold devices can be constructed by applying different dopant concentrations; you can mix different thresholds of transistor on a single chip.
+![](Pasted%20image%2020231128142853.png)
+Low threshold transistors pull the NMOS
