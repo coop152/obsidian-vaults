@@ -12,4 +12,5 @@ As devices shrink, the energy demand per operation reduces. Roughly speaking:
 $V_d$ is the voltage of the transistor's drain.
 $V_s$ is the voltage of the transistor's source.
 You double the subscript to refer to the supply that these are connected to:
-$V_{dd}$ is the voltage of the drain supply
+$V_{dd}$ is the voltage of the drain supply (also known as "power").
+$V_{ss}$ is the voltage of the source supply (usually interchangeable for "ground", but sometimes it is a "low" supply rail)
