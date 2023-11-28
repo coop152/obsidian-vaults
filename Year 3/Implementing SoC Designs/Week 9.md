@@ -26,4 +26,6 @@ CMOS' power demand varies with the clock cycle: Following a clock edge there is 
 
 # Dynamic Power Dissipation
 Dynamic dissipation is caused by switching gates. Therefore it is proportional to the clock frequency; if you double the frequency then the gates switch twice as often and power is doubled. It is also related to the activity of the circuit, as not every gate will switch on every cycle and some logic blocks may idle for long periods.
-Dynamic dissipation in CMOS circuits
+Dynamic dissipation in CMOS circuits is made of two parts: The first is the load capacitance of the network. To switch a node 'high' it is connected (via a pull-up tree) to the power supply and charge flows from there into the net until the voltage equalises. This charge is defined by:
+$$Q =C.V$$
+When the node discharges (via the pull-down tree) the charge flows to ground. T
