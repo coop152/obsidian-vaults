@@ -28,4 +28,11 @@ CMOS' power demand varies with the clock cycle: Following a clock edge there is 
 Dynamic dissipation is caused by switching gates. Therefore it is proportional to the clock frequency; if you double the frequency then the gates switch twice as often and power is doubled. It is also related to the activity of the circuit, as not every gate will switch on every cycle and some logic blocks may idle for long periods.
 Dynamic dissipation in CMOS circuits is made of two parts: The first is the load capacitance of the network. To switch a node 'high' it is connected (via a pull-up tree) to the power supply and charge flows from there into the net until the voltage equalises. This charge is defined by:
 $$Q =C.V$$
-When the node discharges (via the pull-down tree) the charge flows to ground. T
+When the node discharges (via the pull-down tree) the charge flows to ground. The effect of the cycle is to move charge (Q) through the potential between the rails (V), so the energy dissipated per cycle is:
+$$E=Q.V=C.V^2$$
+This doesn't depend on edge speeds, etc. Note that this is proportional to the **square** of the voltage, so halving the supply voltage will quarter energy dissipation.
+The other part of dynamic dissipation comes from "short circuit" or "crowbar" current which results from the brief moments where both the pull-up and pull-down trees are conducting (to some extent) as one turns off and the other turns on. This is difficult to quantify as it depends on a number of factors including transistor widths and the direction that transistors are switching. There are two 'simple' ways to reduce this:
+- Keep input edges fast - reduce the time both trees are on simultaneously. This can be done by increasing the 'strength' (transistor widths) of the input gates, however that in turn increases their capacitive loads and slows their own inputs down.
+- Use high threshold transistors - these turn on later and off sooner, minimising time spent when charge is wasted. This will also slow down switching and thus increase the propagation delay of the gate. This is best employed on gates off the critical path.
+
+## Static Power Dissipation
