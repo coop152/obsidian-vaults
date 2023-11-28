@@ -1,0 +1,7 @@
+- Switched `CalFile` to use modern c++ file apis, as well as `std::strings`, `filesystem::path`s
+- This required adding lots of methods to other classes to deal with `std::string`s:
+	- `Calendar::Write` which takes an `ofstream` instead of a `FILE*`
+	- `std::string` conversion operator for `DateSet`, `Item`, `Appointment` and `OptionMap`
+	- new function `Lexer::EscapeString` which behaves like `Lexer::PutString` but returns an escaped `std::string` instead of modifying a given `charArray`
+- Note that Item and Appointment got proper new implementations, while DateSet and OptionMap just got quick wrappers that call the old methods and convert the result. This can be resolved later
+- There is still some use of unix file APIs (in the form of stat for checking permissions and such), which should be removed
