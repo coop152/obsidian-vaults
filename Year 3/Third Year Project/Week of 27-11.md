@@ -5,3 +5,4 @@
 	- new function `Lexer::EscapeString` which behaves like `Lexer::PutString` but returns an escaped `std::string` instead of modifying a given `charArray`
 - Note that Item and Appointment got proper new implementations, while DateSet and OptionMap just got quick wrappers that call the old methods and convert the result. This can be resolved later
 - There is still some use of unix file APIs (in the form of stat for checking permissions and such), which should be removed
+- There is now a "functional" delete item button which removes an item and puts it in the deleted items list. This properly saves to disk, and is loaded along with the calendar.
