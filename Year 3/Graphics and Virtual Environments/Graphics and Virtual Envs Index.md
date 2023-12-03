@@ -7,4 +7,4 @@
 - [[Raytracing and Radiosity]]
 - [[Path Tracing]]
 - [[Volume Rendering]]
-- 
+- [[Spatial Enumeration]]
