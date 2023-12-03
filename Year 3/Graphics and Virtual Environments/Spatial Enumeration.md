@@ -25,7 +25,9 @@ These operations, and many more, can be sped up massively by considering how we 
 But what if we want to know if a single point intersects with just one of these objects? We need to iterate the entire list and check every object.
 We can do better than this, which is what Spatial Enumeration/Partitioning is about.
 
-# Gridcell
+# Regular methods
+These regular methods of spatial enumeration are so called because they divide space into regular chunks. This makes them simpler, but they aren't necessarily optimal.
+## Gridcell
 We actually covered one of these techniques already, in a different form:
 ![](Pasted%20image%2020231203134716.png)
 When shooting a ray into a voxel structure, we have all of the object information stored in a simple 3D array that can be instantly indexed into given some coordinates. There is no searching required just to find what our ray has intersected with.
@@ -40,7 +42,7 @@ We *could* improve this by making the grid cells bigger, but this has it's own o
 ![](Pasted%20image%2020231203135636.png)
 In addition to this, think what happens when the state of the scene changes. What if an object is deleted, moved or added? Is there a way to efficiently update the gridcell structure to match?
 
-# Octree
+## Octree
 You might have noticed that a lot of space in the Gridcell's array is wasted on empty spaces or on subsequent identical spaces. For example, the large empty areas between objects or the large contiguous areas inside objects:
 ![](Pasted%20image%2020231203135033.png)
 What if instead of having a set grid of equally sized squares, we only split up our grid as necessary to hold the specific objects in our scene? This structure is called an **Octree**:
@@ -56,3 +58,13 @@ And now every square has at most 2 objects in it. If we do this recursively then
 Because this was in 2D, we actually get a **Quadtree** and not an **Octree**. Each non-leaf node contains 4 pointers to it's children, while leaf nodes contain pointers to the objects contained within them.
 This data structure is distinct in that it adapts to the scene. Areas with many objects will be "subdivided" many times while sparse areas can be represented with fewer divisions. This saves memory, but the hierarchical structure means that accessing a space is not quite as fast as a Gridcell structure.
 Generally this is a good compromise; the savings in memory are massive for a relatively smaller cost in speed.
+
+# Irregular methods
+These methods are different to the regular methods in that space is not divided into regular, equally sized chunks. This makes them more complicated, but it can improve their efficiency.
+These methods take advantage of some properties that are true of most 3D scenes.
+![](Pasted%20image%2020231203142521.png)
+Scenes usually include large objects that completely occlude much of the scene behind them. These might be walls, large pieces of furniture, etc. We would like if we didn't have to do any calculations at all for these objects we can't see.
+In addition, observe how objects in this busy scene assemble small "collections". The plant pot and the plant, the cabinet and everything on it, the desk and the monitor, etc. Some of these things make smaller collections by themselves, such as the coffee machine on the cabinet being many smaller parts. The thing that puts objects into these logical "collections" is the relatively large distance between them and other objects versus the objects in the collection. This effect can be called **Spatial Cohesion**: the fact that there generally isn't an even spread of objects in a scene, but various "clumps" of objects close together with large spaces in between.
+Octrees take advantage of spatial cohesion, but in most scenes the gaps will not be evenly spread, limiting the effectiveness. A similar approach that takes better advantage of spatial cohesion is **Hierarchical Bounding Volumes**.
+## Hierarchical Bounding Volumes (HBVs)
+To construct an Octree, we start with a single big cell around everything in the scene and gradually subdivide it until we meet our desired object density for each cell. HBVs work somewhat in reverse: we start with a bounding box around a single object and expand this shape until we encompass the whole scene.
