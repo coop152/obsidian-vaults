@@ -58,3 +58,8 @@ In particular, $\mathbb{N}_\bot$ is a dcpo.
 ## Suitable functions and function spaces
 To ensure that we're able to interpret recursion we need to demand an addition property for recursive functions: they have to be well-behaved with respect to the least upper bounds of directed sets.
 ![](Pasted%20image%2020231204153247.png)
+![](Pasted%20image%2020231204153749.png)
+In other words, a function between dcpos is Scott-continuous if applying the function to the least upper bound of some (directed) subset gives the same result as the least upper bound of applying it to every function.
+You can also write this equality as
+![](Pasted%20image%2020231204154056.png)
+(Dont really get the rest of the stuff here)
