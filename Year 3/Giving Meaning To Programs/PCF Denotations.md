@@ -37,4 +37,5 @@ For two posets $(P, \leq)$ and $(Q,\leq)$ we write
 $$P \Rightarrow_\leq Q$$
 For the set of all order-preserving functions from $P$ to $Q$. We define a partial order on this set as follows:
 ![](Pasted%20image%2020231204144115.png)
-In other words, a function $g$ is greater or equal to a function $f$ if it gives a greater or equal result for all possible inputs.
+In other words, a function $g$ is greater or equal to a function $f$ (in the pointwise order) if it gives a greater or equal result for all possible inputs.
+![](Pasted%20image%2020231204145034.png)
