@@ -35,4 +35,5 @@ is order-preserving.
 Clearly the identity function on a poset is order preserving because it maps $\bot$ to $\bot$. There is a proof for the second part, but it is clear either way.
 For two posets $(P, \leq)$ and $(Q,\leq)$ we write
 $$P \Rightarrow_\leq Q$$
-For the set of all order-preserving functions from $P$ to $Q$. 
+For the set of all order-preserving functions from $P$ to $Q$. We define a partial order on this set as follows:
+![](Pasted%20image%2020231204144115.png)
