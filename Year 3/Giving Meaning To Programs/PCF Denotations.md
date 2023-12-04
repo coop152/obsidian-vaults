@@ -11,3 +11,11 @@ This is interesting, because each of these functions $f_n$ is 'finite' by themse
 ## Properties of partial orders
 If we want to precisely define the notion of approximation then a particularly important idea is that of the "least upper bound" of a set of elements. First we define some properties that we expect of a least upper bound.
 ![](Pasted%20image%2020231204140156.png)
+This is just the basic definition of a least upper bound.
+![](Pasted%20image%2020231204140442.png)
+(a): The least upper bound of a subset is less than or equal to the least upper bound of the whole set.
+(b): If for every element in one subset $S$ there is something greater in another subset $S'$, then the least upper bound of $S$ is at most that of $S'$.
+We introduce a notation for the least upper bound of a subset $S$:
+$$\bigvee S$$
+![](Pasted%20image%2020231204141141.png)
+(a): 
