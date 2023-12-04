@@ -51,3 +51,10 @@ For the previously described $f_n$. We want to consider $f_n$ as approximating $
 In other words, if we pick a finite number of elements in $S$ then there is another element that is greater than or equal to all of them.
 To talk about the infinite objects approximated by finite computations, we have to restrict ourselves to special posets, namely those where we can always form a least upper bound to model the infinite object that they describe.
 ![](Pasted%20image%2020231204152141.png)
+![](Pasted%20image%2020231204152424.png)
+We can establish that the partial orders suggested for the base type are dcpos: The only directed sets in these flat posets have at most two elements (For example, $\{\bot, n\}$ for all $n$ in $\mathbb{N}_\bot$), and therefore a greatest element and a least upper bound.
+![](Pasted%20image%2020231204152753.png)
+In particular, $\mathbb{N}_\bot$ is a dcpo.
+## Suitable functions and function spaces
+To ensure that we're able to interpret recursion we need to demand an addition property for recursive functions: they have to be well-behaved with respect to the least upper bounds of directed sets.
+![](Pasted%20image%2020231204153247.png)
