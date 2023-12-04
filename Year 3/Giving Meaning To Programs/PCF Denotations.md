@@ -7,5 +7,7 @@ We are also concerned with the function types that stem from these. The logic we
 Each of these functions is more informative than the last in the family because it returns one more result on top of the results of the previous. You cannot compare the informativity of these functions to another different function (say, one that always returns 1), only to themselves.
 We can also observe an interesting property about this family of functions in particular:
 ![](Pasted%20image%2020231204135252.png)
-This is interesting, because each of these functions $f_n$ is 'finite' by themselves (in the sense that they only return informative output for a finite number of inputs) but taken together they 'approximate' $f_\infty$. We will elaborate on this idea later, but first we need to investigate partial orders more closely.
+This is interesting, because each of these functions $f_n$ is 'finite' by themselves (in the sense that they only return informative output for a finite number of inputs) but taken together they 'approximate' $f_\infty$. We will elaborate on this idea, but first we need to investigate partial orders more closely.
 ## Properties of partial orders
+If we want to precisely define the notion of approximation then a particularly important idea is that of the "least upper bound" of a set of elements. First we define some properties that we expect of a least upper bound.
+![](Pasted%20image%2020231204140156.png)
