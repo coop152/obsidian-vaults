@@ -39,3 +39,6 @@ For the set of all order-preserving functions from $P$ to $Q$. We define a parti
 ![](Pasted%20image%2020231204144115.png)
 In other words, a function $g$ is greater or equal to a function $f$ (in the pointwise order) if it gives a greater or equal result for all possible inputs.
 ![](Pasted%20image%2020231204145034.png)
+Previously we had only defined $\bot$ for the base type, but we need to define it for *all* types: We can make any type reduce forever if we apply rec to its identity function, meaning any type can give no information. Therefore, we also use $\bot$ as the least element of any such poset:
+![](Pasted%20image%2020231204150739.png)
+# Directed-complete Partial Orders (DCPO)
