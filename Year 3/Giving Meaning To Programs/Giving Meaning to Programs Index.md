@@ -7,3 +7,4 @@
 - [[Strong Normalization]]
 - [[Contextual Equivalence]]
 - [[PCF]]
+- [[PCF Denotations]]
