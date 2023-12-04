@@ -18,4 +18,21 @@ This is just the basic definition of a least upper bound.
 We introduce a notation for the least upper bound of a subset $S$:
 $$\bigvee S$$
 ![](Pasted%20image%2020231204141141.png)
-(a): 
+(a): The least upper bound of the union of many subsets is the same as the least upper bound of the individual least upper bounds.
+(b): If the union of some group of subsets is equal to the union of another group of subsets, then the least upper bounds of the unions (and therefore the groups) are equal also.
+## Posets of functions
+To interpret function types we have to think about how we may put a partial order on a set of functions, and which functions we should consider. We only want to allow functions that are well-behaved w.r.t the partial order, so we impose two conditions:
+First, we only consider **order-preserving** functions. This models the crucial idea that we can't possibly get more information from a computation that hasn't finished. We can wait for information to come in, but if it never comes then we can't supply information that would have resulted from it. In a more explicit sense, if a function expects a natural number and receives $\bot$ then it cannot possibly determine that the given number "won't terminate" - that's the halting problem. All it can do it wait indefinitely for a result, which would mean it also "returns" $\bot$. 
+![](Pasted%20image%2020231204142418.png)
+If our input and output sets are flat sets such as $\mathbb{N}_\bot$ then the condition is simply that
+![](Pasted%20image%2020231204142833.png)
+For example, our function $f_n$ is order-preserving because no matter which function in that family you choose, $\bot$ simply maps to $\bot$.
+You can think of this condition as demanding that if we give some information to $f$ (in the form of $p$) and then give it at least that much or more (in the form of $p'$) then it must give at least as much information back for $p'$ as it did for $p$.
+Another simple example of an order-preserving function is every constant function. That is, for posets $P$ and $Q$, where $q$ is some constant in $Q$:
+![](Pasted%20image%2020231204143441.png)
+is order-preserving.
+![](Pasted%20image%2020231204143537.png)
+Clearly the identity function on a poset is order preserving because it maps $\bot$ to $\bot$. There is a proof for the second part, but it is clear either way.
+For two posets $(P, \leq)$ and $(Q,\leq)$ we write
+$$P \Rightarrow_\leq Q$$
+For the set of all order-preserving functions from $P$ to $Q$. 
