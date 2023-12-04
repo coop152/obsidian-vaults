@@ -42,3 +42,12 @@ In other words, a function $g$ is greater or equal to a function $f$ (in the poi
 Previously we had only defined $\bot$ for the base type, but we need to define it for *all* types: We can make any type reduce forever if we apply rec to its identity function, meaning any type can give no information. Therefore, we also use $\bot$ as the least element of any such poset:
 ![](Pasted%20image%2020231204150739.png)
 # Directed-complete Partial Orders (DCPO)
+So far we have only looked at posets with finite 'height'. You might assume that all of the posets we are concerned with are like this, but unfortunately not.
+We intent to interpret `nat` using the flat natural numbers $\mathbb{N}_\bot$ and then use a function space construction to interpret higher types. The posets we obtain in this manner contain infinite chains, for example:
+![](Pasted%20image%2020231204151238.png)
+For the previously described $f_n$. We want to consider $f_n$ as approximating $f_\infty$, which is the identity on $\mathbb{N}_\bot$. All of these functions appear in our interpretation of `nat` $\rightarrow$ `nat`, so if we wanted to interpret a function of even higher type (e.g. one that takes or returns this) then we need to decide what elements of that function space should do with these infinite approximations.
+(Some shit i don't really understand)
+![](Pasted%20image%2020231204151841.png)
+In other words, if we pick a finite number of elements in $S$ then there is another element that is greater than or equal to all of them.
+To talk about the infinite objects approximated by finite computations, we have to restrict ourselves to special posets, namely those where we can always form a least upper bound to model the infinite object that they describe.
+![](Pasted%20image%2020231204152141.png)
