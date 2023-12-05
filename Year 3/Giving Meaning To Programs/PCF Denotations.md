@@ -118,3 +118,8 @@ First we ensure these functions live in our intended model (that is, they are Sc
 Here is a summary of the many cases for denoting a a PCF term:
 ![](Pasted%20image%2020231205130228.png)
 ![](Pasted%20image%2020231205130240.png)
+Consider this example, which involves an infinitely recursive term of type `nat`:
+![](Pasted%20image%2020231205130830.png)
+This shows how $\bot$ factors into the denotation of a type, but consider this more interesting term:
+![](Pasted%20image%2020231205131023.png)
+![](Pasted%20image%2020231205131035.png)
