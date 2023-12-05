@@ -131,3 +131,7 @@ Both of these examples are massively complicated by the use of the fixed point c
 To be sure our denotations behave as expected, we must ensure that our interpretations of terms of function type are Scott-continuous: This is the only way we can have the fixed points required in order to model recursion. We check this in the following propositions.
 ![](Pasted%20image%2020231205140716.png)![](Pasted%20image%2020231205140911.png)
 # Properties of Denotations
+Like usual, we show that our method of defining denotations works well with our computational infrastructure. We have not formally defined alpha-equivalence for PCF terms so we ignore that, but know that the expected results are indeed true.
+We start with beta-reduction:
+![](Pasted%20image%2020231205141354.png)
+![](Pasted%20image%2020231205141403.png)
