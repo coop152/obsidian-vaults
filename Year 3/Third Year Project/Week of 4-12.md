@@ -1,0 +1,2 @@
+- Add keyboard shortcut and option in context menu for deleting to the history
+- 
