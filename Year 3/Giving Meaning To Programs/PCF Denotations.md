@@ -70,4 +70,6 @@ If $D$ and $E$ are dcpos we write $D \Rightarrow E$ for the set of all Scott-con
 ![](Pasted%20image%2020231205114909.png)
 ![](Pasted%20image%2020231205114916.png)
 ## Fixed Points
-To interpret the `rec` operator, we have to ensure there is suitable infrastructure in our model.
+To interpret the `rec` operator, we have to ensure there is suitable infrastructure in our model. Previously we argued that the meaning of `rec` must be a 'fixed point' in it's argument. In a normal set there is no guarantee that every function has a fixed point (consider the `not` operation on booleans), but now we have added the infrastructure of a dcpo and restricted ourselves to order-preserving Scott-continuous functions, which allows us to  solve this problem.
+![](Pasted%20image%2020231205115544.png)
+In other words, the fixed point of a function is the value for which the output is equal to the input. For example, the fixed point of the `square` function is 1.
