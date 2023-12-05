@@ -95,4 +95,4 @@ So, we choose a suitable dcpo $D$ as the base type. With this, we may define
 To interpret the remaining types.
 Essentially this is the same approach as modelling that we took with the simply typed lambda-calculus, in that a function type is defined by the set of function between the interpretations of the subtypes. The three main differences are the following:
 - We introduce $\bot$, a value which we may think of meaning 'undefined' or 'no information'.
-- We only allow functions that are well-behaved 
+- We only allow functions that are well-behaved with respect to 
