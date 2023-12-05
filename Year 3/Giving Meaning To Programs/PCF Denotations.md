@@ -123,3 +123,7 @@ Consider this example, which involves an infinitely recursive term of type `nat`
 This shows how $\bot$ factors into the denotation of a type, but consider this more interesting term:
 ![](Pasted%20image%2020231205131023.png)
 ![](Pasted%20image%2020231205131035.png)
+Both of these examples are massively complicated by the use of the fixed point construction, but we can typically avoid using it in this manner:
+![](Pasted%20image%2020231205131325.png)
+![](Pasted%20image%2020231205131335.png)
+![](Pasted%20image%2020231205131343.png)
