@@ -95,4 +95,13 @@ So, we choose a suitable dcpo $D$ as the base type. With this, we may define
 To interpret the remaining types.
 Essentially this is the same approach as modelling that we took with the simply typed lambda-calculus, in that a function type is defined by the set of function between the interpretations of the subtypes. The three main differences are the following:
 - We introduce $\bot$, a value which we may think of meaning 'undefined' or 'no information'.
-- We only allow functions that are well-behaved with respect to 
+- Introducing this value requires us to define a partial order, so we only allow functions that are well behaved with respect to this partial order. In the language of chapter 4, we only allow Scott-continuous functions.
+- Unlike the simply typed lambda-calculus which had a base type interpreted by an arbitrary set, PCF will have a fixed base type interpreted by the set $\mathbb{N}_\bot$.
+
+The first requirement is needed because in a sufficiently powerful language, some programs will not terminate (this is the Halting Problem). The second requirement is necessary for our fixed point operator to work, which in turn allows `rec` to be interpreted. The third requirement is to ensure we can model the constructions $\bar{s}$, $\text{pred}$ and $\text{ifz}$, which are clearly based on a natural-like type.
+Remember that we do not consider the number 1 as less than or equal to the number 2, for example. The relation between members of the base type conveys how much information each element conveys compared to the other, not their numeric value.
+![](Pasted%20image%2020231205124443.png)
+We use brackets $[\![ \ ]\!]$ with no superscript to refer to this interpretation.
+## Denoting types and terms
+Like with the simply typed lambda-calculus, we start with interpreting the types for our language. This ends up looking similar to the interpretation of function types in the simply typed lambda-calculus, but the set of functions defined by $\Rightarrow$ is not the same as the set defined by $\rightarrow$. The result is a **partially ordered set**, with some badly-behaved functions omitted.
+![](Pasted%20image%2020231205124757.png)
