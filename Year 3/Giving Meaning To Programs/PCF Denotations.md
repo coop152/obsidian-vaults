@@ -1,4 +1,4 @@
-# Posets
+# Posets (jump ahead to chapter 4)
 Posets are sets that are partially ordered. A group of posets that we are concerned with are the *flat types*, for example $\mathbb{N}_\bot$ (the flat natural numbers). These sets are equal to the set indicated in their name but feature another element $\bot$ for which every element is greater:
 ![](Pasted%20image%2020231204134215.png)
 We are also concerned with the function types that stem from these. The logic we use to construct these is that we are ordering elements by how "informative" they are: in a base type like natural numbers, no number is more informative than another but every number is certainly more informative than no result at all ($\bot$). For functions, we say that a function is more informative than another if if provides exactly the same results as that function **and then some**. For example:
@@ -75,3 +75,21 @@ To interpret the `rec` operator, we have to ensure there is suitable infrastruct
 In other words, the fixed point of a function is the value for which the output is equal to the input. For example, the fixed point of the `square` function is 1 and the fixed points of $$f(x) = \lfloor x/2 \rfloor + 1$$ are 1 and 2.
 We show the key result, that we always have fixed points for Scott-continuous functions on dcpos:
 ![](Pasted%20image%2020231205120602.png)
+![](Pasted%20image%2020231205120938.png)
+![](Pasted%20image%2020231205120947.png)
+In the process of interpreting PCF terms we will apply the fixed point operator to interpretations of subterms, and we should think about its type, which is $$D \Rightarrow D \rightarrow D.$$
+We name this operator `fix`. In these terms, the property of being a fixed point becomes for $f:D\rightarrow D$, the equality $f(\text{fix}f) = \text{fix}f$ holds.
+![](Pasted%20image%2020231205121311.png)
+We then ask if the fixed point we get from the operator is actually an operator in our model. That is, whether it is Scott-continuous.
+![](Pasted%20image%2020231205121422.png)
+And it is. We then show that the operator itself is Scott-continuous:
+![](Pasted%20image%2020231205121611.png)
+And it is.
+# Denoting PCF (back to chapter 3)
+So, what was the point of all that complicated set maths? If we want to define the interpretation of PCF then we need a significant amount of those results. Namely:
+- The hardest syntactic construction to interpret is `rec`, for which we make use of fixed points. In order to ensure that these always exist, we also have to use dcpos.
+- We use function space construction to model function types like we did in the simply typed lambda-calculus, but because we are using dcpos it is more sophisticated.
+
+So, we choose a suitable dcpo $D$ as the base type. With this, we may define
+![](Pasted%20image%2020231205122012.png)
+To interpret the remaining types.
