@@ -65,4 +65,9 @@ You can also write this equality as
 (Dont really get the rest of the stuff here)
 ![](Pasted%20image%2020231205114115.png)
 The second condition we impose on functions we use in out interpretation is that they must be Scott-continuous.
-If $D$ and $E$ are dcpos we write $D \Rightarrow E$ for the set of all Scott-continuous functions from $D$ to $E$
+If $D$ and $E$ are dcpos we write $D \Rightarrow E$ for the set of all Scott-continuous functions from $D$ to $E$.
+![](Pasted%20image%2020231205114756.png)
+![](Pasted%20image%2020231205114909.png)
+![](Pasted%20image%2020231205114916.png)
+## Fixed Points
+To interpret the `rec` operator, we have to ensure there is suitable infrastructure in our model.
