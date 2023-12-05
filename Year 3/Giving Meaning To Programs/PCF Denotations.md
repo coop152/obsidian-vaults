@@ -132,6 +132,10 @@ To be sure our denotations behave as expected, we must ensure that our interpret
 ![](Pasted%20image%2020231205140716.png)![](Pasted%20image%2020231205140911.png)
 # Properties of Denotations
 Like usual, we show that our method of defining denotations works well with our computational infrastructure. We have not formally defined alpha-equivalence for PCF terms so we ignore that, but know that the expected results are indeed true.
-We start with beta-reduction:
+We start with beta-reduction, and first we check substitution:
 ![](Pasted%20image%2020231205141354.png)
 ![](Pasted%20image%2020231205141403.png)
+Then single beta reduction:
+![](Pasted%20image%2020231205142547.png)
+Then beta reduction in multiple steps:
+![](Pasted%20image%2020231205142602.png)
