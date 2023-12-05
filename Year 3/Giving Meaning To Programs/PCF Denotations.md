@@ -113,3 +113,8 @@ Now we consider how to interpret the terms:
 These are the functions we will define, which we hadn't already:
 ![](Pasted%20image%2020231205125815.png)
 First we ensure these functions live in our intended model (that is, they are Scott-continuous).
+<Proof goes here (not that I'd need to know it anyway)>
+
+Here is a summary of the many cases for denoting a a PCF term:
+![](Pasted%20image%2020231205130228.png)
+![](Pasted%20image%2020231205130240.png)
