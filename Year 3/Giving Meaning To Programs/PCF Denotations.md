@@ -139,3 +139,10 @@ Then single beta reduction:
 ![](Pasted%20image%2020231205142547.png)
 Then beta reduction in multiple steps:
 ![](Pasted%20image%2020231205142602.png)
+Note that this tells us in particular that if some irreducible term $t$ has no free variables and is thus typeable with the empty type environment, it is either an abstraction (if it is function type) or it is a term representing a particular number (i.e. $\bar{0}$ with some finite number of $\bar{s}$ applied).
+In fact, we can relate the order we obtained for the semantics to the preorder we have for terms of base type:
+![](Pasted%20image%2020231205143031.png)
+We bring together our knowledge about the various (pre)orders:
+![](Pasted%20image%2020231205143105.png)
+We check further that the semantics are invariant for the base case of eta-conversion.
+![](Pasted%20image%2020231205143139.png)
