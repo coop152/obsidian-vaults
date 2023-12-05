@@ -63,3 +63,4 @@ In other words, a function between dcpos is Scott-continuous if applying the fun
 You can also write this equality as
 ![](Pasted%20image%2020231204154056.png)
 (Dont really get the rest of the stuff here)
+![](Pasted%20image%2020231205114115.png)
