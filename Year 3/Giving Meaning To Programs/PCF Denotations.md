@@ -105,3 +105,11 @@ We use brackets $[\![ \ ]\!]$ with no superscript to refer to this interpretatio
 ## Denoting types and terms
 Like with the simply typed lambda-calculus, we start with interpreting the types for our language. This ends up looking similar to the interpretation of function types in the simply typed lambda-calculus, but the set of functions defined by $\Rightarrow$ is not the same as the set defined by $\rightarrow$. The result is a **partially ordered set**, with some badly-behaved functions omitted.
 ![](Pasted%20image%2020231205124757.png)
+Now we consider how to interpret the terms:
+- For terms and term constructors involving `nat`, we use corresponding infrastructure for $\mathbb{N}_\bot$. In particular, $\bar{0}$ is interpreted as $0$, and $\bar{s}$, $\text{pred}$ and $\text{ifz}$ are interpreted as analogous functions we define in the following definition.
+- For variables, abstractions and applications we use essentially the same interpretations as in the simply typed lambda-calculus.
+- For rec we use the fixed point construction as previously described.
+
+These are the functions we will define, which we hadn't already:
+![](Pasted%20image%2020231205125815.png)
+First we ensure these functions live in our intended model (that is, they are Scott-continuous).
