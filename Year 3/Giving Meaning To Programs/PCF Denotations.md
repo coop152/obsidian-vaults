@@ -127,3 +127,7 @@ Both of these examples are massively complicated by the use of the fixed point c
 ![](Pasted%20image%2020231205131325.png)
 ![](Pasted%20image%2020231205131335.png)
 ![](Pasted%20image%2020231205131343.png)
+
+To be sure our denotations behave as expected, we must ensure that our interpretations of terms of function type are Scott-continuous: This is the only way we can have the fixed points required in order to model recursion. We check this in the following propositions.
+![](Pasted%20image%2020231205140716.png)![](Pasted%20image%2020231205140911.png)
+# Properties of Denotations
