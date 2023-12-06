@@ -16,3 +16,34 @@ This has some advantages:
 Taken together these can have great effect. As the number of wires needed increases, the problems of increasing current demand and electrical noise due to inductance become significant. Shorter wires can resolve these issues.
 
 **Note:** flip-chip is not the same as BGA mounting; While the idea is similar geometrically, BGA is between a package and a PCB (larger relative scale) while flip-chip is between silicon and package.
+
+## Simulation
+### Mixed Simulation
+It is infeasible to simulate a whole SoC with max precision in a single run. Instead, we use a variety of simulators for different blocks according to the required precision. This allows us to optimise the precision to cost/time trade-off to a more reasonable level.
+![](Pasted%20image%2020231206115117.png)
+In some cases, the required precision may be so low as to allow a Transaction Level Model (TLM).
+### SPICE
+"SPICE" (Simulation Program with Integrated Circuit Emphasis) is the generic name for a variety of analogue circuit simulators, e.g. SPICE, HSPICE, Spectre. 
+
+A SPICE takes as input a component netlist, an input stimulus file, and a detailed model of the characteristics of the components. It simulates circuit activity by solving differential equations, giving an accurate model of the circuit's behaviour when fabricated. This takes significant processing time, so SPICE simulations are typically limited to small circuits and limited time runs.
+
+A typical use of SPICE is to **characterise** standard cells, producing simplified models to be used in larger analogue simulations. For example, a NAND gate may be "Spiced" to determine the propagation delay, output edge speeds with a certain input with a certain input edge timing, etc.
+The feedback from this process will be used to tune the performance of a layout - for example to determine the transistor widths for different cells.
+
+SPICE may not be needed by a high-level designer, but it will be used somewhere in the design flow and it becomes necessary when designing analogue or other custom circuits.
+### Process corners
+Due to variation in the manufacturing processes, transistor properties in a chip will vary. This causes each chip to function in not quite the same way.
+The operating environment of the chip will also vary. The two greatest variables will be the supply voltage and the temperature; lower voltages or higher temperatures will slow down switching.
+These variations are normally classified as "PVT" (Process, Voltage, Temperature) variations.
+
+It is important that a chip works in a wide range of conditions. Thus, physical simulation will normally be carried out over a number of process "corners":
+- Extreme variation in transistor characteristics (fast-fast, fast-slow, slow-fast, slow-slow, typical) due to process
+- Voltage variations of a high amount (e.g. 10%)
+- Temperature ranges from as low as $-40\degree C$ to as high as $125 \degree C$, depending on the intended environment of the chip
+
+The device should function completely as intended over these variations.
+This involves running a whole set of (ideally) *functionally identical* simulations using a timing-accurate simulation, which will not be computationally cheap.
+## Design and Production Flow
+![](Pasted%20image%2020231206120556.png)
+This is a simplified diagram showing how a chip design goes from an initial behavioural model to a manufactured and tested ASIC, ready to be used. These steps in particular are of interest:
+### Place and Route (P&R)
