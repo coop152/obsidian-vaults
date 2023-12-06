@@ -54,3 +54,6 @@ The "ideal" placement would have all of the cells clumped tightly together, but 
 After placement is complete, the **routeing** process takes place. Routeing consists of trying to interconnect the placed cells with wires. Obviously wires cannot touch or cross, but there will be a number of wiring layers available. The preference is to use lower layers only as much as possible - especially for local interconnection - as it minimises parasitic load capacitance.
 If the placement and wiring is too dense then it may not be possible to complete routeing. In this case, the user must relax the utilisation/area constraints to make some space.
 ### Floorplanning
+Floorplanning is the placement of logic blocks, rather than individual cells. It is often useful to be able to "harden" (i.e. thoroughly optimise) a placement and then place multiple instances of it with the same characteristics (e.g. a multiprocessor). Another use of floorplanning is to determine the space available for a particular block (for example, if big capacitive buses are placed early on) to constrain a later P&R.
+Macrocells (e.g. memories) will come with a constrained size and aspect ratio.
+Floorplanning is often hierarchical. A block may be floorplanned internally, and then placed and routed alongside other "glue" logic cells by another level of floorplanning.
