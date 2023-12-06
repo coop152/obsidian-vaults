@@ -47,3 +47,10 @@ This involves running a whole set of (ideally) *functionally identical* simulati
 ![](Pasted%20image%2020231206120556.png)
 This is a simplified diagram showing how a chip design goes from an initial behavioural model to a manufactured and tested ASIC, ready to be used. These steps in particular are of interest:
 ### Place and Route (P&R)
+**Placement** (in this context) is the act of mapping cells onto the surface of the silicon so that they sit near each other as necessary, but do not overlap. Ideally, cells which are connected together ought to be placed adjacently though this is not always possible. There will likely be constraints that prevent cells from being placed in the ideal place.
+Finding the optimal placement is prohibitively expensive, but finding something that approaches it is desirable because of how much easier it makes routing. It can also increase performance and reduce power consumption by shortening the interconnection wires.
+The "ideal" placement would have all of the cells clumped tightly together, but this is not feasible. In some cases this could make routing entirely impossible, and some extra space has to be left for later modifications such as **buffer insertion**. Therefore, *utilisation* cannot be 100%.
+
+After placement is complete, the **routeing** process takes place. Routeing consists of trying to interconnect the placed cells with wires. Obviously wires cannot touch or cross, but there will be a number of wiring layers available. The preference is to use lower layers only as much as possible - especially for local interconnection - as it minimises parasitic load capacitance.
+If the placement and wiring is too dense then it may not be possible to complete routeing. In this case, the user must relax the utilisation/area constraints to make some space.
+### Floorplanning
