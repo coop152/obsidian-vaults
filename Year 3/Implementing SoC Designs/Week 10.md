@@ -57,3 +57,7 @@ If the placement and wiring is too dense then it may not be possible to complete
 Floorplanning is the placement of logic blocks, rather than individual cells. It is often useful to be able to "harden" (i.e. thoroughly optimise) a placement and then place multiple instances of it with the same characteristics (e.g. a multiprocessor). Another use of floorplanning is to determine the space available for a particular block (for example, if big capacitive buses are placed early on) to constrain a later P&R.
 Macrocells (e.g. memories) will come with a constrained size and aspect ratio.
 Floorplanning is often hierarchical. A block may be floorplanned internally, and then placed and routed alongside other "glue" logic cells by another level of floorplanning.
+### Buffer Insertion
+When a network is routed it may be found to have excessive capacitance, which will result in slow signal edges. This is particularly common on data buses, which often traverse long distances.
+Modern placement processes will allow automatic insertion of buffers (electrical amplifiers) at intervals along such a wire. This will add some propagation delay, but it will save time overall by speeding up the edges. It will also improve electrical integrity (e.g. noise immunity).
+Placing these buffers requires space to be reachable from the wire so that the buffer can be placed, and that space needs to be nearby to avoid adding even more wiring. This is one of the reasons why 100% utilisation is impractical.
