@@ -61,3 +61,11 @@ Floorplanning is often hierarchical. A block may be floorplanned internally, and
 When a network is routed it may be found to have excessive capacitance, which will result in slow signal edges. This is particularly common on data buses, which often traverse long distances.
 Modern placement processes will allow automatic insertion of buffers (electrical amplifiers) at intervals along such a wire. This will add some propagation delay, but it will save time overall by speeding up the edges. It will also improve electrical integrity (e.g. noise immunity).
 Placing these buffers requires space to be reachable from the wire so that the buffer can be placed, and that space needs to be nearby to avoid adding even more wiring. This is one of the reasons why 100% utilisation is impractical.
+![](Pasted%20image%2020231207103524.png)
+### Miscellaneous
+- **Power Analysis**: Finds potential hotspots and ensures the power 'grid' wiring is sufficient
+- **Design Rule Checks (DRC)**: Check that the layout obeys the required geometrical rules for fabrication (e.g. minimum space between metal tracks, faulty standard cells)
+- **Electrical Rule Checks (ERC)**: Ensure the electrical connections (power, etc.) are legal. For example, that the power is connected, that signal outputs are not connected to supply, that all transistors are within a certain distance of a well contact.
+- **Antenna Checks**: Check that the device will not be destroyed during manufacturing by a build-up of charge (where the part that should dissipate it is not constructed yet)
+- **Layout vs Schematic**: Check that the layout is actually the same as the given schematic. This step is most beneficial when the layout has been modified by hand - if it was generated automatically then you would hope the computer didn't make a mistake, but it is reassuring to check nonetheless
+- 
