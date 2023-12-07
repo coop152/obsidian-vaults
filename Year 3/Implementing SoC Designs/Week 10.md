@@ -69,3 +69,24 @@ Placing these buffers requires space to be reachable from the wire so that the b
 - **Antenna Checks**: Check that the device will not be destroyed during manufacturing by a build-up of charge (where the part that should dissipate it is not constructed yet)
 - **Layout vs Schematic**: Check that the layout is actually the same as the given schematic. This step is most beneficial when the layout has been modified by hand - if it was generated automatically then you would hope the computer didn't make a mistake, but it is reassuring to check nonetheless
 
+# Production Testing
+Not every manufactured chip will work. Production tests will allow faulty chips to be sorted from functional ones.
+We want 100% test coverage, including complete data coverage. This is different from 100% source code coverage: we are now testing a synthesised netlist, which will have different (and probably more) nodes. We want to do this with a sensibly small number of test vectors, which is a big problem that isn't easy to solve.
+Our problem is that we need to apply test vectors to logic that is buried deep inside a sequential machine: It is likely that we will need long sequences.
+For example, imagine we are testing the outputs of a seven-segment decoder:
+![](Pasted%20image%2020231207123725.png)
+The more deeply integrated blocks get, the longer the test vectors will become. To try and alleviate this and make our chips testable, we need to **Design for Test (DfT)**.
+## Automatic Test Pattern Generation (ATPG)
+The simplest kind of test is for a "stuck at" fault (i.e. a network or node is stuck at a single digital value). These can be detected by providing patterns where the node is intended to be in each of its states and there is an *observable* difference if it is wrong.
+Finding such patterns is difficult by hand, but computers are quite good at searching large data sets using simple algorithms. ATPG is a convenient way to produce a test set which gives comprehensive coverage (for these kinds of faults specifically).
+These patterns must be applied to the block being tested on *every chip manufactured* to check that the individual unit is functional. This requires an expensive machine, so time-on-tester should be minimised via a minimal set of patterns. Again, software is good at solving these problems (and there is no significant time constraint on solving this problem as there is for the testing itself).
+
+With modern ICs the power constraints may be such that it is infeasible to operate all the blocks simultaneously. A test strategy which tries to maximise the number of transitions in a short time can dissipate too much power and actually blow up the chip! So, there are more constraints on generating the test set than just the desired number of them.
+
+All this applies to standalone logic "blocks". However, when a complex SoC is operating the blocks are very rarely independent, so it is typically not possible to apply the pattern directly. What we need is **controllability**, where block inputs can be set even if they are deeply embedded in the logic.
+Similarly, the outputs must be able to be checked for correctness, which is impeded if there is logic between the block being tested and the user. What we need here is **observability**.
+## Built-In Self Test (BIST)
+It is convenient if a chip can test itself; that way all a tester needs to do it power it on, apply clock for a while and check that the chip generates a "pass". (Failure to report a pass indicates a failure).
+Traditionally, BIST on ASICs have involved the generation of test patterns, either in ROM or using a pseudo-random number generator. The output signature can be collected as, for example, an output CRC. With a long enough test sequence and CRC the chance of a false positive will be small.
+
+Nowadays it is likely that an SoC will have one or more processors on board which can be exploited for test purposes.
