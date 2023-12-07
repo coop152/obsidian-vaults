@@ -68,4 +68,4 @@ Placing these buffers requires space to be reachable from the wire so that the b
 - **Electrical Rule Checks (ERC)**: Ensure the electrical connections (power, etc.) are legal. For example, that the power is connected, that signal outputs are not connected to supply, that all transistors are within a certain distance of a well contact.
 - **Antenna Checks**: Check that the device will not be destroyed during manufacturing by a build-up of charge (where the part that should dissipate it is not constructed yet)
 - **Layout vs Schematic**: Check that the layout is actually the same as the given schematic. This step is most beneficial when the layout has been modified by hand - if it was generated automatically then you would hope the computer didn't make a mistake, but it is reassuring to check nonetheless
-- 
+
