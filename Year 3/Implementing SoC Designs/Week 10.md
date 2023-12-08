@@ -87,6 +87,15 @@ All this applies to standalone logic "blocks". However, when a complex SoC is op
 Similarly, the outputs must be able to be checked for correctness, which is impeded if there is logic between the block being tested and the user. What we need here is **observability**.
 ## Built-In Self Test (BIST)
 It is convenient if a chip can test itself; that way all a tester needs to do it power it on, apply clock for a while and check that the chip generates a "pass". (Failure to report a pass indicates a failure).
-Traditionally, BIST on ASICs have involved the generation of test patterns, either in ROM or using a pseudo-random number generator. The output signature can be collected as, for example, an output CRC. With a long enough test sequence and CRC the chance of a false positive will be small.
+Traditionally, BIST on ASICs have involved the generation of test patterns, either in ROM or using a pseudo-random number generator. The output signature can be collected as, for example, an output CRC. With a long enough test sequence and CRC, the chance of a false positive will be small.
 
-Nowadays it is likely that an SoC will have one or more processors on board which can be exploited for test purposes.
+Nowadays it is likely that an SoC will have one or more processors on board which can be exploited for testing. Self-test software can be built into a boot ROM, or downloaded into RAM via a test port, which can exercise the chip's functions and indicate faults.
+Using an existing processor like this has several advantages:
+- Hardware overhead (and complexity) from testing components will be reduced
+- If the test program is in ROM it can be easily and (relatively) cheaply flashed very late into the design process, allowing extra time for test development
+- If the test program is delivered into RAM by a tester then it is possible to develop and upgrade tests even after the chips are in fabrication, though the time required to download the program may make testing take longer (and therefore cost more).
+
+## Scan chains
+A scan path can make some or all of the flip-flips in a circuit directly **controllable** and **observable**.
+The flip-flops in the chain are placed in the normal way during design, but later in the process are replaced with scan flip-flops. These flip-flops have a second mode of operation, controlled by a global input, which disables their normal input and switches it to the output of the previous flip-flop in the chain. When every flip-flop does this it makes a (very long) shift register with two additional connections, scan-in and scan-out.
+The order of these flip-flops can be arbitrary: it is most likely determined after placement by connecting physically adjacent flip-flops in order to minimise wiring overhead
