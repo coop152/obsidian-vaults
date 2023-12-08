@@ -117,4 +117,5 @@ To test a circuit with a scan chain:
 A pattern could also be scanned in at the same time as the current one is extracted.
 Although this process takes a large number of clocks for each pattern, it can be applied to combinatorial logic directly and all blocks can be tested in parallel. For non-trivial sequential circuits, this process is almost always a significant time-saver.
 Of course, replacing the flip-flops with slightly more complicated ones does have a slight cost of area and performance.
-## Boundary scan
+## Boundary scan (JTAG)
+Boundary scan is a method originally intended for checking a PCB's connections. It is now used for looking inside of devices
