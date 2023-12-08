@@ -96,6 +96,25 @@ Using an existing processor like this has several advantages:
 - If the test program is delivered into RAM by a tester then it is possible to develop and upgrade tests even after the chips are in fabrication, though the time required to download the program may make testing take longer (and therefore cost more).
 
 ## Scan chains
+![](Pasted%20image%2020231208113304.png)
 A scan path can make some or all of the flip-flips in a circuit directly **controllable** and **observable**.
 The flip-flops in the chain are placed in the normal way during design, but later in the process are replaced with scan flip-flops. These flip-flops have a second mode of operation, controlled by a global input, which disables their normal input and switches it to the output of the previous flip-flop in the chain. When every flip-flop does this it makes a (very long) shift register with two additional connections, scan-in and scan-out.
-The order of these flip-flops can be arbitrary: it is most likely determined after placement by connecting physically adjacent flip-flops in order to minimise wiring overhead
+![](Pasted%20image%2020231208113204.png)
+The order of these flip-flops can be arbitrary: it is most likely determined after placement by connecting physically adjacent flip-flops in order to minimise wiring overhead. The only requirement is that the connection order is known.
+To test a circuit with a scan chain:
+- Stop the clock
+- Switch to "scan" mode
+- Repeat for the length of the scan chain
+	- Apply data bit to scan-in
+	- Clock
+- Switch to "operate" mode
+- Clock once
+- Switch to "scan" mode
+- Repeat for length of scan chain
+	- Read data bit from scan-out
+	- Clock
+
+A pattern could also be scanned in at the same time as the current one is extracted.
+Although this process takes a large number of clocks for each pattern, it can be applied to combinatorial logic directly and all blocks can be tested in parallel. For non-trivial sequential circuits, this process is almost always a significant time-saver.
+Of course, replacing the flip-flops with slightly more complicated ones does have a slight cost of area and performance.
+## Boundary scan
