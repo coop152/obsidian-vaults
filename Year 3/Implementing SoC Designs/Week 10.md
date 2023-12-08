@@ -120,3 +120,4 @@ Of course, replacing the flip-flops with slightly more complicated ones does hav
 ## Boundary scan (JTAG)
 Boundary scan is a method originally intended for checking a PCB's connections, but now it is used for looking inside of devices. A scan chain runs around the boundary of the device (or around the boundary of every significant block, in a whole SoC) instead of through every flip-flop.
 For example, in a processor with boundary scan the external address, data and control buses will be available but not the internal registers.
+The boundary scan protocol is commonly referred to as **JTAG** after Joint Test Action Group who developed it.
