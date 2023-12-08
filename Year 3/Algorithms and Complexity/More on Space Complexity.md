@@ -4,4 +4,5 @@ Savitch's theorem shows that deterministic machines can simulate nondeterministi
 ![](Pasted%20image%2020231208121419.png)
 ## Conclusion
 ![](Pasted%20image%2020231208121920.png)
-# NP equals co-NP
+# Immerman-Szelepcsény Theorem
+This theorem shows that the non-deterministic space classes starting at NLOGSPACE and up are equal to their complements.
