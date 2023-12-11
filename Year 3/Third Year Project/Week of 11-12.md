@@ -1,0 +1,1 @@
+- First thing: move the history mode into the tcl.
