@@ -1,1 +1,4 @@
-- First thing: move the history mode into the tcl.
+- First thing: move the history mode into the tcl. DONE
+- Then, make the window change colour when in delete history mode (or at least indicate in some other way)
+- Also change the menu option for viewing history to a tick-box.
+- Implement the expected clipboard behaviour, maybe swap the shortcuts so delete is on ctrl+x.
