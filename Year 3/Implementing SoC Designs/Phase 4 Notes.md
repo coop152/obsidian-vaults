@@ -39,5 +39,10 @@ My initial plan for the FSM states didn't entirely work, which required introduc
 - Have the WAIT state decide if DRAW or ITER should be the next state based on the number of pixels drawn in this iteration (`pix_num`), instead of having DRAW set `iterate` and then having WAIT decide based on that. 
 
 **What were the major surprises and lessons learnt?**
-- More than once I had trouble adapting my initial FSM design to the fact that `de_ack` only goes high for one cycle: For example, I had intended DRAW to go straight to ITER when an iteration was needed, but this meant that WAIT would run 2 cycles after a pixel was drawn instead of 1 and `de_ack` would have already gone high and then low, causing WAIT to loop infinitely.
-- More than once I forgot that nonblocking assignments didn't block because I was blindly copying pseudocode, specifically in the ITER state where both $p$ and $x$ are updated and then the updated values subsequently used. This led to annoying debugging where the code 'worked' but the circles were very slightly misshapen.
+- More than once I had trouble adapting my initial FSM design to the fact that `de_ack` only goes high for one cycle: For example, I had intended DRAW to go straight to ITER when an iteration was needed, but this meant that WAIT would run 2 cycles after a pixel was drawn instead of 1 and `de_ack` would have already gone high and then low, causing WAIT to loop indefinitely. Lesson learnt: Should've read the spec more closely before designing the FSM.
+- More than once I forgot that nonblocking assignments didn't block because I was blindly copying pseudocode, specifically in the ITER state where both $p$ and $x$ are updated and then the updated values subsequently used. This led to annoying debugging where the code 'worked' but the circles were very slightly misshapen. Lesson learnt: Should've actually thought about what I was typing.
+
+
+#### What the demo looked like
+Here is an image of the demo program running, since I demonstrated phase 4 before I wrote the demo program:
+![](PXL_20231213_162632080.jpg)
