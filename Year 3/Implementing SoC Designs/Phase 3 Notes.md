@@ -1,5 +1,6 @@
 # Synthesis report
-Not including the time spend waiting for the framebuffer, the unit can draw 
+Assuming that the framebuffer doesn't take longer than a cycle to draw a pixel, my circle drawing unit runs at **2.125 cycles per pixel**. This is because it can draw eight pixels (which are all simple transformations of the last) without any extra time spent beside waiting for the framebuffer, but it requires an extra cycle after those eight while it iterates to the next angle. 
+
 Copy-pasted from the Phase 4 notes:
 The circle drawing block uses:
 - 1 FSM
