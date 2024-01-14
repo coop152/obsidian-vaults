@@ -68,7 +68,6 @@ With this point of collision, we can calculate the new direction, speed, etc. of
 Alternatively, we can do a quick and dirty hack called "Fixing", where we simply take the final position of the colliding object and roughly adjust it to be on the surface of the collider:
 ![](Pasted%20image%2020231020132754.png)
 We then apply the response from this point. This is inaccurate, but it may be simpler to compute in some situations.
-
 ## Complexity
 The complexity of (naïve) collision detection is high; for $n$ dynamic objects, we must compare each object to every other and check for collisions, meaning collision detection runs in $O(n^2)$ time.
 There are ways to improve the running time of collision detection, such as:
