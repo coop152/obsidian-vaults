@@ -33,7 +33,7 @@ Spectral radiance also takes into account the wavelength of light $\lambda$ and 
 ![](Pasted%20image%2020231102122744.png)
 So $L_o$ is an expression that represents the total light the observer receives from a point $\mathbf{x}$ along direction $\omega_o$. In other words, it's what we want to know: the colour of some point in the image from the observer's point of view.
 $L_e(\mathbf{x}, \omega_o)$ represents light **emitted directly** from point $\mathbf{x}$ in direction $\omega_o$. This part will be the overwhelming decider of colour if point $\textbf{x}$ is on a light emitting surface such as a light bulb.
-$$\int_\Omega$$
+$$\int_\Omega [...] \delta\omega_i$$
 This integral says that, for the hemisphere $\Omega$, we will add up the contributions of every incoming vector $\omega_i$.
 ![](Pasted%20image%2020231102124716.png)
 The $i$ in $\omega_i$ stands for "incident".
