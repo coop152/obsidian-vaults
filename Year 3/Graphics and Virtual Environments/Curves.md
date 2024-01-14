@@ -40,7 +40,7 @@ Alternatively, you can define it using matrices:
 ![](Pasted%20image%2020230921154505.png)
 ![](Pasted%20image%2020230921154532.png)
 In this function, G/Geometry is a matrix representing the position of the control points, and B/Spline Basis and T/Power Basis together represent the Bernstein Polynomials seen in the previous representation.
-
+``
 But why use these Bernstein Polynomials? Because of these properties:
 - **Non-negativity** - These polynomials output only positive values.
 - **Partition of unity** - The sum of all of the Bernstein Polynomials at any given value of $t$ will add up to 1.
