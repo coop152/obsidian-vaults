@@ -68,3 +68,32 @@ In addition, observe how objects in this busy scene assemble small "collections"
 Octrees take advantage of spatial cohesion, but in most scenes the gaps will not be evenly spread, limiting the effectiveness. A similar approach that takes better advantage of spatial cohesion is **Hierarchical Bounding Volumes**.
 ## Hierarchical Bounding Volumes (HBVs)
 To construct an Octree, we start with a single big cell around everything in the scene and gradually subdivide it until we meet our desired object density for each cell. HBVs work somewhat in reverse: we start with a bounding box around a single object and expand this shape until we encompass the whole scene.
+So, let's start with (a simplified version of) our office scene:
+![](Pasted%20image%2020231203144605.png)
+First we put a bounding box around the desk (working under the idea that the desk is a single object, for simplicity). A bounding box fits great around this desk, incidentally.
+We do this for a few more things around the scene, giving us this result:
+![](Pasted%20image%2020231203144752.png)
+When we try putting a bounding box around the monitor, we encounter our first clearly unfitting bounding box:
+![](Pasted%20image%2020231203144837.png)
+Because our bounding boxes are axis-aligned, the angle of this monitor is causing quite a lot of dead space in the bounding box. We could replace this with a non-axis aligned box, but that would significantly complicate our maths so we stick with the poor fit for now.
+We add a (similarly unfitting) box to the chair, the final object in the scene, and we're done with this stage of the process.
+![](Pasted%20image%2020231203145051.png)
+By just using bounding boxes we've already improved the speed of testing for a ray by a great deal; before we would have to check every single object in the scene with a ray-on-polygon check, which is extremely expensive. While we still have to check every object, at least we can use the bounding boxes to quickly rule out obvious misses.
+But spatial cohesion says we can do better. We've transformed our clumps of objects into clumps of boxes, which even just looking at them with your eyes are easier to categorise into groups. So, what if we surround these boxes with some more bounding boxes?
+![](Pasted%20image%2020231203145425.png)
+Now we have a hierarchy going, like an Octree but more freeform. Finally, we add an all-encompassing bounding box at the top of the hierarchy:
+![](Pasted%20image%2020231203145507.png)
+Now we have a tree.
+## Binary Space Partitioning (BSP)
+BSP works by dividing spaces into two parts, as you might assume from the name. Again start with the 2D example scene:
+![](Pasted%20image%2020231203145706.png)
+We split this into two halves, this time horizontally.
+![](Pasted%20image%2020231203145747.png)
+From the line's perspective, we have a left and a right side of the scene. Because this method works in halves, we will be using a **binary tree** for our hierarchical representation:
+![](Pasted%20image%2020231203145832.png)
+Notice how BSP maintains a relation between the split parts, more like Octrees than HBVs.
+We split the space again, and again we get a left/right relationship relative to the line:
+![](Pasted%20image%2020231203150024.png)
+We keep doing this until we reach a desired max number of items in a given area, like an Octree.
+![](Pasted%20image%2020231203150120.png)
+This specific method is **Axis Aligned Binary Space Partitioning**, as the lines we split by are axis-aligned. The more general non-axis-aligned version is the one which is typically used in the real world.
