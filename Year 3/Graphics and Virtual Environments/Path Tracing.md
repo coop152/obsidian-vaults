@@ -22,7 +22,7 @@ For finding the area of a circle there is a simple analytical solution: Get the 
 Alternatively, we could **brute-force** the problem. If we take the circle at some resolution, count the number of pixels in the circle, and then multiply the number of pixels by the known area of one pixel, we can find the area of the circle. This solution is not a good one; it takes a lot of counting and the result isn't even exact due to the limited resolution.
 The better solution would be using Monte-Carlo. We draw a bounding box around the circle, and then randomly sample points in that bounding box:
 ![](Pasted%20image%2020231119174607.png)
-We count which points fall inside the circle. In this example, we sampled 100 points in total of which 70 were inside the circle. We can take the ratio between total points and inside points as an approximation as the ratio between the area of the bounding box and the circle:
+We count which points fall inside the circle. In this example, we sampled 100 points in total of which 70 were inside the circle. We can take the ratio between total points and inside points as an approximation of the ratio between the area of the bounding box and the circle:
 $$\frac{inside}{total} \approx \frac{circle}{box}$$
 $$\frac{70}{100} \approx \frac{circle}{2\times 2}$$
 $$circle = 4 \times \frac{70}{100}$$
