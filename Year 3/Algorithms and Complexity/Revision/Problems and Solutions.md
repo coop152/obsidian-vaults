@@ -38,3 +38,11 @@ A structure that facilitates algorithms on disjoint sets.
 	- `find` can be made faster with these optimisations:
 		- **Union-by-size**: when performing a union, always make the smaller tree the child. This requires storing the current tree size in each node.
 		- **Path compression**: when performing a find, set the parent of every node you traverse directly to the root.
+
+# String Matching
+Given: a text string $T$ and a pattern string $P$
+Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ doesn't contain $P$
+### Algorithms
+- Naïve algorithm
+- Rabin-Karp algorithm
+- Knuth-Morris-Pratt (KMP) algorithm
