@@ -1,6 +1,6 @@
-- [ ] Strongly connected components
-	- [ ] Topological sort
-	- [ ] Detecting cycles
+- [x] Strongly connected components
+	- [x] Topological sort
+	- [x] Detecting cycles
 	- [x] Kosaraju's algorithm
 - [ ] Union find
 	- [ ] Basic algorithm
