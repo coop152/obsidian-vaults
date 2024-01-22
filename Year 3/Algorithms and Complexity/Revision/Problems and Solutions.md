@@ -67,4 +67,6 @@ Return: Maximum flow through $F$
 ---
 # Maximum Bipartite Matching
 Given: bipartite graph $G$
-Return: Maximum matching 
+Return: Maximum matching in $G$
+### Algorithms
+- Reducible to the maximum flow problem, to then be solved with an algorithm for that problem
