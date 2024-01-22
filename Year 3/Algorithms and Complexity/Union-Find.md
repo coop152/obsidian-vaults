@@ -30,8 +30,8 @@ The goal is to create a maze with a single solution, and with a solution that is
 Here is an algorithm for creating such a maze:
 ```python
 # note that E is full initially; that is, it includes every possible wall and completely isolates every cell in G
-algorithm MazeGenerator(Cell[][] G, Set[Wall] E):
-	Set[Wall] R = new Set[Wall] # empty set of Walls
+algorithm MazeGenerator(Cell[][] G, Set<Wall> E):
+	Set[Wall] R = new Set<Wall> # empty set of Walls
 	while R.size() < G.cellCount() - 1:
 		Edge (x, y) = E.getRandomUnchosenEdge()
 		# Remove random edge, as long as it adds a new cell to the connected component

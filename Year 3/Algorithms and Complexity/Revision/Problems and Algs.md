@@ -21,4 +21,3 @@ Return: Yes if every node in the graph is reachable from every other, No otherwi
 - [Kosaraju's Algorithm](Strongly%20Connected%20Components.md#Kosaraju's%20Algorithm)
 	- Find the SCCs of the graph. If there is more than 1, it is not strongly connected.
 	- Runs in linear time
-
