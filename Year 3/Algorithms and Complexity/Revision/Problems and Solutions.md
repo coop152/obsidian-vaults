@@ -58,4 +58,12 @@ Given: a flow network $F$ specified by weighted digraph $D$, source node $s$ and
 Return: Maximum flow through $F$
 
 ### Algorithms
-- 
+- Ford-Fulkerson Algorithm
+	- Find augmenting paths in the network (paths with a non-zero residual capacity) and push flow across them to increase the total flow of the network. Do this until no more augmenting paths remain, and the maximum flow has been reached.
+	- Pseudo-polynomial-time complexity. Can be as bad as $O(|f^*|m)$ in the worst case (where $f^*$ is the maximum flow).
+- Edmonds-Karp
+	- Variant of Ford-Fulkerson where paths with the least number of edges are chosen, in order to prevent the worst case scenario in which Ford-Fulkerson's complexity suffers.
+	- Polynomial time complexity of $O(nm^2)$, where $n$ is the number of vertices and $m$ is the number of edges.
+---
+# Maximum Bipartite Matching
+Given: Connected undirected graph $G$
