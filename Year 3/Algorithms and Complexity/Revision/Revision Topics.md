@@ -1,7 +1,7 @@
 - [ ] Strongly connected components
 	- [ ] Topological sort
 	- [ ] Detecting cycles
-	- [ ] Kosaraju's algorithm
+	- [x] Kosaraju's algorithm
 - [ ] Union find
 	- [ ] Basic algorithm
 	- [ ] nlogn optimization
