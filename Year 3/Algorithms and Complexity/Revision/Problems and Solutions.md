@@ -70,3 +70,7 @@ Given: bipartite graph $G$
 Return: Maximum matching in $G$
 ### Algorithms
 - Reducible to the maximum flow problem, to then be solved with an algorithm for that problem
+	- Make a new flow network $F$. Add all of the vertices from $G$ to $F$, as well as new sink and target nodes. Add edges from the sink to every node in one of the sets (call this set $X$). Now include the edges from $G$ in $F$, directed from $X$ to the other set (call this set $Y$). Now add edges from all vertices in $Y$ to the target. Every edge should have a capacity of 1.
+	- Finding a maximum flow for this network yields a maximum matching; interpret every edge in the flow with 1 flow as a match, and every edge with 0 flow as non-existent. The complexity of this is the same as whichever algorithm is used to find the maximum flow (i.e. probably $O(nm^2)$.)
+- Gale-Shapely Algorithm
+	- 
