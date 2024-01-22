@@ -16,8 +16,8 @@
 	- [ ] Knuth-Morris-Pratt algorithm
 - [ ] Flow networks and matching
 	- [x] Flows
-	- [ ] Ford-Fulkerson method
-	- [ ] min-cut/max-flow lemma
+	- [x] Ford-Fulkerson method
+	- [x] min-cut/max-flow lemma
 	- [ ] 2D matching
 	- [ ] Flow networks w/ costs
 	- [ ] Gale-Shapely algorithm
