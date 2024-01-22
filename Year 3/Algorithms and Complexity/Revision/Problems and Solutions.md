@@ -66,4 +66,5 @@ Return: Maximum flow through $F$
 	- Polynomial time complexity of $O(nm^2)$, where $n$ is the number of vertices and $m$ is the number of edges.
 ---
 # Maximum Bipartite Matching
-Given: Connected undirected graph $G$
+Given: bipartite graph $G$
+Return: Maximum matching 
