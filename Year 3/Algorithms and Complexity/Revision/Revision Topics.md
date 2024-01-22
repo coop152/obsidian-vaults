@@ -3,9 +3,9 @@
 	- [x] Detecting cycles
 	- [x] Kosaraju's algorithm
 - [ ] Union find
-	- [ ] Basic algorithm
-	- [ ] nlogn optimization
-	- [ ] Path compression
+	- [x] Basic algorithm
+	- [x] nlogn optimization
+	- [x] Path compression
 - [ ] "Fast and slow" (whatever the fuck that means)
 	- [ ] The loop/Grzegorczyk hierarchy
 	- [ ] Union find complexity w/ path compression
