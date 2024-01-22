@@ -44,5 +44,8 @@ Given: a text string $T$ and a pattern string $P$
 Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ doesn't contain $P$
 ### Algorithms
 - Naïve algorithm
+	- Just compare the pattern to the text at every single index.
+	- Complexity is bad at $O(nm)$ (where n = length of $T$ and m = length of $P$). If the pattern is at least half as long as the text string then it becomes $O(n^2)$.
 - Rabin-Karp algorithm
+	- 
 - Knuth-Morris-Pratt (KMP) algorithm
