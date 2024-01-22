@@ -1,0 +1,50 @@
+- [ ] Strongly connected components
+	- [ ] Topological sort
+	- [ ] Detecting cycles
+	- [ ] Kosaraju's algorithm
+- [ ] Union find
+	- [ ] Basic algorithm
+	- [ ] nlogn optimization
+	- [ ] Path compression
+- [ ] "Fast and slow" (whatever the fuck that means)
+	- [ ] The loop/Grzegorczyk hierarchy
+	- [ ] Union find complexity w/ path compression
+- [ ] Flow networks and matching
+	- [ ] Flows
+	- [ ] Ford-Fulkerson method
+	- [ ] min-cut/max-flow lemma
+	- [ ] 2D matching
+	- [ ] Flow networks w/ costs
+	- [ ] Gale-Shapely algorithm
+- [ ] The machine stops
+	- [ ] Turing machines
+	- [ ] Recursively enumerable, co-recursively enumerable, recursive
+	- [ ] the halting problem
+	- [ ] the Entscheidungsproblem
+- [ ] Time, space and determinism
+	- [ ] Standard time and space complexity classes
+	- [ ] Basic (non-strict) inclusions
+	- [ ] The f-bounded halting problem and strict inclusions
+- [ ] Logic formula complexities
+	- [ ] SAT is in NPTime
+	- [ ] Horn-SAT is in PTime
+	- [ ] Krom-SAT is in co-NLogSpace
+	- [ ] QBF is in PSpace
+- [ ] Hardness
+	- [ ] Reductions and hardness
+	- [ ] SAT is NPTime-complete (Cook's theorem)
+	- [ ] Horn-SAT is PTime-complete
+	- [ ] st-CON is NLogSpace-complete
+	- [ ] QBF is PSpace-complete
+- [ ] NP-Complete problems
+	- [ ] 3-colourability
+	- [ ] Eulerian circuits
+	- [ ] Hamiltonian circuits
+- [ ] Integer Linear Programming
+	- [ ] Basic linear programming
+	- [ ] LP-feasibility is in PTime
+	- [ ] ILP is in NPTime
+	- [ ] ILP is NPTime-hard
+- [ ] Two theorems on space complexity
+	- [ ] Savitch's theorem
+	- [ ] Immerman-Szelepcsényi theorem
