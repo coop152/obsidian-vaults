@@ -10,8 +10,8 @@
 	- [ ] The loop/Grzegorczyk hierarchy
 	- [ ] Union find complexity w/ path compression
 - [ ] String Operations
-	- [ ] String matching problem
-	- [ ] Naïve string matching algorithm
+	- [x] String matching problem
+	- [x] Naïve string matching algorithm
 	- [ ] Rabin-Karp algorithm
 	- [ ] Knuth-Morris-Pratt algorithm
 - [ ] Flow networks and matching
