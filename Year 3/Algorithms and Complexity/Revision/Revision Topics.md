@@ -2,7 +2,7 @@
 	- [x] Topological sort
 	- [x] Detecting cycles
 	- [x] Kosaraju's algorithm
-- [ ] Union find
+- [x] Union find
 	- [x] Basic algorithm
 	- [x] nlogn optimization
 	- [x] Path compression
