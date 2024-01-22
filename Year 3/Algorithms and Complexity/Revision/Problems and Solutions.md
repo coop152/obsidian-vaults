@@ -54,8 +54,8 @@ Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ d
 	- 
 ---
 # Maximum Flow Problem
-Given: a weighted digraph $D$, a source node $s$ and a target/sink node $t$
-Return: Maximum amount of flow through the network from $s$ to $t$
+Given: a flow network $F$ specified by weighted digraph $D$, source node $s$ and target/sink node $t$
+Return: Maximum flow through $F$
 
 ### Algorithms
 - 

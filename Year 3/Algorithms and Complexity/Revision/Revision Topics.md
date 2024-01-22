@@ -15,7 +15,7 @@
 	- [ ] Rabin-Karp algorithm
 	- [ ] Knuth-Morris-Pratt algorithm
 - [ ] Flow networks and matching
-	- [ ] Flows
+	- [x] Flows
 	- [ ] Ford-Fulkerson method
 	- [ ] min-cut/max-flow lemma
 	- [ ] 2D matching
