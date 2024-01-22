@@ -6,12 +6,14 @@ In other words, decide if there is a path from s to t.
 ### Algorithm
 - Depth First Search
 	- Runs in linear time
+---
 # Cyclicity
 Given: a directed graph $G$
 Return: Yes if $G$ is cyclic, no otherwise
 ### Algorithms
 - Topological Sorting
 	- Runs in linear time
+---
 # Strong Connectivity
 Given: a directed graph $G$
 Return: Yes if every node in the graph is reachable from every other, No otherwise.
@@ -21,7 +23,7 @@ Return: Yes if every node in the graph is reachable from every other, No otherwi
 - [Kosaraju's Algorithm](Strongly%20Connected%20Components.md#Kosaraju's%20Algorithm)
 	- Find the SCCs of the graph. If there is more than 1, it is not strongly connected.
 	- Runs in linear time
-
+---
 # Union-find (data structure)
 A structure that facilitates algorithms on disjoint sets.
 ### Implementations
@@ -38,7 +40,7 @@ A structure that facilitates algorithms on disjoint sets.
 	- `find` can be made faster with these optimisations:
 		- **Union-by-size**: when performing a union, always make the smaller tree the child. This requires storing the current tree size in each node.
 		- **Path compression**: when performing a find, set the parent of every node you traverse directly to the root.
-
+---
 # String Matching
 Given: a text string $T$ and a pattern string $P$
 Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ doesn't contain $P$
@@ -50,6 +52,10 @@ Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ d
 	- 
 - Knuth-Morris-Pratt (KMP) algorithm
 	- 
-
+---
 # Maximum Flow Problem
-Given: a weighted digraph $D$
+Given: a weighted digraph $D$, a source node $s$ and a target/sink node $t$
+Return: Maximum amount of flow through the network from $s$ to $t$
+
+### Algorithms
+- 
