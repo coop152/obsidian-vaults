@@ -21,3 +21,10 @@ Return: Yes if every node in the graph is reachable from every other, No otherwi
 - [Kosaraju's Algorithm](Strongly%20Connected%20Components.md#Kosaraju's%20Algorithm)
 	- Find the SCCs of the graph. If there is more than 1, it is not strongly connected.
 	- Runs in linear time
+
+# Union-find (data structure)
+A structure that facilitates algorithms on disjoint sets.
+### Implementations
+- List-based
+	- Each set is represented as a modified linked list, where every element of each list has a direct pointer to the head. These lists are themselves stored in some collection in the overall union-find data structure.
+	- `find(e)` is linear. 
