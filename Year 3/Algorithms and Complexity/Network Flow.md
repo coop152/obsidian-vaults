@@ -75,7 +75,7 @@ In other words, the residual capacity of an edge $e$ going in the forward direct
 # Augmenting Paths
 We define the residual capacity $\Delta_f(\pi)$ of a path $\pi$ as the minimal residual capacity of its edges. That is,
 ![](Pasted%20image%2020231009140025.png)
-This represents the maximum amount of addition flow we can possibly direct down the path $pi$ without violating a capacity constraint on one of the edges. An **augmenting path** for flow $f$ is a path $\pi$ from the source $s$ to the sink $t$ with non-zero residual capacity. Specifically this means that for each edge $e$ in $\pi$:
+This represents the maximum amount of additional flow we can possibly direct down the path $\pi$ without violating a capacity constraint on one of the edges. An **augmenting path** for flow $f$ is a path $\pi$ from the source $s$ to the sink $t$ with non-zero residual capacity. Specifically this means that for each edge $e$ in $\pi$:
 ![](Pasted%20image%2020231009140558.png)
 Here is an example of an augmenting path:
 ![](Pasted%20image%2020231009140752.png)
