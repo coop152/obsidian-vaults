@@ -49,3 +49,7 @@ Return: The index of the substring in $T$ which equals $P$, or No Match if $T$ d
 - Rabin-Karp algorithm
 	- 
 - Knuth-Morris-Pratt (KMP) algorithm
+	- 
+
+# Maximum Flow Problem
+Given: a weighted digraph $D$
