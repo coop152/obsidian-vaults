@@ -14,7 +14,7 @@ A flow network $N$ consists of the following:
 - Two vertices $s$ and $t$, called the **source** and **sink** respectively, such that $s$ has no incoming edges and $t$ has no outgoing edges.
 
 ![](Pasted%20image%2020231009111115.png)
-We define a "flow" for the network $N$ is an assignment of some integer value $f(e)$ to each edge $e$ that satisfies the following properties:
+We define a "flow" for the network $N$ as an assignment of some integer value $f(e)$ to each edge $e$ that satisfies the following properties:
 ![](Pasted%20image%2020231009111211.png)
 In other words, the flow through each edge must not exceed it's capacity, and the amount of flow going into one vertex must equal the amount of flow leaving the vertex. Here is an example flow for the previously shown graph:
 ![](Pasted%20image%2020231009111527.png)
