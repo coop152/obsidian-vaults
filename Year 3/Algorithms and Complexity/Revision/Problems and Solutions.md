@@ -31,4 +31,10 @@ A structure that facilitates algorithms on disjoint sets.
 	- `makeSet(e)` is O(1). Just make a new linked list with `e` in it and add it to the union-find structure's collection.
 	- `union(a, b)` is essentially linear ($O(\min(|a|, |b|))$ which is $O(n)$ in the worst case.) Take the biggest set; this one keeps it's head and items. Add every item from the smaller set into the bigger set, then delete the smaller set and remove from the union-find structure's collection. **If you amortize over $n$ initial elements then the complexity is actually $O(\log{n})$.**
 - Tree-based
-	- 
+	- The entire structure is represented as a tree. A set is identified by the root of its tree (the root being denoted by being its own parent.)
+	- `find(e)` is O(n). Traverse the tree from the given element to the root by repeatedly taking the parent. In the worst case, the tree is just one big chain and there are $n$ elements.
+	- `makeSet(e)` is O(1). Just make a new root node.
+	- `union(a, b)` is O(1). Just make the root of one tree the parent of the root of the other tree.
+	- `find` can be made faster with these optimisations:
+		- **Union-by-size**: when performing a union, always make the smaller tree the child. This requires storing the current tree size in each node.
+		- **Path compression**: when performing a find, set the parent of every node you traverse directly to the root.
