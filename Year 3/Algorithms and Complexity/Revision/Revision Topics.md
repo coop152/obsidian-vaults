@@ -23,8 +23,8 @@
 	- [ ] Baseball elimination
 	- [x] Gale-Shapely algorithm
 - [ ] The machine stops
-	- [ ] Turing machines
-	- [ ] Recursively enumerable, co-recursively enumerable, recursive
+	- [x] Turing machines
+	- [x] Recursively enumerable, co-recursively enumerable, recursive
 	- [ ] the halting problem
 	- [ ] the Entscheidungsproblem
 - [ ] Time, space and determinism
