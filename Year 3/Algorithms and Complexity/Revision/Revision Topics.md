@@ -22,11 +22,11 @@
 	- [ ] Flow networks w/ costs
 	- [ ] Baseball elimination
 	- [x] Gale-Shapely algorithm
-- [ ] The machine stops
+- [x] The machine stops
 	- [x] Turing machines
 	- [x] Recursively enumerable, co-recursively enumerable, recursive
 	- [x] the halting problem
-	- [ ] the Entscheidungsproblem
+	- [x] the Entscheidungsproblem
 - [ ] Time, space and determinism
 	- [ ] Standard time and space complexity classes
 	- [ ] Basic (non-strict) inclusions
