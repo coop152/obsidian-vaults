@@ -28,7 +28,7 @@
 	- [x] the halting problem
 	- [x] the Entscheidungsproblem
 - [ ] Time, space and determinism
-	- [ ] Standard time and space complexity classes
+	- [x] Standard time and space complexity classes
 	- [ ] Basic (non-strict) inclusions
 	- [ ] The f-bounded halting problem and strict inclusions
 - [ ] Logic formula complexities

@@ -138,3 +138,5 @@ Here is an example of a language in $\text{NL}$:
 We know an algorithm that is in $\text{P}$, but that algorithm uses linear time. It is not known if PATH can be solved deterministically in logarithmic space, but we do know of a nondeterministic logarithmic space algorithm for PATH.
 The nondeterministic machine starts at node $s$ and nondeterministically guesses the nodes of a path from $s$ to $t$. The machine need only record the position of the current node at each step on the work tape. It then nondeterministically selects the next node from those pointed at by the current node and repeats until it reaches $t$ and accepts or it has repeated $m$ times and rejects.
 Therefore, PATH is in $\text{NL}$.
+# Class Inclusions
+![](Pasted%20image%2020240123150031.png)
