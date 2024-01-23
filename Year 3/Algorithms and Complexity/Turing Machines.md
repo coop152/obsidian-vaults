@@ -32,11 +32,11 @@ A machine **accepts** an input $w$ if there is a sequence of configurations $C_1
 - each $C_i$ yields $C_{i+1}$, and
 - $C_k$ is an accepting configuration.
 
-The set of strings that machine $M$ accepts is **the language of $M$**, denoted $L(M)$. The machine is said to "recognize" the language, and the language is said to be "Turing-recognizable".
+The set of strings that machine $M$ accepts is **the language of $M$**, denoted $L(M)$. The machine is said to "recognize" the language, and the language is said to be "Turing-recognizable" (or "recursively enumerable" in Ian-speak).
 
-The three outcomes of passing an input into a machine are *accept*, *reject* and *loop*, loop being the name for the machine never halting. Instead of considering these three states, you may group *reject* and *loop* together to get "accepts" and "fails to accept". A machine that never loops is called a **decider**; it "decides" all languages that it recognizes, and every language is decides is said to be "Turing-decidable" (or simply "decidable").
+The three outcomes of passing an input into a machine are *accept*, *reject* and *loop*, loop being the name for the machine never halting. Instead of considering these three states, you may group *reject* and *loop* together to get "accepts" and "fails to accept". A machine that never loops is called a **decider**; it "decides" all languages that it recognizes, and every language is decides is said to be "Turing-decidable" (or "recursive" in Ian-speak).
 
-Here is an example of a turing machine, given formally:
+Here is an example of a Turing machine, given formally:
 ![](Pasted%20image%2020231016141105.png)
 ![](Pasted%20image%2020231016141114.png)
 ![](Pasted%20image%2020231016141130.png)
