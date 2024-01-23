@@ -25,7 +25,7 @@
 - [ ] The machine stops
 	- [x] Turing machines
 	- [x] Recursively enumerable, co-recursively enumerable, recursive
-	- [ ] the halting problem
+	- [x] the halting problem
 	- [ ] the Entscheidungsproblem
 - [ ] Time, space and determinism
 	- [ ] Standard time and space complexity classes
