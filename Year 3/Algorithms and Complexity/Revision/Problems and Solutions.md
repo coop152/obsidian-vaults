@@ -77,4 +77,7 @@ Return: Maximum matching in $G$
 ---
 # Minimum-cost Flow
 Given: a flow network $F$ specified by weighted digraph $D$, source node $s$ and target/sink node $t$, with costs on each edge of $w(e)$.
-Return: Maximum flow through $F$ with the minimum cost
+Return: Maximal flow through $F$ with the minimum cost among all maximal flows
+
+### Algorithms
+- Busacker-Gowen algorithm
