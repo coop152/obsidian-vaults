@@ -73,4 +73,8 @@ Return: Maximum matching in $G$
 	- Make a new flow network $F$. Add all of the vertices from $G$ to $F$, as well as new sink and target nodes. Add edges from the sink to every node in one of the sets (call this set $X$). Now include the edges from $G$ in $F$, directed from $X$ to the other set (call this set $Y$). Now add edges from all vertices in $Y$ to the target. Every edge should have a capacity of 1.
 	- Finding a maximum flow for this network yields a maximum matching; interpret every edge in the flow with 1 flow as a match, and every edge with 0 flow as non-existent. The complexity of this is the same as whichever algorithm is used to find the maximum flow (i.e. probably $O(nm^2)$.)
 - Gale-Shapely Algorithm
-	- (In the marriage analogy:) Also takes ratings from both men and women on the members of the other set. The result is not just a maximum matching, but is also a matching such that no pair of matched people would rather break up their pairing for an unmatched person.
+	- (In the marriage analogy:) Also takes ratings from both men and women on the members of the other set. The result is not just a maximum matching, but is also a matching such that no woman would rather be matched with an unmatched man than the one she has already been matched with.
+---
+# Minimum-cost Flow
+Given: a flow network $F$ specified by weighted digraph $D$, source node $s$ and target/sink node $t$, with costs on each edge of $w(e)$.
+Return: Maximum flow through $F$ with the minimum cost

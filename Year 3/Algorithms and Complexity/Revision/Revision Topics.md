@@ -18,9 +18,10 @@
 	- [x] Flows
 	- [x] Ford-Fulkerson method
 	- [x] min-cut/max-flow lemma
-	- [ ] 2D matching
+	- [x] 2D matching
 	- [ ] Flow networks w/ costs
-	- [ ] Gale-Shapely algorithm
+	- [ ] Baseball elimination
+	- [x] Gale-Shapely algorithm
 - [ ] The machine stops
 	- [ ] Turing machines
 	- [ ] Recursively enumerable, co-recursively enumerable, recursive
