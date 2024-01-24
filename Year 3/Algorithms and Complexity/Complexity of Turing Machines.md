@@ -144,4 +144,6 @@ Therefore, PATH is in $\text{NL}$.
 ![](Pasted%20image%2020240123150422.png)
 ![](Pasted%20image%2020240123150439.png)
 ![](Pasted%20image%2020240123150449.png)
-# $f$-Bounded Halting Problem
+From the f-Bounded halting problem (i think):
+![](Pasted%20image%2020240123150918.png)
+![](Pasted%20image%2020240123150926.png)

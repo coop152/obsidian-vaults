@@ -29,7 +29,7 @@
 	- [x] the Entscheidungsproblem
 - [ ] Time, space and determinism
 	- [x] Standard time and space complexity classes
-	- [ ] Basic (non-strict) inclusions
+	- [x] Basic (non-strict) inclusions
 	- [ ] The f-bounded halting problem and strict inclusions
 - [ ] Logic formula complexities
 	- [ ] SAT is in NPTime
