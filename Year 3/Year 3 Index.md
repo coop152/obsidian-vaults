@@ -8,4 +8,5 @@ My notes for Year 3.
 - [Chip Multiprocessors](Chip%20Multiprocessors%20Index.md)
 - [Mathematical Systems & Computation](Math%20Systems%20&%20Comp%20Index.md)
 - [Computer Vision](Computer%20Vision%20Index.md)
+- [Introduction to Spanish](Intro%20to%20Spanish%20Index.md)
 
