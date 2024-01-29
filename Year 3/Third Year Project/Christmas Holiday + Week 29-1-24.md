@@ -3,4 +3,14 @@ Spent this time backporting to Linux. This was while the delete history feature 
 - CONTINUE WRITING THIS
 - HAD TO FIX THE MAKEFILE STUFF CAUSE I MOVED WHERE THE LIBRARY IS FOR WINDOWS, AND HAD TO KINDA UNDO THAT ON LINUX
 - HAD TO MODIFY STARTUP.TCL TO BE PLATFORM-DEPENDENT FOR THIS REASON
-- 
+
+
+
+---
+Remember:
+```sh
+autoreconf
+./configure --prefix=/home/kyle/.local --with-tclconfig=/usr/lib/tcl8.6 --with-tkconfig=/usr/lib/tk8.6 CPPFLAGS=-I/usr/include/tcl8.6
+make install
+```
+It's gotta be installed, it looks in the prefix for the files!
