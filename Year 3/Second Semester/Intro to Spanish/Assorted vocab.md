@@ -1,5 +1,5 @@
 
 | English          | Spanish     |
 | ---------------- | ----------- |
-| Computer Science | informática |
+| Computer Science | Informática |
 | England          | Inglaterra            |
