@@ -1,4 +1,4 @@
-- [Week 1](Week%201.md)
+- [Week 1](Year%203/First%20Semester/Implementing%20SoC%20Designs/Week%201.md)
 - [[Week 2]]
 - [[Week 3]]
 - [[Week 4]]
