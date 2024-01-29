@@ -1,9 +1,18 @@
 # Week Journals
-- [Week of 25-9(ish)](Week%20of%2025-9(ish).md)
-- [Week of 2-10](Week%20of%202-10.md)
-- [Week of 16-10](Week%20of%2016-10.md)
-- [Week of 23-10](Week%20of%2023-10.md)
-- [Week of 30-10](Week%20of%2030-10.md)
+- [Proof of Concept Notes](Proof%20of%20Concept%20Notes.md) (Written in weeks preceding 25-9-23)
+- [Week of 25-9-23(ish)](Week%20of%2025-9-23(ish).md)
+- [Week of 2-10-23](Week%20of%202-10-23.md)
+- [Week of 16-10-23](Week%20of%2016-10-23.md)
+- [Week of 23-10-23](Week%20of%2023-10-23.md)
+- [Week of 30-10-23](Week%20of%2030-10-23.md)
+- [Week of 6-11-23](Week%20of%206-11-23.md)
+- [Week of 13-11-23](Week%20of%2013-11-23.md)
+- [Week of 20-11-23](Week%20of%2020-11-23.md)
+- [Week of 27-11-23](Week%20of%2027-11-23.md)
+- [Week of 4-12-23](Week%20of%204-12-23.md)
+- [Week of 11-12-23](Week%20of%2011-12-23.md)
+- Pretend you don't see this month and a half gap
+- [[Christmas Holiday + Week 29-1-24]]
 # Important Dates
 - Code Freeze: Friday 15th March 2024 
 - Report & Screencast Submission: Friday 12th April
@@ -18,6 +27,3 @@
 	- [ ] Resolve code safety warnings (remove `_CRT_SECURE_NO_WARNINGS` from preprocessor definitions to see them)
 - [ ] (?) Port from Tk to Qt (or similar), remove tcl completely from the project
 - [x] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
-
-# How should deleting work
-Check emails sent to Richard for a plan that I sent previously. Some fake mock-ups wouldn't go wrong! ALSO REMEMBER TO MAKE A BRANCH
