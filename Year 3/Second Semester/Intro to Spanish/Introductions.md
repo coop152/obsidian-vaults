@@ -8,6 +8,7 @@
 | I am from <1>, in <2> | Soy de <2>, de <1> | Wider location comes first        |
 | I live in <>          | Vivo en <>         |                                   |
 | I have <>             | Tengo <>           |                                   |
+| I am <> years old     | Tengo <> años      | Same as "i have"                  |
 | I don't have <>       | No tengo <>        |                                   |
 | Me gusta <>           | I like <>          |                                   |
 # Related vocab
@@ -24,4 +25,5 @@
 | Brothers/Siblings | Hermanos              |                                          |
 | Friends           | Amigos                |                                          |
 | Computer          | Ordenador/Computadora | regional variants                        |
+| Course            | Curso                 | like "university course"                 |
 |                   |                       |                                          |
