@@ -1,6 +1,6 @@
 - [Curves](Curves.md)
 - [[Surfaces]]
-- [Colour](Year%203/Graphics%20and%20Virtual%20Environments/Colour.md)
+- [Colour](Year%203/First%20Semester/Graphics%20and%20Virtual%20Environments/Colour.md)
 - [[Animation Principles]]
 - [[Simulation]]
 - [[The Rendering Equation]]
