@@ -7,3 +7,6 @@ My notes for Year 3.
 - [Giving Meaning to Programs](Giving%20Meaning%20to%20Programs%20Index.md)
 
 ## Second Semester
+- [Chip Multiprocessors](Chip%20Multiprocessors%20Index.md)
+- [Mathematical Systems & Computation](Math%20Systems%20&%20Comp%20Index.md)
+- 
