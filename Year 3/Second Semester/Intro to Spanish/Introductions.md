@@ -28,3 +28,5 @@
 | Computer          | Ordenador/Computadora | regional variants                        |
 | Course            | Curso                 | like "university course"                 |
 |                   |                       |                                          |
+# All together
+> 
