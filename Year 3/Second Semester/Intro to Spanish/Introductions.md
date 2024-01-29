@@ -11,6 +11,7 @@
 | I am <> years old     | Tengo <> años      | Same as "i have"                  |
 | I don't have <>       | No tengo <>        |                                   |
 | Me gusta <>           | I like <>          |                                   |
+| I speak <>            | Hablo <>           |                                   |
 # Related vocab
 | English           | Spanish               | Notes                                    |
 | ----------------- | --------------------- | ---------------------------------------- |
