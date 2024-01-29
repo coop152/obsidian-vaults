@@ -29,4 +29,4 @@
 | Course            | Curso                 | like "university course"                 |
 |                   |                       |                                          |
 # All together
-> 
+> Me llamo Kyle Coop. Soy estudiante de informática 
