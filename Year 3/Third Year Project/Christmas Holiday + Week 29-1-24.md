@@ -4,7 +4,10 @@ Spent this time backporting to Linux. This was while the delete history feature 
 - HAD TO FIX THE MAKEFILE STUFF CAUSE I MOVED WHERE THE LIBRARY IS FOR WINDOWS, AND HAD TO KINDA UNDO THAT ON LINUX
 - HAD TO MODIFY STARTUP.TCL TO BE PLATFORM-DEPENDENT FOR THIS REASON
 
-
+Todo:
+- Remove address sanitizer from makefile, see if adding to CPPFLAGS in configure will achieve the same effect
+- try and fix the TCL detection so the configure command is less arcane
+- Default prefix possible? `~/.local` certainly makes sense.
 
 ---
 Remember:
