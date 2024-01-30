@@ -17,3 +17,8 @@ autoreconf
 make install
 ```
 It's gotta be installed, it looks in the prefix for the files!
+Want address sanitiser? configure like this instead:
+```sh
+./configure --prefix=/home/kyle/.local --with-tclconfig=/usr/lib/tcl8.6 --with-tkconfig=/usr/lib/tk8.6 CPPFLAGS="-I/usr/include/tcl8.6 -fsanitize=address  
+" LDFLAGS="-fsanitize=address"
+```
