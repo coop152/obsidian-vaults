@@ -8,18 +8,18 @@ Todo:
 - ~~Remove address sanitizer from makefile, see if adding to CPPFLAGS in configure will achieve the same effect~~ DONE, see below
 - try and fix the TCL detection so the configure command is less arcane
 	- Figured out how to eliminate the `CPPFLAGS=-I/usr/include/tcl8.6` 
+	- And how to eliminate having to give the configs! at least, on my machine. Did it by replacing all the manual searching for them in the configure.ac with some handy functions `SC_PROG_TCLSH(), SC_PATH_TCLCONFIG(), SC_PATH_TKCONFIG()`.
 - Default prefix possible? `~/.local` certainly makes sense.
 
 ---
 Remember:
 ```sh
 autoreconf
-./configure --prefix=/home/kyle/.local --with-tclconfig=/usr/lib/tcl8.6 --with-tkconfig=/usr/lib/tk8.6 CPPFLAGS=-I/usr/include/tcl8.6
+./configure --prefix=/home/kyle/.local
 make install
 ```
 It's gotta be installed, it looks in the prefix for the files!
 Want address sanitiser? configure like this instead:
 ```sh
-./configure --prefix=/home/kyle/.local --with-tclconfig=/usr/lib/tcl8.6 --with-tkconfig=/usr/lib/tk8.6 CPPFLAGS="-I/usr/include/tcl8.6 -fsanitize=address  
-" LDFLAGS="-fsanitize=address"
+./configure --prefix=/home/kyle/.local CPPFLAGS=-fsanitize=address LDFLAGS=-fsanitize=address
 ```
