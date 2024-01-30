@@ -11,7 +11,7 @@ linuxapifunc()
 - Now it compiled but it was doing the same blank-box thing that happened on windows when that first began compiling. I already knew at this point that it was because it couldnt find startup.tcl. I started by modifying main.c: on linux the makefile passes the location of the tcl files as ICALLIBDIR, so on windows i just defined this as `./tcl` beside the executable.
 - This kind of worked and allowed startup.tcl to be found on Linux, but I forgot that i had moved all of the other tcl files into a `tcl` folder for the sake of organisation. Looking in ICALLIBDIR, all of the tcl files apart from startup.tcl had been put into a `tcl` subfolder, preventing startup.tcl from finding them.
 - To fix this I did some (very annoying) modifications to the Makefile which make it move the files from the subfolder into the expected location. 
-- I also had to modify startup.tcl itself. Previously on Linux, the makefile used `sed` to insert ICALLIBDIR into startup.tcl so it could find the libraries. I removed this on windows and hardcoded the library path as `./tcl` since the windows build tools couldn't do this substitution. In order to have both of these behaviours working at once, I implemented this cursed little piece of code:
+- I also had to modify startup.tcl itself. Previously on Linux, the makefile used `sed` to insert ICALLIBDIR into startup.tcl so it could find the libraries. I removed this on windows and hardcoded the library path as `./tcl` since the windows build tools couldn't do this substitution. In order to have both of these behaviours working at once, I wrote this cursed little piece of code:
 ```tcl
 # set library path for both platforms
 global tcl_platform
