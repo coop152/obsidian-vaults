@@ -14,3 +14,15 @@ For example, with "i am called"
 | Second Person | You are called | Te llamas | Informal |
 | Second Person | You are called | Se llama  | Formal   |
 |               |                |           |          |
+# Pronunciation & Letters
+"Como se escribe...?" - How do you spell/write?
+"Kyle Coop"
+K - ka
+Y - i griega
+L - ele
+E - e
+
+C - ce
+O - o
+O - o
+P - pe
