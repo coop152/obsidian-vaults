@@ -1,25 +1,25 @@
 # Answers
-| English                | Spanish            | Notes                             |
-| ---------------------- | ------------------ | --------------------------------- |
-| My name is <>          | Me llamo <>        |                                   |
-| I am a <>              | Soy <>             | No "a" in "I am a \<profession\>" |
-| <> student             | Estudiante de <>   |                                   |
-| I am from <>           | Soy de <>          |                                   |
-| I am from <1>, in <2>  | Soy de <2>, de <1> | Wider location comes first        |
-| I live in <>           | Vivo en <>         |                                   |
-| I have <>              | Tengo <>           |                                   |
-| I am <> years old      | Tengo <> años      | Same as "i have"                  |
-| I don't have <>        | No tengo <>        |                                   |
-| Me gusta <>            | I like <>          |                                   |
-| I speak <>             | Hablo <>           |                                   |
-|                        |                    |                                   |
-| How are you/What's up? | Que tal?           | Not really expecting an answer    |
-|                        |                    |                                   |
+| English               | Spanish            | Notes                             |
+| --------------------- | ------------------ | --------------------------------- |
+| My name is <>         | Me llamo <>        |                                   |
+| I am a <>             | Soy <>             | No "a" in "I am a \<profession\>" |
+| <> student            | Estudiante de <>   |                                   |
+| I am from <>          | Soy de <>          |                                   |
+| I am from <1>, in <2> | Soy de <2>, de <1> | Wider location comes first        |
+| I live in <>          | Vivo en <>         |                                   |
+| I have <>             | Tengo <>           |                                   |
+| I am <> years old     | Tengo <> años      | Same as "i have"                  |
+| I don't have <>       | No tengo <>        |                                   |
+| Me gusta <>           | I like <>          |                                   |
+| I speak <>            | Hablo <>           |                                   |
+| I am \<nationality\>  | Soy <>             | e.g. "Soy ingle's"                | 
 # Questions
-| English            | Spanish          | Notes |
-| ------------------ | ---------------- | ----- |
-| What is your name? | Co'mo te llamas? |       |
-|                    |                  |       |
+| English                | Spanish          | Notes                          |
+| ---------------------- | ---------------- | ------------------------------ |
+| What is your name?     | Co'mo te llamas? |                                |
+| Where are you from?    | De donde eres?   |                                |
+| How are you/What's up? | Que tal?         | Not really expecting an answer |
+|                        |                  |                                |
 # Other
 | English         | Spanish     | Notes |
 | --------------- | ----------- | ----- |
@@ -42,4 +42,5 @@
 | Course            | Curso                 | like "university course"                 |
 |                   |                       |                                          |
 # All together
-> Me llamo Kyle Coop. Soy estudiante de informática 
+- Me llamo Kyle Coop
+- Soy estudiante de informática 
