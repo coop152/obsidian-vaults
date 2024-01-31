@@ -24,7 +24,8 @@
 | English         | Spanish     | Notes |
 | --------------- | ----------- | ----- |
 | Your name is... | Se llama... |       |
-|                 |             |       |
+
+The verb for "to be" is "soy" in the first person, "eres" in the informal second person and "es" in the formal second person.
 # Related vocab
 | English           | Spanish               | Notes                                    |
 | ----------------- | --------------------- | ---------------------------------------- |
@@ -43,4 +44,6 @@
 |                   |                       |                                          |
 # All together
 - Me llamo Kyle Coop
-- Soy estudiante de informática 
+- Soy estudiante de informática
+- Soy ingle's
+- Soy de Rochdale, Inglaterra
