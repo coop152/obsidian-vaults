@@ -26,3 +26,7 @@ C - ce
 O - o
 O - o
 P - pe
+
+
+"mi nombre es escribe..." - My name is spelled...
+maria teresa al
