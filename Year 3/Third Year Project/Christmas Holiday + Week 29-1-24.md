@@ -34,7 +34,7 @@ if [string equal $tcl_platform(platform) windows] {
 - The old build process also strangely forgot to pass the tcl header files to the C compiler, even though it exposed the path to the makefile. It just didn't use it. Easy fix, and now configuring is as easy as `./configure --prefix=/home/kyle/.local`!
 
 Installation instructions:
-1. Run `autoreconf -ivf`.
+1. Run `autoreconf -ivf`. (If you dont have autoreconf then install autoconf.)
 2. Run the newly created `./configure`: `./configure --prefix=/home/you/.local`
 3. `make install`. You have to install it: ical looks for the tcl libraries in the prefix so it won't work if you just run the executable in the folder! (Watch out for compiling a new version but not installing; you'll be using the old tcl libraries but a new executable!)
 ---
