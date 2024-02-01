@@ -18,7 +18,6 @@ A set of FP numbers $\mathcal{F} \subset \mathbb{R}$ is a subset of the real num
 
 Usually $e_\min < e_\max$ and $e_\min = 1-e_\max$.
 Elements of $\mathcal{F}$ have the form $m \times \beta^{e-p+1}$, where $0 \leq |m| \leq \beta^p - 1$ and $e_\min \leq e \leq e_\max$.
-$m$ is the integer *mantissa* (or *significand*), and $e$ is the integer *exponent*.
+$m$ is the integer *mantissa* (or *significand*), and $e$ is the integer *exponent*. $p$ represents 
 ![](Pasted%20image%2020240201125547.png)
 ![](Pasted%20image%2020240201125717.png)
-(just look at the slides, theyve got all the details)
