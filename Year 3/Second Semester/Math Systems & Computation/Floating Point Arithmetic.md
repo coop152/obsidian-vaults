@@ -20,8 +20,9 @@ Usually $e_\min < e_\max$ and $e_\min = 1-e_\max$.
 Elements of $\mathcal{F}$ have the form $m \times \beta^{e-p+1}$, where $0 \leq |m| \leq \beta^p - 1$ and $e_\min \leq e \leq e_\max$.
 $m$ is the integer *mantissa* (or *significand*), and $e$ is the integer *exponent*. 
 $p$ represents the precision of the resulting FP number by determining the number of values that $\beta$ can take on. 
-Jumping forward to a concrete example with a binary representation (even though this part is meant to come before that):
-Observe this representation, where 
+## Binary representation
+(This part is totally original from the slides, cause they are not very helpful)
+Observe this binary representation, where 
 $\beta = 2$
 $p = 3$
 $e_\min = -2$
@@ -30,9 +31,9 @@ $e_\max = 3$
 | E   | E   | E   | M   | M   |
 | --- | --- | --- | --- | --- |
 | 0   | 1    | 1    | 0    | 0    |
-As you can see, $p - 1$ is the number of bits dedicated to the mantissa.
+Notice that $p - 1$ is the number of bits dedicated to the mantissa. Why not $p$? This is explained in short order.
 
-$E$ and $M$ are the bit representations of $e$ and $m$, respectively. That is, E = 011 and M = 00. These representations are not equal to the values they represent - you need to do some conversion before using them.
+$E$ and $M$ are the bit representations of $e$ and $m$, respectively. That is, $E = 011$ and $M = 00$. These representations are not equal to the values they represent - you need to do some conversion before using them.
 
 $M$ is stored as if it has an invisible 1 in the MSB. To get $m$, you add this "invisible" 1. In this example $m = 100$, aka M with a 1 prepended.
 In numeric terms, you calculate $m$ from $M$ with this equation:
@@ -41,7 +42,7 @@ $m = 2^{p-1} + M$
 The exponent as-stored (E) is "biased": We need a signed exponent to represent both small and large numbers, but representing it using two's complement makes comparisons difficult (for reasons not yet explained). Since we are assuming that $e_\min = -e_\max + 1$, we can add the maximum exponent to $e$ to get a number in the range 1 to $2e_\max$. This allows us to store the exponent as an unsigned number which can be easily compared, but also easily retrieve the actual value by just subtracting $e_\max$.
 Therefore, you can calculate $e$ from $E$ with this equation:
 $e = E - e_\max$
-In this example, $e = -2$.
+In this example, $e = 0$.
 Now you can calculate the final value. But why is this the formula?
 $$m \times \beta^{e-p+1}$$
 This could be read instead as
@@ -51,5 +52,6 @@ $$m \times \beta^{-p+1} = 0b100 \times 2^{-2} = 0b1.00$$
 If, for example, $m = 101$:
 $$m \times \beta^{-p+1} = 0b101 \times 2^{-2} = 0b1.01$$
 This makes the parallels to decimal numbers in normal form much clearer. Now that we have this shifted mantissa, we multiply by base^exponent:
-$$0b1.01 \times 2^{-2} = 0b0.0101$$
-or 
+$$0b1.01 \times 2^{0} = 0b1.01$$
+so the number represented is 1.25.
+## Special cases
