@@ -49,9 +49,27 @@ This could be read instead as
 $$m \times \beta^{-p+1} \times \beta^{e}.$$
 The exponent in the middle serves to shift $m$ such that the hidden 1 is the only integer digit, and everything else is fractional. In this example where $m = 100$:
 $$m \times \beta^{-p+1} = 0b100 \times 2^{-2} = 0b1.00$$
-If, for example, $m = 101$:
+Or, for example, if $m = 101$:
 $$m \times \beta^{-p+1} = 0b101 \times 2^{-2} = 0b1.01$$
 This makes the parallels to decimal numbers in normal form much clearer. Now that we have this shifted mantissa, we multiply by base^exponent:
-$$0b1.01 \times 2^{0} = 0b1.01$$
+$$0b1.01 \times 2^{0} = 0b1.00$$
 so the number represented is 1.25.
-## Special cases
+
+Our representation also has some special cases:
+- `00000` is reserved for the number zero. 
+- `00001` and `00011` are subnormal numbers, because the exponent is zero and a number is subnormal if $e=e_\min$.
+- `00100` and `11011` are regular, normalised numbers.
+- `11100` (number where $e = e_\max$ and $M = 0$) represents positive infinity.
+- `11101` and `11111` (number where $e = e_\max$ and $M \neq 0$) represent NaN.
+
+This is a small number system, so we can write down every possible number. Here is a table:
+![](Pasted%20image%2020240201150451.png)
+If we plot these values on a line, we can visualise how the format performs in precision and range:
+![](Pasted%20image%2020240201150558.png)
+Notable observations include:
+- The gaps between numbers doubles at every power of 2, except 0.25 (which is because of the subnormals)
+- At it's most precise, the representation has gaps of 0.0625 in-between numbers. This can be calculated with this equation: $2^{e_\min}\times 2^{1-p}$ 
+- In general, the gap in front of any FP number x is equal to $2^e \times 2^{1-p}$ (where $e$ is that number's exponent). This is commonly called a *unit of least precision (ulp)*, written as $ulp(x)$.
+
+Sometimes, you may measure relative error in ulps. In this representation, the number 4 is 8ulps away from 1; this is seen on the graph as 8 gaps between them (of varying size).
+People sometimes call $2^{1-p}$ the *machine epsilon* of an FP representation, denoted as $\epsilon$.
