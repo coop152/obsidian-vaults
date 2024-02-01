@@ -34,4 +34,4 @@ $e_\max = 3$
 E and M are the bit representations. That is, E = 011 and M = 00.
 $M$ is stored as if it always had a 1 in the MSB that was cut off. Therefore, you always add this "invisible" 1 to get the true value of $m$. Therefore:
 $m = 2^{p-1} + M$
-The exponent as-stored (E) is "biased": We need a signed exponent to represent both small and large numbers, but representing it using two's complement makes comparisons difficult (for reasons not yet explained). So, we "bias" the exponent, subtracting
+The exponent as-stored (E) is "biased": We need a signed exponent to represent both small and large numbers, but representing it using two's complement makes comparisons difficult (for reasons not yet explained). Since we are assuming that $e_\min = -e_\max + 1$, we can add the maximum exponent to $e$ to get a number in the range 1 to $2e_\max$. This allows us to store the exponent as an unsigned number which can be easily compared, but also easily retrieve the actual value by just subtracting $e_\max$.
