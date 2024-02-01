@@ -41,4 +41,15 @@ $m = 2^{p-1} + M$
 The exponent as-stored (E) is "biased": We need a signed exponent to represent both small and large numbers, but representing it using two's complement makes comparisons difficult (for reasons not yet explained). Since we are assuming that $e_\min = -e_\max + 1$, we can add the maximum exponent to $e$ to get a number in the range 1 to $2e_\max$. This allows us to store the exponent as an unsigned number which can be easily compared, but also easily retrieve the actual value by just subtracting $e_\max$.
 Therefore, you can calculate $e$ from $E$ with this equation:
 $e = E - e_\max$
-Now you can calculate the final value. But why is $p$ in the power alongside the exponent? This is a result of how we've chosen to represent our mantissa. Typically
+In this example, $e = -2$.
+Now you can calculate the final value. But why is this the formula?
+$$m \times \beta^{e-p+1}$$
+This could be read instead as
+$$m \times \beta^{-p+1} \times \beta^{e}.$$
+The exponent in the middle serves to shift $m$ such that the hidden 1 is the only integer digit, and everything else is fractional. In this example where $m = 100$:
+$$m \times \beta^{-p+1} = 0b100 \times 2^{-2} = 0b1.00$$
+If, for example, $m = 101$:
+$$m \times \beta^{-p+1} = 0b101 \times 2^{-2} = 0b1.01$$
+This makes the parallels to decimal numbers in normal form much clearer. Now that we have this shifted mantissa, we multiply by base^exponent:
+$$0b1.01 \times 2^{-2} = 0b0.0101$$
+or 
