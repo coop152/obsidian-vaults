@@ -50,3 +50,5 @@ Consequently, bus has lower bandwidth than grid. The problems with bus get much 
 ## Others
 None of the three previously mentioned topologies scale well enough for large systems, though bus is the worst. For high core count machines, different topologies are required. Among these are Trees and other Hierarchical layouts, as well as Crossbars, Hypercubes, Rings, Min, etc...
 On large systems, circuit switched interconnect networks (i.e. networks where communicating units are directly connected) are largely insufficient. Most large systems make use of packet switching in a similar manner to Grid. This introduces a great deal of complexity, what with packets potentially taking variable paths, arriving out of order, etc... but there are methods of dealing with these downsides.
+
+# Memory
