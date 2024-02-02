@@ -81,4 +81,5 @@ IEEE 754 is a standard for FP representation and arithmetic. It specifies, among
 - The required operations of *add, subtract, multiply, divide, square root, compare* and some others
 - Floating-point exceptions and how they should be handled, particularly the splitting of NaN values into two categories called *quiet* and *signalled* NaNs
 - Rounding modes for FP arithmetic
-- How to 
+- How to *correctly round* FP data
+- 
