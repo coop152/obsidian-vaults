@@ -74,3 +74,11 @@ Notable observations include:
 Sometimes, you may measure relative error in ulps. In this representation, the number 4 is 8ulps away from 1; this is seen on the graph as 8 gaps between them (of varying size).
 People sometimes call $2^{1-p}$ the *machine epsilon* of an FP representation, denoted as $\epsilon$.
 
+# IEEE 754 Standard
+IEEE 754 is a standard for FP representation and arithmetic. It specifies, among other things:
+- 4 binary FP formats, three for computation and one for data interchange
+- Some decimal FP formats (not relevant to this course)
+- The required operations of *add, subtract, multiply, divide, square root, compare* and some others
+- Floating-point exceptions and how they should be handled, particularly the splitting of NaN values into two categories called *quiet* and *signalled* NaNs
+- Rounding modes for FP arithmetic
+- How to 
