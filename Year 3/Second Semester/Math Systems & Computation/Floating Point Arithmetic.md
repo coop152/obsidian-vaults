@@ -103,4 +103,12 @@ The standard defines 4 binary data types: binary128, binary64, binary32 and bina
 
 # Intel extended precision FP
 ![](Pasted%20image%2020240202120502.png)
-Intel 
+Intel's x86 instruction set provides an 80-bit FP data type, starting with the 8087 math co-processor (1980s). It is based on the extended precision specification in the IEEE 754 standard, but not exactly the same.
+The format is similarly encoded to binary32/64, but the MSB of the significand is not implicit, meaning all normalised numbers will contain a 1 in the 63rd place.
+The registers in the FPU are 80 bits wide to accommodate this format, and generally any lower precision formats will be increased in size while they are stored in these registers. They need to be rounded back down when converted back to a regular FP number, which incurs a performance penalty from the required rounding, so there is the option to disable the extended precision format.
+This format can be an issue when writing multi-platform code: compilers may automatically use these extended precision registers on x86 platforms, giving different results from other platforms that only support regular 64 or 32 bit FP numbers.
+# Others + summary
+![](Pasted%20image%2020240202121637.png)
+Apart from those previously mentioned, there are another 2 FP data types that are intended for machine learning, bfloat16 and TensorFloat-32. They are both relatively small, which is beneficial for performance in machine learning, and have proportionally larger exponents compared to the usual formats, giving them bigger range but reduced precision.
+![](Pasted%20image%2020240202121855.png)
+($f_\min$ is the smallest positive normal value, and $s_\min$ is the smallest positive subnormal value.)
