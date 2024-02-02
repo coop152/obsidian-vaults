@@ -100,3 +100,7 @@ The standard defines 4 binary data types: binary128, binary64, binary32 and bina
 - binary16 is intended in the standard for memory operations and not computation, but some hardware devices do perform computation on it anyway.
 - binary128 is rare in hardware, but sometimes used in software.
 - binary64 and binary32 are by far the most common in hardware. binary32 is commonly known as `float` and binary64 as `double` in programming languages.
+
+# Intel extended precision FP
+![](Pasted%20image%2020240202120502.png)
+Intel 
