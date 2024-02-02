@@ -82,4 +82,21 @@ IEEE 754 is a standard for FP representation and arithmetic. It specifies, among
 - Floating-point exceptions and how they should be handled, particularly the splitting of NaN values into two categories called *quiet* and *signalled* NaNs
 - Rounding modes for FP arithmetic
 - How to *correctly round* FP data
-- 
+- Some recommended functions, e.g. *exp, log, power, tan, cos,* etc.
+
+## Fused multiply-add
+IEEE 754 defines an operation that performs these two basic arithmetic operations in one: $$\circ(x\times y+z)$$
+This is called the *fused multiply-add* (FMA).
+Note that there is only one rounding step. This differentiates FMA from performing a separate multiplication followed by an addition:
+$$\circ(\circ(x \times y)+z)$$
+This single rounding improves the accuracy of the operation, and can also result in a speed-up. Compilers will usually take advantage of this instruction whenever possible.
+
+## Standard data types
+![](Pasted%20image%2020240202114847.png)
+The standard defines 4 binary data types: binary128, binary64, binary32 and binary16.
+- These formats are signed, with the MSB being the sign bit $s$. 0 is positive, 1 is negative.
+- The significand is logically 1 bit longer than it appears in the binary format; as they are normalised, there is always a 1 at the start which is omitted to save space.
+- The value can be calculated with this expression: $(-1)^s \times m \times 2^{e-p+1}$
+- binary16 is intended in the standard for memory operations and not computation, but some hardware devices do perform computation on it anyway.
+- binary128 is rare in hardware, but sometimes used in software.
+- binary64 and binary32 are by far the most common in hardware
