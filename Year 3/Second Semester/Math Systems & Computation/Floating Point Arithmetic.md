@@ -149,4 +149,4 @@ The problem is that, in general, outputs of elementary functions can produce non
 - RU cannot round to $-\infty$, and RD cannot round to $+\infty$.
 - RN and RZ are *symmetric* with regards to zero.
 - $RU(x) = -RD(-x)$ and $RD(x) = -RU(-x)$.
-- If RN is breaking a tie 
+- If RN is breaking a tie where, for example, $x$ is halfway between the largest FP value and infinity, RN rounds to infinity.
