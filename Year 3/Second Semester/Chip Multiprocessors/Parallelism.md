@@ -52,3 +52,52 @@ None of the three previously mentioned topologies scale well enough for large sy
 On large systems, circuit switched interconnect networks (i.e. networks where communicating units are directly connected) are largely insufficient. Most large systems make use of packet switching in a similar manner to Grid. This introduces a great deal of complexity, what with packets potentially taking variable paths, arriving out of order, etc... but there are methods of dealing with these downsides.
 
 # Memory
+It isn't only the cores that need to be connected - memory also needs to be incorporated into the system. Depending on the interconnect, you can have two different kinds of memory:
+- *Shared memory* - Memory that is connected to all cores
+![](Pasted%20image%2020240202161051.png)
+- *Private/Distributed memory* - Memory that is connected to only one core
+![](Pasted%20image%2020240202161238.png)
+
+It is important to note that in a shared memory, just because every core is connected to the shared memory does not mean that they all have equal ease of access; it may be that some cores have significantly more "direct" connection to the memory than others.
+
+This is from a hardware perspective, following on from all of the previous conversation. At this point, we also begin to concern ourselves with the software side of parallelism. In the context of software:
+- *Shared memory* - Memory that is globally accessible from all threads. 
+![](Pasted%20image%2020240202161511.png)
+- *Private/Distributed memory* - Memory that is only locally accessible by the owning thread.
+![](Pasted%20image%2020240202161904.png)
+
+In both hardware and software, communication in a shared memory takes place by **reading and writing to memory**. If core/thread #1 wants to communicate something to core/thread #2, it writes a message to an agreed-upon place in memory, which #2 will periodically check. 
+In contrast, communication in private memory takes place through **dedicated message-passing channels**. If core/thread #1 wants to communicate something to core/thread #2, it directly sends a message to it.
+
+## Programming model
+When speaking about software, these types of memory are named as such:
+- **Data Sharing** - Globally accessible memory, equivalent of shared memory
+- **Message Passing** - Thread-owned memory, equivalent of distributed memory
+- **Serial** - Like data sharing, but often with software restrictions
+
+It is important to remember that, even though the hardware and software models may line up conceptually, neither one implies anything about the other. That is, if your hardware utilises shared memory then there is no reason that your program cannot use message passing, or vice versa.
+That said, there is good reason to use an appropriate model for the hardware you are given. Using message passing on a distributed memory system and using data sharing on a shared memory system are simply more efficient. Simulating a shared data environment on a distributed memory system, while possible, is very slow. Message passing on a shared memory system is relatively fast, but the extra traffic can still easily impact performance.
+
+## Pros and cons
+From a hardware perspective, distributed memory is much better. It's easier to implement, has a higher potential bandwidth (due to the lack of a shared bus), and as a result it scales better. In a supercomputer (Where hardware takes precedence over software), distributed memory will almost always be used.
+From a software perspective, data sharing is much better. It's almost always easier to work with, it's more flexible (in that there is no required format or size for the data being shared), and it better reflects the mental model of a programmer used to serial programming. In a general purpose computer (Where software takes precedence over hardware), shared memory will almost always be used.
+
+This is one of the central conflicts of parallel computing. Any performant piece of hardware will be complex. If we expose this complexity to the software, then:
+- Developing software becomes harder, increasing dev costs
+- Software must be more complicated
+- Software will inevitably fail to use the hardware to it's full potential, wasting energy and time with inefficient code
+
+If instead we try to hide the complexity in hardware:
+- The hardware becomes even more complex, increasing the cost of developing and manufacturing it
+- The design becomes even more complicated
+- We have more hardware than before, so we use more power and it goes slower
+
+This conflict appears in every aspect of parallel computing, software complexity vs hardware complexity:
+- Thread Level Parallelism vs Instruction Level Parallelism
+- Software managed on-chip buffers vs hardware managed caches
+- In-order execution with complex instructions that compilers can emit vs out-of-order execution managed in real time by hardware
+- etc...
+
+There is no right answer, and whichever you choose depends entirely on the application.
+In our case (that is, when talking about chip multiprocessors), software is usually prioritised and a shared memory approach is taken. It is simply easier to program for a shared memory system than for a distributed memory system.
+Distributed memory is mostly reserved for supercomputers, where the hardware must be as simple and efficient as possible to achieve the maximum possible performance. In this environment, the increased software development costs and more complicated code are unimportant.
