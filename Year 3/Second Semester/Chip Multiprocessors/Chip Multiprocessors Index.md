@@ -1,1 +1,1 @@
-- Week 1: [Introduction](Year%203/Second%20Semester/Chip%20Multiprocessors/Introduction.md)
+- Week 1: [Parallelism](Parallelism.md)
