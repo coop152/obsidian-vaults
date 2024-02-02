@@ -74,8 +74,3 @@ Notable observations include:
 Sometimes, you may measure relative error in ulps. In this representation, the number 4 is 8ulps away from 1; this is seen on the graph as 8 gaps between them (of varying size).
 People sometimes call $2^{1-p}$ the *machine epsilon* of an FP representation, denoted as $\epsilon$.
 
-E = 10010011
-M = 0000000000000001000000
-
-e = 20
-m = 8388672 * 2^-22
