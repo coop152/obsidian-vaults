@@ -21,9 +21,17 @@
 | How are you/What's up? | Que tal?         | Not really expecting an answer |
 |                        |                  |                                |
 # Other
-| English         | Spanish     | Notes |
-| --------------- | ----------- | ----- |
-| Your name is... | Se llama... |       |
+| English | Spanish | Notes |
+| ---- | ---- | ---- |
+| Your name is... | Se llama... |  |
+| To ask | Preguntar |  |
+| To say | Decir |  |
+| Name | Nombre |  |
+| Surname | Appelido |  |
+| To spell | Deletrear | As in, to spell a word |
+| Hello | Hola |  |
+| Goodbye | Adios |  |
+|  |  |  |
 
 The verb for "to be" is "soy" in the first person, "eres" in the informal second person and "es" in the formal second person.
 # Related vocab
@@ -45,5 +53,5 @@ The verb for "to be" is "soy" in the first person, "eres" in the informal second
 # All together
 - Me llamo Kyle Coop
 - Soy estudiante de informática
-- Soy ingle's
-- Soy de Rochdale, Inglaterra
+- Soy inglés, de Inglaterra, Rochdale
+- 
