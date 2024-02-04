@@ -13,6 +13,9 @@
 | Please | Por favor |  |
 | Thank you | Gracias |  |
 | Sorry | Perdón |  |
+| More | Más |  |
+| Less | Menos |  |
+|  |  |  |
 # Things
 | English | Spanish | Notes |
 | ---- | ---- | ---- |
