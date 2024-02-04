@@ -51,7 +51,5 @@ The verb for "to be" is "soy" in the first person, "eres" in the informal second
 | Course            | Curso                 | like "university course"                 |
 |                   |                       |                                          |
 # All together
-- Me llamo Kyle Coop
-- Soy estudiante de informática
-- Soy inglés, de Inglaterra, Rochdale
+Me llamo Kyle Coop, y soy estudiante de informática en la universidad de Manchester. Vivo en Manchester, de Fallowfield, pero soy de Rochdale al norte. Soy inglés.
 - 
