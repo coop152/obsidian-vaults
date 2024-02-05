@@ -1,0 +1,1 @@
+**Threads** - Each thread runs on a CPU core, independently from the others. Every thread associated with a process **shares the same address space**.
