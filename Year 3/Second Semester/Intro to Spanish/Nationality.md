@@ -9,6 +9,7 @@
 | I live... | Vivo... |  |
 | You live... | Vives... |  |
 | They live... | Vive... |  |
+| What is your nationality? | Cual es tu nacionalidad? |  |
 # Countries
 | English | Spanish | Notes |
 | ---- | ---- | ---- |

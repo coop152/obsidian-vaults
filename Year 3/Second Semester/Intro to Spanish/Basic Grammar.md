@@ -13,8 +13,7 @@ For example, with "i am called"
 | First Person | I am called | Me llamo |  |
 | Second Person | You are called | Te llamas | Informal |
 | Second Person | You are called | Se llama | Formal |
-|  |  |  |  |
-|  |  |  |  |
+
 Verbs ending with -ir become -o, -es, -e
 Verbs ending with -ar become -o, -as, -a
 # Pronunciation & Letters
