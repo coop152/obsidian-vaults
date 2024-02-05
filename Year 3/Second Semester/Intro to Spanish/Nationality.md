@@ -6,6 +6,9 @@
 | They speak (language). | Se habla (lengua). |  |
 | Where are you from? | De dónde eres? |  |
 | I am from... | Soy de... |  |
+| I live... | Vivo... |  |
+| You live... | Vives... |  |
+| They live... | Vive... |  |
 # Countries
 | English | Spanish | Notes |
 | ---- | ---- | ---- |
