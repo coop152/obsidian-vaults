@@ -1,2 +1,2 @@
 - Week 1: [Parallelism](Parallelism.md)
-- Week 2: [[Shared Memory Programming]], [[Shared Memory Multiprocessors]]
+- Week 2: [[Shared Memory Programming]]
