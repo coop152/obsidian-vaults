@@ -10,7 +10,7 @@ We want to detect the location where the function is changing the fastest. If we
 ![](Pasted%20image%2020240205152516.png)
 And now we have a nice spike right on our edge. We can differentiate again to get this:
 ![](Pasted%20image%2020240205152706.png)
-Which gives the "direction" of the edge: Intensity went up when going left-to-right and down when going right-to-left.
+So we can get the peak by checking the second derivative for a zero-crossing.
 Here is an example with two edges:
 ![](Pasted%20image%2020240205152850.png)
 # Edge detection w/ Convolutions
