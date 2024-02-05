@@ -1,0 +1,1 @@
+- Working on making it more obvious when the calendar is in delete mode
