@@ -4,4 +4,11 @@
 | I speak (language). | Hablo (lengua). | Hablo is optional, like in english. |
 | What language do they speak in (country)? | Que lengua se habla en (países)? |  |
 | They speak (language). | Se habla (lengua). |  |
+| Where are you from? | De dónde eres? |  |
 |  |  |  |
+# Countries
+
+| English | Spanish | Notes |
+| ---- | ---- | ---- |
+|  |  |  |
+# Nationalities
