@@ -46,8 +46,8 @@ For both Prewitt and Sobel the output is two images, one for each kernel. These 
 By putting these together we get the **image's gradient**:
 ![](Pasted%20image%2020240205160410.png)
 (it's $\delta x$ instead of $dx$ cause it's a partial derivative. Don't worry about it.)
-$||\nabla I||$ is the **edge magnitude**, and it represents how "hard" or "strong" the edge is. Softer edges will have a lesser gradient, and vice versa.
-$\theta$ is the **edge orientation**, and it gives the orientation of the edge (obviously). In the form of an angle.
+$||\nabla I||$ is the **gradient magnitude**, and it represents how "hard" or "strong" the edge is. Softer edges will have a lesser gradient, and vice versa.
+$\theta$ is the **gradient orientation**, and it gives the orientation of the gradient (obviously). In the form of an angle.
 
 Here is an example of an image's gradient:
 ![](Pasted%20image%2020240205161122.png)
