@@ -13,6 +13,7 @@
 - [Week of 11-12-23](Week%20of%2011-12-23.md)
 - Pretend you don't see this month and a half gap
 - [[Christmas Holiday + Week 29-1-24]]
+- [[Week of 5-2-24]]
 # Important Dates
 - Code Freeze: Friday 15th March 2024 
 - Report & Screencast Submission: Friday 12th April
