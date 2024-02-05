@@ -21,4 +21,4 @@
 | I speak | Hablo | First person |
 | You speak | Hablas | Second person |
 | They speak | Habla | Third person |
-| What language is spoken in (country)? | Qué lengua se hable en (países) |  |
+| What language is spoken in (country)? | Qué lengua se hable en (países) | Impersonal |

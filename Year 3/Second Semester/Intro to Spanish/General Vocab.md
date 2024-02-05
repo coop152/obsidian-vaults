@@ -26,3 +26,5 @@
 | Sandwich | Bocadillo |  |
 | Room | Habitación |  |
 | Bien | Good |  |
+| Los Servicios | Toilets | Like, public toilets |
+|  |  |  |
