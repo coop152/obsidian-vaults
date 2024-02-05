@@ -20,7 +20,7 @@ We can also create a convolution kernel for the second derivative:
 ![](Pasted%20image%2020240205153413.png)
 Unfortunately, these are not actually very useful for finding edges in real images because of **noise**.
 ![](Pasted%20image%2020240205153458.png)
-Differentiation is very strongly affected by noise and small structures in an image. If we want to use it to find edges in our image, we need to get rid of this noise first.
+Differentiation is very strongly affected by small scale structure in an image, be it noise or actual small objects. If we want to use it to find edges in our image, we need to get rid of this noise first.
 To solve this, we use a **smoothing filter**. In this example, $f$ is a gaussian smoothing kernel:
 ![](Pasted%20image%2020240205153746.png)
 By applying a smoothing function we can eliminate the noise and successfully use differentiation to find the edge.
