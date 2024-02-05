@@ -1,1 +1,2 @@
-- [Week 1](Year%203/Second%20Semester/Computer%20Vision/Week%201.md)
+- Week 1 was visual computing recap
+- Week 2: [[Edge Detection]]
