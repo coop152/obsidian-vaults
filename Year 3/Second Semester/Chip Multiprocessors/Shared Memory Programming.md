@@ -20,3 +20,5 @@ You could have a thread for each row:
 ![](Pasted%20image%2020240205103338.png)
 You could allocate some number of cells to each thread:
 ![](Pasted%20image%2020240205103439.png)
+
+(Read the slides)
