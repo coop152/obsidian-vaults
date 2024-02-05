@@ -1,18 +1,22 @@
 # Answers
-| English               | Spanish            | Notes                             |
-| --------------------- | ------------------ | --------------------------------- |
-| My name is <>         | Me llamo <>        |                                   |
-| I am a <>             | Soy <>             | No "a" in "I am a \<profession\>" |
-| <> student            | Estudiante de <>   |                                   |
-| I am from <>          | Soy de <>          |                                   |
-| I am from <1>, in <2> | Soy de <2>, de <1> | Wider location comes first        |
-| I live in <>          | Vivo en <>         |                                   |
-| I have <>             | Tengo <>           |                                   |
-| I am <> years old     | Tengo <> años      | Same as "i have"                  |
-| I don't have <>       | No tengo <>        |                                   |
-| Me gusta <>           | I like <>          |                                   |
-| I speak <>            | Hablo <>           |                                   |
-| I am \<nationality\>  | Soy <>             | e.g. "Soy ingle's"                | 
+| English | Spanish | Notes |
+| ---- | ---- | ---- |
+| My name is <> | Me llamo <> |  |
+| I am a <> | Soy <> | No "a" in "I am a \<profession\>" |
+| <> student | Estudiante de <> |  |
+| I am from <> | Soy de <> |  |
+| I am from <1>, in <2> | Soy de <2>, de <1> | Wider location comes first |
+| I live in <> | Vivo en <> |  |
+| I have <> | Tengo <> |  |
+| I am <> years old | Tengo <> años | Same as "i have" |
+| I don't have <> | No tengo <> |  |
+| Me gusta <> | I like <> |  |
+| I speak <> | Hablo <> |  |
+| I am \<nationality\> | Soy <> | e.g. "Soy inglés" |
+| Nice to meet you! | Mucho gusto! |  |
+| Nice to meet you | Encantado/encantada | (just a different thing you could say) |
+| Likewise | Iguamente | in response to "nice to meet you" |
+| See you tomorrow | Hasta mañana |  |
 # Questions
 | English                | Spanish          | Notes                          |
 | ---------------------- | ---------------- | ------------------------------ |

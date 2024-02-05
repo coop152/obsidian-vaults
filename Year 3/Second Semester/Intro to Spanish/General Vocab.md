@@ -15,6 +15,8 @@
 | Sorry | Perdón |  |
 | More | Más |  |
 | Less | Menos |  |
+| Can you repeat | Puede repetir? |  |
+| How do you pronounce...? | Cómo se pronuncia...? |  |
 |  |  |  |
 # Things
 | English | Spanish | Notes |
