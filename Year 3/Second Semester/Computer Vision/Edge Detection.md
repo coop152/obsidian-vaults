@@ -97,4 +97,32 @@ Remember the earlier section where we created an all-in-one smoothing and "edge-
 When doing this with Gaussian smoothing, you get the Canny operator.
 Note that we are only differentiating with regards to one variable, but we are using the 2D Gaussian distribution. Therefore, we actually have two Canny operators, one for each direction:
 ![](Pasted%20image%2020240206130745.png)
-These detect edges in both directions.
+These detect edges in both directions. Having two kernels is a problem, but that isn't the only problem with the Canny operator:
+## Deducing edge position
+So far, we have shown derivatives of the image intensity looking something like this:
+![](Pasted%20image%2020240206131924.png)
+It easy to tell where the peak is here. But unfortunately, real images won't have such obvious peaks. It is more likely that your derivative will look something like this:
+![](Pasted%20image%2020240206131957.png)
+Taking the second derivative will allow us to more easily find the middle, by just looking for zero crossings:
+![](Pasted%20image%2020240206132143.png)
+This leads us to the next filter:
+# 2D Laplacian Kernel
+![](Pasted%20image%2020240206133455.png)
+The Laplacian kernel (also known as the **Marr-Hildreth edge detector**) is essentially the same as the Canny operator, but with the second derivative. Recall this 1D example of a second derivative for edge detection:
+![](Pasted%20image%2020240206132818.png)
+Extending this into 2D gets us these kernels:
+![](Pasted%20image%2020240206132855.png)
+They don't look entirely alike, but they share in common:
+- The centre is negative, and surrounded by positives
+- The sum of the elements is 0
+
+Applying these will give the second derivative of the image, where zero crossings represent edges.
+This filter is **isotropic**. That means that you only have a single filter which detects edges in any direction with the same response. This is nice, but it comes at the cost of the **edge direction** and **magnitude** information: The direction is lost entirely, and the magnitude is not obvious in the resulting values.
+
+You can find an analytical solution for the second derivative, too, which results in this equation:
+![](Pasted%20image%2020240206133741.png)
+Meaning the Laplacian of Gaussian has the same scale selection benefits of the Canny filter.
+The filter looks like this in 3D, compared to the others:
+![](Pasted%20image%2020240206134019.png)
+Here are some examples of the results on images:
+![](Pasted%20image%2020240206134052.png)
