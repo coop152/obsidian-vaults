@@ -63,7 +63,9 @@ We know that an image needs to be smoothed before edge detection, but why use Ga
 Gaussian is **decomposable**:
 ![](Pasted%20image%2020240205162749.png)
 This is a good thing by itself, but it's extra important for a smoothing filter because they tend to get quite large.
-It is also symmetric, which is good because it allows edges in any orientation to be found equally.
+![](Pasted%20image%2020240206124615.png)
+It is also symmetrical, which is very good because it doesn't influence the apparent orientation of edges. If it wasn't symmetrical, it would mess with the gradient orientation.
+The way it blurs images anti-aliases them, which is another benefit for edge detection. Some filters (e.g. median blur) don't always get rid of hard edges, which would cause undesirable spikes in the histogram and thus false edges.
 # Edge Scale
 ![](Pasted%20image%2020240206122948.png)
 When we smooth the image with Gaussian smoothing, there is a parameter $\sigma$ that we must set. This controls the spread of the distribution, and will affect the resulting edge detection.
@@ -74,4 +76,8 @@ Compared to a 2D gaussian, which is what the smoothing kernel samples it's weigh
 ![](Pasted%20image%2020240206123419.png)
 If $\sigma$ is higher then the curve will be "sharper", and if it is lower then the curve will be "flatter". Looking at this 2D curve from above, and then writing down the height in each cell, essentially gets you a gaussian kernel. Here is an example of a larger one:
 ![](Pasted%20image%2020240206123531.png)
-Though it needs to be normalised before use.
+(Though it needs to be normalised before use.)
+Here is an example of how different $\sigma$ values influence the smoothing output:
+![](Pasted%20image%2020240206124740.png)
+These smoothed images will provide very different results when put through edge detection: The less smoothed one will include more edges, perhaps some of them false or undesired, while the more smoothed one will include less edges, perhaps missing some smaller ones.
+The ability to choose the scale allows you to adjust your edge detection's "sensitivity" to fit your use case. Very noisy images (as in, literal image noise or just very busy backgrounds) may need a higher $\sigma$ to extract any useful information, but in a controlled environment with clean images, you may use a low $\sigma$ to capture smaller edges.
