@@ -38,7 +38,8 @@ It is sometimes called "the Prewitt operator".
 Sobel is similar to Prewitt, but with weighting towards the middle. It also has two kernels, one for each direction.
 ![](Pasted%20image%2020240205155320.png)
 Sobel is the most widely used "simple" edge detector.
-
+## Canny
+See ahead at [Canny Operator](#Canny%20Operator).
 # Image Gradient
 For both Prewitt and Sobel the output is two images, one for each kernel. These images are called the **derivative images**, or the **gradient images**. 
 ![](Pasted%20image%2020240205160047.png)
@@ -66,7 +67,8 @@ This is a good thing by itself, but it's extra important for a smoothing filter 
 ![](Pasted%20image%2020240206124615.png)
 It is also symmetrical, which is very good because it doesn't influence the apparent orientation of edges. If it wasn't symmetrical, it would mess with the gradient orientation.
 The way it blurs images anti-aliases them, which is another benefit for edge detection. Some filters (e.g. median blur) don't always get rid of hard edges, which would cause undesirable spikes in the histogram and thus false edges.
-# Edge Scale
+## Edge Scale
+Gaussian smoothing also allows more control over how our image is smoothed.
 ![](Pasted%20image%2020240206122948.png)
 When we smooth the image with Gaussian smoothing, there is a parameter $\sigma$ that we must set. This controls the spread of the distribution, and will affect the resulting edge detection.
 Smaller $\sigma$ will result in less spread, and thus the kernel will have a higher weighting toward the middle pixel. Inversely, larger $\sigma$ will give a lower weighting toward the middle pixel.
@@ -81,3 +83,13 @@ Here is an example of how different $\sigma$ values influence the smoothing outp
 ![](Pasted%20image%2020240206124740.png)
 These smoothed images will provide very different results when put through edge detection: The less smoothed one will include more edges, perhaps some of them false or undesired, while the more smoothed one will include less edges, perhaps missing some smaller ones.
 The ability to choose the scale allows you to adjust your edge detection's "sensitivity" to fit your use case. Very noisy images (as in, literal image noise or just very busy backgrounds) may need a higher $\sigma$ to extract any useful information, but in a controlled environment with clean images, you may use a low $\sigma$ to capture smaller edges.
+
+## Analytical derivative
+As mentioned before, we can combine the smoothing and the derivative filter into one kernel in order to save computation.
+![](Pasted%20image%2020240206125549.png)
+Another advantage of the Gaussian distribution is that we have an *analytical solution* to finding it's derivative. So, we don't even need to apply the derivative kernel; We can just find the analytical derivative of our chosen Gaussian distribution.
+![](Pasted%20image%2020240206125812.png)
+This new kernel has a name:
+# Canny Operator
+Not to be confused with the Canny **edge detector**, the Canny operator is the kernel that results from the derivative of the Gaussian distribution.
+This is the same as the 
