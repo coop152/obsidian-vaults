@@ -63,6 +63,15 @@ We know that an image needs to be smoothed before edge detection, but why use Ga
 Gaussian is **decomposable**:
 ![](Pasted%20image%2020240205162749.png)
 This is a good thing by itself, but it's extra important for a smoothing filter because they tend to get quite large.
-It is also symmetric, which is good because (WATCH NEXT LECTURE WHERE AN ANSWER WAS PROMISED)
-
+It is also symmetric, which is good because it allows edges in any orientation to be found equally.
 # Edge Scale
+![](Pasted%20image%2020240206122948.png)
+When we smooth the image with Gaussian smoothing, there is a parameter $\sigma$ that we must set. This controls the spread of the distribution, and will affect the resulting edge detection.
+Smaller $\sigma$ will result in less spread, and thus the kernel will have a higher weighting toward the middle pixel. Inversely, larger $\sigma$ will give a lower weighting toward the middle pixel.
+For illustrative purposes, here is a 1D gaussian:
+![](Pasted%20image%2020240206123252.png)
+Compared to a 2D gaussian, which is what the smoothing kernel samples it's weights from:
+![](Pasted%20image%2020240206123419.png)
+If $\sigma$ is higher then the curve will be "sharper", and if it is lower then the curve will be "flatter". Looking at this 2D curve from above, and then writing down the height in each cell, essentially gets you a gaussian kernel. Here is an example of a larger one:
+![](Pasted%20image%2020240206123531.png)
+Though it needs to be normalised before use.
