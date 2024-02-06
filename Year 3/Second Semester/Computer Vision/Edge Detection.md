@@ -64,3 +64,5 @@ Gaussian is **decomposable**:
 ![](Pasted%20image%2020240205162749.png)
 This is a good thing by itself, but it's extra important for a smoothing filter because they tend to get quite large.
 It is also symmetric, which is good because (WATCH NEXT LECTURE WHERE AN ANSWER WAS PROMISED)
+
+# Edge Scale
