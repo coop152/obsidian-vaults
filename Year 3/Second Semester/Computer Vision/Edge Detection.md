@@ -91,5 +91,10 @@ Another advantage of the Gaussian distribution is that we have an *analytical so
 ![](Pasted%20image%2020240206125812.png)
 This new kernel has a name:
 # Canny Operator
-Not to be confused with the Canny **edge detector**, the Canny operator is the kernel that results from the derivative of the Gaussian distribution.
-This is the same as the 
+Not to be confused with the Canny **edge detector**, the Canny operator is the filter that results from the derivative of the Gaussian distribution.
+Remember the earlier section where we created an all-in-one smoothing and "edge-detecting" kernel by differentiating our smoothing kernel?
+![](Pasted%20image%2020240206130459.png)
+When doing this with Gaussian smoothing, you get the Canny operator.
+Note that we are only differentiating with regards to one variable, but we are using the 2D Gaussian distribution. Therefore, we actually have two Canny operators, one for each direction:
+![](Pasted%20image%2020240206130745.png)
+These detect edges in both directions.
