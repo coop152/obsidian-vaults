@@ -23,7 +23,7 @@
 | What is your name?     | Co'mo te llamas? |                                |
 | Where are you from?    | De donde eres?   |                                |
 | How are you/What's up? | Que tal?         | Not really expecting an answer |
-|                        |                  |                                |
+| How old are you?                       |                  |                                |
 # Other
 | English | Spanish | Notes |
 | ---- | ---- | ---- |
