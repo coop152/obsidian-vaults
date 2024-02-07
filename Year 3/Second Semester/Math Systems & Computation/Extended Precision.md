@@ -39,11 +39,37 @@ Note that:
 ![](Pasted%20image%2020240207154030.png)
 Fast2Sum performs addition between two numbers and returns the result, as well as the rounding error. This algorithm requires that the arguments are sorted by magnitude; it won't give an exact result otherwise (although it does give a good approximation if you violate this requirement).
 `s` is simply the result of adding the two arguments as normal, rounding error included.
-`b'` gets the value of input `b` plus error.
+`b'` is the value of input `b` plus error.
 `t` performs $b - (b + \text{error})$, so the `b`s cancel out and we are left with the error (negated, so that adding it to `s` would remove it).
 
 ### 2Sum
 ![](Pasted%20image%2020240207154729.png)
-2Sum performs the same operation as Fast2Sum, but is more robust in that it doesn't require the arguments to be sorted.
+2Sum performs the same operation as Fast2Sum, but is more robust in that it doesn't require the arguments to be sorted. It has twice the steps as Fast2Sum, but steps 4 and 5 are parallelisable.
 `s` is again simply the result of adding the two arguments, rounding error included.
-`a'` 
+`a'` is the value of input `a`, which may be with or without error depending on which argument introduced the value that was rounded out of the sum.
+`b'` is the value of input `b`, which is similar to `a'`.
+If `a` was the input that was rounded then `a'` will not equal `a`, and similarly for `b`. Only one of these can be equal to their corresponding input. Consequently:
+`e_a` is the error in a, and `e_b` is the error in b. Only one will be non-zero.
+So by adding them to make `t`, we get whichever was non-zero (because clearly $x + 0 = x$.)
+
+## 2MultFMA
+![](Pasted%20image%2020240207155653.png)
+This is another error-free algorithm that is roughly analogous to 2Sum but for multiplication. That is, it outputs the product of 2 numbers as well as the exact error in the result.
+This algorithm requires the FMA instruction, as can be seen in the second step. The way it works is clear; it calculates the rounded result, then uses FMA to subtract that rounded result from the exact result in order to obtain the error.
+Note that there are some cases for very small $a$ and $b$ where $t \neq a\times b-s$, due to underflows.
+
+## Multi-word arithmetic
+Now what do you do with these unevaluated sums? There exist algorithms for performing the usual arithmetic operations on numbers represented as unevaluated sums. This allows us to take the outputs of the previously shown algorithms and perform extra precise arithmetic using the given errors.
+
+# Summation algorithms
+A very good use for error-free transformation functions is in algorithms that make heavy use of summation. This is a common occurrence in scientific computing and elsewhere, for example:
+- Vector products
+- Matrix-Vector products
+- Matrix-Matrix products
+- Means
+- Variances
+- Evaluating polynomials
+- ODE and PDE solvers
+- Weight updates in machine learning
+
+Summations involving large amounts of numbers can suffer from precision loss if the magnitude of the sum greatly exceeds that of the values being added to it, as seen in the prior example program. 
