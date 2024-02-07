@@ -27,3 +27,23 @@ This code produces the answer $6.96046...$, which is correct. The value is conve
 Note that while the technique used above gives a correct answer, it can also impact performance if binary64 arithmetic is slower than binary32 on your platform.
 Instead of increasing precision in a part of your program, you may also *reduce* precision in some parts. If your computer has faster low-precision arithmetic, and the reduced precision doesn't significantly impact your results, then you may selectively drop the precision of numbers to improve performance. 
 From these two examples, you can see how mixed precision algorithms can be used to both increase accuracy and improve performance. 
+# Error-Free Transformations
+We can also extend the precision of our arithmetic without changing the actual FP precision by using alternative algorithms that avoid information loss. For example:
+## 2Sum and Fast2Sum
+Given two FP numbers $a$ and $b$ with precision $p$, we can obtain a sum ($s$) and an error value ($t$) such that $s = RN(a+b)$ and $s+t=a+b$. 
+Both of these outputs are precision $p$ FP numbers. Think of $s$ as the actual result, while $t$ is the rounding error. When we have a tuple $(s, t)$ that represents one quantity like this, we say that it is an **unevaluated sum** of two FP values.
+Note that:
+- This only works for the RN (round to nearest, ties go to even) rounding mode. Other rounding modes cannot assure that the result is error-free.
+- Computing $s+t$ will achieve nothing. We know that $RN(s + t) = s$, which is the whole point of $t$ existing. They are only useful as separate values.
+### Fast2Sum
+![](Pasted%20image%2020240207154030.png)
+Fast2Sum performs addition between two numbers and returns the result, as well as the rounding error. This algorithm requires that the arguments are sorted by magnitude; it won't give an exact result otherwise (although it does give a good approximation if you violate this requirement).
+`s` is simply the result of adding the two arguments as normal, rounding error included.
+`b'` gets the value of input `b` plus error.
+`t` performs $b - (b + \text{error})$, so the `b`s cancel out and we are left with the error (negated, so that adding it to `s` would remove it).
+
+### 2Sum
+![](Pasted%20image%2020240207154729.png)
+2Sum performs the same operation as Fast2Sum, but is more robust in that it doesn't require the arguments to be sorted.
+`s` is again simply the result of adding the two arguments, rounding error included.
+`a'` 
