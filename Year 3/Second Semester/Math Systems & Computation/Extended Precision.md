@@ -7,3 +7,5 @@ We will investigate two strategies:
 There are two ways that mixed precision arithmetic may be implemented:
 1. Mixed precision operations - an adder, multiplier, etc. that produces an answer using multiple precisions (either internally or in the input/output)
 2. Mixed precision algorithms - algorithms that utilize operations of different precision at different steps
+
+Arithmetic operators with the same input/output precisions are called **homogeneous operators**, and are by far the most common form. Some processors implement operators with different input/output precisions, called **nonhomogeneous operators**. 
