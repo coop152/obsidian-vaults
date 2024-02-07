@@ -1,2 +1,2 @@
 - Week 1: [Modelling, Precision and Error](Modelling,%20Precision%20and%20Error.md), [[Simple Number Representations]], [[Floating Point Arithmetic]]
-- Week 2: [[Extending Precision]]
+- Week 2: [[Extended Precision]]
