@@ -72,4 +72,12 @@ A very good use for error-free transformation functions is in algorithms that ma
 - ODE and PDE solvers
 - Weight updates in machine learning
 
-Summations involving large amounts of numbers can suffer from precision loss if the magnitude of the sum greatly exceeds that of the values being added to it, as seen in the prior example program. 
+Summations involving large amounts of numbers can suffer from **accuracy** loss (not precision!) if the magnitude of the sum greatly exceeds that of the values being added to it, as seen in the prior example program. This can lead to algorithms producing incorrect solutions. There are multiple solutions, which vary in efficacy depending on the data being summed:
+## Recursive summation
+![](Pasted%20image%2020240207161501.png)
+This is the regular approach to summing a series of values, where the values are simply accumulated into a sum variable as normal.
+Each iteration introduces new error of up to $u=2^{-p}$, from the rounding in the addition operation.
+We can improve the accuracy of this basic solution by ordering our input values. If we sort in decreasing order, then the sum will progressively get bigger while the quantities being added to it get progressively smaller - this large gap in size can result in more rounding errors.
+Inversely, if we sort in increasing order then we will be adding progressively larger values to a progressively larger sum. This usually reduces the amount of shifting needed to align the significands, and therefore reduces the amount (and magnitude) of rounding errors.
+Consider, for example, the harmonic series:
+![](Pasted%20image%2020240207161900.png)
