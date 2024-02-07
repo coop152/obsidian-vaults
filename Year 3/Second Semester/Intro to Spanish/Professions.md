@@ -5,4 +5,4 @@
 | What is your job? | Qué haces?<br>A qué te dedicas? | Informal |
 | I work... | Trabajo... | e.g. "I work in an office" = "Trabajo en una oficina" |
 | I study... | Estudio... |  |
-|  |  |  |
+| I study/work at... | Estudio en... |  |
