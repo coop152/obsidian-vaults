@@ -79,5 +79,35 @@ This is the regular approach to summing a series of values, where the values are
 Each iteration introduces new error of up to $u=2^{-p}$, from the rounding in the addition operation.
 We can improve the accuracy of this basic solution by ordering our input values. If we sort in decreasing order, then the sum will progressively get bigger while the quantities being added to it get progressively smaller - this large gap in size can result in more rounding errors.
 Inversely, if we sort in increasing order then we will be adding progressively larger values to a progressively larger sum. This usually reduces the amount of shifting needed to align the significands, and therefore reduces the amount (and magnitude) of rounding errors.
-Consider, for example, the harmonic series:
+## Compensated summation
+![](Pasted%20image%2020240207163248.png)
+This algorithm uses Fast2Sum to incorporate the error from each addition into the next one. 
+By reducing the amount of error that is discarded, a more accurate result is achieved.
+## Cascaded summation
+![](Pasted%20image%2020240207163745.png)
+This algorithm also uses Fast2Sum, but instead of reintroducing the error from each addition into the next, it keeps a second sum of every error combined, which it adds to the rounded sum at the end. The accuracy of this method is similar to compensated summation, and which is faster will depend on the dataset.
+## Example: Harmonic series
+We illustrate the summation algorithms with an example: Calculating the summation of the harmonic series.
 ![](Pasted%20image%2020240207161900.png)
+Using real numbers this series is *divergent* (it doesn't converge on a final value), but it is known to converge when limited precision arithmetics are involved.
+We write a program to calculate the truncated series for some steps $N$. That is, we compute ![](Pasted%20image%2020240207162226.png)
+### Using recursive summation
+![](Pasted%20image%2020240207162408.png)
+Note that limited-precision arithmetics will always fail to compute the harmonic series, no matter the precision. However, we will only be comparing limited-precision solutions to other limited-precision solutions.
+
+When running this simple implementation, we get these results:
+![](Pasted%20image%2020240207162645.png)
+There is a not insignificant difference between the result for floats and doubles. We take the double result as our benchmark and try to improve the accuracy of the float result, starting with:
+### Using recursive summation w/ reversed order
+![](Pasted%20image%2020240207163001.png)
+We use our previous observation and start by summing the smallest items first. Just this simple change significantly improves accuracy:
+![](Pasted%20image%2020240207163122.png)
+### Using compensated summation
+![](Pasted%20image%2020240207163624.png)
+By implementing compensated summation, we reduce our error even more:
+![](Pasted%20image%2020240207163655.png)
+### Using cascaded summation
+![](Pasted%20image%2020240207163928.png)
+By implementing cascaded summation, we also achieve good results:
+![](Pasted%20image%2020240207163955.png)
+In this case they are not as good as compensated summation, but this is up to this specific problem. In some problems cascaded summation would be better than compensated summation.
