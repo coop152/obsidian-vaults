@@ -10,4 +10,4 @@ Para mi amigo:
 - ¿Dónde vives ahora, y de dónde eres? 
 - ¿Cuántos años tienes?
 - ¿Qué lenguas hablas?
-- ¿Cuál es tu teléfono y tu correo electrónico?5
+- ¿Cuál es tu teléfono y tu correo electrónico?
