@@ -6,4 +6,5 @@ Buenos días. Me llamo Kyle Coop, y soy estudiante de informática en la univers
 
 Para mi amigo:
 - ¿Cómo se llamas?
-- 
+- ¿Estudias o trabajas? ¿Y dónde estudia/trabajas? 
+- ¿Dónde vives ahora, y de dónde esta? 
