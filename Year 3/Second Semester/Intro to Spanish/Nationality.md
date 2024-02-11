@@ -10,6 +10,7 @@
 | You live... | Vives... |  |
 | They live... | Vive... |  |
 | What is your nationality? | Cual es tu nacionalidad? |  |
+| How old are you? | Cuántos años tienes? |  |
 # Countries
 | English | Spanish | Notes |
 | ---- | ---- | ---- |
