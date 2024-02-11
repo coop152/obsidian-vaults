@@ -9,5 +9,5 @@ Para mi amigo:
 - ¿Estudias o trabajas? ¿Y dónde estudia/trabajas? 
 - ¿Dónde vives ahora, y de dónde eres? 
 - ¿Cuántos años tienes?
-- ¿Que lenguas hablas?
-- 
+- ¿Qué lenguas hablas?
+- ¿Cuál es tu teléfono y tu correo electrónico?5
