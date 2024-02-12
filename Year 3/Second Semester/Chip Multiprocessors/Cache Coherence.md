@@ -21,7 +21,7 @@ These states behave in this way:
 These states should be impossible to achieve:
 ![](Pasted%20image%2020240212101900.png)
 Because they mean that there are conflicting values for a certain address in each core.
-## Transitions
+### Transitions
 To maintain these valid system states, the cores must behave according to these rules:
 #### From (a)
 ![](Pasted%20image%2020240212102048.png)
@@ -75,11 +75,28 @@ If core 1 tries to write:
 
 Similar for core 2 writing.
 
-## Write-invalidate vs Write-update
-The protocol shown previously was a **write-invalidate** protocol, which is the most widespread kind. In these protocols, when a core updates a cache line's value, other copies of that line in other caches are **invalidated**. This requires future accesses from those caches to fetch the line.
+### Write-invalidate vs Write-update
+The MSI protocol shown previously was a **write-invalidate** protocol, which is the most widespread kind. In these protocols, when a core updates a cache line's value, other copies of that line in other caches are **invalidated**. This requires future accesses from those caches to fetch the line.
 Another kind of bus snooping protocol is **Write-update**, where instead of updated lines being invalidated in other caches, their value is updated. This might seem more efficient at first (involving memory less, etc.) but the increased bus traffic makes it generally less desirable.
-Examples of write-invalidate protocols are MSI (the one shown previously), MESI and MOESI.
+Examples of write-invalidate protocols are MSI, MESI and MOESI.
 Examples of write-update protocols are Dragon and Firefly.
 
-# Limitations
+### Limitations
 Cache coherence is **required** in shared memory multiprocessors, but the cache coherence protocol can be a significant limiting factor to the number of cores. Specifically, bus-based snooping protocols require a centralised bus, which imposes all of the limitations that come with that. In addition to that, each core must see the invalidate in **the same clock cycle**, which makes the limitations even more strict.
+
+## MESI Protocol
+In the MSI protocol, each cache doesn't know the state of the other caches. This can lead to unnecessary usage of the bus, for example:
+![](Pasted%20image%2020240212110512.png)
+In the first case, core 2 writes to a Shared line, making it Modified. Because core 2 doesn't know that the other cores don't hold that line, it has to send out an invalidate request, even though that request will do nothing.
+The second case shows that (in the MSI protocol) we still need to send this invalidate request; in this case the request actually makes other cores switch to Invalid, and the caches would not be coherent if this request were skipped.
+The problem is that the core sending these invalidate requests doesn't know if there are any cores that actually need to be invalidated; therefore, it has to take the safe option and send it every time. 
+
+To fix this issue, we need to distinguish between these two shared cases:
+![](Pasted%20image%2020240212111027.png)
+This is the purpose of the **E** in **MESI**, which stands for **Exclusive**.
+We split the Shared state into two versions:
+- **Exclusive** - The state of a line after being read from memory (would have gone to Shared in MSI)
+- **Shared** (in the true meaning, this time) - The state of a line after being read from *another cache*. i.e., the line is actually being *shared* among caches.
+
+![](Pasted%20image%2020240212111259.png)
+At first this may seem like a minor optimisation, but the "unshared Shared" case is very common in most programs. Consider that every single thread-private variable is never shared between cores, and in most cases these are the majority of variables.
