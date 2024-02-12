@@ -108,4 +108,51 @@ Another performance issue with MSI/MESI is the case of caches reading a line tha
 ![](Pasted%20image%2020240212112600.png)
 In this protocol, the core that owns the cache line is allowed to make any modifications it wants to the line and stay in the Owned state; it simply sends the updated value along the bus, and any cores sharing the line take the updated value. We only need to perform a writeback if the data in an Owned or Modified line is "evicted" - for example, if another cache modifies the line.
 
-#
+# Directory-based Protocols
+Even with the optimisations that MESI and MOESI introduce, shared bus coherence protocols do not scale well to a large number of cores. We need a coherence scheme that works with a less directly connected network (for example, a grid).
+One possible solution for this is to have a **centralised directory**, which handles all of the cache line information in one place.
+![](Pasted%20image%2020240212114912.png)
+In this scheme, the directory is just another component connected to the network; this allows any network to be used for interconnection, including ones that take variable hops between nodes, or those that use packet switching.
+Each line has an entry in the directory which stores:
+- Present bitmap - A series of bits (1 bit per core) that indicates which cores hold a copy of this line
+- Directory dirty bit - A bit that is set when **one** of the cores has a copy of the line that is out-of-sync with memory
+
+Lines in the individual caches also hold some extra information:
+- Local valid bit - Is the line valid? (essentially the inverse of Invalid from M(OE)SI)
+- Local dirty bit - Is this copy of the line out-of-sync with memory?
+
+## Behaviour
+### Read hit
+![](Pasted%20image%2020240212115756.png)
+If core 1 wants to read, and its local cache holds a valid value, then it can just use that value. No other components are involved.
+### Read miss
+![](Pasted%20image%2020240212120024.png)
+Core 1 wants to read, but its local cache doesn't contain the desired line, or it is invalid. It sends a request to the directory, and a few cases may unfold:
+- Line not present in another cache - The directory tells the core to get the line from memory, and updates the bitmap to indicate that core now contains a copy.
+- Line present in another cache, directory dirty bit unset - The directory tells the cache with a copy to send it to the requesting cache, and updates the bitmap to indicate that cache now contains a copy.
+- Line present in another cache, directory dirty bit set - The directory tells the cache with the dirty line to writeback to memory, clear its local dirty bit, and to send the updated value to the requesting cache. The directory then unsets the directory dirty bit and updates the bitmap to indicate that cache now contains a copy.
+
+### Write hit
+Core 1 wants to write, and its local cache contains a copy of the line. Again, there are a few cases:
+![](Pasted%20image%2020240212120950.png)
+- Local dirty bit set - Just update the local cache, and change no flags.
+
+![](Pasted%20image%2020240212121344.png)
+- Local dirty bit unset, directory dirty bit unset - Update the value in cache, set the local dirty bit, set the directory dirty bit, instruct every core that contains a copy (per the present bitmap) to invalidate it, and update the bitmap to indicate core 1 contains a copy.
+
+- Local dirty bit unset, directory dirty bit set - This case **cannot happen**, as the line being both valid and having the local dirty bit unset means that the value is shared. There cannot be a unique owner, and therefore the directory dirty bit cannot be set.
+
+### Write miss
+Core 1 wants to write, but its local cache doesn't contain the line. Again, this has a few cases:
+![](Pasted%20image%2020240212121623.png)
+- Directory dirty bit unset - The directory checks (in the present bitmap) if any cores have a copy.
+	- Other core has a copy - The directory orders one of those cores to send a copy of the line to core 1, then invalidates the line in them all. The bitmap is updated to show the line as only present in core 1, and the directory and local dirty bits are set.
+	- No other core has a copy - The directory orders core 1 to retrieve the line from memory. The bitmap is updated to reflect core 1 as possessing the line, and the directory and local dirty bits are set.
+
+![](Pasted%20image%2020240212122444.png)
+- Directory dirty bit set - The directory orders the owning core to writeback to memory, clear its dirty bit, and invalidate its copy of the line. It also instructs the core to send the line to core 1, which then updates it and sets the local dirty bit. The directory dirty bit remains set, and the present bitmap is updated to reflect core 1 as the sole owner.
+
+## Limitations
+While using a directory protocol allows more scalable interconnects to be used, the directory itself is a serious bottleneck. There are further ways to optimise this, such as distributing the directory itself and using caching to speed *that* up, which becomes necessary for large-scale multi-socket systems. These **NUMA (Non-Uniform Memory Access) systems** may look something like this:
+![](Pasted%20image%2020240212122817.png)
+Compared to bus snooping protocols, directory based protocols generally have slower communications and long/variable delays. So, while they are a solution for scaling to large numbers of cores, they are not a panacea.
