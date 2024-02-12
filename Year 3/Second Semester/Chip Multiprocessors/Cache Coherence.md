@@ -99,4 +99,13 @@ We split the Shared state into two versions:
 - **Shared** (in the true meaning, this time) - The state of a line after being read from *another cache*. i.e., the line is actually being *shared* among caches.
 
 ![](Pasted%20image%2020240212111259.png)
-At first this may seem like a minor optimisation, but the "unshared Shared" case is very common in most programs. Consider that every single thread-private variable is never shared between cores, and in most cases these are the majority of variables.
+At first this may seem like a minor optimisation, but the "unshared Shared" case is very common in most programs. Consider that every single thread-private variable is never shared between cores, and in most cases these are the majority of variables. Because of this, MESI offers a significant reduction in bus activity versus MSI, and is generally used instead.
+## MOESI
+Another performance issue with MSI/MESI is the case of caches reading a line that is Modified in another cache. This requires the Modified line be written back to memory every time another core wants to read it, which is slow. Instead, what if we had the cache with the Modified line just send the updated value directly to the reading cache, leaving the memory out of it entirely? The MOESI protocol does this by splitting the Modified state into two, similarly to MESI:
+- **Modified** - This line is held *exclusively* in this cache and memory has an outdated value
+- **Owned** - This line is *shared* between multiple caches but memory is also outdated; this cache is the one that provided the updated value.
+
+![](Pasted%20image%2020240212112600.png)
+In this protocol, the core that owns the cache line is allowed to make any modifications it wants to the line and stay in the Owned state; it simply sends the updated value along the bus, and any cores sharing the line take the updated value. We only need to perform a writeback if the data in an Owned or Modified line is "evicted" - for example, if another cache modifies the line.
+
+#
