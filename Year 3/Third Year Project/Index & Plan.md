@@ -14,6 +14,7 @@
 - Pretend you don't see this month and a half gap
 - [[Christmas Holiday + Week 29-1-24]]
 - [[Week of 5-2-24]]
+- [[Week of 12-2-24]]
 # Important Dates
 - Code Freeze: Friday 15th March 2024 
 - Report & Screencast Submission: Friday 12th April
