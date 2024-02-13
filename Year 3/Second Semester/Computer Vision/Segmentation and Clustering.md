@@ -54,4 +54,34 @@ This is an algorithm for finding cluster centres, which solves the previously sh
 The basic idea of the algorithm is to randomly initialise $k$ cluster centres, and iterate towards an optimal solution by finding intermediate clusters, then improving the centre around those clusters.
 The algorithm is as follows:
 1. Randomly initialize the cluster centres $c_1, \dots, c_k$
-2. Group the points into the clusters ()
+2. Group the points into the clusters (Each point goes into the cluster with the closest centre)
+3. Discard the cluster centres, and find new ones by taking the mean of the clusters found in the previous step
+4. If the cluster centres changed, repeat from step 2
+
+This algorithm will always converge to *some* solution, though that solution might be a local optima and not a global optima. As previously stated, the optimal solution is the one that minimises the SSD, and k-means does *not* always give that optimal solution.
+
+Using k-means clustering, we get results like this:
+![](Pasted%20image%2020240213144625.png)
+On a realistic image like this, the results are not useful at all. There is no useful object information being extracted - the panda is in all three categories, and its face is the same category as the top of the log. This is because of our use of intensity; it is very likely that unrelated objects in an image will have the same intensity. Can we improve our results by using a different property of the image?
+### Feature Space
+The feature space of a clustering operation is the values on which we operate. Previous examples grouped based on intensity similarity, but there are other features to group on. The feature we choose allows us to group pixels in different ways.
+
+Intensity is a 1-dimensional feature; it is simply a scalar value. Most images are colour, meaning each pixel has a red, green and blue value. We can cluster in 3-dimensions, allowing us to group our image based on colour similarity:
+![](Pasted%20image%2020240213145028.png)![](Pasted%20image%2020240213145041.png)
+The results of this are much better for images with large colour contrast:
+![](Pasted%20image%2020240213145145.png)
+(Though RGB would be the absolute worst colour space to do this in.)
+
+### Results of k-means clustering
+K-means clustering based on intensity or colour doesn't take spatial coherence into account at all; it is essentially a vector quantization of the image attributes. This can be seen in the previous example, where the pepper at the top and bottom are in the same cluster even though they aren't close to touching. This is alright for some applications, but not all.
+We *can* cluster in more complicated feature spaces. For example, we might cluster in (r, g, b, x, y) (colour and space) in order to introduce spatial coherence.
+
+There are some other issues with k-means clustering:
+- How do you set k? What if the number of clusters varies (e.g. video feed with varying number of objects), or if there isn't human intervention available to set it?
+- The initial clusters are set randomly, and the result is a local minima; results can be randomly poor, depending on the image.
+- The process is sensitive to outliers, which can heavily skew the calculated clusters:
+![](Pasted%20image%2020240213145940.png)
+- It can only detect spherical clusters. For example, this kind of cluster will never be accurately captured by k-means:
+![](Pasted%20image%2020240213150050.png)
+
+With all this in mind, k-means' main advantage is that it is simple and fast to compute, while giving decent results in the right circumstances.
