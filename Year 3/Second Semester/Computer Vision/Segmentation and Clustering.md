@@ -8,3 +8,4 @@ Groupings are useful for things such as:
 - Determine the location of moving objects against the backdrop in a video feed (e.g. outlining a person on a security camera feed)
 - Background removal (e.g. remove the background from an image of a person or object)
 
+## Importance of grouping
