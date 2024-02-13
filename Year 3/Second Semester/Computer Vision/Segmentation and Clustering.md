@@ -51,4 +51,7 @@ But how do we find these centres? If we knew group membership already then we co
 ![](Pasted%20image%2020240213143103.png)
 ### k-Means Clustering
 This is an algorithm for finding cluster centres, which solves the previously shown problem.
-The basic idea of the algorithm is to randomly initialise $k$ cluster centres, and 
+The basic idea of the algorithm is to randomly initialise $k$ cluster centres, and iterate towards an optimal solution by finding intermediate clusters, then improving the centre around those clusters.
+The algorithm is as follows:
+1. Randomly initialize the cluster centres $c_1, \dots, c_k$
+2. Group the points into the clusters ()
