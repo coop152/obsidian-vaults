@@ -28,3 +28,4 @@ In each layer we will do the same as previously, with each layer using a differe
 ![](Pasted%20image%2020240213124337.png)
 
 # Generalised Hough Transform
+(hopefully someone on the discord knows what is going on here)

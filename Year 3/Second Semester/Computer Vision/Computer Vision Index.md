@@ -1,3 +1,3 @@
 - Week 1 was visual computing recap
 - Week 2: [[Edge Detection]]
-- Week 3: [[Generalised Hough Transform]]
+- Week 3: [[Generalised Hough Transform]], [[Segmentation and Clustering]]
