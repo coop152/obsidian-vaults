@@ -45,4 +45,10 @@ Of course, real images have noise:
 ![](Pasted%20image%2020240213141919.png)
 How do we determine the three groups now? This is where clustering comes in.
 ![](Pasted%20image%2020240213142409.png)
-We need to choose three centre points for the three groups, and then assign each pixel to one of these groups according to it's proximity to the centres. The best choices for cluster centres are those that minimise 
+We need to choose three centre points for the three groups, and then assign each pixel to one of these groups according to it's proximity to the centres. The best choices for cluster centres are those that minimises the SSD (Sum of Square Distances) between the points and their cluster's centre ($c_i$):
+![](Pasted%20image%2020240213142823.png)
+But how do we find these centres? If we knew group membership already then we could easily find the optimal centre, but we don't. In fact, we want to find the centres **exactly because** we don't have the group membership for our pixels.
+![](Pasted%20image%2020240213143103.png)
+### k-Means Clustering
+This is an algorithm for finding cluster centres, which solves the previously shown problem.
+The basic idea of the algorithm is to randomly initialise $k$ cluster centres, and 
