@@ -36,3 +36,9 @@ In this method we don't even try to compute a "correct" segmentation. Instead, w
 ![](Pasted%20image%2020240213140417.png)
 These results don't tend to be useful by themselves, but they can aid subsequent steps in the image processing pipeline.
 ![](Pasted%20image%2020240213140703.png)
+
+## Clustering
+Clustering is a method commonly used in machine learning to split a dataset into chunks. This can be applied quite directly to images in order to perform segmentation. Here is a very simplified example:
+![](Pasted%20image%2020240213141334.png)
+We have an image, represented in terms of it's intensity. We can plot an intensity histogram, and in this artificial image there are three very obvious groups. We could easily assign a label to these ranges of intensities in order to get a segmentation. In this example image it would be a very good result, with each object being completely continuous, uninterrupted and unique in colour.
+Of course, real images are not this simple. 
