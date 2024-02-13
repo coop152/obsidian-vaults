@@ -30,3 +30,9 @@ As an exemplar of how we would like the computer to segment our images, we can s
 These desired outcomes are often called the "correct answer" or "ground truth".
 Doing this demonstrates how segmentation is a hard problem to define. Asking multiple people to segment an image in this way will give wildly different solutions:
 ![](Pasted%20image%2020240213135606.png)
+The Berkeley segmentation dataset, where these images came from, resolves this somewhat by taking a weighted average of multiple user's segmentations. Therefore, frequent areas of segmentation (e.g. the woman's outline) will have a higher weight than less common areas (e.g. the eyes).
+## Superpixels
+In this method we don't even try to compute a "correct" segmentation. Instead, we aim for over-segmentation wherein every region is very likely to be uniform.
+![](Pasted%20image%2020240213140417.png)
+These results don't tend to be useful by themselves, but they can aid subsequent steps in the image processing pipeline.
+![](Pasted%20image%2020240213140703.png)
