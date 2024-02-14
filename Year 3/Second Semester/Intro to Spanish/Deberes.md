@@ -11,4 +11,6 @@ Para mi amigo:
 - ¿Cuántos años tienes?
 - ¿Qué lenguas hablas?
 - ¿Cuál es tu teléfono y tu correo electrónico?
-- 
+- Cuáles son tus aficiones?
+
+Mi amiga se llama Elizabeth Holmes. No trabaja, y estudia arte en la Manchester Metropolitan University. También vive en Rochdale, al oeste de Kirkholt en Castleton. La dirección de esta casa es Croydon Ave 3, Castleton. Es inglés, tiene 21 años y solo habla inglés. Su número teléfono es 07511 845196, y su correo electrónico es 
