@@ -17,5 +17,5 @@ We start by directly calculating the result of the function on $\bar{x}$, assumi
 These two extremes serve as bounds for $f(\bar{x})$. Any value of $\bar{x}$ plus $\Delta x$ error will be between these values.
 In this example, the effect of the error on $f(\bar{x})$ is quite large. 
 
-We can use the **Taylor series** to estimate this error analytically.
+We can use the **Taylor series** to estimate this error analytically. We want 
 ![](Pasted%20image%2020240214153033.png)
