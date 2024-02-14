@@ -43,3 +43,8 @@ But if we use 4 sig fig to solve, we get:
 One result is quite similar, but the other is very different. This demonstrates the instability of the quadratic formula.
 Why? Well,
 ![](Pasted%20image%2020240214164613.png)
+## Subtractive Cancellation
+Subtractive cancellation refers to the round-off error introduced when subtracting two FP numbers of a similar magnitude. This is a problem unique to subtraction - it doesn't occur when adding the same numbers.
+If we compare this step of the previous calculation in 4 s.f. versus double precision:
+![](Pasted%20image%2020240214165142.png)
+Subtractive cancellation is the reason that the 4 s.f. calculation is affected so heavily by this rounding error.
