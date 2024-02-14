@@ -6,4 +6,4 @@ Week 3: [[]]
 
 # Todo
 - Clean up that sheet of paper that's in the notebook (somehow)
-- Watch the video/slides on identifying people
+- Watch the video/slides(?) on identifying people
