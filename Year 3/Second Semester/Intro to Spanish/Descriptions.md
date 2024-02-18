@@ -49,5 +49,16 @@ When you describe a part of someone, you address that part with the **determinat
 
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
-| corto | short | e.g. pelo corto == short hair |
+| Rubio (describing hair)<br>Rubio/a (describing person) | Blonde | e.g. el pelo rubio == blonde hair<br>e.g. Sara es rubia == Sara is blonde |
+| Moreno (describing hair)<br>Moreno/a (describing person) | Brown<br>"Brunette" | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
+| Castaño | Chestnut | another shade of brown |
+| Azules | Blue |  |
+| Verdes | Green |  |
+| Largo | Long | e.g. el pelo largo == long hair |
+| Corto | Short |  |
+| Grandes | Big | e.g. los ojos grandes == big eyes |
+| Pequeños | Small |  |
+| Guapo/a | Handsome |  |
+| Feo/a | Ugly |  |
+| Gordo/a | Fat |  |
 |  |  |  |
