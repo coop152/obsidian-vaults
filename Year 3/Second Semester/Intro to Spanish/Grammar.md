@@ -21,15 +21,36 @@ For example, with "i am called", which also conveniently demonstrates the reflex
 Verbs ending with -ir become -o, -es, -e, -imos, -ís, -en
 Verbs ending with -ar become -o, -as, -a, -amos, -aís, -an
 # Articles
-Indeterminate article: un (masculine), una (feminine)
-Equivalent to "a" in English. Refers to any of a thing (e.g. a dog, a shop)
-# Possessives
-| Person | English | Spanish | Notes |
+**Indeterminate article**:
+- un (masculine)
+- una (feminine)
+- unos (plural masculine)
+- unas (plural feminine)
+
+Equivalent to "a" in English. Refers to any instance of a thing (e.g. I saw a dog, I found a shop)
+**Determinate article**:
+- el (masculine)
+- la (feminine)
+- los (plural masculine)
+- las (plural feminine)
+
+Equivalent to "the" in English. Refers to a specific instance of a thing (e.g. I walked the dog, I went to the shop)
+# Possessive adjectives
+For when the following noun belongs to someone, e.g. my phone, my brother, your dog
+
+| Person | English | Spanish (Singular noun) | Spanish (plural noun) |
 | ---- | ---- | ---- | ---- |
-| First Person | I | Yo |  |
-| Second Person | You | Tu' | Informal |
-| Second Person | You | El/Ella usted | Formal |
-|  |  |  |  |
+| First Person | My | Mi | Mis |
+| Second Person | Your | Tu | Tus |
+| Third/Formal second person | His/Her/Their/Your | Su | Sus |
+| First person plural | Our | Nuestro/nuestra | Nuestros/nuestras |
+| Second person plural | All your | Vuestro/vuestra | vuestros/vuestras |
+| Third/formal second person plural | Their | Su | Sus |
+The plural -s on the end matches the noun and not the person/people that possess it. E.g:
+- My dad == Mi padre
+- Our dad == Nuestro padre
+- My parents == Mis padres
+- Our parents = Nuestros padres
 # Plurals
 Word ends with a vowel? Add an -s
 "amigo" -> "amigo**s**"
