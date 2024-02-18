@@ -1,7 +1,7 @@
-[[General Vocab]], [[Deberes]]
-Week 1: [[Introductions]], [[Basic Grammar]], [[Nationality]]
+[[General Vocab]], [[Deberes]], [Grammar](Grammar.md)
+Week 1: [[Introductions]], [[Nationality]]
 Week 2: [[Professions]], [[Address and Phone]], [[Hobbies]]
-Week 3: [[]]
+Week 3: [[Family]]
 
 
 # Todo
