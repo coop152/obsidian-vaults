@@ -8,4 +8,40 @@
 | Abuelo/abuela | grandfather/grandmother |  |
 | tío/tía | uncle/aunt |  |
 | primo/prima | cousins |  |
-#
+# Relevant verbs
+**Ser** - To be
+
+| Person | Spanish | English | Notes |
+| ---- | ---- | ---- | ---- |
+| 1st | Soy | I am |  |
+| 2nd | Eres | You are |  |
+| 3rd/Formal 2nd | Es | He/She is, they are, You are |  |
+| 1st plural | Somos | We are |  |
+| 2nd plural | Sois | You lot are |  |
+| 3rd/Formal 2nd plural | Son | They are, You lot are |  |
+
+Tener - to have
+
+| Person | Spanish | English | Notes |
+| ---- | ---- | ---- | ---- |
+| 1st | Tengo | I have |  |
+| 2nd | Tienes | You have |  |
+| 3rd/Formal 2nd | Tiene | He/She has, they have, You have |  |
+| 1st plural | Tenemos | We have |  |
+| 2nd plural | Tenéis | You lot have |  |
+| 3rd/Formal 2nd plural | Tienen | They have, You lot have |  |
+
+Llevar - to wear
+
+| Person | Spanish | English | Notes |
+| ---- | ---- | ---- | ---- |
+| 1st | Llevo | I wear |  |
+| 2nd | llevas | You wear |  |
+| 3rd/Formal 2nd | lleva | He/She wears, they wear, You wear |  |
+| 1st plural | llevamos | We wear |  |
+| 2nd plural | llevaís | You lot wear |  |
+| 3rd/Formal 2nd plural | llevan | They wear, You lot wear |  |
+# Physical descriptions
+| Spanish | English | Notes |
+| ---- | ---- | ---- |
+|  |  |  |
