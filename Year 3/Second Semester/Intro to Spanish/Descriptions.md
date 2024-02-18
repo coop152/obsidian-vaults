@@ -53,7 +53,7 @@ e.g. Sara es (...)
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Rubio/a | Blonde | e.g. Sara es rubia == Sara is blonde |
-| Moreno/a | Brunette | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
+| Moreno/a | Either brunette or brown skin, i can't tell | e.g. Sara es morena == Sara is brunette<br>or Sara es morena == Sara has brown skin |
 | Pelirrojo/a | Redhead/Ginger | e.g. Sara es pelirrojo == Sara is redheaded |
 | Canoso/a | Grey-haired |  |
 | Calvo/a | Bald |  |
@@ -87,8 +87,8 @@ E.g. for hair, eyes...
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Rubio | Blonde | e.g. el pelo rubio == blonde hair |
-| Moreno | Brown |  |
+| Moreno | Brown | specifically the brown hair colour  |
 | Castaño | Chestnut | another shade of brown |
 | Azul | Blue | e.g. los ojos azules = blue eyes |
 | Verde | Green |  |
-| Marron | Brown | () |
+| Marron | Brown |  |
