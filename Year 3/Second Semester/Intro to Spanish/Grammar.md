@@ -1,10 +1,12 @@
-# Persons
+# Persons and subject pronouns
 | Person | English | Spanish | Notes |
 | ---- | ---- | ---- | ---- |
 | First Person | I | Yo |  |
-| Second Person | You | Tu' | Informal |
-| Second Person | You | El/Ella usted | Formal |
-|  |  |  |  |
+| Second Person | You | Tú | Use third person usted for formal second person |
+| Third/Formal second person | They/you | él, ella, usted |  |
+| First person plural | We | Nosotros/Nosotras |  |
+| Second person plural | All of you, you lot, yall, etc. | Vosotros/Vosotras |  |
+| Third/Formal second person plural | They, you lot, etc. | Ellos, ellas, ustedes |  |
 # Verb forms
 For example, with "i am called", which also conveniently demonstrates the reflexive pronouns:
 
@@ -12,7 +14,7 @@ For example, with "i am called", which also conveniently demonstrates the reflex
 | ---- | ---- | ---- | ---- | ---- |
 | Yo | First Person | I am called | Me llamo |  |
 | Tú | Second Person | You are called | Te llamas | Use usted third person for formal second person |
-| El/ella/usted | Third/Formal Second Person | They/You are called | Se llama | El for he, ella for she, usted for second person formal |
+| él/ella/usted | Third/Formal Second Person | They/You are called | Se llama | El for he, ella for she, usted for second person formal |
 | Nosotros/Nosotras | First person plural | We are called | Nos llamamos |  |
 | Vosotros/Vosotras | Second person plural | You lot are called | Os llamaís |  |
 | Ellos/Ellas/Ustedes | Third/formal second person plural | They/You lot are called | Se llaman |  |
