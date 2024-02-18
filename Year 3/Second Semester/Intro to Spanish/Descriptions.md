@@ -53,7 +53,7 @@ e.g. Sara es (...)
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Rubio/a | Blonde | e.g. Sara es rubia == Sara is blonde |
-| Moreno/a | Brown/Brunette | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
+| Moreno/a | Brunette | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
 | Pelirrojo/a | Redhead/Ginger | e.g. Sara es pelirrojo == Sara is redheaded |
 | Canoso/a | Grey-haired |  |
 | Calvo/a | Bald |  |
@@ -76,6 +76,8 @@ e.g. Sara tiene (...)
 | Ojos | Eyes |  |
 | Largo | Long | e.g. el pelo largo == long hair |
 | Corto | Short |  |
+| Liso | Straight |  |
+| Rizado | Curly |  |
 | Grandes | Big | e.g. los ojos grandes == big eyes |
 | Pequeños | Small |  |
 
@@ -87,5 +89,6 @@ E.g. for hair, eyes...
 | Rubio | Blonde | e.g. el pelo rubio == blonde hair |
 | Moreno | Brown |  |
 | Castaño | Chestnut | another shade of brown |
-| Azules | Blue |  |
-| Verdes | Green |  |
+| Azul | Blue | e.g. los ojos azules = blue eyes |
+| Verde | Green |  |
+| Marron | Brown | () |
