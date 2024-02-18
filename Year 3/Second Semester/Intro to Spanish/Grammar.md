@@ -6,13 +6,16 @@
 | Second Person | You | El/Ella usted | Formal |
 |  |  |  |  |
 # Verb forms
-For example, with "i am called"
+For example, with "i am called", which also conveniently demonstrates the reflexive pronouns:
 
 | Pronoun | Person | English | Spanish | Notes |
 | ---- | ---- | ---- | ---- | ---- |
 | Yo | First Person | I am called | Me llamo |  |
 | Tú | Second Person | You are called | Te llamas | Use usted third person for formal second person |
 | El/ella/usted | Third/Formal Second Person | They/You are called | Se llama | El for he, ella for she, usted for second person formal |
+| Nosotros/Nosotras | First person plural | We are called | Nos llamamos |  |
+| Vosotros/Vosotras | Second person plural | You lot are called | Os llamaís |  |
+| Ellos/Ellas/Ustedes | Third/formal second person plural | They/You lot are called | Se llaman |  |
 Verbs ending with -ir become -o, -es, -e
 Verbs ending with -ar become -o, -as, -a
 # Articles
