@@ -19,8 +19,8 @@
 | 1st plural | Somos | We are |  |
 | 2nd plural | Sois | You lot are |  |
 | 3rd/Formal 2nd plural | Son | They are, You lot are |  |
-
-Tener - to have
+**Tener** - to have
+"Miguel tiene el pelo corto" - Miguel has short hair.
 
 | Person | Spanish | English | Notes |
 | ---- | ---- | ---- | ---- |
@@ -30,8 +30,8 @@ Tener - to have
 | 1st plural | Tenemos | We have |  |
 | 2nd plural | Tenéis | You lot have |  |
 | 3rd/Formal 2nd plural | Tienen | They have, You lot have |  |
-
-Llevar - to wear
+**Llevar** - to wear (literally to carry)
+"Miguel llava gafas" - Miguel wears glasses
 
 | Person | Spanish | English | Notes |
 | ---- | ---- | ---- | ---- |
@@ -42,6 +42,12 @@ Llevar - to wear
 | 2nd plural | llevaís | You lot wear |  |
 | 3rd/Formal 2nd plural | llevan | They wear, You lot wear |  |
 # Physical descriptions
+Descripción física
+
+When you describe a part of someone, you address that part with the **determinate article**. E.g:
+"Sara tiene **el** pelo moreno" - Sara has brown hair.
+
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
+| corto | short | e.g. pelo corto == short hair |
 |  |  |  |
