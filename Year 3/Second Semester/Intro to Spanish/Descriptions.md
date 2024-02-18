@@ -93,8 +93,9 @@ E.g. for hair, eyes...
 | Marron | Brown | describes brown *eyes* |
 | Negro | Black |  |
 
-## Clothes and Accessories
+## Other
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Gafas | Glasses | e.g. Sara lleva gafas == Sara wears glasses |
-|  |  |  |
+| Bigote | Mustache | Can also use tener for this |
+| Barba | Beard | Can also use tener for this |
