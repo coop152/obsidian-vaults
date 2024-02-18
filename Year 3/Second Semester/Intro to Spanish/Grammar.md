@@ -18,8 +18,8 @@ For example, with "i am called", which also conveniently demonstrates the reflex
 | Nosotros/Nosotras | First person plural | We are called | Nos llamamos |  |
 | Vosotros/Vosotras | Second person plural | You lot are called | Os llamaís |  |
 | Ellos/Ellas/Ustedes | Third/formal second person plural | They/You lot are called | Se llaman |  |
-Verbs ending with -ir become -o, -es, -e
-Verbs ending with -ar become -o, -as, -a
+Verbs ending with -ir become -o, -es, -e, -imos, -ís, -en
+Verbs ending with -ar become -o, -as, -a, -amos, -aís, -an
 # Articles
 Indeterminate article: un (masculine), una (feminine)
 Equivalent to "a" in English. Refers to any of a thing (e.g. a dog, a shop)
