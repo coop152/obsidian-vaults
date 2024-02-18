@@ -80,7 +80,6 @@ e.g. Sara tiene (...)
 | Rizado | Curly |  |
 | Grandes | Big | e.g. los ojos grandes == big eyes |
 | Pequeños | Small |  |
-
 ## Colours
 E.g. for hair, eyes...
 
