@@ -53,7 +53,7 @@ e.g. Sara es (...)
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Rubio/a | Blonde | e.g. Sara es rubia == Sara is blonde |
-| Moreno/a | Either brunette or brown skin, i can't tell | e.g. Sara es morena == Sara is brunette<br>or Sara es morena == Sara has brown skin |
+| Moreno/a | Brunette | e.g. Sara es morena == Sara is brunette |
 | Pelirrojo/a | Redhead/Ginger | e.g. Sara es pelirrojo == Sara is redheaded |
 | Canoso/a | Grey-haired |  |
 | Calvo/a | Bald |  |
