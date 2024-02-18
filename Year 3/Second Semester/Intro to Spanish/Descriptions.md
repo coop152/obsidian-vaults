@@ -47,18 +47,45 @@ Descripción física
 When you describe a part of someone, you address that part with the **determinate article**. E.g:
 "Sara tiene **el** pelo moreno" - Sara has brown hair.
 
+## Describe a person
+e.g. Sara es (...)
+
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
-| Rubio (describing hair)<br>Rubio/a (describing person) | Blonde | e.g. el pelo rubio == blonde hair<br>e.g. Sara es rubia == Sara is blonde |
-| Moreno (describing hair)<br>Moreno/a (describing person) | Brown<br>"Brunette" | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
-| Castaño | Chestnut | another shade of brown |
-| Azules | Blue |  |
-| Verdes | Green |  |
+| Rubio/a | Blonde | e.g. Sara es rubia == Sara is blonde |
+| Moreno/a | Brown/Brunette | Doesn't literally mean Brunette but you can use it in a sentence in the same way<br>(i.e. Sara es morena == Sara is brunette) |
+| Pelirrojo/a | Redhead/Ginger | e.g. Sara es pelirrojo == Sara is redheaded |
+| Canoso/a | Grey-haired |  |
+| Calvo/a | Bald |  |
+| Guapo/a | Handsome |  |
+| Feo/a | Ugly |  |
+| Gordo/a | Fat |  |
+| Delgado/a | Slim |  |
+| Fuerte | Strong |  |
+| Debil | Weak |  |
+| Alto/a | Tall |  |
+| Bajo/a | Short |  |
+| Joven | Young |  |
+| Viejo/a | Old |  |
+## Describe a body part
+e.g. Sara tiene (...)
+
+| Spanish | English | Notes |
+| ---- | ---- | ---- |
+| Pelo | Hair |  |
+| Ojos | Eyes |  |
 | Largo | Long | e.g. el pelo largo == long hair |
 | Corto | Short |  |
 | Grandes | Big | e.g. los ojos grandes == big eyes |
 | Pequeños | Small |  |
-| Guapo/a | Handsome |  |
-| Feo/a | Ugly |  |
-| Gordo/a | Fat |  |
-|  |  |  |
+
+## Colours
+E.g. for hair, eyes...
+
+| Spanish | English | Notes |
+| ---- | ---- | ---- |
+| Rubio | Blonde | e.g. el pelo rubio == blonde hair |
+| Moreno | Brown |  |
+| Castaño | Chestnut | another shade of brown |
+| Azules | Blue |  |
+| Verdes | Green |  |
