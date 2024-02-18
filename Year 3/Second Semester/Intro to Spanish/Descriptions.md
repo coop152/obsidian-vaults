@@ -87,8 +87,14 @@ E.g. for hair, eyes...
 | Spanish | English | Notes |
 | ---- | ---- | ---- |
 | Rubio | Blonde | e.g. el pelo rubio == blonde hair |
-| Moreno | Brown | specifically the brown hair colour  |
-| Castaño | Chestnut | another shade of brown |
+| Castaño | Brown (lit. Chestnut) | describes brown *hair* |
 | Azul | Blue | e.g. los ojos azules = blue eyes |
 | Verde | Green |  |
-| Marron | Brown |  |
+| Marron | Brown | describes brown *eyes* |
+| Negro | Black |  |
+
+## Clothes and Accessories
+| Spanish | English | Notes |
+| ---- | ---- | ---- |
+| Gafas | Glasses | e.g. Sara lleva gafas == Sara wears glasses |
+|  |  |  |
