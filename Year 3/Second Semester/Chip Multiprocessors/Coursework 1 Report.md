@@ -7,8 +7,8 @@ On the first attempt, I implemented the vecadd straightforwardly, but the perfor
 
 (graph of shitty version goes here)
 
-I believed this was a memory bandwidth bottleneck, so I added some useless arithmetic operations to artificially make the problem less memory-intensive. 
-# Second attempt
+I believed this was a memory bandwidth bottleneck, so I added some useless arithmetic operations to artificially make the problem less memory-intensive.  I also increased the vector size from 1,000,000 to 10,000,000
+## Second attempt
 With the less memory-intensive version, the results were mostly as expected. The performance now scales up to the hardware thread count (4 on my local machine, 48 on mcore48) and then gradually degrades as the thread count becomes too high. The final performance improvement is still not as large as I expected, with performance hitting around 6x of singlethreaded at the peak.
 
 (Less shitty final graph here)
