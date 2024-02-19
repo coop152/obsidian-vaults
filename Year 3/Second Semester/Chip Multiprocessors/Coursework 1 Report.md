@@ -1,7 +1,7 @@
 # Expected speedup
-I predict that the greatest speedup will be achieved using a number of threads equal to the available hardware threads (i.e. 48 threads on mcore48), where performance will reach 12 times single-threaded.
-I expect that the multi-threaded performance will scale roughly in-proportion to the number of threads, up until the physical hardware thread count is reached wherein it will gradually decrease. 
-I represent this as an exponential curve up to point 
+I predict that the greatest speedup will be achieved using a number of threads equal to the available hardware threads (i.e. 48 threads on mcore48), and that the performance at that thread count will not reach the ideal 48x speedup.
+I expect that the multi-threaded performance will scale roughly in-proportion to the number of threads, though it will suffer from a continually increasing overhead from the large number of threads. Therefore, once it exceeds the number of hardware threads it will start to decline in performance.
+I represent this on the graph with a logarithmic curve from 0 to 48 cores - the decline afterwards is omitted because I don't have any particular idea for how fast it will decline. For the curve, I predict a 12x speedup at 48 cores.
 ## First attempt
 On the first attempt, I implemented the vecadd straightforwardly, but the performance results didn't fit my expectations. On my local machine performance did peak at the hardware thread count (4), but it also peaked there on mcore48. The speedup was also very small at around 1.5x single-threaded performance, and it was slower than single-threaded for most other thread counts.
 
