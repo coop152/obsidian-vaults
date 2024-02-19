@@ -1,6 +1,16 @@
 # Expected speedup
-I predict that the greatest speedup will be achieved using a number of threads equal to the available hardware threads (i.e. 48 threads on mcore48.) 
-I expect that the multithreaded performance will scale roughly in-proportion to the number of threads, up until the physical hardware thread count is reached wherein it will gradually decrease. 
-In my graph i plot the first part as a logarithmic curve, 
+I predict that the greatest speedup will be achieved using a number of threads equal to the available hardware threads (i.e. 48 threads on mcore48), where performance will reach 12 times single-threaded.
+I expect that the multi-threaded performance will scale roughly in-proportion to the number of threads, up until the physical hardware thread count is reached wherein it will gradually decrease. 
+I represent this as a logarithmic curve
 ## First attempt
-On the first attempt, I implemented the vecadd straightforwardly, but the performance results didn't fit my expectations. On my local machine performance did peak at the hardware thread count (4), but it also peaked there on mcore48. The speedup was also very small at around 1.5x singlethreaded performance, and it was slower than single-threaded for most other thread counts.
+On the first attempt, I implemented the vecadd straightforwardly, but the performance results didn't fit my expectations. On my local machine performance did peak at the hardware thread count (4), but it also peaked there on mcore48. The speedup was also very small at around 1.5x single-threaded performance, and it was slower than single-threaded for most other thread counts.
+
+(graph of shitty version goes here)
+
+I believed this was a memory bandwidth bottleneck, so I added some useless arithmetic operations to artificially make the problem less memory-intensive. 
+# Second attempt
+With the less memory-intensive version, the results were mostly as expected. The performance now scales up to the hardware thread count (4 on my local machine, 48 on mcore48) and then gradually degrades as the thread count becomes too high. The final performance improvement is still not as large as I expected, with performance hitting around 6x of singlethreaded at the peak.
+
+(Less shitty final graph here)
+
+At this point I tried different vector sizes
