@@ -1,4 +1,3 @@
 - Merged linux port and delete history into master, now it's all there
-- [ ] Time to work on auto-purge!
-	- [x] Made a branch
-	- [ ] 
+- Made a branch for autopurge
+- First, gotta figure out how to ask the user 
