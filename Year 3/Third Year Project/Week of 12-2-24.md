@@ -15,3 +15,4 @@ set w [cal option ItemWidth]
         trigger fire reconfig
     }
 ```
+- Remember to actually change the docs in dg_duration, and check which arguments are even required/should be used but arent being
