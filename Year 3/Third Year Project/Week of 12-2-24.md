@@ -1,4 +1,4 @@
 - Merged linux port and delete history into master, now it's all there
 - Made a branch for autopurge
 - First, gotta figure out how to ask the user for the auto-purge time
-	- dg_num is looking useful, investigate how it's used in 
+	- dg_num is looking useful, investigate
