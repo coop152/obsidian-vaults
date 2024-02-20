@@ -4,6 +4,7 @@ I expect that the multi-threaded performance will scale roughly in-proportion to
 I represent this on the graph with a logarithmic curve from 0 to 48 cores - the decline afterwards is omitted because I don't have any particular idea for how fast it will decline. For the curve, I predict a 12x speedup at 48 cores.
 # First attempt
 On the first attempt, I implemented the vecadd straightforwardly, but the performance results didn't fit my expectations. On my local machine performance did peak at the hardware thread count (4), but on mcore48 it peaked early at around 16 threads. The speedup was also very small at around 3x single-threaded performance.
+(Note: The grey dotted lines represent the variance in the results.)
 ![](Multithreaded%20vecadd%20performance%20scaling%20(First%20try).svg)
 I believed this was a memory bandwidth bottleneck, so I added some extra arithmetic operations to the addition function to artificially make the problem less memory-intensive.  I also increased the vector size from 1,000,000 to 10,000,000.
 # Second/final attempt
