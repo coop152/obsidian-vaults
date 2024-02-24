@@ -4,4 +4,4 @@
 
 
 # Coursework Reports
-- [[Coursework 1 Report]]
+- [[Year 3/Second Semester/Chip Multiprocessors/Coursework 1 Report]]

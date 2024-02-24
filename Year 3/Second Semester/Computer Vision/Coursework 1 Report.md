@@ -1,0 +1,1 @@
+best threshold for part 3 was around 60 with no smoothing (though the results still sucks)
