@@ -102,4 +102,5 @@ E.g. for hair, eyes...
 # Deberes 3
 Hola, Paco:
 Muchas gracias por tu correo. Me alegra saber que vienes a mi casa el próximo verano.
-Voy a hablarte de mi familia. Está formada por mi, mi hermano, y mi padres (y mi perro).
+Voy a hablarte de mi familia. Está formada por mi, mis padres y mi hermano.
+Mi padre se llama Andrew, y mi madre se llama Julie. Tienen unos 50 años, pero pienso son 
