@@ -98,3 +98,8 @@ E.g. for hair, eyes...
 | Gafas | Glasses | e.g. Sara lleva gafas == Sara wears glasses |
 | Bigote | Mustache | Can also use tener for this |
 | Barba | Beard | Can also use tener for this |
+
+# Deberes 3
+Hola, Paco:
+Muchas gracias por tu correo. Me alegra saber que vienes a mi casa el próximo verano.
+Voy a hablarte de mi familia. Está formada por mi, mi hermano, y mi padres (y mi perro).
