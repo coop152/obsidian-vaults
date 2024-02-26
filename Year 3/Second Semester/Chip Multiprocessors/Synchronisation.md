@@ -1,0 +1,1 @@
+Locks and barriers: https://olivierpierre.github.io/comp35112/lecture-notes/08a-locks-barriers.html
