@@ -40,3 +40,10 @@
 | tres mil                              | 3000    |
 | tres mil quinientos cuarenta y cuatro | 3544    |
 No "y" between thousands, hundreds and tens
+
+# Shopping
+
+| Spanish | English |
+| ------- | ------- |
+| Vender  | to sell |
+|         |         |
