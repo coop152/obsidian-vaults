@@ -1,1 +1,3 @@
--
+- Made the dialog actually set the value in the calendar object (specifically, in the option map), which saves it to the calendar file nice and tidy alongside the other options.
+- Finished cleaning up the code for the dialog window itself
+- 
