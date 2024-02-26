@@ -103,7 +103,7 @@ E.g. for hair, eyes...
 Hola, Paco:
 Muchas gracias por tu correo. Me alegra saber que vienes a mi casa el próximo verano.
 Voy a hablarte de mi familia. Está formada por mi, mis padres y mi hermano.
-Mi padre se llama Andrew, y tiene unos 50 años. Tiene el pelo largo, liso y castaño, y ojos marron. Es un poco bajo y gordo (como todos en mi familia).
+Mi padre se llama Andrew, y tiene unos 50 años. Tiene el pelo largo, liso y castaño, y ojos marron. Es un poco bajo y gordo (como todos en mi familia). Lleva gafas para leer.
 Mi madre se llama Julie, y también tiene unos 50 años. Tiene el pelo medio
 
 Mi padre se llama Andrew, y mi madre se llama Julie. Tienen unos 50 años, pero no parecen viejos. Son bajos y un poco gordos (todos en mi familia son un poco gordo)
