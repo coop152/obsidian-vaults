@@ -47,3 +47,4 @@ No "y" between thousands, hundreds and tens
 | ------- | ------- |
 | Vender  | to sell |
 |         |         |
+e.g. Tenden plantas?  Do you sell plants?
