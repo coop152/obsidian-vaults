@@ -12,4 +12,4 @@ As for deleting a range of items, `cal listing` (or `cal_listing()` in the C++) 
 1. Assign an item handle to the given tcl variable `iVar`
 2. Assign a date to the given tcl variable `dVar`
 3. Run the given tcl function (where you can now use the item and date variables to do as you wish)
-Here is an example
+There is a usage example in the ItemListing class in the tcl, though its a bit intertwined with tcl pretend-class shenanigans so maybe not the easiest example.
