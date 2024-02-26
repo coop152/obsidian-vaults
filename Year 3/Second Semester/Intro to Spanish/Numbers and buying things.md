@@ -43,11 +43,11 @@ No "y" between thousands, hundreds and tens
 
 # Shopping
 
-| Spanish          | English        |     |
-| ---------------- | -------------- | --- |
-| Vender           | to sell        |     |
-| Costar           | to cost        |     |
-| Cuánto cuesta... | How much is... |     |
-|                  |                |     |
+| Spanish          | English        |
+| ---------------- | -------------- |
+| Vender           | to sell        |
+| Costar           | to cost        |
+| Cuánto cuesta... | How much is... |
+|                  |                |
 e.g. "Tenden plantas?"  Do you sell plants?
 "Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
