@@ -2,6 +2,7 @@
 - Week 2: [[Shared Memory Programming]]
 - Week 3: [[Cache Coherence]]
 - Week 4: [[Synchronisation]]
+- Week 5: [[Synchronisation in Hardware]]
 
 
 # Coursework Reports
