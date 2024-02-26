@@ -43,11 +43,20 @@ No "y" between thousands, hundreds and tens
 
 # Shopping
 
-| Spanish          | English        |
-| ---------------- | -------------- |
-| Vender           | to sell        |
-| Costar           | to cost        |
-| Cuánto cuesta... | How much is... |
-|                  |                |
+| Spanish                | English                                                            |
+| ---------------------- | ------------------------------------------------------------------ |
+| Vender                 | to sell                                                            |
+| Costar                 | to cost                                                            |
+| Cuánto cuesta...       | How much is...                                                     |
+| Tienen ...?/Venden...? | Do you have...?/Do you sell...?                                    |
+| Querer                 | to want (has a vowel change)                                       |
+| Quiero un...           | I would like a...                                                  |
+| Pueder                 | I can                                                              |
+| Puedo ver...?          | Can i see...?                                                      |
+| Llevar                 | to take (in this context)                                          |
+| Me lo/la llevo.        | I'll take it. (lo/la is gendered according to thing you will take) |
+|                        |                                                                    |
 e.g. "Tenden plantas?"  Do you sell plants?
 "Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
+
+Esta vs ese: use esta for things that are at hand, and ese for things that arent. e.g. esta for something you are handing to a cashier, ese for something behind glass (tobacco or something)
