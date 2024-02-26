@@ -1,3 +1,17 @@
+
+|     | Units  | Tens      | Hundreds      | Thousands |
+| --- | ------ | --------- | ------------- | --------- |
+| 1   | uno    | diez      | cien          |           |
+| 2   | dos    | viente    | doscientos    |           |
+| 3   | tres   | triente   | trescientos   |           |
+| 4   | cuatro | cuarenta  | cuatrocientos |           |
+| 5   | cinco  | cincuenta | quinientos    |           |
+| 6   | seis   | sesenta   |               |           |
+| 7   | siete  | setenta   |               |           |
+| 8   | ocho   | ochenta   |               |           |
+| 9   | nueve  | noventa   |               |           |
+
+
 # Math operators
 
 | Spanish            | English             |
