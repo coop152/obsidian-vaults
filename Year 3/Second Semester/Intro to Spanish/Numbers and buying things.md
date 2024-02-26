@@ -46,5 +46,6 @@ No "y" between thousands, hundreds and tens
 | Spanish | English |
 | ------- | ------- |
 | Vender  | to sell |
-|         |         |
-e.g. Tenden plantas?  Do you sell plants?
+| Costar  | to cost |
+e.g. "Tenden plantas?"  Do you sell plants?
+"Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
