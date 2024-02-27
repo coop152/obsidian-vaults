@@ -72,4 +72,7 @@ Here is an actual result of applying Euler's method to the Cook's dillema:
 ![](Pasted%20image%2020240227170552.png)
 You can see that even a step size of 60 seconds is reasonably accurate to the true solution, going a bit low as the target is approached, but a step size of 1 second gives a very good approximation.
 
-###
+### Mid-point method
+One of the issues that limits the accuracy of the Euler's method is that it uses the gradient at the beginning of the timestep to estimate the entire interval. If the rate of change is high, the gradient may have changed significantly by the next timestep, creating lots of error.
+![](Pasted%20image%2020240227212030.png)
+In the midpoint method, we use the gradient *at the midpoint*
