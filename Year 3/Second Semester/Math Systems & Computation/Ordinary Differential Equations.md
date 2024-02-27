@@ -75,4 +75,7 @@ You can see that even a step size of 60 seconds is reasonably accurate to the tr
 ### Mid-point method
 One of the issues that limits the accuracy of the Euler's method is that it uses the gradient at the beginning of the timestep to estimate the entire interval. If the rate of change is high, the gradient may have changed significantly by the next timestep, creating lots of error.
 ![](Pasted%20image%2020240227212030.png)
-In the midpoint method, we use the gradient *at the midpoint*
+In the midpoint method, we use the gradient *at the midpoint* instead, which better captures how the slope changes within the interval.
+![](Pasted%20image%2020240227212325.png)
+To perform this method:
+1. Use Euler's rule to predict $y$
