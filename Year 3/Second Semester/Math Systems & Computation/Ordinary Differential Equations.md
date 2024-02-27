@@ -78,4 +78,5 @@ One of the issues that limits the accuracy of the Euler's method is that it uses
 In the midpoint method, we use the gradient *at the midpoint* instead, which better captures how the slope changes within the interval.
 ![](Pasted%20image%2020240227212325.png)
 To perform this method:
-1. Use Euler's rule to predict $y$
+1. Use Euler's rule to predict $y$ at the midpoint
+$$y_{i+0.5} = f(x_i,y_i)$$
