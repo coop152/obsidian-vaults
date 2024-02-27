@@ -84,3 +84,11 @@ $$y_{i+0.5} = f(x_i,y_i)\frac{h}{2}$$
 $$y^{'}_{i+0.5} = f(x_{i+0.5}, y_{i+0.5})$$
 3. Use the slope to extrapolate to $x_{i+1}$
 $$y_{i+1} = y_i + f(x_{i+0.5}, y_{i+0.5})h$$
+
+The results of this method are much closer to an analytical solution.
+![](Pasted%20image%2020240227215906.png)
+### Heun's Method
+Another method with similarly improved accuracy is Heun's method. Instead of estimating a midpoint and then finding the slope there like the midpoint method, it finds the slope at the current step and the next so that it can take an average of them.
+To perform this method:
+1. Use Euler's method to find the slope at the first step:
+$$$$
