@@ -1,0 +1,31 @@
+# Differential Equations
+Differential equations are equations involving a derivative. For example, you might want to model the speed at which a person falls. You could do this with Newton's second law, but that equation doesn't actually contain velocity:
+![](Pasted%20image%2020240227154101.png)
+But acceleration is the derivative of velocity. If we replace it like so:
+![](Pasted%20image%2020240227154211.png)
+We get a differential equation. by solving this, we can model the speed of a falling object in terms of its mass and the force applied to it.
+Taking the example further, let's expand the force term into gravity and drag:
+![](Pasted%20image%2020240227154409.png)
+If we solve this equation for v, we get a model. In this simple case, there is an analytical solution:
+![](Pasted%20image%2020240227154452.png)
+# Ordinary Differential Equations (ODEs)
+An **Ordinary Differential Equation** is a differential equation with a single independent variable. For example:
+![](Pasted%20image%2020240227154535.png)
+(Where x is the independent variable.)
+ODEs are described in terms of their **order**, which is the power of the highest derivative term. The previous example was a first order ODE, and here is a second order ODE:
+![](Pasted%20image%2020240227154646.png)
+
+# Linear and Nonlinear
+A linear function is (in the strict definition) a function such that:
+![](Pasted%20image%2020240227154747.png)
+In the informal sense, it's a function that looks like a line; if two points are equidistant in their x then they are also equidistant in their y.
+Inversely, a nonlinear function is any function that isn't linear. Examples include exponential functions, trigonometric functions, etc.
+Our previously devised falling-man model is a linear function. For contrast, here is a more advanced model that is nonlinear:
+![](Pasted%20image%2020240227155129.png)
+# Solving ODEs
+When we solve an ODE, we endeavour to find a function that satisfies the relationship between the dependent and independent variables. In other words, if we have the ODE
+![](Pasted%20image%2020240227155235.png)
+Then we want to find some function $y$ which differentiates to give $f(x)$. This is essentially the same problem as integration:
+![](Pasted%20image%2020240227155433.png)
+And similarly to integration, there is a family of solutions to any given differential equation. To find a specific solution, we have to use known information.
+## Initial/Boundary conditions
