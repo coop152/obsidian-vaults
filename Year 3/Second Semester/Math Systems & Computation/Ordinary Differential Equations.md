@@ -79,4 +79,4 @@ In the midpoint method, we use the gradient *at the midpoint* instead, which bet
 ![](Pasted%20image%2020240227212325.png)
 To perform this method:
 1. Use Euler's rule to predict $y$ at the midpoint
-$$y_{i+0.5} = f(x_i,y_i)$$
+$$y_{i+0.5} = f(x_i,y_i)\frac{h}{2}$$
