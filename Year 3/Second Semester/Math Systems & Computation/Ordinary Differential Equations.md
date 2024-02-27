@@ -36,4 +36,27 @@ With an unknown constant. We can calculate C using some known value - these know
 For example, if we know that at x=0, y=20, we can solve for C and get that C=20.
 ![](Pasted%20image%2020240227161542.png)
 ## Initial value problems
-If all of the auxilliary information is provided at the same point (for example, t=0 where t is the independent variable) then the problem is said to be an *initial value problem* (also known as *propagation problem*). We find the solution by marching forward in time from this starting point.
+If all of the auxilliary information is provided at the same point (for example, t=0 where t is the independent variable) then the problem is said to be an *initial value problem* (also known as *propagation problem*). We find the solution by marching forward in time from this starting point. Sometimes, we may be able to find an analytical solution to this kind of problem.
+## Analytical solutions
+As previously seen, solving an ODE that has an analytical solution is trivial. Let's investigate this example:
+![](Pasted%20image%2020240227162923.png)
+From this description we glean this information:
+- When $t = 0$, $T = 100$. This is our initial condition.
+- We are trying to model temperature change. This allows us to choose an appropriate equation, in this case **Newton's law of cooling**:
+![](Pasted%20image%2020240227163123.png)
+- After 10 minutes, the temperature drops from the initial 100 to 60.
+
+We start by solving our chosen equation normally:
+![](Pasted%20image%2020240227163410.png)
+Now we can evaluate it at our initial condition to find the value of our unknown constant $A$:
+![](Pasted%20image%2020240227163438.png)
+Now we can calculate our decay rate, using the fact that temperature drops from 100 to 60 after 10 minutes:
+![](Pasted%20image%2020240227163555.png)
+Giving us our solution. Now we can answer the question: How long before closing time should the soup be finished in order to be 20 by closing time?
+Find t when T=20:
+![](Pasted%20image%2020240227163705.png)
+And our answer is 37.4 minutes.
+This is the solution plotted:
+![](Pasted%20image%2020240227163923.png)
+## Numeric solutions
+For complicated ODEs and large systems of ODEs, finding an analytical solution is often prohibitive or even impossible. 
