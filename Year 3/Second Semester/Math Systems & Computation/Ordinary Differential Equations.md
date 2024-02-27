@@ -92,3 +92,12 @@ Another method with similarly improved accuracy is Heun's method. Instead of est
 To perform this method:
 ![](Pasted%20image%2020240227223329.png)
 ![](Pasted%20image%2020240227223341.png)
+The results of Heun's method are similarly closer to the analytical solution.
+![](Pasted%20image%2020240227224047.png)
+## Order accuracy
+Euler's method is **1st order accurate**: If the function being solved is linear, then the result of Euler's method will be numerically identical to the analytical solution. If the order is higher then it is only an approximation.
+The midpoint method and Heun's method are both **2nd order accurate**: If the function being solved is quadratic or lesser, then the result of these methods will be numerically identical to the analytical solution, else it is only an approximation.
+For example, here is a second order ODE:
+![](Pasted%20image%2020240227224419.png)
+and here are the results of the three methods:
+![](Pasted%20image%2020240227224432.png)
