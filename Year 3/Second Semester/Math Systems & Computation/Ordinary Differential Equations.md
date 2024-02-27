@@ -80,5 +80,7 @@ In the midpoint method, we use the gradient *at the midpoint* instead, which bet
 To perform this method:
 1. Use Euler's rule to predict $y$ at the midpoint
 $$y_{i+0.5} = f(x_i,y_i)\frac{h}{2}$$
-2. Predict the slope at that midpoint
-$$$$
+2. Predict the slope at the midpoint based on that
+$$y^{'}_{i+0.5} = f(x_{i+0.5}, y_{i+0.5})$$
+3. Use the slope to extrapolate to $x_{i+1}$
+$$y_{i+1} = y_i + f(x_{i+0.5}, y_{i+0.5})h$$
