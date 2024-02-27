@@ -90,6 +90,5 @@ The results of this method are much closer to an analytical solution.
 ### Heun's Method
 Another method with similarly improved accuracy is Heun's method. Instead of estimating a midpoint and then finding the slope there like the midpoint method, it finds the slope at the current step and the next so that it can take an average of them.
 To perform this method:
-1. Use Euler's method to find the slope at the first step:
-$$y^{'}_i=f(x_i,y_i)$$
-2. Use this slope to predict $y_{i+1}$
+![](Pasted%20image%2020240227223329.png)
+![](Pasted%20image%2020240227223341.png)
