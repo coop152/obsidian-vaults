@@ -27,5 +27,13 @@ When we solve an ODE, we endeavour to find a function that satisfies the relatio
 ![](Pasted%20image%2020240227155235.png)
 Then we want to find some function $y$ which differentiates to give $f(x)$. This is essentially the same problem as integration:
 ![](Pasted%20image%2020240227155433.png)
-And similarly to integration, there is a family of solutions to any given differential equation. To find a specific solution, we have to use known information.
 ## Initial/Boundary conditions
+Similarly to integration, there is a family of solutions to any given differential equation. To find a specific solution, we have to use known information. Consider the example:
+![](Pasted%20image%2020240227161023.png)
+We can solve this analytically by integrating, but the solution is:
+![](Pasted%20image%2020240227161038.png)
+With an unknown constant. We can calculate C using some known value - these known values are called *initial conditions* and *boundary conditions*.
+For example, if we know that at x=0, y=20, we can solve for C and get that C=20.
+![](Pasted%20image%2020240227161542.png)
+## Initial value problems
+If all of the auxilliary information is provided at the same point (for example, t=0 where t is the independent variable) then the problem is said to be an *initial value problem* (also known as *propagation problem*). We find the solution by marching forward in time from this starting point.
