@@ -59,4 +59,14 @@ And our answer is 37.4 minutes.
 This is the solution plotted:
 ![](Pasted%20image%2020240227163923.png)
 ## Numeric solutions
-For complicated ODEs and large systems of ODEs, finding an analytical solution is often prohibitive or even impossible. 
+For complicated ODEs and large systems of ODEs, finding an analytical solution is often prohibitive or even impossible. In this case, we reformulate the problem of solving them into an arithmetic problem. 
+
+### Euler's Method
+Returning to the previous example, we want to solve this equation:
+![](Pasted%20image%2020240227165244.png)
+Euler's method says that we can *predict* the value of $T(x_{i+1})$ based on the value of $T(x_i)$ using the derivative:
+![](Pasted%20image%2020240227165524.png)
+![](Pasted%20image%2020240227165649.png)
+We repeatedly apply Euler's method, finding the value of T for each t (according to our step size.)
+![](Pasted%20image%2020240227165847.png)
+This is a **prediction**; each application of Euler's method creates a small amount of error, which accumulates as steps are taken.
