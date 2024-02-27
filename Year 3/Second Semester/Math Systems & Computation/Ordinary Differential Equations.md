@@ -101,3 +101,6 @@ For example, here is a second order ODE:
 ![](Pasted%20image%2020240227224419.png)
 and here are the results of the three methods:
 ![](Pasted%20image%2020240227224432.png)
+Midpoint and Heun are exact solutions, while Euler veers off.
+
+# CONTINUE WITH RUNGE KUTTA METHODS HERE
