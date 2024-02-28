@@ -37,7 +37,7 @@ For example, if we know that at x=0, y=20, we can solve for C and get that C=20.
 ![](Pasted%20image%2020240227161542.png)
 ## Initial value problems
 If all of the auxilliary information is provided at the same point (for example, t=0 where t is the independent variable) then the problem is said to be an *initial value problem* (also known as *propagation problem*). We find the solution by marching forward in time from this starting point. Sometimes, we may be able to find an analytical solution to this kind of problem.
-## Analytical solutions
+# Analytical solutions
 As previously seen, solving an ODE that has an analytical solution is trivial. Let's investigate this example:
 ![](Pasted%20image%2020240227162923.png)
 From this description we glean this information:
@@ -58,9 +58,9 @@ Find t when T=20:
 And our answer is 37.4 minutes.
 This is the solution plotted:
 ![](Pasted%20image%2020240227163923.png)
-## Numeric solutions
+# Numeric solutions
 For complicated ODEs and large systems of ODEs, finding an analytical solution is often prohibitive or even impossible. In this case, we reformulate the problem of solving them into an arithmetic problem. 
-### Euler's Method
+## Euler's Method
 Euler's method says that we can *predict* the value of $T(x_{i+1})$ based on the value of $T(x_i)$ using its derivative:
 ![](Pasted%20image%2020240227165524.png)
 ![](Pasted%20image%2020240227165649.png)
@@ -72,7 +72,7 @@ Here is an actual result of applying Euler's method to the Cook's dillema:
 ![](Pasted%20image%2020240227170552.png)
 You can see that even a step size of 60 seconds is reasonably accurate to the true solution, going a bit low as the target is approached, but a step size of 1 second gives a very good approximation.
 
-### Mid-point method
+## Mid-point method
 One of the issues that limits the accuracy of the Euler's method is that it uses the gradient at the beginning of the timestep to estimate the entire interval. If the rate of change is high, the gradient may have changed significantly by the next timestep, creating lots of error.
 ![](Pasted%20image%2020240227212030.png)
 In the midpoint method, we use the gradient *at the midpoint* instead, which better captures how the slope changes within the interval.
@@ -87,14 +87,14 @@ $$y_{i+1} = y_i + f(x_{i+0.5}, y_{i+0.5})h$$
 
 The results of this method are much closer to an analytical solution.
 ![](Pasted%20image%2020240227215906.png)
-### Heun's Method
+## Heun's Method
 Another method with similarly improved accuracy is Heun's method. Instead of estimating a midpoint and then finding the slope there like the midpoint method, it finds the slope at the current step and the next so that it can take an average of them.
 To perform this method:
 ![](Pasted%20image%2020240227223329.png)
 ![](Pasted%20image%2020240227223341.png)
 The results of Heun's method are similarly closer to the analytical solution.
 ![](Pasted%20image%2020240227224047.png)
-## Order accuracy
+# Order accuracy
 Euler's method is **1st order accurate**: If the function being solved is linear, then the result of Euler's method will be numerically identical to the analytical solution. If the order is higher then it is only an approximation.
 The midpoint method and Heun's method are both **2nd order accurate**: If the function being solved is quadratic or lesser, then the result of these methods will be numerically identical to the analytical solution, else it is only an approximation.
 For example, here is a second order ODE:
@@ -103,4 +103,4 @@ and here are the results of the three methods:
 ![](Pasted%20image%2020240227224432.png)
 Midpoint and Heun are exact solutions, while Euler veers off.
 
-# CONTINUE WITH RUNGE KUTTA METHODS HERE
+# Runge-Kutta methods
