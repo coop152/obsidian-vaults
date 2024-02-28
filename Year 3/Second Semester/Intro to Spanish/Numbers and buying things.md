@@ -61,6 +61,7 @@ No "y" between thousands, hundreds and tens
 | Ahí                    | There (usually used with ese/esa)                                  |
 | Allí                   | Over there                                                         |
 | Algo más?              | Anything else?                                                     |
+| Comprar                | to buy                                                             |
 e.g. "Tenden plantas?"  Do you sell plants?
 "Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
 
