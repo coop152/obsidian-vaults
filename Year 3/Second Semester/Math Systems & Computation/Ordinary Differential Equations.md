@@ -117,3 +117,6 @@ Ralston's method is a popular 2nd order RK method which achieves the minimum pos
 While it is the same order as the Midpoint method and Heun's method, it produces more accurate results:
 ![](Pasted%20image%2020240228124646.png)
 ## 4th order method (RK-4)
+Higher order RK methods can provide accurate results for higher order ODEs. A 4th order method can provide exact results for ODEs with quartic solutions and below.
+This is a commonly used 4th order RK method, sometimes known as the **classical 4th order RK method**:
+![](Pasted%20image%2020240228151523.png)
