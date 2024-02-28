@@ -1,15 +1,15 @@
 
-|     | Units  | Tens      | Hundreds      | Thousands |
-| --- | ------ | --------- | ------------- | --------- |
-| 1   | uno    | diez      | cien          | mil       |
-| 2   | dos    | viente    | doscientos    | dos mil   |
-| 3   | tres   | triente   | trescientos   | tres mil  |
-| 4   | cuatro | cuarenta  | cuatrocientos | etc...    |
-| 5   | cinco  | cincuenta | quinientos    |           |
-| 6   | seis   | sesenta   | seiscientos   |           |
-| 7   | siete  | setenta   | setecientos   |           |
-| 8   | ocho   | ochenta   | ochocientos   |           |
-| 9   | nueve  | noventa   | novecientos   |           |
+|     | Units  | Teens   | Tens      | Hundreds      | Thousands |
+| --- | ------ | ------- | --------- | ------------- | --------- |
+| 1   | uno    | once    | diez      | cien          | mil       |
+| 2   | dos    | doce    | viente    | doscientos    | dos mil   |
+| 3   | tres   | trece   | triente   | trescientos   | tres mil  |
+| 4   | cuatro | catorce | cuarenta  | cuatrocientos | etc...    |
+| 5   | cinco  | quince  | cincuenta | quinientos    |           |
+| 6   | seis   | die     | sesenta   | seiscientos   |           |
+| 7   | siete  |         | setenta   | setecientos   |           |
+| 8   | ocho   |         | ochenta   | ochocientos   |           |
+| 9   | nueve  |         | noventa   | novecientos   |           |
 
 
 # Math operators
