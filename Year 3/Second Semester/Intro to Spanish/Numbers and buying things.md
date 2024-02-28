@@ -51,6 +51,7 @@ No "y" between thousands, hundreds and tens
 | Tienen ...?/Venden...? | Do you have...?/Do you sell...?                                    |
 | Querer                 | to want (has a vowel change)                                       |
 | Quiero un...           | I would like a...                                                  |
+| Quería un...           | I wanted a... (uses a tense we don't learn)                        |
 | Puedo                  | I can                                                              |
 | Puedo ver...?          | Can i see...?                                                      |
 | Llevar                 | to take (in this context)                                          |
@@ -59,6 +60,7 @@ No "y" between thousands, hundreds and tens
 | Aquí                   | Here (usually used with este/a)                                    |
 | Ahí                    | There (usually used with ese/esa)                                  |
 | Allí                   | Over there                                                         |
+| Algo más?              | Anything else?                                                     |
 e.g. "Tenden plantas?"  Do you sell plants?
 "Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
 
