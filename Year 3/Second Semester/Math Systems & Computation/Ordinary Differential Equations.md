@@ -120,3 +120,5 @@ While it is the same order as the Midpoint method and Heun's method, it produces
 Higher order RK methods can provide accurate results for higher order ODEs. A 4th order method can provide exact results for ODEs with quartic solutions and below.
 This is a commonly used 4th order RK method, sometimes known as the **classical 4th order RK method**:
 ![](Pasted%20image%2020240228151523.png)
+Here are the results it produces, compared to Euler and the 2nd order methods:
+![](Pasted%20image%2020240228152020.png)
