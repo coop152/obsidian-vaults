@@ -104,3 +104,16 @@ and here are the results of the three methods:
 Midpoint and Heun are exact solutions, while Euler veers off.
 
 # Runge-Kutta methods
+The midpoint and Heun methods are part of a wider class of ODE solving methods called the *Runge-Kutta* (RK) methods. These methods are capable of achieving the accuracy of a Taylor series approach, without requiring the calculation of higher derivative terms.
+These methods fit the general form:
+![](Pasted%20image%2020240228124012.png)
+Where $\phi$ is the *increment function*, representing the slope over the interval $h$. For example, in the midpoint method $\phi(x_i,y_i,h) = f(x_{i+0.5}, y_{i+0.5})$.
+An nth order RK method takes the form:
+![](Pasted%20image%2020240228124225.png)
+(I don't think this really matters that much.)
+## Ralston's Method (RK-2)
+Ralston's method is a popular 2nd order RK method which achieves the minimum possible truncation error for a second order RK method. It is defined as:
+![](Pasted%20image%2020240228124412.png)
+While it is the same order as the Midpoint method and Heun's method, it produces more accurate results:
+![](Pasted%20image%2020240228124646.png)
+## 4th order method (RK-4)
