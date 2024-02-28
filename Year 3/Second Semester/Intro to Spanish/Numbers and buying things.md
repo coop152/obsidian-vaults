@@ -56,6 +56,9 @@ No "y" between thousands, hundreds and tens
 | Llevar                 | to take (in this context)                                          |
 | Me lo/la llevo.        | I'll take it. (lo/la is gendered according to thing you will take) |
 | Si, claro.             | Yes, of course.                                                    |
+| Aquí                   | Here (usually used with este/a)                                    |
+| Ahí                    | There (usually used with ese/esa)                                  |
+| Allí                   | Over there                                                         |
 e.g. "Tenden plantas?"  Do you sell plants?
 "Cuánto cuesta esta planta?" How much does this plant cost? (costar is an irregular verb)
 
