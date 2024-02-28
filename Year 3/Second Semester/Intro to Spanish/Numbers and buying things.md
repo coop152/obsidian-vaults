@@ -51,7 +51,7 @@ No "y" between thousands, hundreds and tens
 | Tienen ...?/Venden...? | Do you have...?/Do you sell...?                                    |
 | Querer                 | to want (has a vowel change)                                       |
 | Quiero un...           | I would like a...                                                  |
-| Pueder                 | I can                                                              |
+| Puedo                  | I can                                                              |
 | Puedo ver...?          | Can i see...?                                                      |
 | Llevar                 | to take (in this context)                                          |
 | Me lo/la llevo.        | I'll take it. (lo/la is gendered according to thing you will take) |
