@@ -23,4 +23,5 @@ Dependiente: Un bolígrafo cuesta 50 centimos. Estos cuadernos grande cuestan 4 
 Cliente: Vale. Me llevo un bolígrafo negro y un cuaderno pequeño, por favor.
 Dependiente: Si, claro. ¿Qué color de cuaderno quieres?
 Cliente: Azul.
-Dependiente: 
+Dependiente: Son 3 euros con 49 céntimos.
+Cliente: Aquí tienes
