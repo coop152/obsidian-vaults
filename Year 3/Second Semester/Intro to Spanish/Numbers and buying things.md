@@ -10,7 +10,11 @@
 | 7   | siete  |           | setenta   | setecientos   |           |
 | 8   | ocho   |           | ochenta   | ochocientos   |           |
 | 9   | nueve  |           | noventa   | novecientos   |           |
-
+Construction rules:
+- for the 20s, don't add any connective between 20 and the unit (e.g. 23 = veintedos)
+- for 30-99, add a connective (e.g. 53 = cincuenta y tres)
+- to connect hundreds to a number, dont use a connective (e.g. 542 = quinientos cuarenta y dos). If it's in the 100's, transform cien to ciento (e.g. 123 = ciento veintitres)
+- to connect thousands to a number, 
 
 # Math operators
 
