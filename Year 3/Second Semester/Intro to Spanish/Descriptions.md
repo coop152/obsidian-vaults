@@ -99,11 +99,3 @@ E.g. for hair, eyes...
 | Bigote | Mustache | Can also use tener for this |
 | Barba | Beard | Can also use tener for this |
 
-# Deberes 3
-Hola, Paco:
-Muchas gracias por tu correo. Me alegra saber que vienes a mi casa el próximo verano.
-Voy a hablarte de mi familia. Está formada por mi, mis padres y mi hermano.
-Mi padre se llama Andrew, y tiene unos 50 años. Tiene el pelo largo, liso y castaño, y ojos marron. Es un poco bajo y gordo (como todos en mi familia). Lleva gafas para leer. Es divertido, pero difícil a veces.
-Mi madre se llama Julie, y también tiene unos 50 años. Tiene el pelo medio largo y castaño, y ojos verde. Generalmente lleva lentes de contacto, pero tambien tiene gafas. Es trabajadora y estricta.
-Mi hermano se llama Connor, y tiene 26 años. Tiene el pelo corto y negro, ojos marron, y una barba. Es la único persona alta en mi familia, y lleva gafas. Es muy simpático y inteligente, pero un poco perezoso.
-

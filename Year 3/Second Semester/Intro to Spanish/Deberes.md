@@ -16,10 +16,18 @@ Para mi amigo:
 Mi amiga se llama Elizabeth Holmes. No trabaja, y estudia arte en la Manchester Metropolitan University. También vive en Rochdale, al oeste de Kirkholt en Castleton. La dirección de su casa es Croydon Ave 3, Castleton. Es inglés, tiene 21 años y solo habla inglés. Su número teléfono es 07511 845196, y su correo electrónico es ash00x@gmail.co.uk. En su tiempo libre dibuja, ve películas, y juega a videojuegos.
 
 # Deberes 3
+Hola, Paco:
+Muchas gracias por tu correo. Me alegra saber que vienes a mi casa el próximo verano.
+Voy a hablarte de mi familia. Está formada por mi, mis padres y mi hermano.
+Mi padre se llama Andrew, y tiene unos 50 años. Tiene el pelo largo, liso y castaño, y ojos marron. Es un poco bajo y gordo (como todos en mi familia). Lleva gafas para leer. Es divertido, pero difícil a veces.
+Mi madre se llama Julie, y también tiene unos 50 años. Tiene el pelo medio largo y castaño, y ojos verde. Generalmente lleva lentes de contacto, pero tambien tiene gafas. Es trabajadora y estricta.
+Mi hermano se llama Connor, y tiene 26 años. Tiene el pelo corto y negro, ojos marron, y una barba. Es la único persona alta en mi familia, y lleva gafas. Es muy simpático y inteligente, pero un poco perezoso.
+
+# Deberes 4
 Cliente: Hola. ¿Tienen papelería?
-Dependiente: Si, aqui están. Tenemos cuadernos, bolígrafos, hojas de papel...
+Dependiente: Si, aquí están. Tenemos cuadernos, bolígrafos, hojas de papel...
 Cliente: ¿Cuanto cuestan esos cuadernos y bolígrafos?
-Dependiente: Un bolígrafo cuesta 50 centimos. Estos cuadernos grande cuestan 4 euros con 99 céntimos, y estos cuadernos pequeño cuestan 2 euros con 99 céntimos.
+Dependiente: Un bolígrafo cuesta 50 céntimos. Estos cuadernos grande cuestan 4 euros con 99 céntimos, y estos cuadernos pequeño cuestan 2 euros con 99 céntimos.
 Cliente: Vale. Me llevo un bolígrafo negro y un cuaderno pequeño, por favor.
 Dependiente: Si, claro. ¿Qué color de cuaderno quiere?
 Cliente: Azul.
