@@ -16,3 +16,5 @@ Para mi amigo:
 Mi amiga se llama Elizabeth Holmes. No trabaja, y estudia arte en la Manchester Metropolitan University. También vive en Rochdale, al oeste de Kirkholt en Castleton. La dirección de su casa es Croydon Ave 3, Castleton. Es inglés, tiene 21 años y solo habla inglés. Su número teléfono es 07511 845196, y su correo electrónico es ash00x@gmail.co.uk. En su tiempo libre dibuja, ve películas, y juega a videojuegos.
 
 # Deberes 3
+Cliente: 
+Dependiente:
