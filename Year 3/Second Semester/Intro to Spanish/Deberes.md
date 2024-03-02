@@ -35,4 +35,4 @@ Dependiente: ¿Algo más?
 Cliente: No, solo esos.
 Dependiente: Son 3 euros con 49 céntimos.
 Cliente: Aquí tienes un billete de 5 euros.
-Dependiente: Aquí esta su cambio.
+Dependiente: Gracias, aquí esta su cambio.
