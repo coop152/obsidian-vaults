@@ -21,7 +21,10 @@ Dependiente: Si, aqui están. Tenemos cuadernos, bolígrafos, hojas de papel...
 Cliente: ¿Cuanto cuestan esos cuadernos y bolígrafos?
 Dependiente: Un bolígrafo cuesta 50 centimos. Estos cuadernos grande cuestan 4 euros con 99 céntimos, y estos cuadernos pequeño cuestan 2 euros con 99 céntimos.
 Cliente: Vale. Me llevo un bolígrafo negro y un cuaderno pequeño, por favor.
-Dependiente: Si, claro. ¿Qué color de cuaderno quieres?
+Dependiente: Si, claro. ¿Qué color de cuaderno quiere?
 Cliente: Azul.
+Dependiente: ¿Algo más?
+Cliente: No, solo esos.
 Dependiente: Son 3 euros con 49 céntimos.
-Cliente: Aquí tienes
+Cliente: Aquí tienes un billete de 5 euros.
+Dependiente: Aquí esta su cambio.
