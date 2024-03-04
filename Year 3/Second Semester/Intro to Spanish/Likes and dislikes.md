@@ -36,6 +36,7 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | A mí tampoco. | Me neither. (agreeing to a negative)         |
 | A mí no.      | I don't. (disagreeing with the other person) |
 | A mí sí.      | I do. (disagreeing with the other person)    |
+
 # Actions
 
 | Spanish | English                                                            |
