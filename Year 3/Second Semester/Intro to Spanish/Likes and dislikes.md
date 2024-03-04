@@ -5,6 +5,7 @@
 | Me gusta el vino           | I like wine            |
 | Me gustan los caramelos    | I like sweets          |
 | Te gustan los ordenadores? | Do you like computers? |
+| A te?                      | and you?               |
 You always use third person for gustar, and prefix it with an object pronoun. It's less like "I like the thing" and more like "the thing pleases me". In that vein, you choose gusta vs gustan based on if the thing you like is plural.
 
 # Indirect object pronouns
