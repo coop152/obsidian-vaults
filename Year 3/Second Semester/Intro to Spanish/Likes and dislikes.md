@@ -17,3 +17,20 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | 1st pl. | nos     | to us/for us           |
 | 2nd pl. | os      | to you lot/for you lot |
 | 3rd pl. | les     | to them/for them       |
+# Actions
+
+| Spanish | English                                                            |
+| ------- | ------------------------------------------------------------------ |
+| Salir   | To go out (e.g. to literally leave a room, to go out with friends) |
+| leer    | To read                                                            |
+| chatear | To chat                                                            |
+| Viajar  | To travel                                                          |
+|         |                                                                    |
+
+# Nouns
+
+| Spanish        | English    |
+| -------------- | ---------- |
+| las discotecas | clubs      |
+| el cine        | the cinema |
+|                |            |
