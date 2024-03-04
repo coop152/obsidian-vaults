@@ -50,6 +50,7 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | Ir      | to go                                                              |
 | Invitar | to invite                                                          |
 | Nadar   | to swim                                                            |
+| Fumar   | to smoke                                                           |
 
 # Nouns
 
