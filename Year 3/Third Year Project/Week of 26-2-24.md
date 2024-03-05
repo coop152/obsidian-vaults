@@ -1,0 +1,2 @@
+- Wrote some very quick and dirty code for the "delete everything before date" feature.
+	- 
