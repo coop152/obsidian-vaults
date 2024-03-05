@@ -88,12 +88,12 @@ __clone:
 ```
 By consulting the calling convention (System V ABI, in Linux's case) we can determine which of these registers is which argument:
 
-|Argument number|x86-64 register|
-|---|---|
-|1|`%rdi`|
-|2|`%rsi`|
-|3|`%rdx`|
-|4|`%rcx`|
-|5|`%r8`|
-|6|`%r9`|
-Any arguments after these are passed on the stack
+| Argument number | x86-64 register | __clone argument |
+| --------------- | --------------- | ---------------- |
+| 1               | `%rdi`          | start            |
+| 2               | `%rsi`          | stack            |
+| 3               | `%rdx`          | flags            |
+| 4               | `%rcx`          | args             |
+| 5               | `%r8`           |                  |
+| 6               | `%r9`           |                  |
+Any arguments after these are passed on the stack, and the return value is held in `%rax`.
