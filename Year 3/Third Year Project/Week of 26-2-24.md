@@ -2,7 +2,7 @@
 	- `ical_deleteallbefore` in `actions.tcl`
 	- `dg_date` in `tcllib`, which required some interesting extra work in the form of `update_day_maximum` to keep the upper bound of the day selector matched to the month and year
 	- Added the Important flag to items, which required modifying the C++ and adding some new interop calls.
-	- Modified `ItemListing` (the thing that lists items in a certain range) to have an optional `hide_important`
+	- Modified `ItemListing` (the thing that lists items in a certain range) to have an optional `include_important` argument (which defaults to 1). This is used by `ical_deleteallbefore` to hide important items from the listing (since they won't be deleted)
 - `ical_deleteallbefore` is a bit of a monolith, and has the deleting code duplicated. I'm probably gonna have to separate it out into like three functions: `ical_deleteallbefore` the action, `deletelist` which deletes a list of items safely (this was the duplicated code), and `promptdeleteall` (or something) which performs the whole prompt rigmarole (which will also be required when autopurging)
 - for the auto-purge feature, i have so far made the selector dialogue that sets the auto-purge delay (`dg_duration` and `ical_autopurgesettings`) and have stored this in the calendar (see changes related to optionmap in the C++).
 - I also apparently cleaned up the file dialogue, which had a bunch of extra code lying around from before i entirely replaced it with tk_getOpenFile (aka the native file picker)
