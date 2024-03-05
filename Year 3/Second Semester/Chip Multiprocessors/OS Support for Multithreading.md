@@ -34,6 +34,7 @@ child thread, pid: 12674, tid: 12676
 Notice that each thread reports the same PID, but a different TID. The parent thread's TID is also equal to its PID, indicating it is that process' original thread.
 
 # Creating Threads
+## The syscall
 Programs create processes and threads using the `clone` system call. It has this signature:
 ```c
 long clone(unsigned long flags, void *stack, int *parent_tid, int *child_tid,
@@ -47,3 +48,52 @@ When we use it to create a new **thread**, which shares the parent's address spa
 - `parent_tid` and `child_tid` are pointers to variables where the corresponding TIDs will be stored.
 
 It is obvious why each thread needs its own stack, but what is the **thread local storage**? This area of memory holds a special type of global variables that have **per-thread values**. If we want to define such a variable, we prefix the declaration with the `__thread` keyword. This is important for things such as `errno`, which has to be global but must also have a different value for each thread.
+
+## How pthreads uses it
+Let's investigate how `pthread_create` utilises the `clone` syscall. We investigate the Musl C stdlib, because Glibc is convoluted as fuck.
+Musl libc's `pthread_create` implementation performs the following (simplified) steps:
+1. Sets up the flags with `CLONE_VM | CLONE_THREAD`, among other things. These two flags are the most important ones, as they indicate that we want a thread as opposed to a process, and that we don't want to make a copy of the parent's address space.
+2. Allocates space for the new thread's stack using `mmap` (which is the syscall that asks for memory from the kernel, used by malloc in C or new in C++ under the hood.) It also creates a TLS area using `__copy_tls`, which is pointed to by the variable `new`.
+3. Puts some data onto the newly created stack. Specifically, it places the code entry point for the function that the new thread will execute, along with the arguments that it will take.
+4. Calls the `clone` wrapper function `__clone`:
+```c
+ret = __clone(start, stack, flags, args, &new->tid, TP_ADJ(new), &__thread_list_lock);
+```
+This wrapper function will perform the `clone` syscall for you. `clone`'s implementation is quite architecture specific, so it is written in assembly. Here is the x86_64 implementation:
+```asm
+__clone:
+	xor %eax,%eax     // clear eax
+	mov $56,%al       // clone's syscall id in eax
+	mov %rdi,%r11     // entry point in r11
+	mov %rdx,%rdi     // flags in rdi
+	mov %r8,%rdx      // parent_tid in rdx
+	mov %r9,%r8       // TLS in r8
+	mov 8(%rsp),%r10
+	mov %r11,%r9      // entry point in r9
+	and $-16,%rsi
+	sub $8,%rsi       // stack in rsi
+	mov %rcx,(%rsi)   // push thread args
+	syscall           // actual call to clone
+	test %eax,%eax    // check parent/child
+	jnz 1f            // parent jump
+	xor %ebp,%ebp     // child clears base pointer
+	pop %rdi          // thread args in rdi
+	call *%r9         // jump to entry point
+	mov %eax,%edi     // ain't supposed to return
+	xor %eax,%eax     // here, something's wrong
+	mov $60,%al
+	syscall           // exit (60 is exit's id)
+	hlt
+1:  ret               // parent returns
+```
+By consulting the calling convention (System V ABI, in Linux's case) we can determine which of these registers is which argument:
+
+|Argument number|x86-64 register|
+|---|---|
+|1|`%rdi`|
+|2|`%rsi`|
+|3|`%rdx`|
+|4|`%rcx`|
+|5|`%r8`|
+|6|`%r9`|
+Any arguments after these are passed on the stack
