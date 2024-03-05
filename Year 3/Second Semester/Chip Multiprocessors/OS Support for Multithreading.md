@@ -34,7 +34,7 @@ child thread, pid: 12674, tid: 12676
 Notice that each thread reports the same PID, but a different TID. The parent thread's TID is also equal to its PID, indicating it is that process' original thread.
 
 # Creating Threads
-## The syscall
+## The clone syscall
 Programs create processes and threads using the `clone` system call. It has this signature:
 ```c
 long clone(unsigned long flags, void *stack, int *parent_tid, int *child_tid,
@@ -49,7 +49,7 @@ When we use it to create a new **thread**, which shares the parent's address spa
 
 It is obvious why each thread needs its own stack, but what is the **thread local storage**? This area of memory holds a special type of global variables that have **per-thread values**. If we want to define such a variable, we prefix the declaration with the `__thread` keyword. This is important for things such as `errno`, which has to be global but must also have a different value for each thread.
 
-## How pthreads uses it
+## How pthreads uses clone
 Let's investigate how `pthread_create` utilises the `clone` syscall. We investigate the Musl C stdlib, because Glibc is convoluted as fuck.
 Musl libc's `pthread_create` implementation performs the following (simplified) steps:
 1. Sets up the flags with `CLONE_VM | CLONE_THREAD`, among other things. These two flags are the most important ones, as they indicate that we want a thread as opposed to a process, and that we don't want to make a copy of the parent's address space.
@@ -88,15 +88,64 @@ __clone:
 ```
 By consulting the calling convention (System V ABI, in Linux's case) we can determine which of these registers is which argument:
 
-| Argument number | x86-64 register | `clone` argument | `__clone` argument |
-| --------------- | --------------- | ---------------- | ------------------ |
-| 1               | `%rdi`          | flags            |                    |
-| 2               | `%rsi`          | stack            |                    |
-| 3               | `%rdx`          | \*parent_tid     |                    |
-| 4               | `%rcx`          | \*child_tid      |                    |
-| 5               | `%r8`           | tls              |                    |
-| 6               | `%r9`           |                  |                    |
+| Argument number | x86-64 register | `clone` argument | `__clone` argument    |
+| --------------- | --------------- | ---------------- | --------------------- |
+| 1               | `%rdi`          | flags            | start                 |
+| 2               | `%rsi`          | stack            | stack                 |
+| 3               | `%rdx`          | \*parent_tid     | flags                 |
+| 4               | `%rcx`          | \*child_tid      | args                  |
+| 5               | `%r8`           | tls              | `&new->tid`           |
+| 6               | `%r9`           |                  | `TP_ADJ(new)`         |
+| 7               | (in the stack)  |                  | `&__thread_list_lock` |
 Any arguments after these are passed on the stack, and the return value is held in `%rax`.
-(This section about clone's arguments is kinda confusing and contradictory so ill just gloss over it.)
 
-Both the parent and child return from `clone` concurrently. If `clone` returns 0 then we are in the child, and if it returns a positive integer then we are in the parent. `__clone` checks this return value, and if it's the parent thread then it returns to the calling code. The child thread jumps to the given entry point and executes from there.
+Both the parent and child return from `clone` concurrently, leaving two threads executing `__clone`. If `clone` returned 0 then we are in the child, and if it returned a positive integer then we are in the parent. `__clone` checks this return value, and if it's the parent thread then it returns to the calling code. The child thread jumps to the given entry point and executes from there.
+## How the kernel implements clone
+When the `syscall` instruction is used in `__clone` to invoke the `clone` syscall, execution is handed over to the kernel. The kernel looks in `%rax` and sees the syscall id for `clone`, then calls a chain of functions (`sys_clone` -> `kernel_clone` -> `copy_process`) ending in `copy_process`. This function implements the duplication of the parent, calling various functions that check the given flags to decide what needs to be copied and what needs to be shared. For example, this (simplified) function handles the address space:
+```c
+static int copy_mm(unsigned long clone_flags, struct task_struct *tsk) {
+  /* ... */
+    if (clone_flags & CLONE_VM) {
+        mmget(oldmm);
+        mm = oldmm;
+    } else
+        mm = dup_mm(tsk, current->mm);
+  /* ... */
+}
+```
+If the flags have `CLONE_VM` set, then the structure `mm` (which represents the address space) is simply reused, causing the address space to be shared. If it isn't, for example when creating a new process, `dup_mm` is called to duplicate it. 
+## What happens after clone is called
+When we return to user space in the child thread, we jump to this Musl function:
+```c
+static int start(void *p) {
+  struct start_args *args = p;
+  /* ... */
+    __pthread_exit(args->start_func(args->start_arg));
+}
+```
+This sets up the arguments and runs the desired function, exiting the thread when it returns.
+# Locks in the kernel
+Under the hood, lock access primitives such as `pthread_mutex_lock` are implemented in the kernel. This is for good reason; the kernel is the entity with the ability to put threads to sleep and wake them up.
+![](Pasted%20image%2020240305145531.png)
+Historically, each lock operation (even take and release) required a system call, for example with System V semaphores. However, these user/kernel world switches are **expensive** and the overhead is not negligible. It can seriously impact performance, especially in scenarios where a lock isn't contended:
+![](Pasted%20image%2020240305145838.png)
+## Futex
+The **futex** (Fast User space muTEX) is a low-level synchronisation primitive which takes advantage of the fact that we only need threads to sleep (and therefore only need the kernel to get involved) when a lock is contended. it can be used to build locks that are accessed partially in userspace using atomic operations when there is no contention. There is another part of the lock in kernel space, which is used when there is contention and threads need to be put to sleep.
+A futex relies on a 32-bit variable in user space, which is accessed by threads trying to take/release the lock using atomic operations. When it is equal to zero, the lock is free:
+![](Pasted%20image%2020240305150541.png)
+In this state, a thread that wants to take the lock can try to do so with an atomic CAS. If it succeeds, the thread got the lock without needing to involve the kernel at all, and it can proceed with it's critical section:
+![](Pasted%20image%2020240305150638.png)
+If another thread tries to take the lock with another CAS, it will fail. In that case the thread needs   to go to sleep, so the OS kernel must be involved. This system call is named `futex`.
+![](Pasted%20image%2020240305150753.png)
+The kernel double-checks to see if the lock is still taken with a CAS of its own, and if it is then it puts the thread to sleep by putting it in the **wait queue**.
+![](Pasted%20image%2020240305150923.png)
+Other threads trying to take the lock will play out similarly:
+![](Pasted%20image%2020240305150948.png)
+When the thread with the lock wants to release it, it uses a regular store instruction to reset the user-space variable to zero. Vitally, it also makes a `futex` system call to alert the OS that one of the waiting threads can wake up.
+![](Pasted%20image%2020240305151129.png)
+The now-awake thread will try to take the lock with a CAS, and succeed:
+![](Pasted%20image%2020240305151152.png)
+And so on.
+Note that in this simple example implementation, a thread releasing a lock will always have to make a syscall, even if there are no waiters. This is because there is no indication of how many waiters there are in user space.
+![](Pasted%20image%2020240305151410.png)
+An optimised implementation would remedy this by, for example, encoding the number of waiters in the 32-bit user land variable.
