@@ -99,4 +99,4 @@ By consulting the calling convention (System V ABI, in Linux's case) we can dete
 Any arguments after these are passed on the stack, and the return value is held in `%rax`.
 (This section about clone's arguments is kinda confusing and contradictory so ill just gloss over it.)
 
-Both the parent and child return from `clone` concurrently. If `clone` returns 0 then we are in the child, and if it returns a positive integer then we are in the parent. `__clone` checks this return value, and if it's the parent thread then it continues
+Both the parent and child return from `clone` concurrently. If `clone` returns 0 then we are in the child, and if it returns a positive integer then we are in the parent. `__clone` checks this return value, and if it's the parent thread then it returns to the calling code. The child thread jumps to the given entry point and executes from there.
