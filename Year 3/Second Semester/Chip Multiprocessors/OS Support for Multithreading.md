@@ -88,12 +88,15 @@ __clone:
 ```
 By consulting the calling convention (System V ABI, in Linux's case) we can determine which of these registers is which argument:
 
-| Argument number | x86-64 register | __clone argument |
-| --------------- | --------------- | ---------------- |
-| 1               | `%rdi`          | start            |
-| 2               | `%rsi`          | stack            |
-| 3               | `%rdx`          | flags            |
-| 4               | `%rcx`          | args             |
-| 5               | `%r8`           |                  |
-| 6               | `%r9`           |                  |
+| Argument number | x86-64 register |
+| --------------- | --------------- |
+| 1               | `%rdi`          |
+| 2               | `%rsi`          |
+| 3               | `%rdx`          |
+| 4               | `%rcx`          |
+| 5               | `%r8`           |
+| 6               | `%r9`           |
 Any arguments after these are passed on the stack, and the return value is held in `%rax`.
+(This section about clone's arguments is kinda confusing and contradictory so ill just gloss over it.)
+
+Both the parent and child return from `clone` concurrently. If `clone` returns 0 then we are in the child, and if it returns a positive integer then we are in the parent. `__clone` checks this return value, and if it's the parent thread then it continues
