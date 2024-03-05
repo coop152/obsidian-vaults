@@ -1,2 +1,4 @@
-- Wrote some very quick and dirty code for the "delete everything before date" feature.
+- Wrote some very quick and dirty code for the "delete everything before date" feature. In total, i implemented these things for this feature to work:
+	- `ical_deleteallbefore` in `actions.tcl`
+	- `dg_date` in `tcllib`, which required some interesting extra work in the form of `update_day_maximum` to keep the upper bound of the day selector matched to the month and year
 	- 
