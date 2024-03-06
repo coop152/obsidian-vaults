@@ -1,20 +1,22 @@
 
-| Spanish                                | English                                              |
-| -------------------------------------- | ---------------------------------------------------- |
-| Gustar                                 | To like                                              |
-| Interesar                              | To be interested                                     |
-| Encantar                               | To love                                              |
-| Me gusta el vino                       | I like wine                                          |
-| Me gustan los caramelos                | I like sweets                                        |
-| Te gustan los ordenadores?             | Do you like computers?                               |
-| Y a ti?                                | and you?                                             |
-| A Sara le gusta fútbol.                | Sara likes football.                                 |
-| Me interesa el literatura              | I'm interested in literature.                        |
-| Me encantan las motos                  | I love motorbikes.                                   |
-| Nos gusta mucho ir de excursión        | We don't like going on trips much                    |
-| Le gustan bastante los coches          | They quite like cars.                                |
-| Os gustan un poco las películas        | You lot like movies a bit.                           |
-| Qué te gusta hacer en tu tiempo libre? | What do you like to do in your free time?            |
+| Spanish                                | English                                   |
+| -------------------------------------- | ----------------------------------------- |
+| Gustar                                 | To like                                   |
+| Interesar                              | To be interested                          |
+| Encantar                               | To love                                   |
+| Me gusta el vino                       | I like wine                               |
+| Me gustan los caramelos                | I like sweets                             |
+| Te gustan los ordenadores?             | Do you like computers?                    |
+| Y a ti?                                | and you?                                  |
+| A Sara le gusta fútbol.                | Sara likes football.                      |
+| Me interesa el literatura              | I'm interested in literature.             |
+| Me encantan las motos                  | I love motorbikes.                        |
+| Nos gusta mucho ir de excursión        | We don't like going on trips much         |
+| Le gustan bastante los coches          | They quite like cars.                     |
+| Os gustan un poco las películas        | You lot like movies a bit.                |
+| Qué te gusta hacer en tu tiempo libre? | What do you like to do in your free time? |
+| Tenemos los mismos gustos              | We have the same preferences              |
+| Tenemos los gustos diferentes          | We have different preferences             |
 
 You always use third person for gustar/interesar/encantar, and prefix it with an object pronoun. It's less like "I like the thing" and more like "the thing pleases me". In that vein, you choose gusta vs gustan based on if the thing you like is plural.
 

@@ -30,3 +30,12 @@
 | Bien | Good |  |
 | Los Servicios | Toilets | Like, public toilets |
 |  |  |  |
+# Sentence structure stuff
+ 
+
+| Spanish | English |
+| ------- | ------- |
+| Además  | Also    |
+| tambien | too     |
+| tampoco | neither |
+|         |         |
