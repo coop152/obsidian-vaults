@@ -74,4 +74,13 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | Me gusta ir al cine con mí amigos | I like to go to the cinema with my friends |
 | No me gusta mucho el deportes     | I don't like sports very much              |
 | Me interesa un poco leer          | I'm a bit interested in reading            |
- 
+
+# Question words
+
+| Spanish | English  |
+| ------- | -------- |
+| Cómo    | How      |
+| Que     | What     |
+| Cuando  | When     |
+| Cuanto  | How much |
+|         |          |
