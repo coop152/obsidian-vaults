@@ -124,7 +124,7 @@ static int start(void *p) {
 }
 ```
 This sets up the arguments and runs the desired function, exiting the thread when it returns.
-# Locks in the kernel
+# Locking and the kernel
 Under the hood, lock access primitives such as `pthread_mutex_lock` are implemented in the kernel. This is for good reason; the kernel is the entity with the ability to put threads to sleep and wake them up.
 ![](Pasted%20image%2020240305145531.png)
 Historically, each lock operation (even take and release) required a system call, for example with System V semaphores. However, these user/kernel world switches are **expensive** and the overhead is not negligible. It can seriously impact performance, especially in scenarios where a lock isn't contended:
@@ -178,3 +178,56 @@ The lock taking function `my_mutex_lock` performs a CAS using `atomic_compare_ex
 
 The `mutex_unlock` operation uses an atomic store to set the user space variable to 0, indicating it is free. it then calls `futex`, this time with the `FUTEX_WAKE` flag to indicate to the kernel that it can wake up `1` waiter (if there is one).
 ## Performance comparison
+When comparing this basic futex-based implementation to `pthread_mutex_lock` and System V semaphores, we get performance something like this:
+```bash
+System V semaphores:
+./lock-bench-sysv-semaphores
+5 threads ran a total of 500000 crit. sections in 1.262348 seconds, throughput: 0.396087 cs/usec
+Pthread_mutex (futex):
+./lock-bench-futex
+5 threads ran a total of 500000 crit. sections in 0.020067 seconds, throughput: 24 cs/usec
+custom futex lock:
+./lock-bench-custom-futex
+5 threads ran a total of 500000 crit. sections in 0.069710 seconds, throughput: 7 cs/usec
+```
+So clearly the user/kernel context swaps impart a large performance penalty, as shown by the System V semaphore's very poor performance.
+
+## Concurrency in the kernel
+Historically, Linux had a big **kernel lock** that serialised the execution of all kernel code. This was slowly removed over time (for obvious performance reasons), and this removal was finalised in v2.6.39 (2011), making the kernel a **highly concurrent, shared memory program:**
+![](Pasted%20image%2020240306174720.png)
+Things that can run concurrently in the kernel include:
+- Syscalls issued by applications running on different cores
+- Exceptions or hardware interrupts which interrupt the kernel's execution flow
+- Kernel threads (some code in kernel space just uses threads, like a regular program)
+- Kernel pre-emption (?)
+
+For this reason, various locking mechanisms are available for use in kernel code.
+### Kernel mode locks
+Linux offers these kinds of locks:
+- **Mutexes**, which implement sleep-based waiting. Only one thing can hold a mutex at a time.
+- **Semaphores**, which are like mutexes but can be held by more than one thing at a time.
+- **Spinlocks**, which are like mutexes but they busy wait instead of sleeping. These usually run with pre-emption and maybe even interrupts disabled, and are **usable when kernel execution cannot sleep**. A typical example is an interrupt handler, which isn't a schedulable entity like a process or a thread, so it can only use busy-waiting.
+- **Completion variables** are equivalent to condition variables.
+- **Reader-writer spinlocks** and **sequential locks** are special kinds of lock that differentiate from readers and writers.
+
+#### Kernel spinlocks
+As mentioned before, spinlocks are used to protect critical sections in contexts where the kernel cannot sleep. For example, here is an excerpt from a mouse/keyboard driver:
+```c
+static irqreturn_t i8042_interrupt(int irq, void *dev_id) {
+  unsigned long flags;
+  /* ... */
+
+  spin_lock_irqsave(&i8042_lock, flags);
+  /* critical section, read data from device */
+  spin_unlock_irqrestore(&i8042_lock, flags);
+}
+```
+This code is executed in interrupt mode, so the kernel cannot sleep while running it. `spin_lock_irqsave` specifically takes the lock **and** disables interrupts, while storing if interrupts were enabled beforehand into `flags`. The corresponding unlock function then releases the lock and restores the saves interrupt enable state from `flags`.
+#### Reader-writer spinlocks
+In many scenarios, certain critical sections access some shared data in a read-only fashion. If there is nothing trying to write to that data in some given time window, letting multiple entities perform this critical section concurrently is fine. Reader-writer locks are special spinlocks that differentiate readers from writers (i.e. gives them separate lock primitives). This way, write accesses can be serialised with other read/writes, but reads can run concurrently to other reads:
+![](Pasted%20image%2020240306180427.png)
+Notably, reader-writer locks **favour readers**. That is, if something is reading and then another entity tries to write, the writer must wait for all readers to be finished. If another reader joins, even after the writer already started waiting, it will delay the writer and allow all readers to go first.
+#### Sequential locks
+A seqlock is similar to a reader-writer lock in that it allows concurrent readers, but it **favours the writer instead**. The seqlock has a **sequence number** which is incremented each time a writer acquires or releases a lock. Readers will check the sequence number at the start and end of the critical section, and if it has changed then it knows that a writer changed the value at some point after it start it's critical section.
+Here is the difference in practise:
+![](Pasted%20image%2020240306180758.png)
