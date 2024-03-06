@@ -231,3 +231,7 @@ Notably, reader-writer locks **favour readers**. That is, if something is readin
 A seqlock is similar to a reader-writer lock in that it allows concurrent readers, but it **favours the writer instead**. The seqlock has a **sequence number** which is incremented each time a writer acquires or releases a lock. Readers will check the sequence number at the start and end of the critical section, and if it has changed then it knows that a writer changed the value at some point after it start it's critical section.
 Here is the difference in practise:
 ![](Pasted%20image%2020240306180758.png)
+
+#### Read-Copy-Update
+https://olivierpierre.github.io/comp35112/lecture-notes/12-os-support-for-multithreading.html#read-copy-update
+Just read the notes, theyre good and theres no need to copy the explanation verbatim
