@@ -141,7 +141,7 @@ The kernel double-checks to see if the lock is still taken with a CAS of its own
 ![](Pasted%20image%2020240305150923.png)
 Other threads trying to take the lock will play out similarly:
 ![](Pasted%20image%2020240305150948.png)
-When the thread with the lock wants to release it, it uses a regular store instruction to reset the user-space variable to zero. Vitally, it also makes a `futex` system call to alert the OS that one of the waiting threads can wake up.
+When the thread with the lock wants to release it, it uses a(n atomic) store instruction to reset the user-space variable to zero. Vitally, it also makes a `futex` system call to alert the OS that one of the waiting threads can wake up.
 ![](Pasted%20image%2020240305151129.png)
 The now-awake thread will try to take the lock with a CAS, and succeed:
 ![](Pasted%20image%2020240305151152.png)
@@ -149,3 +149,32 @@ And so on.
 Note that in this simple example implementation, a thread releasing a lock will always have to make a syscall, even if there are no waiters. This is because there is no indication of how many waiters there are in user space.
 ![](Pasted%20image%2020240305151410.png)
 An optimised implementation would remedy this by, for example, encoding the number of waiters in the 32-bit user land variable.
+### Implementation
+Here is a simple lock implementation using `futex`.
+```c
+atomic_int my_mutex = ATOMIC_VAR_INIT(0);
+
+int my_mutex_lock() {
+    int is_free = 0, taken = 1;
+
+    // cas(value_to_test, expected_value, new_value_to_set)
+    while(!atomic_compare_exchange_strong(&my_mutex, &is_free, taken)) {
+        // put the thread to sleep waiting for FUTEX_WAKE if my_mutex is still equal to 1
+        syscall(SYS_futex, &my_mutex, FUTEX_WAIT, 1, NULL, NULL, 0);
+    }
+    return 0;
+}
+
+int my_mutex_unlock() {
+    atomic_store(&my_mutex, 0);
+
+    // wake up 1 thread if needed
+    syscall(SYS_futex, &my_mutex, FUTEX_WAKE, 1, NULL, NULL, 0);
+    return 0;
+}
+```
+We have our user space variable `my_mutex`, which is initialised to 0 using the C atomic operations API.
+The lock taking function `my_mutex_lock` performs a CAS using `atomic_compare_exchange_strong`, checking if the lock is 0 (i.e. if it's free). If it is free, the CAS stores 1 to the variable and returns 1, causing `my_mutex_lock` to return. If not, the `futex` syscall is called, taking the lock variable and `FUTEX_WAIT` flag among other arguments. This prompts the kernel to put the calling thread in the wait queue until the given lock variable is free. When that thread awakens, it will attempt another iteration of the loop, most likely getting the lock.
+
+The `mutex_unlock` operation uses an atomic store to set the user space variable to 0, indicating it is free. it then calls `futex`, this time with the `FUTEX_WAKE` flag to indicate to the kernel that it can wake up `1` waiter (if there is one).
+## Performance comparison
