@@ -1,0 +1,1 @@
+The **Finite Difference method** is another way of solving ODEs that is also capable of solving **boundary value** problems.

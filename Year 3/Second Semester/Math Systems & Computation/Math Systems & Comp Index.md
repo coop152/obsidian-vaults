@@ -2,4 +2,4 @@
 - Week 2: [[Extended Precision]]
 - Week 3: [[Error Propagation]], [[Condition and Stability]]
 - Week 4/5: [[Ordinary Differential Equations]]
-- Week 6:
+- Week 6: [[Finite Difference Method]]
