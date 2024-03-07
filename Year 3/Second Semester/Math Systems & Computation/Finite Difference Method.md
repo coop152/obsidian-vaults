@@ -30,3 +30,11 @@ The forward and backward difference methods are **first order accurate**, while 
 ![](Pasted%20image%2020240307150734.png)
 # Comparison
 ![](Pasted%20image%2020240307150821.png)
+# Central difference approximation for the second derivative
+For some function $f(x)$, we can also approximate the second order derivative. We add the steps before and after the current step:
+![](Pasted%20image%2020240307152620.png)
+![](Pasted%20image%2020240307152634.png)
+Then we truncate and divide by $h^2$:
+![](Pasted%20image%2020240307152757.png)
+Giving us an equation for approximating the second derivative.
+![](Pasted%20image%2020240307152810.png)

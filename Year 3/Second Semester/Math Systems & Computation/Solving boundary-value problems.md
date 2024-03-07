@@ -1,0 +1,3 @@
+When finding numerical solutions to ODEs, we start with a set of auxiliary conditions that enable us to evaluate the integration constants. These have previously been given at the same value of the independent variable - these are **initial value problems**.
+There is a second (and very important) class of ODE that is produced when auxiliary conditions are specified at *different* values of the independent variables. These are known as **boundary value problems**. (Why "boundary"? Because the auxiliary conditions provided are usually extreme values that lie at the "boundary" of the interesting data.)
+# Example: Heat conductance equation
