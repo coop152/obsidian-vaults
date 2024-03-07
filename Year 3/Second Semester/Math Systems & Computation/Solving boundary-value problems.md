@@ -22,5 +22,18 @@ The complexity of this analytical solution, even for such a simple ODE, demonstr
 ## Numerical solution w/ finite difference
 We compute the solution for $T(x)$ at discrete locations along the bar, separated by distance $\Delta x$.
 ![](Pasted%20image%2020240307163216.png)
-We know these boundary conditions:
-- The temperature is 40$\degree C$ at the start of the bar (when $x=0$, $T(x)=$)
+We know these conditions:
+- The temperature is 40$\degree C$ at the start of the bar (when $x=0$, $T(x)=40 \degree C$)
+- The temperature is 200$\degree C$ at the end of the bar (when $x = L = 10, T(x)=200\degree C$)
+
+An initial value technique won't work here, as our conditions aren't defined at a single location. We will use a finite difference approximation. Specifically, we use the central difference approximation of the second derivative:
+![](Pasted%20image%2020240307164102.png)
+Substitute into the head conductance equation to get, for some location $x_i$:
+![](Pasted%20image%2020240307164130.png)
+We write this equation down many times to describe the temperature at multiple locations along the bar, as well as doing some rearranging:
+![](Pasted%20image%2020240307164332.png)
+![](Pasted%20image%2020240307164340.png)
+The boundary conditions are used here; any values of $T(x)$ that are known can be taken as constants, and moved to the right-hand side of the equation. Now we can solve these equations simultaneously; we write them in matrix form (which is why we rearranged them):
+![](Pasted%20image%2020240307164534.png)
+And we solve it. This system is **tri-diagonal**, which means we can solve it with an efficient method known as the **Thomas algorithm**. By doing this, we get results very close to the analytical solution, even with such a large distance between points:
+![](Pasted%20image%2020240307164745.png)
