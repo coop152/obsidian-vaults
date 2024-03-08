@@ -1,0 +1,1 @@
+- Started by investigating some existing regular events in the program, to determine how auto-purge could be triggered. First I investigated the daily auto-switch, which moves the calendar to the next day automatically at midnight (?) if its on the current day.
