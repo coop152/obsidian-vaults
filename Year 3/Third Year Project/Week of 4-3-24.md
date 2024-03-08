@@ -3,4 +3,4 @@
 	- things
 	- stuff
 - [ ] TODO: remember to actually change the dialog when the operation will delete zero items.
-- 
+- always remember that you can do `set errorInfo` in the terminal if the program crashes for no reason; it lets you actually see the error.
