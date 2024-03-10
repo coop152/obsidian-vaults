@@ -33,13 +33,30 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | 2nd pl. | os      | to you lot/for you lot |
 | 3rd pl. | les     | to them/for them       |
 # Responses
-| Spanish       | English                                      |
-| ------------- | -------------------------------------------- |
-| A mí también  | Me too. (agreeing to a positive)             |
-| A mí tampoco. | Me neither. (agreeing to a negative)         |
-| A mí no.      | I don't. (disagreeing with the other person) |
-| A mí sí.      | I do. (disagreeing with the other person)    |
+| Spanish       | English                                           |
+| ------------- | ------------------------------------------------- |
+| A mí también  | Me too. (agreeing to a positive)                  |
+| A mí tampoco. | Me neither. (agreeing to a negative)              |
+| A mí no.      | Well I don't. (disagreeing with the other person) |
+| A mí sí.      | Well I do. (disagreeing with the other person)    |
 
+# Intensifiers/Adverbs
+
+| Spanish  | English                  | E.g.                                                                                  |
+| -------- | ------------------------ | ------------------------------------------------------------------------------------- |
+| mucho    | a lot/very much          | Me gusta mucho - "I like a lot"<br>No me gusta mucho - "I don't like it very much"    |
+| bastante | quite                    | Me interesa bastante las motos - "I'm quite interested in motorbikes"                 |
+| un poco  | a bit                    | A ella se gusta un poco las películas espanolas - "She likes spanish films a little." |
+| nada     | at all (in this context) | No me gusta nada viajar en tren - "I don't like travelling by train at all"           |
+In order of most positive to most critical:
+1. Me encanta - I love it
+2. Me gusta mucho - I like it a lot
+3. me gusta bastante - I like it quite a bit
+4. me gusta - I like it
+5. me gusta un poco - I like it a little/I sorta like it
+6. no me gusta un poco - I dislike it a little/I sorta don't like it
+7. no me gusta - 
+8. no me gusta
 # Actions
 
 | Spanish | English                                                            |
@@ -78,10 +95,13 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 
 # Question words
 
-| Spanish | English  |
-| ------- | -------- |
-| Cómo    | How      |
-| Que     | What     |
-| Cuando  | When     |
-| Cuanto  | How much |
-|         |          |
+| Spanish  | English        |
+| -------- | -------------- |
+| Cómo?    | How?           |
+| Que?     | What?          |
+| Cuál?    | What/which?    |
+| Cuando?  | When?          |
+| Cuanto?  | How many/much? |
+| Quién?   | Who?           |
+| Dónde?   | Where?         |
+| Por qué? | Why?           |
