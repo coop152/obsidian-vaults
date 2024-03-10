@@ -1,15 +1,15 @@
 
-|     | Units  | Teens     | Tens      | Hundreds      | Thousands |
-| --- | ------ | --------- | --------- | ------------- | --------- |
-| 1   | uno    | once      | diez      | cien          | mil       |
-| 2   | dos    | doce      | viente    | doscientos    | dos mil   |
-| 3   | tres   | trece     | triente   | trescientos   | tres mil  |
-| 4   | cuatro | catorce   | cuarenta  | cuatrocientos | etc...    |
-| 5   | cinco  | quince    | cincuenta | quinientos    |           |
-| 6   | seis   | dieciseis | sesenta   | seiscientos   |           |
-| 7   | siete  |           | setenta   | setecientos   |           |
-| 8   | ocho   |           | ochenta   | ochocientos   |           |
-| 9   | nueve  |           | noventa   | novecientos   |           |
+|     | Units  | Teens      | Tens      | Hundreds      | Thousands |
+| --- | ------ | ---------- | --------- | ------------- | --------- |
+| 1   | uno    | once       | diez      | cien          | mil       |
+| 2   | dos    | doce       | viente    | doscientos    | dos mil   |
+| 3   | tres   | trece      | triente   | trescientos   | tres mil  |
+| 4   | cuatro | catorce    | cuarenta  | cuatrocientos | etc...    |
+| 5   | cinco  | quince     | cincuenta | quinientos    |           |
+| 6   | seis   | dieciseis  | sesenta   | seiscientos   |           |
+| 7   | siete  | diecesiete | setenta   | setecientos   |           |
+| 8   | ocho   | dieceocho  | ochenta   | ochocientos   |           |
+| 9   | nueve  | diecenueve | noventa   | novecientos   |           |
 Construction rules:
 - for the 20s, don't add any connective between 20 and the unit (e.g. 23 = veintedos)
 - for 30-99, add a connective (e.g. 53 = cincuenta y tres)
