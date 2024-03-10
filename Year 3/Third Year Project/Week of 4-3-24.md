@@ -4,4 +4,5 @@
 	- stuff
 - [ ] TODO: remember to actually change the dialog when the operation will delete zero items.
 - [ ] TODO: make the autopurge popups more descriptive. It should actually say that its autopurge. probably just need a new dialogue, cause having a "cancel" button on a dialogue that the user didnt open themselves is pretty odd.
+- [ ] Update those READMEs to include accurate descriptions of building for windows AND linux! remember, linux building got a whole lot easier with the port.
 - always remember that you can do `set errorInfo` in the terminal if the program crashes for no reason; it lets you actually see the error.
