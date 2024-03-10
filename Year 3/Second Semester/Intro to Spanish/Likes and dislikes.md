@@ -54,9 +54,9 @@ In order of most positive to most critical:
 3. me gusta bastante - I like it quite a bit
 4. me gusta - I like it
 5. me gusta un poco - I like it a little/I sorta like it
-6. no me gusta un poco - I dislike it a little/I sorta don't like it
-7. no me gusta - 
-8. no me gusta
+6. no me gusta - I don't like it
+7. no me gusta mucho - I don't like it very much
+8. no me gusta nada - I don't like it at all
 # Actions
 
 | Spanish | English                                                            |
