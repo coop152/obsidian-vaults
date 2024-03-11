@@ -15,4 +15,4 @@ Call this week the polishing up week.
         return false;
     }
 		```
-	- So I undid all that work and just stuck with the char pointers. the actual thing i wanted to do was eliminate the charArray tmp, which i could do by replacing that with a std::string and giving out its c_str.
+	- So I undid all that work and just stuck with the char pointers. the actual thing i wanted to do was eliminate the charArray tmp, which i could do by replacing that with a std::string and giving out its c_str. Eliminating charArray entirely is a different matter, which will be in a different section...
