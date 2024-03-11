@@ -16,3 +16,9 @@ Call this week the polishing up week.
     }
 		```
 	- So I undid all that work and just stuck with the char pointers. the actual thing i wanted to do was eliminate the charArray tmp, which i could do by replacing that with a std::string and giving out its c_str. Eliminating charArray entirely is a different matter, which will be in a different section...
+- It now uses fstream for reading the input file, which massively simplifies the constructor, notably.
+# Eliminating charArray
+- First I started with Lexer, since that's where I was already from the last section.
+- I replaced Lexer's temp buffer with a std::string, and then removed Lexer::PutString, which entirely stripped charArray from the class.
+- PutString was still used in Item and OptionMap, in their Write methods. Thankfully this was easier to resolve than i thought: earlier in the project, i had rewritten most of these Write methods across the codebase into std::string conversion methods. Most of them were unused - i just got lazy on the optionmap one and implemented a string conversion method that ran the old Write method on a charArray then converted it. The Item one wasn't even used, so that was easily removed, and the OptionMap one was straightforwardly implemented. I could then remove both of them, allowing everything to work properly without Lexer::PutString.
+- 
