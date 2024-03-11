@@ -2,8 +2,8 @@
 - I found it, but to really do this effectively im going to refactor my crappy code from last week first. This involved:
 	- things
 	- stuff
-- [ ] TODO: remember to actually change the dialog when the operation will delete zero items.
-- [ ] TODO: make the autopurge popups more descriptive. It should actually say that its autopurge. probably just need a new dialogue, cause having a "cancel" button on a dialogue that the user didnt open themselves is pretty odd.
+- [x] TODO: remember to actually change the dialog when the operation will delete zero items.
+- [x] TODO: make the autopurge popups more descriptive. It should actually say that its autopurge. probably just need a new dialogue, cause having a "cancel" button on a dialogue that the user didnt open themselves is pretty odd.
 - [ ] Update those READMEs to include accurate descriptions of building for windows AND linux! remember, linux building got a whole lot easier with the port.
 - [ ] check that the files still transfer readily between linux and windows without any problems! (i.e. check the line endings arent fucking everything up and ruining my life again)
 - [ ] if theres time to spare, go through the code and really make sure youve removed all the legacy array types and old file API usages! that's one of the things i wanna say i did in the report!
