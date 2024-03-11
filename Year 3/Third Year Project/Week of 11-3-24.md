@@ -1,7 +1,7 @@
 Call this week the polishing up week.
 - [ ] Update those READMEs to include accurate descriptions of building for windows AND Linux! remember, Linux building got a whole lot easier with the port.
 - [ ] check that the files still transfer readily between Linux and windows without any problems! (i.e. check the line endings aren't fucking everything up and ruining my life again)
-- [ ] Go through the code and really make sure you've removed all the legacy array types and old file API usages! that's one of the things I wanna say I did in the report!
+- [x] Go through the code and really make sure you've removed all the legacy array types and old file API usages! that's one of the things I wanna say I did in the report!
 - [ ] And check for any more TODOs that you might have forgotten about.
 
 # Un-C-ifying Lexer
@@ -22,3 +22,6 @@ Call this week the polishing up week.
 - I replaced Lexer's temp buffer with a std::string, and then removed Lexer::PutString, which entirely stripped charArray from the class.
 - PutString was still used in Item and OptionMap, in their Write methods. Thankfully this was easier to resolve than i thought: earlier in the project, i had rewritten most of these Write methods across the codebase into std::string conversion methods. Most of them were unused - i just got lazy on the optionmap one and implemented a string conversion method that ran the old Write method on a charArray then converted it. The Item one wasn't even used, so that was easily removed, and the OptionMap one was straightforwardly implemented. I could then remove both of them, allowing everything to work properly without Lexer::PutString.
 - Unfortunately, DateSet makes very heavy use of charArray and I was strapped for time, so i couldn't entirely remove the homemade Array type.
+
+# Removing the final fopen
+- After removing the usage of the C file api in Lexer, i found one final usage in misc.cpp. It was a simple copy_file function, which was easily converted to using fstream. There is no more use of the old C api in the program now.
