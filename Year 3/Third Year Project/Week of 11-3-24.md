@@ -8,3 +8,11 @@ Call this week the polishing up week.
 - Used this cool trick when converting Lexer to use std::string and fstream! https://stackoverflow.com/a/2602258
 - Lexer now has the input buffer stored as a std::string instead of a cstring. still very janky on account of the use of the home-baked charArray for a temp thing.
 - Modified all of the `GetId`, `GetNumber`, etc. lexer methods. They used to return a bool flag which says if it was a success or not, and then had an output variable with the result, but it seems odd to have an std::string out var. instead, i made them return the actual result and then gave them output bool variables that indicate success or failure! Makes sense to me.
+	- It, in fact, did not make sense. I didnt even think to actually check the calling code, but it did things like this:
+		```cpp
+    if (! lexer->SkipWS() ||
+        ! lexer->GetId(keyword)) {
+        return false;
+    }
+		```
+	- So I undid all that work and just stuck with the char pointers. the actual thing i wanted to do was eliminate the charArray tmp, which i could do by replacing that with a std::string and giving out its c_str.
