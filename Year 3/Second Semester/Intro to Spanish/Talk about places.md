@@ -19,3 +19,8 @@
 | Selva    | Jungle   |
 | Bosque   | Forest   |
 | Lago     | Lake     |
+# Phrases
+
+| Spanish | English |
+| ------- | ------- |
+|         |         |
