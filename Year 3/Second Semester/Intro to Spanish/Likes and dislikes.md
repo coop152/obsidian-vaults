@@ -33,13 +33,14 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | 2nd pl. | os      | to you lot/for you lot |
 | 3rd pl. | les     | to them/for them       |
 # Responses
-| Spanish       | English                                           |
-| ------------- | ------------------------------------------------- |
-| A mí también  | Me too. (agreeing to a positive)                  |
-| A mí tampoco. | Me neither. (agreeing to a negative)              |
-| A mí no.      | Well I don't. (disagreeing with the other person) |
-| A mí sí.      | Well I do. (disagreeing with the other person)    |
-
+| Spanish       | English                                      |
+| ------------- | -------------------------------------------- |
+| A mí también  | Me too. (agreeing to a positive)             |
+| A mí tampoco. | Me neither. (agreeing to a negative)         |
+| A mí no.      | I don't. (disagreeing with the other person) |
+| A mí sí.      | I do. (disagreeing with the other person)    |
+| Pues...       | Well... (Not literally, its a pensive pause) |
+You can add "pues" before to have a bit of a pause, like "well, i don't" (without youre literally just saying "i do" or "i dont")
 # Intensifiers/Adverbs
 
 | Spanish  | English                  | E.g.                                                                                  |
