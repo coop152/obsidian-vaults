@@ -19,8 +19,9 @@
 | Selva    | Jungle   |
 | Bosque   | Forest   |
 | Lago     | Lake     |
-# Phrases
+# Descriptives
 
-| Spanish | English |
-| ------- | ------- |
-|         |         |
+| Spanish | English                                     |
+| ------- | ------------------------------------------- |
+| lejos   | far (e.g. Inglaterra es muy lejos de China) |
+| cerca   | close                                       |
