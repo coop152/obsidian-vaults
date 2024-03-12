@@ -1,10 +1,10 @@
 Call this week the polishing up week.
-- [ ] Update those READMEs to include accurate descriptions of building for windows AND Linux! remember, Linux building got a whole lot easier with the port.
-- [ ] check that the files still transfer readily between Linux and windows without any problems! (i.e. check the line endings aren't fucking everything up and ruining my life again)
+- [x] Update those READMEs to include accurate descriptions of building for windows AND Linux! remember, Linux building got a whole lot easier with the port.
+- [x] check that the files still transfer readily between Linux and windows without any problems! (i.e. check the line endings aren't fucking everything up and ruining my life again)
 - [x] Go through the code and really make sure you've removed all the legacy array types and old file API usages! that's one of the things I wanna say I did in the report!
 - [x] And check for any more TODOs that you might have forgotten about.
 - [ ] Remove charArray from DateSet, which is pretty much the last holdout. then remove Array<> entirely (which will also require removing an occurrenceArray or something like that) (Probably wont be able to do this in time, i tried and it was just so much work)
-
+- [ ] Got all the licenses in check (i believe, its kinda hard to tell if the program itself is under GPLv2 or if its all copyrighted, cause the files in the old README dont actually exist and everywhere seems to say it's GPL without actually indicating where they got it from)
 # Un-C-ifying Lexer
 - Used this cool trick when converting Lexer to use std::string and fstream! https://stackoverflow.com/a/2602258
 - Lexer now has the input buffer stored as a std::string instead of a cstring. still very janky on account of the use of the home-baked charArray for a temp thing.
