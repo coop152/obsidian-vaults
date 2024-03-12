@@ -13,15 +13,11 @@ The program can enter an invalid state in `Fork::take()` if two philosophers try
 |                         | `return 0;`             |
 
 # Question 2
-The program is likely to deadlock in `Philosopher::eat()`, where the Philosopher tries to get the locks on the two forks. 
-```cpp
-void Philosopher::eat() {
-	...
-	/* Take the fork on the left */
-	while(_left_fork->take(this));
-	...
-	/* Now take the fork on the right */
-	while(_right_fork->take(this));
-	...
-}
-```
+The program is likely to deadlock at the beginning of `Philosopher::eat()`, where the Philosopher tries to get the locks on the two forks. 
+This is because after one philosopher takes their left fork, there is a time period where another philosopher can take their right fork, forcing them to wait. If this happens in a chain such that they are waiting on a philosopher that is waiting on them, they will wait forever. For example, if there are two philosophers:
+- Phil. 1 takes their left fork (Phil. 2's right fork)
+- Phil. 2 takes their left fork (Phil. 2's right fork)
+- Phil. 2 tries to take their right fork (Phil. 1's left fork), fails and waits
+- Phil. 2 tries to take their right fork (Phil. 1's left fork), fails and waits
+
+# Question 3
