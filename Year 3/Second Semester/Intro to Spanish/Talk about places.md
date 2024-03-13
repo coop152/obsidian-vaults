@@ -8,6 +8,7 @@
 | Donde esta...?            | Where is...?                                                                                      |
 | Esta en...                | It's in...                                                                                        |
 | Puedes (infinitive poder) | You can... (e.g. In Brazil you can... == En Brazil puedes...)                                     |
+| En ... hay...             | In ... there is...                                                                                |
 
 # Landmarks
 
