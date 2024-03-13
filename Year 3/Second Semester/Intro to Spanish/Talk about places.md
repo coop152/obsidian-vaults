@@ -35,14 +35,18 @@
 | historico/a   | historical                                  |
 | tranquilo/a   | tranquil                                    |
 | famoso/famosa | famous                                      |
+| el clima      | the weather                                 |
+|               |                                             |
 # Nouns
 
-| Spanish           | English                           |
-| ----------------- | --------------------------------- |
-| edificio          | Building                          |
-| monumento         | Monument                          |
-| ciudad            | City/Town                         |
-| centros deportivo | Sports centre                     |
-| estadio           | Stadium (e.g. estadios de futbol) |
-| museo             | Museum                            |
-|                   |                                   |
+| Spanish            | English                           |
+| ------------------ | --------------------------------- |
+| edificio           | Building                          |
+| monumento          | Monument                          |
+| ciudad             | City/Town                         |
+| centros deportivo  | Sports centre                     |
+| estadio            | Stadium (e.g. estadios de futbol) |
+| museo              | Museum                            |
+| habitantes         | inhabitants                       |
+| la moneda          | the currency (of a place)         |
+| lugares de interes | places of interest                |
