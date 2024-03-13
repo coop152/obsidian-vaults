@@ -5,3 +5,7 @@ Week 3/4: [[Descriptions]], [[Objects]]
 Week 5: [[Numbers and buying things]]
 Week 6: [[Likes and dislikes]]
 Week 7: [[Talk about places]]
+
+
+# Deberes
+- do activity 10 pg78, in the slides for unit 7 (describing your city and the capital of your country)
