@@ -1,10 +1,12 @@
 | Spanish        | English                                                                                           |
 | -------------- | ------------------------------------------------------------------------------------------------- |
 | Estar          | To be - A temporary state (e.g. single or married), or **a location**, i.e. "I am in Fallowfield" |
-| Ser            | To be - A description, stating a property, i.e. "He has brown hair"                               |
-| Hay            | To be - To exist, i.e. "There is a shop over there"                                               |
+| Ser            | To be - A description, stating a property, i.e. "He is tall", "Manchester is big"                 |
+| Hay            | To be - To exist, i.e. "There is a shop over there", "There are lots of mountains in Peru"        |
 | Como es...?    | How is...? (e.g. How is Barcelona)                                                                |
+| Es...          | It's...                                                                                           |
 | Donde esta...? | Where is...?                                                                                      |
+| Esta en...     | It's in...                                                                                        |
 # Landmarks
 
 | Spanish  | English  |
