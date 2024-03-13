@@ -1,12 +1,14 @@
-| Spanish        | English                                                                                           |
-| -------------- | ------------------------------------------------------------------------------------------------- |
-| Estar          | To be - A temporary state (e.g. single or married), or **a location**, i.e. "I am in Fallowfield" |
-| Ser            | To be - A description, stating a property, i.e. "He is tall", "Manchester is big"                 |
-| Hay            | To be - To exist, i.e. "There is a shop over there", "There are lots of mountains in Peru"        |
-| Como es...?    | How is...? (e.g. How is Barcelona)                                                                |
-| Es...          | It's...                                                                                           |
-| Donde esta...? | Where is...?                                                                                      |
-| Esta en...     | It's in...                                                                                        |
+| Spanish                   | English                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------- |
+| Estar                     | To be - A temporary state (e.g. single or married), or **a location**, i.e. "I am in Fallowfield" |
+| Ser                       | To be - A description, stating a property, i.e. "He is tall", "Manchester is big"                 |
+| Hay                       | To be - To exist, i.e. "There is a shop over there", "There are lots of mountains in Peru"        |
+| Como es...?               | How is...? (e.g. How is Barcelona)                                                                |
+| Es...                     | It's...                                                                                           |
+| Donde esta...?            | Where is...?                                                                                      |
+| Esta en...                | It's in...                                                                                        |
+| Puedes (infinitive poder) | You can... (e.g. In Brazil you can... == En Brazil puedes...)                                     |
+
 # Landmarks
 
 | Spanish  | English  |
@@ -23,9 +25,23 @@
 | Selva    | Jungle   |
 | Bosque   | Forest   |
 | Lago     | Lake     |
-# Descriptives
+# Descriptions
 
-| Spanish | English                                     |
-| ------- | ------------------------------------------- |
-| lejos   | far (e.g. Inglaterra es muy lejos de China) |
-| cerca   | close                                       |
+| Spanish       | English                                     |
+| ------------- | ------------------------------------------- |
+| lejos         | far (e.g. Inglaterra es muy lejos de China) |
+| cerca         | close                                       |
+| historico/a   | historical                                  |
+| tranquilo/a   | tranquil                                    |
+| famoso/famosa | famous                                      |
+# Nouns
+
+| Spanish           | English                           |
+| ----------------- | --------------------------------- |
+| edificio          | Building                          |
+| monumento         | Monument                          |
+| ciudad            | City/Town                         |
+| centros deportivo | Sports centre                     |
+| estadio           | Stadium (e.g. estadios de futbol) |
+| museo             | Museum                            |
+|                   |                                   |
