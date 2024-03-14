@@ -21,4 +21,5 @@ This is because after one philosopher takes their left fork, there is a time per
 - Phil. 2 tries to take their right fork (Phil. 1's left fork), fails and waits
 
 # Question 3
-All of the solutions demonstrate similar performance at lower thread counts.
+All of the solutions demonstrate similar performance at lower thread counts. As the number of threads increases the coarse-grain solutions experience a performance falloff, while the fine-grain solutions stay almost linear in growth. The fine-grain mutex and spinlock solutions perform very similarly, but the coarse-grain spinlock solution is significantly faster than the mutex version.
+# Question 4
