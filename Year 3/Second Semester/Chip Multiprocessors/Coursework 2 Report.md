@@ -21,3 +21,4 @@ This is because after one philosopher takes their left fork, there is a time per
 - Phil. 2 tries to take their right fork (Phil. 1's left fork), fails and waits
 
 # Question 3
+The fine-grain solutions are more performant than the coarse grain solutions, however 
