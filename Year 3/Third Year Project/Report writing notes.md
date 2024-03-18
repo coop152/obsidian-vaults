@@ -54,3 +54,6 @@ Evaluate the results according to some objective viewpoint.
 	- Downloading the installer, running it, then opening the installed program - does everything work as expected?
 - Can a previous linux ical user transfer their calendar and immediately start using the windows version with no issues? Can they then transfer this calendar back and forth?
 - Do the new features work well? Are they intuitive?
+
+
+### Supervisor Questionnaire
