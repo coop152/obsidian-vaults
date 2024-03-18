@@ -52,8 +52,8 @@ Show the results of the project.
 Evaluate the results according to some objective viewpoint. In this case, ive decided to send some questions to richard and asked him to answer them when he tests out the program. This, in addition to my own testing, should be enough for this section.
 
 ## Conclusions
-Summarise the results from the evaluation, and say if the aims of the project have been achieved. in the case of this project, the functional goals have been achieved but some of the code modernisation goals were not. 
-List things that could be improved:
+Summarise the results from the evaluation. Have the aims of the project been achieved?. in the case of this project, the functional goals have been achieved but some of the code modernisation goals were not. 
+List of things that could be improved:
 - Did not entirely eliminate the homebaked container classes. Specifically, charArray was sticking around really badly in DateSet (i think that was the class), and there were some strange smallintset things? But they might not really count as containers.
 - The program still has a very outdated appearance, thanks to a mix of tk's inherent uglyness and heavy use of custom controls. This could have been cleaned up significantly with time.
 - With more intensive refactoring, every homebaked time/date class could have been removed and the chrono classes used directly. This isnt really that much of an issue but its still a thing, dunno if this should be mentioned
@@ -68,3 +68,4 @@ Ideas for further work:
 	- Allow the program to close to the system tray. It is quite strange for a windows program to run "in the background" by literally just running minimised and taking up space on your taskbar. Running in the system tray is much more typical.
 - Further code modernization
 	- Finish getting rid of the homebaked container classes
+	- Potentially remove tcl/tk entirely and just use a native c++ interface library, like GTK or Qt. This would be a massive undertaking but would simplify the code an enormous amount. It would also make it impossible to write your own tcl scripts that interact with ical, like you currently can, but i absolutely refuse to believe that anyone is using that feature.
