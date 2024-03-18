@@ -57,8 +57,11 @@ List things that could be improved:
 - Did not entirely eliminate the homebaked container classes. Specifically, charArray was sticking around really badly in DateSet (i think that was the class), and there were some strange smallintset things? But they might not really count as containers.
 - The program still has a very outdated appearance, thanks to a mix of tk's inherent uglyness and heavy use of custom controls. This could have been cleaned up significantly with time.
 - With more intensive refactoring, every homebaked time/date class could have been removed and the chrono classes used directly. This isnt really that much of an issue but its still a thing, dunno if this should be mentioned
+- I don't think printing will actually work on windows. either way its very outdated; it asks for a text device name (which defaults to lpr, like youve got a parallel port printer), and the save to file option outputs postscript.
+- There are actually lots of defaults that comically expose the age of the program; the print preview dialogue defaults to ghostview, the default browser for opening links is netscape 
 
 Ideas for further work:
 - More features:
 	- Customisable sound for alarms (currently it is just the system bell, which plays the default ding noise on windows)
-	- Some kind of online calendar syncing, ideally using a convenient service like dropbox, google drive, etc. This would be quite hard 
+	- Some kind of online calendar syncing, ideally using a convenient service like dropbox, google drive, etc. This would be quite hard to implement but very useful
+	- 
