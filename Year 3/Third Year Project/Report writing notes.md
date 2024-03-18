@@ -32,4 +32,11 @@ Write a list of the problems that need to be remedied over the course of the pro
 You might get some stuff to cite here. Or maybe not.
 
 ## Methodology or Design
-List the requirements for the program
+Not too sure about this section. Pretend i had an ordered plan, something like:
+- Get program to compile on windows
+- Modernise code
+	- Time handling (unix time api -> chrono)
+	- Containers (homemade array class -> std::vector, homemade map class -> std::map)
+	- housekeeping (using bool where int was used previously, replacing literal `0`s with `nullptr`s and `false`s where appropriate, making janky "generic" classes from before into templates)
+	- 
+- 
