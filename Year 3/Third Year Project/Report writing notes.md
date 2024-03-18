@@ -49,11 +49,16 @@ Show the results of the project.
 - Screenshots of the installer, as well as the shortcuts it creates and the add/remove programs entry (to prove that it works like youd expect from a windows app)
 
 ## Evaluation
-Evaluate the results according to some objective viewpoint. 
-- From start to finish, is installing the program a good and familiar experience?
-	- Downloading the installer, running it, then opening the installed program - does everything work as expected?
-- Can a previous linux ical user transfer their calendar and immediately start using the windows version with no issues? Can they then transfer this calendar back and forth?
-- Do the new features work well? Are they intuitive?
+Evaluate the results according to some objective viewpoint. In this case, ive decided to send some questions to richard and asked him to answer them when he tests out the program. This, in addition to my own testing, should be enough for this section.
 
+## Conclusions
+Summarise the results from the evaluation, and say if the aims of the project have been achieved. in the case of this project, the functional goals have been achieved but some of the code modernisation goals were not. 
+List things that could be improved:
+- Did not entirely eliminate the homebaked container classes. Specifically, charArray was sticking around really badly in DateSet (i think that was the class), and there were some strange smallintset things? But they might not really count as containers.
+- The program still has a very outdated appearance, thanks to a mix of tk's inherent uglyness and heavy use of custom controls. This could have been cleaned up significantly with time.
+- With more intensive refactoring, every homebaked time/date class could have been removed and the chrono classes used directly. This isnt really that much of an issue but its still a thing, dunno if this should be mentioned
 
-### Supervisor Questionnaire
+Ideas for further work:
+- More features:
+	- Customisable sound for alarms (currently it is just the system bell, which plays the default ding noise on windows)
+	- Some kind of online calendar syncing, ideally using a convenient service like dropbox, google drive, etc. This would be quite hard 
