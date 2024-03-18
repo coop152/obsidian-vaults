@@ -44,8 +44,9 @@ Not too sure about this section. Pretend i had an ordered plan, something like:
 
 ## Results
 Show the results of the project.
-- some basic comparison screenshots of the program running on linux vs on windows
+- some basic comparison screenshots of the program running on linux (original version, not that you can tell the difference by looking at the new version) vs on windows
 - Screenshots showing the new features
 - Screenshots of the installer, as well as the shortcuts it creates and the add/remove programs entry (to prove that it works like youd expect from a windows app)
 
 ## Evaluation
+Evaluate the results according to some objective viewpoint. idk what to do for this
