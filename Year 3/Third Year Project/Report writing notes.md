@@ -13,7 +13,7 @@
 # Sections
 ## Introduction
 Give a bit of a surface level introduction to what ical is (i.e. its an old calendar program written by sanjay in the early 90s, for the various unix operating systems of the time)
-State the aims of the project. that is, port the program to windows, and give the user a native windows-like experience, with an installer, a folder in program files... But to also have a linux version compiling from the same source, with the same native linux experience (i.e. gnu configure script and make install...)
+State the aims of the project. that is, port the program to windows, and give the user a native windows-like experience, with an installer, a folder in program files...
 Articulate how there wasn't much of an explicit plan, as much of the project involved investigating the existing code and discovering what needed to be changed/updated/added as I went along. More planning arised when I started adding features, but I still ended up doing quite a lot of code updating while adding said features so it was still mostly freeform.
 Provide the motivation for writing a port. The example is the project supervisor, who likes this program and uses it on their linux machine, but cant use it on their windows machine. Enumerate the problems with their current options when there is no port:
 - They can use their linux machine every time they want to access their calendar, which is obviously inconvenient and not reasonable
@@ -38,5 +38,5 @@ Not too sure about this section. Pretend i had an ordered plan, something like:
 	- Time handling (unix time api -> chrono)
 	- Containers (homemade array class -> std::vector, homemade map class -> std::map)
 	- housekeeping (using bool where int was used previously, replacing literal `0`s with `nullptr`s and `false`s where appropriate, making janky "generic" classes from before into templates)
-	- 
-- 
+- Package nicely 
+- Introduce new features
