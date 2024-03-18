@@ -1,5 +1,9 @@
-# Todos
+# Todos (at some point)
 - [ ] Write the abstract (probably when the overall structure is decided)
-- [ ] Decide if the `\listoffigures` and `\listoftables` are needed after some stuff has been written that may or may not populate them
-- [ ] Decide if anything is going in the appendix?
-- [ ] Declaration and copyright, need to be copied in from an example
+- [ ] figure out what's going in the appendix?
+
+
+# Steps to take (in order)
+- [ ] Decide the names of the sections and put them in the report (this will generate the table of contents too). For example:
+![](Pasted%20image%2020240318115805.png)
+- [ ] 
