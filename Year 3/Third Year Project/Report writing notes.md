@@ -34,9 +34,18 @@ You might get some stuff to cite here. Or maybe not.
 ## Methodology or Design
 Not too sure about this section. Pretend i had an ordered plan, something like:
 - Get program to compile on windows
-- Modernise code
+- Fix bugs and broken functionality, opportunistically modernising code as I go
 	- Time handling (unix time api -> chrono)
 	- Containers (homemade array class -> std::vector, homemade map class -> std::map)
 	- housekeeping (using bool where int was used previously, replacing literal `0`s with `nullptr`s and `false`s where appropriate, making janky "generic" classes from before into templates)
-- Package nicely 
+- Create an installer
 - Introduce new features
+- Backport to linux (follows from introducing new features)
+
+## Results
+Show the results of the project.
+- some basic comparison screenshots of the program running on linux vs on windows
+- Screenshots showing the new features
+- Screenshots of the installer, as well as the shortcuts it creates and the add/remove programs entry (to prove that it works like youd expect from a windows app)
+
+## Evaluation
