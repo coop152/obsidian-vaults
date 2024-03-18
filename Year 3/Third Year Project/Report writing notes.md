@@ -3,13 +3,14 @@
 - [ ] figure out what's going in the appendix?
 - [ ] Do I need a list of abbreviations?
 - [ ] DO THE FUCKING SCREENCAST
-
-
 # Steps to take (in order)
 - [ ] Decide the names of the sections and put them in the report (this will generate the table of contents too). For example:
 ![](Pasted%20image%2020240318115805.png)
 - [ ] Just write something, anything, in each section. No expectation of completeness or even presentability, just get the facts down. Make sure every single section has something before you start cleaning anything up. Dont even look for accurate information if you need it, just put a TODO marker and come back for it later.
 
+# Writing tips
+- Always define abbreviations on first usage.
+- If you add a figure, ALWAYS refer to it explicitly. Remember that latex is dogshit garbage and will frequently put your figure on a different page from the text you put it next to, because it fucking hates your guts and also cute dogs and babies and god.
 # Sections
 ## Introduction
 Give a bit of a surface level introduction to what ical is (i.e. its an old calendar program written by sanjay in the early 90s, for the various unix operating systems of the time)
