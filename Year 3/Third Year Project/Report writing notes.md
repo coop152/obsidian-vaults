@@ -49,4 +49,8 @@ Show the results of the project.
 - Screenshots of the installer, as well as the shortcuts it creates and the add/remove programs entry (to prove that it works like youd expect from a windows app)
 
 ## Evaluation
-Evaluate the results according to some objective viewpoint. idk what to do for this
+Evaluate the results according to some objective viewpoint. 
+- From start to finish, is installing the program a good and familiar experience?
+	- Downloading the installer, running it, then opening the installed program - does everything work as expected?
+- Can a previous linux ical user transfer their calendar and immediately start using the windows version with no issues? Can they then transfer this calendar back and forth?
+- Do the new features 
