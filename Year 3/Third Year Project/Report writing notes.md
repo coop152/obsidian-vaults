@@ -76,5 +76,7 @@ Ideas for further work:
 - Introduction
 	- Background (what is ical)
 	- Motivation (why am i porting it to windows)
-	- Goals
-- 
+	- Goals (Things i hope to achieve, and the ways i will achieve them (probably with forward links to the relevant sections))
+- Planning
+	- Methodology (make excuses for why I had fuck all )
+	- Roadmap (summary of each step to be taken in order, with explanations of the order)
