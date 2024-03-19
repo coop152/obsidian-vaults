@@ -78,5 +78,5 @@ Ideas for further work:
 	- Motivation (why am i porting it to windows)
 	- Goals (Things i hope to achieve, and the ways i will achieve them (probably with forward links to the relevant sections))
 - Planning
-	- Methodology (make excuses for why I had fuck all )
+	- Methodology (make excuses for why I worked completely aimlessly)
 	- Roadmap (summary of each step to be taken in order, with explanations of the order)
