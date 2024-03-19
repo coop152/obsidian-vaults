@@ -89,5 +89,6 @@ Ideas for further work:
 		- Miscellaneous (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms, all sorts of platform specific little baubles)
 	- Features
 		- Delete History
+		- Mass delete and Mark as important
 		- Automatic history cleanup (Autopurge)
 		- 
