@@ -86,3 +86,5 @@ Ideas for further work:
 	- Re-implementing file I/O using fstream (self explanatory)
 	- Utilising modern container types (self explanatory, will have to explain why charArray still exists)
 	- Creating the installer
+	- Backporting to Linux
+	- Miscellaneous cleanup (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms)
