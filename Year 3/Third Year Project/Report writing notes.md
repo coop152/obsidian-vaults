@@ -74,4 +74,6 @@ Ideas for further work:
 
 # Headings?
 - Introduction
-	- 
+	- Background (what is ical)
+	- Motivation (why am i porting it to windows)
+	- Goals
