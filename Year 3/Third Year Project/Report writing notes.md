@@ -91,4 +91,5 @@ Ideas for further work:
 		- Delete History
 		- Mass delete and Mark as important
 		- Automatic history cleanup (Autopurge)
+	- Result
 		- 
