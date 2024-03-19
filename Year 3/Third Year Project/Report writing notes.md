@@ -70,3 +70,8 @@ Ideas for further work:
 - Further code modernization
 	- Finish getting rid of the homebaked container classes
 	- Potentially remove tcl/tk entirely and just use a native c++ interface library, like GTK or Qt. This would be a massive undertaking but would simplify the code an enormous amount. It would also make it impossible to write your own tcl scripts that interact with ical, like you currently can, but i absolutely refuse to believe that anyone is using that feature.
+
+
+# Headings?
+- Introduction
+	- 
