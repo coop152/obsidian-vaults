@@ -85,4 +85,4 @@ Ideas for further work:
 	- Re-implementing time using chrono (self explanatory)
 	- Re-implementing file I/O using fstream (self explanatory)
 	- Utilising modern container types (self explanatory, will have to explain why charArray still exists)
-	- 
+	- Creating the installer
