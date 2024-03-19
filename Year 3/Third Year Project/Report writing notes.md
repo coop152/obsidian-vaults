@@ -81,10 +81,11 @@ Ideas for further work:
 	- Methodology (make excuses for why I worked completely aimlessly)
 	- Roadmap (summary of each step to be taken in order, with explanations of the order)
 - Development
-	- Initial Compilation (Making the visual studio project, getting the libraries, fixing those initial bugs using the windows api's linux compatibility functions. Make it clear what wasnt working yet, e.g. timezones)
-	- Re-implementing time using chrono (self explanatory)
-	- Re-implementing file I/O using fstream (self explanatory)
-	- Utilising modern container types (self explanatory, will have to explain why charArray still exists)
-	- Creating the installer
-	- Backporting to Linux
-	- Miscellaneous cleanup (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms)
+	- Porting and Maintenance
+		- Initial Compilation (Making the visual studio project, getting the libraries, fixing those initial bugs using the windows api's linux compatibility functions. Make it clear what wasnt working yet, e.g. timezones)
+		- Replacing obsolete code (reimplementing time code using chrono, reimplementing I/O using fstream, replacing the old container types)
+		- Creating the installer
+		- Backporting to Linux (remember that the makefile was a bitch to get right)
+		- Miscellaneous cleanup (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms)
+	- Features
+		- 
