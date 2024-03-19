@@ -80,7 +80,7 @@ Ideas for further work:
 - Planning
 	- Methodology (make excuses for why I worked completely aimlessly)
 	- Roadmap (summary of each step to be taken in order, with explanations of the order)
-- Development
+- Development and Results
 	- Porting and Maintenance
 		- Initial Compilation (Making the visual studio project, getting the libraries, fixing those initial bugs using the windows api's linux compatibility functions. Make it clear what wasnt working yet, e.g. timezones)
 		- Replacing obsolete code (reimplementing time code using chrono, reimplementing I/O using fstream, replacing the old container types)
@@ -91,5 +91,4 @@ Ideas for further work:
 		- Delete History
 		- Mass delete and Mark as important
 		- Automatic history cleanup (Autopurge)
-	- Result
-		- 
+	- Evaluation
