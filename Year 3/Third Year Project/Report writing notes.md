@@ -86,6 +86,6 @@ Ideas for further work:
 		- Replacing obsolete code (reimplementing time code using chrono, reimplementing I/O using fstream, replacing the old container types)
 		- Creating the installer
 		- Backporting to Linux (remember that the makefile was a bitch to get right)
-		- Miscellaneous cleanup (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms)
+		- Miscellaneous (e.g. making that Array thing into a template instead of a hilarious macro hack, reading/writing in binary mode so that line endings are \\n on all platforms, all sorts of platform specific little baubles)
 	- Features
 		- 
