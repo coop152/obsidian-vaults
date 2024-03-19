@@ -80,3 +80,9 @@ Ideas for further work:
 - Planning
 	- Methodology (make excuses for why I worked completely aimlessly)
 	- Roadmap (summary of each step to be taken in order, with explanations of the order)
+- Development
+	- Initial Compilation (Making the visual studio project, getting the libraries, fixing those initial bugs using the windows api's linux compatibility functions. Make it clear what wasnt working yet, e.g. timezones)
+	- Re-implementing time using chrono (self explanatory)
+	- Re-implementing file I/O using fstream (self explanatory)
+	- Utilising modern container types (self explanatory, will have to explain why charArray still exists)
+	- 
