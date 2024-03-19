@@ -91,8 +91,8 @@ Ideas for further work:
 		- Delete History
 		- Mass delete and Mark as important
 		- Automatic history cleanup (Autopurge)
-	- Reflection
-		- Result
-		- Evaluation
-	- Conclusion
+- Reflection
+	- Result
+	- Evaluation
+- Conclusion
 	
