@@ -28,4 +28,10 @@ A limitation of the basic implicit scheme demonstrated above is that it is only 
 The **Crank-Nicholson** method uses a central difference approach to approximate the derivative at the mid-point of the interval:
 ![](Pasted%20image%2020240321144932.png)
 ![](Pasted%20image%2020240321144947.png)
-The spatial derivative at this temporal midpoint can be evaluated as the mean of the approximations
+The spatial derivative at this temporal midpoint can be evaluated as the mean of the approximations at the beginning and end of the interval:
+![](Pasted%20image%2020240321150633.png)
+
+Using this central difference approximation for the time derivative improves the accuracy to second order.
+If we apply this method to the previous example we get
+![](Pasted%20image%2020240321150907.png)
+We once again construct an implicit update equation for each node at time $j$, assemble a system of algebraic equations, rearrange into simultaneous equations, make into a tridiagonal matrix problem and then solve, just like with the simple implicit method.
