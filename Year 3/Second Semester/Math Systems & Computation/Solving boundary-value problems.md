@@ -6,6 +6,7 @@ The way that heat balances out along a long, thin bar can be described by this s
 Where:
 - $T$ is the temperature at location $x$
 - $k$ is the heat transfer coefficient which parameterizes the heat dissipation to the surrounding air, which is of temperature $T_a$.
+
 ![](Pasted%20image%2020240307162404.png)
 This is a **steady-state problem** - it does not vary with time. We want to solve for these conditions:
 - $T_a = 20 \degree C$
