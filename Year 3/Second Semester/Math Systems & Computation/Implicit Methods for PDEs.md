@@ -28,3 +28,4 @@ A limitation of the basic implicit scheme demonstrated above is that it is only 
 The **Crank-Nicholson** method uses a central difference approach to approximate the derivative at the mid-point of the interval:
 ![](Pasted%20image%2020240321144932.png)
 ![](Pasted%20image%2020240321144947.png)
+The spatial derivative at this temporal midpoint can be evaluated as the mean of the approximations
