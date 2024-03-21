@@ -19,4 +19,12 @@ We go through and apply this to every node as before. Example for the first node
 ![](Pasted%20image%2020240321144007.png)
 Do this for each node at time j=0, then collect them into one matrix problem:
 ![](Pasted%20image%2020240321144046.png)
-This is a tri-diagonal system so we solve it efficiently using the Thomas algorithm.
+This is a tri-diagonal system so we solve it efficiently using the Thomas algorithm. That gives us our solutions for time j + 1, which means we can move on to the next timestep. We do this until our desired time is reached.
+This implicit method is **unconditionally stable**, and is more accurate, allowing us to take larger timesteps.
+
+## Crank-Nicholson Method
+A limitation of the basic implicit scheme demonstrated above is that it is only first-order accurate in time, thanks to this first order approximation:
+![](Pasted%20image%2020240321144835.png)
+The **Crank-Nicholson** method uses a central difference approach to approximate the derivative at the mid-point of the interval:
+![](Pasted%20image%2020240321144932.png)
+![](Pasted%20image%2020240321144947.png)
