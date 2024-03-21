@@ -34,4 +34,20 @@ The result of step size 0.002 oscillates about the true solution, but anything l
 ![](Pasted%20image%2020240321131218.png)
 If you weren't interested in the accuracy of the initial sharp incline, then a large step size such as 0.001 might be useful.
 
-If you *did* care about the accuracy of the initial sharp incline, but you really wanted the improved performance of a small step size after that, you could employ an **adaptive** step size. For example, solve using $\Delta t=s$
+You might have the idea to use an **adaptive step size**, which changes at certain points while solving. For example:
+![](Pasted%20image%2020240321132258.png)
+This seems like it could be the perfect solution, which allows a large performant step size while avoiding the quickly changing section of the solution that caused it to become unstable.
+However, this will not work and it will still become unstable.
+In the previous example, let's use the largest possible stable step size at the start but increase it ever so slightly once we get past the initial sharp incline:
+![](Pasted%20image%2020240321132437.png)
+Even just going 0.00001 over the boundary will still ruin the solution.
+The stability of an explicit method's solution is not related to the region being solved for - it is decided by the ODE itself.
+
+In summary, explicit methods:
+- Require small step sizes for accuracy
+- Can be unstable even with extremely small step sizes
+- Can work poorly for **stiff ODEs**; that is, systems where there is a combination of rapidly and slowly varying components in the solution.
+- Are stable or not depending only on the ODE and not the solution dynamics in the specific region being solved for. You cannot use a timestep outside the required limits at any point in your solution.
+
+# Implicit Methods
+Implicit methods offer a solution to these stability and accuracy problems
