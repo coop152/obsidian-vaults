@@ -22,3 +22,13 @@ Do this until you've completed the entire matrix. For example:
 Next, transform $s$ according to this pseudocode:
 ![](Pasted%20image%2020240321163352.png)
 In plain English: Iterate over every row in $s/A$. Multiply that row's $\alpha$ by the previous row's $s$, then subtract that from the current row's $s$.
+
+For example:
+![](Pasted%20image%2020240321165712.png)
+![](Pasted%20image%2020240321165718.png)
+![](Pasted%20image%2020240321165724.png)
+**Step 3: Backward substitution**.
+Finally, calculate the values in $x$ with this pseudocode:
+![](Pasted%20image%2020240321165858.png)
+![](Pasted%20image%2020240321165845.png)
+In plain English: Iterate over every row
