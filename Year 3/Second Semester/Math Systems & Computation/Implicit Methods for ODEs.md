@@ -50,4 +50,40 @@ In summary, explicit methods:
 - Are stable or not depending only on the ODE and not the solution dynamics in the specific region being solved for. You cannot use a timestep outside the required limits at any point in your solution.
 
 # Implicit Methods
-Implicit methods offer a solution to these stability and accuracy problems
+Implicit methods offer a solution to these stability and accuracy problems.
+Instead of updating our solution based on information at the start of the timestep (like with an explicit method), we use information at the **end** of the timestep:
+![](Pasted%20image%2020240321133222.png)
+![](Pasted%20image%2020240321133227.png)
+This specific method is known as the **implicit Euler method**, and the resemblance with the regular Euler method is clear.
+(It's called implicit because the unknown appears on both sides of the equation.)
+
+## Implicit Euler method
+![](Pasted%20image%2020240321133222.png)
+Lets try solving the previously troublesome ODE using this new method.
+![](Pasted%20image%2020240321133446.png)
+Inserting the ODE into the implicit Euler equation gives:
+![](Pasted%20image%2020240321133533.png)
+Because this ODE is linear in $y$, we can easily rearrange this to give:
+![](Pasted%20image%2020240321133642.png)
+And just solve the arithmetic on the right (every value there is known).
+If we do this with a step size of 0.002 (the previous boundary for a stable solution), we get a notably better result:
+![](Pasted%20image%2020240321133819.png)
+But this time we can take the step size much larger, with no instability. For step size 0.2:
+![](Pasted%20image%2020240321133851.png)
+The sharp incline at the start isn't represented properly, but the gradual increase is well represented and more importantly the solution is stable.
+
+Let's investigate the quickly decaying solution term, as we did with the explicit Euler method:
+![](Pasted%20image%2020240321134009.png)
+Integrating with initial condition $y=y_0$ at $t=0$:
+![](Pasted%20image%2020240321134028.png)
+Now solving with the **implicit** Euler's method, we get:
+![](Pasted%20image%2020240321134043.png)
+We know that the solution should decay to zero, thus a stable result requires that $|1+1000h| \geq 1$. This is **always true**, so the implicit method is **unconditionally stable** in this case.
+
+In summary, implicit methods:
+- Use implicit information, information that is unknown at the current solution step.
+- Can be unconditionally stable for certain problems, and in particular are useful for **stiff ODEs** (ODEs with solutions containing both fast and slow changing components)
+- Allow greater accuracy *and* larger timesteps
+- Have very simple update equations when the ODE is linear in the dependent variable (as with the given example)...
+- ...but can be more complicated when the ODE is nonlinear. For example:
+![](Pasted%20image%2020240321134417.png)
