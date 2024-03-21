@@ -7,4 +7,12 @@ This is a **tri-diagonal system**. All terms are **banded** together on the diag
 These systems are common in engineering and physical systems, and can be stored efficiently by omitting all items not on the diagonal.
 We also have an algorithm that can efficiently solve these systems, called **Thomas Algorithm**.
 # Thomas Algorithm
-- Step 1: Decompose A
+First, you must **decompose** A. This involves transforming A according to this pseudocode:
+![](Pasted%20image%2020240321152211.png)
+In english: Copy A. Iterate over each row in this new copy, starting from the second row. For each row, where $\alpha$ is the number left of the diagonal and $\beta$ is the number on the diagonal:
+- Divide $\alpha$ by the number above it
+- Multiply the new value of $\alpha$ by the number above $\beta$, then subtract that from $\beta$.
+
+Do this until you've completed the entire matrix. For example:
+![](Pasted%20image%2020240321152805.png)
+
