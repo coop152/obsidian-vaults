@@ -29,7 +29,7 @@ We know these conditions:
 
 An initial value technique won't work here, as our conditions aren't defined at a single location. We will use a finite difference approximation. Specifically, we use the central difference approximation of the second derivative:
 ![](Pasted%20image%2020240307164102.png)
-Substitute into the head conductance equation to get, for some location $x_i$:
+Substitute into the heat conductance equation to get, for some location $x_i$:
 ![](Pasted%20image%2020240307164130.png)
 We write this equation down many times to describe the temperature at multiple locations along the bar, as well as doing some rearranging:
 ![](Pasted%20image%2020240307164332.png)
