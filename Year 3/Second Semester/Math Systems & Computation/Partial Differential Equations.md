@@ -62,3 +62,22 @@ And the second order derivatives, also via the central difference method:
 
 To solve a PDE using these approximations (by hand):
 1. Create a graphical representation of the solution domain
+![](Pasted%20image%2020240321123021.png)
+2. Draw the **computational molecule**
+![](Pasted%20image%2020240321123051.png)
+3. Substitute the finite difference approximations into the PDE
+4. Rearrange to get unknown values on the left-hand side and known values on the right-hand side
+5. Write the corresponding equation for each point in the solution domain, incorporating boundary conditions where appropriate
+6. Formulate the problem in matrix form $Ax=b$, and solve for $x$
+
+This is very similar to the 1-D ODE case, just with multiple directions (hence the utility of the computational molecule to assist in the writing of each point's equations.)
+
+There is an extended example in the slides. Short version, we want to calculate the steady state temperature over a square plate, with the temperature at the sides being like so:
+![](Pasted%20image%2020240321123532.png)
+The plate is 10cm $\times$ 10cm and satisfies this equation:
+![](Pasted%20image%2020240321123608.png)
+By solving with the previously shown finite difference approach, we arrive at this matrix form:
+![](Pasted%20image%2020240321123651.png)
+Which you can see is very large but also very sparse. Solving this would be very expensive using the naive inversion approach, so a specialised method is desired; this will be explored later.
+Either way, solving gets us this result:
+![](Pasted%20image%2020240321123752.png)
