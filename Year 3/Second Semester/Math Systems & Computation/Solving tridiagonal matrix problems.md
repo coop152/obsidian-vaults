@@ -31,4 +31,10 @@ For example:
 Finally, calculate the values in $x$ with this pseudocode:
 ![](Pasted%20image%2020240321165858.png)
 ![](Pasted%20image%2020240321165845.png)
-In plain English: Iterate over every row
+In plain English: Start by setting the last value in $x$ as shown. Then iterate over every row before that, *starting at the end*. Set the value of these as shown.
+
+This is the solution to the example, as found with this method:
+![](Pasted%20image%2020240321171248.png)
+You can check the solution by multiplying normally.
+
+This algorithm can find the solution of a tri-diagonal matrix problem in $O(n)$ time, in contrast to the $O(n^3)$ time taken to calculate the solution by inverting $A$ and multiplying with $s$.
