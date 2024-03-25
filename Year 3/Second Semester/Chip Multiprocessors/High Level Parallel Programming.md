@@ -121,3 +121,49 @@ The problem with parallel libraries is that they are very specific; if one exist
 Parallel libraries are often implemented using low-level parallelism to maximise performance, meaning if one exists it is generally a good idea to use it over trying to implement it yourself (e.g. you would never implement your own neural network library in Python when PyTorch exists).
 
 ## Domain Specific Languages
+Domain Specific Languages have limited functionality and work on a narrow domain of problems. This allows them to use higher level abstractions than a general purpose language, which both simplifies programming with them and also gives the compiler greater knowledge of how the program is constrained. Using knowledge of how these reduced-function programs must work, the compiler can perform much more potent optimisations, and more easily parallelise the code.
+A good example of a DSL is Halide, which is intended for digital image processing:
+```c
+Func blur_3x3(Func input) {
+	Func blur_x, blur_y;
+	Var x, y, xi, yi;
+	// Define the operations (What?)
+	blur_x(x, y) = (input(x-1, y) + input(x, y) + input(x+1, y))/3;
+	blur_y(x, y) = (blur_x(x, y-1) + blur_x(x, y) + blur_x(x, y+1))/3;
+	// Define the how (Could be automatically determined)
+	// Tile → Vectorize → Parallelise 
+	blur_y.tile(x, y, xi, yi, 256, 32).vectorize(xi, 8).parallel(y);
+	// Evaluate blur_x as needed by blur_y → Vectorize
+	blur_x.compute_at(blur_y, x).vectorize(x, 8);
+	return blur_y;
+}
+```
+
+## Algorithmic Skeletons
+Algorithmic skeletons allow code to be parallelised more effectively without significantly changing the structure of the general language. This is achieved by defining the structure of a parallel pipeline declaratively, but maintaining the serial/imperative definition of the code running on each thread. 
+The declarative code that defines how the parallelism is structured is called the **algorithmic skeleton**, and the imperative functions that define the actual operations that each thread does are called the **muscle functions**.
+For example:
+![](Pasted%20image%2020240325162758.png)
+This illustrative code shows an FM reciever. The code inside each block is regular imperative code, which will run sequentially, but the `split` and `join` keywords are used to declare splits in the computation. In concrete terms, split would create threads and join would join them, with everything between being run in parallel on the threads.
+
+This approach clearly expresses the parallelism of the system, while allowing the central algorithms to be clearly represented in normal imperative code. The declarative definition of the parallel structure allows the compiler to easily optimise by composing sections. For example, it might decide that the low and high pass filters could be combined, eliminating some thread creation/deletion overhead:
+![](Pasted%20image%2020240325163521.png)
+This approach is also completely independent of any architectural thread implementation, and can be optimised well for a great variety of wildly varied platforms.
+
+There are downsides to this approach:
+- Adapting serial code to use this approach may still require a great deal of re-factoring
+- Some parallelisable problems are not structured, so they cannot be implemented with this method
+- The performance is only as good as the compiler, so it likely won't live up to the theoretical performance
+- It still isn't as good as an expert implementing it with low-level methods (but neither are any of the others)
+- It is still possible to make parallelism errors, thanks to the imperative pieces of code
+
+Some examples of pure algorithmic skeleton implementations are:
+- Intel TBB, Microsoft PPL
+- StreamIt, OpenStream
+- SkePU, Rise
+
+These are not widely used, but there are some widely used parallelism implementations which bear a strong resemblance to algorithmic skeletons:
+- STL algorithms (lacking in composition when parallel, but there's no reason it couldn't be implemented)
+- MapReduce, Spark, Cilk
+- OpenMP
+
