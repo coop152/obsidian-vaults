@@ -36,3 +36,5 @@ You are also allowed to **merge** regions if they entirely overlap, which makes 
 ![](Pasted%20image%2020240325173820.png)
 Finally we should notice that this implementation is incorrect; the threads are not independent, thanks to them all writing to the same variables `answer` and `res`. To remedy this we calculate answer outside of the loop on a single thread, which requires us to store an array of results (which incidentally solves our problem of `res` being shared).
 ![](Pasted%20image%2020240325183939.png)
+
+We can see that making this code multithreaded using OpenMP required quite minimal changes. This code will also run correctly even if you don't use OpenMP; just pretend the pragma isn't there and see that the code is logically sound when run serially.
