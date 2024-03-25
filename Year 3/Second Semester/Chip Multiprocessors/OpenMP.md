@@ -39,7 +39,7 @@ Finally we should notice that this implementation is incorrect; the threads are 
 
 We can see that making this code multithreaded using OpenMP required quite minimal changes. This code will also run correctly even if you don't use OpenMP; just pretend the pragma isn't there and see that the code is logically sound when run serially.
 
-## Reduction Clause
+# Reduction Clause
 The previous result is okay, but we still had to modify the code a little and the performance increase is not as high as it could be. Specifically, the serial section where we sum up the results into `answer` is a bottleneck.
 In this case, there is a solution to eliminating this final sum; the `reduction()` clause. This clause can be used to update some variable with the result of each iteration (e.g. sum, product, min, max). As long as the reduction operation is **associative** (i.e. the order of updating the result variable doesn't matter) we can use this clause to eliminate that serial bottleneck.
 To use this clause, we can undo the changes we made to facilitate that serial summation and add the clause to the directive:
@@ -49,4 +49,27 @@ The clause modifies how OpenMP handles the reduction variable in these ways:
 - When in the loop, each thread updates its own copy.
 - When exiting the loop, the local results are combined with the operator specified in the clause.
 
-You can use the reduction clause on simple variables, as shown previously, but you can also use it on **array sections** by specifying a range like so: `reduction(op:arr[start_offset:end_offset])`
+You can use the reduction clause to output to simple variables as shown previously, but you can also output to arrays by providing an output range, like so: `reduction(op:arr[start_offset:end_offset])`.
+You can even reduce to a user defined type by defining your own reduction operator.
+
+# Variable visibility
+Note again that the previously shown code is **not correct**: By removing our summation, we have reverted `res` to a single variable, and it is now shared between all threads again. 
+To be more specific, OpenMP uses these rules to decide the visibility of variables in the threads by default:
+- If a variable is declared outside of the parallel region, it is **shared between all threads** (With one exception in the loop counter.)
+- If a variable is declared inside the parallel region, it is **private to each thread**, and they each get their own *uninitialised* copy.
+
+We want `res` to be private to each thread, so we could declare it inside the parallel region. Alternatively, we could use one of the **data sharing clauses** provided by OpenMP:
+- `shared()`, which marks a variable as shared in the parallel block,
+- `private()`, which marks a variable as private in the parallel block *and doesn't initialise it*,
+- `firstprivate()`, which marks a variable as private in the parallel block *and initialises it to the value of the original variable*,
+- `lastprivate()`, which marks a variable as private in the parallel block *and updates the original value at the end*.
+
+In this case we can simply use `private()`.
+![](Pasted%20image%2020240325192323.png)
+And our solution is now completely correct. We have made zero changes to the original code apart from adding the annotation, and it is more performant than the naive solution thanks to the elimination of the serial sum.
+(Realistically we would never have had a res variable in the first place.)
+![](Pasted%20image%2020240325192506.png)
+
+# Synchronisation
+The previous example was **embarrassingly parallel**; most code is not so easily and cleanly parallelised. OpenMP provides constructs for coordinating between threads in these less-than-optimal situations:
+- `barrier`, to make all threads wait
