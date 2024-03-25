@@ -72,4 +72,55 @@ And our solution is now completely correct. We have made zero changes to the ori
 
 # Synchronisation
 The previous example was **embarrassingly parallel**; most code is not so easily and cleanly parallelised. OpenMP provides constructs for coordinating between threads in these less-than-optimal situations:
-- `barrier`, to make all threads wait
+- `barrier`, to make all threads wait. (There is an implicit barrier at the end of all work sharing constructs)
+- `nowait`, to skip the implicit barrier at the end of work sharing constructs.
+- `omp_set_lock` and `omp_unset_lock`, to create locks manually (these are functions in the runtime library, not pragmas)
+- `critical`, to define a critical section where only 1 thread will run at a time
+- `atomic`, to make memory updates in the following statement atomic
+
+For example, you could also solve the race condition in the previous example using a critical section:
+![](Pasted%20image%2020240325200551.png)
+Or by making the update statement atomic:
+![](Pasted%20image%2020240325200604.png)
+Though both of these are worse than the reduction.
+
+# Loop iteration assignment
+When splitting a loop, OpenMP must decide which iterations of the loop to assign to which thread. The way that it assigns the iterations is decided by the **loop scheduling mode**. By default, it uses **Static Block Scheduling**:
+![](Pasted%20image%2020240325200841.png)
+This splits the iterations into contiguous chunks. You can set this scheduling mode using this pragma: `#pragma omp parallel for schedule`
+
+Another mode is **Static Loop scheduling**:
+![](Pasted%20image%2020240325201107.png)
+This splits the iterations into non-contiguous stripes. You can modify the **chunk size**, which gives a pattern somewhere in the middle of block and loop scheduling:
+![](Pasted%20image%2020240325201317.png)
+Where each thread works on chunks of n iterations, before jumping to the next stripe like in loop static loop.
+
+Both of these scheduling modes are **static**, which means that they decide which thread gets which iteration at the start and it stays fixed for the duration of the parallel block. This has very low overhead, and works well when every iteration takes about the same time to finish, but it has poor results when each iteration has a different runtime:
+![](Pasted%20image%2020240325201710.png)
+In this situation you should use **Dynamic loop scheduling**. 
+![](Pasted%20image%2020240325201853.png)
+In this mode, after a thread has processed a chunk of iterations (1 in the example), it asks the scheduler for another chunk. This balances the work out, and reduces the overall runtime in situations where one thread might run much longer than the others due to iterations running for a long time. However, it introduces extra overhead, which can degrade performance if the balancing provides little benefit.
+Here is a (contrived) example of where dynamic scheduling can be useful:
+![](Pasted%20image%2020240325202031.png)
+
+# Thread count
+OpenMP also allows you to set the number of threads manually. It defaults to the number of cores on your system, but you can change it three ways:
+![](Pasted%20image%2020240325202149.png)
+There usually isn't a good reason to change this, other than for testing.
+
+# Beyond loops
+Loop splitting is a great, because loops are easy to parallelise, and their fixed size allows low runtime overhead. But only using loop splitting is limiting; you don't always have a predetermined, fixed number of iterations to split up. OpenMP provides options beyond loop splitting to allow more types of code to be parallelised:
+- sections, which parallelise "straight line" code
+- tasks, which allow asynchronous computation
+
+## Sections
+Consider this code:
+![](Pasted%20image%2020240325202916.png)
+We have two implementations of the fibonacci sequence, one loop based and one recursive. The loop based implementation cannot be parallelised with loop splitting because it has dependencies, and the recursive implementation has no loop to split.
+However, there is potential for parallelism in the main function. The calls to fib1 and fib2 are both independent, and can run simultaneously. Sections allow us to parallelise code such as this.
+![](Pasted%20image%2020240325203204.png)
+To execute arbitrary code blocks in parallel, we surround all of the blocks in a `sections` pragma, and then annotate the individual sections with a `section` pragma each. The sections will be run on different threads in parallel, and then when they are all complete, execution will progress beyond the `sections` block.
+
+## Tasks
+Consider this code:
+![](Pasted%20image%2020240325203422.png)
