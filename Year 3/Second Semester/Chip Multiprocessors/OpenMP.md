@@ -34,4 +34,4 @@ We have a loop which runs many iterations, where each one is independent and als
 First define the parallel region, which splits the program onto multiple threads, then mark the for loop with the `for` directive, which modifies the loop to do a different subset of the iterations on each thread.
 You are also allowed to **merge** regions if they entirely overlap, which makes the previous code a good bit cleaner:
 ![](Pasted%20image%2020240325173820.png)
-Note that 
+Finally we should notice that this implementation is incorrect; the threads are not independent, thanks to them all writing to `answer`. To remedy this we 
