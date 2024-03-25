@@ -41,3 +41,12 @@ We can see that making this code multithreaded using OpenMP required quite minim
 
 ## Reduction Clause
 The previous result is okay, but we still had to modify the code a little and the performance increase is not as high as it could be. Specifically, the serial section where we sum up the results into `answer` is a bottleneck.
+In this case, there is a solution to eliminating this final sum; the `reduction()` clause. This clause can be used to update some variable with the result of each iteration (e.g. sum, product, min, max). As long as the reduction operation is **associative** (i.e. the order of updating the result variable doesn't matter) we can use this clause to eliminate that serial bottleneck.
+To use this clause, we can undo the changes we made to facilitate that serial summation and add the clause to the directive:
+![](Pasted%20image%2020240325190624.png)
+The clause modifies how OpenMP handles the reduction variable in these ways:
+- When entering the loop, each thread gets a private/local copy of the variable (instead of having a single shared copy). These take a value determined by the operator in the clause; addition or subtraction get 0, multiplication gets 1, etc.
+- When in the loop, each thread updates its own copy.
+- When exiting the loop, the local results are combined with the operator specified in the clause.
+
+You can use the reduction clause on simple variables, as shown previously, but you can also use it on **array sections** by specifying a range like so: `reduction(op:arr[start_offset:end_offset])`
