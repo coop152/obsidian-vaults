@@ -38,3 +38,6 @@ Finally we should notice that this implementation is incorrect; the threads are 
 ![](Pasted%20image%2020240325183939.png)
 
 We can see that making this code multithreaded using OpenMP required quite minimal changes. This code will also run correctly even if you don't use OpenMP; just pretend the pragma isn't there and see that the code is logically sound when run serially.
+
+## Reduction Clause
+The previous result is okay, but we still had to modify the code a little and the performance increase is not as high as it could be. Specifically, the serial section where we sum up the results into `answer` is a bottleneck.
