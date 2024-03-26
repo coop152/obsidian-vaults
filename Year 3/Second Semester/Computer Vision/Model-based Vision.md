@@ -28,7 +28,6 @@ The **PCA algorithm** can do this.
 4. Take eigenvalues, starting with the largest, until their sum accounts for at least $p\%$ of the total variance $T$ (where $p$ is a parameter to the algorithm). Any eigenvalues we don't choose can be discarded, along with the corresponding eigenvectors.
 
 These leftover eigenvectors/eigenvalues represent the new variables which we will encode the data with, which will likely be lesser in number. This is how we reduce the number of dimensions.
-
 ### Computing the covariance matrix
 Take this example data, where we have 2 variables and 3 data points.
 ![](Pasted%20image%2020240326112304.png)
@@ -47,3 +46,26 @@ So let's find the covariance matrix for our data:
 You can do this in OpenCV using a simple call to `calcCovarMatrix()`:
 ![](Pasted%20image%2020240326112903.png)
 
+### Eigenvalues and Eigenvectors
+For a square matrix $A$, an eigenvalue $\lambda$ and eigenvector $v$ is a pair of values that satisfy this equation:
+$$Av=\lambda v$$
+In terms of transformations, an eigenvector is a line that is **invariant** under the transformation represented by $A$, and the eigenvalue of that eigenvector is the amount by which the line is scaled. 
+For example, if a transformation/matrix has an eigenvector $[1, 2]$ with eigenvalue $2$, it means that all points along the vector $[1, 2]$ through the origin will map back onto that vector, with their distance multiplied by 2.
+
+To find eigenvalues, we solve
+$$|A-\lambda I| = 0$$
+Where $I$ is the identity matrix and $|~|$ is the determinant.
+
+You can do this in python using numpy:
+```python
+from numpy import linalg as la
+vals, vecs = la.eig(C)
+```
+
+### An example
+Take the data from the beginning, with the 24 students and their Maths/English exam scores. We calculate the covariance matrix, then the eigenvalues and eigenvectors:
+![](Pasted%20image%2020240326114135.png)
+![](Pasted%20image%2020240326114311.png)
+![](Pasted%20image%2020240326114329.png)
+
+# Active Shape Models
