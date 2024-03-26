@@ -2,4 +2,7 @@ The model-based feature detection shown in the previous part is a **global repre
 - They often struggle with occlusions
 - They often struggle with so-called "intra-category variations". That is, they struggle with valid outlier inputs, for example a human face with an abnormally shaped nose, missing an eye, etc..
 
-These issues can be better handled by detectors that use **local representations**.
+For example, this kind of image would cause an ASM a lot of trouble:
+![](Pasted%20image%2020240326130559.png)
+
+These issues can be better handled by detectors that use **local features**.
