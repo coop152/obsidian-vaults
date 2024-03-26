@@ -104,3 +104,9 @@ Returning to our formula, we use this window function to "mask off" the part of 
 There are two ways to implement this: The uniform window, or the smoothed Gaussian window.
 ![](Pasted%20image%2020240326165336.png)
 (As you can read in the image,) the uniform window isn't rotation invariant, which is a problem for local feature detection. In addition to being rotation invariant, Gaussian also allows us to eliminate the sum (because applying a Gaussian filter already includes a weighted sum), so it's the obvious choice.
+
+## Fast approximation
+For reasons, you can do this and its faster and better and you dont need to calculate the eigenvalues:
+![](Pasted%20image%2020240326171555.png)
+## Results
+The result of all this is a 
