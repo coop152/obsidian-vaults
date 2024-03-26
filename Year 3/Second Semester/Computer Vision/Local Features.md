@@ -71,3 +71,7 @@ Why corners? We have plenty of methods for finding *edges*, but edges by themsel
 The method for detecting these corners is similar to what this diagram depicts. We take a window of the original image, and compare its intensity to that of the window shifted over in some direction. If the point is a corner, then moving in any direction will give a large difference. This is expressed mathematically like so:
 ![](Pasted%20image%2020240326150054.png)
 We have a window over the image, defined by $w$. For each pixel in the window, we find the difference between its intensity and the intensity of the corresponding pixel in the shifted window. We square these differences and sum them together to get the Sum of Squared Differences (SSD). 
+Considering this needs to be done for many different shifts to find corners, this could become computationally expensive. But, if the shift is small, we can approximate the measure of change:
+![](Pasted%20image%2020240326151215.png)
+Where $M$ is a $2\times2$ matrix computed from the image derivatives:
+![](Pasted%20image%2020240326151248.png)
