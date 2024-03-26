@@ -64,3 +64,7 @@ Examples of feature detectors available for use are:
 Harris, Laplacian and DoG are the ones which will be covered in this course.
 
 # Harris detector
+![](Pasted%20image%2020240326144628.png)
+The Harris detector is a feature detector that aims to find **corners**.
+Why corners? We have plenty of methods for finding *edges*, but edges by themselves do not provide good local features; it looks the same all the way along the edge. However, when two edges meet at a corner we do get a distinct local feature:
+![](Pasted%20image%2020240326144452.png)
