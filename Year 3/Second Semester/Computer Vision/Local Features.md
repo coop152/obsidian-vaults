@@ -78,3 +78,10 @@ Where $M$ is a $2\times2$ matrix computed from the image derivatives:
 For... reasons (far too much yapping in the video and the slides are useless), you can find the eigenvalues of this matrix and use them to determine if a point in the image is flat, an edge, or a corner.
 ![](Pasted%20image%2020240326153418.png)
 ![](Pasted%20image%2020240326153436.png)
+We can get a nicer measure of the corner response in $R$:
+$$R=\det M - k(\text{trace}M)^2$$
+where
+$$\det M = \lambda_1\lambda_2$$
+$$\text{trace}M=\lambda_1 + \lambda_2$$
+When using $R$ we can classify points more easily:
+![](Pasted%20image%2020240326154155.png)
