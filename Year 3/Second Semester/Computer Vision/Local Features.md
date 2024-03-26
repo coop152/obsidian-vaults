@@ -41,10 +41,26 @@ Based on our description of the image stitching process, we can infer some requi
 ![](Pasted%20image%2020240326141753.png)
 - The descriptor must be able to match each point with a corresponding point in another image (i.e. it must be distinctive and reliable)
 ![](Pasted%20image%2020240326141937.png)
-
+# Feature detectors
 More generally, a local feature detector must satisfy these requirements for the features it locates:
 - Feature extraction must be repeatable, i.e.:
 	- invariant to translation or rotation or scale changes
 	- robust to affine transformations
 	- robust to lighting variation, noise, blur, quantization
-- 
+- There must be enough features to cover the subject, so that matching can still proceed when features are occluded.
+- The chosen features must be distinctive enough, and contain enough "interesting" structure, that they will be found in a large range of conditions.
+- It must be fast enough to run in close-to-realtime.
+
+Examples of feature detectors available for use are:
+- **Harris**
+- **Laplacian, Difference of Gaussians**
+- Harris-/Hessian-Laplace
+- MSER
+- FAST
+- BRIEF
+- ORB
+- etc...
+
+Harris, Laplacian and DoG are the ones which will be covered in this course.
+
+# Harris detector
