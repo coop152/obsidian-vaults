@@ -109,4 +109,8 @@ There are two ways to implement this: The uniform window, or the smoothed Gaussi
 For reasons, you can do this and its faster and better and you dont need to calculate the eigenvalues:
 ![](Pasted%20image%2020240326171555.png)
 ## Results
-The result of all this is a 
+The result of all this is a very precise corner detector:
+![](Pasted%20image%2020240326172312.png)
+But unfortunately, it is not perfect for finding image features. While it is invariant to image rotation, it is **NOT** invariant to scale.
+
+(CONTINUE HERE WITH LOCAL FEATURES PART 3)
