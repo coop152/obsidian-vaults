@@ -85,3 +85,8 @@ $$\det M = \lambda_1\lambda_2$$
 $$\text{trace}M=\lambda_1 + \lambda_2$$
 When using $R$ we can classify points more easily:
 ![](Pasted%20image%2020240326154155.png)
+## Example workflow
+We start with two images:
+![](Pasted%20image%2020240326164323.png)
+Using the maths described prior, we find the corner response R:
+![](Pasted%20image%2020240326164400.png)
