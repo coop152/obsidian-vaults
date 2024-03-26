@@ -67,5 +67,17 @@ Take the data from the beginning, with the 24 students and their Maths/English e
 ![](Pasted%20image%2020240326114135.png)
 ![](Pasted%20image%2020240326114311.png)
 ![](Pasted%20image%2020240326114329.png)
-
 # Active Shape Models
+Active Shape Models are a kind of shape matching model that allows for **non-rigid** matching. Non-rigid meaning it isn't limited to simply scaling, rotating, translating, etc. the reference shape; parts of the shape can be moved (somewhat) independently to allow for more flexibility.
+an ASM is able to generate a multitude of different valid shapes based on those supplied in the training dataset.
+
+The dataset for the example ASM we investigate looks like this:
+![](Pasted%20image%2020240326115236.png)
+This example is very simple, with the shapes having few points and with few samples. Ideally you would have much more than 6 to better capture variations in shape.
+Specifically, this dataset has 20 data points per sample, with each point having an x and y - so each sample has 40 variables. For better results, you would prefer to have more points, but this makes creating the dataset take longer.
+
+We then perform PCA on the entire dataset, with each sample being a data point with 40 variables. So, step by step:
+1. Assemble the data into a matrix $D$. We have 40 variables (from 20 2-variable position pairs) so there are 40 columns, and we have 6 samples so there are 6 rows. (Note that you can flip the rows and columns if you like; transposing a matrix is trivial)
+2. Compute the covariance matrix $C$ as described earlier. In this case it will be $40 \times 40$.
+3. Find the eigenvalues and eigenvectors of $C$ by solving $|C-\lambda I| = 0$. We will get 40 eigenvalues/eigenvectors, with the matrix $V$ containing the eigenvectors being $40\times 40$ (40 eigenvectors of length 40).
+4. Choose the $K$ largest eigenvalues, but for ASM instead of removing them entirely we change how much influence they have using the **Shape Parameter** vector, $b$. This is a ($40\times 1$) vector 
