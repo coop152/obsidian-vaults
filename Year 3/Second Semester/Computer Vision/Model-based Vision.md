@@ -77,7 +77,27 @@ This example is very simple, with the shapes having few points and with few samp
 Specifically, this dataset has 20 data points per sample, with each point having an x and y - so each sample has 40 variables. For better results, you would prefer to have more points, but this makes creating the dataset take longer.
 
 We then perform PCA on the entire dataset, with each sample being a data point with 40 variables. So, step by step:
-1. Assemble the data into a matrix $D$. We have 40 variables (from 20 2-variable position pairs) so there are 40 columns, and we have 6 samples so there are 6 rows. (Note that you can flip the rows and columns if you like; transposing a matrix is trivial)
+1. Assemble the data into a matrix $D$. We have 40 variables (from 20 2-variable position pairs) so there are 40 *rows*, and we have 6 samples so there are 6 *columns*. (Note that you can flip the rows and columns if you like; transposing a matrix is trivial, and this reversed ordering is helpful later)
 2. Compute the covariance matrix $C$ as described earlier. In this case it will be $40 \times 40$.
 3. Find the eigenvalues and eigenvectors of $C$ by solving $|C-\lambda I| = 0$. We will get 40 eigenvalues/eigenvectors, with the matrix $V$ containing the eigenvectors being $40\times 40$ (40 eigenvectors of length 40).
-4. Choose the $K$ largest eigenvalues, but for ASM instead of removing them entirely we change how much influence they have using the **Shape Parameter** vector, $b$. This is a ($40\times 1$) vector 
+4. Order the eigenvalues and choose the $K$ largest, though for ASM we don't entirely discard the less significant ones. More on that in a moment.
+
+Now that we have the dimension-reduced eigenvectors and eigenvalues, we calculate a **mean shape** from the initial data matrix $D$. That is, we simply average out the values of each variable from every image, giving us this face shape:
+![](Pasted%20image%2020240326121135.png)
+The feature point positions here are the average positions of those points in the dataset.
+## Generative Shape Models
+Now we have a mean face shape and a set of eigenvectors/eigenvalues. The vectors represent ways in which faces in the dataset vary from the average face, with the $K$ largest ones we chose being the ones with the most effect.
+We introduce a Shape Parameter vector $b$. This is a $40 \times 1$ (variable count $\times$ 1) vector that we can use to generate face shapes. To generate these faces, we use this formula:
+$$x = \bar{x} + Vb$$
+Where $\bar{x}$ is the mean shape and $V$ is the matrix containing the eigenvectors as columns. Each value in $b$ multiplies an eigenvector, which is added to the mean shape to deform it, producing $x$.
+
+This shape parameter vector is also how we can eliminate the low-impact eigenvectors/eigenvalues from the final step of PCA. By simply using a weight of zero for that eigenvector in $b$, it will have no effect.
+Here are examples of the faces generated with this model, when the 6 most impactful eigenvectors are added in varying amounts:
+![](Pasted%20image%2020240326122323.png)
+Each variable represents some kind of difference in face shape or image composition. You could interpret the first three as:
+- $b_1$ changing the vertical position
+- $b_2$ making the face skinnier or wider
+- $b_3$ angling the face down or up (though that's a bit of a stretch)
+- $b_4$ angling the face right or left
+
+PCA automatically finds these **modes of variation** that we are making use of. In this example we only changed one value at a time, but we can change them all to any value we want to generate a multitude of faces.
