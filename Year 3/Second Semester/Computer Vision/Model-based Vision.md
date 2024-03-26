@@ -101,3 +101,31 @@ Each variable represents some kind of difference in face shape or image composit
 - $b_4$ angling the face right or left
 
 PCA automatically finds these **modes of variation** that we are making use of. In this example we only changed one value at a time, but we can change them all to any value we want to generate a multitude of faces.
+
+## Shape Fitting
+Now we have a shape model, and we can change the shape parameters to generate valid shapes (well, valid according to the dataset, and only if we use reasonably parameters.) Now how do we map this generative model to a face shape detector?
+
+The point of an Active Shape Model is to enable a shape to be found in a previously unseen image. This is achieved by an iterative localised search in the image. We:
+- Place the shape into the image
+- Search in the neighbourhood of the current feature points for better locations
+- Fit the model to the new suggested shape
+- Repeat until the model converges on a final shape
+
+So we start by placing the shape into the image blindly:
+![](Pasted%20image%2020240326123451.png)
+Note that simply changing the shape parameters $b$ is not good enough to find a good match. We also need to allow for scaling ($s$), rotation ($\theta$), and translation ($r$) of the shape. These are called the **pose parameters**.
+The total set of parameters we will be tuning is $(s, \theta, r, b)$.
+
+You can see that the mean shape is not at all aligned with the image. Only a couple of points on the right of the image are anywhere near their desired locations. How are we going to find better locations to push these feature points towards?
+First, we perform edge detection on our image to get an image gradient. We can then calculate the normals to the model curve at each point.
+![](Pasted%20image%2020240326124223.png)
+We search along these normals and find the strongest nearby edge in the image (which we note may not be the edge we really want). Doing this for each point gives a set of suggested points $x'$. 
+Now, we can't just set these new points as the positions of the feature points because they probably don't describe a valid face shape. Instead we tweak the parameters to bring the current points $x$ closer to $x'$.
+We start by tweaking $(s, \theta, r)$, finding the best rigid transformation to fit $x$ to $x'$. This transformation of the model is called $x''$.
+We then use our model backwards, via this rearranged formula:
+$$b = V^{-1}(x''-\bar{x})$$
+Which provides a new set of shape parameters $b$ for a new shape, closer to the desired points.
+We repeat this process, iterating until we converge on some shape.
+## Active Appearance Models
+Having completed Shape Fitting, we have a shape that (hopefully) conforms well to the face in the given image. There are various things we could do with this, and one of them is to construct an Active Appearance Model.
+If we split our face model into triangles and sample the given image, we can construct a 2D polygon mesh of our face model and then texture map the face from the image onto it. We can then manually modify the shape parameters (or just move the points) and the face texture will transform along with it, enabling us to change the expression of the face in an image.
