@@ -75,3 +75,6 @@ Considering this needs to be done for many different shifts to find corners, thi
 ![](Pasted%20image%2020240326151215.png)
 Where $M$ is a $2\times2$ matrix computed from the image derivatives:
 ![](Pasted%20image%2020240326151248.png)
+For... reasons (far too much yapping in the video and the slides are useless), you can find the eigenvalues of this matrix and use them to determine if a point in the image is flat, an edge, or a corner.
+![](Pasted%20image%2020240326153418.png)
+![](Pasted%20image%2020240326153436.png)
