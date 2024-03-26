@@ -68,4 +68,6 @@ Harris, Laplacian and DoG are the ones which will be covered in this course.
 The Harris detector is a feature detector that aims to find **corners**.
 Why corners? We have plenty of methods for finding *edges*, but edges by themselves do not provide good local features; it looks the same all the way along the edge. However, when two edges meet at a corner we do get a distinct local feature:
 ![](Pasted%20image%2020240326144452.png)
-The method for detecting these corners is similar to what this diagram depicts. If we 
+The method for detecting these corners is similar to what this diagram depicts. We take a window of the original image, and compare its intensity to that of the window shifted over in some direction. If the point is a corner, then moving in any direction will give a large difference. This is expressed mathematically like so:
+![](Pasted%20image%2020240326150054.png)
+We have a window over the image, defined by $w$. For each pixel in the window, we find the difference between its intensity and the intensity of that pixel + some shift. We square these differences and sum them together to get the Sum of Squared Differences (SSD). 
