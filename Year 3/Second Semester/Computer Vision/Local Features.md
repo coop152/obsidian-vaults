@@ -90,3 +90,17 @@ We start with two images:
 ![](Pasted%20image%2020240326164323.png)
 Using the maths described prior, we find the corner response R:
 ![](Pasted%20image%2020240326164400.png)
+We threshold to points with a large corner response (i.e. corners):
+![](Pasted%20image%2020240326164634.png)
+Then thin out these regions by finding the local maxima:
+![](Pasted%20image%2020240326164831.png)
+Which gives us our final points. We can plot these over the original images, to inspect by eye if they captured features well:
+![](Pasted%20image%2020240326164933.png)
+And there are plenty of shared points there.
+
+## Window function
+Returning to our formula, we use this window function to "mask off" the part of the image we are interested in.
+![](Pasted%20image%2020240326165234.png)
+There are two ways to implement this: The uniform window, or the smoothed Gaussian window.
+![](Pasted%20image%2020240326165336.png)
+(As you can read in the image,) the uniform window isn't rotation invariant, which is a problem for local feature detection. In addition to being rotation invariant, Gaussian also allows us to eliminate the sum (because applying a Gaussian filter already includes a weighted sum), so it's the obvious choice.
