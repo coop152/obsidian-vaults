@@ -24,5 +24,28 @@ I used a threshold of **0.05** and a k of **0.05** when finding keypoints in the
 Measuring on the original image (bernieSanders.jpg), the number of features located scales as such with the threshold:
 ![](Features%20detected%20at%20certain%20thresholds.png)
 # Feature Matching
-The 180 degree rotated image is an example of a matching where my implementation performs well:
+The darkened image (with clipping) is an example of a matching where my implementation performs well:
 **My Harris implementation, SSD matching:**
+![](SSDMatches.jpg)
+Mostly good matches, with some outliers.
+**My Harris implementation, Ratio matching:**
+![](RatioMatches.jpg)
+Only good matches, as far as I can tell.
+**OpenCV ORB detection and matching:**
+![](ORBMatches.jpg)
+Much less points, but all of them are good and they are much more spread out; my implementation clumps the key points heavily on the gloves.
+
+An example of my implementation performing poorly is the noisy image (bernieNoisy2.png):
+**My Harris implementation, SSD matching:**
+![](SSDMatches%201.jpg)
+Little to no good matches. Might as well be random.
+**My Harris implementation, Ratio matching:**
+![](RatioMatches%201.jpg)
+Basically every match is eliminated, but the ones that remain are still bad. Has a single good match (the pink line on the gloves.)
+**OpenCV ORB detection and matching:**
+![](ORBMatches%201.jpg)
+Not perfect, but it finds a good amount of valid matches.
+
+My implementation gets good results for the rotated, darkened (clipped) and brightened (clipped) variants. The results for everything else are unusable.
+The ORB detector gets good results in those images, as well as the two noisy images. It gets middling results with the blurred image, and equally unusable results in the others.
+The ORB detector/matcher does a significantly better job at finding matches than my Harris implementation.
