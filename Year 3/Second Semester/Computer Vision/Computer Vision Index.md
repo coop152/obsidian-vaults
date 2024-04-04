@@ -4,4 +4,4 @@
 - Week 4: [Segmentation and Clustering stolen notes](Computer_Vision_Week4.pdf)
 - Week 5: [[Model-based Vision]], [[Local Features]]
 # Coursework Reports
-- [Coursework 2 Report](Coursework%202%20Report.md)
+- [Coursework 2 Report](Year%203/Second%20Semester/Computer%20Vision/Coursework%202%20Report.md)
