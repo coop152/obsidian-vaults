@@ -19,4 +19,10 @@ The noise completely ruins the results. The salt-and-pepper noise variant has a 
 ![](BernieFriends.png)
 The keypoints on the gloves could potentially match with the original image, but most of them don't. The same goes for the other heavily edited images.
 
+I used a threshold of **0.05** and a k of **0.05** when finding keypoints in these images. I used this threshold because it gave a similar number of points to the built-in ORB detector, and (skipping ahead to the matching part) it had a reasonably low number of bad matches.
+
 Measuring on the original image (bernieSanders.jpg), the number of features located scales as such with the threshold:
+![](Features%20detected%20at%20certain%20thresholds.png)
+# Feature Matching
+The 180 degree rotated image is an example of a matching where my implementation performs well:
+**My Harris implementation, SSD matching:**
