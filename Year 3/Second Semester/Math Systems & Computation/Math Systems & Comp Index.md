@@ -4,3 +4,4 @@
 - Week 4/5: [[Ordinary Differential Equations]]
 - Week 6: [[Finite Difference Method]], [[Solving boundary-value problems]], [[Partial Differential Equations]]
 - Week 7: [[Implicit Methods for ODEs]], [[Implicit Methods for PDEs]], [[Solving tridiagonal matrix problems]]
+
