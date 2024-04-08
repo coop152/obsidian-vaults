@@ -18,6 +18,8 @@
 | Tenemos los mismos gustos              | We have the same preferences                                  |
 | Tenemos los gustos diferentes          | We have different preferences                                 |
 | Prefierar                              | To prefer (NOTE: is used like a normal verb, not like gustar) |
+| Lo que más me gusta es...              | What i like the most is...                                    |
+| Lo que menos me gusta es...            | What i like the least is...                                   |
 
 You always use third person for gustar/interesar/encantar, and prefix it with an object pronoun. It's less like "I like the thing" and more like "the thing pleases me". In that vein, you choose gusta vs gustan based on if the thing you like is plural.
 
