@@ -1,11 +1,15 @@
 
-| Spanish           | English                  |
-| ----------------- | ------------------------ |
-| Qué hay?          | What is there?           |
-| Cómo es?          | How is it?               |
-| mi barrio         | my neighbourhood/my area |
-| mi lugar favorito | my favorite place        |
-|                   |                          |
+
+| Spanish           | English                        |
+| ----------------- | ------------------------------ |
+| Qué hay?          | What is there?                 |
+| Cómo es?          | How is it?                     |
+| mi barrio         | my neighbourhood/my area       |
+| mi lugar favorito | my favorite place              |
+| alguno/alguna     | some (standalone noun)         |
+| ninguno/ninguna   | none (standalone noun)         |
+| algun             | some (prefix for another noun) |
+| nungun            | none (prefix for another noun) |
 # Things
 
 | Spanish                | English                       |
@@ -39,3 +43,22 @@
 | bastante feo | pretty ugly |
 | sucio        | dirty       |
 | céntrico     | central     |
+# Relative locations
+
+Use with estar, e.g. "Mi casa está cerca de un supermercado"
+
+| Spanish              | English                     |
+| -------------------- | --------------------------- |
+| Cerca                | close to                    |
+| a la derecha         | to the right                |
+| en la esquina        | on the corner               |
+| todo recto           | straight ahead              |
+| al lado              | next to                     |
+| a la izquierda       | to the left                 |
+| lejos                | far from                    |
+| entre ... y ...      | Between ... and ...         |
+| al final de la calle | at the end of the street    |
+| detrás               | behind                      |
+| delante              | in front                    |
+| enfrente de          | opposite (also in front of) |
+| al lado de           | next to                     |
