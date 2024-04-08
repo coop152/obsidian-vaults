@@ -5,6 +5,7 @@ Week 3/4: [[Descriptions]], [[Objects]]
 Week 5: [[Numbers and buying things]]
 Week 6: [[Likes and dislikes]]
 Week 7: [[Talk about places]]
+Week 8: [[My neighbourhood]]
 
 
 # Deberes
