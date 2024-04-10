@@ -82,3 +82,15 @@ e.g.
 | coges   | you take (a turn) |
 | sigues  | you follow        |
 | doblas  | you turn          |
+
+# The time
+
+| Spanish                 | English                                              |
+| ----------------------- | ---------------------------------------------------- |
+| Que hora es?            | What is the time?                                    |
+| Es la.../Son las...     | The time is... (e.g. "it's three" == "son las tres") |
+| en punto                | on the dot                                           |
+| mediodia                | midday                                               |
+| a la/a las...           | At... (e.g. "it's at three" == "es a las tres")      |
+| de la manana            | in the morning                                       |
+| de la tarde/de la noche | in the evening                                       |
