@@ -94,3 +94,27 @@ e.g.
 | a la/a las...           | At... (e.g. "it's at three" == "es a las tres")      |
 | de la manana            | in the morning                                       |
 | de la tarde/de la noche | in the evening                                       |
+
+e.g.
+"When do the shops in manchester open?"
+"A que hora abren lsa tiendas en Manchester?"
+"The shops in manchester open at 7am"
+"Las tiendas en Manchester abren a la siete a la manana"
+
+# The weather
+
+| Spanish      | English             |
+| ------------ | ------------------- |
+| Hace...      | The weather is...   |
+| Calor        | hot                 |
+| frio         | cold                |
+| sol          | sun                 |
+| viento       | windy               |
+| buen tiempo  | good weather        |
+| mal tiempo   | bad weather         |
+| Llueve       | it's raining (verb) |
+| Nieva        | it's snowing        |
+| hay niebla   | there's fog         |
+| hay tormenta | there's a storm     |
+| hay sol      | it's sunny          |
+| hay nubes    | there's clouds      |
