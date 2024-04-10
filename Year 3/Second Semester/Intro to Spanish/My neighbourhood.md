@@ -62,3 +62,9 @@ Use with estar, e.g. "Mi casa está cerca de un supermercado"
 | delante              | in front                    |
 | enfrente de          | opposite (also in front of) |
 | al lado de           | next to                     |
+Remember the particle after "de"
+e.g.
+"La catedral está en frente de la escuela"
+"La farmacia esté en frente del banco"
+
+# 
