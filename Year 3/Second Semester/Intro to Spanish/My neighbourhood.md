@@ -80,4 +80,5 @@ e.g.
 | subes   | you go up         |
 | bajas   | you go down       |
 | coges   | you take (a turn) |
-|         |                   |
+| sigues  | you follow        |
+| doblas  | you turn          |
