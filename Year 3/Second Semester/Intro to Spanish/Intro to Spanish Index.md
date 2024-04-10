@@ -9,7 +9,8 @@ Week 8: [[My neighbourhood]]
 
 
 # Deberes
-- do activity 10 pg78, in the slides for unit 7 (describing your city and the capital of your country) (not actually homework)
-- Write about a village or important city (actual homework)
+- Write about a village or important city (actual homework) (idk if this still exists ???)
 	- say what you like or dislike about it
 	- Compare those likes with another city
+
+- unit 10 homework
