@@ -1,15 +1,17 @@
 
 
-| Spanish           | English                        |
-| ----------------- | ------------------------------ |
-| Qué hay?          | What is there?                 |
-| Cómo es?          | How is it?                     |
-| mi barrio         | my neighbourhood/my area       |
-| mi lugar favorito | my favorite place              |
-| alguno/alguna     | some (standalone noun)         |
-| ninguno/ninguna   | none (standalone noun)         |
-| algun             | some (prefix for another noun) |
-| nungun            | none (prefix for another noun) |
+| Spanish                       | English                        |
+| ----------------------------- | ------------------------------ |
+| Qué hay?                      | What is there?                 |
+| Cómo es?                      | How is it?                     |
+| mi barrio                     | my neighbourhood/my area       |
+| mi lugar favorito             | my favorite place              |
+| alguno/alguna                 | some (standalone noun)         |
+| ninguno/ninguna               | none (standalone noun)         |
+| algun                         | some (prefix for another noun) |
+| nungun                        | none (prefix for another noun) |
+| Tienes que...                 | You have to...                 |
+| Tienes que girar a la derecha | You have to turn to the right  |
 # Things
 
 | Spanish                | English                       |
@@ -70,12 +72,12 @@ e.g.
 # Asking for directions
 
 
-| Spanish | English     |
-| ------- | ----------- |
-| tomas   | you take    |
-| llegas  | you arrive  |
-| giras   |             |
-| subes   | you go up   |
-| bajas   | you go down |
-| coges   | you turn    |
-| doblas  | you turn    |
+| Spanish | English           |
+| ------- | ----------------- |
+| tomas   | you take (a turn) |
+| llegas  | you arrive        |
+| giras   | you turn          |
+| subes   | you go up         |
+| bajas   | you go down       |
+| coges   | you take (a turn) |
+|         |                   |
