@@ -67,4 +67,15 @@ e.g.
 "La catedral está en frente de la escuela"
 "La farmacia esté en frente del banco"
 
-# 
+# Asking for directions
+
+
+| Spanish | English     |
+| ------- | ----------- |
+| tomas   | you take    |
+| llegas  | you arrive  |
+| giras   |             |
+| subes   | you go up   |
+| bajas   | you go down |
+| coges   | you turn    |
+| doblas  | you turn    |
