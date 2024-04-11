@@ -3,6 +3,7 @@
 - [ ] figure out what's going in the appendix?
 - [ ] Do I need a list of abbreviations?
 - [ ] DO THE FUCKING SCREENCAST
+- [ ] Does it matter that the copyright notice says thesis instead of dissertation or report?
 # Steps to take (in order)
 - [ ] Decide the names of the sections and put them in the report (this will generate the table of contents too). For example:
 ![](Pasted%20image%2020240318115805.png)
