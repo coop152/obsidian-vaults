@@ -49,9 +49,3 @@ Llueve todo el año: compra una paraguas para cuando llueve. En el primavera y v
 
 Quiere salir? Vivo en Fallowfield, que es sur del centro de la ciudad. Tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y baja la calle. Mi apartamento es en la primera esquina.
 
-
-
-
-Hello,
-
-You're going to visit Manchester soon, right? Wanna hang out? 
