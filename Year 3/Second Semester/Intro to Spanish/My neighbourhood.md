@@ -162,6 +162,7 @@ e.g.
 | hay nubes      | there's clouds      |
 | está nublado   | it's cloudy         |
 | está despejado | it's clear          |
-| está lloviendo | it's rainy          |
-| está nevando   | it's snowy          |
-e.g. "In my area, the weather in spring is always rainy" == "En mi barrio, el "
+| está lloviendo | it's raining        |
+| está nevando   | it's snowing        |
+|                |                     |
+e.g. "In my area, it always rains in spring" == "En mi barrio, siempre llueve en primavera"
