@@ -43,7 +43,7 @@ Dependiente: Gracias, aquí esta su cambio.
 # Deberes Unidad 10
 Hola,
 
-Va a venir a Manchester pronto, verdad? Es una buena ciudad, 
+Va a venir a Manchester pronto, verdad? Es una buena ciudad, pero es bastante rudioso y animada. Mi favorito 
 
 
 Quiere salir? Vivo en Fallowfield, que es sur del centro de la ciudad; tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y baja la calle. Mi apartamento es en la primera esquina.
