@@ -103,7 +103,7 @@ e.g. "el supermercado es el tercero a la izquierda" == "the supermarket is the t
 | coges/coge                                                 | you take (a turn)                                |
 | sigues/sigue                                               | you follow                                       |
 | continúas/continúa                                         | you continue                                     |
-| cruzes/cruze (la calle/el parque)                          | you cross (the street)/you go through (the park) |
+| cruces/cruce (la calle/el parque)                          | you cross (the street)/you go through (the park) |
 | doblas/dobla                                               | you turn                                         |
 | sigues/vas/continúas recto por esta calle hasta (landmark) | you go straight for this street until (landmark) |
 | el semáforo                                                | the traffic light                                |
