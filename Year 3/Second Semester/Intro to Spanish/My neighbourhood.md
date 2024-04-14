@@ -89,19 +89,28 @@ Useful for giving directions
 | Décimo/a  | Tenth   |
 e.g. "el supermercado es el tercero a la izquierda" == "the supermarket is the third on the left"
 "Para ir a la catedral, tome la segunda a la derecha y luego sigue todo recto." == "To get to the cathedral, take the second right and then continue straight ahead."
-# Asking for directions
+# Giving directions
 
-
-| Spanish | English           |
-| ------- | ----------------- |
-| tomas   | you take (a turn) |
-| llegas  | you arrive        |
-| giras   | you turn          |
-| subes   | you go up         |
-| bajas   | you go down       |
-| coges   | you take (a turn) |
-| sigues  | you follow        |
-| doblas  | you turn          |
+| Spanish                                                    | English                                          |
+| ---------------------------------------------------------- | ------------------------------------------------ |
+| tomas/toma                                                 | you take (a turn)                                |
+| llegas/llega                                               | you arrive                                       |
+| giras/gira (a la derecha/a la izquierda)                   | you turn (to the right/to the left)              |
+| vas/va                                                     | you go                                           |
+| subes/sube                                                 | you go up                                        |
+| bajas/baja                                                 | you go down                                      |
+| coges/coge                                                 | you take (a turn)                                |
+| sigues/sigue                                               | you follow                                       |
+| continúas/continúa                                         | you continue                                     |
+| cruzes/cruze (la calle/el parque)                          | you cross (the street)/you go through (the park) |
+| doblas/dobla                                               | you turn                                         |
+| sigues/vas/continúas recto por esta calle hasta (landmark) | you go straight for this street until (landmark) |
+| el semáforo                                                | the traffic light                                |
+| el cruce                                                   | the crossing                                     |
+| el parque                                                  | the park                                         |
+| el final                                                   | the end                                          |
+| la plaza                                                   | the plaza                                        |
+|                                                            |                                                  |
 
 # The time
 
