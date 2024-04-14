@@ -49,4 +49,4 @@ Va a venir a Manchester pronto, verdad? Quiere salir?
 
 Hello,
 
-You're going to visit Manchester soon, right? Wanna hang out? Vivo en Fallowfield, que es sur del centro de la ciudad; tomar el autobus (42 o 43) 
+You're going to visit Manchester soon, right? Wanna hang out? Vivo en Fallowfield, que es sur del centro de la ciudad; tomar el autobus (42 o 43) en Piccadilly Gardens y 
