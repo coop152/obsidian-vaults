@@ -161,3 +161,4 @@ e.g.
 | hay sol      | it's sunny          |
 | hay nubes    | there's clouds      |
 |              |                     |
+e.g. "In my area, the weather in spring is always rainy" == "En mi barrio, el "
