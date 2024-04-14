@@ -88,7 +88,7 @@ Useful for giving directions
 | Noveno/a  | Ninth   |
 | Décimo/a  | Tenth   |
 e.g. "el supermercado es el tercero a la izquierda" == "the supermarket is the third on the left"
-"Para ir a la catedral, tome la "
+"Para ir a la catedral, tome la segunda a la derecha y luego sigue todo recto." == "To get to the cathedral, take the second right and then continue straight ahead."
 # Asking for directions
 
 
