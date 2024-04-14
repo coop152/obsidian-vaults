@@ -145,20 +145,23 @@ e.g.
 
 # The weather
 
-| Spanish      | English             |
-| ------------ | ------------------- |
-| Hace...      | The weather is...   |
-| Calor        | hot                 |
-| frio         | cold                |
-| sol          | sun                 |
-| viento       | windy               |
-| buen tiempo  | good weather        |
-| mal tiempo   | bad weather         |
-| Llueve       | it's raining (verb) |
-| Nieva        | it's snowing        |
-| hay niebla   | there's fog         |
-| hay tormenta | there's a storm     |
-| hay sol      | it's sunny          |
-| hay nubes    | there's clouds      |
-|              |                     |
+| Spanish        | English             |
+| -------------- | ------------------- |
+| Hace...        | The weather is...   |
+| Calor          | hot                 |
+| frio           | cold                |
+| sol            | sun                 |
+| viento         | windy               |
+| buen tiempo    | good weather        |
+| mal tiempo     | bad weather         |
+| Llueve         | it's raining (verb) |
+| Nieva          | it's snowing        |
+| hay niebla     | there's fog         |
+| hay tormenta   | there's a storm     |
+| hay sol        | there's sun         |
+| hay nubes      | there's clouds      |
+| está nublado   | it's cloudy         |
+| está despejado | it's clear          |
+| está lloviendo | it's rainy          |
+| está nevando   | it's snowy          |
 e.g. "In my area, the weather in spring is always rainy" == "En mi barrio, el "
