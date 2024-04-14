@@ -43,7 +43,10 @@ Dependiente: Gracias, aquí esta su cambio.
 # Deberes Unidad 10
 Hola,
 
-Va a venir a Manchester pronto, verdad? Quiere salir? Vivo en Fallowfield, que es sur del centro de la ciudad; tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y baja la calle. Mi piso es en la primera esquina.
+Va a venir a Manchester pronto, verdad? 
+
+
+Quiere salir? Vivo en Fallowfield, que es sur del centro de la ciudad; tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y baja la calle. Mi apartamento es en la primera esquina.
 
 
 
