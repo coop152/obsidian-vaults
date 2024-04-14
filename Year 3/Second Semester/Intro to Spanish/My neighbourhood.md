@@ -49,26 +49,46 @@
 
 Use with estar, e.g. "Mi casa está cerca de un supermercado"
 
-| Spanish              | English                     |
-| -------------------- | --------------------------- |
-| Cerca                | close to                    |
-| a la derecha         | to the right                |
-| en la esquina        | on the corner               |
-| todo recto           | straight ahead              |
-| al lado              | next to                     |
-| a la izquierda       | to the left                 |
-| lejos                | far from                    |
-| entre ... y ...      | Between ... and ...         |
-| al final de la calle | at the end of the street    |
-| detrás               | behind                      |
-| delante              | in front                    |
-| enfrente de          | opposite (also in front of) |
-| al lado de           | next to                     |
+| Spanish              | English                        |
+| -------------------- | ------------------------------ |
+| Cerca                | close to                       |
+| lejos                | far from                       |
+| a la derecha         | to the right                   |
+| a la izquierda       | to the left                    |
+| en la esquina        | on the corner                  |
+| todo recto           | straight ahead                 |
+| al lado              | next to                        |
+| entre ... y ...      | Between ... and ...            |
+| detrás               | behind                         |
+| delante              | in front                       |
+| enfrente de          | opposite to (or "in front of") |
+| al lado de           | next to                        |
+| al final de la calle | at the end of the street       |
+| a la derecha de      | to the right of                |
+| a la izquierda de    | to the left of                 |
+|                      |                                |
 Remember the particle after "de"
 e.g.
 "La catedral está en frente de la escuela"
-"La farmacia esté en frente del banco"
+"La farmacia esté en frente del banco" (and remember that de + el = del!)
 
+## Ordinal numbers
+Useful for giving directions
+
+| Spanish   | English |
+| --------- | ------- |
+| Primero/a | First   |
+| Segundo/a | Second  |
+| Tercero/a | Third   |
+| Cuarto/a  | Fourth  |
+| Quinto/a  | Fifth   |
+| Sexto/a   | Sixth   |
+| Séptimo/a | Seventh |
+| Octavo/a  | Eighth  |
+| Noveno/a  | Ninth   |
+| Décimo/a  | Tenth   |
+e.g. "el supermercado es el tercero a la izquierda" == "the supermarket is the third on the left"
+"Para ir a la catedral, tome la "
 # Asking for directions
 
 
