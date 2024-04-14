@@ -43,4 +43,10 @@ Dependiente: Gracias, aquí esta su cambio.
 # Deberes Unidad 10
 Hola,
 
-Va a venir a Manchester pronto, verdad? 
+Va a venir a Manchester pronto, verdad? Quiere salir?
+
+
+
+Hello,
+
+You're going to visit Manchester soon, right? Wanna hang out?
