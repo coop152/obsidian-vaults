@@ -43,10 +43,11 @@ Dependiente: Gracias, aquí esta su cambio.
 # Deberes Unidad 10
 Hola,
 
-Va a venir a Manchester pronto, verdad? Quiere salir?
+Va a venir a Manchester pronto, verdad? Quiere salir? Vivo en Fallowfield, que es sur del centro de la ciudad; tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y baja la calle. Mi piso es en la primera esquina.
+
 
 
 
 Hello,
 
-You're going to visit Manchester soon, right? Wanna hang out? Vivo en Fallowfield, que es sur del centro de la ciudad; tomar el autobus (42 o 43) en Piccadilly Gardens y 
+You're going to visit Manchester soon, right? Wanna hang out? 
