@@ -43,4 +43,4 @@ Dependiente: Gracias, aquí esta su cambio.
 # Deberes Unidad 10
 Hola,
 
-Aquí hay algunos información sobre mi barrio, para cuando llegas.
+Va a venir a Manchester pronto, verdad? 
