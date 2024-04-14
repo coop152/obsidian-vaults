@@ -145,24 +145,24 @@ e.g.
 
 # The weather
 
-| Spanish        | English             |
-| -------------- | ------------------- |
-| Hace...        | The weather is...   |
-| Calor          | hot                 |
-| frio           | cold                |
-| sol            | sun                 |
-| viento         | windy               |
-| buen tiempo    | good weather        |
-| mal tiempo     | bad weather         |
-| Llueve         | it's raining (verb) |
-| Nieva          | it's snowing        |
-| hay niebla     | there's fog         |
-| hay tormenta   | there's a storm     |
-| hay sol        | there's sun         |
-| hay nubes      | there's clouds      |
-| está nublado   | it's cloudy         |
-| está despejado | it's clear          |
-| está lloviendo | it's raining        |
-| está nevando   | it's snowing        |
-|                |                     |
+| Spanish        | English                  |
+| -------------- | ------------------------ |
+| Hace...        | The weather is...        |
+| Calor          | hot                      |
+| frio           | cold                     |
+| sol            | sun                      |
+| viento         | windy                    |
+| buen tiempo    | good weather             |
+| mal tiempo     | bad weather              |
+| Llueve         | it's raining (verb)      |
+| Nieva          | it's snowing             |
+| hay niebla     | there's fog              |
+| hay tormenta   | there's a storm          |
+| hay sol        | there's sun (it's sunny) |
+| hay nubes      | there's clouds           |
+| está nublado   | it's cloudy              |
+| está despejado | it's clear               |
+| está lloviendo | it's raining             |
+| está nevando   | it's snowing             |
+|                |                          |
 e.g. "In my area, it always rains in spring" == "En mi barrio, siempre llueve en primavera"
