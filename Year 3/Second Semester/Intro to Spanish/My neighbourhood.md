@@ -96,6 +96,7 @@ e.g. "el supermercado es el tercero a la izquierda" == "the supermarket is the t
 | tomas/toma                                                 | you take (a turn)                                |
 | llegas/llega                                               | you arrive                                       |
 | giras/gira (a la derecha/a la izquierda)                   | you turn (to the right/to the left)              |
+| tuercas/tuerca (a la derecha/a la izquierda)               | you turn (to the right/to the left)              |
 | vas/va                                                     | you go                                           |
 | subes/sube                                                 | you go up                                        |
 | bajas/baja                                                 | you go down                                      |
