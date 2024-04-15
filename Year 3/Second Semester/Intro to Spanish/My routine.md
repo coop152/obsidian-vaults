@@ -15,7 +15,8 @@
 | soler (irregular; suelo for "i usually do", follow with infinitive) | to usually do    |
 | poder (irregular; puedo for "i can", follow with infinitive)        | to be able to do |
 | jugar (irregular; juego for "i play")                               | to play          |
-| alm                                                                 |                  |
+| almorzar (irregular; almuerzo for "i have lunch")                   | to have lunch    |
+|                                                                     |                  |
 
 some examples:
 Suelo dormir en la noche = I usually sleep at night
