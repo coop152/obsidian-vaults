@@ -10,14 +10,14 @@
 # Verb forms
 For example, with "i am called", which also conveniently demonstrates the reflexive pronouns:
 
-| Pronoun | Person | English | Spanish | Notes |
-| ---- | ---- | ---- | ---- | ---- |
-| Yo | First Person | I am called | Me llamo |  |
-| Tú | Second Person | You are called | Te llamas | Use usted third person for formal second person |
-| él/ella/usted | Third/Formal Second Person | They/You are called | Se llama | El for he, ella for she, usted for second person formal |
-| Nosotros/Nosotras | First person plural | We are called | Nos llamamos |  |
-| Vosotros/Vosotras | Second person plural | You lot are called | Os llamaís |  |
-| Ellos/Ellas/Ustedes | Third/formal second person plural | They/You lot are called | Se llaman |  |
+| Pronoun             | Person                            | English                 | Spanish      | Notes                                                   |
+| ------------------- | --------------------------------- | ----------------------- | ------------ | ------------------------------------------------------- |
+| Yo                  | First Person                      | I am called             | Me llamo     |                                                         |
+| Tú                  | Second Person                     | You are called          | Te llamas    | Use usted third person for formal second person         |
+| él/ella/usted       | Third/Formal Second Person        | They/You are called     | Se llama     | El for he, ella for she, usted for second person formal |
+| Nosotros/Nosotras   | First person plural               | We are called           | Nos llamamos |                                                         |
+| Vosotros/Vosotras   | Second person plural              | You lot are called      | Os llamaís   |                                                         |
+| Ellos/Ellas/Ustedes | Third/formal second person plural | They/You lot are called | Se llaman    |                                                         |
 Verbs ending with -ir become -o, -es, -e, -imos, -ís, -en
 Verbs ending with -ar become -o, -as, -a, -amos, -aís, -an
 # Articles
@@ -68,3 +68,5 @@ Word ends with -ista? Either
 
 Word ends with a consonant? Masculine
 Word ends with a consonant-a? Feminine
+
+# 
