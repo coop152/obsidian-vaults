@@ -9,8 +9,4 @@ Week 8: [[My neighbourhood]]
 Week 9: [[My routine]]
 
 # Deberes
-- Write about a village or important city (actual homework) (idk if this still exists ???)
-	- say what you like or dislike about it
-	- Compare those likes with another city
-
-- unit 10 homework
+- unit 11 hwk (write about your routine, you dont need to do the compare part)

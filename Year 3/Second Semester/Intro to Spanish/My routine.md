@@ -6,29 +6,48 @@
 | Todos el día   | All day    |
 | Todos los años | Every year |
 | Todos el año   | All year   |
-|                |            |
+| Normalmente    | normally   |
+| Generalmente   | generally  |
+| algunas veces  | sometimes  |
+| nunca          | never      |
 # Actions
 
-| Spanish                                                             | English          |
-| ------------------------------------------------------------------- | ---------------- |
-| Dormir (irregular; duermo for "i sleep")                            | to sleep         |
-| soler (irregular; suelo for "i usually do", follow with infinitive) | to usually do    |
-| poder (irregular; puedo for "i can", follow with infinitive)        | to be able to do |
-| jugar (irregular; juego for "i play")                               | to play          |
-| almorzar (irregular; almuerzo for "i have lunch")                   | to have lunch    |
-|                                                                     |                  |
+| Spanish                                                             | English                 |
+| ------------------------------------------------------------------- | ----------------------- |
+| Dormir (irregular; duermo for "i sleep")                            | to sleep                |
+| soler (irregular; suelo for "i usually do", follow with infinitive) | to usually do           |
+| poder (irregular; puedo for "i can", follow with infinitive)        | to be able to do        |
+| jugar (irregular; juego for "i play")                               | to play                 |
+| almorzar (irregular; almuerzo for "i have lunch")                   | to have lunch           |
+| ir a la peluquería                                                  | go to the hairdresser's |
 
 some examples:
 Suelo dormir en la noche = I usually sleep at night
 Puedo jugar al bádminton = I can play badminton
 
-preferir
+## Reflexive actions
+Words where the subject and object are the same.
+End in -se
+Conjugated like normal, but you **always add the reflexive pronoun before**.
 
-prefiero
-prefieres
-prefiere
-preferimos
-preferís
-prefieren
+| Spanish                                              | English        |
+| ---------------------------------------------------- | -------------- |
+| afeitarse                                            | to shave       |
+| vestirse                                             | to get dressed |
+| levantarse                                           | to get up      |
+| acostarse                                            | to go to bed   |
+| despertarse (irregular; i wake up is "me despierto") | to wake up     |
+e.g.
+me vestiro for "i get dressed"
 
-Me gusta bádminton, pero mi hermano prefiere el fútbol y mis padres prefieren el tenis.
+recap on reflexive pronouns:
+
+|     |     |
+| --- | --- |
+| Me  |     |
+| Te  |     |
+| Se  |     |
+| Nos |     |
+| Os  |     |
+| Se  |     |
+
