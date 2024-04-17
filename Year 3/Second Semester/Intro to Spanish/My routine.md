@@ -1,15 +1,17 @@
 # Times
 
-| Spanish        | English    |
-| -------------- | ---------- |
-| Todos los días | Every day  |
-| Todos el día   | All day    |
-| Todos los años | Every year |
-| Todos el año   | All year   |
-| Normalmente    | normally   |
-| Generalmente   | generally  |
-| algunas veces  | sometimes  |
-| nunca          | never      |
+| Spanish                 | English                |
+| ----------------------- | ---------------------- |
+| Todos los días          | Every day              |
+| Todos el día            | All day                |
+| Todos los años          | Every year             |
+| Todos el año            | All year               |
+| Normalmente             | normally               |
+| Generalmente            | generally              |
+| algunas veces           | sometimes              |
+| nunca                   | never                  |
+| antes de (infinitive)   | before I (do whatever) |
+| después de (infinitive) | after I (do whatever)  |
 # Actions
 
 | Spanish                                                             | English                 |
