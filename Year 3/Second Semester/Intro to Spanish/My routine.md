@@ -31,21 +31,23 @@ e.g.
 
 # Frequencies
 
-| Spanish                 | English                |
-| ----------------------- | ---------------------- |
-| Todos los días          | Every day              |
-| Todos el día            | All day                |
-| Todos los años          | Every year             |
-| Todos el año            | All year               |
-| Normalmente             | normally               |
-| Generalmente            | generally              |
-| algunas veces           | sometimes              |
-| nunca                   | never                  |
-| antes de (infinitive)   | before I (do whatever) |
-| después de (infinitive) | after I (do whatever)  |
-| el fin de semana        | the weekend            |
-| siempre                 | always                 |
-| casi siempre            | almost always          |
+| Spanish                       | English                              |
+| ----------------------------- | ------------------------------------ |
+| Todos los días                | Every day                            |
+| Todos el día                  | All day                              |
+| Todos los años                | Every year                           |
+| Todos el año                  | All year                             |
+| Normalmente                   | normally                             |
+| Generalmente                  | generally                            |
+| algunas veces                 | sometimes                            |
+| nunca                         | never                                |
+| antes de (infinitive)         | before I (do whatever)               |
+| después de (infinitive)       | after I (do whatever)                |
+| el fin de semana              | the weekend                          |
+| siempre                       | always                               |
+| casi siempre                  | almost always                        |
+| primero (same as the ordinal) | first, I (e.g. first, i get dressed) |
+|                               |                                      |
 # Actions
 
 | Spanish                                                             | English                 |
@@ -56,6 +58,9 @@ e.g.
 | jugar (irregular; juego for "i play")                               | to play                 |
 | almorzar (irregular; almuerzo for "i have lunch")                   | to have lunch           |
 | ir a la peluquería                                                  | go to the hairdresser's |
+| Desayunar                                                           | to eat breakfast        |
+|                                                                     |                         |
+|                                                                     |                         |
 
 some examples:
 Suelo dormir en la noche = I usually sleep at night
