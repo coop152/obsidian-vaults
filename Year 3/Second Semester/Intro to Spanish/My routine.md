@@ -30,13 +30,18 @@ Words where the subject and object are the same.
 End in -se
 Conjugated like normal, but you **always add the reflexive pronoun before**.
 
-| Spanish                                              | English        |
-| ---------------------------------------------------- | -------------- |
-| afeitarse                                            | to shave       |
-| vestirse                                             | to get dressed |
-| levantarse                                           | to get up      |
-| acostarse                                            | to go to bed   |
-| despertarse (irregular; i wake up is "me despierto") | to wake up     |
+| Spanish                                              | English          |
+| ---------------------------------------------------- | ---------------- |
+| afeitarse                                            | to shave         |
+| vestirse                                             | to get dressed   |
+| levantarse                                           | to get up        |
+| acostarse                                            | to go to bed     |
+| despertarse (irregular; i wake up is "me despierto") | to wake up       |
+| cepillarse                                           | to take a bath   |
+| lavarse                                              | to wash yourself |
+| peinarse                                             | to comb (hair)   |
+| sentarse                                             | to sit down      |
+|                                                      |                  |
 e.g.
 me vestiro for "i get dressed"
 
@@ -51,3 +56,22 @@ recap on reflexive pronouns:
 | Os  |     |
 | Se  |     |
 
+# Personalised vocab
+Verbs and nouns for **my** morning routine:
+
+|     |     |
+| --- | --- |
+|     |     |
+|     |     |
+
+Verbs and nouns for what **I** do at university:
+
+|     |     |
+| --- | --- |
+|     |     |
+
+Verbs and nouns for what **I** do in my free time/on the weekend:
+
+|     |     |
+| --- | --- |
+|     |     |
