@@ -49,6 +49,7 @@ Conjugated like normal, but you **always add the reflexive pronoun before**.
 |                                                      |                  |
 e.g.
 me vestiro for "i get dressed"
+"A que"
 
 recap on reflexive pronouns:
 
