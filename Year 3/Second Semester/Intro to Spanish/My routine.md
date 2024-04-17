@@ -65,7 +65,7 @@ e.g.
 | almorzar (irregular; almuerzo for "i have lunch")                   | to have lunch           |
 | ir a la peluquería                                                  | go to the hairdresser's |
 | Desayunar                                                           | to eat breakfast        |
-|                                                                     |                         |
+| ir al gimnasio                                                      | go to the gym           |
 |                                                                     |                         |
 
 some examples:
@@ -88,7 +88,7 @@ Conjugated like normal, but you **always add the reflexive pronoun before**.
 | lavarse                                              | to wash yourself |
 | peinarse                                             | to comb (hair)   |
 | sentarse                                             | to sit down      |
-|                                                      |                  |
+| ducharse                                             | to take a shower |
 e.g.
 me vestiro for "i get dressed"
 "A que"
