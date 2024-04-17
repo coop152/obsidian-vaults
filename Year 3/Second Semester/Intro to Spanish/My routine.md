@@ -1,4 +1,35 @@
-# Times
+# The time
+
+| Spanish                     | English                                         |
+| --------------------------- | ----------------------------------------------- |
+| Que hora es?                | What is the time?                               |
+| Es la.../Son las... (hora). | It's (hour) o'clock.                            |
+| ...y cuarto                 | quarter past (hour)                             |
+| ...y medio                  | half past (hour)                                |
+| ...y (minutos)              | (minutes) past (hour)                           |
+| ...menos cuarto             | quarter to (hour)                               |
+| ...menos (minutos)          | (minutes) to (hour)                             |
+| en punto                    | on the dot                                      |
+| mediodía                    | midday/noon                                     |
+| medianoche                  | midnight                                        |
+| a la/a las...               | At... (e.g. "it's at three" == "es a las tres") |
+| de la manana                | in the morning                                  |
+| de la tarde/de la noche     | in the afternoon/evening                        |
+"It's quarter past five" == "Son las cinco y cuarto"
+"It's ten past three" == "Son las tres y diez"
+"It's quarter to eight" == "Son las ocho menos cuarto"
+"It's 2pm sharp/on the dot" == "Son las 2 de la tarde en punto"
+"It's 1am" == "Es la una de la manana"
+
+
+e.g.
+"When do the shops in manchester open?"
+"A que hora abren las tiendas en Manchester?"
+"The shops in manchester open at 7am"
+"Las tiendas en Manchester abren a la siete a la manana"
+
+
+# Frequencies
 
 | Spanish                 | English                |
 | ----------------------- | ---------------------- |
