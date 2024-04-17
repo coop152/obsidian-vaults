@@ -10,3 +10,4 @@ Week 9: [[My routine]]
 
 # Deberes
 - unit 11 hwk (write about your routine, you dont need to do the compare part)
+- pick out verbs and nouns for each unit that are relevant to you, write them down (things you could use in an exam most easily)
