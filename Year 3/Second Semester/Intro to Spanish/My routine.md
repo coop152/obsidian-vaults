@@ -47,6 +47,12 @@ e.g.
 | siempre                       | always                               |
 | casi siempre                  | almost always                        |
 | primero (same as the ordinal) | first, I (e.g. first, i get dressed) |
+| a menudo                      | often                                |
+| muchas veces                  | lots of the time                     |
+| frecuentemente                | frequently                           |
+| a veces                       | sometimes                            |
+| muy pocas veces               | not very often                       |
+| en ocasiones                  | occasionally/on occasion             |
 |                               |                                      |
 # Actions
 
