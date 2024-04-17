@@ -13,7 +13,8 @@
 | antes de (infinitive)   | before I (do whatever) |
 | después de (infinitive) | after I (do whatever)  |
 | el fin de semana        | the weekend            |
-|                         |                        |
+| siempre                 | always                 |
+| casi siempre            | almost always          |
 # Actions
 
 | Spanish                                                             | English                 |
