@@ -1,5 +1,5 @@
 # Todos (at some point)
-- [ ] Write the abstract, probably at the very end. it should summarise the entire project and list the key outcomes.
+- [x] Write the abstract, probably at the very end. it should summarise the entire project and list the key outcomes.
 - [ ] figure out what's going in the appendix?
 - [ ] Do I need a list of abbreviations?
 - [ ] DO THE FUCKING SCREENCAST
