@@ -46,3 +46,5 @@ Hola,
 Va a venir a Manchester pronto, verdad? Es una buena ciudad, pero es un poco ruidoso y animada para mí. Lo que más me gusta es el número y variedad de tiendas, pero prefiero ciudades más tranquilas. Mi lugar favorito es Afflecks y las tiendas cercana: Para llegar allí desde Picadilly Gardens, cruce la plaza y sigue Oldham Road - esta en la segunda esquina, al lado de Fred Perry.
 Llueve todo el año; compra una paraguas para cuando llueve. En el primavera y verano hay alguna sol, y a veces nieva en el invierno. Normalmente esta nublado en otoño.
 Quiere salir cuando llega? Vivo en Fallowfield, que es sur del centro de la ciudad. Para llegar allí, tome el autobus (42 o 43, en Piccadilly Gardens) hasta la parada cerca de la entrada del campus de Fallowfield, y sigue la calle. Mi apartamento es en la primera esquina, a la izquierda.
+
+# Deberes Unidad 11
