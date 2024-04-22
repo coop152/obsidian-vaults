@@ -16,4 +16,5 @@
 
 
 Q: Que te gusta hacer los fines de semana?
-A: Me gusta ver la television con mis amigos y 
+A: Me gusta ver la television y jugar los videojuegos con mis amigos.
+(o pasear en la parque, o limpiar la casa)
