@@ -20,4 +20,4 @@ A: Me gusta ver la television y jugar los videojuegos con mis amigos.
 (o pasear en la parque, o limpiar la casa)
 
 
-Pues ella va al campo muchos fines de semana. Los sábados que esta en Madrid, se levanta a la hora de todos los días y a veces va de compras. Por la tarde siempre sale con algun amigo y van al cine, al teatro, a bailar... Los domingos son mucho más tranquilos: se gusta comer en casa you por la tarde no sale. Es cuando realmente descanse.
+Pues ella va al campo muchos fines de semana. Los sábados que esta en Madrid, se levanta a la hora de todos los días y a veces va de compras. Por la tarde siempre sale con algun amigo y van al cine, al teatro, a bailar... Los domingos son mucho más tranquilos: le gusta comer en casa you por la tarde no sale. Es cuando realmente descansa.
