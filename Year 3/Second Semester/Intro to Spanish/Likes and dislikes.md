@@ -62,18 +62,21 @@ In order of most positive to most critical:
 8. no me gusta nada - I don't like it at all
 # Actions
 
-| Spanish | English                                                            |
-| ------- | ------------------------------------------------------------------ |
-| Salir   | To go out (e.g. to literally leave a room, to go out with friends) |
-| leer    | To read                                                            |
-| chatear | To chat                                                            |
-| Viajar  | To travel                                                          |
-| Pasear  | To walk                                                            |
-| Correr  | To run                                                             |
-| Ir      | to go                                                              |
-| Invitar | to invite                                                          |
-| Nadar   | to swim                                                            |
-| Fumar   | to smoke                                                           |
+| Spanish         | English                                                            |
+| --------------- | ------------------------------------------------------------------ |
+| Salir           | To go out (e.g. to literally leave a room, to go out with friends) |
+| leer            | To read                                                            |
+| chatear         | To chat                                                            |
+| Viajar          | To travel                                                          |
+| Pasear          | To walk                                                            |
+| Correr          | To run                                                             |
+| Ir              | to go                                                              |
+| Invitar         | to invite                                                          |
+| Nadar           | to swim                                                            |
+| Fumar           | to smoke                                                           |
+| ir de compras   | to go shopping (for fun)                                           |
+| hacer la compra | to do the shopping (like, groceries)                               |
+|                 |                                                                    |
 
 # Nouns
 
