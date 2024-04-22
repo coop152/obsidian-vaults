@@ -31,29 +31,32 @@ e.g.
 
 # Frequencies
 
-| Spanish                       | English                              |
-| ----------------------------- | ------------------------------------ |
-| Todos los días                | Every day                            |
-| Todos el día                  | All day                              |
-| Todos los años                | Every year                           |
-| Todos el año                  | All year                             |
-| Normalmente                   | normally                             |
-| Generalmente                  | generally                            |
-| algunas veces                 | sometimes                            |
-| nunca                         | never                                |
-| antes de (infinitive)         | before I (do whatever)               |
-| después de (infinitive)       | after I (do whatever)                |
-| el fin de semana              | the weekend                          |
-| siempre                       | always                               |
-| casi siempre                  | almost always                        |
-| primero (same as the ordinal) | first, I (e.g. first, i get dressed) |
-| a menudo                      | often                                |
-| muchas veces                  | lots of the time                     |
-| frecuentemente                | frequently                           |
-| a veces                       | sometimes                            |
-| muy pocas veces               | not very often                       |
-| en ocasiones                  | occasionally/on occasion             |
-|                               |                                      |
+| Spanish                              | English                                                 |
+| ------------------------------------ | ------------------------------------------------------- |
+| Todos los días                       | Every day                                               |
+| Todos el día                         | All day                                                 |
+| Todos los años                       | Every year                                              |
+| Todos el año                         | All year                                                |
+| Normalmente                          | normally                                                |
+| Generalmente                         | generally                                               |
+| algunas veces                        | sometimes                                               |
+| nunca                                | never                                                   |
+| antes de (infinitive)                | before I (do whatever)                                  |
+| después de (infinitive)              | after I (do whatever)                                   |
+| el fin de semana/los fines de semana | the weekend/weekends                                    |
+| siempre                              | always                                                  |
+| casi siempre                         | almost always                                           |
+| primero (same as the ordinal)        | first, I (e.g. first, i get dressed)                    |
+| a menudo                             | often                                                   |
+| muchas veces                         | lots of the time                                        |
+| frecuentemente                       | frequently                                              |
+| a veces                              | sometimes                                               |
+| muy pocas veces                      | not very often                                          |
+| en ocasiones                         | occasionally/on occasion                                |
+| dos veces                            | two times (e.g. "dos veces al mes" = two times a month) |
+| cada noche                           | every night                                             |
+| una vez al mes                       | one time a month (note the singular of veces)           |
+|                                      |                                                         |
 # Actions
 
 | Spanish                                                             | English                 |

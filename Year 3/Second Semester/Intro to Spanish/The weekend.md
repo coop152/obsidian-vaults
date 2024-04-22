@@ -14,3 +14,6 @@
 1. Me levanto a la ocho y media de la manana
 2. Me duchas a la nueva de la noche antes me acuesto
 
+
+Q: Que te gusta hacer los fines de semana?
+A: Me gusta ver la television con mis amigos y 
