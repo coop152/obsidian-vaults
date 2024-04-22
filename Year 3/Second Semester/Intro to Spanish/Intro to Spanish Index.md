@@ -11,5 +11,5 @@ Week 10: [[The weekend]]
 
 # Deberes
 - unit 11 hwk (write about your routine, you dont need to do the compare part)
-- pick out verbs and nouns for each unit that are relevant to you, write them down (things you could use in an exam most easily)
+- pick out verbs and nouns for each unit that are relevant to you, write them down (things you could use in an exam most easily) **(this is important, more than the actual homework)**
 	- also write some sentences for each unit that uses them for practise (not homework but seems like a good idea)
