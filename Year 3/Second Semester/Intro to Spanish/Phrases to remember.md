@@ -12,4 +12,4 @@
 | Rochdale está al norte de Manchester                 | Rochdale is to the north of Manchester                   |
 | Vivo en Fallowfield, al sur del centro de Manchester | I live in Fallowfield, south of the center of Manchester |
 e.g.
-My name is Kyle, and I'm 21 years old. I study computer science at the University of Manchester. I'm English, and I'm from Rochdale, al norte de Manchester. I live in Fallowfield, 
+My name is Kyle, and I'm 21 years old. I study computer science at the University of Manchester. I'm English, and I'm from Rochdale, in England. I live in Fallowfield, south of Manchester city centre.
