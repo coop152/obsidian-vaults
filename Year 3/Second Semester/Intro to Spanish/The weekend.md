@@ -1,12 +1,22 @@
 # 
 
-| Spanish            | English                                                                           |
-| ------------------ | --------------------------------------------------------------------------------- |
-| ver la television  | watch tv                                                                          |
-| jugar al badminton | to play badminton                                                                 |
-| me aburro          | I am bored                                                                        |
-| marchosos (adj.)   | fun (but, like, for people that go out on the weekends and get pissed at parties) |
-|                    |                                                                                   |
+| Spanish            | English                                           |
+| ------------------ | ------------------------------------------------- |
+| ver la television  | watch tv                                          |
+| jugar al badminton | to play badminton                                 |
+| me aburro          | I am bored                                        |
+| levantarse         | to get up                                         |
+| acostarse          | to go to bed                                      |
+| volver             | to get back (i.e. to return home)                 |
+| limpiar            | to clean                                          |
+| ir al cine         | to go to the cinema                               |
+| pasear             | to pass through (i.e. the country side, the park) |
+| montar la bici     | to ride the bike                                  |
+| salir              | to go out                                         |
+| cenar              | to have dinner                                    |
+| desayunar          | to have breakfast                                 |
+| comer fuera        | to eat out (like, at a restaurant)                |
+|                    |                                                   |
 
 
 # In-class notes
