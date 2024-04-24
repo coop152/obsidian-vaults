@@ -26,4 +26,8 @@ Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de
 | kylecoop@gmail.com                        | kylecoop (arroba) gmail (punto) com         |
 | Mis aficiones son...                      | My hobbies are...                           |
 | ...jugar al videojuegos y jugar badminton | ...playing videogames and playing badminton |
-# Unidad 3 - 
+# Unidad 3 - Describing people
+
+| Spanish | English |
+| ------- | ------- |
+|         |         |
