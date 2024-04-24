@@ -28,6 +28,9 @@ Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de
 | ...jugar al videojuegos y jugar badminton | ...playing videogames and playing badminton |
 # Unidad 3 - Describing people
 
-| Spanish | English |
-| ------- | ------- |
-|         |         |
+| Spanish                                          | English                              |
+| ------------------------------------------------ | ------------------------------------ |
+| Tengo un hermano y no hermanas.                  | I have a brother and no sisters.     |
+| Mi hermano se llama Connor.                      | My brother's name is Connor.         |
+| Tiene el pelo corto y marron, y lleva una barba. | He has short brown hair and a beard. |
+| Es alto y                                        | He's tall                            |
