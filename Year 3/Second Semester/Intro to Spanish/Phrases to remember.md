@@ -1,4 +1,4 @@
-# Unidad 1 - Introductions
+# Unidad 1/2 - Introductions
 
 | Spanish                                              | English                                                  |
 | ---------------------------------------------------- | -------------------------------------------------------- |
@@ -16,7 +16,7 @@ My name is Kyle, and I'm 21 years old. I study computer science at the Universit
 
 Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de Manchester. Soy ingles, y soy de Inglaterra, de Rochdale. Vivo en Fallowfield, al sur del centro de Manchester.
 
-# Unidad 2 - Giving information about yourself
+# Unidad 3 - Giving information about yourself
 
 | Spanish                                   | English                                     |
 | ----------------------------------------- | ------------------------------------------- |
@@ -26,11 +26,16 @@ Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de
 | kylecoop@gmail.com                        | kylecoop (arroba) gmail (punto) com         |
 | Mis aficiones son...                      | My hobbies are...                           |
 | ...jugar al videojuegos y jugar badminton | ...playing videogames and playing badminton |
-# Unidad 3 - Describing people
+# Unidad 5 - Describing people
 
-| Spanish                                          | English                              |
-| ------------------------------------------------ | ------------------------------------ |
-| Tengo un hermano y no hermanas.                  | I have a brother and no sisters.     |
-| Mi hermano se llama Connor.                      | My brother's name is Connor.         |
-| Tiene el pelo corto y marron, y lleva una barba. | He has short brown hair and a beard. |
-| Es alto y                                        | He's tall                            |
+| Spanish                                                      | English                                               |
+| ------------------------------------------------------------ | ----------------------------------------------------- |
+| Tengo un hermano y no hermanas.                              | I have a brother and no sisters.                      |
+| Mi hermano se llama Connor.                                  | My brother's name is Connor.                          |
+| Tiene el pelo corto y marron, y una barba. Es bastante alto. | He has short brown hair and a beard. He's quite tall. |
+| Mi padre se llama Andrew.                                    | My dad's name is Andrew.                              |
+| Tiene el pelo largo y marron. Es viejo y un poco bajo.       | He has long brown hair. He's old and a bit short.     |
+| Mi madre se llama Julie.                                     | My mum's name is Julie.                               |
+| Tiene el pelo largo y rubio. Es tambien un poco baja.        | She has long blonde hair. She's also a bit short.     |
+
+# Unidad 6 - Objects
