@@ -39,3 +39,7 @@ Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de
 | Tiene el pelo largo y rubio. Es tambien un poco baja.        | She has long blonde hair. She's also a bit short.     |
 
 # Unidad 6 - Objects
+
+| Spanish | English |
+| ------- | ------- |
+|         |         |
