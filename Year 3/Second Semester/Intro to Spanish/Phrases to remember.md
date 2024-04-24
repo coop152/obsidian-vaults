@@ -57,10 +57,14 @@ Don't really know what to put here, so heres some good nouns:
 |               |                 |
 
 # Unidad 7 - Describing locations
+(Using Rochdale as the place im talking about)
 
-| Spanish | English |
-| ------- | ------- |
-|         |         |
+| Spanish                                                                                                                                          | English                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| pueblo                                                                                                                                           | town                                                                                                                                             |
+| ciudad                                                                                                                                           | city                                                                                                                                             |
+| Mi pueblo es bastante abburido. Es viejo y feo, y no hay muchos edificios interesantes. El ayuntamiento es bonito, y hay algunas buenas tiendas. | My town is pretty boring. It's old and ugly, and there aren't many interesting buildings. The town hall is pretty, and there are some good shops |
+| Mi pueblo es famoso por                                                                                                                          |                                                                                                                                                  |
 
 
 
