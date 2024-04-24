@@ -39,7 +39,41 @@ Me llamo Kyle, y tengo vientiuno anos. Estudio informática en la Universidad de
 | Tiene el pelo largo y rubio. Es tambien un poco baja.        | She has long blonde hair. She's also a bit short.     |
 
 # Unidad 6 - Objects
+Don't really know what to put here, so heres some good nouns:
+
+| Spanish       | English         |
+| ------------- | --------------- |
+| Ordenador     | Computer        |
+| boligrafo     | pen             |
+| cuaderno      | notebook        |
+| bolsa         | bag             |
+| bocadilla     | sandwich        |
+| mesa          | table           |
+| silla         | chair           |
+| cama          | bed             |
+| mi dormitorio | my bedroom      |
+| ban~o         | bathroom/toilet |
+| cocina        | kitchen         |
+|               |                 |
+
+# Unidad 7 - Describing locations
 
 | Spanish | English |
 | ------- | ------- |
 |         |         |
+
+
+
+
+
+
+
+
+# Misc
+## Numbers
+
+| Spanish | English              |
+| ------- | -------------------- |
+| 2024    | dos mil veinticuatro |
+| 21      | veintiuno            |
+
