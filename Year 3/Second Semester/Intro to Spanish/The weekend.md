@@ -1,10 +1,12 @@
 # 
 
-| Spanish            | English           |
-| ------------------ | ----------------- |
-| ver la television  | watch tv          |
-| jugar al badminton | to play badminton |
-| me aburro          | I am bored        |
+| Spanish            | English                                                                           |
+| ------------------ | --------------------------------------------------------------------------------- |
+| ver la television  | watch tv                                                                          |
+| jugar al badminton | to play badminton                                                                 |
+| me aburro          | I am bored                                                                        |
+| marchosos (adj.)   | fun (but, like, for people that go out on the weekends and get pissed at parties) |
+|                    |                                                                                   |
 
 
 # In-class notes
