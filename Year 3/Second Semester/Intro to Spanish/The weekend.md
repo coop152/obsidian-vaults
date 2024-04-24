@@ -1,8 +1,9 @@
 # 
 
-| Spanish | English |
-| ------- | ------- |
-|         |         |
+| Spanish            | English  |
+| ------------------ | -------- |
+| ver la television  | watch tv |
+| jugar al badminton |          |
 
 
 # In-class notes
@@ -23,3 +24,7 @@ A: Me gusta ver la television y jugar los videojuegos con mis amigos.
 
 
 Pues ella va al campo muchos fines de semana. Los sábados que esta en Madrid, se levanta a la hora de todos los días y a veces va de compras. Por la tarde siempre sale con algun amigo y van al cine, al teatro, a bailar... Los domingos son mucho más tranquilos: le gusta comer en casa you por la tarde no sale. Es cuando realmente descansa.
+
+**Que te gusta hacer en el fin de semana?**
+
+Me gusta jugar badminton con mis amigos en los fines de semana. Vamos en el manana, desayunamos en el cafeteria y jugamos algunas juegas. Despues, cuando volvo, me gusta veo al tele y jugar al videojuegos.
