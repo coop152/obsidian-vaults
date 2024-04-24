@@ -4,6 +4,8 @@
 | ------- | ------- |
 |         |         |
 
+
+# In-class notes
 3, 4, 5, 6
 3. El tiempo es bastante mal, está nublado y frío
 4. El clima en Inglaterra está generalmente mal
