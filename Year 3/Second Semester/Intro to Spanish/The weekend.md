@@ -1,9 +1,10 @@
 # 
 
-| Spanish            | English  |
-| ------------------ | -------- |
-| ver la television  | watch tv |
-| jugar al badminton |          |
+| Spanish            | English           |
+| ------------------ | ----------------- |
+| ver la television  | watch tv          |
+| jugar al badminton | to play badminton |
+| me aburro          | I am bored        |
 
 
 # In-class notes
