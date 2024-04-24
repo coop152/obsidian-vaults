@@ -16,7 +16,7 @@
 | cenar              | to have dinner                                    |
 | desayunar          | to have breakfast                                 |
 | comer fuera        | to eat out (like, at a restaurant)                |
-|                    |                                                   |
+| ir de copas        | to go out drinking                                |
 
 
 # In-class notes
