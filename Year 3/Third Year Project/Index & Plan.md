@@ -61,3 +61,8 @@ When youve got something down for everything:
 - add bit about updates to installer section
 
 
+if you dont count code snippets your word count plummets. only remove if you go over and it puts you in the safe range.
+```tex
+% texcount stuff
+%TC:envir minted [ignore] ignore
+```
