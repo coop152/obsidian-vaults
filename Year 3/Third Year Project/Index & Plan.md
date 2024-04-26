@@ -36,4 +36,25 @@
 - [x] ALTERNATIVELY, Find a way to reasonably package tcl/tk with the executable in a relocatable way
 
 # random shit
-- i dont think alarms when combined with timezones ever worked? but richard seems to think that alarms failing during daylight savings is a new thing; maybe test on old version
+- ~~i dont think alarms when combined with timezones ever worked? but richard seems to think that alarms failing during daylight savings is a new thing; maybe test on old version~~ He was right its a bug i introduced :(
+
+# WHAT'S LEFT
+- Porting
+	- Fixing bugs
+	- Using chrono for time
+	- Miscellaneous
+	- Creating the installer
+	- Backporting to linux
+- Features
+	- Delete History
+	- Mass Delete
+	- Auto-cleanup
+- Conclusion
+
+When youve got something down for everything:
+- Sort out references and the bibliography
+- talk about feature requests in planning
+- maybe look at the comments in Analysis and add some more images
+- add images and waffle more in the reflection/results bit
+
+
