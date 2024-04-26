@@ -43,7 +43,7 @@
 	- Fixing bugs
 	- Using chrono for time
 	- Miscellaneous
-	- Creating the installer
+	- ~~Creating the installer~~
 	- Backporting to linux
 - Features
 	- Delete History
@@ -58,5 +58,6 @@ When youve got something down for everything:
 - maybe look at the comments in Analysis and add some more images
 - add images and waffle more in the reflection/results bit
 - add images to the installer section in porting
+- add bit about updates to installer section
 
 
