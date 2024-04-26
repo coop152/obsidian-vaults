@@ -44,7 +44,7 @@
 	- Using chrono for time
 	- Miscellaneous
 	- ~~Creating the installer~~
-	- Backporting to linux
+	- ~~Backporting to linux~~
 - Features
 	- Delete History
 	- Mass Delete
