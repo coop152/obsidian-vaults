@@ -46,7 +46,7 @@
 	- ~~Creating the installer~~
 	- ~~Backporting to linux~~
 - Features
-	- Delete History
+	- ~~Delete History~~
 	- Mass Delete
 	- Auto-cleanup
 - Conclusion
