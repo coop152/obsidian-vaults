@@ -42,7 +42,7 @@
 - Porting
 	- Fixing bugs (maybe unnecessary)
 	- Using chrono for time
-	- Miscellaneous
+	- ~~Miscellaneous~~
 	- ~~Creating the installer~~
 	- ~~Backporting to linux~~
 - Features
