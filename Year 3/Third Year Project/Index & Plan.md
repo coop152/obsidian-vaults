@@ -40,7 +40,7 @@
 
 # WHAT'S LEFT
 - Porting
-	- Fixing bugs
+	- Fixing bugs (maybe unnecessary)
 	- Using chrono for time
 	- Miscellaneous
 	- ~~Creating the installer~~
