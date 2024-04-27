@@ -53,6 +53,7 @@
 
 When youve got something down for everything:
 - Sort out references and the bibliography
+- Go through and remove any contractions
 - talk about feature requests in planning
 - do a short section on the "switch calendar" button in Features
 - maybe look at the comments in Analysis and add some more images
