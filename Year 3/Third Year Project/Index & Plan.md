@@ -47,7 +47,7 @@
 	- ~~Backporting to linux~~
 - Features
 	- ~~Delete History~~
-	- Mass Delete
+	- ~~Mass Delete~~
 	- Auto-cleanup
 - Conclusion
 
