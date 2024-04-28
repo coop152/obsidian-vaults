@@ -40,7 +40,7 @@
 
 # WHAT'S LEFT
 - Porting
-	- Fixing bugs (maybe unnecessary)
+	- ~~Fixing bugs (maybe unnecessary)~~ not doing it, waste of time
 	- Using chrono for time
 	- ~~Miscellaneous~~
 	- ~~Creating the installer~~
@@ -49,18 +49,14 @@
 	- ~~Delete History~~
 	- ~~Mass Delete~~
 	- ~~Auto-cleanup~~
-- Conclusion
+- ~~Conclusion~~
 
 When youve got something down for everything:
 - Sort out references and the bibliography
 - Go through and remove any contractions
-- talk about feature requests in planning
 - do a short section on the "switch calendar" button in Features
-- maybe look at the comments in Analysis and add some more images
-- add images and waffle more in the reflection/results bit
 - add images to the installer section in porting
 - add bit about updates to installer section
-- screenshots of installer
 
 
 if you dont count code snippets your word count plummets. only remove if you go over and it puts you in the safe range.
