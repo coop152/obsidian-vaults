@@ -48,7 +48,7 @@
 - Features
 	- ~~Delete History~~
 	- ~~Mass Delete~~
-	- Auto-cleanup
+	- ~~Auto-cleanup~~
 - Conclusion
 
 When youve got something down for everything:
