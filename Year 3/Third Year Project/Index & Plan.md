@@ -53,7 +53,7 @@
 
 When youve got something down for everything:
 - ~~Sort out references and the bibliography~~
-- Go through and remove any contractions
+- ~~Go through and remove any contractions~~
 - do a short section on the "switch calendar" button in Features
 - add images to the installer section in porting
 - add bit about updates to installer section
