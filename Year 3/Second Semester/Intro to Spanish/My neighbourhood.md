@@ -40,11 +40,13 @@
 | cajero automatico      | ATM                           |
 # Adjectives
 
-| Spanish      | English     |
-| ------------ | ----------- |
-| bastante feo | pretty ugly |
-| sucio        | dirty       |
-| céntrico     | central     |
+| Spanish       | English         |
+| ------------- | --------------- |
+| bastante feo  | pretty ugly     |
+| sucio         | dirty           |
+| céntrico      | central         |
+| historico     | historical      |
+| mucho trafico | lots of traffic |
 # Relative locations
 
 Use with estar, e.g. "Mi casa está cerca de un supermercado"
