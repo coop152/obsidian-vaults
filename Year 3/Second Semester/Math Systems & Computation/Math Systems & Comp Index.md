@@ -5,3 +5,4 @@
 - Week 6: [[Finite Difference Method]], [[Solving boundary-value problems]], [[Partial Differential Equations]]
 - Week 7: [[Implicit Methods for ODEs]], [[Implicit Methods for PDEs]], [[Solving tridiagonal matrix problems]]
 - Week 8: [[Optimisation]]
+- Week 9: [[Gradient Based Optimisation]]
