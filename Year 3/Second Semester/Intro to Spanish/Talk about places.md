@@ -9,6 +9,13 @@
 | Esta en...                | It's in...                                                                                        |
 | Puedes (infinitive poder) | You can... (e.g. In Brazil you can... == En Brazil puedes...)                                     |
 | En ... hay...             | In ... there is...                                                                                |
+| Parece que                | It seems that...                                                                                  |
+| Cero que                  | I think that...                                                                                   |
+| Imagino que               | I imagine that...                                                                                 |
+| Supongo que               | I suppose that.../I guess that...                                                                 |
+| En la foto veo...         | In the photo I see...                                                                             |
+
+La ciudad en la imagen parece muy bonito = The city in the image seems quite beautiful
 
 # Landmarks
 

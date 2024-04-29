@@ -45,7 +45,7 @@
 | bastante feo  | pretty ugly     |
 | sucio         | dirty           |
 | céntrico      | central         |
-| historico     | historical      |
+| historico     | historic        |
 | mucho trafico | lots of traffic |
 # Relative locations
 
