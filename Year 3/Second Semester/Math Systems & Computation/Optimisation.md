@@ -1,2 +1,2 @@
 The previous part of the course covered methods to solve systems of equations, allowing us to mathematically model a complex system and then get results from it.
-Optimisation is when we take one of these mathematical models and, when applied to some scenario, determine the best possible solution. For example, if we have a 
+Optimisation is when we take one of these mathematical models and, when applied to some scenario, determine the best possible solution. 
