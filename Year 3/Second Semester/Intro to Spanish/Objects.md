@@ -4,5 +4,14 @@
 | Una carpeta | A folder     |
 | Un recuerdo | A memory (?) |
 | Un regalo   | A present    |
-# Colours
+# Food
+
+| Spanish  | English |
+| -------- | ------- |
+| pasta    | pasta   |
+| burguesa | burger  |
+| pizza    | pizza   |
+| pollo    | chicken |
+|          |         |
+
 
