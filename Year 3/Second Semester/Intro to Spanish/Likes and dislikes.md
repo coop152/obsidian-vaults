@@ -34,6 +34,7 @@ Use to indicate what something is being done to or for. In the case of "me gusta
 | 1st pl. | nos     | to us/for us           |
 | 2nd pl. | os      | to you lot/for you lot |
 | 3rd pl. | les     | to them/for them       |
+Do not confuse with reflexive pronouns (me te se nos os se)
 # Responses
 | Spanish       | English                                      |
 | ------------- | -------------------------------------------- |
