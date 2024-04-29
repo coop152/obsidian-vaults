@@ -74,7 +74,7 @@ e.g.
 some examples:
 Suelo dormir en la noche = I usually sleep at night
 Puedo jugar al bádminton = I can play badminton
-
+Suelo desayuno despues me levanto
 ## Reflexive actions
 Words where the subject and object are the same.
 End in -se
