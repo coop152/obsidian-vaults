@@ -30,4 +30,4 @@ Unfortunately, most interesting problems cannot be defined using linear equation
 # Optima
 Optimisation methods need to be mindful of local vs global optima:
 ![](Pasted%20image%2020240429155336.png)
-Generally the desired solution is the global optima.
+Generally the desired solution is a global optima, not a local one.
