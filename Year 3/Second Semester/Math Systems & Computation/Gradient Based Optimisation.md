@@ -26,4 +26,9 @@ For example:
 ![](Pasted%20image%2020240504174043.png)
 ![](Pasted%20image%2020240504174113.png)
 Then move in that direction, and repeat until the optimum is reached.
-You must also take care with the angle you calculate; the result of $\tan^{-1}$ needs to be adjusted according to the signs of the inputs. It's like finding the argument of an imaginary number; have to add 
+You must also take care with the angle you calculate; the result of $\tan^{-1}$ needs to be adjusted according to the signs of the inputs. It's like finding the argument of an imaginary number. For example:
+![](Pasted%20image%2020240504174653.png)
+You have found the optimum when all components of the gradient are zero (or when they are near it, like in the 1D case.)
+To tell if this is a maximum or a minimum, we can use the Hessian of the function.
+![](Pasted%20image%2020240504174753.png)
+This is analogous to finding the second derivative of the 1D function and checking that.
