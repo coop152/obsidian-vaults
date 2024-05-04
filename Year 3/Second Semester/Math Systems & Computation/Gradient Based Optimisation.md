@@ -32,3 +32,26 @@ You have found the optimum when all components of the gradient are zero (or when
 To tell if this is a maximum or a minimum, we can use the Hessian of the function.
 ![](Pasted%20image%2020240504174753.png)
 This is analogous to finding the second derivative of the 1D function and checking that.
+## Method of steepest ascent
+The previously described method will look something like this when performed:
+![](Pasted%20image%2020240504175117.png)
+(though you would have the step size decreasing so that it actually found the optimum.)
+The problems with this method are:
+- it requires evaluating the gradient at every single step
+- you will move away from the optimum at points
+
+With the method of steepest ascent, we instead move along the direction indicated by the gradient until the function stops increasing; only then do we recalculate the gradient. To do this, we need to transform our multivariate function into a univariate function along the direction indicated by the gradient.
+Essentially, we want to "take a slice" of the function along the gradient line, like stepping along that line in infinitely small steps and grabbing each value of the function at that point to reduce it to a single variable.
+
+We start as before:
+![](Pasted%20image%2020240504175503.png)
+Now instead of taking a step in that direction, we create equations for points on this line in terms of a new variable $h$.
+![](Pasted%20image%2020240504175639.png)
+This gives us this function:
+![](Pasted%20image%2020240504175736.png)
+We then find the maximum of this function using any method, from Golden Search to Newton's method, or using the method discussed for 1D functions at the start. in this case we can just differentiate because its an easy function:
+![](Pasted%20image%2020240504175844.png)
+These coordinates are the maximum point along the gradient line in the original function; we set our points to this and then repeat.
+If we can find the maximum $h$ for $g(h)$ in a single step (like in the previous example, with an analytical solution) then this method is called **optimal gradient ascent/descent**.
+In summary:
+![](Pasted%20image%2020240504180234.png)
