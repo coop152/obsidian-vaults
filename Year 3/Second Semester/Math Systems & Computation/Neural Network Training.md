@@ -71,3 +71,13 @@ Instead of evaluating the whole dataset at once or only a single sample, we take
 The batch size is another (hyper-)parameter to the optimisation; small batch sizes tend to produce better generalising networks that are less stable, requiring smaller learning rates.
 
 Notably, larger batch sizes can exploit parallelism in many-core architectures. If you process each sample in a batch in parallel then training times can be greatly reduced (it may be a good idea to set your batch size to equal your core count, or similar).
+
+## Learning rate decay
+![](Pasted%20image%2020240505214147.png)
+A higher learning rate (or step size in the optimisation context) means larger steps taken in parameter space, meaning faster convergence. This is desirable during initial parameter updates, as it makes rapid progress towards an optimum.
+Lower learning rates will improve stability and aid refinement around an optima, but they will slow the convergence down leading to longer training times.
+
+A good strategy to set the learning rate based on this is **learning rate decay**. We pick a high initial rate, and decay to a lower rate during optimisation. This gives us the best of both worlds: a good initial convergence, then a stable refinement near the optimum.
+
+We start with decay $\eta_0$, the initial learning rate. This will be used during epoch 0. $\eta_k$ then represents the learning rate for epoch $k$. In the equation, $\alpha = \frac{k}{N}$.
+Setting the initial learning rate is challenging, and typically requires trial and error to find the best value.
