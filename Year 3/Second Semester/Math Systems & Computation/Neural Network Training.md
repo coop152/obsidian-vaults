@@ -44,3 +44,20 @@ The gradient of the objective function which we use for gradient descent, which 
 ![](Pasted%20image%2020240505205711.png)
 ## Gradient Descent for ANNs
 We will use gradient descent to train our neural network.
+There are analytical solutions to find the gradient of the loss; we dont need to understand how these are found, but they exist so we can do gradient descent.
+This is simply done as gradient descent has been done before. We calculate the gradient of the objective function, then we subtract it from our arguments (our weights, in this case):
+![](Pasted%20image%2020240505210413.png)
+There is a variable $\eta$ here called the "training rate" which provides some control over the training. It's essentially the step size.
+
+Note that each gradient calculation requires the ANN to be evaluated on every single sample in the dataset; this is tractable if the sample count is small (say, 1000s of samples), but is prohibitive for larger counts (e.g. 1 million samples).
+
+When researchers asked if there was a better way, they created:
+## Stochastic Gradient Descent
+![](Pasted%20image%2020240505210752.png)
+It was discovered that estimating the gradient and then updating the weight based on a single sample performed very well, and approximated the true gradient descent if repeated over the entire training dataset.
+This method, stochastic gradient descent, underpins the majority of current ANN training algorithms. (its stochastic cause the input presented is random.)
+As long as you don't repeat samples, SGD approximates the true gradient well. The input data must be shuffled into a random order (e.g. don't have every input of a certain class at the same time, or it might not generalise properly to all classes)
+
+Sampling the entire training set once is called an **epoch**. Further training may lead to overfitting, which can cause differences between training and testing accuracy but may still continue to improve the overall accuracy.
+
+The benefit of this method is obvious; we don't need to put the entire dataset through the ANN just to calculate the gradient a single time.
