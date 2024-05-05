@@ -89,3 +89,7 @@ When the objective function space is shaped like this, with an inclined channel,
 ![](Pasted%20image%2020240505220440.png)
 $v$ represents velocity (or the momentum) of the current optimal weights in the solution space.
 $\alpha$ determines how much impact the previous weight updates have on the current update, with larger values adding more bias to historical values.
+![](Pasted%20image%2020240505221036.png)
+## Adaptive learning
+![](Pasted%20image%2020240505221236.png)
+theres some in the lab manual ig
