@@ -34,3 +34,4 @@ Where:
 - $P_k$ is the probabilities produced by the ANN.
 
 Note that this function operates with multiple samples. That's what the summation is over.
+## Optimisation vs training
