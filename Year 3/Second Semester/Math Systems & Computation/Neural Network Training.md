@@ -58,6 +58,14 @@ It was discovered that estimating the gradient and then updating the weight base
 This method, stochastic gradient descent, underpins the majority of current ANN training algorithms. (its stochastic cause the input presented is random.)
 As long as you don't repeat samples, SGD approximates the true gradient well. The input data must be shuffled into a random order (e.g. don't have every input of a certain class at the same time, or it might not generalise properly to all classes)
 
-Sampling the entire training set once is called an **epoch**. Further training may lead to overfitting, which can cause differences between training and testing accuracy but may still continue to improve the overall accuracy.
+Sampling the entire training set once is called an **epoch**. Further training may lead to overfitting, which can cause differences between training and testing accuracy but may still continue to improve the overall accuracy. (we don't need to worry about overfitting in this course.)
 
 The benefit of this method is obvious; we don't need to put the entire dataset through the ANN just to calculate the gradient a single time.
+
+There are some problems, however. Because we are only using a single sample at a time, some samples can introduce instability. This generally doesn't make the method unusable, but it often requires a smaller training rate. 
+## Mini-Batch SGD
+![](Pasted%20image%2020240505211706.png)
+Researchers then found an even better way to perform gradient descent which fixes the previously mentioned problem with instability.
+
+Instead of evaluating the whole dataset at once or only a single sample, we take batches of $m$ samples. This both provides the improved performance of SGD while smoothing out instability caused by variance in samples (because the batches will include samples from many classes).
+
