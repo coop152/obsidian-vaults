@@ -29,9 +29,13 @@ An optimisation algorithm requires an objective function to evaluate which chara
 A common loss function is **categorical cross entropy loss**:
 ![](Pasted%20image%2020240505202231.png)
 Where:
-- $L$ is the loss
+- $L$ is the loss (which we want to minimise)
 - $\hat{y}_k$ is the "ground truth" for the given sample $k$, encoded as a one-hot vector (1 for the correct class and 0 otherwise)
 - $P_k$ is the probabilities produced by the ANN.
 
 Note that this function operates with multiple samples. That's what the summation is over.
 ## Optimisation vs training
+In optimisation problems, the objective function only varies with the "design variables" that are given as an input. In the ANN case, those are the weights of the synapses.
+However, the Loss of our network is a function both of the weights of the synapses **and** the input data. Our objective function
+![](Pasted%20image%2020240505204748.png)
+If we want to apply the gradient descent method described previously, we need to calculate the gradient of the loss for a single sample w.r.t. the weight parameters; if we do this individually for each sample, we can then combine the resulting optimal weights to get the average loss gradient across all samples in the training dataset.
