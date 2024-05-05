@@ -68,4 +68,6 @@ There are some problems, however. Because we are only using a single sample at a
 Researchers then found an even better way to perform gradient descent which fixes the previously mentioned problem with instability.
 
 Instead of evaluating the whole dataset at once or only a single sample, we take batches of $m$ samples. This both provides the improved performance of SGD while smoothing out instability caused by variance in samples (because the batches will include samples from many classes).
+The batch size is another (hyper-)parameter to the optimisation; small batch sizes tend to produce better generalising networks that are less stable, requiring smaller learning rates.
 
+Notably, larger batch sizes can exploit parallelism in many-core architectures. If you process each sample in a batch in parallel then training times can be greatly reduced (it may be a good idea to set your batch size to equal your core count, or similar).
