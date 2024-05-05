@@ -81,3 +81,11 @@ A good strategy to set the learning rate based on this is **learning rate decay*
 
 We start with decay $\eta_0$, the initial learning rate. This will be used during epoch 0. $\eta_k$ then represents the learning rate for epoch $k$. In the equation, $\alpha = \frac{k}{N}$.
 Setting the initial learning rate is challenging, and typically requires trial and error to find the best value.
+## Momentum
+![](Pasted%20image%2020240505220106.png)
+When the objective function space is shaped like this, with an inclined channel, gradient-based optimisers can struggle to move down the channel; the gradients perpendicular to the channel dominate. This makes each iteration go up and down the sides instead of along the channel's length. We need a mechanism which emphasises **consistent** gradients (like the slope of the channel) while reducing the effect of oscillating gradients.
+
+**Momentum** uses the weight update from the previous iteration to achieve this.
+![](Pasted%20image%2020240505220440.png)
+$v$ represents velocity (or the momentum) of the current optimal weights in the solution space.
+$\alpha$ determines how much impact the previous weight updates have on the current update, with larger values adding more bias to historical values.
