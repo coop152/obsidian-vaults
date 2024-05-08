@@ -86,7 +86,20 @@ Don't really know what to put here, so heres some good nouns:
 | esta al norte de Manchester | it's north of Manchester. |
 |                             |                           |
 
+# Unidad 9 - My routine
 
+| Spanish      | English          |
+| ------------ | ---------------- |
+| Me despierto | I wake up        |
+| Me levanto   | I get up         |
+| me vestí     | I get dressed    |
+| me lavo      | I have a wash    |
+| desayuno     | I have breakfast |
+| me acuesto   | I go to bed      |
+|              |                  |
+e.g.
+Normalmente, me levanto a las ocho de la manana. Me lavo y me vestí despues me levanto. Suelo desayunar a las nueve de la manana.
+A las nueve y media, voy a la universidad
 
 
 
