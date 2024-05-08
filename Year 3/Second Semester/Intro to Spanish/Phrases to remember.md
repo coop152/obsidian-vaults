@@ -64,9 +64,27 @@ Don't really know what to put here, so heres some good nouns:
 | pueblo                                                                                                                                           | town                                                                                                                                             |
 | ciudad                                                                                                                                           | city                                                                                                                                             |
 | Mi pueblo es bastante abburido. Es viejo y feo, y no hay muchos edificios interesantes. El ayuntamiento es bonito, y hay algunas buenas tiendas. | My town is pretty boring. It's old and ugly, and there aren't many interesting buildings. The town hall is pretty, and there are some good shops |
-| Mi pueblo es famoso por                                                                                                                          |                                                                                                                                                  |
+| Parece que...                                                                                                                                    | it seems that...                                                                                                                                 |
+| En la foto veo...                                                                                                                                | in the photo i see...                                                                                                                            |
+| muchos edificios grandes/pequenos/antiguos                                                                                                       | lots of big/small/old buildings                                                                                                                  |
+| es cerca del mar                                                                                                                                 | it's near the sea                                                                                                                                |
+| hace sol                                                                                                                                         | it's sunny                                                                                                                                       |
+| Veo un iglesia/catedral                                                                                                                          | I see a church/cathedral                                                                                                                         |
+| creo que veo un <>, tambien.                                                                                                                     | I think i see a <>, too.                                                                                                                         |
+|                                                                                                                                                  |                                                                                                                                                  |
 
 
+# Unidad 8 - My neighbourhood
+
+| Sp.                         | En.                       |
+| --------------------------- | ------------------------- |
+| mi barrio                   | my neighbourhood          |
+| hay algunas tiendas buenas  | there are some good shops |
+| feo y viejo                 | ugly and old              |
+| es bastante tranquilo       | it's pretty quiet         |
+| hay algunos espacios verdes | theres a few green spaces |
+| esta al norte de Manchester | it's north of Manchester. |
+|                             |                           |
 
 
 
