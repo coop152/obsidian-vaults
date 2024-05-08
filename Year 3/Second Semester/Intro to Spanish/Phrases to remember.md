@@ -99,7 +99,7 @@ Don't really know what to put here, so heres some good nouns:
 |              |                  |
 e.g.
 Normalmente, me levanto a las ocho de la manana. Me lavo y me vestí despues me levanto. Suelo desayunar a las nueve de la manana.
-A las nueve y media, voy a la universidad
+A las nueve y media, salgo a la universidad y estudio. 
 
 
 
