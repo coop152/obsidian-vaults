@@ -96,10 +96,10 @@ Don't really know what to put here, so heres some good nouns:
 | me lavo      | I have a wash    |
 | desayuno     | I have breakfast |
 | me acuesto   | I go to bed      |
-|              |                  |
+| me relajo    | I relax          |
 e.g.
 Normalmente, me levanto a las ocho de la manana. Me lavo y me vestí despues me levanto. Suelo desayunar a las nueve de la manana.
-A las nueve y media, salgo a la universidad y estudio. Almuerzo de la una de la tarde, y 
+A las nueve y media, salgo a la universidad y estudio. Voy a mis clases, y almuerzo de la una de la tarde. Al final del dia, vuelvo a casa para cenar. Ceno a las seis de la tarde, y lavo los platos despues. Entonces me relajo y leo 
 
 
 
