@@ -30,6 +30,7 @@ If core 2 tries to read:
 - 2 places a read request on the bus, which core 1 snoops
 - 1 writes the updated value to memory and goes to Shared state
 - 2 snoops the updated value from the bus, stores that value and also goes to Shared state
+
 If core 2 tries to write:
 - It first tries to read, leading to the previous actions taking place
 - It then places an invalidate request, which 1 snoops. 1 switches to Invalid
