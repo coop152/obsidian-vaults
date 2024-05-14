@@ -31,32 +31,32 @@ e.g.
 
 # Frequencies
 
-| Spanish                              | English                                                 |
-| ------------------------------------ | ------------------------------------------------------- |
-| Todos los días                       | Every day                                               |
-| Todos el día                         | All day                                                 |
-| Todos los años                       | Every year                                              |
-| Todos el año                         | All year                                                |
-| Normalmente                          | normally                                                |
-| Generalmente                         | generally                                               |
-| algunas veces                        | sometimes                                               |
-| nunca                                | never                                                   |
-| antes de (infinitive)                | before I (do whatever)                                  |
-| después de (infinitive)              | after I (do whatever)                                   |
-| el fin de semana/los fines de semana | the weekend/weekends                                    |
-| siempre                              | always                                                  |
-| casi siempre                         | almost always                                           |
-| primero (same as the ordinal)        | first, I (e.g. first, i get dressed)                    |
-| a menudo                             | often                                                   |
-| muchas veces                         | lots of the time                                        |
-| frecuentemente                       | frequently                                              |
-| a veces                              | sometimes                                               |
-| muy pocas veces                      | not very often                                          |
-| en ocasiones                         | occasionally/on occasion                                |
-| dos veces                            | two times (e.g. "dos veces al mes" = two times a month) |
-| cada noche                           | every night                                             |
-| una vez al mes                       | one time a month (note the singular of veces)           |
-|                                      |                                                         |
+| Spanish                              | English                                                    |
+| ------------------------------------ | ---------------------------------------------------------- |
+| Todos los días                       | Every day                                                  |
+| Todos el día                         | All day                                                    |
+| Todos los años                       | Every year                                                 |
+| Todos el año                         | All year                                                   |
+| Normalmente                          | normally                                                   |
+| Generalmente                         | generally                                                  |
+| algunas veces                        | sometimes                                                  |
+| nunca                                | never                                                      |
+| antes de (infinitive)                | before I (do whatever)                                     |
+| después de (infinitive)              | after I (do whatever)                                      |
+| el fin de semana/los fines de semana | the weekend/weekends                                       |
+| siempre                              | always                                                     |
+| casi siempre                         | almost always                                              |
+| primero (same as the ordinal)        | first, I (e.g. first, i get dressed)                       |
+| a menudo                             | often                                                      |
+| muchas veces                         | lots of the time                                           |
+| frecuentemente                       | frequently                                                 |
+| a veces                              | sometimes                                                  |
+| muy pocas veces                      | not very often                                             |
+| en ocasiones                         | occasionally/on occasion                                   |
+| dos veces                            | two times (e.g. "dos veces al mes" = two times a month)    |
+| cada noche                           | every night                                                |
+| una vez al mes                       | one time a month (note the singular of veces)              |
+| luego                                | then (i.e. ", then i have breakfast" = ", luego desayuno") |
 # Actions
 
 | Spanish                                                             | English                 |
@@ -80,18 +80,18 @@ Words where the subject and object are the same.
 End in -se
 Conjugated like normal, but you **always add the reflexive pronoun before**.
 
-| Spanish                                              | English          |
-| ---------------------------------------------------- | ---------------- |
-| afeitarse                                            | to shave         |
-| vestirse                                             | to get dressed   |
-| levantarse                                           | to get up        |
-| acostarse                                            | to go to bed     |
-| despertarse (irregular; i wake up is "me despierto") | to wake up       |
-| cepillarse                                           | to take a bath   |
-| lavarse                                              | to wash yourself |
-| peinarse                                             | to comb (hair)   |
-| sentarse                                             | to sit down      |
-| ducharse                                             | to take a shower |
+| Spanish                                              | English              |
+| ---------------------------------------------------- | -------------------- |
+| afeitarse                                            | to shave             |
+| vestirse                                             | to get dressed       |
+| **levantarse**                                       | **to get up**        |
+| **acostarse**                                        | **to go to bed**     |
+| despertarse (irregular; i wake up is "me despierto") | to wake up           |
+| cepillarse                                           | to take a bath       |
+| **lavarse**                                          | **to wash yourself** |
+| peinarse                                             | to comb (hair)       |
+| sentarse                                             | to sit down          |
+| ducharse                                             | to take a shower     |
 e.g.
 me vestiro for "i get dressed"
 "A que"
