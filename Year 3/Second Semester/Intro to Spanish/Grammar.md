@@ -58,14 +58,14 @@ You use object pronouns in any other case, where the action isn't reflexive. (fo
 
 Using gustar as an example:
 
-| Person  | Reflexive    | English                                | (Indirect) Object | English      |
-| ------- | ------------ | -------------------------------------- | ----------------- | ------------ |
-| 1st     | me llamo     | I call myself (I am called)            | me llama          | He calls me  |
-| 2nd     | te llamas    | You call yourself (You are called)     | te llama          | He calls you |
-| 3rd     | se llama     | He calls himself (He is called)        | le llamo          | I call him   |
-| 1st pl. | nos llamamos | We call ourselves (We are called)      | nos llaman        | They call us |
-| 2nd pl. | os llamaís   | You call yourselves (You are called)   | os llamo          |              |
-| 3rd pl. | se llaman    | They call themselves (They are called) |                   |              |
+| Person  | Reflexive    | English                                | (Direct) Object | English      |
+| ------- | ------------ | -------------------------------------- | --------------- | ------------ |
+| 1st     | me llamo     | I call myself (I am called)            | me llama        | He calls me  |
+| 2nd     | te llamas    | You call yourself (You are called)     | te llama        | He calls you |
+| 3rd     | se llama     | He calls himself (He is called)        | lo llamo        | I call him   |
+| 1st pl. | nos llamamos | We call ourselves (We are called)      | nos llaman      | They call us |
+| 2nd pl. | os llamaís   | You call yourselves (You are called)   | os llamo        |              |
+| 3rd pl. | se llaman    | They call themselves (They are called) |                 |              |
 
 
 # Plurals
