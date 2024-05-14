@@ -51,6 +51,18 @@ The plural -s on the end matches the noun and not the person/people that possess
 - Our dad == Nuestro padre
 - My parents == Mis padres
 - Our parents = Nuestros padres
+
+# Pronouns
+You use reflexive pronouns when an action is reflexive; that is, the subject is also the object (For example, he calls himself == "se llama").
+You use object pronouns in any other case, where the action isn't reflexive. (for example, he likes == "le gusta")
+
+Using gustar as an example:
+
+| Person | English |
+| ------ | ------- |
+|        |         |
+
+
 # Plurals
 Word ends with a vowel? Add an -s
 "amigo" -> "amigo**s**"
