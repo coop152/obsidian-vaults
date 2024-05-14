@@ -53,19 +53,19 @@ The plural -s on the end matches the noun and not the person/people that possess
 - Our parents = Nuestros padres
 
 # Pronouns
-You use reflexive pronouns when an action is reflexive; that is, the subject is also the object (For example, he calls himself == "se llama").
-You use object pronouns in any other case, where the action isn't reflexive. (for example, he likes == "le gusta")
+You use reflexive pronouns when an action is reflexive; that is, the subject is also the object (For example, he calls himself == "se llama"). The person of the reflexive pronoun is always the same as the verb's conjugation.
+You use object pronouns in any other case, where the action isn't reflexive. (for example, he likes == "le gusta"). The pronoun's person can be different from the verb's conjugation (e.g. "me gusta == it pleases me")
 
 Using gustar as an example:
 
-| Person  | Reflexive | English                            | (Indirect) Object | English |
-| ------- | --------- | ---------------------------------- | ----------------- | ------- |
-| 1st     | me llamo  | I call myself (I am called)        |                   |         |
-| 2nd     | te llamas | You call yourself (You are called) |                   |         |
-| 3rd     |           |                                    |                   |         |
-| 1st pl. |           |                                    |                   |         |
-| 2nd pl. |           |                                    |                   |         |
-| 3rd pl. |           |                                    |                   |         |
+| Person  | Reflexive    | English                                | (Indirect) Object | English      |
+| ------- | ------------ | -------------------------------------- | ----------------- | ------------ |
+| 1st     | me llamo     | I call myself (I am called)            | me llama          | He calls me  |
+| 2nd     | te llamas    | You call yourself (You are called)     | te llama          | He calls you |
+| 3rd     | se llama     | He calls himself (He is called)        | le llamo          | I call him   |
+| 1st pl. | nos llamamos | We call ourselves (We are called)      | nos llaman        | They call us |
+| 2nd pl. | os llamaís   | You call yourselves (You are called)   | os llamo          |              |
+| 3rd pl. | se llaman    | They call themselves (They are called) |                   |              |
 
 
 # Plurals
