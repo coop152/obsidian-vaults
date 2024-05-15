@@ -6,7 +6,7 @@
 - [x] Week 6: [[OS Support for Multithreading]], [Message Passing Interface](https://olivierpierre.github.io/comp35112/lecture-notes/13-mpi.html)
 - [x] Week 7: [[High Level Parallel Programming]], [[OpenMP]]
 - [x] Week 8: GPUs and GPU Programming
-- [ ] Week 9: Heterogeneous CMPs
+- [x] Week 9: Heterogeneous CMPs
 - [ ] Week 10: Speculation, Transactional Memory
 - [ ] Week 11: Memory Consistency, Dataflow Processing
 
